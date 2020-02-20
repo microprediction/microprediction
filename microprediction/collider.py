@@ -18,8 +18,7 @@ class Collider(object):
         """
         res = requests.get(self.base_url+'/'+name )
         if res.status_code==200:
-            data = res.json()
-            return data
+            return res.json()
 
     def predict(self, name, values):
         """ Submit prediction scenarios
