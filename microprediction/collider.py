@@ -20,7 +20,7 @@ class Collider(object):
         if res.status_code==200:
             return res.json()
 
-    def predict(self, name, values):
+    def submit(self, name, values):
         """ Submit prediction scenarios
         :param name:      str         Examples:    cop.json   z1~cop.json   z2~cop~qp.json
         :param write_key: str         Example:    "5263ee89-e34e-44dc-8b91-445b302b043e"

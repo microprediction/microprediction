@@ -10,5 +10,5 @@ def test_get_lagged_values():
 def test_predict():
     name = 'z1~cop.json'
     values = list( np.random.randn(1000) )
-    res = mp.predict(name=name,values=values)
+    res = mp.submit(name=name, values=values)
     assert res
