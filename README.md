@@ -22,7 +22,6 @@ Then submit or modify your scenarios as follows:
  Of course those scenarios are unlikely to reflect a probabilistic representation of the future so here
  is an easy way to get lagged values: 
  
-    c.get_lagged(cop.json) 
+    lagged = c.get_lagged(cop.json) 
     
  
-
