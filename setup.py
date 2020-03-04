@@ -7,8 +7,8 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="0.0.3",
-    description="Simple prediction AAS.",
+    version="0.0.8",
+    description="API crowd microprediction and microprediction contests at www.microprediction.com",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/microprediction/microprediction",
@@ -24,7 +24,7 @@ setup(
     test_suite='pytest',
     tests_require=['pytest'],
     include_package_data=True,
-    install_requires=["numpy","aiohttp","pathlib","retrying"],
+    install_requires=["numpy","aiohttp","pathlib","retrying","contexttimer"],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",

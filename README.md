@@ -19,9 +19,11 @@ Then submit or modify your scenarios as follows:
     scenarios = [ i*0.001 for i in range(1000) ] 
     c.submit(name='cop.json',values=scenarios)
     
- Of course those scenarios are unlikely to reflect a probabilistic representation of the future so here
- is an easy way to get lagged values: 
+ To retrieve past values:
  
     lagged = c.get_lagged(cop.json) 
+    
+  To retrieve an approximate cdf:
+  
     
  
