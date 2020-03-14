@@ -1,7 +1,7 @@
 from microprediction.conventions import MicroConventions
 import requests
 
-class MicroReadClient(MicroConventions):
+class MicroReader(MicroConventions):
 
     def __init__(self,base_url=None):
         """ Establish connection and adopt configuration parameters from site """
@@ -66,7 +66,7 @@ class MicroReadClient(MicroConventions):
         if res.status_code == 200:
             return res.json()
 
-class MicroClient(MicroReadClient):
+class MicroWriter(MicroReader):
 
     def __init__(self, write_key="invalid_key", base_url="http://www.microprediction.com/"):
         """ Create the ability to write """
@@ -82,9 +82,9 @@ class MicroClient(MicroReadClient):
                 "Your mnemonic is " + spirit_word + ", which is similar to the first seven characters of the hash of your write_key.")
         self.write_key = write_key
 
-    def set(self, name, write_key, value):
+    def set(self, name, value):
         """ Create or update a stream """
-        res = requests.put(self.base_url + '/live/' + name, data={"write_key": write_key, "value": value})
+        res = requests.put(self.base_url + '/live/' + name, data={"write_key": self.write_key, "value": value})
         if res.status_code == 200:
             return float(res)
 
