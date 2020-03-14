@@ -1,18 +1,20 @@
 # microprediction
 
-A minimalist Python client for entering microprediction contests
+Collective microprediction client leveraging www.microprediction.com 
 
     pip install microprediction 
+    
+This library is still under construction. There is a teaser at https://vimeo.com/397352413
 
 # Reading 
 
-It is possible to retrieve most quantities with direct web calls.
+It is possible to retrieve most quantities at www.microprediction.com with direct web calls.
 
     import requests
     lagged_values = mr.get('lagged_values::cop.json')
     lagged_values = requests.get('https://www.microprediction.com/live/lagged_values::cop.json').json()
 
-The reader adds a little convenience. 
+However the reader client adds a little convenience. 
 
     from microprediction import MicroReader
     mr = MicroReader()
@@ -30,7 +32,6 @@ Quarantined value
     
     cdf = mr.get_delayed('cop.json',delay=70)
     
-
 # Write client
 
 For both requesting and supplying distributional predictions. 
