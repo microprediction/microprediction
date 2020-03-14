@@ -4,7 +4,7 @@ from contexttimer import Timer
 def test_client():
     with Timer() as t:
         mc = MicroClient()
-    assert mc.to_mnemonic(write_key=mc.write_key) in mc.dictionary7()
+    assert mc.to_mnemonic(write_key=mc.write_key) in mc.words7()
     assert(t.elapsed < 60*20 )
 
 def test_nmemonic():
