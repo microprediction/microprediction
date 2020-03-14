@@ -31,30 +31,34 @@ Quarantined value
     cdf = mr.get_delayed('cop.json',delay=70)
     
 
-# Writing
+# Write client
 
-As explained at https://vimeo.com/397352413 you need to mine a MUID to obtain write privileges. You can cut and paste this bash command into terminal:
+For both requesting and supplying distributional predictions. 
+
+### Obtaining a write_key (muid.org)
+As explained at https://vimeo.com/397352413 you need to mine a MUID to obtain write privileges, such as submitting predictions. 
+You can cut and paste this bash command into terminal:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/muid/master/examples/mine_from_venv.sh)"
 
-Or using the MUID library...
+or using the MUID library...
     
     $pip install muid
     $python3
     >>> import muid
     >>> muid.mine(skip_intro=True)
    
-Once you have a MUID (termed a write_key in our context):   
+Once you have a key:   
 
     from microprediction import MicroWriter
-    mw = MicroWriter(write_key='53e6fbba-2dcd-486c-a4ab-14759db58dde')  # Sub in your own MUID 
+    mw = MicroWriter(write_key='53e6fbba-2dcd-486c-a4ab-14759db58dde')  # Sub in your own key 
     
 ## Submitting predictions 
     
     scenarios = [ i*0.001 for i in range(mw.num_predictions) ] 
     mw.submit(name='cop.json',values=scenarios)    
 
-## Submitting data to be predicted
+# Submitting data to be predicted
 
 You can use the writer to create a stream of live data that clever algorithms and humans can predict.
 
@@ -62,33 +66,39 @@ You can use the writer to create a stream of live data that clever algorithms an
 
 You can write a new stream if:
 
-    len(mw.animal())>mw.min_len     # You have a hard to find MUID
+    len(muid.animal(mw.write_key))  >  official minimum length     # You have a hard to find MUID
     
 or 
 
-    mw.balance()>mw.min_balance     # You've been good at predicting things
+    mw.balance()  >   official minimum balance     # You've been good at predicting things !
     
-See https://www.microprediction.com/config.json for the current value of min_len and see the video explanation of your MUID spirit animal at https://vimeo.com/397352413, if it is not already obvious from the mining results.   
+See https://www.microprediction.com/config.json for the current values of min_len and min_balance. See
+https://vimeo.com/397352413 for explanation of muid.animal(). 
 
 ### Updating the current value
 
-Set current value and receive crowd predicted prctl
+Set current value. 
 
     prctl = mw.put(name='mystream.json',value=3.14157) 
 
-Retrieve other quarantined crowd percentiles
+By default this returns a percentile so you know how surprising the data point is. 
 
-     cdf = mr.get_cdf('cop.json',delay=70,values=[0,0.5])
+
+### Distribution of future values
+
+You can retrieve quarantined crowd cumulative distribution function:
+
+     cdf = mr.get_cdf('cop.json',delay=mr.delays[0],values=[0,0.5])
      
-Other functionality on the way
-    
-## Logs
+where the delay parameter, in seconds, acts as a prediction horizon. 
+         
+### Logs
 
 Limited logging information may be retrieved:
     
     get_errors()
     
-as an alternative to the direct call:
+or
 
     error_log = requests.get('https://www.microprediction.com/live/errors::53e6fbba-2dcd-486c-a4ab-14759db58dde.json').json()
  

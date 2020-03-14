@@ -1,6 +1,4 @@
 import uuid, re, sys
-from microprediction.henglish import KeyConventions
-
 
 class NameConventions(object):
 
@@ -49,7 +47,7 @@ class StatsConventions():
                 0.01, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1., 1.25, 1.5, 2.0, 2.5, 3., 4., 5., 8.]
 
 
-class MicroConventions(NameConventions, ValueConventions, KeyConventions):
+class MicroConventions(NameConventions, ValueConventions):
     pass
 
 

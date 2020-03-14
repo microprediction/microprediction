@@ -1,5 +1,5 @@
 from microprediction.conventions import MicroConventions
-import requests
+import requests, muid
 
 class MicroReader(MicroConventions):
 
@@ -71,16 +71,11 @@ class MicroWriter(MicroReader):
     def __init__(self, write_key="invalid_key", base_url="http://www.microprediction.com/"):
         """ Create the ability to write """
         super().__init__(base_url=base_url)
-        if not self.is_vanity_key(write_key):
-            print(
-                "No write_key was provided or it was invalid. Creating a new one but this may take " + MicroConventions.new_vanity_key_estimate())
-            self.write_key = MicroConventions.new_vanity_key()
-            print("Your write_key is " + str(self.write_key) + ' and we suggest you keep it safe.')
-            write_code = MicroConventions.hash(self.write_key)
-            spirit_word = write_code[:7].replace('5', 's').replace('1', 'l').replace('0', 'o')
-            print(
-                "Your mnemonic is " + spirit_word + ", which is similar to the first seven characters of the hash of your write_key.")
+        assert muid.mverify(write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = write_key
+
+    def __repr__(self):
+        return {'write_key':self.write_key,"animal":muid.animal(self.write_key)}
 
     def set(self, name, value):
         """ Create or update a stream """
