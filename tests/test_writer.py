@@ -13,7 +13,7 @@ def test_is_valid():
     key = "4c3db49d3a291acad7bdedecfa787891"
     assert MicroWriter.is_valid_key(key)
     key = b"4c3db49d3a291acad7bdedecfa787891"
-    assert MicroWriter.is_valid_key(key)
-    key = b"3c3db49d3a291acad7bdedecfa787891"
+    assert MicroWriter.is_valid_key(key)==False, "Binary keys are not valid"
+    key = "3c3db49d3a291acad7bdedecfa787891"
     assert not MicroWriter.is_valid_key(key)
 

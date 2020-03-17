@@ -1,4 +1,8 @@
-import uuid, re, sys, muid
+import uuid, re, sys, muid, requests
+
+
+
+
 
 class NameConventions(object):
 
@@ -61,7 +65,14 @@ class KeyConventions():
 
 
 class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):
-    pass
+
+    def __init__(self, base_url=None):
+        """ Establish connection and adopt configuration parameters from site """
+        self.base_url = base_url or "http://www.microprediction.com/"
+        config = requests.get(self.base_url + "/config.json").json()
+        self.delays = config["delays"]
+        self.num_predictions = config["num_predictions"]
+        self.min_len = config["min_len"]
 
 
 
