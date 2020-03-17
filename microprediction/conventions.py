@@ -1,4 +1,7 @@
-import uuid, re, sys
+import uuid, re, sys, requests, muid
+
+CONFIG  = requests.get('https://www.microprediction.com/config.json').json()
+MIN_LEN = CONFIG['min_len']
 
 class NameConventions(object):
 
@@ -35,7 +38,7 @@ class ValueConventions(object):
 
     @staticmethod
     def is_small_value(value):
-        """ Somewhat arbitrary """
+        """ Used to determine how to store history for dict like values """
         return sys.getsizeof(value) < 1200
 
 
@@ -47,7 +50,15 @@ class StatsConventions():
                 0.01, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1., 1.25, 1.5, 2.0, 2.5, 3., 4., 5., 8.]
 
 
-class MicroConventions(NameConventions, ValueConventions):
+class KeyConventions():
+
+    @staticmethod
+    def is_valid_key(key):
+        return muid.validate((key))
+
+
+
+class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):
     pass
 
 
