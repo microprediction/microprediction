@@ -54,8 +54,13 @@ class KeyConventions():
 
     @staticmethod
     def is_valid_key(key):
-        return muid.validate((key))
+        """ Check if key is hash-memorable """
+        return isinstance(key,str) and muid.validate(key)
 
+    @staticmethod
+    def create_key(difficulty=6):
+        """ Create new write_key (string, not bytes) """
+        return muid.create(difficulty=difficulty).decode()
 
 
 class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):

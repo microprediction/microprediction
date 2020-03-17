@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="0.0.15",
+    version="0.0.16",
     description="Client for www.microprediction.com",
     long_description=README,
     long_description_content_type="text/markdown",
