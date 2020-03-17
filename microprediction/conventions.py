@@ -1,7 +1,4 @@
-import uuid, re, sys, requests, muid
-
-CONFIG  = requests.get('https://www.microprediction.com/config.json').json()
-MIN_LEN = CONFIG['min_len']
+import uuid, re, sys, muid
 
 class NameConventions(object):
 

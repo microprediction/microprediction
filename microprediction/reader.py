@@ -9,6 +9,7 @@ class MicroReader(MicroConventions):
         config = requests.get(self.base_url+"/config.json").json()
         self.delays = config["delays"]
         self.num_predictions = config["num_predictions"]
+        self.min_len = config["min_len"]
 
     def get(self, name):
         res = requests.get(self.base_url + '/live/' + name)
@@ -54,7 +55,7 @@ class MicroReader(MicroConventions):
             return res.json()
 
     def get_cdf(self, name, values=None):
-        if values is None:  # Supply x-values at which approximate crowd cdf will be computed.
+        if values is None:  # Supply x-values at which approximate crowd cdf will be computed. # FIXME... should not be here an also in conventions
             values = [-2.3263478740408408, -1.6368267885518997, -1.330561513178897, -1.1146510149326596,
                       -0.941074530352976, -0.792046894425591, -0.6588376927361878, -0.5364223812298266,
                       -0.4215776353171568, -0.3120533220328322, -0.20615905948527324, -0.10253336200497987, 0.0,
