@@ -39,6 +39,7 @@ class MicroCrawler(MicroWriter):
             if self.verbose:
                 message = {'name':name,"submitted":True, "balance":balance,"errors":errors[:5],'delay':delay,"values":scenario_values[:5],}
                 pprint.pprint(message)
+                print("",flush=True)
             time.sleep(300)
 
 
