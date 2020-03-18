@@ -17,6 +17,11 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
            return float(res.json())
 
+    def get_streams(self):
+        res = requests.get(self.base_url + '/streams')
+        if res.status_code == 200:
+            return res.json()
+
     def get_summary(self, name):
         res = requests.get(self.base_url + '/live/summary::' + name)
         if res.status_code == 200:

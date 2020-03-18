@@ -8,10 +8,9 @@ Collective microprediction client leveraging www.microprediction.com
 
 It is possible to retrieve most quantities at www.microprediction.com with direct web calls such as https://www.microprediction.com/live/cop.json. For example:
 
-
     import requests
-    lagged_values = mr.get('lagged_values::cop.json')
     lagged_values = requests.get('https://www.microprediction.com/live/lagged_values::cop.json').json()
+    lagged        = requests.get('https://www.microprediction.com/lagged/cop.json').json()
 
 However the reader client adds a little convenience. 
 

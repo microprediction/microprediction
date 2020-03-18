@@ -1,4 +1,4 @@
-from microprediction import MicroWriter, MicroReader
+from microprediction import MicroWriter, MicroReader, new_write_key
 from contexttimer import Timer
 import muid
 
@@ -8,6 +8,9 @@ def test_client():
         mw = MicroWriter(write_key=write_key)
     assert(t.elapsed < 5 )
 
+def test_new():
+    write_key = new_write_key(difficulty=7)
+    assert MicroWriter.is_valid_key(write_key)
 
 def test_is_valid():
     key = "4c3db49d3a291acad7bdedecfa787891"

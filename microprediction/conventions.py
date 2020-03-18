@@ -1,8 +1,19 @@
 import uuid, re, sys, muid, requests
 
 
+class KeyConventions():
 
+    @staticmethod
+    def is_valid_key(key):
+        """ Check if key is hash-memorable """
+        return isinstance(key,str) and muid.validate(key)
 
+    @staticmethod
+    def create_key(difficulty=6):
+        """ Create new write_key (string, not bytes) """
+        return muid.create(difficulty=difficulty).decode()
+
+new_key = KeyConventions.create_key
 
 class NameConventions(object):
 
@@ -51,17 +62,6 @@ class StatsConventions():
                 0.01, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1., 1.25, 1.5, 2.0, 2.5, 3., 4., 5., 8.]
 
 
-class KeyConventions():
-
-    @staticmethod
-    def is_valid_key(key):
-        """ Check if key is hash-memorable """
-        return isinstance(key,str) and muid.validate(key)
-
-    @staticmethod
-    def create_key(difficulty=6):
-        """ Create new write_key (string, not bytes) """
-        return muid.create(difficulty=difficulty).decode()
 
 
 class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):
