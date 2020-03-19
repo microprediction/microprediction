@@ -3,7 +3,7 @@ import requests
 
 class MicroReader(MicroConventions):
 
-    def __init__(self,base_url=None):
+    def __init__(self,base_url="http://www.microprediction.com"):
         """ Establish connection and adopt configuration parameters from site """
         super().__init__(base_url=base_url)
 
@@ -32,7 +32,7 @@ class MicroReader(MicroConventions):
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json
         :return: [ float ]
         """
-        res = requests.get(self.base_url+'live/lagged_values::'+name )
+        res = requests.get(self.base_url+'/live/lagged_values::'+name )
         if res.status_code==200:
             return res.json()
 
@@ -41,7 +41,7 @@ class MicroReader(MicroConventions):
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json
         :return: [ float ]
         """
-        res = requests.get(self.base_url+'live/lagged_times::'+name )
+        res = requests.get(self.base_url+'/live/lagged_times::'+name )
         if res.status_code==200:
             return res.json()
 
@@ -51,7 +51,7 @@ class MicroReader(MicroConventions):
         :return: [ float ]
         """
         delay = delay or self.delays[0]
-        res = requests.get(self.base_url + 'live/delayed::'+str(delay)+ "::" + name)
+        res = requests.get(self.base_url + '/live/delayed::'+str(delay)+ "::" + name)
         if res.status_code == 200:
             return res.json()
 

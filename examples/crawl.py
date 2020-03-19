@@ -1,7 +1,8 @@
-from microprediction import MicroCrawler
+from microprediction import MicroCrawler, new_key
 
-write_key = "fa813cd1f1bf6cec3ef74efeaedb01f4"   # <--- Click on http://www.muid.org/create/ to get one
-crawler   = MicroCrawler(write_key=write_key)
+write_key = new_key(difficulty=8)
+print(write_key)
+crawler   = MicroCrawler(write_key=write_key,sleep_time=3)
 crawler.run()
 
 
