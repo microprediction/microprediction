@@ -1,14 +1,15 @@
 from microprediction.reader import MicroReader
-import muid, requests
+import muid, requests, pprint
 
 class MicroWriter(MicroReader):
 
-    def __init__(self, write_key="invalid_key", base_url="http://www.microprediction.com" ):
+    def __init__(self, write_key="invalid_key", base_url="http://www.microprediction.com", verbose=True ):
         """ Create the ability to write """
         super().__init__(base_url=base_url)
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
         assert muid.validate(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
+        self.verbose   = verbose
 
     def __repr__(self):
         return {'write_key':self.write_key,"animal":muid.animal(self.write_key)}
@@ -19,8 +20,21 @@ class MicroWriter(MicroReader):
         if res.status_code ==200:
             return float(res)
         else:
+            err = self.get_errors()
+            pprint.pprint(err)
+            print('',flush=True)
             raise Exception('Failed to update')
 
+    def touch(self, name):
+        """ Extend TTL of stream without updating """
+        res = requests.patch(self.base_url + '/live/' + name, data={"write_key": self.write_key})
+        if res.status_code == 200:
+            return res.json()
+        else:
+            err = self.get_errors()
+            pprint.pprint(err)
+            print('', flush=True)
+            raise Exception('Failed to touch '+name)
 
     def get_errors(self):
         """ Retrieve private log information """
@@ -57,10 +71,19 @@ class MicroWriter(MicroReader):
         comma_sep_values = ",".join([ str(v) for v in values ] )
         res = requests.put(self.base_url + '/submit/' + name, data={'delay':self.delays[0], 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code==200:
-            return True
+            if self.verbose:
+                confirms = self.get_confirms()
+                errors = self.get_errors()
+                pprint.pprint(confirms[:2])
+                pprint.pprint(errors[:2])
+                print('',flush=True)
+                return True
         elif res.status_code==403:
             return False
         else:
+            rrs = self.get_errors()
+            pprint.pprint(rrs)
+            print('',flush=True )
             raise Exception('Failed to submit')
 
     def cancel(self, name):

@@ -4,9 +4,12 @@ import muid
 
 def test_client():
     with Timer() as t:
-        write_key = muid.create(difficulty=7,with_report=False)
+        write_key = new_key(difficulty=7)
         mw = MicroWriter(write_key=write_key)
     assert(t.elapsed < 5 )
+
+
+
 
 def test_new():
     write_key = new_key(difficulty=7)
