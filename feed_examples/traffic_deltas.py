@@ -2,62 +2,35 @@
 import requests, datetime
 from contexttimer import Timer
 from microprediction import MicroWriter
+from microprediction.live import bronx_speed
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-try:
-    from microprediction.config_private import TRAFFIC_WRITE_KEY
-except:
-    raise Exception("You need to set the write key for this example to work")
 
 #    Illustrates predicting the change in a quantity when feed is not entirely reliable
 #    Here we use the MicroWriter to task people with predicting the change in traffic
 #    speed on the Verrazano Bridge every five minutes. However if we don't get good
 #    data from the feed or it appears to be stale, we don't send the delta.
 
-#-----------------------------------------------------------------------------------------
-#    1. External data fetching
-#------------------------------------------------------------------------------------------
 
-URL   = "https://data.cityofnewyork.us/resource/i4gi-tjb9.json"  # MTA city of NY realtime feed
-VBID  = "416"  # "Verrazano-Narrows-Bridge"
+try:
+    from microprediction.config_private import TRAFFIC_WRITE_KEY
+    mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
+except:
+    raise Exception("You need to set the write key for this example to work")
 
-def fetch_live_data(key,field):
-    r = requests.get(URL)
-    if r.status_code==200:
-        data = r.json()
-        selection = [ d for d in data if int(d["id"])==int(key) and d["status"]=="0"]
-        selection.sort(key=lambda x:x["data_as_of"], reverse=True)
-        if len(selection)>0:
-            record = selection[0]
-            return record[field]
-        else:
-            return None
-    else:
-        return None
-
-def verrazano_speed():
-    return fetch_live_data(key=VBID,field="speed")
-
-
-#-----------------------------------------------------------------------------------------
-#       2. Feed monitoring task to be run every minute
-#------------------------------------------------------------------------------------------
-
-mw     = MicroWriter(write_key=WRITE_KEY)
-NAME   = "verrazano"
 feed_state = "cold"
 prev_speed = None
 speed = None
+NAME  = "bronx_traffic_speed_delta.json"
 
 def fetch_and_send():
     """ Modify feed of speed changes - or at least keep it warm """
-    # TODO: Obviate this kind of logic by providing it for the feed provider
     global feed_state, prev_speed, speed
 
     if feed_state== "warm":
         # A warm state means that previous speed exists and is not stale
         assert prev_speed is not None
-        speed = verrazano_speed()
+        speed = bronx_speed()
         if speed is None:
             feed_state= "cold"
             alert()
@@ -78,7 +51,7 @@ def fetch_and_send():
     elif feed_state== "cold":
         # Wait until feed is back up and speeds start changing
         prev_prev   = prev_speed if prev_speed else None
-        prev_speed  = verrazano_speed()
+        prev_speed  = bronx_speed()
         if (prev_speed is not None) and (prev_prev is not None) and abs(float(prev_prev)-float(prev_speed))>1e-5:
             feed_state= "warm"
             print("**** Feed resumed at " + str(datetime.datetime.now()),flush=True)
@@ -88,27 +61,7 @@ def fetch_and_send():
 
 
 def alert():
-    print("""
-     
-        Looks like the feed is ...
-                 ,----..                            ,--.
-    ,---,       /   /   \             .---.       ,--.'|
-  .'  .' `\    /   .     :           /. ./|   ,--,:  : |
-,---.'     \  .   /   ;.  \      .--'.  ' ;,`--.'`|  ' :
-|   |  .`\  |.   ;   /  ` ;     /__./ \ : ||   :  :  | |
-:   : |  '  |;   |  ; \ ; | .--'.  '   \' .:   |   \ | :
-|   ' '  ;  :|   :  | ; | '/___/ \ |    ' '|   : '  '; |
-'   | ;  .  |.   |  ' ' ' :;   \  \;      :'   ' ;.    ;
-|   | :  |  ''   ;  \; /  | \   ;  `      ||   | | \   |
-'   : | /  ;  \   \  ',  /   .   \    .\  ;'   : |  ; .'
-|   | '` ,/    ;   :    /     \   \   ' \ ||   | '`--'
-;   :  .'       \   \ .'       :   '  |--" '   : |
-|   ,.'          `---`          \   \ ;    ;   |.'
-'---'                            '---"     '---
-
-        Will monitor until it is up again 
-
-""",flush=True)
+    print("""Something amiss with feed """,flush=True)
 
 #-----------------------------------------------------------------------------------------
 #       3. Scheduler
@@ -118,7 +71,7 @@ def alert():
 def run():
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
-    scheduler.add_job(fetch_and_send, 'interval', minutes=15)
+    scheduler.add_job(fetch_and_send, 'interval', minutes=5)
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
@@ -126,6 +79,6 @@ def run():
     print('Stopping scheduler',flush=True)
 
 if __name__=="__main__":
-    verrazano_speed()
+    run()
 
 

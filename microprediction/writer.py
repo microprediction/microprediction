@@ -18,7 +18,9 @@ class MicroWriter(MicroReader):
         """ Create or update a stream """
         res = requests.put(self.base_url + '/live/' + name, data={"write_key": self.write_key, "value": value})
         if res.status_code ==200:
-            return float(res)
+            return res.json()
+        elif res.status_code==500:
+            raise Exception("server error")
         else:
             err = self.get_errors()
             pprint.pprint(err)
