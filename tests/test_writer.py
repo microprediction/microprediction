@@ -9,8 +9,6 @@ def test_client():
     assert(t.elapsed < 5 )
 
 
-
-
 def test_new():
     write_key = new_key(difficulty=7)
     assert MicroWriter.is_valid_key(write_key)

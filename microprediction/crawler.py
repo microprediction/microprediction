@@ -1,15 +1,16 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
 
 from microprediction.writer import MicroWriter
+from microprediction.reader import default_url
 import muid, random, time
 from microprediction.samplers import exponential_bootstrap
 import pprint
 
 class MicroCrawler(MicroWriter):
 
-    def __init__(self, write_key=None, base_url="http://www.microprediction.com", verbose=True, min_lagged=50, min_difficulty=12, sleep_time=300) :
+    def __init__(self, write_key=None, base_url=None, verbose=True, min_lagged=50, min_difficulty=12, sleep_time=300) :
         """ Initialize write_key if none provided """
-        super().__init__(base_url=base_url, write_key=write_key )
+        super().__init__(base_url=base_url or default_url(), write_key=write_key )
         assert muid.difficulty(write_key) >= 8, "Invalid write_key for crawler. See www.muid.org to mine one. "
         self.verbose = verbose
         self.min_lagged = min_lagged          # Only consider streams with a long lag history

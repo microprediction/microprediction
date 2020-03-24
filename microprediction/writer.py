@@ -1,11 +1,11 @@
-from microprediction.reader import MicroReader
+from microprediction.reader import MicroReader, default_url
 import muid, requests, pprint
 
 class MicroWriter(MicroReader):
 
-    def __init__(self, write_key="invalid_key", base_url="http://www.microprediction.com", verbose=True ):
+    def __init__(self, write_key="invalid_key", base_url=None, verbose=True ):
         """ Create the ability to write """
-        super().__init__(base_url=base_url)
+        super().__init__(base_url=base_url or default_url())
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
         assert muid.validate(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
@@ -25,6 +25,22 @@ class MicroWriter(MicroReader):
             err = self.get_errors()
             pprint.pprint(err)
             print('',flush=True)
+            raise Exception('Failed to update')
+
+    def cset(self, names, values):
+        """ Set multiple values linked by copula """
+        request_data = {"names": ",".join(names), "write_key": self.write_key}
+        request_data.update({"values": ",".join([str(v) for v in values])})
+        res = requests.put(self.base_url + '/copula/', data=request_data)
+        pprint.pprint(res.content)
+        if res.status_code == 200:
+            return res.json()
+        elif res.status_code == 500:
+            raise Exception("server error")
+        else:
+            err = self.get_errors()
+            pprint.pprint(err)
+            print('', flush=True)
             raise Exception('Failed to update')
 
     def touch(self, name):

@@ -30,7 +30,7 @@ def poll_and_send():
 def run():
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
-    scheduler.add_job(poll_and_send, 'interval', minutes=1)
+    scheduler.add_job(poll_and_send, 'interval', minutes=20)
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):

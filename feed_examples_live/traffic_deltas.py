@@ -4,6 +4,7 @@ from contexttimer import Timer
 from microprediction import MicroWriter
 from microprediction.live import bronx_speed
 from apscheduler.schedulers.blocking import BlockingScheduler
+import datetime
 
 
 #    Illustrates predicting the change in a quantity when feed is not entirely reliable
@@ -71,7 +72,7 @@ def alert():
 def run():
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
-    scheduler.add_job(fetch_and_send, 'interval', minutes=5)
+    scheduler.add_job(fetch_and_send, 'interval', minutes=15)
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
