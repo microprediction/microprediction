@@ -25,8 +25,16 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
            return float(res.json())
 
+    def get_sponsors(self):
+        res = requests.get(self.base_url + '/sponsors')
+        if res.status_code == 200:
+            return res.json()
+
     def get_streams(self):
-        res = requests.get(self.base_url + '/streams')
+        return self.get_sponsors()
+
+    def get_budgets(self):
+        res = requests.get(self.base_url + '/budgets')
         if res.status_code == 200:
             return res.json()
 

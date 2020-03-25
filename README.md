@@ -1,16 +1,16 @@
 # microprediction
 
-Collective microprediction client leveraging www.microprediction.com 
+Collective microprediction client leveraging www.microprediction.org 
 
     pip install microprediction 
     
 # Read client
 
-It is possible to retrieve most quantities at www.microprediction.com with direct web calls such as https://www.microprediction.com/live/cop.json. For example:
+It is possible to retrieve most quantities at www.microprediction.org with direct web calls such as https://www.microprediction.org/live/cop.json. For example:
 
     import requests
-    lagged_values = requests.get('https://www.microprediction.com/live/lagged_values::cop.json').json()
-    lagged        = requests.get('https://www.microprediction.com/lagged/cop.json').json()
+    lagged_values = requests.get('https://www.microprediction.org/live/lagged_values::cop.json').json()
+    lagged        = requests.get('https://www.microprediction.org/lagged/cop.json').json()
 
 However the reader client adds a little convenience. 
 
@@ -31,8 +31,8 @@ The write client is used to submit predictions or to create a data stream.
 
 ## Submitting predictions 
 
-To predict a data stream at www.microprediction.com is to supply a collection of scenarios. These scenarios are quarantined for different horizons (see delays parameter at https://www.microprediction.com/config.json ). When
-the data is updated by the stream owner, rewards are calculated. People and machines making accurate probabilistic forecasts will see their balances (at www.microprediction.com/balance/YOUR_WRITE_KEY)
+To predict a data stream at www.microprediction.org is to supply a collection of scenarios. These scenarios are quarantined for different horizons (see delays parameter at https://www.microprediction.org/config.json ). When
+the data is updated by the stream owner, rewards are calculated. People and machines making accurate probabilistic forecasts will see their balances (at www.microprediction.org/balance/YOUR_WRITE_KEY)
 rise. 
 
 ### Step 1: Obtaining a write_key (muid.org)
@@ -55,6 +55,12 @@ There is no difference when predicting regular streams and derived streams. For 
     my_scenarios = sorted(list(np.random.randn(mw.num_predictions))
     mw.submit(name="z1~airp-06820.json", write_key="ce169feeb3565b282d50a850dc62e0db", values = my_scenarios, delay=15)
 
+### Step 4: Examine performance 
+
+Visit leaderboards such as www.microprediction.org/leaderboards/cop.json or look across all streams with:
+
+    mw.get_performance()
+
 # Submitting data to be predicted
 
 You can also use the writer to create a stream of live data that clever algorithms and humans can predict. 
@@ -69,7 +75,7 @@ To create a new stream you need:
 
     muid.difficulty(write_key)  >  official minimum difficulty     # 12 at time of writing
 
-See https://www.microprediction.com/config.json for the current values of min_len, which is the official minimum difficulty to create a stream. 
+See https://www.microprediction.org/config.json for the current values of min_len, which is the official minimum difficulty to create a stream. 
 To mine for write_keys with this property you can cut and paste this bash command into terminal:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/muid/master/examples/mine_from_venv.sh)"
@@ -108,14 +114,14 @@ When you create a stream you automatically participate in the prediction of the 
 purpose. If nobody can do a better job that this, your write_key balance will generally neither rise nor fall.  
 
 However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your write_key to trend downwards. 
-On an ongoing basis you also need the write_key balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 8 is also found at https://www.microprediction.com/config.json. At time 
+On an ongoing basis you also need the write_key balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 8 is also found at https://www.microprediction.org/config.json. At time 
 of writing, and assuming this parameter is -10, we have:
 
 |  write_key difficulty   |  bankruptcy         |  write_key difficulty   |  bankruptcy         |
 |-------------------------|---------------------|-------------------------|---------------------|
 |  8                      |  -10                |     11                  |   -40,960           |
 |  9                      |  -160               |     12                  |   -655,360          |
-| 10                      |  -2,560             |     13                  |   -1,048,576        |
+| 10                      |  -2,560             |     13                  |   -10,485,760        |
        
 ### Higher dimensional prediction (copulas, Z-curves)
 
@@ -130,11 +136,15 @@ Advanced functionality is available to those with write_keys of difficulty 1 mor
          
 ### Troubleshooting 
 
-Limited logging information may be retrieved:
+Try:
     
     mw.get_errors()
+    mw.get_warnings()
+    me.get_confirmations()
     
-or
+which are also available directly. For example:
 
-    error_log = requests.get('https://www.microprediction.com/live/errors::53e6fbba-2dcd-486c-a4ab-14759db58dde.json').json()
+    error_log = requests.get('https://www.microprediction.org/live/errors::53e6fbba-2dcd-486c-a4ab-14759db58dde.json').json()
+    error_log = requests.get('https://www.microprediction.org/errors/53e6fbba-2dcd-486c-a4ab-14759db58dde').json()
+    
  

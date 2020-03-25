@@ -19,7 +19,7 @@ class MicroCrawler(MicroWriter):
 
     def choose_stream(self):
         """ Randomized """
-        streams = self.get_streams()
+        streams = self.get_sponsors()
         candidates = [ name for name, sponsor in streams.items() if len(sponsor.replace(' ',''))>=self.min_difficulty ]
         return random.choice(candidates)
 
@@ -37,10 +37,8 @@ class MicroCrawler(MicroWriter):
                 scenario_values = exponential_bootstrap(lagged=lagged,num=self.num_predictions, decay=0.01)
                 self.submit(name=name,values=scenario_values,delay=delay)
                 balance = self.get_balance()
-                errors  = self.get_errors()
-                confirms = self.get_confirms()
                 message = {'name': name, "submitted": True, 'delay': delay, "values": scenario_values[:5],
-                           "balance": balance, "confirms": confirms, "errors": errors[:5], }
+                           "balance": balance, "confirms":self.base_url+'/confirms/'+self.write_key, "errors":self.base_url+'/errors/'+self.write_key}
             if self.verbose:
                 pprint.pprint(message)
                 print("",flush=True)

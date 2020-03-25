@@ -14,6 +14,11 @@ class MicroWriter(MicroReader):
     def __repr__(self):
         return {'write_key':self.write_key,"animal":muid.animal(self.write_key)}
 
+    def get_home(self):
+        res = requests.put(self.base_url + '/live/' + self.write_key )
+        if res.status_code == 200:
+            return res.json()
+
     def set(self, name, value):
         """ Create or update a stream """
         res = requests.put(self.base_url + '/live/' + name, data={"write_key": self.write_key, "value": value})
@@ -71,6 +76,27 @@ class MicroWriter(MicroReader):
 
     def get_confirms(self):
         res = requests.get(self.base_url + '/confirms/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_leaderboard(self,name,delay=None):
+        res = requests.patch(self.base_url + '/leaderboard/' + name, data={"delay": delay})
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_overall(self):
+        res = requests.patch(self.base_url + '/overall/')
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_performance(self):
+        res = requests.get(self.base_url + '/performance/' + self.write_key)
         if res.status_code == 200:
             return res.json()
         else:
