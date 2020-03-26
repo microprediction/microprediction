@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="0.1.20",
+    version="0.1.22",
     description="Client for www.microprediction.org",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -24,7 +24,7 @@ setup(
     test_suite='pytest',
     tests_require=['pytest'],
     include_package_data=True,
-    install_requires=["numpy","muid","aiohttp","pathlib","retrying","contexttimer"],
+    install_requires=["numpy","muid","aiohttp","pathlib","retrying","contexttimer","requests"],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",

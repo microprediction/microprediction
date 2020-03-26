@@ -2,7 +2,7 @@ import logging
 import random
 import time
 
-from microprediction.config_private import COVID_API, COVID_UUID, BUZZ
+from microprediction.config_private import COVID_API, COVID_UUID, BUZZ_UUIDS
 
 from ravenpackapi import RPApi, ApiConnectionError
 
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 api = RPApi(api_key=COVID_API)
 
 # query the realtime feed
-ds = api.get_dataset(dataset_id=BUZZ["cop.json"])
+ds = api.get_dataset(dataset_id=BUZZ_UUIDS["cop.json"])
 
 
 
