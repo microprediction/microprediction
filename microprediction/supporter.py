@@ -3,14 +3,15 @@ import requests, random
 from pprint import pprint
 from microprediction import new_key
 
-try:
-    from microprediction.config_private import DONATION_PASSWORD, DONOR_NAME
-except:
-    raise Exception("Ask Peter for the donation password ")
 
-def donate(difficulty=None):
+def donate(difficulty=None, password=None, donor='anonymous'):
+    if password is None:
+        try:
+            from microprediction.config_private import DONATION_PASSWORD, DONOR_NAME
+        except:
+            raise Exception("Ask Peter for the donation password ")
     write_key = new_key(difficulty=8)
-    res = requests.post('https://www.microprediction.com/donations/' + write_key,data={'password': DONATION_PASSWORD, 'donor': DONOR_NAME})
+    res = requests.post('https://www.microprediction.com/donations/' + write_key,data={'password': password, 'donor': donor})
     if 'password' in res.json()['message']:
         return {"error":res.json()}
     else:
