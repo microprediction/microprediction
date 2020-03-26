@@ -2,9 +2,23 @@
 import requests, random
 from pprint import pprint
 from microprediction import new_key
-
+import multiprocessing as mp
 
 def donate(difficulty=None, password=None, donor='anonymous'):
+    try:
+        donaten(difficulty,password,donor)
+    except:
+        print("multithreading is not happy",flush=True)
+        donate1(difficulty,password,donor)
+
+def donaten(difficulty=None, password=None, donor='anonymous'):
+    num_procs = mp.cpu_count()
+    pool = mp.Pool(4*num_procs)
+    result = [ pool.apply(func=donate1,args=(difficulty,password,donor)) for _ in range(4*num_procs) ]
+    pool.close()
+
+
+def donate1(difficulty=None, password=None, donor='anonymous'):
     if password is None:
         try:
             from microprediction.config_private import DONATION_PASSWORD, DONOR_NAME
