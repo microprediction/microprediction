@@ -1,1 +1,1 @@
-Examples of live data sources
+Examples of live data sources. See feed_examples_live for illustration of how to use them to write a stream. 
