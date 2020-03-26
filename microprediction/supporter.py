@@ -9,14 +9,19 @@ except:
     raise Exception("Ask Peter for the donation password ")
 
 def donate(difficulty=None):
-    if difficulty is None:
-        difficulty = random.choice([12,13])
-    while True:
-        print("Mining and donations with password "+DONATION_PASSWORD+" and donor name "+DONOR_NAME+". Thanks. Difficulty set to "+str(difficulty))
-        write_key = new_key(difficulty=12)
-        print(write_key,flush=True)
-        res = requests.post('https://www.microprediction.com/donations/' + write_key, data={'password': DONATION_PASSWORD,'donor':DONOR_NAME})
-        pprint(res.json())
+    write_key = new_key(difficulty=8)
+    res = requests.post('https://www.microprediction.com/donations/' + write_key,data={'password': DONATION_PASSWORD, 'donor': DONOR_NAME})
+    if 'password' in res.json()['message']:
+        return {"error":res.json()}
+    else:
+        if difficulty is None:
+            difficulty = random.choice([12,13])
+        while True:
+            print("Mining and donations with password "+DONATION_PASSWORD+" and donor name "+DONOR_NAME+". Thanks. Difficulty set to "+str(difficulty))
+            write_key = new_key(difficulty=12)
+            print(write_key,flush=True)
+            res = requests.post('https://www.microprediction.com/donations/' + write_key, data={'password': DONATION_PASSWORD,'donor':DONOR_NAME})
+            pprint(res.json())
 
 
 if __name__=="__main__":
