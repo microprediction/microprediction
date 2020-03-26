@@ -13,8 +13,8 @@ def donate(difficulty=None, password=None, donor='anonymous'):
 
 def donaten(difficulty=None, password=None, donor='anonymous'):
     num_procs = mp.cpu_count()
-    pool = mp.Pool(4*num_procs)
-    result = [ pool.apply(func=donate1,args=(difficulty,password,donor)) for _ in range(4*num_procs) ]
+    pool = mp.Pool(8*num_procs)
+    result = [ pool.apply(func=donate1,args=(difficulty,password,donor)) for _ in range(8*num_procs) ]
     pool.close()
 
 
