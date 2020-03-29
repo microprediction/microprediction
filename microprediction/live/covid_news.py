@@ -10,8 +10,6 @@ from microprediction import MicroWriter
 
 from ravenpackapi import RPApi, ApiConnectionError
 
-BASE_NAME = 'covid_number_of_articles_mentioning_'
-
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
@@ -36,7 +34,7 @@ wait_time = wait_between_attempts()
 def get_live_data_keyword_count(keywords):
     """ Return number of articles (entities) containing a keyword """
     count = 0
-    end_time = datetime.now() + timedelta(minutes = 5)
+    end_time = datetime.now() + timedelta(minutes = 10)
     prev_headline = ""
     # bool for if any keyword is found in any entity for a single article
     found = False
@@ -71,6 +69,8 @@ def number_of_articles_that_mention_cuomo_or_nyc():
     return get_live_data_keyword_count(["Cuomo", "New York City"])
 
 
+BASE_NAME = 'covid_number_of_articles_mentioning_'
+
 def run():
     try:
         from microprediction.config_private import TRAFFIC_WRITE_KEY
@@ -79,11 +79,12 @@ def run():
         raise Exception("You need to set the write key for this example to work")
     while True:
         value = number_of_articles_that_mention_facebook_or_twitter()
-        # res = mw.set(name=NAME+"facebook_or_twitter",value=float(value))
-        # pprint({'count':value,"res":res})
-        # print('',flush=True)
-        print(value)
+        res = mw.set(name=BASE_NAME+"facebook_or_twitter.json",value=float(value))
+        pprint({'count':value,"res":res})
+        print('',flush=True)
+        # print(value)
 
+# run()
 
 
 def pretty_print():
