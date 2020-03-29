@@ -34,7 +34,7 @@ wait_time = wait_between_attempts()
 def get_live_data_keyword_count(keywords):
     """ Return number of articles (entities) containing a keyword """
     count = 0
-    end_time = datetime.now() + timedelta(minutes = 10)
+    end_time = datetime.now() + timedelta(minutes = 20)
     prev_headline = ""
     # bool for if any keyword is found in any entity for a single article
     found = False
