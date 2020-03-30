@@ -6,10 +6,10 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from microprediction import MicroWriter
 from microprediction.config_private import TRAFFIC_WRITE_KEY, BART_KEY
 
-# Average delays for all BART bus lines
+# Average delays for all BART train lines
 
 def fetch_live_data(station):
-    """ Given list of station_ids as input, returns total number of bikes """
+    """ Given specific station (or "ALL") as input, returns the average delay in seconds """
     total_delay = 0
     lines = 0
     r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig="+station+"&key="+BART_KEY+"&json=y")
@@ -36,7 +36,7 @@ print("Initial value is " + str(initial_value) + " seconds", flush=True)
 
 
 def poll_and_send():
-    """ Create stream of citibike count """
+    """ Create stream of average delay in seconds """
     value = all_stations_delay()
     # res = mw.set(name=NAME,value=float(value))
     res = 0
