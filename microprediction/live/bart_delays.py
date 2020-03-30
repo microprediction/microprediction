@@ -50,7 +50,7 @@ def run():
         raise Exception("You need to set the write key for this example to work")
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
-    scheduler.add_job(poll_and_send, 'interval', minutes=1)
+    scheduler.add_job(poll_and_send, 'interval', minutes=20)
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
