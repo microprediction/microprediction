@@ -31,12 +31,12 @@ def donate1(difficulty=None, password=None, donor='anonymous'):
             return {"error":res.json()}
         else:
             if difficulty is None:
-                difficulty = random.choice([12,13])
+                difficulty = random.choice([12,12,12,13])
             while True:
-                print("Mining and donating the MUIDs with password "+password+" and donor name "+donor+". Thanks. Difficulty set to "+str(difficulty))
+                print("Mining and donating the MUIDs with password "+password+" and donor name "+donor+". Thanks. Difficulty set to "+str(difficulty),flush=True)
                 write_key = new_key(difficulty=12)
                 print(write_key,flush=True)
-                res = requests.post('https://www.microprediction.com/donations/' + write_key, data={'password': DONATION_PASSWORD,'donor':DONOR_NAME})
+                res = requests.post('https://www.microprediction.com/donations/' + write_key, data={'password': password,'donor':donor})
                 pprint(res.json())
     else:
         return res
