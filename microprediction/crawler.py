@@ -9,10 +9,11 @@ import numpy as np
 
 class MicroCrawler(MicroWriter):
 
-    def __init__(self, write_key=None, base_url=None, verbose=True, min_lagged=25, stop_loss=500, min_budget=0., max_budget=5., min_lags = 25, sponsor_min=12, sleep_time=300) :
-        """ Initialize write_key if none provided """
+    def __init__(self, write_key=None, base_url=None, verbose=True, min_lagged=25, stop_loss=500, min_budget=0., max_budget=5., min_lags = 25, sponsor_min=12, sleep_time=300):
+        """  """
         super().__init__(base_url=base_url or default_url(), write_key=write_key )
         assert muid.difficulty(write_key) >= 8, "Invalid write_key for crawler. See www.muid.org to mine one. "
+        assert not self.base_url[-1]=='/','Base url should not have trailing /'
         self.verbose     = verbose
         self.min_lagged  = min_lagged          # Only consider streams with a long lag history
         self.sponsor_min = sponsor_min         # Only choose streams with sponsors at least this long
@@ -45,21 +46,23 @@ class MicroCrawler(MicroWriter):
     def choose_horizon(self,name=None):
         return random.choice(self.delays)
 
-    def sample(self, lagged):
+    def create_prediction(self, lagged):
         """ Should return a vector of scenarios of len self.num_predictions """
         return exponential_bootstrap(lagged=lagged,num=self.num_predictions, decay=0.01)
 
-    def predict(self, name, delay):
+    def predict_and_submit(self, name, delay):
         """ Given a stream and horizon, try to submit predictions """
         lagged = self.get_lagged_values(name)
         if len(lagged) < self.min_lagged:
             message = {'name': name, 'submitted': False, "reason": "Insufficient lags", "lagged_len": len(lagged)}
         else:
-            scenario_values = self.sample(lagged=lagged)
+            scenario_values = self.create_prediction(lagged=lagged)
             exec = self.submit(name=name, values=scenario_values, delay=delay)
             balance = self.get_balance()
             message = {'name': name, "submitted": True, 'delay': delay, "values": scenario_values[:5],
-                       "balance": balance, "confirms": self.get_confirms(), "errors": self.get_errors()}
+                       "balance": balance,"exec":exec}
+            if not exec:
+                message.update({"submitted":False,"reason":"execution failure","confirms":self.get_confirms(), "errors": self.get_errors()})
         if self.verbose:
             pprint.pprint(message)
             print("", flush=True)
@@ -84,7 +87,7 @@ class MicroCrawler(MicroWriter):
 
             # Try to predict
             delay = self.choose_horizon(name=name)
-            self.predict(name=name,delay=delay)
+            self.predict_and_submit(name=name, delay=delay)
             time.sleep(self.sleep_time)
             name = self.choose_stream()
 
@@ -94,7 +97,7 @@ class MicroCrawler(MicroWriter):
 
     def initialization_checks(self):
         fake_lagged = list( np.random.randn(self.min_lagged) )
-        scenarios    = self.sample(fake_lagged)
+        scenarios    = self.create_prediction(fake_lagged)
         assert len(scenarios)==self.num_predictions, "This crawler will not work as the length of the "
 
 
