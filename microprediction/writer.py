@@ -91,7 +91,8 @@ class MicroWriter(MicroReader):
     def get_overall(self):
         res = requests.patch(self.base_url + '/overall/')
         if res.status_code == 200:
-            return res.json()
+            performance = res.json()
+
         else:
             raise Exception('Failed for ' + self.write_key)
 

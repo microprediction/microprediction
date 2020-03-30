@@ -16,8 +16,6 @@ api = RPApi(api_key=COVID_API)
 ds = api.get_dataset(dataset_id=BUZZ_UUIDS["cop.json"])
 
 
-
-
 def wait_between_attempts():
     """ Incremental backoff between connection attempts """
     wait_time = 0.3  # time is in seconds
