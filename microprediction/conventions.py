@@ -68,7 +68,7 @@ class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyC
 
     def __init__(self, base_url=None, num_predictions=None, min_len=None, min_balance=None):
         """ Establish connection and adopt configuration parameters from site, if not provided """
-        self.base_url = base_url or "http://www.microprediction.com/"
+        self.base_url = base_url or "http://www.microprediction.org/"
         config = requests.get(self.base_url + "/config.json").json()
         self.delays = config["delays"]
         self.num_predictions = num_predictions or config["num_predictions"]

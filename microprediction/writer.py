@@ -120,8 +120,8 @@ class MicroWriter(MicroReader):
             if verbose:
                 confirms = self.get_confirms()
                 errors = self.get_errors()
-                pprint.pprint(confirms[-1])
-                pprint.pprint(errors[-1])
+                pprint.pprint(confirms[-1:])
+                pprint.pprint(errors[-1:])
                 print('',flush=True)
                 return True
         elif res.status_code==403:
