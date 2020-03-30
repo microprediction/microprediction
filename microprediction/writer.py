@@ -131,10 +131,11 @@ class MicroWriter(MicroReader):
             print('',flush=True )
             raise Exception('Failed to submit')
 
-    def cancel(self, name):
+    def cancel(self, name, delays=None):
         """ Withdraw scenarios """
         codes = list()
-        for delay in self.delays:
+        delays = delays or self.delays
+        for delay in delays:
             res = requests.delete(self.base_url + '/submit/'+name, params={'delay':delay} )
             codes.append(res.status_code)
         success   = all([ c==200 for c in codes ] )
