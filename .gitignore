@@ -1,2 +1,6 @@
 microprediction/config_private.py
 **/__pycache*
+*private.py
+bump.sh
+__pycache*
+build/*
