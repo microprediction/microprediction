@@ -85,13 +85,12 @@ class MicroCrawler(MicroWriter):
         lagged_values = self.get_lagged_values(name)
         lagged_times  = self.get_lagged_times(name)
         if len(lagged_values or []) < self.min_lags:
-            message = {'name': name, 'submitted': False, "reason": "Insufficient lags", "lagged_len": len(lagged)}
+            message = {'name': name, 'submitted': False, "reason": "Insufficient lags", "lagged_len": len(lagged_values)}
         else:
             scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times)
             exec = self.submit(name=name, values=scenario_values, delay=delay)
             balance = self.get_balance()
-            message = {'name': name, "submitted": True, 'delay': delay, "values": scenario_values[:5],
-                       "balance": balance,"exec":exec}
+            message = {'name': name, "submitted": True, 'delay': delay, "values": scenario_values[:2], "balance": balance,"exec":exec}
             if not exec:
                 message.update({"submitted":False,"reason":"execution failure","confirms":self.get_confirms(), "errors": self.get_errors()})
         if self.verbose:

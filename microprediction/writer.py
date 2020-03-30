@@ -103,24 +103,25 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
-    def submit(self, name, values, delay=None):
+    def submit(self, name, values, delay=None, verbose=None):
         """ Submit prediction scenarios
         :param name:      str         Examples:    cop.json   z1~cop.json   z2~cop~qp.json
         :param write_key: str         Example:    "5263ee89-e34e-44dc-8b91-445b302b043e"
         :param values:    [ float ]
         :return: bool
         """
+        verbose = verbose or self.verbose
         delay = delay or self.delays[0]
         assert len(values)==self.num_predictions
 
         comma_sep_values = ",".join([ str(v) for v in values ] )
         res = requests.put(self.base_url + '/submit/' + name, data={'delay':self.delays[0], 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code==200:
-            if self.verbose:
+            if verbose:
                 confirms = self.get_confirms()
                 errors = self.get_errors()
-                pprint.pprint(confirms[:2])
-                pprint.pprint(errors[:2])
+                pprint.pprint(confirms[-1])
+                pprint.pprint(errors[-1])
                 print('',flush=True)
                 return True
         elif res.status_code==403:
