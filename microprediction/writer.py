@@ -137,7 +137,7 @@ class MicroWriter(MicroReader):
         codes = list()
         delays = delays or self.delays
         for delay in delays:
-            res = requests.delete(self.base_url + '/submit/'+name, params={'delay':delay} )
+            res = requests.delete(self.base_url + '/submit/'+name, params={'write_key':self.write_key,'delay':delay} )
             codes.append(res.status_code)
         success   = all([ c==200 for c in codes ] )
         operating = all([ c in [200,403] for c in codes])
