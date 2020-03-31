@@ -1,5 +1,5 @@
 # You will need a RavenPack account to use this
-from microprediction.config_private import COVID_API, COVID_UUID
+from microprediction.config_private import COVID_API, COVID_UUID, TRAFFIC_WRITE_KEY
 import logging
 import random
 import time
@@ -9,6 +9,7 @@ from pprint import pprint
 from microprediction import MicroWriter
 
 from ravenpackapi import RPApi, ApiConnectionError
+
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -69,22 +70,27 @@ def number_of_articles_that_mention_cuomo_or_nyc():
     return get_live_data_keyword_count(["Cuomo", "New York City"])
 
 
-BASE_NAME = 'covid_number_of_articles_mentioning_'
+
+NAME = "covid_news_nyc.json"
+
+initial_value = float(number_of_articles_that_mention_cuomo_or_nyc())
+print("Initial value is " + str(initial_value), flush=True)
+
 
 def run():
     try:
-        from microprediction.config_private import TRAFFIC_WRITE_KEY
         mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
     except:
         raise Exception("You need to set the write key for this example to work")
     while True:
-        value = number_of_articles_that_mention_facebook_or_twitter()
-        res = mw.set(name=BASE_NAME+"facebook_or_twitter.json",value=float(value))
+        value = number_of_articles_that_mention_cuomo_or_nyc()
+        res = mw.set(name=NAME,value=float(value))
         pprint({'count':value,"res":res})
         print('',flush=True)
-        # print(value)
 
-# run()
+if __name__=="__main__":
+    run()
+
 
 
 def pretty_print():
