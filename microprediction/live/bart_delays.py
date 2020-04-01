@@ -34,20 +34,20 @@ NAME = 'bart_delays.json'
 initial_value = all_stations_delay()
 print("Initial value is " + str(initial_value) + " seconds", flush=True)
 
+try:
+    mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
+except:
+    raise Exception("You need to set the write key for this example to work")
+
 
 def poll_and_send():
     """ Create stream of average delay in seconds """
     value = all_stations_delay()
-    # res = mw.set(name=NAME,value=float(value))
-    res = 0
+    res = mw.set(name=NAME,value=float(value))
     pprint({'average delay':value,"res":res})
     print('',flush=True)
 
 def run():
-    try:
-        mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
-    except:
-        raise Exception("You need to set the write key for this example to work")
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
     scheduler.add_job(poll_and_send, 'interval', minutes=20)
