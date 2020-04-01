@@ -1,5 +1,11 @@
 import uuid, re, sys, muid, requests
 
+def default_url():
+    try:
+        from microprediction.config_private import BASE_URL
+        return BASE_URL
+    except:
+        return "https://www.microprediction.org"
 
 class KeyConventions():
 
@@ -66,11 +72,12 @@ class StatsConventions():
 
 class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):
 
-    def __init__(self, base_url=None, num_predictions=None, min_len=None, min_balance=None):
+    def __init__(self, base_url=None, num_predictions=None, min_len=None, min_balance=None, delays=None) :
         """ Establish connection and adopt configuration parameters from site, if not provided """
-        self.base_url = base_url or "http://www.microprediction.org/"
-        config = requests.get(self.base_url + "/config.json").json()
-        self.delays = config["delays"]
+        self.base_url = base_url or default_url()
+        if any( arg is None for arg in [base_url, num_predictions, min_len, min_balance]):
+            config = requests.get(self.base_url + "/config.json").json()
+        self.delays = delays or config["delays"]
         self.num_predictions = num_predictions or config["num_predictions"]
         self.min_len = min_len or config["min_len"]
         self.min_balance = min_balance or config["min_balance"]

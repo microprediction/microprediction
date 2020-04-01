@@ -3,9 +3,9 @@ import muid, requests, pprint
 
 class MicroWriter(MicroReader):
 
-    def __init__(self, write_key="invalid_key", base_url=None, verbose=True ):
+    def __init__(self, write_key="invalid_key", base_url=None, verbose=True, **kwargs ):
         """ Create the ability to write """
-        super().__init__(base_url=base_url or default_url())
+        super().__init__(base_url=base_url or default_url(),**kwargs)
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
         assert muid.validate(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
