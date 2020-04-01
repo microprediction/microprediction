@@ -115,7 +115,7 @@ class MicroWriter(MicroReader):
         assert len(values)==self.num_predictions
 
         comma_sep_values = ",".join([ str(v) for v in values ] )
-        res = requests.put(self.base_url + '/submit/' + name, data={'delay':self.delays[0], 'write_key': self.write_key, 'values': comma_sep_values})
+        res = requests.put(self.base_url + '/submit/' + name, data={'delay':delay, 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code==200:
             if verbose:
                 confirms = self.get_confirms()

@@ -36,7 +36,6 @@ class MicroCrawler(MicroWriter):
         """ Should return a stream name, or None """
         budgets     = self.get_budgets()
         sponsors    = self.get_sponsors()
-        performance = self.get_performance()
         # Stream criteria (combines with AND)
         not_too_dull         = [name for name, budget in budgets.items() if float(budget) >= self.min_budget]
         not_too_competitive  = [name for name, budget in budgets.items() if float(budget) <= self.max_budget ]
@@ -84,6 +83,7 @@ class MicroCrawler(MicroWriter):
         """ Given a stream and horizon, try to submit predictions """
         lagged_values = self.get_lagged_values(name)
         lagged_times  = self.get_lagged_times(name)
+        exec = 0
         if len(lagged_values or []) < self.min_lags:
             message = {'name': name, 'submitted': False, "reason": "Insufficient lags", "lagged_len": len(lagged_values)}
         else:
