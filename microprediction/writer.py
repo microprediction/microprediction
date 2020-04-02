@@ -3,9 +3,9 @@ import muid, requests, pprint
 
 class MicroWriter(MicroReader):
 
-    def __init__(self, write_key="invalid_key", base_url=None, verbose=True ):
+    def __init__(self, write_key="invalid_key", base_url=None, verbose=True, **kwargs ):
         """ Create the ability to write """
-        super().__init__(base_url=base_url or default_url())
+        super().__init__(base_url=base_url or default_url(),**kwargs)
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
         assert muid.validate(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
@@ -115,13 +115,13 @@ class MicroWriter(MicroReader):
         assert len(values)==self.num_predictions
 
         comma_sep_values = ",".join([ str(v) for v in values ] )
-        res = requests.put(self.base_url + '/submit/' + name, data={'delay':self.delays[0], 'write_key': self.write_key, 'values': comma_sep_values})
+        res = requests.put(self.base_url + '/submit/' + name, data={'delay':delay, 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code==200:
             if verbose:
                 confirms = self.get_confirms()
                 errors = self.get_errors()
-                pprint.pprint(confirms[-1])
-                pprint.pprint(errors[-1])
+                pprint.pprint(confirms[-1:])
+                pprint.pprint(errors[-1:])
                 print('',flush=True)
                 return True
         elif res.status_code==403:
@@ -137,7 +137,7 @@ class MicroWriter(MicroReader):
         codes = list()
         delays = delays or self.delays
         for delay in delays:
-            res = requests.delete(self.base_url + '/submit/'+name, params={'delay':delay} )
+            res = requests.delete(self.base_url + '/submit/'+name, params={'write_key':self.write_key,'delay':delay} )
             codes.append(res.status_code)
         success   = all([ c==200 for c in codes ] )
         operating = all([ c in [200,403] for c in codes])

@@ -6,7 +6,7 @@ class FlammableCod(MicroCrawler):
     " Example crawler ... this guy is likely to succeed only on z-streams, but helps the ecosystem by entering quickly "
 
     def __init__(self,write_key):
-        super().__init__(stop_loss=50,min_lags=0,sleep_time=90,write_key=write_key)
+        super().__init__(stop_loss=10,min_lags=0,sleep_time=90,write_key=write_key)
 
     def candidate_streams(self):
         """ He'll try anything """

@@ -1,19 +1,12 @@
-from microprediction.conventions import MicroConventions
+from microprediction.conventions import MicroConventions, default_url
 import requests
 
 
-def default_url():
-    try:
-        from microprediction.config_private import BASE_URL
-        return BASE_URL
-    except:
-        return "https://www.microprediction.org"
-
 class MicroReader(MicroConventions):
 
-    def __init__(self,base_url=None):
+    def __init__(self,base_url=None, **kwargs):
         """ Establish connection and adopt configuration parameters from site """
-        super().__init__(base_url=base_url or default_url())
+        super().__init__(base_url=base_url or default_url(),**kwargs)
 
     def get(self, name):
         res = requests.get(self.base_url + '/live/' + name)
