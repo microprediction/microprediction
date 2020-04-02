@@ -1,10 +1,10 @@
+from microprediction.config_private import TRAFFIC_WRITE_KEY
 import requests
-import datetime
+import time
+from datetime import datetime, timedelta
 from pprint import  pprint
-from apscheduler.schedulers.blocking import BlockingScheduler
 
 from microprediction import MicroWriter
-from microprediction.config_private import TRAFFIC_WRITE_KEY
 
 # Number of bikes available near large Manhattan hospitals
 # longitude and latitude of rectangles within 500 feet of hospital
@@ -36,55 +36,48 @@ def get_station_ids():
     return station_ids
 
 def fetch_live_data(keys,field):
-    """ Given list of station_ids as input, returns total number of bikes """
+    """ Given list of station_ids as input, returns list of station[field] """
     r = requests.get("https://feeds.citibikenyc.com/stations/stations.json")
     if r.status_code==200:
         data = r.json()
         station_data = [ d for d in data["stationBeanList"] if int(d["id"]) in keys ]
-        available_bikes = 0
-        for station in station_data:
-            available_bikes += station[field]
-        return available_bikes
+        return [ station[field] for station in station_data ]
     else:
         return None
 
-def madison_bikes_available():
-    return fetch_live_data(keys=[456],field="availableBikes")
+def hospital_bike_activity(station_ids):
+    prev = fetch_live_data(keys=station_ids,field="availableBikes")
+    end_time = datetime.now() + timedelta(minutes = 20)
+    activity = 0
+    # measure activity change every 2 minutes for 20 minutes
+    while datetime.now() < end_time:
+        time.sleep(2 * 60)
+        curr = fetch_live_data(keys=station_ids,field="availableBikes")
+        for i in range(len(station_ids)):
+            activity += abs(curr[i] - prev[i])
+        prev = curr
+    return activity
 
-def hospital_bikes_available(station_ids):
-    return fetch_live_data(keys=station_ids,field="availableBikes")
 
 
-
-NAME = 'citibikes_near_manhattan_hospitals.json'
+NAME = 'hospital_bike_activity.json'
 
 station_ids = get_station_ids()
-initial_value = float(hospital_bikes_available(station_ids))
-print("Initial value is " + str(initial_value), flush=True)
+print("Initial activity is " + str(0), flush=True)
 
-
-def poll_and_send():
-    """ Create stream of citibike count """
-    value = hospital_bikes_available(station_ids)
-    # res = mw.set(name=NAME,value=float(value))
-    res = 0
-    pprint({'citibikes':value,"res":res})
-    print('',flush=True)
 
 def run():
     try:
         mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
     except:
         raise Exception("You need to set the write key for this example to work")
-    print('Starting scheduler',flush=True)
-    scheduler = BlockingScheduler()
-    scheduler.add_job(poll_and_send, 'interval', minutes=20)
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):
-        pass
-    print('Stopping scheduler',flush=True)
+    while True:
+        value = hospital_bike_activity(station_ids)
+        res = mw.set(name=NAME,value=float(value))
+        res = 0
+        pprint({'activity':value,"res":res})
+        print('',flush=True)
+
 
 if __name__=="__main__":
     run()
-
