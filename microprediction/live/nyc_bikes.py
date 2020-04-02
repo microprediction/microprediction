@@ -74,7 +74,6 @@ def run():
     while True:
         value = hospital_bike_activity(station_ids)
         res = mw.set(name=NAME,value=float(value))
-        res = 0
         pprint({'activity':value,"res":res})
         print('',flush=True)
 
