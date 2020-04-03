@@ -21,6 +21,8 @@ def fetch_live_data(station):
                 if len(destination["estimate"]) is not 0:
                     total_delay += int(destination["estimate"][0]["delay"])
                     lines += 1
+        print(lines)
+        lines = 14
         # fail-safe for wide BART shutdowns. On average ~180 lines
         return float(total_delay) / lines if lines > 15 else None
     else:
@@ -36,16 +38,16 @@ NAME = 'bart_delays.json'
 initial_value = all_stations_delay()
 print("Initial value is " + str(initial_value) + " seconds", flush=True)
 
-
 try:
     mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
 except:
     raise Exception("You need to set the write key for this example to work")
 
 def record_json(pst_now):
+    """ just for me to keep track of things """
     import json
     r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+BART_KEY+"&json=y")
-    filename = "record_" + pst_now.strftime("%H:%M:%S") + ".json"
+    filename = "record_" + pst_now.strftime("%H-%M-%S") + ".json"
     with open(filename, 'w') as f:
         json.dump(r.json(), f)
 
@@ -84,6 +86,8 @@ def run():
     except (KeyboardInterrupt, SystemExit):
         pass
     print('Stopping scheduler',flush=True)
+
+poll_and_send()
 
 if __name__=="__main__":
     run()
