@@ -27,7 +27,7 @@ class MicroWriter(MicroReader):
         elif res.status_code==500:
             raise Exception("server error")
         else:
-            err = self.get_errors()
+            err = self.get_errors()[:2]
             pprint.pprint(err)
             print('',flush=True)
             raise Exception('Failed to update')
@@ -37,7 +37,8 @@ class MicroWriter(MicroReader):
         request_data = {"names": ",".join(names), "write_key": self.write_key}
         request_data.update({"values": ",".join([str(v) for v in values])})
         res = requests.put(self.base_url + '/copula/', data=request_data)
-        pprint.pprint(res.content)
+        if self.verbose:
+            pprint.pprint(res.content)
         if res.status_code == 200:
             return res.json()
         elif res.status_code == 500:
@@ -126,7 +127,7 @@ class MicroWriter(MicroReader):
         if res.status_code==200:
             if verbose:
                 confirms = self.get_confirms()
-                errors = self.get_errors()
+                errors   = self.get_errors()
                 pprint.pprint(confirms[-1:])
                 pprint.pprint(errors[-1:])
                 print('',flush=True)
@@ -134,7 +135,8 @@ class MicroWriter(MicroReader):
         elif res.status_code==403:
             return False
         else:
-            rrs = self.get_errors()
+            print('--- SUBMIT ERRORS ---- ')
+            rrs = self.get_errors()[:2]
             pprint.pprint(rrs)
             print('',flush=True )
             raise Exception('Failed to submit')
