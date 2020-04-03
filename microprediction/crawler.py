@@ -2,6 +2,7 @@
 from microprediction.writer import MicroWriter
 from microprediction.reader import default_url
 import muid, random, time
+from collections import OrderedDict
 from microprediction.samplers import exponential_bootstrap
 import pprint
 import numpy as np
@@ -31,6 +32,20 @@ class MicroCrawler(MicroWriter):
         self.max_budget  = max_budget          # Play with highly competitive algorithms?
         self.min_lags    = min_lags            # Insist on historical data
         self.performance = self.get_performance()
+        self.active      = self.get_active()
+        self.stream_blacklist = list()
+
+    def active_performance(self, reverse=False ):
+        return OrderedDict( sorted( [ (horizon, balance) for horizon, balance in self.performance.items() if horizon in self.active], key = lambda e: e[1]), reverse=reverse )
+
+    def worst_active_horizon(self):
+        return [ horizon for horizon, balance in self.active_performance(reverse=True).items() if balance<self.stop_loss ]
+
+    def cancel_worst_active(self,num=1):
+        wap = self.worst_active_horizon()[:num]
+        for horizon in wap:
+            name, delay = self.split_horizon_name(horizon)
+            self.cancel(name=name,delays=[delay])
 
     def candidate_streams(self):
         """ Should return a stream name, or None """
@@ -99,25 +114,22 @@ class MicroCrawler(MicroWriter):
         return exec
 
     def run(self):
-        """ Run until it doesn't seem to be working anywhere """
-        blacklist = list()
-        name = self.choose_stream(exclude=blacklist)
+        """ Run until we can't find a stream """
+        name = self.choose_stream(exclude=self.stream_blacklist)
         while name:
-            for delay in self.delays:
-                self.withdraw_if_losing(name=name, delay=delay )
+            if random.choice(range(5))==1:
+                self.performance = self.get_performance()
+                self.active = self.get_active()
+                self.cancel_worst_active()
             delay = self.choose_horizon(name=name)
             if delay:
                 self.predict_and_submit(name=name, delay=delay )
             else:
-                blacklist.append(name)
+                self.stream_blacklist.append(name)
             time.sleep(self.sleep_time)
-            name = self.choose_stream(exclude=blacklist)
-            if random.choice(range(10))==1:
-                self.performance = self.get_performance()
+            name = self.choose_stream(exclude=self.stream_blacklist)
 
-        pprint.pprint(self.get_performance())
         print('Crawler is laying down to die ', flush=True )
-
 
     def initialization_checks(self):
         fake_lagged = list( np.random.randn(self.min_lags) )

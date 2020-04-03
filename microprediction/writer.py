@@ -96,6 +96,13 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
+    def get_active(self):
+        res = requests.get(self.base_url + '/active/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
     def get_performance(self):
         res = requests.get(self.base_url + '/performance/' + self.write_key)
         if res.status_code == 200:
