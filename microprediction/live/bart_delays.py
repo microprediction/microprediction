@@ -21,8 +21,6 @@ def fetch_live_data(station):
                 if len(destination["estimate"]) is not 0:
                     total_delay += int(destination["estimate"][0]["delay"])
                     lines += 1
-        print(lines)
-        lines = 14
         # fail-safe for wide BART shutdowns. On average ~180 lines
         return float(total_delay) / lines if lines > 15 else None
     else:
@@ -87,8 +85,6 @@ def run():
         pass
     print('Stopping scheduler',flush=True)
 
-poll_and_send()
 
 if __name__=="__main__":
     run()
-
