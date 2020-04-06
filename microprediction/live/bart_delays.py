@@ -1,11 +1,31 @@
+import logging
 import requests
-from datetime import datetime
+import time
 import pytz
+import random
+from datetime import datetime
 from pprint import  pprint
-from apscheduler.schedulers.blocking import BlockingScheduler
 
 from microprediction import MicroWriter
 from microprediction.config_private import TRAFFIC_WRITE_KEY, BART_KEY
+
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+
+def wait_between_attempts():
+    """ Incremental backoff between connection attempts """
+    wait_time = 19.3  # time is in seconds
+    while True:
+        yield wait_time
+        wait_time = min(wait_time * 1.5, 30)
+        wait_time *= (100 + random.randint(0, 50)) / 100
+
+wait_time = wait_between_attempts()
+
 
 # Average delays for all BART train lines
 
@@ -13,18 +33,22 @@ def fetch_live_data(station):
     """ Given specific station (or "ALL") as input, returns the average delay in seconds """
     total_delay = 0
     lines = 0
-    r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig="+station+"&key="+BART_KEY+"&json=y")
-    if r.status_code==200:
-        station_data = r.json()["root"]["station"]
-        for station in station_data:
-            for destination in station["etd"]:
-                if len(destination["estimate"]) is not 0:
-                    total_delay += int(destination["estimate"][0]["delay"])
-                    lines += 1
-        # fail-safe for wide BART shutdowns. On average ~180 lines
-        return float(total_delay) / lines if lines > 15 else None
-    else:
-        return None
+    while True:
+        try:
+            r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig="+station+"&key="+BART_KEY+"&json=y")
+            if r.status_code==200:
+                station_data = r.json()["root"]["station"]
+                for station in station_data:
+                    for destination in station["etd"]:
+                        if len(destination["estimate"]) is not 0:
+                            total_delay += int(destination["estimate"][0]["delay"])
+                            lines += 1
+                # fail-safe for wide BART shutdowns. On average ~180 lines
+                return float(total_delay) / lines if lines > 15 else None
+        except requests.exceptions.RequestException as e:
+            logger.error("Connection error %s: reconnecting..." % e)
+            time.sleep(next(wait_time))
+    return float(total_delay) / lines if lines > 15 else None
 
 def all_stations_delay():
     return fetch_live_data(station="ALL")
@@ -45,7 +69,7 @@ def record_json(pst_now):
     """ just for me to keep track of things """
     import json
     r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+BART_KEY+"&json=y")
-    filename = "record_" + pst_now.strftime("%H-%M-%S") + ".json"
+    filename = "record_" + pst_now.strftime("%H:%M") + ".json"
     with open(filename, 'w') as f:
         json.dump(r.json(), f)
 
@@ -61,18 +85,18 @@ def poll_and_send():
     pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
     if pst_now.weekday() <= 4 and (pst_now.hour < 5 or pst_now.hour >= 21) \
     or pst_now.weekday() >= 5 and (pst_now.hour < 8 or pst_now.hour >= 21):
-        print("{}: Off-Hours".format(pst_now.strftime("%H:%M:%S")))
+        print("{}: Off-Hours".format(pst_now.strftime("%H:%M")))
         record_json(pst_now)
         return
 
     value = all_stations_delay()
 
     if value is None:
-        print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M:%S")))
+        print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M")))
         record_json(pst_now)
     else:
         res = mw.set(name=NAME,value=float(value))
-        pprint({'PST time':pst_now.strftime("%H:%M:%S"),'average delay':value,"res":res})
+        pprint({'PST time':pst_now.strftime("%H:%M"),'average delay':value,"res":res})
         print('',flush=True)
 
 def run():
