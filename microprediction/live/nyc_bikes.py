@@ -103,8 +103,7 @@ def run():
         value = hospital_bike_activity(station_ids)
         utc_now = pytz.utc.localize(datetime.utcnow())
         pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
-        # res = mw.set(name=NAME,value=float(value))
-        res = None
+        res = mw.set(name=NAME,value=float(value))
         pprint({'PST time':pst_now.strftime("%H:%M"),'activity':value,"res":res})
         print('',flush=True)
 
