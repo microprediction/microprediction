@@ -65,14 +65,6 @@ try:
 except:
     raise Exception("You need to set the write key for this example to work")
 
-def record_json(pst_now):
-    """ just for me to keep track of things """
-    import json
-    r = requests.get("http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+BART_KEY+"&json=y")
-    filename = "record_" + pst_now.strftime("%H:%M") + ".json"
-    with open(filename, 'w') as f:
-        json.dump(r.json(), f)
-
 
 def poll_and_send():
     """ Create stream of average delay in seconds """
@@ -86,14 +78,12 @@ def poll_and_send():
     if pst_now.weekday() <= 4 and (pst_now.hour < 5 or pst_now.hour >= 21) \
     or pst_now.weekday() >= 5 and (pst_now.hour < 8 or pst_now.hour >= 21):
         print("{}: Off-Hours".format(pst_now.strftime("%H:%M")))
-        record_json(pst_now)
         return
 
     value = all_stations_delay()
 
     if value is None:
         print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M")))
-        record_json(pst_now)
     else:
         res = mw.set(name=NAME,value=float(value))
         pprint({'PST time':pst_now.strftime("%H:%M"),'average delay':value,"res":res})
