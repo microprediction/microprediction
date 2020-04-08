@@ -1,12 +1,12 @@
-# You will need a RavenPack account to use this
-from microprediction.config_private import COVID_API, COVID_UUID, TRAFFIC_WRITE_KEY
 import logging
-import random
 import time
+import pytz
+import random
 from datetime import datetime, timedelta
 from pprint import pprint
 
 from microprediction import MicroWriter
+from microprediction.config_private import COVID_API, COVID_UUID, TRAFFIC_WRITE_KEY
 
 from ravenpackapi import RPApi, ApiConnectionError
 
@@ -84,8 +84,10 @@ def run():
         raise Exception("You need to set the write key for this example to work")
     while True:
         value = number_of_articles_that_mention_cuomo_or_nyc()
+        utc_now = pytz.utc.localize(datetime.utcnow())
+        pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
         res = mw.set(name=NAME,value=float(value))
-        pprint({'count':value,"res":res})
+        pprint({'PST time':pst_now.strftime("%H:%M"),'count':value,"res":res})
         print('',flush=True)
 
 if __name__=="__main__":
