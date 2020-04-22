@@ -100,16 +100,12 @@ def run():
     except:
         raise Exception("You need to set the write key for this example to work")
     while True:
-        try:
-            value = hospital_bike_activity(station_ids)
-            utc_now = pytz.utc.localize(datetime.utcnow())
-            pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
-            res = mw.set(name=NAME,value=float(value))
-            pprint({'PST time':pst_now.strftime("%H:%M"),'activity':value,"res":res})
-            print('',flush=True)
-        except:
-            print("Retrying poll_and_send")
-            time.sleep(next(wait_time))
+        value = hospital_bike_activity(station_ids)
+        utc_now = pytz.utc.localize(datetime.utcnow())
+        pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
+        res = mw.set(name=NAME,value=float(value))
+        pprint({'PST time':pst_now.strftime("%H:%M"),'activity':value,"res":res})
+        print('',flush=True)
 
 
 if __name__=="__main__":
