@@ -80,14 +80,13 @@ def poll_and_send():
         print("{}: Off-Hours".format(pst_now.strftime("%H:%M")))
         return
 
-    while True:
-        value = all_stations_delay()
-        if value is None:
-            print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M")))
-        else:
-            res = mw.set(name=NAME,value=float(value))
-            pprint({'PST time':pst_now.strftime("%H:%M"),'average delay':value,"res":res})
-            print('',flush=True)
+    value = all_stations_delay()
+    if value is None:
+        print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M")))
+    else:
+        res = mw.set(name=NAME,value=float(value))
+        pprint({'PST time':pst_now.strftime("%H:%M"),'average delay':value,"res":res})
+        print('',flush=True)
 
 def run():
     print('Starting scheduler',flush=True)
