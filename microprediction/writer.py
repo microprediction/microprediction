@@ -131,7 +131,7 @@ class MicroWriter(MicroReader):
                 pprint.pprint(confirms[-1:])
                 pprint.pprint(errors[-1:])
                 print('',flush=True)
-                return True
+            return True
         elif res.status_code==403:
             return False
         else:
