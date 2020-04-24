@@ -108,7 +108,7 @@ class MicroCrawler(MicroWriter):
         if delay_choices:
             return random.choice(delay_choices)
 
-    def sample(self, lagged_values, lagged_times=None):
+    def sample(self, lagged_values, lagged_times=None, name=None, delay=None):
         """ Should return a vector of scenarios of len self.num_predictions """
         return exponential_bootstrap(lagged=lagged_values,num=self.num_predictions, decay=0.01)
 
@@ -120,7 +120,7 @@ class MicroCrawler(MicroWriter):
         if len(lagged_values or []) < self.min_lags or  len(lagged_values or []) > self.max_lags:
             message = {'name': name, 'submitted': False, "reason": "Insufficient or too many lags", "lagged_len": len(lagged_values)}
         else:
-            scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times)
+            scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times, name=name, delay=delay )
             exec = self.submit(name=name, values=scenario_values, delay=delay)
             balance = self.get_balance()
             message = {'name': name, "submitted": True, 'delay': delay, "values": scenario_values[:2], "balance": balance,"exec":exec}
