@@ -16,7 +16,7 @@ class BoozeMammal(MicroCrawler):
     def candidate_streams(self):
         return [name for name, sponsor in self.get_sponsors().items() if name[:2]=='z1' ]
 
-    def sample(self, lagged_values, lagged_times=None ):
+    def sample(self, lagged_values, lagged_times=None, **ignored ):
         """ Fat tails """
         return [1.02*s*(1+0.1*abs(s)) for s in sorted(np.random.randn(self.num_predictions)) ]  # Not to bad for z1-streams, terrible for most others
 
