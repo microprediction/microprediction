@@ -3,10 +3,10 @@ import numpy as np
 
 class FlammableCod(MicroCrawler):
 
-    " Example crawler ... this guy is likely to succeed only on z-streams, but helps the ecosystem by entering quickly "
+    " Example crawler ... this guy helps flush the pipes by entering quickly and getting out quickly "
 
     def __init__(self,write_key):
-        super().__init__(stop_loss=10,min_lags=0,sleep_time=90,write_key=write_key)
+        super().__init__(stop_loss=2,min_lags=0,sleep_time=5,write_key=write_key,quietude=10,verbose=False)
 
     def candidate_streams(self):
         """ He'll try anything """

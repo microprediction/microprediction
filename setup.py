@@ -7,13 +7,13 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="0.1.34",
+    version="0.1.41",
     description="Client for www.microprediction.org",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/microprediction/microprediction",
     author="microprediction",
-    author_email="info@3za.org",
+    author_email="info@microprediction.org",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",

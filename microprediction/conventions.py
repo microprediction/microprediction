@@ -40,6 +40,16 @@ class NameConventions(object):
     def random_name():
         return str(uuid.uuid4()) + '.json'
 
+    def horizon_name(self, name, delay):
+        """ Convention is used for performance and other hashes """  # Move to MicroConventions
+        return str(delay)+self.sep() + name
+
+    def split_horizon_name(self, key):
+        spl = key.split(self.sep())
+        name = spl[1]
+        delay = int(spl[0])
+        return name, delay
+
 class ValueConventions(object):
 
     @staticmethod
