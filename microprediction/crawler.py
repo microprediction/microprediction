@@ -298,9 +298,10 @@ class MicroCrawler(MicroWriter):
         print('Currently predicting for ' + str(len(self.active)) + ' horizons')
         self.stream_candidates = self.candidate_streams()
         print('Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
-        self.next_prediction_time = dict( [ (self.horizon_name(stream_name, horizon), time.time() + k*self.initial_urgency_multiplier(str(horizon))) \
-            for horizon in [70,310,910] \
-            for k, stream_name in enumerate(self.stream_candidates)])
+        desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon in [70, 310, 910]]
+        self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_urgency_multiplier(stream)) \
+            for stream in self.active if stream in desired_streams])
+
 
         print("---------- Restarting -------------")
         pprint.pprint(self.__repr__())
