@@ -2,7 +2,7 @@
 # Examples of scenario generation models
 import random, bisect
 import numpy as np
-
+from statistics import mode, StatisticsError
 # --------------------------------------------------------------------------
 #          Recency bootstrappy things
 # --------------------------------------------------------------------------
@@ -103,3 +103,9 @@ class WeightedRandomGenerator(object):
         return self.next()
 
 
+def approx_mode(xs):
+    xr = [ round(x) for x in xs]
+    try:
+        return mode(xr)
+    except StatisticsError:
+        return None
