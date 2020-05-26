@@ -93,7 +93,6 @@ class MicroWriter(MicroReader):
         res = requests.patch(self.base_url + '/overall/')
         if res.status_code == 200:
             performance = res.json()
-
         else:
             raise Exception('Failed for ' + self.write_key)
 
@@ -148,6 +147,7 @@ class MicroWriter(MicroReader):
         for delay in delays:
             res = requests.delete(self.base_url + '/submit/'+name, params={'write_key':self.write_key,'delay':delay} )
             codes.append(res.status_code)
+
         success   = all([ c==200 for c in codes ] )
         operating = all([ c in [200,403] for c in codes])
         if not operating:
