@@ -300,7 +300,7 @@ class MicroCrawler(MicroWriter):
         print('Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
         desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon in [70, 310, 910]]
         self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_urgency_multiplier(stream)) \
-            for stream in self.active if stream in desired_streams])
+            for k, stream in enumerate(self.active) if stream in desired_streams])
 
 
         print("---------- Restarting -------------")
