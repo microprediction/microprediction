@@ -226,7 +226,7 @@ class MicroCrawler(MicroWriter):
         """ Given a stream and horizon, try to submit predictions """
         horizon = self.horizon_name(name=name, delay=delay)
         lagged_values = self.get_lagged_values(name)
-        exec = 0
+        execut = 0
         message = {'name':name,'delay':delay,'submitted':False}
         if len(lagged_values) > self.max_lags:
             message.update({"reason": "Too many lags - blacklisting", "lagged_len": len(lagged_values)})
@@ -248,8 +248,8 @@ class MicroCrawler(MicroWriter):
             # Call self.sample() but first let it know how much time it has
             self.update_seconds_until_next(exclude=[horizon])
             scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times, name=name, delay=delay )
-            exec = self.submit(name=name, values=scenario_values, delay=delay)
-            message.update({'submitted':True,'exec':exec})
+            execut = self.submit(name=name, values=scenario_values, delay=delay)
+            message.update({'submitted':True,'exec':execut})
             message.update({"median": median(scenario_values),
                             "mean": np.mean(scenario_values),
                             "std": np.std(scenario_values),
@@ -273,7 +273,7 @@ class MicroCrawler(MicroWriter):
                     self.backoff[horizon] = delay
                 message.update({'backoff':self.backoff[horizon]})
 
-            if not exec:
+            if not execut:
                 message.update({"submitted":False,"reason":"execution failure","confirms":self.get_confirms()[-1:], "errors": self.get_errors()[-1:]})
                 print("---------- ERROR ------------")
                 pprint.pprint(message)
@@ -285,7 +285,7 @@ class MicroCrawler(MicroWriter):
             print(" ")
             pprint.pprint(message)
             print(" ", flush=True)
-        return exec
+        return execut
 
     def initial_urgency_multiplier(self,horizon):
         """ Seconds """
