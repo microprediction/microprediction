@@ -81,7 +81,6 @@ def poll_and_send():
         return
 
     value = all_stations_delay()
-
     if value is None:
         print("{}: <= 15 Lines but On-Hours".format(pst_now.strftime("%H:%M")))
     else:
