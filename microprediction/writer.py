@@ -83,7 +83,7 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
-    def donate_balance(self, recipient_write_key, amount=None):
+    def donate_balance(self, recipient_write_key, amount=100.):
         """ Give some of your balance to a key that has a negative balance """
         res = requests.put(self.base_url + '/balance/' + recipient_write_key,
                            data={"source_write_key": self.write_key, "amount": amount})
