@@ -1,5 +1,8 @@
 import uuid, re, sys, muid, requests
 
+def testing_url():
+    return "https://www.microprediction.com"
+
 def default_url():
     try:
         from microprediction.config_private import BASE_URL

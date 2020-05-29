@@ -4,6 +4,8 @@ Collective microprediction client leveraging www.microprediction.org
 
     pip install microprediction 
     
+This library can be used both to contribute predictions and solicit predictions. 
+    
 # Read client
 
 It is possible to retrieve most quantities at www.microprediction.org with direct web calls such as https://www.microprediction.org/live/cop.json. For example:
@@ -37,7 +39,7 @@ rise.
 
 ### Step 1: Obtaining a write_key (muid.org)
 
-Click on http://www.muid.org/create/ to create a write_key. Hash memorable keys are explained at https://vimeo.com/397352413   
+Click on http://www.muid.org/create/ to create a write_key, though it is better to create a rarer one. Hash memorable keys are explained at https://vimeo.com/397352413   
     
 
 ### Step 2: Instantiate a writer 
@@ -114,18 +116,22 @@ When you create a stream you automatically participate in the prediction of the 
 purpose. If nobody can do a better job that this, your write_key balance will generally neither rise nor fall.  
 
 However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your write_key to trend downwards. 
-On an ongoing basis you also need the write_key balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 8 is also found at https://www.microprediction.org/config.json. At time 
-of writing, and assuming this parameter is -10, we have:
+On an ongoing basis you also need the write_key balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://www.microprediction.org/config.json and the formula
+ -1.0*( abs(self.min_balance)*(16**(write_key_len-9)) ) supercedes whatever is written here. However at time of writing the bankruptcy levels are:
 
 |  write_key difficulty   |  bankruptcy         |  write_key difficulty   |  bankruptcy         |
 |-------------------------|---------------------|-------------------------|---------------------|
-|  8                      |  -10                |     11                  |   -40,960           |
-|  9                      |  -160               |     12                  |   -655,360          |
-| 10                      |  -2,560             |     13                  |   -10,485,760        |
+|  8                      |  -0.01              |     11                  |   -256              |
+|  9                      |  -1.0               |     12                  |   -4,096            |
+| 10                      |  -16.0              |     13                  |   -65,536           |
        
+Balance may be transfered from one write_key to another if the recipient write_key has a negative balance. You can use the transfer function to keep
+a write_key alive that you need for sponsoring a stream. You can also ask others to mine muids for you and contribute in this fashion. However you cannot use a transfer to 
+raise the balance associated with a write_key above zero. It is only possible to do that by means of accurate prediction. 
+
 ### Higher dimensional prediction (copulas, Z-curves)
 
-Advanced functionality is available to those with write_keys of difficulty 1 more than the stream minimum. More details to follow on that. 
+Advanced functionality is available to those with write_keys of difficulty 1 more than the stream minimum (i.e. 12+1). 
          
 ### Stream name rules 
 
@@ -133,6 +139,7 @@ Advanced functionality is available to those with write_keys of difficulty 1 mor
  - Must contain only alphanumeric, hyphens, underscores, colons (discouraged) and at most one period.
  - Must not contain double colon. 
 
+We keep open the possiblility of incorporating other data formats in the future, such as Arrow, but for now everything is JSON. 
          
 ### Troubleshooting 
 

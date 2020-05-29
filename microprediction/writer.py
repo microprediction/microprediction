@@ -75,6 +75,28 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
+    def put_balance(self, source_write_key, amount=100. ):
+        """ Transfer some balance into self.write_key """
+        res = requests.put(self.base_url + '/balance/' + self.write_key, data={"source_write_key": source_write_key,"amount":amount})
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def donate_balance(self, recipient_write_key, amount=None):
+        """ Give some of your balance to a key that has a negative balance """
+        res = requests.put(self.base_url + '/balance/' + recipient_write_key,
+                           data={"source_write_key": self.write_key, "amount": amount})
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def restore_balance_by_mining(self, difficulty=12):
+        """ Mine a MUID and deposit it to bring the balance up from a negative number """
+        source_write_key = self.create_key(difficulty=difficulty)
+        return self.put_balance(source_write_key=source_write_key)
+
     def get_confirms(self):
         res = requests.get(self.base_url + '/confirms/' + self.write_key)
         if res.status_code == 200:
