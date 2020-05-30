@@ -1,5 +1,6 @@
 import logging
 import requests
+import urllib
 import time
 import pytz
 import random
@@ -7,7 +8,7 @@ from datetime import datetime
 from pprint import  pprint
 
 from microprediction import MicroWriter
-from microprediction.config_private import TRAFFIC_WRITE_KEY
+from microprediction.config_private import TRAFFIC_WRITE_KEY_13
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -27,48 +28,49 @@ def wait_between_attempts():
 wait_time = wait_between_attempts()
 
 
-# Average delays for all BART train lines
-
 def fetch_live_data():
-    total_delay = 0
-    lines = 0
     while True:
         try:
-            r = requests.get("https://www.ndbc.noaa.gov/data/realtime2/WPOW1.cwind")
-            print(type(r))
-            print(r)
-            if r.status_code==200:
-                station_data = r.json()["root"]["station"]
-
-        except requests.exceptions.RequestException as e:
-            logger.error("Connection error %s: reconnecting..." % e)
+            file = urllib.request.urlopen("https://www.ndbc.noaa.gov/data/realtime2/WPOW1.cwind")
+            if file.status==200:
+                # NOTE: file is not indexable
+                for i, line in enumerate(file):
+                    # most recent data is at line number 3 in the file
+                    if i is 2:
+                        data = line.decode("utf-8").split()
+                        direction = float(data[5]) / 360        # normalize between [0, 1)
+                        speed = float(data[6]) / 10             # attempt to normalize
+                        return speed, direction
+        except:
+            logger.error("Connection error: reconnecting...")
             time.sleep(next(wait_time))
     return speed, direction
 
 
-NAME = 'seattle_wind_speed_and_direction.json'
+NAME_SPEED = 'seattle_wind_speed.json'
+NAME_DIR   = 'seattle_wind_direction.json'
 
 initial_speed, initial_dir = fetch_live_data()
-print("Initial speed is " + str(initial_speed) + " and initial direction is " str(initial_dir) + " m/s", flush=True)
+print("Initial speed is " + str(initial_speed) + " m/s and initial direction is " + str(initial_dir), flush=True)
 
 try:
-    mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY)
+    mw = MicroWriter(write_key=TRAFFIC_WRITE_KEY_13)
 except:
     raise Exception("You need to set the write key for this example to work")
 
 
 def poll_and_send():
-    """ Create stream of average delay in seconds """
-    speed, direction = all_stations_delay()
-    # res = mw.set(name=NAME,value=float(value))
-    res = "FIX ME"
+    utc_now = pytz.utc.localize(datetime.utcnow())
+    pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
+    speed, direction = fetch_live_data()
+    res = mw.cset(names=[NAME_SPEED, NAME_DIR],values=[speed, direction])
     pprint({'PST time':pst_now.strftime("%H:%M"),'speed':speed,'direction':direction,"res":res})
     print('',flush=True)
 
 def run():
     print('Starting scheduler',flush=True)
     scheduler = BlockingScheduler()
-    scheduler.add_job(poll_and_send, 'interval', minutes=20)
+    scheduler.add_job(poll_and_send, 'interval', minutes=1)
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
