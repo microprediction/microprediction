@@ -1,4 +1,5 @@
-import uuid, re, sys, muid, requests
+import uuid, re, sys, muid, requests, time
+from muid.mining import mine_once
 
 def testing_url():
     return "https://www.microprediction.com"
@@ -21,6 +22,21 @@ class KeyConventions():
     def create_key(difficulty=6):
         """ Create new write_key (string, not bytes) """
         return muid.create(difficulty=difficulty).decode()
+
+    @staticmethod
+    def maybe_create_key(seconds=1,difficulty=12):
+        """ Find a MUID, maybe
+             difficulty:  int  minimum length of the memorable part of the hash
+        """
+        quota = 100000000
+        count = 0
+        start_time = time.time()
+        dffclty = difficulty
+        while time.time()-start_time<seconds:
+            report, dffclty, count = mine_once(dffclty, count, quota)
+            if report:
+                return report[0]["key"]
+
 
 new_key = KeyConventions.create_key
 

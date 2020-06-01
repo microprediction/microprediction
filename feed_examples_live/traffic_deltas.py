@@ -12,6 +12,9 @@ import datetime
 #    speed on the Verrazano Bridge every five minutes. However if we don't get good
 #    data from the feed or it appears to be stale, we don't send the delta.
 
+#    Update: See polling_examples/traffic_deltas.py for an easier way to accomplish this
+#    The warm/cold logic has been incorporated in to ChangePoll class
+
 
 try:
     from microprediction.config_private import TRAFFIC_WRITE_KEY
