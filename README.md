@@ -1,6 +1,6 @@
 # microprediction
 
-Collective microprediction client leveraging www.microprediction.org 
+Provides free access to collective microprediction client leveraging www.microprediction.org 
 
     pip install microprediction 
     
