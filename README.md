@@ -1,13 +1,25 @@
 # microprediction
 
-Provides free access to collective microprediction client leveraging www.microprediction.org 
+Free access to live univariate time series prediction at www.microprediction.org where bots fight to predict you time series
 
     pip install microprediction 
     
-This library can be used both to contribute predictions and solicit predictions. 
+This library can also be used to contribute predictions as well as soliciting them. 
     
     
-# Hierarchy 
+# Quickstart 
+
+See /polling_examples for stream creation examples, which look like this. 
+
+    feed = MicroPoll(write_key=TRAFFIC_WRITE_KEY,
+                     name='verrazano_speed.json',
+                     func=verrazano_speed,
+                     interval=20)
+    feed.run() 
+    
+Once a stream is created you can view predictions at www.microprediction.org or by using the reader to get the cumulative distribution function. 
+    
+# Class Hierarchy 
 
     Conventions   
        |
@@ -176,6 +188,11 @@ Then
 
 Advanced functionality is available to those with write_keys of difficulty 1 more than the stream minimum (i.e. 12+1). 
          
+         
+# Troubleshooting 
+         
+A few gotchas:
+         
 ### Stream name rules 
 
  - Must end in .json  
@@ -184,7 +201,7 @@ Advanced functionality is available to those with write_keys of difficulty 1 mor
 
 We keep open the possiblility of incorporating other data formats in the future, such as Arrow, but for now everything is JSON. 
          
-### Troubleshooting 
+### Logging 
 
 Try:
     
