@@ -36,7 +36,7 @@ def fetch_live_data():
                 # NOTE: file is not indexable
                 for i, line in enumerate(file):
                     # most recent data is at line number 3 in the file
-                    if i is 2:
+                    if i == 2:
                         data = line.decode("utf-8").split()
                         direction = float(data[5]) / 360        # normalize between [0, 1)
                         speed = float(data[6]) / 10             # attempt to normalize
