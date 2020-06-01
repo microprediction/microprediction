@@ -92,6 +92,13 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
+    def bolster_balance_by_mining(self,seconds=1):
+        """ For a short time, try to burn a MUID to bolster flagging balance """
+        key = self.maybe_create_key(difficulty=12,seconds=seconds)
+        if key is not None:
+            self.put_balance(source_write_key=key)
+            return key
+
     def restore_balance_by_mining(self, difficulty=12):
         """ Mine a MUID and deposit it to bring the balance up from a negative number """
         source_write_key = self.create_key(difficulty=difficulty)

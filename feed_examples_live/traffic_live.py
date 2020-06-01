@@ -6,6 +6,7 @@ from pprint import  pprint
 import datetime
 
 #  Example of sending live data to www.microprediction.com
+#  Data server is really slow
 
 NAME = 'bronx_traffic_absolute_speed.json'
 

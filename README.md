@@ -1,10 +1,34 @@
 # microprediction
 
-Provides free access to collective microprediction client leveraging www.microprediction.org 
+Free access to live univariate time series prediction at www.microprediction.org where bots fight to predict you time series
 
     pip install microprediction 
     
-This library can be used both to contribute predictions and solicit predictions. 
+This library can also be used to contribute predictions as well as soliciting them. 
+    
+    
+# Quickstart 
+
+See /polling_examples for stream creation examples, which look like this. 
+
+    feed = MicroPoll(write_key=TRAFFIC_WRITE_KEY,
+                     name='verrazano_speed.json',
+                     func=verrazano_speed,
+                     interval=20)
+    feed.run() 
+    
+Once a stream is created you can view predictions at www.microprediction.org or by using the reader to get the cumulative distribution function. 
+    
+# Class Hierarchy 
+
+    Conventions   
+       |
+    Reader
+       |
+    Writer ------------
+       |               |
+    Polling         Crawler
+    
     
 # Read client
 
@@ -110,7 +134,7 @@ You can see what others think about the future of your data as follows:
 where the delay parameter, in seconds, acts as a prediction horizon. This call will reveal the probability that your future value is less than 0.0, and the probability that it is 
 less than 0.5. 
          
-### Step 4: Hope that your write_key does not go broke 
+### Step 4: Hope that your write_key does not go broke ... or do something about it
 
 When you create a stream you automatically participate in the prediction of the stream. A benchmark empirical sampling algorithm with some recency adjustment is used for this
 purpose. If nobody can do a better job that this, your write_key balance will generally neither rise nor fall.  
@@ -129,9 +153,45 @@ Balance may be transfered from one write_key to another if the recipient write_k
 a write_key alive that you need for sponsoring a stream. You can also ask others to mine muids for you and contribute in this fashion. However you cannot use a transfer to 
 raise the balance associated with a write_key above zero. It is only possible to do that by means of accurate prediction. 
 
-### Higher dimensional prediction (copulas, Z-curves)
+# Polling live data
+
+The class MicroPoll provides turnkey creation of a datastream. See polling_examples. For instance to predict traffic speed every 
+twenty minutes:
+
+    feed = MicroPoll(write_key=TRAFFIC_WRITE_KEY,
+                     name='verrazano_speed.json',
+                     func=verrazano_speed,
+                     interval=20)
+    feed.run() 
+
+
+To avoid the sponsoring write_key for a stream going bankrupt, the MicroPoll class performs some periodic mining and when it gets, lucky, makes
+a transfer. 
+
+# Crawling
+
+To predict many streams you can derive from MicroCrawler. At minimum you'll want to override the sample() method that makes predictions based on lagged values. For example:
+
+
+    class MyCrawler(MicroCrawler):
+
+        def sample(self, lagged_values, lagged_times=None, **ignored ):
+            """ Fat tails """
+            return [1.02*s*(1+0.1*abs(s)) for s in sorted(np.random.randn(self.num_predictions)) ]  
+            
+Then 
+
+    crawler = MyCrawler(write_key=MY_KEY)
+    crawler.run()
+
+# Higher dimensional prediction (copulas, Z-curves)
 
 Advanced functionality is available to those with write_keys of difficulty 1 more than the stream minimum (i.e. 12+1). 
+         
+         
+# Troubleshooting 
+         
+A few gotchas:
          
 ### Stream name rules 
 
@@ -141,7 +201,7 @@ Advanced functionality is available to those with write_keys of difficulty 1 mor
 
 We keep open the possiblility of incorporating other data formats in the future, such as Arrow, but for now everything is JSON. 
          
-### Troubleshooting 
+### Logging 
 
 Try:
     
