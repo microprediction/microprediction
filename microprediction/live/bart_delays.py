@@ -7,7 +7,10 @@ from datetime import datetime
 from pprint import  pprint
 
 from microprediction import MicroWriter
-from microprediction.config_private import TRAFFIC_WRITE_KEY, BART_KEY
+try:
+    from microprediction.config_private import TRAFFIC_WRITE_KEY, BART_KEY
+except:
+    print("This won't run without creds")
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -40,7 +43,7 @@ def fetch_live_data(station):
                 station_data = r.json()["root"]["station"]
                 for station in station_data:
                     for destination in station["etd"]:
-                        if len(destination["estimate"]) is not 0:
+                        if len(destination["estimate"]) != 0:
                             total_delay += int(destination["estimate"][0]["delay"])
                             lines += 1
                 # fail-safe for wide BART shutdowns. On average ~180 lines

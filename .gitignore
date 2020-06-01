@@ -4,3 +4,4 @@ microprediction/config_private.py
 bump.sh
 __pycache*
 build/*
+*.idea/workspace.xml
