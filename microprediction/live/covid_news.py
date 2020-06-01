@@ -86,9 +86,12 @@ def run():
         value = number_of_articles_that_mention_cuomo_or_nyc()
         utc_now = pytz.utc.localize(datetime.utcnow())
         pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
-        res = mw.set(name=NAME,value=float(value))
-        pprint({'PST time':pst_now.strftime("%H:%M"),'count':value,"res":res})
-        print('',flush=True)
+        try:
+            res = mw.set(name=NAME,value=float(value))
+            pprint({'PST time':pst_now.strftime("%H:%M"),'count':value,"res":res})
+            print('',flush=True)
+        except:
+            continue
 
 if __name__=="__main__":
     run()
