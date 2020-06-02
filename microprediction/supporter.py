@@ -5,13 +5,10 @@ from microprediction import new_key
 import multiprocessing as mp
 
 def donate(difficulty=None, password=None, donor='anonymous'):
-    try:
-        donaten(difficulty,password,donor)
-    except:
-        print("multithreading is not happy",flush=True)
-        donate1(difficulty,password,donor)
+    donate1(difficulty=difficulty,password=password, donor=donor)
 
 def donaten(difficulty=None, password=None, donor='anonymous'):
+    # Not stable enough
     num_procs = mp.cpu_count()
     pool = mp.Pool(8*num_procs)
     result = [ pool.apply(func=donate1,args=(difficulty,password,donor)) for _ in range(8*num_procs) ]
@@ -31,7 +28,7 @@ def donate1(difficulty=None, password=None, donor='anonymous'):
             return {"error":res.json()}
         else:
             if difficulty is None:
-                difficulty = random.choice([12,12,12,13])
+                difficulty = random.choice([13])
             while True:
                 print("Mining and donating the MUIDs with password "+password+" and donor name "+donor+". Thanks. Difficulty set to "+str(difficulty),flush=True)
                 write_key = new_key(difficulty=12)

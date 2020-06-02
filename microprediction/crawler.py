@@ -10,7 +10,7 @@ from statistics import median
 
 
 class MicroCrawler(MicroWriter):
-    """To create a crawler you can derive from this class (if you want) and it is suggested you overwrite one of more of the following methods:
+    """To create a crawler you can derive from this class and it is suggested you overwrite one of more of the following methods:
 
            sample            - Method that creates predictions
            downtown          - Stuff to do when there is nothing terribly urgent
@@ -83,6 +83,10 @@ class MicroCrawler(MicroWriter):
         # Be careful if you override it or you might be late for your next prediction
         time.sleep(seconds)
 
+    def withdrawing(self,horizon):
+        """ Teardown stuff when you withdraw from a horizon """
+        pass
+
     #############################################################
     #   Typically don't want to override the rest of these      #
     #############################################################
@@ -103,7 +107,7 @@ class MicroCrawler(MicroWriter):
         self.min_lags    = min_lags            # Insist on historical data
         self.max_lags    = max_lags
         self.performance = self.get_performance()
-        self.active      = self.get_active()
+        self.active      = self.get_active()   # List of active horizons
         self.horizon_blacklist = list()
         self.cancelled   = list()
         self.next_prediction_time = dict()
@@ -175,6 +179,7 @@ class MicroCrawler(MicroWriter):
         self.horizon_blacklist.append(horizon)
         self.active      = self.get_active()
         self.performance = self.get_performance()
+        self.withdrawing(horizon)
 
     def withdraw_from_worst(self, num=1):
         horizons = self.worst_active_horizons()[:num]
@@ -192,9 +197,10 @@ class MicroCrawler(MicroWriter):
                 delays = self.candidate_delays(name=name)
                 for delay in delays:
                     horizon = self.horizon_name(name=name,delay=delay)
-                    if not horizon in self.horizon_blacklist:
-                        if not (horizon in self.next_prediction_time) or time.time()>self.next_prediction_time[horizon]:
-                            horizons.append(horizon)
+                    if not horizon in self.active:
+                        if not horizon in self.horizon_blacklist:
+                            if not (horizon in self.next_prediction_time) or time.time()>self.next_prediction_time[horizon]:
+                                horizons.append(horizon)
             if horizons:
                 return random.choice(horizons)
 
