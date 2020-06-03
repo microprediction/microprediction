@@ -297,10 +297,12 @@ class MicroCrawler(MicroWriter):
         """ Seconds """
         return 20 if '~' in horizon else 1
 
-    def run(self):
+    def run(self,timeout=None):
         # Pick up where we left off, but stagger
         self.performance = self.get_performance()
         self.active = self.get_active()
+        self.start_time = time.time()
+        self.end_time = time.time()+timeout if timeout is not None else time.time()+10000000
         print('Currently predicting for ' + str(len(self.active)) + ' horizons')
         self.stream_candidates = self.candidate_streams()
         print('Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
@@ -314,7 +316,7 @@ class MicroCrawler(MicroWriter):
         print("-----------------------------------",flush=True)
 
 
-        while True:
+        while time.time()<self.end_time:
 
             # Periodically consider entering new horizons and withdrawing from others
             self.update_seconds_until_next()
