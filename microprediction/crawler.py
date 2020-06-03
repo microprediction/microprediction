@@ -355,8 +355,8 @@ class MicroCrawler(MicroWriter):
             # If there is time, maybe we chill, or do something productive like offline estimation
             self.update_seconds_until_next()
             if self.seconds_until_next>5:
-                if time.time()+self.seconds_until_next>timeout:
-                    self.seconds_until_next = max(1,timeout-time.time())
+                if time.time()+self.seconds_until_next>self.end_time:
+                    self.seconds_until_next = max(1,self.end_time-time.time())
                 print('Downtime for '+str(self.seconds_until_next)+' seconds. Next '+ str(self.upcoming(num=1)))
                 self.downtime(seconds=self.seconds_until_next-1)
                 self.update_seconds_until_next()
