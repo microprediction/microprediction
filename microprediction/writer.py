@@ -139,6 +139,13 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
+    def delete_performance(self):
+        res = requests.delete(self.base_url + '/performance/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
     def submit(self, name, values, delay=None, verbose=None):
         """ Submit prediction scenarios
         :param name:      str         Examples:    cop.json   z1~cop.json   z2~cop~qp.json
