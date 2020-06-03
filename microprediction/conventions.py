@@ -9,7 +9,7 @@ def default_url():
         from microprediction.config_private import BASE_URL
         return BASE_URL
     except:
-        return "https://www.microprediction.org"
+        return "https://www.microprediction.com"
 
 class KeyConventions():
 
