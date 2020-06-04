@@ -139,6 +139,7 @@ class MicroCrawler(MicroWriter):
         except:
             self.seconds_until_next = 10*60
         seconds_until_quit = self.end_time-time.time()
+        print('Seconds until quit: '+str(seconds_until_quit))
         self.seconds_until_next = min(self.seconds_until_next,seconds_until_quit)
         return self.seconds_until_next
 
