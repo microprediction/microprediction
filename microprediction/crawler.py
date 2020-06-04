@@ -332,7 +332,7 @@ class MicroCrawler(MicroWriter):
 
             # If there is time consider entering a new stream, but not too often
             self.update_seconds_until_next()
-            if (self.seconds_until_next>np.random.rand()*500) or (len(self.active)==0):
+            if (self.seconds_until_next>np.random.rand()*500) or (len(self.active)<10):
                 if (time.time()-self.last_new_horizon>10*60) or (len(self.active)==0):
                     horizon = self.next_horizon(exclude=self.horizon_blacklist)
                     if horizon:
