@@ -16,8 +16,8 @@ class DevTestingCrawler(MicroCrawler):
             self.fail_callback = fail_callback
 
         def candidate_streams(self,**ignore):
-            """ He'll try anything """
-            return [name for name, sponsor in self.get_sponsors().items()]
+            """ Quickly quickly """
+            return [name for name, sponsor in self.get_sponsors().items() if not '~' in name]
 
         def candidate_delays(self,**ignore):
             """ Fail fast """
