@@ -21,7 +21,7 @@ class DevTestingCrawler(MicroCrawler):
 
         def candidate_delays(self,**ignore):
             """ Fail fast """
-            return [self.delays[0]]
+            return [70]
 
         def sample(self, lagged_values, lagged_times=None, **ignore):
             if len(lagged_values or []) > 5:
@@ -44,14 +44,13 @@ class DevTestingCrawler(MicroCrawler):
                 passed = False
                 report.update({'error':error})
 
-            if passed and pass_callback is not None:
+            if passed and self.pass_callback is not None:
                 pass_reporting = self.pass_callback(report)
                 if pass_reporting==False:
                     report.update({'reporting_failure':True})
                     self.fail_callback(report)
-            if not(passed) and fail_callback is not None:
-                if fail_callback is not None:
-                    self.fail_callback(report)
+            if not(passed) and self.fail_callback is not None:
+                self.fail_callback(report)
             pprint(report)
 
 
