@@ -1,6 +1,6 @@
 from microprediction import MicroCrawler, new_key
 
-def dont_test_crawler():
-    write_key = new_key(difficulty=8)
+def test_crawler():
+    write_key = 'a6fb60906a11113c030a4fb86db7d51b'
     crawler = MicroCrawler(write_key=write_key)
-    crawler.run()
+    crawler.run(timeout=3)
