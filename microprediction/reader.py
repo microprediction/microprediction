@@ -1,4 +1,4 @@
-from microprediction.conventions import MicroConventions, default_url
+from microconventions import MicroConventions, api_url
 import requests, time, sys
 from pprint import pprint
 
@@ -7,7 +7,7 @@ class MicroReader(MicroConventions):
 
     def __init__(self,base_url=None, **kwargs):
         """ Establish connection and adopt configuration parameters from site """
-        super().__init__(base_url=base_url or default_url(),**kwargs)
+        super().__init__(base_url=base_url or api_url(),**kwargs)
 
     def get(self, name):
         res = requests.get(self.base_url + '/live/' + name)
@@ -60,7 +60,7 @@ class MicroReader(MicroConventions):
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json
         :return: [ float ]
         """
-        delay = delay or self.delays[0]
+        delay = delay or self.DELAYS[0]
         res = requests.get(self.base_url + '/live/delayed::'+str(delay)+ "::" + name)
         if res.status_code == 200:
             return res.json()

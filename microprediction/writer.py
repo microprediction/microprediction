@@ -1,13 +1,14 @@
-from microprediction.reader import MicroReader, default_url
+from microprediction.reader import MicroReader
+from microconventions import api_url
 import muid, requests, pprint
 
 class MicroWriter(MicroReader):
 
     def __init__(self, write_key="invalid_key", base_url=None, verbose=True, **kwargs ):
         """ Create the ability to write """
-        super().__init__(base_url=base_url or default_url(),**kwargs)
+        super().__init__(base_url=base_url or api_url(),**kwargs)
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
-        assert muid.validate(string_write_key), "Invalid write_key. Mine one at muid.org. "
+        assert self.key_difficulty(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
         self.verbose   = verbose
 
@@ -154,7 +155,7 @@ class MicroWriter(MicroReader):
         :return: bool
         """
         verbose = verbose or self.verbose
-        delay = delay or self.delays[0]
+        delay = delay or self.DELAYS[0]
         assert len(values)==self.num_predictions
 
         comma_sep_values = ",".join([ str(v) for v in values ] )
@@ -179,7 +180,7 @@ class MicroWriter(MicroReader):
     def cancel(self, name, delays=None):
         """ Withdraw scenarios """
         codes = list()
-        delays = delays or self.delays
+        delays = delays or self.DELAYS
         for delay in delays:
             res = requests.delete(self.base_url + '/submit/'+name, params={'write_key':self.write_key,'delay':delay} )
             codes.append(res.status_code)

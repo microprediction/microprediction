@@ -1,6 +1,6 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
 from microprediction.writer import MicroWriter
-from microprediction.reader import default_url
+from microconventions import api_url
 import muid, random, time
 from collections import OrderedDict
 from microprediction.samplers import exponential_bootstrap, approx_mode
@@ -18,7 +18,7 @@ class MicroCrawler(MicroWriter):
         You might also want to change
 
            candidate_streams  - A list of streams you want your crawler to look at
-           candidate_delays   - A list of horizons to predict (from the set self.delays)
+           candidate_delays   - A list of horizons to predict (from the set self.DELAYS)
            update_frequency   - How many times to predict per arriving data point
 
        Good luck!
@@ -54,7 +54,7 @@ class MicroCrawler(MicroWriter):
 
             :returns [ int ]    List of horizons your bot is willing to participate in
         """
-        return self.delays
+        return self.DELAYS
 
     def update_frequency(self, name=None, delay=None):
         """ Determines how often to update samples """
@@ -93,8 +93,8 @@ class MicroCrawler(MicroWriter):
 
     def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, sleep_time=300):
         """  """
-        super().__init__(base_url=base_url or default_url(), write_key=write_key, verbose=verbose )
-        assert muid.difficulty(write_key) >= 8, "Invalid write_key for crawler. See www.muid.org to mine one. "
+        super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose )
+        assert self.key_difficulty(write_key) >= 7, "Invalid write_key for crawler. See www.muid.org to mine one. "
         assert not self.base_url[-1]=='/','Base url should not have trailing /'
         assert stop_loss>0,"Stop loss must be positive "
         self.quietude    = int(quietude)       # e.g. if set to 10, will only print 1/10th of the time

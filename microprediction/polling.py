@@ -1,5 +1,5 @@
 from microprediction.writer import MicroWriter
-from microprediction.conventions import default_url
+from microprediction.conventions import api_url
 import time
 from apscheduler.schedulers.blocking import BlockingScheduler
 from pprint import pprint
@@ -44,7 +44,7 @@ class MicroPoll(MicroWriter):
             func_args    dict    optional dict of arguments to be passed to func
         """
         assert self.is_valid_name(name),'name not valid'
-        super().__init__(base_url=base_url or default_url(),write_key=write_key,verbose=verbose)
+        super().__init__(base_url=base_url or api_url(),write_key=write_key,verbose=verbose)
         self.name = name
         self.interval = interval
         self.func = func
