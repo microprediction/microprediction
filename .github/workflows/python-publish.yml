@@ -1,6 +1,7 @@
 # This workflows will upload a Python Package using Twine when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
+
 name: Upload Python Package
 
 on:
@@ -21,15 +22,17 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install muid
+        pip install numpy
+        pip install pathlib
+        pip install contexttimer
+        pip install requests
+        pip install getjson
         pip install setuptools wheel twine
     - name: Build and publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-    - name: Install package
-      run: |
-        pip install -e .[test] 
-    - name: Blah
       run: |
         python setup.py sdist bdist_wheel
         twine upload dist/*
