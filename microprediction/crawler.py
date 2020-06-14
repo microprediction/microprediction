@@ -1,7 +1,7 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
 from microprediction.writer import MicroWriter
 from microconventions import api_url
-import muid, random, time
+import random, time
 from collections import OrderedDict
 from microprediction.samplers import exponential_bootstrap, approx_mode
 import pprint

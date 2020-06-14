@@ -1,6 +1,6 @@
 from microprediction.reader import MicroReader
 from microconventions import api_url
-import muid, requests, pprint
+import requests, pprint
 
 class MicroWriter(MicroReader):
 
@@ -13,7 +13,7 @@ class MicroWriter(MicroReader):
         self.verbose   = verbose
 
     def __repr__(self):
-        return {'write_key':self.write_key,"animal":muid.animal(self.write_key)}
+        return {'write_key':self.write_key,"animal":self.animal_from_key(self.write_key)}
 
     def get_home(self):
         res = requests.put(self.base_url + '/live/' + self.write_key )
