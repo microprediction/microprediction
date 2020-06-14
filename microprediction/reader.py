@@ -1,5 +1,6 @@
 from microprediction.conventions import MicroConventions, default_url
-import requests
+import requests, time, sys
+from pprint import pprint
 
 
 class MicroReader(MicroConventions):
@@ -73,6 +74,46 @@ class MicroReader(MicroConventions):
                       0.5364223812298264, 0.6588376927361878, 0.7920468944255913, 0.941074530352976, 1.1146510149326592,
                       1.330561513178897, 1.6368267885519001, 2.3263478740408408]
         comma_sep_values = ",".join([str(v) for v in values])
-        res = requests.get(self.base_url + 'cdf/' + name, params={"values", comma_sep_values})
+        res = requests.get(self.base_url + '/cdf/' + name, params={"values", comma_sep_values})
         if res.status_code == 200:
             return res.json()
+
+
+
+class MicroReaderStatus(MicroReader):
+
+     def __init__(self):
+         super().__init__()
+
+     def reader_status(self):
+         examples = {  'get': {'name': 'cop.json'},
+                       'get_current_value': {'name': 'cop.json'},
+                       'get_sponsors': {},
+                       'get_streams': {},
+                       'get_budgets': {},
+                       'get_summary': {'name': 'cop.json'},
+                       'get_lagged_values': {'name': 'cop.json'},
+                       'get_lagged_times': {'name': 'cop.json'},
+                       'get_delayed_value': {'name': 'cop.json'},
+                       'get_cdf': {'name': 'cop.json'}
+                     }
+         report = list()
+         for method, kwargs in examples.items():
+             call_time = time.time()
+             try:
+                 data = self.__getattribute__(method)(**kwargs)
+                 sz = sys.getsizeof(data)
+                 st = 'up' if sz>0 else ''
+                 tm = time.time() - call_time
+                 er = ''
+             except Exception as e:
+                 st = 'down'
+                 tm = -1
+                 er = str(e)
+                 sz = -1
+             report.append((method, st, tm, er, sz))
+         return report
+
+
+if __name__=="__main__":
+    pprint(MicroReaderStatus().reader_status())

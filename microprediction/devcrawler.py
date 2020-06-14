@@ -14,6 +14,15 @@ class DevTestingCrawler(MicroCrawler):
             super().__init__(stop_loss=2, min_lags=0, sleep_time=1, write_key=write_key, quietude=10, verbose=False)
             self.pass_callback = pass_callback
             self.fail_callback = fail_callback
+            self.initial_balance = self.get_balance()
+
+        def setup(self,**kwargs):
+            """ Return error messages if any """
+            pass
+
+        def teardown(self,**kwargs):
+            """ Return error messages if any """
+            pass
 
         def candidate_streams(self,**ignore):
             """ Quickly quickly """
@@ -30,26 +39,50 @@ class DevTestingCrawler(MicroCrawler):
                 return sorted(
                     np.random.randn(self.num_predictions))
 
+
         def run_dev_tests(self,timeout=180,name='devtest_crawler'):
+            """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
                       'start_datetime': str(datetime.datetime.now())}
             print(self.write_key)
-            passed = True
-            error  = None
 
+            # Initial checks
             try:
-                self.run(timeout=timeout)
+                setup_errors = self.setup()
             except Exception as e:
-                print(str(e), flush=True)
-                passed = False
-                report.update({'error':error})
+                setup_errors = {'error':'setup error','message':str(e)}
 
-            if passed and self.pass_callback is not None:
-                pass_reporting = self.pass_callback(report)
-                if pass_reporting==False:
+            if setup_errors is None:
+                # Run checks
+                try:
+                    self.run(timeout=timeout)
+                    run_errors = None
+                except Exception as e:
+                    print(str(e), flush=True)
+                    passed = False
+                    run_errors = {'error':'run error','message':str(e)}
+            else:
+                run_errors = None
+
+            if run_errors is None:
+                # Teardown checks
+                try:
+                    teardown_errors = self.setup()
+                except Exception as e:
+                    teardown_errors = {'error': 'teardown error', 'message': str(e)}
+            else:
+                teardown_errors = None
+
+            errors = (setup_errors or []) + (run_errors or []) + (teardown_errors or [])
+            if errors is not None:
+                report.update(errors)
+
+            if errors is None and self.pass_callback is not None:
+                successfully_reported_pass = self.pass_callback(report)
+                if successfully_reported_pass==False:
                     report.update({'reporting_failure':True})
                     self.fail_callback(report)
-            if not(passed) and self.fail_callback is not None:
+            if (errors is not None) and (self.fail_callback is not None):
                 self.fail_callback(report)
             pprint(report)
 
@@ -62,4 +95,4 @@ if __name__=="__main__":
         fail_callback=None
 
     crawler = DevTestingCrawler(write_key=FLAMMABLE_COD,pass_callback=pass_callback,fail_callback=fail_callback)
-    crawler.run_dev_tests(timeout=10,name='local test')
+    crawler.run_dev_tests(timeout=50,name='local test')

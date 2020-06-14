@@ -77,7 +77,6 @@ class MicroCrawler(MicroWriter):
         assert len(scenarios)==self.num_predictions, "Your sammpler should product a vector of length "+str(self.num_predictions)
         return sorted(scenarios)
 
-
     def downtime(self,seconds,**ignored):
         """ This will be called when a small gap opens up between times when you need to predict """
         # Be careful if you override it or you might be late for your next prediction

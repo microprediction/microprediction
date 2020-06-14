@@ -24,7 +24,7 @@ setup(
     test_suite='pytest',
     tests_require=['pytest'],
     include_package_data=True,
-    install_requires=["numpy","muid","aiohttp","pathlib","retrying","contexttimer","requests"],
+    install_requires=["numpy","muid","aiohttp","pathlib","retrying","contexttimer","requests","getjson"],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",

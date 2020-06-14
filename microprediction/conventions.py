@@ -1,15 +1,12 @@
 import uuid, re, sys, muid, requests, time
 from muid.mining import mine_once
+from getjson import getjson
 
 def testing_url():
-    return "https://www.microprediction.com"
+    return "https://devapi.microprediction.org"
 
 def default_url():
-    try:
-        from microprediction.config_private import BASE_URL
-        return BASE_URL
-    except:
-        return "https://www.microprediction.com"
+    return "https://api.microprediction.org"
 
 class KeyConventions():
 
@@ -97,21 +94,17 @@ class StatsConventions():
                 0.01, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1., 1.25, 1.5, 2.0, 2.5, 3., 4., 5., 8.]
 
 
-
-
 class MicroConventions(NameConventions, ValueConventions, StatsConventions, KeyConventions):
 
     def __init__(self, base_url=None, num_predictions=None, min_len=None, min_balance=None, delays=None) :
         """ Establish connection and adopt configuration parameters from site, if not provided """
-        self.base_url = base_url or default_url()
-        if any( arg is None for arg in [num_predictions, min_len, min_balance]):
-            config = requests.get(self.base_url + "/config.json").json()
-        self.delays = delays or config["delays"]
-        self.num_predictions = num_predictions or config["num_predictions"]
-        self.min_len = min_len or config["min_len"]
-        self.min_balance = min_balance or config["min_balance"]
-
-
+        self.base_url       = base_url or default_url()
+        default_config      = getjson(url='https://config.microprediction.org/config.json',
+                             failover_url='https://stableconfig.microprediction.org/config.json')
+        self.delays          = delays or default_config["delays"]
+        self.num_predictions = num_predictions or default_config["num_predictions"]
+        self.min_len         = min_len or default_config["min_len"]
+        self.min_balance     = min_balance or default_config["min_balance"]
 
 
 
