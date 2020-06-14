@@ -132,7 +132,7 @@ class ChangePoll(MicroPoll):
     def alert(self,message):
         print(message, flush=True)
 
-    def determine_next_value(self, source_value):
+    def determxine_next_value(self, source_value):
         """ Returns a change if feed is warm, else None """
 
         if self.feed_state == ChangePoll.WARM:

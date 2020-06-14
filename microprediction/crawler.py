@@ -83,7 +83,7 @@ class MicroCrawler(MicroWriter):
         time.sleep(seconds)
 
     def withdrawing(self,horizon):
-        """ Teardown stuff when you withdraw from a horizon """
+        """ Teardown when you withdraw from a horizon """
         pass
 
     #############################################################
@@ -138,8 +138,8 @@ class MicroCrawler(MicroWriter):
         except:
             self.seconds_until_next = 10*60
         seconds_until_quit = self.end_time-time.time()
-        if seconds_until_quit<30:
-            print('Seconds until quit: '+str(seconds_until_quit))
+        if int(seconds_until_quit) in [1000,100,10,5]:
+            print('Seconds until quit: '+str(seconds_until_quit),flush=True)
         self.seconds_until_next = min(self.seconds_until_next,seconds_until_quit)
         return self.seconds_until_next
 

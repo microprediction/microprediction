@@ -69,20 +69,21 @@ class DevTestingCrawler(MicroCrawler):
                 try:
                     teardown_errors = self.setup()
                 except Exception as e:
-                    teardown_errors = {'error': 'teardown error', 'message': str(e)}
+                    teardown_errors = {'error': 'error thrown by teardown', 'message': str(e)}
             else:
                 teardown_errors = None
 
-            errors = (setup_errors or []) + (run_errors or []) + (teardown_errors or [])
-            if errors is not None:
-                report.update(errors)
+            error_list = (setup_errors or []) + (run_errors or []) + (teardown_errors or [])
+            if error_list:
+                for err in error_list:
+                    report.update(err)
 
-            if errors is None and self.pass_callback is not None:
+            if error_list and self.pass_callback is not None:
                 successfully_reported_pass = self.pass_callback(report)
                 if successfully_reported_pass==False:
                     report.update({'reporting_failure':True})
                     self.fail_callback(report)
-            if (errors is not None) and (self.fail_callback is not None):
+            if error_list and (self.fail_callback is not None):
                 self.fail_callback(report)
             pprint(report)
 
@@ -95,4 +96,4 @@ if __name__=="__main__":
         fail_callback=None
 
     crawler = DevTestingCrawler(write_key=FLAMMABLE_COD,pass_callback=pass_callback,fail_callback=fail_callback)
-    crawler.run_dev_tests(timeout=50,name='local test')
+    crawler.run_dev_tests(timeout=100,name='local test')
