@@ -74,7 +74,7 @@ class MicroReader(MicroConventions):
                       0.5364223812298264, 0.6588376927361878, 0.7920468944255913, 0.941074530352976, 1.1146510149326592,
                       1.330561513178897, 1.6368267885519001, 2.3263478740408408]
         comma_sep_values = ",".join([str(v) for v in values])
-        res = requests.get(self.base_url + '/cdf/' + name, params={"values", comma_sep_values})
+        res = requests.get(self.base_url + '/cdf/' + name, params={"values": comma_sep_values})
         if res.status_code == 200:
             return res.json()
 
