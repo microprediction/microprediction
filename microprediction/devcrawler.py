@@ -73,17 +73,20 @@ class DevTestingCrawler(MicroCrawler):
             else:
                 teardown_errors = None
 
-            error_list = (setup_errors or []) + (run_errors or []) + (teardown_errors or [])
-            if error_list:
-                for err in error_list:
-                    report.update(err)
+            any_errors = setup_errors or run_errors or teardown_errors
+            if setup_errors:
+                report.update(setup_errors)
+            if run_errors:
+                report.update(run_errors)
+            if teardown_errors:
+                report.update(teardown_errors)
 
-            if error_list and self.pass_callback is not None:
+            if any_errors and self.pass_callback is not None:
                 successfully_reported_pass = self.pass_callback(report)
                 if successfully_reported_pass==False:
                     report.update({'reporting_failure':True})
                     self.fail_callback(report)
-            if error_list and (self.fail_callback is not None):
+            if any_errors and (self.fail_callback is not None):
                 self.fail_callback(report)
             pprint(report)
 
