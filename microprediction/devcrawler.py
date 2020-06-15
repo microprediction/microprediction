@@ -50,7 +50,7 @@ class DevTestingCrawler(MicroCrawler):
             try:
                 setup_errors = self.setup()
             except Exception as e:
-                setup_errors = {'error':'setup error','message':str(e)}
+                setup_errors = {'error':'error thrown by setup','message':str(e)}
 
             if setup_errors is None:
                 # Run checks
@@ -67,7 +67,7 @@ class DevTestingCrawler(MicroCrawler):
             if run_errors is None:
                 # Teardown checks
                 try:
-                    teardown_errors = self.setup()
+                    teardown_errors = self.teardown()
                 except Exception as e:
                     teardown_errors = {'error': 'error thrown by teardown', 'message': str(e)}
             else:
