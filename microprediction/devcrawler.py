@@ -9,6 +9,8 @@ from pprint import pprint
 class DevTestingCrawler(MicroCrawler):
 
         " Crawler used for testing code releases "
+        # By all means use it for your own testing purposes by providing pass_callback and fail_callback
+        # Be aware this will echo the write_key to std out
 
         def __init__(self, write_key, pass_callback, fail_callback):
             super().__init__(stop_loss=2, min_lags=0, sleep_time=1, write_key=write_key, quietude=10, verbose=False)
@@ -43,7 +45,8 @@ class DevTestingCrawler(MicroCrawler):
         def run_dev_tests(self,timeout=180,name='devtest_crawler'):
             """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
-                      'start_datetime': str(datetime.datetime.now())}
+                      'start_datetime': str(datetime.datetime.now()),
+                      'summary_page':'https://www.microprediction.org/home/'+self.write_key}
             print(self.write_key)
 
             # Initial checks
@@ -64,7 +67,7 @@ class DevTestingCrawler(MicroCrawler):
             else:
                 run_errors = None
 
-            if run_errors is None:
+            if setup_errors is None and run_errors is None:
                 # Teardown checks
                 try:
                     teardown_errors = self.teardown()
