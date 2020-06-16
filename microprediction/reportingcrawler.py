@@ -2,17 +2,20 @@
 # Only used for testing
 
 from microprediction import MicroCrawler
-import time, datetime
+import time, datetime, os
 import numpy as np
 from pprint import pprint
 
-class DevTestingCrawler(MicroCrawler):
+class ReportingCrawler(MicroCrawler):
 
-        " Crawler used for testing code releases "
+        # Crawler created for testing purposes.
         # By all means use it for your own testing purposes by providing pass_callback and fail_callback
-        # Be aware this will echo the write_key to std out
 
         def __init__(self, write_key, pass_callback, fail_callback):
+            """
+              :param pass_callback(dict)->bool  function that will be called if things look okay
+              :param fail_callback(dict)->bool  function that will be called if things don't
+            """
             super().__init__(stop_loss=2, min_lags=0, sleep_time=1, write_key=write_key, quietude=10, verbose=False)
             self.pass_callback = pass_callback
             self.fail_callback = fail_callback
@@ -41,12 +44,13 @@ class DevTestingCrawler(MicroCrawler):
                 return sorted(
                     np.random.randn(self.num_predictions))
 
-
-        def run_dev_tests(self,timeout=180,name='devtest_crawler'):
+        def run_and_report(self, timeout=180, name='reporting_crawler'):
             """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
                       'start_datetime': str(datetime.datetime.now()),
-                      'summary_page':'https://www.microprediction.org/home/'+self.write_key}
+                      'summary_page':'https://www.microprediction.org/home/'+self.write_key,
+                      'base_url':self.base_url,
+                      'virtual_env':os.getenv('VIRTUAL_ENV')}
             print(self.write_key)
 
             # Initial checks
@@ -101,5 +105,5 @@ if __name__=="__main__":
         pass_callback=None
         fail_callback=None
 
-    crawler = DevTestingCrawler(write_key=FLAMMABLE_COD,pass_callback=pass_callback,fail_callback=fail_callback)
-    crawler.run_dev_tests(timeout=100,name='local test')
+    crawler = ReportingCrawler(write_key=FLAMMABLE_COD, pass_callback=pass_callback, fail_callback=fail_callback)
+    crawler.run_and_report(timeout=100, name='local test')
