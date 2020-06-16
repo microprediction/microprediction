@@ -84,7 +84,7 @@ class DevTestingCrawler(MicroCrawler):
             if teardown_errors:
                 report.update(teardown_errors)
 
-            if any_errors and self.pass_callback is not None:
+            if not(any_errors) and self.pass_callback is not None:
                 successfully_reported_pass = self.pass_callback(report)
                 if successfully_reported_pass==False:
                     report.update({'reporting_failure':True})
