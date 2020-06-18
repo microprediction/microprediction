@@ -1,6 +1,6 @@
 from microprediction.reader import MicroReader
 from microconventions import api_url
-import requests, pprint
+import requests, pprint, time, json
 
 class MicroWriter(MicroReader):
 
@@ -108,9 +108,17 @@ class MicroWriter(MicroReader):
     def get_confirms(self):
         res = requests.get(self.base_url + '/confirms/' + self.write_key)
         if res.status_code == 200:
-            return res.json()
+            confirm_strings = res.json()
+            return [json.loads(c) for c in confirm_strings]
         else:
             raise Exception('Failed for ' + self.write_key)
+
+    def get_elapsed_since_confirm(self):
+        confirms = self.get_confirms()
+        if not confirms:
+            return None
+        last_confirm_time  = confirms[0].get("epoch_time")
+        return time.time()-last_confirm_time
 
     def get_leaderboard(self,name,delay=None):
         res = requests.patch(self.base_url + '/leaderboard/' + name, data={"delay": delay})

@@ -20,10 +20,18 @@ class ReportingCrawler(MicroCrawler):
             self.pass_callback = pass_callback
             self.fail_callback = fail_callback
             self.initial_balance = self.get_balance()
+            self.max_balance = self.initial_balance
+            self.min_balance = self.initial_balance
+
 
         def setup(self,**kwargs):
             """ Return error messages if any """
             pass
+
+        def downtime(self,seconds,**ignored):
+            super().downtime(seconds=seconds,**ignored)
+            self.min_balance = min(self.min_balance, self.get_balance())
+            self.max_balance = max(self.max_balance, self.get_balance())
 
         def teardown(self,**kwargs):
             """ Return error messages if any """
@@ -43,6 +51,15 @@ class ReportingCrawler(MicroCrawler):
             else:
                 return sorted(
                     np.random.randn(self.num_predictions))
+
+        def default_teardown_errors(self):
+            seconds_since_confirm = self.get_elapsed_since_confirm()
+            if seconds_since_confirm is None:
+                return {'error':'inactivity','message':'no confirmations found'}
+            if seconds_since_confirm>600:
+                return {'error':'inactivity','message':'more than ten mins since last confirm','seconds_since_confirm':seconds_since_confirm}
+            if abs(self.max_balance - self.min_balance) < 1e-5:
+                return {'warning': 'inactivity', 'message': 'min balance is same as max balance'}
 
         def run_and_report(self, timeout=180, name='reporting_crawler'):
             """ Returns error report in form of dict """
@@ -73,10 +90,12 @@ class ReportingCrawler(MicroCrawler):
 
             if setup_errors is None and run_errors is None:
                 # Teardown checks
-                try:
-                    teardown_errors = self.teardown()
-                except Exception as e:
-                    teardown_errors = {'error': 'error thrown by teardown', 'message': str(e)}
+                teardown_errors = self.default_teardown_errors()
+                if teardown_errors is None:
+                    try:
+                        teardown_errors = self.teardown()
+                    except Exception as e:
+                        teardown_errors = {'error': 'error thrown by teardown', 'message': str(e)}
             else:
                 teardown_errors = None
 
