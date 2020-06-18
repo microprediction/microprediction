@@ -120,6 +120,29 @@ class MicroWriter(MicroReader):
         last_confirm_time  = confirms[0].get("epoch_time")
         return time.time()-last_confirm_time
 
+    def get_transactions(self, with_epoch=True):
+        """
+            :param with_timestamps bool     Set true to include epoch time (datetime already comes)
+        """
+        res = requests.get(self.base_url + '/transactions/' + self.write_key)
+        if res.status_code == 200:
+            transactions = res.json()
+            transaction_values = [t[1] for t in transactions]
+            if with_epoch:
+                transaction_epoch_times = [ int(t[0].split('-')[0])/1000 for t in transactions ]
+                for tv,tt in zip(transaction_values,transaction_epoch_times):
+                    tv.update({'epoch_time':tt})
+            return transaction_values
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_elapsed_since_transaction(self):
+        transactions = self.get_transactions(with_epoch=True)
+        if not transactions:
+            return None
+        last_transaction_time  = transactions[0].get("epoch_time")
+        return time.time()-last_transaction_time
+
     def get_leaderboard(self,name,delay=None):
         res = requests.patch(self.base_url + '/leaderboard/' + name, data={"delay": delay})
         if res.status_code == 200:

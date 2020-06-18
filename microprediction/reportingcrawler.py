@@ -53,13 +53,23 @@ class ReportingCrawler(MicroCrawler):
                     np.random.randn(self.num_predictions))
 
         def default_teardown_errors(self):
+            # Stale transactions?
+            seconds_since_transaction = self.get_elapsed_since_transaction()
+            if seconds_since_transaction is None:
+                return {'error': 'inactivity', 'message': 'no transactions found'}
+            if seconds_since_transaction > 1200:
+                return {'error': 'inactivity', 'message': 'more than twenty mins since last transaction',
+                        'seconds_since_transaction': seconds_since_transaction}
+            # Stale confirms?
             seconds_since_confirm = self.get_elapsed_since_confirm()
             if seconds_since_confirm is None:
                 return {'error':'inactivity','message':'no confirmations found'}
-            if seconds_since_confirm>600:
-                return {'error':'inactivity','message':'more than ten mins since last confirm','seconds_since_confirm':seconds_since_confirm}
+            if seconds_since_confirm>1200:
+                return {'error':'inactivity','message':'more than twenty mins since last confirm','seconds_since_confirm':seconds_since_confirm}
             if abs(self.max_balance - self.min_balance) < 1e-5:
-                return {'warning': 'inactivity', 'message': 'min balance is same as max balance'}
+                pprint( {'warning': 'inactivity', 'message': 'min balance is same as max balance'} )
+                print(' ',flush=True)
+
 
         def run_and_report(self, timeout=180, name='reporting_crawler'):
             """ Returns error report in form of dict """
@@ -125,4 +135,4 @@ if __name__=="__main__":
         fail_callback=None
 
     crawler = ReportingCrawler(write_key=FLAMMABLE_COD, pass_callback=pass_callback, fail_callback=fail_callback)
-    crawler.run_and_report(timeout=100, name='local test')
+    crawler.run_and_report(timeout=10, name='local test')
