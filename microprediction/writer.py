@@ -69,6 +69,30 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for '+ self.write_key)
 
+    def delete_errors(self):
+        """ Clear log of errors """
+        res = requests.delete(self.base_url + '/errors/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_warnings(self):
+        """ Retrieve private log information """
+        res = requests.get(self.base_url + '/warnings/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def delete_warnings(self):
+        """ Clear warnings """
+        res = requests.delete(self.base_url + '/warnings/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
     def get_balance(self):
         res = requests.get(self.base_url + '/balance/' + self.write_key)
         if res.status_code == 200:
@@ -77,7 +101,7 @@ class MicroWriter(MicroReader):
             raise Exception('Failed for ' + self.write_key)
 
     def put_balance(self, source_write_key, amount=100. ):
-        """ Transfer some balance into self.write_key """
+        """ Transfer some balance into self.write_key by reducing balance of source_write_key """
         res = requests.put(self.base_url + '/balance/' + self.write_key, data={"source_write_key": source_write_key,"amount":amount})
         if res.status_code == 200:
             return res.json()
@@ -142,20 +166,6 @@ class MicroWriter(MicroReader):
             return None
         last_transaction_time  = transactions[0].get("epoch_time")
         return time.time()-last_transaction_time
-
-    def get_leaderboard(self,name,delay=None):
-        res = requests.patch(self.base_url + '/leaderboard/' + name, data={"delay": delay})
-        if res.status_code == 200:
-            return res.json()
-        else:
-            raise Exception('Failed for ' + self.write_key)
-
-    def get_overall(self):
-        res = requests.patch(self.base_url + '/overall/')
-        if res.status_code == 200:
-            performance = res.json()
-        else:
-            raise Exception('Failed for ' + self.write_key)
 
     def get_active(self):
         res = requests.get(self.base_url + '/active/' + self.write_key)

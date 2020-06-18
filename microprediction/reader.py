@@ -19,6 +19,20 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
            return float(res.json())
 
+    def get_leaderboard(self, name, delay=None):
+        res = requests.get(self.base_url + '/leaderboards/' + name, data={"delay": delay})
+        if res.status_code == 200:
+            return res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
+    def get_overall(self):
+        res = requests.get(self.base_url + '/overall/')
+        if res.status_code == 200:
+            performance = res.json()
+        else:
+            raise Exception('Failed for ' + self.write_key)
+
     def get_sponsors(self):
         res = requests.get(self.base_url + '/sponsors')
         if res.status_code == 200:
@@ -65,7 +79,9 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
             return res.json()
 
-    def get_cdf(self, name, values=None):
+    def get_cdf(self, name, delay=None, values=None):
+        if delay is None:
+            delay = self.DELAYS[0]
         if values is None:  # Supply x-values at which approximate crowd cdf will be computed. # FIXME... should not be here an also in conventions
             values = [-2.3263478740408408, -1.6368267885518997, -1.330561513178897, -1.1146510149326596,
                       -0.941074530352976, -0.792046894425591, -0.6588376927361878, -0.5364223812298266,

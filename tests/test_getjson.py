@@ -6,4 +6,4 @@ def test_getjson():
     for k in range(5):
         getjson('https://config.microprediction.org/config.json')
     end_time = time.time()
-    assert end_time-start_time<2
+    assert end_time-start_time<5

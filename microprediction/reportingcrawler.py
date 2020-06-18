@@ -11,12 +11,12 @@ class ReportingCrawler(MicroCrawler):
         # Crawler created for testing purposes.
         # By all means use it for your own testing purposes by providing pass_callback and fail_callback
 
-        def __init__(self, write_key, pass_callback, fail_callback):
+        def __init__(self, write_key, pass_callback, fail_callback, **kwargs):
             """
               :param pass_callback(dict)->bool  function that will be called if things look okay
               :param fail_callback(dict)->bool  function that will be called if things don't
             """
-            super().__init__(stop_loss=2, min_lags=0, sleep_time=1, write_key=write_key, quietude=10, verbose=False)
+            super().__init__(stop_loss=2, min_lags=0, sleep_time=1, write_key=write_key, quietude=10, verbose=False,**kwargs)
             self.pass_callback = pass_callback
             self.fail_callback = fail_callback
             self.initial_balance = self.get_balance()
@@ -53,6 +53,7 @@ class ReportingCrawler(MicroCrawler):
                     np.random.randn(self.num_predictions))
 
         def default_teardown_errors(self):
+            """ Runs a list of ex-post tests """
             # Stale transactions?
             seconds_since_transaction = self.get_elapsed_since_transaction()
             if seconds_since_transaction is None:
@@ -71,6 +72,36 @@ class ReportingCrawler(MicroCrawler):
                 print(' ',flush=True)
 
 
+        def default_setup_errors(self):
+            """ Run a bunch of very basic system checks """
+
+            # Are APIs returning?
+            try:
+                # ... test nullary getters
+                for method in ['get_confirms','get_sponsors','get_budgets','get_sponsors',
+                               'get_balance','get_errors','get_overall','get_elapsed_since_transaction',
+                               'get_elapsed_since_confirm','maybe_create_key','get_home']:
+                    getattr(self,method)()
+
+                # ... and a few requiring arguments
+                method = 'get_leaderboard'
+                self.get_leaderboard(name='cop.json')
+                self.get_leaderboard(name='cop.json',delay=self.DELAYS[0])
+
+                method = 'get_cdf'
+                self.get_cdf(name='cop.json')
+                self.get_cdf(name='three_body_x.json',delay=self.DELAYS[-1])
+
+                method = 'get_lagged_times'
+                self.get_lagged_times('cop.json')
+                method = 'get_lagged_values'
+                self.get_lagged_values('cop.json')
+
+            except Exception as e:
+                return {'error':'setup error','method':method,'message':str(e)}
+
+
+
         def run_and_report(self, timeout=180, name='reporting_crawler'):
             """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
@@ -81,10 +112,12 @@ class ReportingCrawler(MicroCrawler):
             print(self.write_key)
 
             # Initial checks
-            try:
-                setup_errors = self.setup()
-            except Exception as e:
-                setup_errors = {'error':'error thrown by setup','message':str(e)}
+            setup_errors = self.default_setup_errors()
+            if setup_errors is None:
+                try:
+                    setup_errors = self.setup()
+                except Exception as e:
+                    setup_errors = {'error':'error thrown by setup','message':str(e)}
 
             if setup_errors is None:
                 # Run checks
@@ -134,5 +167,5 @@ if __name__=="__main__":
         pass_callback=None
         fail_callback=None
 
-    crawler = ReportingCrawler(write_key=FLAMMABLE_COD, pass_callback=pass_callback, fail_callback=fail_callback)
+    crawler = ReportingCrawler(base_url='https://devapi.microprediction.org',write_key=FLAMMABLE_COD, pass_callback=pass_callback, fail_callback=fail_callback)
     crawler.run_and_report(timeout=10, name='local test')

@@ -6,7 +6,7 @@ def test_client():
     with Timer() as t:
         write_key = new_key(difficulty=7)
         mw = MicroWriter(write_key=write_key)
-    assert(t.elapsed < 5 )
+    assert(t.elapsed < 15 )
 
 
 def test_new():
