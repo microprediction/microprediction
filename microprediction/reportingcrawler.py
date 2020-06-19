@@ -67,8 +67,9 @@ class ReportingCrawler(MicroCrawler):
                 return {'error':'inactivity','message':'no confirmations found'}
             if seconds_since_confirm>1200:
                 return {'error':'inactivity','message':'more than twenty mins since last confirm','seconds_since_confirm':seconds_since_confirm}
+            # Warn but don't error if balance is the same
             if abs(self.max_balance - self.min_balance) < 1e-5:
-                pprint( {'warning': 'inactivity', 'message': 'min balance is same as max balance'} )
+                pprint( {'warning': 'inactivity', 'warning message': 'min balance is same as max balance'} )
                 print(' ',flush=True)
 
 
