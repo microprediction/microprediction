@@ -126,7 +126,7 @@ class MicroCrawler(MicroWriter):
         soon = sorted(self.next_prediction_time.items(), key=lambda d: d[1])[:num]
         if relative:
             t = time.time()
-            return [ (n,s-t) for n,s in soon]
+            return [ (n,int((s-t)*10)/10.0) for n,s in soon]
         else:
             return soon
 
@@ -207,28 +207,44 @@ class MicroCrawler(MicroWriter):
             if horizons:
                 return random.choice(horizons)
 
-    def estimate_prediction_time(self, lagged_times, delay, num_intervals):
-        # Base on lagged times of observations and the horizon, set a time at which to next create a prediction
+
+    def expected_time_of_next_value(self, lagged_times):
+        # Base on lagged times estimate the next time at which a value will arrive
         if len(lagged_times) > 5:
+
+            # Compute or assume time between data points
             neg_dt = approx_mode(np.diff(lagged_times))
             dt = -neg_dt if neg_dt is not None else None
-            if dt is None or self.sleep_time > dt:
-                dt = self.sleep_time
-            # e.g. dt=90 and delay=310  we have 80 seconds grace
-            expected_at = lagged_times[0] + dt * num_intervals
-        else:
-            expected_at = time.time() + 600
-            dt = self.sleep_time
+            if dt is None:
+                dt = self.DELAYS[-1]
+            assert dt > 0
 
-        if delay >= dt:
-            earliest = expected_at + 5
-            latest = expected_at + delay % dt - 5
+            # Compute expected time of next data point, but if data is missing move it forward
+            # num_intervals>1 is used when we skip prediction, as with most z-curves for example
+            expected_at = lagged_times[0] + dt
+            if expected_at< time.time() + 45:
+                expected_at = time.time() + dt
         else:
-            latest = expected_at - dt - 5
-            earliest = expected_at - 2 * dt + 5
-        if earliest > latest:
-            earliest = latest
-        predict_time = np.random.rand() * (latest - earliest) + earliest
+            expected_at = time.time() + self.DELAYS[-1]
+            dt = self.DELAYS[-1]
+        return expected_at, dt
+
+    def set_next_prediction_time(self, lagged_times, delay, num_intervals):
+        # Called after making a prediction to determine when next to revisit the stream
+
+        # First determine the time until the next data point, but if that is very soon we want the one after
+        expected_at, dt = self.expected_time_of_next_value(lagged_times=lagged_times)
+        assert dt>=55
+        while expected_at - time.time() < 20:
+            expected_at = expected_at + dt
+
+        # Anticipate predicting some time after arrival of the next data point
+        # If num_intervals>1 we skip since updating is not considered necessary (e.g. z-curves)
+        earliest = expected_at + 5  + (num_intervals-1)*dt
+        latest   = expected_at + 10 + (num_intervals-1)*dt
+        predict_time = np.random.rand()*(latest - earliest) + earliest
+        assert predict_time>time.time()+40, 'prediction time too soon'
+
         return predict_time, dt, earliest, latest, expected_at
 
     def predict_and_submit(self, name, delay, lagged_times ):
@@ -245,10 +261,12 @@ class MicroCrawler(MicroWriter):
             if len(lagged_times)>5:
                 dt = (lagged_times[1]-lagged_times[-1] )/(len(lagged_times)-1)
                 next_predict_time = self.min_lags*dt + lagged_times[-1]
-                if next_predict_time<time.time():
-                    next_predict_time = time.time()+10*60*60
-                    if not horizon in self.backoff:
-                        self.backoff[horizon] = 10*60*60
+                if next_predict_time<time.time()+50:
+                    next_predict_time = time.time()+50
+                    print('Difficulty interpreting next prediction time for '+horizon+' as dt='+str(dt))
+                    #if not horizon in self.backoff:
+                    #    print('Backing off '+horizon,flush=True)
+                    #    self.backoff[horizon] = 10*60*60
             else:
                 next_predict_time = time.time()+5*60
             self.next_prediction_time[horizon]=next_predict_time
@@ -258,6 +276,7 @@ class MicroCrawler(MicroWriter):
             self.update_seconds_until_next(exclude=[horizon])
             scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times, name=name, delay=delay )
             execut = self.submit(name=name, values=scenario_values, delay=delay)
+            print(flush=True)
             message.update({'submitted':True,'exec':execut})
             message.update({"median": median(scenario_values),
                             "mean": np.mean(scenario_values),
@@ -266,65 +285,62 @@ class MicroCrawler(MicroWriter):
                             "values[-1]": scenario_values[-1]})
 
             num_intervals = self.update_frequency(name=name, delay=delay)
-            predict_time, dt, earliest, latest, expected_at = self.estimate_prediction_time(lagged_times=lagged_times, delay=delay, num_intervals=num_intervals)
+            predict_time, dt, earliest, latest, expected_at = self.set_next_prediction_time(lagged_times=lagged_times, delay=delay, num_intervals=num_intervals)
             message.update({'earliest': earliest, 'latest': latest})
             message.update({'expected_at':expected_at})
-
-            if predict_time>time.time():
-                message.update({'t_next':predict_time})
-                self.next_prediction_time[horizon] = predict_time
-            else:
-                if horizon in self.backoff:
-                    self.next_prediction_time[horizon] = time.time() + self.backoff[horizon]
-                    self.backoff[horizon] = 2*self.backoff[horizon]
-                else:
-                    self.next_prediction_time[horizon] = time.time()+ delay
-                    self.backoff[horizon] = delay
-                message.update({'backoff':self.backoff[horizon]})
+            self.next_prediction_time[horizon] = predict_time
+            print('Submitted to ' + str(name) + ' ' + str(delay) +'s horizon, and will do so again in ' + str(self.next_prediction_time[horizon] - time.time()) + ' seconds.', flush=True)
 
             if not execut:
                 message.update({"submitted":False,"reason":"execution failure","confirms":self.get_confirms()[-1:], "errors": self.get_errors()[-1:]})
-                print("---------- ERROR ------------")
+                print("---------- Submission error ------------")
                 pprint.pprint(message)
                 print("-----------------------------")
 
         if self.feel_like_talking():
             message.update({'balance': self.get_balance(),
                             "errors":self.get_errors()[-10:]})
-            print(" ")
+            print("Randomly sampled message: ")
             pprint.pprint(message)
             print(" ", flush=True)
         return execut
 
     def initial_urgency_multiplier(self,horizon):
-        """ Seconds """
+        """ Seconds """  # TODO: stupid name fixme
         return 20 if '~' in horizon else 1
+
+    def status_report(self):
+        """ This gets barfed to stdout every time downtime is called """
+        # Just overwrite this for a less verbose crawler
+        print('Currently predicting for ' + str(len(self.active)) + ' horizons',flush=True)
+        print('Upcoming ...')
+        pprint.pprint(self.upcoming(5))
 
     def run(self,timeout=None):
         # Pick up where we left off, but stagger
+        import datetime
+        print("---- Restarting --  at  --- " + str(datetime.datetime.now()),flush=True )
+
         self.performance = self.get_performance()
         self.active = self.get_active()
         self.start_time = time.time()
         self.end_time = time.time()+timeout if timeout is not None else time.time()+10000000
-        print('Currently predicting for ' + str(len(self.active)) + ' horizons')
+        print(' Active for ' + str(len(self.active)) + ' horizons')
         self.stream_candidates = self.candidate_streams()
-        print('Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
+        print(' Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
         desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon in [70, 310, 910]]
         self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_urgency_multiplier(stream)) \
             for k, stream in enumerate(self.active) if stream in desired_streams])
 
-
-        print("---------- Restarting -------------")
         pprint.pprint(self.__repr__())
-        print("-----------------------------------",flush=True)
 
-
+        catching_up = True
         while time.time()<self.end_time:
 
             # Periodically consider entering new horizons and withdrawing from others
             self.update_seconds_until_next()
-            if self.seconds_until_next>np.random.randn()*120:
-                if time.time()-self.last_performance_check>60*60:
+            if self.seconds_until_next>np.random.rand()*120:
+                if time.time()-self.last_performance_check>60*60 or self.performance is None or self.active is None:
                     self.performance = self.get_performance()
                     self.stream_candidates = self.candidate_streams()
                     print('Found '+str(len(self.stream_candidates))+ ' candidate streams.')
@@ -342,43 +358,53 @@ class MicroCrawler(MicroWriter):
                         name, delay = self.split_horizon_name(horizon)
                         lagged_times = self.get_lagged_times(name=name)
                         self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)
-                        print(" ", )
-                        print(" Found something new to predict: " + horizon)
-                        print(" ",flush=True )
+                        print(" Found something new to predict: " + horizon,flush=True)
                         self.last_new_horizon = time.time()
                         if self.feel_like_talking():
                             print(" ")
                             pprint.pprint(self.recent_updates())
                             print(" ", flush=True)
                     else:
-                        print(" ")
                         print(" Couldn't find anything else to predict, for now. ",flush=True )
-                        print(" ",flush=True)
 
-            # If there is time, maybe we chill, or do something productive like offline estimation
             self.update_seconds_until_next()
             if self.seconds_until_next>2:
-                print('Downtime for '+str(self.seconds_until_next)+' seconds. Next '+ str(self.upcoming(num=1)))
+                # If there is time, maybe we chill, or do something productive like offline estimation
+                print('Downtime for '+str(self.seconds_until_next)+'s',flush=True)
+                if self.feel_like_talking():
+                    self.status_report()
                 self.downtime(seconds=self.seconds_until_next-1)
                 self.update_seconds_until_next()
-
             if self.seconds_until_next>0:
                 time.sleep(self.seconds_until_next)
 
             # It might be time to submit predictions
-            for horizon, seconds_to_go in self.upcoming(num=1,relative=True):
-                name, delay = self.split_horizon_name(horizon)
-                if seconds_to_go<1:
-                    if seconds_to_go>0:
-                        time.sleep(seconds_to_go+0.1)
+            num_upcoming_to_consider = 100 if catching_up else 10
+            for horizon, seconds_to_go in self.upcoming(num=num_upcoming_to_consider,relative=True):
+                # Hang if there isn't much time
+                if seconds_to_go>0 and seconds_to_go<2:
+                    time.sleep(seconds_to_go)
+                    seconds_to_go = -0.01
+                # Go time !
+                if seconds_to_go<0:
+                    name, delay  = self.split_horizon_name(horizon)
                     lagged_times = self.get_lagged_times(name=name)
-                    if lagged_times and (abs(time.time()-lagged_times[0])<30):
-                        # Received recent data, so it is time to predict
+                    data_arrived_recently = lagged_times and (abs(time.time()-lagged_times[0])<30)
+                    if seconds_to_go<-30 or data_arrived_recently:
                         name, delay = self.split_horizon_name(horizon)
                         self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times )
                     else:
-                        time.sleep(1)
+                        self.next_prediction_time[horizon] = time.time()+delay
+            catching_up = False
+
+        print("---- Retiring gracefully --  at  --- " + str(datetime.datetime.now()),flush=True )
+        self.status_report()
+        pprint.pprint(self.recent_updates())
 
 
 
+if __name__=="__main__":
+    from microprediction.config_private import FLASHY_COYOTE
+    crawler = MicroCrawler(base_url='https://devapi.microprediction.org', write_key=FLASHY_COYOTE)
+    crawler.run(timeout=500)
 

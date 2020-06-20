@@ -101,8 +101,6 @@ class ReportingCrawler(MicroCrawler):
             except Exception as e:
                 return {'error':'setup error','method':method,'message':str(e)}
 
-
-
         def run_and_report(self, timeout=180, name='reporting_crawler'):
             """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
@@ -163,10 +161,10 @@ class ReportingCrawler(MicroCrawler):
 
 if __name__=="__main__":
     try:
-        from microprediction.config_private import pass_callback, fail_callback, FLAMMABLE_COD
+        from microprediction.config_private import pass_callback, fail_callback, FLAMMABLE_COD, FLASHY_COYOTE
     except ImportError as e:
         pass_callback=None
         fail_callback=None
 
-    crawler = ReportingCrawler(base_url='https://devapi.microprediction.org',write_key=FLAMMABLE_COD, pass_callback=pass_callback, fail_callback=fail_callback)
-    crawler.run_and_report(timeout=10, name='local test')
+    crawler = ReportingCrawler(base_url='https://devapi.microprediction.org',write_key=FLASHY_COYOTE, pass_callback=pass_callback, fail_callback=fail_callback)
+    crawler.run_and_report(timeout=1000, name='local test')
