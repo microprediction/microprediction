@@ -396,6 +396,7 @@ class MicroCrawler(MicroWriter):
                     else:
                         self.next_prediction_time[horizon] = time.time()+delay
             catching_up = False
+            time.sleep(1)
 
         print("---- Retiring gracefully --  at  --- " + str(datetime.datetime.now()),flush=True )
         self.status_report()
