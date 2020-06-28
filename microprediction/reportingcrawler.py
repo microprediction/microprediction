@@ -105,10 +105,11 @@ class ReportingCrawler(MicroCrawler):
             """ Returns error report in form of dict """
             report = {'crawler': name, 'timeout': timeout, 'start_time': time.time(),
                       'start_datetime': str(datetime.datetime.now()),
-                      'summary_page':'https://www.microprediction.org/home/'+self.write_key,
+                      'summary_page':'https://api.microprediction.org/home/'+self.write_key,
                       'base_url':self.base_url,
                       'virtual_env':os.getenv('VIRTUAL_ENV')}
             print(self.write_key)
+            pprint(report)
 
             # Initial checks
             setup_errors = self.default_setup_errors()
@@ -166,5 +167,6 @@ if __name__=="__main__":
         pass_callback=None
         fail_callback=None
 
-    crawler = ReportingCrawler(base_url='https://devapi.microprediction.org',write_key=FLASHY_COYOTE, pass_callback=pass_callback, fail_callback=fail_callback)
-    crawler.run_and_report(timeout=1000, name='local test')
+    crawler = ReportingCrawler(base_url='https://stableapi.microprediction.org',write_key=FLASHY_COYOTE, pass_callback=pass_callback, fail_callback=fail_callback)
+    print(crawler.base_url)
+    crawler.run_and_report(timeout=300, name='local test')

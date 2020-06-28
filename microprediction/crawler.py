@@ -349,10 +349,10 @@ class MicroCrawler(MicroWriter):
                     self.withdraw_from_worst()
                     self.last_performance_check = time.time()
 
-            # If there is time consider entering a new stream, but not too often
+            # If there is time consider entering a new stream, but no more than once every five minutes
             self.update_seconds_until_next()
-            if (self.seconds_until_next>np.random.rand()*500) or (len(self.active)<10):
-                if (time.time()-self.last_new_horizon>10*60) or (len(self.active)==0):
+            if (self.seconds_until_next>np.random.rand()*50) or (len(self.active)<20):
+                if (time.time()-self.last_new_horizon>5*60) or (len(self.active)<20):
                     horizon = self.next_horizon(exclude=self.horizon_blacklist)
                     if horizon:
                         name, delay = self.split_horizon_name(horizon)

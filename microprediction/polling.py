@@ -88,7 +88,7 @@ class MicroPoll(MicroWriter):
         data.update({'elapsed after downtime':time.time()-start_time})
 
     def maybe_bolster_balance_by_mining(self):
-        """ Mine just a littel to avoid stream dying due to bankruptcy """
+        """ Mine just a little to avoid stream dying due to bankruptcy """
         balance = self.get_balance()
         if balance < 0:
             muid_time = time.time()
@@ -100,6 +100,8 @@ class MicroPoll(MicroWriter):
                 print('     FOUND MUID !!!     ')
                 print('************************', flush=True)
                 self.mining_success += 1
+            else:
+                print('Did not find MUID this time', flush=True)
 
     def run(self):
         data = {'type': 'scheduler', 'scheduler start time': time.time()}
