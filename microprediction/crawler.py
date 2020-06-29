@@ -147,7 +147,7 @@ class MicroCrawler(MicroWriter):
         return {'quietude':self.quietude,
                 'sponsor_min':self.sponsor_min,
                 'stop_loss':self.stop_loss,
-                'min_budget':self.min_budget,
+                'min_budget':self.min_budget,  # Get rid of this stuff
                 'max_budget':self.max_budget,
                 'min_lags':self.min_lags,
                 'max_lags':self.max_lags,
@@ -155,7 +155,7 @@ class MicroCrawler(MicroWriter):
                 'num_blacklisted':len(self.horizon_blacklist),
                 'current_balance':self.get_balance(),
                 'recently_erroneous':self.get_errors()[-3:],
-                'currently_worst': self.worst_active_horizons()[:3],
+                'currently_worst': self.worst_active_horizons(stop_loss=self.stop_loss)[:3],
                 'recently_cancelled':self.cancelled[:3],
                 'recently_blacklisted': self.horizon_blacklist[-3:],
                 'backoff':sorted(self.backoff.items(),key=lambda d: d[1])[:3],
@@ -164,12 +164,6 @@ class MicroCrawler(MicroWriter):
     def recent_updates(self):
         r = self.__repr__()
         return dict( [ (k,v) for k,v in r.items() if ('recent' in k or 'current' in k) ] )
-
-    def active_performance(self, reverse=False ):
-        return OrderedDict( sorted( [ (horizon, balance) for horizon, balance in self.performance.items() if horizon in self.active], key = lambda e: e[1], reverse=reverse ) )
-
-    def worst_active_horizons(self):
-        return [ horizon for horizon, balance in self.active_performance(reverse=True).items() if balance<-abs(self.stop_loss) ]
 
     def withdraw(self,horizon):
         name, delay = self.split_horizon_name(horizon)
@@ -183,11 +177,6 @@ class MicroCrawler(MicroWriter):
         self.active      = self.get_active()
         self.performance = self.get_performance()
         self.withdrawing(horizon)
-
-    def withdraw_from_worst(self, num=1):
-        horizons = self.worst_active_horizons()[:num]
-        for horizon in horizons:
-            self.withdraw(horizon=horizon)
 
     def next_horizon(self, exclude=None):
         """ Choose an urgent horizon """
@@ -346,7 +335,7 @@ class MicroCrawler(MicroWriter):
                     print('Found '+str(len(self.stream_candidates))+ ' candidate streams.')
                     self.active = self.get_active()
                     print('Currently predicting for ' + str(len(self.active)) + ' horizons')
-                    self.withdraw_from_worst()
+                    self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active)
                     self.last_performance_check = time.time()
 
             # If there is time consider entering a new stream, but no more than once every five minutes

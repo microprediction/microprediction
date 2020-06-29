@@ -1,6 +1,7 @@
 from microprediction.reader import MicroReader
 from microconventions import api_url
 import requests, pprint, time, json
+from collections import OrderedDict
 
 class MicroWriter(MicroReader):
 
@@ -232,3 +233,21 @@ class MicroWriter(MicroReader):
             raise Exception('Failed to cancel.')
         else:
             return success
+
+    def active_performance(self, reverse=False, performance=None, active=None):
+        performance = performance or self.get_performance()
+        active      = active or self.get_active()
+        return OrderedDict(
+            sorted([(horizon, balance) for horizon, balance in performance.items() if horizon in active],
+                   key=lambda e: e[1], reverse=reverse))
+
+    def worst_active_horizons(self, stop_loss, performance=None, active=None):
+        """ Return horizons where we are losing more than stop_loss """
+        return [horizon for horizon, balance in self.active_performance(reverse=True,performance=performance,active=active).items() if
+                balance < -abs(stop_loss)]
+
+    def withdraw_from_worst(self, stop_loss, num=1, performance=None, active=None):
+        horizons = self.worst_active_horizons(stop_loss=stop_loss,performance=performance,active=active)[:num]
+        for horizon in horizons:
+            name, delay = self.split_horizon_name(horizon)
+            self.cancel(name=name, delays=[delay])

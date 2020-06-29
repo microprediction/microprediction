@@ -6,7 +6,9 @@ from pprint import pprint
 from scipy.integrate import odeint
 from math import sqrt
 
-#  Example of sending live data to www.microprediction.com and kick-starting copula streams
+#  Example of sending live data to www.microprediction.org and kick-starting copula streams
+#  This uses the MicroWriter directly, though soon there will be a parent class that makes this more convenient
+
 NAMES = ['three_body_x.json','three_body_y.json','three_body_z.json']
 try:
     from microprediction.config_private import THREE_BODY_WRITE_KEY
@@ -74,7 +76,6 @@ def demo():
     time = np.arange(0, 265600, 1)  # 3 days
     orbit = odeint(threebody, Y0, time)
     x, y, z, a, b, c, dx, dy, dz, da, db, dc = orbit.T
-    # Add observation noise
 
     plt.plot(x)
     plt.plot(y)
@@ -84,7 +85,7 @@ def demo():
     pprint(z)
 
 def run():
-    # Fail fast ...
+
     evolve()
 
     print('Starting scheduler',flush=True)
