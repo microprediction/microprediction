@@ -329,13 +329,13 @@ class MicroCrawler(MicroWriter):
             # Periodically consider entering new horizons and withdrawing from others
             self.update_seconds_until_next()
             if self.seconds_until_next>np.random.rand()*120:
+                self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active)
                 if time.time()-self.last_performance_check>60*60 or self.performance is None or self.active is None:
                     self.performance = self.get_performance()
                     self.stream_candidates = self.candidate_streams()
                     print('Found '+str(len(self.stream_candidates))+ ' candidate streams.')
                     self.active = self.get_active()
                     print('Currently predicting for ' + str(len(self.active)) + ' horizons')
-                    self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active)
                     self.last_performance_check = time.time()
 
             # If there is time consider entering a new stream, but no more than once every five minutes

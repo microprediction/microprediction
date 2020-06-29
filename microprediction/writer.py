@@ -246,8 +246,10 @@ class MicroWriter(MicroReader):
         return [horizon for horizon, balance in self.active_performance(reverse=True,performance=performance,active=active).items() if
                 balance < -abs(stop_loss)]
 
-    def withdraw_from_worst(self, stop_loss, num=1, performance=None, active=None):
+    def withdraw_from_worst(self, stop_loss, num=1000, performance=None, active=None):
         horizons = self.worst_active_horizons(stop_loss=stop_loss,performance=performance,active=active)[:num]
         for horizon in horizons:
             name, delay = self.split_horizon_name(horizon)
             self.cancel(name=name, delays=[delay])
+            print('Cancelled participation in '+str(horizon),flush=True)
+            time.sleep(0.1)
