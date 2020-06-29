@@ -92,7 +92,7 @@ class MicroPoll(MicroWriter):
         balance = self.get_balance()
         if balance < 0:
             muid_time = time.time()
-            key = self.bolster_balance_by_mining(seconds=max(50, int(abs(balance) / 10)))
+            key = self.bolster_balance_by_mining(seconds=max(5, int(abs(balance) / 10)))
             mining_time = time.time() - muid_time
             self.mining_time += mining_time
             if key:
