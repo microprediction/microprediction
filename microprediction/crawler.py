@@ -17,8 +17,12 @@ class MicroCrawler(MicroWriter):
 
         You might also want to change
 
-           candidate_streams  - A list of streams you want your crawler to look at
-           candidate_delays   - A list of horizons to predict (from the set self.DELAYS)
+           candidate_streams  - A list of streams you want your crawler to look at. Alternatively override:
+           include_stream
+           exclude_stream
+           candidate_delays   - A list of horizons to predict (from the set self.DELAYS). Alternativley override:
+           include_delay
+           exclude_delay
            update_frequency   - How many times to predict per arriving data point
 
        Good luck!
@@ -26,19 +30,13 @@ class MicroCrawler(MicroWriter):
 
 
     #############################################################
-    #   Override these methods                                  #
+    #   Override these methods to select streamsa and horizons  #
     #############################################################
 
 
-    def candidate_streams(self):
-        """ Modify this as you see fit to select streams for your crawler
-            For example your crawler might like z streams or not, or might require
-            a minimum number of lags in the time series.
-
-             :return [ str ]    List of stream names that your bot would be willing to participate in
-
-        """
-        budgets  = self.get_budgets()
+    def _default_candidate_streams(self):
+        """ Suggests some streams based on arguments passed to constructor """
+        budgets = self.get_budgets()
         sponsors = self.get_sponsors()
         # Stream criteria (combines with AND)
         not_too_dull = [name for name, budget in budgets.items() if float(budget) >= self.min_budget]
@@ -49,76 +47,168 @@ class MicroCrawler(MicroWriter):
         names = list(set.intersection(*map(set, inclusion_criteria)))
         return names
 
+    def include_stream(self, name=None, **ignore):
+        """ Override this as you see fit to select streams for your crawler
+                   For example your crawler might like z streams or not, or might require
+                   a minimum number of lags in the time series.
+        """
+        return True
+
+    def exclude_stream(self, name=None, **ignore):
+        """ Override this as you see fit to select streams for your crawler
+                           For example your crawler might like z streams or not, or might require
+                           a minimum number of lags in the time series.
+        """
+        return False
+
+
+
+    def candidate_streams(self):
+        """ Modify this as you see fit to select streams for your crawler
+            For example your crawler might like z streams or not, or might require
+            a minimum number of lags in the time series.
+
+             :return [ str ]    List of stream names that your bot would be willing to participate in
+
+        """
+        names = self._default_candidate_streams()
+        return [ n for n in names if self.include_stream(n) and not self.exclude_stream(n)]
+
+    def include_delay(self, delay=None, name=None, **ignore):
+        return True
+
+    def exclude_delay(self, delay=None, name=None, **ignore):
+        return False
+
     def candidate_delays(self, name=None):
         """  Determines how far ahead your bot is willing to predict.  However only valid delay times are acceptable (e.g 70)
 
             :returns [ int ]    List of horizons your bot is willing to participate in
+
+            By all means override this if you want
         """
-        return self.DELAYS
+        return [d for d in self.DELAYS if self.include_delay(name=name, delay=d) and not self.exclude_delay(name=name, delay=d)]
 
     def update_frequency(self, name=None, delay=None):
-        """ Determines how often to update samples """
-        return 20 if "~" in name else 1 
+        """ Determines how often to submit samples, measured in units of the typical time between data points
+            Generally it is not necessary to update submissions quite as often for predictions that are changes
+            of martingale-like quantities or for z-scores, z-curves.
+        """
+        return 20 if "~" in name else 1
 
-    def sample(self, lagged_values, lagged_times=None, name=None, delay=None):
+    #################################################################
+    #   Override these methods to change the statistical algorithm  #
+    #################################################################
+
+    def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
         """ An example of a sample method. This is where all the intelligence goes
 
                :param lagged_times [ float ]    Vector with most recent listed first
                :param lagged_times [ float ]    Vector of epoch times, most recent listed first
                :param name          str         Name of stream
                :param delay         int         Prediction horizon in seconds
-
-         Swap this code out for whatever you choose to do.
-         Return a vector of numbers somewhat indicative of a probability density, of length self.num_predictions
+               **ignored                        For future compatability.
+               :returns            [ float ]    A vector of numbers somewhat indicative of a probability density, of length self.num_predictions
 
         """
         scenarios = exponential_bootstrap(lagged=lagged_values, num=self.num_predictions, decay=0.01)
-
         assert len(scenarios)==self.num_predictions, "Your sammpler should product a vector of length "+str(self.num_predictions)
         return sorted(scenarios)
 
     def downtime(self,seconds,**ignored):
-        """ This will be called when a small gap opens up between times when you need to predict """
-        # Be careful if you override it or you might be late for your next prediction
+        """ This will be called when a small gap opens up between times when you need to predict
+
+               param: seconds  float    Number of seconds you have to spend doing whatever you please, since no prediction is due
+               param: **ignored         For future compatability, allow passing of other parameters that, for now, you ignore.
+
+            The function should return None.
+        """
         time.sleep(seconds)
 
-    def withdrawing(self,horizon):
-        """ Teardown when you withdraw from a horizon """
+    #####################################################################
+    #   Override these methods if you want additional things to happen  #
+    #####################################################################
+
+    def withdrawal_callback(self, horizon, **ignored):
+        """ Override this if you want something additional to happen when your algorithm gives up on predicting a horizon
+                  param: horizon   str
+
+
+        """
         pass
 
-    #############################################################
-    #   Typically don't want to override the rest of these      #
-    #############################################################
+    def startup_callback(self,**ignored):
+        """ Override this if you want something additional to happen when your algorithm starts up
+
+        """
+        pass
+
+    def retirement_callback(self, **ignored):
+        """ Override this if you want something additional to happen when your algorithm totally gives up on life
+
+        """
+        pass
+
+    def submission_callback(self, message, **ignored):
+        """ Override this if you want something additional to happen when your algorithm make a submission
+             param: message   dict
+        """
+
+    #############################################################################################
+    #   Typically you don't want to override the rest of these, but its a free Python country   #
+    #############################################################################################
 
 
-    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, sleep_time=300):
-        """  """
+    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, **ignored):
+        """
+            param: write_key  str    Valid write_key    See www.microprediction.org or www.muid.com for more details
+            param: base_url   str    e.g  'http://api.microprediction.org'  or 'http://devapi.microprediction.org' for the brave. Defaults to what is at http://config.microprediction.org
+            param: verbose    bool   Verbosity parameter passed to MicroWriter
+            param: quietude   int    If set to 10, will only barf messages 1/10th of the time
+            param: stop_loss  float  How much to lose before giving up on a stream
+            param: min_budget int
+            param: max_budget int    These set the low/high limits for table stakes. See _default_candidate_streams() method
+            param: min_lags   int
+            param: max_lags   int    These set the short/long limits for the number of lags in a time series. Does your algo need or want a lot of data?
+            param: sponsor_min int   Minimum write_key difficulty of the stream sponsor. E.g. set to 13 to only look at streams where people bothered to generate a 13-MUID.
+            param: **ignored         For future compatability
+
+        """
+
+        # Parameter management
         super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose )
         assert self.key_difficulty(write_key) >= 7, "Invalid write_key for crawler. See www.muid.org to mine one. "
         assert not self.base_url[-1]=='/','Base url should not have trailing /'
         assert stop_loss>0,"Stop loss must be positive "
         self.quietude    = int(quietude)       # e.g. if set to 10, will only print 1/10th of the time
         self.sponsor_min = sponsor_min         # Only choose streams with sponsors at least this long
-        self.sleep_time  = sleep_time          # Minimum number of seconds to add between predictions on a given stream
         self.stop_loss   = stop_loss           # How much to lose before giving up on a stream
         self.min_budget  = min_budget          # Play with highly competitive algorithms?
         self.max_budget  = max_budget          # Play with highly competitive algorithms?
         self.min_lags    = min_lags            # Insist on historical data
         self.max_lags    = max_lags
+
+        # Caching somewhat expensive operations to avoid taxing the system unnecessarily
+        # There might be a tiny charge implemented for these operations at some point in the future
         self.performance = self.get_performance()
         self.active      = self.get_active()   # List of active horizons
-        self.horizon_blacklist = list()
-        self.cancelled   = list()
-        self.next_prediction_time = dict()
-        self.backoff     = dict()              # Lookup of times to sleep when feeds are likely stale
-        self.message_log = list()
-        self.seconds_until_next = 10           # Set just before self.sample() is called so we know how long we have
+        self.stream_candidates = self.candidate_streams()
+
+        # State - times since ...
+        self.seconds_until_next = 10
         self.last_performance_check = time.time()
         self.last_new_horizon = time.time()
-        self.stream_candidates = self.candidate_streams()
-        self.next_prediction_time = dict()     # Indexed by horizon
+        self.next_prediction_time = dict()  # Indexed by horizon
+
+        # State - other
+        self.horizon_blacklist = list()        # List of horizons we have given up on
+        self.cancelled   = list()              # List of horizons we have withdrawn from
+        self.next_prediction_time = dict()     # A manifest of upcoming data arrivals
+        self.backoff     = dict()              # Lookup of times to sleep when feeds are likely stale ... not currently used
+        self.message_log = list()              # A log of detailed messages
 
     def feel_like_talking(self):
+        """ Override this, or set quietude parameter, to determine how often to barf longish messages """
         return self.quietude<=1 or random.choice(range(self.quietude))==0
 
     def upcoming(self,num=10, relative=True):
@@ -166,6 +256,9 @@ class MicroCrawler(MicroWriter):
         return dict( [ (k,v) for k,v in r.items() if ('recent' in k or 'current' in k) ] )
 
     def withdraw(self,horizon):
+        """
+            Cancels participation in a horizon by withdrawing predictions, and adds to blacklist
+        """
         name, delay = self.split_horizon_name(horizon)
         self.cancel(name=name, delays=[delay])
         horizon = self.horizon_name(name=name, delay=delay)
@@ -176,10 +269,12 @@ class MicroCrawler(MicroWriter):
         self.horizon_blacklist.append(horizon)
         self.active      = self.get_active()
         self.performance = self.get_performance()
-        self.withdrawing(horizon)
+        self.withdrawal_callback(horizon)
 
     def next_horizon(self, exclude=None):
-        """ Choose an urgent horizon """
+        """
+            Chooses a horizon that might be of interest to the algorithm
+        """
         candidates = self.stream_candidates
         if exclude:
             candidates = [ c for c in candidates if not c in exclude ]
@@ -198,7 +293,12 @@ class MicroCrawler(MicroWriter):
 
 
     def expected_time_of_next_value(self, lagged_times):
-        # Base on lagged times estimate the next time at which a value will arrive
+        """
+              Rudimentary estimate of the next time a data point will arrive based on history
+
+              :returns  float, float      expected_at epoch time
+                                          dt   typical time between data arrivals
+        """
         if len(lagged_times) > 5:
 
             # Compute or assume time between data points
@@ -207,6 +307,10 @@ class MicroCrawler(MicroWriter):
             if dt is None:
                 dt = self.DELAYS[-1]
             assert dt > 0
+
+            # Don't wait more than 6 hours
+            if dt>(60*60*6):
+                dt = 60*60*6
 
             # Compute expected time of next data point, but if data is missing move it forward
             # num_intervals>1 is used when we skip prediction, as with most z-curves for example
@@ -219,6 +323,9 @@ class MicroCrawler(MicroWriter):
         return expected_at, dt
 
     def set_next_prediction_time(self, lagged_times, delay, num_intervals):
+        """
+            Determine the next time at which we will make a prediction for a given horizon
+        """
         # Called after making a prediction to determine when next to revisit the stream
 
         # First determine the time until the next data point, but if that is very soon we want the one after
@@ -237,7 +344,9 @@ class MicroCrawler(MicroWriter):
         return predict_time, dt, earliest, latest, expected_at
 
     def predict_and_submit(self, name, delay, lagged_times ):
-        """ Given a stream and horizon, try to submit predictions """
+        """
+              Maybe submit a prediction
+        """
         horizon = self.horizon_name(name=name, delay=delay)
         lagged_values = self.get_lagged_values(name)
         execut = 0
@@ -254,7 +363,7 @@ class MicroCrawler(MicroWriter):
                     next_predict_time = time.time()+50
                     print('Difficulty interpreting next prediction time for '+horizon+' as dt='+str(dt))
                     #if not horizon in self.backoff:
-                    #    print('Backing off '+horizon,flush=True)
+                    #    print('Backing off '+horizon,flush=True)    # TODO: Revisit backoff logic
                     #    self.backoff[horizon] = 10*60*60
             else:
                 next_predict_time = time.time()+5*60
@@ -265,7 +374,6 @@ class MicroCrawler(MicroWriter):
             self.update_seconds_until_next(exclude=[horizon])
             scenario_values = self.sample(lagged_values=lagged_values,lagged_times=lagged_times, name=name, delay=delay )
             execut = self.submit(name=name, values=scenario_values, delay=delay)
-            print(flush=True)
             message.update({'submitted':True,'exec':execut})
             message.update({"median": median(scenario_values),
                             "mean": np.mean(scenario_values),
@@ -279,6 +387,7 @@ class MicroCrawler(MicroWriter):
             message.update({'expected_at':expected_at})
             self.next_prediction_time[horizon] = predict_time
             print('Submitted to ' + str(name) + ' ' + str(delay) +'s horizon, and will do so again in ' + str(self.next_prediction_time[horizon] - time.time()) + ' seconds.', flush=True)
+            self.submission_callback(message=message)
 
             if not execut:
                 message.update({"submitted":False,"reason":"execution failure","confirms":self.get_confirms()[-1:], "errors": self.get_errors()[-1:]})
@@ -294,31 +403,49 @@ class MicroCrawler(MicroWriter):
             print(" ", flush=True)
         return execut
 
-    def initial_urgency_multiplier(self,horizon):
-        """ Seconds """  # TODO: stupid name fixme
-        return 20 if '~' in horizon else 1
+    def initial_next_prediction_time_multiplier(self, horizon):
+        """
+             Scales the initial time to make a prediction so that the algorithm doesn't get overwhelmed upon re-start.
+
+        """
+        return 5 if '~' in horizon else 1
 
     def status_report(self):
-        """ This gets barfed to stdout every time downtime is called """
-        # Just overwrite this for a less verbose crawler
+        """
+            This gets called when we have downtime
+        """
+        # By all means overwrite this for a less verbose crawler
         print('Currently predicting for ' + str(len(self.active)) + ' horizons',flush=True)
         print('Upcoming ...')
         pprint.pprint(self.upcoming(5))
 
     def run(self,timeout=None):
-        # Pick up where we left off, but stagger
+        # TODO: Make this more modular
+        """
+            The crawler visits streams. It maintains a list of expected times at which new data points will arrive. At the annointed time(s), it
+            submits predictions after the new data has arrived. It periodically looks for new horizons. It periodically withdraws from horizons where
+            it is not faring too well (watch out for 'die' and 'coin_*' time series as they are simple but can lead to fast losses for some stock standard
+            time series algorithms).
+
+            This is just  suggestion. You can create very different crawlers using the MicroWriter class directly, should you wish to.
+
+        """
         import datetime
-        print("---- Restarting --  at  --- " + str(datetime.datetime.now()),flush=True )
+        print("---- Restarting --  at  --- " + str(datetime.datetime.now()), flush=True)
+        self.startup_callback()
+
 
         self.performance = self.get_performance()
         self.active = self.get_active()
         self.start_time = time.time()
         self.end_time = time.time()+timeout if timeout is not None else time.time()+10000000
+        self.last_performance_check = time.time()-1000
+        self.last_new_horizon = time.time()-1000
         print(' Active for ' + str(len(self.active)) + ' horizons')
         self.stream_candidates = self.candidate_streams()
         print(' Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
         desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon in [70, 310, 910]]
-        self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_urgency_multiplier(stream)) \
+        self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_next_prediction_time_multiplier(stream)) \
             for k, stream in enumerate(self.active) if stream in desired_streams])
 
         pprint.pprint(self.__repr__())
@@ -326,55 +453,57 @@ class MicroCrawler(MicroWriter):
         catching_up = True
         while time.time()<self.end_time:
 
-            # Periodically consider entering new horizons and withdrawing from others
-            self.update_seconds_until_next()
-            if self.seconds_until_next>np.random.rand()*120:
-                self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active)
-                if time.time()-self.last_performance_check>60*60 or self.performance is None or self.active is None:
-                    self.performance = self.get_performance()
-                    self.stream_candidates = self.candidate_streams()
-                    print('Found '+str(len(self.stream_candidates))+ ' candidate streams.')
-                    self.active = self.get_active()
-                    print('Currently predicting for ' + str(len(self.active)) + ' horizons')
-                    self.last_performance_check = time.time()
+            # Withdraw if need be from losing propositions
+            overdue_for_performance_check = time.time()-self.last_performance_check > 5*60
+            if overdue_for_performance_check:
+                print('Checking performance ',flush=True)
+                self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
+                self.active = self.get_active()
+                self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=10 )
+                self.last_performance_check = time.time()
 
-            # If there is time consider entering a new stream, but no more than once every five minutes
+            # Maybe we look for a new horizon to predict, but do this
             self.update_seconds_until_next()
-            if (self.seconds_until_next>np.random.rand()*50) or (len(self.active)<20):
-                if (time.time()-self.last_new_horizon>5*60) or (len(self.active)<20):
-                    horizon = self.next_horizon(exclude=self.horizon_blacklist)
-                    if horizon:
-                        name, delay = self.split_horizon_name(horizon)
-                        lagged_times = self.get_lagged_times(name=name)
-                        self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)
-                        print(" Found something new to predict: " + horizon,flush=True)
-                        self.last_new_horizon = time.time()
-                        if self.feel_like_talking():
-                            print(" ")
-                            pprint.pprint(self.recent_updates())
-                            print(" ", flush=True)
+            got_time_to_look = self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )
+            been_a_while_since_last_horizon_added = time.time()-self.last_new_horizon > 60
+            if got_time_to_look and (been_a_while_since_last_horizon_added or self.active<5):
+                self.active = self.get_active()
+                self.stream_candidates = self.candidate_streams()
+                print('Currently predicting for ' + str(len(self.active)) + ' horizons but found '+ str(len(self.stream_candidates))+ ' candidate streams to examine.',flush=True)
+                horizon = self.next_horizon(exclude=self.horizon_blacklist)
+                if horizon is None:
+                    print('Cannot find another horizon. Crawler method next_horizon() did not suggest one. ',flush=True )
+                else:
+                    name, delay = self.split_horizon_name(horizon)
+                    lagged_times = self.get_lagged_times(name=name)
+                    execut = self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)  # Maybe will predict, maybe not
+                    if not execut:
+                        print('Declined horizon '+horizon,flush=True)
                     else:
-                        print(" Couldn't find anything else to predict, for now. ",flush=True )
+                        print('Submitted to horizon '+horizon,flush=True)
+                        self.last_new_horizon = time.time()
 
+            # Then if there is still time, we might call the downtime() method
             self.update_seconds_until_next()
             if self.seconds_until_next>2:
-                # If there is time, maybe we chill, or do something productive like offline estimation
                 print('Downtime for '+str(self.seconds_until_next)+'s',flush=True)
-                if self.feel_like_talking():
-                    self.status_report()
+                self.status_report()
                 self.downtime(seconds=self.seconds_until_next-1)
                 self.update_seconds_until_next()
+
+            # If there isn't much time, just hang out and be ready
             if self.seconds_until_next>0:
                 time.sleep(self.seconds_until_next)
 
-            # It might be time to submit predictions
+            # Now it is game time.
             num_upcoming_to_consider = 100 if catching_up else 10
             for horizon, seconds_to_go in self.upcoming(num=num_upcoming_to_consider,relative=True):
+                catching_up = False
                 # Hang if there isn't much time
                 if seconds_to_go>0 and seconds_to_go<2:
                     time.sleep(seconds_to_go)
                     seconds_to_go = -0.01
-                # Go time !
+                # Go time. Run through the list.
                 if seconds_to_go<0:
                     name, delay  = self.split_horizon_name(horizon)
                     lagged_times = self.get_lagged_times(name=name)
@@ -384,9 +513,11 @@ class MicroCrawler(MicroWriter):
                         self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times )
                     else:
                         self.next_prediction_time[horizon] = time.time()+delay
-            catching_up = False
-            time.sleep(1)
 
+            # Be nice and don't overwhelm system
+            time.sleep(1.5)
+
+        self.retirement_callback()
         print("---- Retiring gracefully --  at  --- " + str(datetime.datetime.now()),flush=True )
         self.status_report()
         pprint.pprint(self.recent_updates())
@@ -395,6 +526,8 @@ class MicroCrawler(MicroWriter):
 
 if __name__=="__main__":
     from microprediction.config_private import FLASHY_COYOTE
+    print(FLASHY_COYOTE,flush=True)
     crawler = MicroCrawler(base_url='https://devapi.microprediction.org', write_key=FLASHY_COYOTE)
+    print('This is ' + crawler.animal_from_key(FLASHY_COYOTE)+' firing up ',flush=True)
     crawler.run(timeout=500)
 

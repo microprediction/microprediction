@@ -120,7 +120,7 @@ class MicroWriter(MicroReader):
 
     def bolster_balance_by_mining(self,seconds=1):
         """ For a short time, try to burn a MUID to bolster flagging balance """
-        key = self.maybe_create_key(difficulty=12,seconds=seconds)
+        key = self.maybe_create_key(difficulty=11,seconds=seconds)
         if key is not None:
             self.put_balance(source_write_key=key)
             return key
