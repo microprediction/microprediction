@@ -8,13 +8,18 @@ Tap into the collective intelligence of community contributed time series algori
     
 This library can also be used to contribute predictions. 
 
-## Alternative documentation at Microprediction.Org
+## Microprediction.Org
+
+The simplest way to solicit good predictions of live public data. 
     
 - Creation of feeds (to solicit predictions) is introduced below but also at https://www.microprediction.org/publishing.html 
 
 - Crawling (letting loose an algorithm to explore all the time series) is also explained at https://www.microprediction.org/crawling.html
 
 Questions to  info@microprediction.org 
+
+
+![](https://i.imgur.com/6FpjUaR.png)
 
 # Class Hierarchy 
 
