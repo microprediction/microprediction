@@ -12,6 +12,8 @@ class MicroWriter(MicroReader):
         assert self.key_difficulty(string_write_key), "Invalid write_key. Mine one at muid.org. "
         self.write_key = string_write_key
         self.verbose   = verbose
+        self.code      = self.shash(write_key)            # Unique identifier that can be shared
+        self.animal    = self.animal_from_key(write_key)  # ... and corresponding spirit animal
 
     def __repr__(self):
         return {'write_key':self.write_key,"animal":self.animal_from_key(self.write_key)}
@@ -125,7 +127,7 @@ class MicroWriter(MicroReader):
             self.put_balance(source_write_key=key)
             return key
 
-    def restore_balance_by_mining(self, difficulty=12):
+    def restore_balance_by_mining(self, difficulty=11):
         """ Mine a MUID and deposit it to bring the balance up from a negative number """
         source_write_key = self.create_key(difficulty=difficulty)
         return self.put_balance(source_write_key=source_write_key)
@@ -137,6 +139,27 @@ class MicroWriter(MicroReader):
             return [json.loads(c) for c in confirm_strings]
         else:
             raise Exception('Failed for ' + self.write_key)
+
+    def get_infrequent_confirms(self):
+        """ Everything except stream prediction and updates """
+        COMMON = ['set','submit']
+        return [c for c in self.get_confirms() if c.get('operation') not in COMMON]  # TODO: Move strings like 'withdraw' to microconventions
+
+    def get_withdrawals(self):
+        """ Get withdrawal confirmations """
+        return [ c for c in self.get_confirms() if c.get('operation')=='withdraw'] # TODO: Move strings like 'withdraw' to microconventions
+
+    def get_cancellations(self):
+        """ Get cancellation confirmations, which can occur long after withdrawal requests """
+        return [ c for c in self.get_confirms() if c.get('operation')=='cancel']
+
+    def get_submissions(self):
+        """ Get confirmations of submissions of predictions """
+        return [c for c in self.get_confirms() if c.get('operation') == 'submit']
+
+    def get_set_confirmations(self):
+        """ Get confirmations of set operations """
+        return [c for c in self.get_confirms() if c.get('operation') == 'set']
 
     def get_elapsed_since_confirm(self):
         confirms = self.get_confirms()
@@ -246,10 +269,11 @@ class MicroWriter(MicroReader):
         return [horizon for horizon, balance in self.active_performance(reverse=True,performance=performance,active=active).items() if
                 balance < -abs(stop_loss)]
 
-    def withdraw_from_worst(self, stop_loss, num=1000, performance=None, active=None):
+    def cancel_worst_active(self, stop_loss, num=1000, performance=None, active=None):
         horizons = self.worst_active_horizons(stop_loss=stop_loss,performance=performance,active=active)[:num]
         for horizon in horizons:
             name, delay = self.split_horizon_name(horizon)
             self.cancel(name=name, delays=[delay])
             print('Cancelled participation in '+str(horizon),flush=True)
             time.sleep(0.1)
+        return horizons

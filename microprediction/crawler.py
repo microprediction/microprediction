@@ -1,8 +1,7 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
 from microprediction.writer import MicroWriter
 from microconventions import api_url
-import random, time
-from collections import OrderedDict
+import random, time, datetime
 from microprediction.samplers import exponential_bootstrap, approx_mode
 import pprint
 import numpy as np
@@ -41,11 +40,20 @@ class MicroCrawler(MicroWriter):
         # Stream criteria (combines with AND)
         not_too_dull = [name for name, budget in budgets.items() if float(budget) >= self.min_budget]
         not_too_competitive = [name for name, budget in budgets.items() if float(budget) <= self.max_budget]
-        well_sponsored = [name for name, sponsor in sponsors.items() if
-                          len(sponsor.replace(' ', '')) >= float(self.sponsor_min)]
+        well_sponsored = [name for name, sponsor in sponsors.items() if self.include_sponsor(sponsor=sponsor)
+                                                                and not self.exclude_sponsor(sponsor=sponsor)
+                                                  and len(sponsor.replace(' ', '')) >= float(self.sponsor_min)]
         inclusion_criteria = [not_too_dull, not_too_competitive, well_sponsored]
         names = list(set.intersection(*map(set, inclusion_criteria)))
         return names
+
+    def include_sponsor(self, sponsor=None, **ignore):
+        """ Override this as you see fit to select streams for your crawler """
+        return True
+
+    def exclude_sponsor(self, sponsor=None, **ignore):
+        """ Override this as you see fit to select streams for your crawler """
+        return False
 
     def include_stream(self, name=None, **ignore):
         """ Override this as you see fit to select streams for your crawler
@@ -60,8 +68,6 @@ class MicroCrawler(MicroWriter):
                            a minimum number of lags in the time series.
         """
         return False
-
-
 
     def candidate_streams(self):
         """ Modify this as you see fit to select streams for your crawler
@@ -153,6 +159,7 @@ class MicroCrawler(MicroWriter):
         """ Override this if you want something additional to happen when your algorithm make a submission
              param: message   dict
         """
+        pass
 
     #############################################################################################
     #   Typically you don't want to override the rest of these, but its a free Python country   #
@@ -201,11 +208,9 @@ class MicroCrawler(MicroWriter):
         self.next_prediction_time = dict()  # Indexed by horizon
 
         # State - other
-        self.horizon_blacklist = list()        # List of horizons we have given up on
-        self.cancelled   = list()              # List of horizons we have withdrawn from
-        self.next_prediction_time = dict()     # A manifest of upcoming data arrivals
-        self.backoff     = dict()              # Lookup of times to sleep when feeds are likely stale ... not currently used
-        self.message_log = list()              # A log of detailed messages
+        self.withdrawn  = list()           # List of horizons we have withdrawn from, or will never enter
+        self.next_prediction_time = dict() # A manifest of upcoming data arrivals
+        self.message_log = list()          # A log of detailed messages
 
     def feel_like_talking(self):
         """ Override this, or set quietude parameter, to determine how often to barf longish messages """
@@ -242,13 +247,11 @@ class MicroCrawler(MicroWriter):
                 'min_lags':self.min_lags,
                 'max_lags':self.max_lags,
                 'num_active':len(self.active),
-                'num_blacklisted':len(self.horizon_blacklist),
+                'num_withdrawn':len(self.withdrawn),
                 'current_balance':self.get_balance(),
-                'recently_erroneous':self.get_errors()[-3:],
-                'currently_worst': self.worst_active_horizons(stop_loss=self.stop_loss)[:3],
-                'recently_cancelled':self.cancelled[:3],
-                'recently_blacklisted': self.horizon_blacklist[-3:],
-                'backoff':sorted(self.backoff.items(),key=lambda d: d[1])[:3],
+                'recent_errors':self.get_errors()[-3:],
+                'currently_worst': self.worst_active_horizons(stop_loss=self.stop_loss)[:10],
+                'withdrawn': self.withdrawn,
                 'upcoming':self.upcoming(num=3,relative=True)}
 
     def recent_updates(self):
@@ -264,9 +267,8 @@ class MicroCrawler(MicroWriter):
         horizon = self.horizon_name(name=name, delay=delay)
         if horizon in self.next_prediction_time:
             del self.next_prediction_time[horizon]
-        self.cancelled.append(horizon)
+        self.withdrawn.append(horizon)
         print("Withdrawing from " + horizon, flush=True)
-        self.horizon_blacklist.append(horizon)
         self.active      = self.get_active()
         self.performance = self.get_performance()
         self.withdrawal_callback(horizon)
@@ -285,7 +287,7 @@ class MicroCrawler(MicroWriter):
                 for delay in delays:
                     horizon = self.horizon_name(name=name,delay=delay)
                     if not horizon in self.active:
-                        if not horizon in self.horizon_blacklist:
+                        if not horizon in self.withdrawn:
                             if not (horizon in self.next_prediction_time) or time.time()>self.next_prediction_time[horizon]:
                                 horizons.append(horizon)
             if horizons:
@@ -352,9 +354,10 @@ class MicroCrawler(MicroWriter):
         execut = 0
         message = {'name':name,'delay':delay,'submitted':False}
         if len(lagged_values) > self.max_lags:
-            message.update({"reason": "Too many lags - blacklisting", "lagged_len": len(lagged_values)})
-            self.horizon_blacklist.append(horizon)
-        if len(lagged_values or []) < self.min_lags:
+            message.update({"reason": "Too many lags", "lagged_len": len(lagged_values)})
+            self.withdraw(horizon)
+            self.withdrawn.append(horizon)
+        elif len(lagged_values or []) < self.min_lags:
             message.update({"reason": "Too few lags", "lagged_len": len(lagged_values)})
             if len(lagged_times)>5:
                 dt = (lagged_times[1]-lagged_times[-1] )/(len(lagged_times)-1)
@@ -362,9 +365,6 @@ class MicroCrawler(MicroWriter):
                 if next_predict_time<time.time()+50:
                     next_predict_time = time.time()+50
                     print('Difficulty interpreting next prediction time for '+horizon+' as dt='+str(dt))
-                    #if not horizon in self.backoff:
-                    #    print('Backing off '+horizon,flush=True)    # TODO: Revisit backoff logic
-                    #    self.backoff[horizon] = 10*60*60
             else:
                 next_predict_time = time.time()+5*60
             self.next_prediction_time[horizon]=next_predict_time
@@ -378,15 +378,15 @@ class MicroCrawler(MicroWriter):
             message.update({"median": median(scenario_values),
                             "mean": np.mean(scenario_values),
                             "std": np.std(scenario_values),
-                            "values[0]": scenario_values[0],
-                            "values[-1]": scenario_values[-1]})
+                            "min": scenario_values[0],
+                            "max": scenario_values[-1]})
 
             num_intervals = self.update_frequency(name=name, delay=delay)
             predict_time, dt, earliest, latest, expected_at = self.set_next_prediction_time(lagged_times=lagged_times, delay=delay, num_intervals=num_intervals)
             message.update({'earliest': earliest, 'latest': latest})
             message.update({'expected_at':expected_at})
             self.next_prediction_time[horizon] = predict_time
-            print('Submitted to ' + str(name) + ' ' + str(delay) +'s horizon, and will do so again in ' + str(self.next_prediction_time[horizon] - time.time()) + ' seconds.', flush=True)
+            print('Submitted to ' + str(name) + ' ' + str(delay) +'s horizon, and will do so again in ' + str(int(self.next_prediction_time[horizon] - time.time())) + ' seconds.', flush=True)
             self.submission_callback(message=message)
 
             if not execut:
@@ -412,12 +412,33 @@ class MicroCrawler(MicroWriter):
 
     def status_report(self):
         """
-            This gets called when we have downtime
+            Barf some data about current status of horizons that are active or in the process of withdrawal
         """
         # By all means overwrite this for a less verbose crawler
-        print('Currently predicting for ' + str(len(self.active)) + ' horizons',flush=True)
-        print('Upcoming ...')
+        active_not_withdrawn = [a for a in self.active if not a in self.withdrawn]
+        num_active = len(self.active)
+        num_active_nw = len(active_not_withdrawn)
+        print(self.animal + ' has active submissions for ' + str(num_active) + ' horizons ('+str(num_active_nw)+ ' with no withdrawal request pending since restart)',flush=True)
+        withdrawal_confirms = self.get_withdrawals()
+        cancellation_confirms = self.get_cancellations()
+        num_recent_withdrawals    = len(withdrawal_confirms or [])
+        num_recent_cancellations  = len(cancellation_confirms or [])
+        if num_recent_cancellations or num_recent_withdrawals:
+            print('Received recent confirmation of '+str(num_recent_withdrawals)+' requests to withdraw predictions and '+str(num_recent_cancellations)+' confirmed cancellations.',flush=True)
+        print('Upcoming horizons and seconds to go ...',flush=True)
         pprint.pprint(self.upcoming(5))
+
+    def withdraw_from_worst_active(self, stop_loss, num=1000, performance=None, active=None):
+        horizons = self.worst_active_horizons(stop_loss=stop_loss,performance=performance,active=active)[:num]
+        non_cancelled = [h for h in horizons if not h in self.withdrawn]
+        for horizon in non_cancelled:
+            self.withdraw(horizon=horizon)
+            delay = int(float(self.split_horizon_name(horizon)[1]))
+            effective_time = datetime.datetime.now() + datetime.timedelta(seconds=delay)
+            print('Sent request to withdraw from participation in '+str(horizon)+' that will take effect in approximately '+str(delay)+' seconds, or around '+str(effective_time)+' GMT',flush=True)
+            time.sleep(0.1)
+        return horizons
+
 
     def run(self,timeout=None):
         # TODO: Make this more modular
@@ -430,47 +451,47 @@ class MicroCrawler(MicroWriter):
             This is just  suggestion. You can create very different crawlers using the MicroWriter class directly, should you wish to.
 
         """
-        import datetime
-        print("---- Restarting --  at  --- " + str(datetime.datetime.now()), flush=True)
+        print(self.animal + " restarting at " + str(datetime.datetime.now()), flush=True)
         self.startup_callback()
 
-
+        # Catch up on what we've missed
         self.performance = self.get_performance()
         self.active = self.get_active()
         self.start_time = time.time()
         self.end_time = time.time()+timeout if timeout is not None else time.time()+10000000
         self.last_performance_check = time.time()-1000
         self.last_new_horizon = time.time()-1000
-        print(' Active for ' + str(len(self.active)) + ' horizons')
         self.stream_candidates = self.candidate_streams()
-        print(' Found ' + str(len(self.stream_candidates)) + ' candidate streams.', flush=True)
         desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon in [70, 310, 910]]
         self.next_prediction_time = dict( [ (stream, time.time() + k*self.initial_next_prediction_time_multiplier(stream)) \
             for k, stream in enumerate(self.active) if stream in desired_streams])
+        pprint.pprint(self.__repr__())
 
+        # Announce basics
+        self.status_report()
         pprint.pprint(self.__repr__())
 
         catching_up = True
         while time.time()<self.end_time:
 
             # Withdraw if need be from losing propositions
-            overdue_for_performance_check = time.time()-self.last_performance_check > 5*60
+            overdue_for_performance_check = time.time()-self.last_performance_check > 10*60
             if overdue_for_performance_check:
                 print('Checking performance ',flush=True)
                 self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
                 self.active = self.get_active()
-                self.withdraw_from_worst(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=10 )
+                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=10)
                 self.last_performance_check = time.time()
 
             # Maybe we look for a new horizon to predict, but do this
             self.update_seconds_until_next()
             got_time_to_look = self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )
-            been_a_while_since_last_horizon_added = time.time()-self.last_new_horizon > 60
-            if got_time_to_look and (been_a_while_since_last_horizon_added or self.active<5):
+            been_a_while_since_last_horizon_added = (time.time()-self.last_new_horizon) > 60
+            if got_time_to_look and (been_a_while_since_last_horizon_added or len(self.active)<5):
                 self.active = self.get_active()
                 self.stream_candidates = self.candidate_streams()
                 print('Currently predicting for ' + str(len(self.active)) + ' horizons but found '+ str(len(self.stream_candidates))+ ' candidate streams to examine.',flush=True)
-                horizon = self.next_horizon(exclude=self.horizon_blacklist)
+                horizon = self.next_horizon(exclude=self.withdrawn)
                 if horizon is None:
                     print('Cannot find another horizon. Crawler method next_horizon() did not suggest one. ',flush=True )
                 else:
@@ -518,16 +539,21 @@ class MicroCrawler(MicroWriter):
             time.sleep(1.5)
 
         self.retirement_callback()
-        print("---- Retiring gracefully --  at  --- " + str(datetime.datetime.now()),flush=True )
         self.status_report()
+        print("Retiring gracefully at " + str(datetime.datetime.now()), flush=True)
+        pprint.pprint(self.__repr__())
         pprint.pprint(self.recent_updates())
 
 
-
 if __name__=="__main__":
+    # Just an example write key... you'll need to get your own write_key  (see MUID.org or Micoprediction.org)
     from microprediction.config_private import FLASHY_COYOTE
     print(FLASHY_COYOTE,flush=True)
-    crawler = MicroCrawler(base_url='https://devapi.microprediction.org', write_key=FLASHY_COYOTE)
-    print('This is ' + crawler.animal_from_key(FLASHY_COYOTE)+' firing up ',flush=True)
-    crawler.run(timeout=500)
+
+    # For the brave. Default API is https://api.microprediction.org
+    base_url = 'https://devapi.microprediction.org'
+
+    # Create crawler and run it
+    crawler = MicroCrawler(base_url=base_url, write_key=FLASHY_COYOTE, stop_loss=3)
+    crawler.run(timeout=50000)
 

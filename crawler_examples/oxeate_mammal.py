@@ -18,7 +18,7 @@ if __name__=="__main__":
 
     # Give up if things are going badly ... do it nicely
     for _ in range(5):
-        mw.withdraw_from_worst(stop_loss=STOP_LOSS, num=1)
+        mw.cancel_worst_active(stop_loss=STOP_LOSS, num=1)
         time.sleep(1)
 
     for name in mw.get_streams():
@@ -46,5 +46,5 @@ if __name__=="__main__":
 
     # Give up if things are going badly ... do it nicely
     for _ in range(100):
-        mw.withdraw_from_worst(stop_loss=STOP_LOSS,num=1)
+        mw.cancel_worst_active(stop_loss=STOP_LOSS, num=1)
         time.sleep(1)

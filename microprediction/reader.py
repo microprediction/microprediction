@@ -1,6 +1,7 @@
 from microconventions import MicroConventions, api_url
 import requests, time, sys
 from pprint import pprint
+import numpy as np
 
 
 class MicroReader(MicroConventions):
@@ -78,6 +79,13 @@ class MicroReader(MicroConventions):
         res = requests.get(self.base_url + '/live/delayed::'+str(delay)+ "::" + name)
         if res.status_code == 200:
             return res.json()
+
+    def inv_cdf(self, name, delay=None, p=0.5):
+        """ Approximate interpolation of value, defaulting to median"""
+        cdf = self.get_cdf(name=name, delay=delay)
+        x = np.interp(p=p, xp=cdf["x"], fp=cdf["y"], left=None, right=None)
+        return x
+
 
     def get_cdf(self, name, delay=None, values=None):
         if delay is None:
