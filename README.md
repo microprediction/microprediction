@@ -8,6 +8,14 @@ Tap into the collective intelligence of community contributed time series algori
     
 This library can also be used to contribute predictions. 
 
+## Alternative documentation at Microprediction.Org
+    
+- Creation of feeds (to solicit predictions) is introduced below but also at https://www.microprediction.org/publishing.html 
+
+- Crawling (letting loose an algorithm to explore all the time series) is also explained at https://www.microprediction.org/crawling.html
+
+Questions to  info@microprediction.org 
+
 # Class Hierarchy 
 
 The following classes are provided:
@@ -18,11 +26,7 @@ The following classes are provided:
        |                                   |
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
-    
-Creation of feeds (to solicit predictions) is introduced below and also at https://www.microprediction.org/publishing.html 
-
-Crawling (letting loose an algorithm to explore all the time series) is explained below and also at https://www.microprediction.org/crawling.html
-    
+        
 # Quickstart: Soliciting predictions 
 
 If you have a function that returns a live number, do this:
@@ -38,41 +42,37 @@ If you have a function that returns a live number, do this:
 ## Retrieving distributional predictions 
 Once a stream is created and some crawlers have found it, you can view activity and predictions at www.microprediction.org, 
 
-    | Stream      |   Roughly 1 min ahead           | Roughly 5 min ahead             |   Roughly 15 min ahead               |
-    |-------------|---------------------------------|---------------------------------|--------------------------------------|
-    | my_stream   | `stream=my_stream&horizon=70`   |  `stream=my_stream&horizon=310` | `stream=my_stream&horizon=910`       |
+    | Stream      |   Roughly 1 min ahead           | Roughly 5 min ahead             |   Roughly 15 min ahead               | Roughly 1 hr  ahead               |
+    |-------------|---------------------------------|---------------------------------|--------------------------------------|-----------------------------------|
+    | my_stream   | `stream=my_stream&horizon=70`   |  `stream=my_stream&horizon=310` | `stream=my_stream&horizon=910`       | `stream=my_stream&horizon=3555`   | 
 
 Here is an actual example: 
-https://www.microprediction.org/stream_dashboard.html?stream=fcx&horizon=70 for a 1 minute ahead CDF. Programmatically:
+https://www.microprediction.org/stream_dashboard.html?stream=fcx&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
 
          cdf = feed.get_cdf('cop.json',delay=70,values=[0,0.5])
          
 where the delay parameter, in seconds, is the prediction horizon (it is called a delay as the predictions used to compute this CDF have all be quarantine for 70 seconds or more). 
-The community of algorithms provides predictions roughly 1 min, 5 min and 15 minutes ahead of time. The `get_cdf()` above reveals the probability that your future value is less than 0.0, and the probability that it is 
-less than 0.5. You can view CDFs and activity at MicroPrediction.Org. 
+The community of algorithms provides predictions roughly 1 min, 5 min, 15 minutes and 1 hr ahead of time. The `get_cdf()` above reveals the probability that your future value is less than 0.0, and the probability that it is 
+less than 0.5. You can view CDFs and activity at MicroPrediction.Org by entering your write key in the dashboard. 
 
 
 ## Z-Scores
 
-A bonus! Based on algorithm predictions, every data point you publish creates another three streams, representing community z-scores for your data 
-point based on predictions made at different times prior. 
+A bonus! Based on algorithm predictions, every data point you publish creates another two streams, representing community z-scores for your data 
+point based on predictions made at different times prior (those quarantined the shortest, and longest intervals). 
 
 |  Stream                                      |                                                                                   |
 |----------------------------------------------|-----------------------------------------------------------------------------------|
 |  Base stream                                 |  `https://www.microprediction.org/stream_dashboard.html?stream=cop`               |
 |  Z-score relative to 70s ahead predictions   |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~70`         |
-|  Z-score relative to 310s ahead predictions  |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~310`        |
-|  Z-score relative to 910s ahead predictions  |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~910`        |
+|  Z-score relative to 3555s ahead predictions  |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~3555`        |
 
-In turn, each of these four streams is predicted at three different horizons, as with the base stream. So there are twelve predictions in total accessed
-via the dashboard
+In turn, each of these streams is predicted at four different horizons, as with the base stream. For example: 
 
-| Stream      |   Roughly 1 min ahead           | Roughly 5 min ahead             |   Roughly 15 min ahead              |
-|-------------|---------------------------------|---------------------------------|-------------------------------------|
-| cop         | `stream=cop&horizon=70`         |  `stream=cop&horizon=310`       | `stream=cop&horizon=910`            |
-| `z1~cop~70` | `stream=z1~cop~70&horizon=70`   |  `stream=z1~cop~70&horizon=310` | `stream=z1~cop~70&horizon=910`      |
-| `z1~cop~310`| `stream=z1~cop~70&horizon=70`   |  `stream=z1~cop~70&horizon=310` | `stream=z1~cop~70&horizon=910`      |
-| `z1~cop~910`| `stream=z1~cop~70&horizon=70`   |  `stream=z1~cop~70&horizon=310` | `stream=z1~cop~70&horizon=910`      |
+| Stream       |   Roughly 1 min ahead           | Roughly 5 min ahead                 |   Roughly 15 min ahead              | Roughly 1 hr ahead |
+|--------------|---------------------------------|-------------------------------------|-------------------------------------|---------------------
+| cop          | `stream=cop&horizon=70`         |  `stream=cop&horizon=310`           | `stream=cop&horizon=910`            | `stream=cop&horizon=3555` 
+| `z1~cop~3555`| `stream=z1~cop~3555&horizon=70` |  `stream=z1~cop~3555&horizon=310`   | `stream=z1~cop~3555&horizon=910`    | `stream=z1~cop~3555&horizon=3555'
   
      
 # Quickstart: Providing predictions 
