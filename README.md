@@ -150,7 +150,7 @@ See https://config.microprediction.org/config.json for a list of values that del
 If MicroPoll does not serve your needs you can create your stream one data point at a time:
 
     mw  = MicroWriter(write_key=write_key)
-    res = mw.put(name='mystream.json',value=3.14157) 
+    res = mw.set(name='mystream.json',value=3.14157) 
 
 However if you don't do this regularly, your stream's history will die and you will lose rights to the name 'mystream.json' established when you made the first call. If you have a long break between data points, such
  as overnight or over the weekend, consider
