@@ -6,7 +6,7 @@ Tap into the collective intelligence of community contributed time series algori
 
     pip install microprediction 
     
-This library can also be used to contribute predictions. 
+This library can also be used to both solicit and contribute distributional predictions. 
 
 ## Microprediction.Org
 

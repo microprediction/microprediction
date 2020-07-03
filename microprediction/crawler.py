@@ -324,6 +324,7 @@ class MicroCrawler(MicroWriter):
             dt = self.DELAYS[-1]
         return expected_at, dt
 
+
     def set_next_prediction_time(self, lagged_times, delay, num_intervals):
         """
             Determine the next time at which we will make a prediction for a given horizon
