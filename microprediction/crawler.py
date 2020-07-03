@@ -236,6 +236,7 @@ class MicroCrawler(MicroWriter):
         if int(seconds_until_quit) in [1000,100,10,5]:
             print('Seconds until quit: '+str(seconds_until_quit),flush=True)
         self.seconds_until_next = min(self.seconds_until_next,seconds_until_quit)
+        self.seconds_until_next = min(self.seconds_until_next, 5*60 )
         return self.seconds_until_next
 
     def __repr__(self):
@@ -321,6 +322,7 @@ class MicroCrawler(MicroWriter):
                 expected_at = time.time() + dt
         else:
             expected_at = time.time() + self.DELAYS[-1]
+            dt = self.DELAYS[-1]
             dt = self.DELAYS[-1]
         return expected_at, dt
 
@@ -476,7 +478,7 @@ class MicroCrawler(MicroWriter):
         while time.time()<self.end_time:
 
             # Withdraw if need be from losing propositions
-            overdue_for_performance_check = time.time()-self.last_performance_check > 10*60
+            overdue_for_performance_check = (time.time()-self.last_performance_check > 10*60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ',flush=True)
                 self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
@@ -486,7 +488,7 @@ class MicroCrawler(MicroWriter):
 
             # Maybe we look for a new horizon to predict, but do this
             self.update_seconds_until_next()
-            got_time_to_look = self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )
+            got_time_to_look = (self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )) or catching_up
             been_a_while_since_last_horizon_added = (time.time()-self.last_new_horizon) > 60
             if got_time_to_look and (been_a_while_since_last_horizon_added or len(self.active)<5):
                 self.active = self.get_active()
@@ -507,7 +509,7 @@ class MicroCrawler(MicroWriter):
 
             # Then if there is still time, we might call the downtime() method
             self.update_seconds_until_next()
-            if self.seconds_until_next>2:
+            if self.seconds_until_next>2 and not catching_up:
                 print('Downtime for '+str(self.seconds_until_next)+'s',flush=True)
                 self.status_report()
                 self.downtime(seconds=self.seconds_until_next-1)
