@@ -7,7 +7,7 @@ class PandasLoop(MicroWriter):
     # One column per stream.
     # Column names should be value stream names
 
-    def __init__(self, df, interval, write_key, origin, func_args=None, with_copulas=False):
+    def __init__(self, df, interval, write_key, origin, with_copulas=False):
         """
         :param df:            pd.DataFrame   row names become stream names
         :param interval:
