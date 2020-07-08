@@ -69,7 +69,7 @@ class PandasLoop(MicroWriter):
         else:
             res = list()
             for name, value in zip(names, values):
-                res.append( self.set(name=name,value=values) )
+                res.append( self.set(name=name,value=value) )
             return res
 
     def run(self,minutes=60):

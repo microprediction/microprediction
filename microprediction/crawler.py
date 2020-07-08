@@ -310,6 +310,8 @@ class MicroCrawler(MicroWriter):
             if dt is None:
                 dt = self.DELAYS[-1]
             assert dt > 0
+            if dt<10:
+                dt = 10
 
             # Don't wait more than 6 hours
             if dt>(60*60*6):
@@ -323,7 +325,6 @@ class MicroCrawler(MicroWriter):
         else:
             expected_at = time.time() + self.DELAYS[-1]
             dt = self.DELAYS[-1]
-            dt = self.DELAYS[-1]
         return expected_at, dt
 
 
@@ -335,7 +336,7 @@ class MicroCrawler(MicroWriter):
 
         # First determine the time until the next data point, but if that is very soon we want the one after
         expected_at, dt = self.expected_time_of_next_value(lagged_times=lagged_times)
-        assert dt>=55
+
         while expected_at - time.time() < 20:
             expected_at = expected_at + dt
 
