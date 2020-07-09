@@ -224,10 +224,8 @@ class MultiPoll(MicroPoll):
             res = {'operation':'touch','exec':[ self.touch(name=name) for name in self.names ]}
         elif self.with_copulas:
             res = self.cset(names=self.names, values=next_values )
-            res.update({'operation': 'cset'})
         else:
             res = [ self.set(name=name,value=value) for name,value in zip(self.names, next_values) ]
-            res.update({'operation': 'set'})
 
         data.update({'values': next_values, "res": res, 'elapsed after sending': time.time() - start_time})
         self.logger(data=data)

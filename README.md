@@ -18,6 +18,8 @@ The simplest way to solicit good predictions of live public data.
 
 Questions to  info@microprediction.org 
 
+There is a collection of articles explaining microprediction [here](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
+
 
 ![](https://i.imgur.com/6FpjUaR.png)
 
