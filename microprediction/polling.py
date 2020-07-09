@@ -56,7 +56,7 @@ class MicroPoll(MicroWriter):
         print('Created poller. Example value '+str(self.test_value))
 
     def __repr__(self):
-        self_data= {'name':self.name,'func':str(self.func),'interval':self.interval,'mining_time':self.mining_time}
+        self_data= {'func':str(self.func),'interval':self.interval,'mining_time':self.mining_time}
         if self.func_args is not None:
             self_data.update(self.func_args)
         return self_data
@@ -134,7 +134,7 @@ class ChangePoll(MicroPoll):
     def alert(self,message):
         print(message, flush=True)
 
-    def determxine_next_value(self, source_value):
+    def determine_next_value(self, source_value):
         """ Returns a change if feed is warm, else None """
 
         if self.feed_state == ChangePoll.WARM:
@@ -163,5 +163,130 @@ class ChangePoll(MicroPoll):
                 self.feed_state = ChangePoll.WARM
                 self.logger({'type':'feed_status','message':'**** Feed resumed at ' + str(datetime.datetime.now())})
             return None
+
+
+
+
+class MultiPoll(MicroPoll):
+
+    # Create multiple streams updated at the same time
+
+    # -------------------------------------------
+    #  You may wish to override this method if the
+    #  data retrieval function func() you provide
+    #  does not return [ float ] or [ str ] that is
+    #  convertable to float
+    # --------------------------------------------
+
+    def determine_next_values(self, source_values):
+        """ Should receive raw source data and decides what to send, if anything
+
+            :param source_values   [ float ] or whatever type is returned by self.func. Simplest would be [ float ]
+            :returns  [ float ]  or None
+        """
+
+        if source_values is None or ( any( source_value is None for source_value in source_values) ):
+            return None
+        else:
+            return [ float(sv) for sv in source_values ]
+
+    # --------------------------------------------
+    #  Maybe don't override the rest
+    # --------------------------------------------
+
+    def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, **kwargs):
+            """  Create a stream by polling every 20 minutes, say
+                param: names  [ str ]    stream name ending in .json
+                func:        function    returns raw data from some live source, ideally [ float ] but you can override determine_next_values method
+                interval:    int         minutes between polls
+                func_args    dict        optional dict of arguments to be passed to func
+
+            """
+            assert all( [ self.is_valid_name(name) for name in names]), 'name not valid'
+            super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func, func_args=func_args, interval=interval, name='never_used.json')
+            self.names = names
+            self.with_copulas = with_copulas
+
+    def task(self):
+        """ Scheduled task that runs every minute """
+        start_time = time.time()
+        data = {'start_time': str(datetime.datetime.now())}
+        try:
+            source_values = self.call_func()
+        except Exception as e:
+            source_values = None
+        next_values = self.determine_next_values(source_values)
+        data.update({'source_values': source_values,
+                     'next_values': next_values,
+                     'elapsed after polling': time.time() - start_time})
+        # Send the data
+        if next_values is None:
+            res = {'operation':'touch','exec':[ self.touch(name=name) for name in self.names ]}
+        elif self.with_copulas:
+            res = self.cset(names=self.names, values=next_values )
+            res.update({'operation': 'cset'})
+        else:
+            res = [ self.set(name=name,value=value) for name,value in zip(self.names, next_values) ]
+            res.update({'operation': 'set'})
+
+        data.update({'values': next_values, "res": res, 'elapsed after sending': time.time() - start_time})
+        self.logger(data=data)
+        self.downtime()
+        data.update({'elapsed after downtime': time.time() - start_time})
+
+
+
+class MultiChangePoll(MultiPoll):
+
+   COLD = 0
+   WARM = 1
+
+   def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, **kwargs):
+            """  Create multiple streams by polling every 20 minutes, say
+                param:
+                names        [ str ]    stream name ending in .json
+                func:        function    returns data from some live source, ideally [ float ] but you can override determine_next_values method
+                interval:    int         minutes between polls
+                func_args    dict        optional dict of arguments to be passed to func
+                with_copulas bool        Whether to create derived copula streams, or just individual unrelated streams
+            """
+            super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func, func_args=func_args, interval=interval, names=names, with_copulas=with_copulas, **kwargs)
+            self.prev_values = None
+            self.feed_state = MultiChangePoll.COLD
+            self.current_values = None
+
+   def alert(self, message):
+       print(message, flush=True)
+
+   def determine_next_values(self, source_values):
+       if self.feed_state == MultiChangePoll.WARM:
+           # A warm state means that previous speed exists and is not stale
+           assert self.prev_values is not None
+           current_value = source_values
+           if current_value is None:
+               self.feed_state = "cold"
+               self.alert(message='Something amiss with feed')
+               return None
+           else:
+               current_values   = [ float(source_value) for source_value in source_values ]
+               value_changes    = [ float(current_value) - float(prev_value) for current_value, prev_value in zip(current_values, self.prev_values) ]
+               material_changes = [ abs(vc)>1e-6 for vc in value_changes ]
+               if not any(material_changes):
+                   self.feed_state = "cold"  # Feed is stale, don't judge
+                   self.logger(
+                       {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
+               else:
+                   self.prev_values = current_values
+                   return value_changes
+       elif self.feed_state == MultiChangePoll.COLD:
+           # Wait until feed is back up and values start changing
+           prev_prev = self.prev_values if self.prev_values else None
+           self.prev_values = source_values
+           if (self.prev_values is not None) and (prev_prev is not None):
+               material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(prev_prev, self.prev_values)]
+               if any( material_changes ):
+                   self.feed_state = MultiChangePoll.WARM
+                   self.logger({'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})
+           return None
 
 

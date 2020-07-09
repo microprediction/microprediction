@@ -109,8 +109,8 @@ class MicroCrawler(MicroWriter):
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
         """ An example of a sample method. This is where all the intelligence goes
 
-               :param lagged_times [ float ]    Vector with most recent listed first
-               :param lagged_times [ float ]    Vector of epoch times, most recent listed first
+               :param lagged_times [ float ]    List with most recent listed first
+               :param lagged_times [ float ]    List of epoch times, most recent listed first
                :param name          str         Name of stream
                :param delay         int         Prediction horizon in seconds
                **ignored                        For future compatability.
