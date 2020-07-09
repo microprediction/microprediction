@@ -14,5 +14,5 @@ def func():
 NAMES = [name +'.json' for name in names_and_prices()[0]]
 
 if __name__=="__main__":
-    poll = MultiChangePoll(write_key=EMBLOSSOM_MOTH,func=func,names=NAMES,interval=5,with_copulas=True, verbose=True)
+    poll = MultiChangePoll(write_key=EMBLOSSOM_MOTH,func=func,names=NAMES,interval=3,with_copulas=True, verbose=True)
     poll.run()

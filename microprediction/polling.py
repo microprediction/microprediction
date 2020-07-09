@@ -140,26 +140,26 @@ class ChangePoll(MicroPoll):
         if self.feed_state == ChangePoll.WARM:
             # A warm state means that previous speed exists and is not stale
             assert self.prev_value is not None
-            current_value = source_value
-            if current_value is None:
+            self.current_value = source_value
+            if self.current_value is None:
                 self.feed_state = "cold"
                 self.alert(message='Something amiss with feed')
                 return None
             else:
-                current_value = float(source_value)
-                value_change = float(current_value) - float(self.prev_value)
+                self.current_value = float(source_value)
+                value_change = float(self.current_value) - float(self.prev_value)
                 if abs(value_change) < 1e-5:
                     self.feed_state = "cold"  # Feed is stale, don't judge
                     self.logger({'type':'feed_status','message':"****  Feed unchanged at " + str(datetime.datetime.now())})
                 else:
-                    self.prev_value = current_value
+                    self.prev_value = self.current_value
                     return value_change
         elif self.feed_state == ChangePoll.COLD:
             # Wait until feed is back up and speeds start changing
-            prev_prev = self.prev_value if self.prev_value else None
-            prev_speed = source_value
-            if (prev_speed is not None) and (prev_prev is not None) and abs(
-                    float(prev_prev) - float(prev_speed)) > 1e-5:
+            self.prev_prev = self.prev_value if self.prev_value else None
+            self.prev_value = source_value
+            if (self.prev_value is not None) and (self.prev_prev is not None) and abs(
+                    float(self.prev_prev) - float(self.prev_value)) > 1e-5:
                 self.feed_state = ChangePoll.WARM
                 self.logger({'type':'feed_status','message':'**** Feed resumed at ' + str(datetime.datetime.now())})
             return None
@@ -260,28 +260,28 @@ class MultiChangePoll(MultiPoll):
        if self.feed_state == MultiChangePoll.WARM:
            # A warm state means that previous speed exists and is not stale
            assert self.prev_values is not None
-           current_value = source_values
-           if current_value is None:
+           self.current_values = source_values
+           if self.current_values is None:
                self.feed_state = "cold"
                self.alert(message='Something amiss with feed')
                return None
            else:
-               current_values   = [ float(source_value) for source_value in source_values ]
-               value_changes    = [ float(current_value) - float(prev_value) for current_value, prev_value in zip(current_values, self.prev_values) ]
+               self.current_values   = [ float(source_value) for source_value in source_values ]
+               value_changes    = [ float(current_value) - float(prev_value) for current_value, prev_value in zip(self.current_values, self.prev_values) ]
                material_changes = [ abs(vc)>1e-6 for vc in value_changes ]
                if not any(material_changes):
                    self.feed_state = "cold"  # Feed is stale, don't judge
                    self.logger(
                        {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
                else:
-                   self.prev_values = current_values
+                   self.prev_values = self.current_values
                    return value_changes
        elif self.feed_state == MultiChangePoll.COLD:
            # Wait until feed is back up and values start changing
-           prev_prev = self.prev_values if self.prev_values else None
+           self.prev_prev = self.prev_values if self.prev_values else None
            self.prev_values = source_values
-           if (self.prev_values is not None) and (prev_prev is not None):
-               material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(prev_prev, self.prev_values)]
+           if (self.prev_values is not None) and (self.prev_prev is not None):
+               material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(self.prev_prev, self.prev_values)]
                if any( material_changes ):
                    self.feed_state = MultiChangePoll.WARM
                    self.logger({'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})

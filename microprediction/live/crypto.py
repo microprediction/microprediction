@@ -4,6 +4,7 @@ from pprint import pprint
 
 def names_and_prices():
     """ Returns bitcoin and ethereum in USD and EUR """
+    # Just an example
     cg   = CoinGeckoAPI()
     data = cg.get_price(ids='bitcoin,ethereum', vs_currencies='usd,eur')
     # Flatten
