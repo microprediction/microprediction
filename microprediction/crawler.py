@@ -445,14 +445,13 @@ class MicroCrawler(MicroWriter):
 
 
     def run(self,timeout=None):
-        # TODO: Make this more modular
         """
             The crawler visits streams. It maintains a list of expected times at which new data points will arrive. At the annointed time(s), it
             submits predictions after the new data has arrived. It periodically looks for new horizons. It periodically withdraws from horizons where
             it is not faring too well (watch out for 'die' and 'coin_*' time series as they are simple but can lead to fast losses for some stock standard
             time series algorithms).
 
-            This is just  suggestion. You can create very different crawlers using the MicroWriter class directly, should you wish to.
+            This is just a suggestion. You can create very different crawlers using the MicroWriter class directly, should you wish to.
 
         """
         print(self.animal + " restarting at " + str(datetime.datetime.now()), flush=True)
@@ -484,7 +483,7 @@ class MicroCrawler(MicroWriter):
                 print('Checking performance ',flush=True)
                 self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
                 self.active = self.get_active()
-                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=10)
+                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=50)
                 self.last_performance_check = time.time()
 
             # Maybe we look for a new horizon to predict, but do this
@@ -520,20 +519,19 @@ class MicroCrawler(MicroWriter):
             if self.seconds_until_next>0:
                 time.sleep(self.seconds_until_next)
 
-            # Now it is game time.
-            num_upcoming_to_consider = 100 if catching_up else 10
+            # Make predictions in rapid succession until a gap opens
+            go_time = time.time()
+            num_upcoming_to_consider = 10 if not catching_up else 100
             for horizon, seconds_to_go in self.upcoming(num=num_upcoming_to_consider,relative=True):
-                catching_up = False
-                # Hang if there isn't much time
-                if seconds_to_go>0 and seconds_to_go<2:
-                    time.sleep(seconds_to_go)
-                    seconds_to_go = -0.01
-                # Go time. Run through the list.
-                if seconds_to_go<0:
+                seconds_since_game_time = time.time()-go_time
+                adjusted_seconds_to_go = seconds_to_go-seconds_since_game_time
+                if adjusted_seconds_to_go<2:
+                    if adjusted_seconds_to_go>0:
+                        time.sleep(adjusted_seconds_to_go)
                     name, delay  = self.split_horizon_name(horizon)
                     lagged_times = self.get_lagged_times(name=name)
                     data_arrived_recently = lagged_times and (abs(time.time()-lagged_times[0])<30)
-                    if seconds_to_go<-30 or data_arrived_recently:
+                    if adjusted_seconds_to_go<-30 or data_arrived_recently:
                         name, delay = self.split_horizon_name(horizon)
                         self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times )
                     else:
@@ -541,6 +539,7 @@ class MicroCrawler(MicroWriter):
 
             # Be nice and don't overwhelm system
             time.sleep(1.5)
+            catching_up = False
 
         self.retirement_callback()
         self.status_report()

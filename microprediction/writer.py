@@ -220,7 +220,10 @@ class MicroWriter(MicroReader):
         :return: bool
         """
         verbose = verbose or self.verbose
-        delay = delay or self.DELAYS[0]
+        if delay is None:
+            delay = self.DELAYS[0]
+            print('It is suggested that you supply delay parameter to submit. Defaulting to shortest horizon but this will be removed in the future',flush=True)
+
         assert len(values)==self.num_predictions
 
         comma_sep_values = ",".join([ str(v) for v in values ] )
@@ -242,10 +245,19 @@ class MicroWriter(MicroReader):
             print('',flush=True )
             raise Exception('Failed to submit')
 
-    def cancel(self, name, delays=None):
-        """ Withdraw scenarios """
+    def cancel(self, name, delay=None, delays=None):
+        """ Send request to cancel scenarios. However predictions won't be deleted immediately.
+
+            :param  name    str
+            :param  delay   int   or  delays [int]
+            :returns bool
+
+        """
+        if delays is None and delay is None:
+            delays = self.DELAYS
+        elif delays is None:
+            delays = [delay]
         codes = list()
-        delays = delays or self.DELAYS
         for delay in delays:
             res = requests.delete(self.base_url + '/submit/'+name, params={'write_key':self.write_key,'delay':delay} )
             codes.append(res.status_code)
