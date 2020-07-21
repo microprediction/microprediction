@@ -206,6 +206,7 @@ class MicroCrawler(MicroWriter):
         self.last_performance_check = time.time()
         self.last_new_horizon = time.time()
         self.next_prediction_time = dict()  # Indexed by horizon
+        self.last_withdrawal_reset = time.time()
 
         # State - other
         self.withdrawn  = list()           # List of horizons we have withdrawn from, or will never enter
@@ -477,8 +478,15 @@ class MicroCrawler(MicroWriter):
         catching_up = True
         while time.time()<self.end_time:
 
+            # Reset withdrawal record just in case some occasionally fail ... defense
+            overdue_for_withdrawal_reset = time.time()-self.last_withdrawal_reset>20*60
+            if overdue_for_withdrawal_reset:
+                self.withdrawn = []
+                self.last_withdrawal_reset = time.time()
+                print('Resetting withdrawal records', flush=True)
+
             # Withdraw if need be from losing propositions
-            overdue_for_performance_check = (time.time()-self.last_performance_check > 10*60) or catching_up
+            overdue_for_performance_check = (time.time()-self.last_performance_check > 5*60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ',flush=True)
                 self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
