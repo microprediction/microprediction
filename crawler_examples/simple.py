@@ -1,6 +1,6 @@
 from microprediction.simplecrawler import SimpleCrawler
 import numpy as np
-
+# from vendor import VendorModel
 
 # A simple benchmarking exercise for Automated time series prediction algorithms.
 # Hack this example to benchmark open source of vendor libraries.
@@ -34,22 +34,6 @@ class BenchmarkCrawlerExample(SimpleCrawler):
             model = VendorModel()
         except:
             model = MockFastVendorModel()
-
-        model.fit( lagged_values )
-        half_width = 0.5/self.num_predictions
-        prctls = np.linspace(half_width, 1-half_width, self.num_predictions)
-        return [ model.invcdf(p) for p in prctls ]
-
-
-
-class BenchmarkCrawlerExample(SimpleCrawler):
-
-    def __init__(self,**kwargs):
-        super().__init__(**kwargs)
-
-    def sample(self, lagged_values, lagged_times, **ignored):
-
-        model = MockFastVendorModel()
 
         model.fit( lagged_values )
         half_width = 0.5/self.num_predictions
