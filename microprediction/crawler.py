@@ -1,11 +1,32 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
 from microprediction.writer import MicroWriter
+from microprediction import new_key
 from microconventions import api_url
 import random, time, datetime
 from microprediction.samplers import exponential_bootstrap, approx_mode
 import pprint
 import numpy as np
 from statistics import median
+import os
+
+
+def new_key_if_none(write_key, use_environ=False, difficulty=10 ):
+    """ Create key on the fly but warn user about time this may take
+
+          :param   write_key str
+          :param   use_environ bool     Highly experimental ... set True at your own risk
+          :param   difficulty  int
+          :returns write_key
+    """
+    if use_environ:
+        write_key = write_key or os.environ.get('WRITE_KEY')
+    if write_key is None:
+        print('A write_key was not supplied, so burning one now of difficulty '+str(difficulty)+'. This will take a while, after which your crawler will be initialized. Save the write_key and next time supply a write_key to the constructor. ', flush=True)
+        write_key = new_key(difficulty=difficulty)
+        print('Your write_key is ' + write_key + '. Do not lose!! We recommend a quick visit to http://dev.microprediction.org/dashboard.html where you can punch it in')
+        if use_environ:
+            os.environ['WRITE_KEY'] = write_key
+    return write_key
 
 
 class MicroCrawler(MicroWriter):
@@ -166,7 +187,7 @@ class MicroCrawler(MicroWriter):
     #############################################################################################
 
 
-    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, **ignored):
+    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, use_environ=False, difficulty=10, **ignored):
         """
             param: write_key  str    Valid write_key    See www.microprediction.org or www.muid.com for more details
             param: base_url   str    e.g  'http://api.microprediction.org'  or 'http://devapi.microprediction.org' for the brave. Defaults to what is at http://config.microprediction.org
@@ -178,13 +199,15 @@ class MicroCrawler(MicroWriter):
             param: min_lags   int
             param: max_lags   int    These set the short/long limits for the number of lags in a time series. Does your algo need or want a lot of data?
             param: sponsor_min int   Minimum write_key difficulty of the stream sponsor. E.g. set to 13 to only look at streams where people bothered to generate a 13-MUID.
-            param: **ignored         For future compatability
+            param: use_environ bool   Look in environ and store write_key
+            param: difficulty  int   Used to create key if none supplied, but otherwise ignored
+            param: **ignored        For future compatability
 
         """
 
         # Parameter management
-        super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose )
-        assert self.key_difficulty(write_key) >= 7, "Invalid write_key for crawler. See www.muid.org to mine one. "
+        super().__init__(base_url=base_url or api_url(), write_key=new_key_if_none(write_key,use_environ=use_environ,difficulty=difficulty), verbose=verbose )
+        assert self.key_difficulty(self.write_key) >= 7, "Invalid write_key for crawler. Use new_key(difficulty=11) to create one. "
         assert not self.base_url[-1]=='/','Base url should not have trailing /'
         assert stop_loss>0,"Stop loss must be positive "
         self.quietude    = int(quietude)       # e.g. if set to 10, will only print 1/10th of the time
@@ -554,6 +577,13 @@ class MicroCrawler(MicroWriter):
         print("Retiring gracefully at " + str(datetime.datetime.now()), flush=True)
         pprint.pprint(self.__repr__())
         pprint.pprint(self.recent_updates())
+
+
+
+
+
+
+
 
 
 if __name__=="__main__":

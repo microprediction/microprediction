@@ -1,15 +1,23 @@
-from microprediction import MicroWriter
+
+from microprediction import MicroWriter, new_key
 from microprediction.samplers import exponential_bootstrap
 import time
 from pprint import pprint
-from microprediction.config_private import OXEATE_MAMMAL
 
-# Enters all the z2 streams
+# Example of a crawler intended to be run periodically. This does not use MicroCrawler but instead, directly uses MicroWriter.
+# It enters all the z2~ streams
 
-WRITE_KEY = OXEATE_MAMMAL
+try:
+    from microprediction.config_private import OXEATE_MAMMAL
+    WRITE_KEY = OXEATE_MAMMAL # Replace with your own
+except:
+    WRITE_KEY = new_key(difficulty=10)
+    print(WRITE_KEY)
+
+
 ANIMAL = MicroWriter.animal_from_key(WRITE_KEY)
 print(ANIMAL,flush=True)
-STOP_LOSS=250.
+STOP_LOSS=25.
 
 if __name__=="__main__":
     mw = MicroWriter(write_key=WRITE_KEY)
@@ -28,7 +36,7 @@ if __name__=="__main__":
             z12 = '~'.join(['z1', name.split('~')[2], name.split('~')[3]])
             lagged1 = mw.get_lagged_values(z11)
             lagged2 = mw.get_lagged_values(z12)
-            if len(lagged1)>10:
+            if len(lagged1)>500:
                 z_samples = list()
                 for z1,z2 in zip(lagged1,lagged2):
                     try:
@@ -40,11 +48,17 @@ if __name__=="__main__":
                         pass
 
                 samples = exponential_bootstrap( z_samples, decay=0.001, num=mw.num_predictions, as_process=None)
-                pprint(mw.submit(name=name,values=samples))
+                for delay in mw.DELAYS:
+                    pprint(mw.submit(name=name,delay=delay,values=samples))
             time.sleep(7.28)
             print(' ',flush=True)
 
     # Give up if things are going badly ... do it nicely
     for _ in range(100):
-        mw.cancel_worst_active(stop_loss=STOP_LOSS, num=1)
+        mw.cancel_worst_active(stop_loss=STOP_LOSS,num=1)
         time.sleep(1)
+
+
+
+
+
