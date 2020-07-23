@@ -11,7 +11,7 @@ class MockFastVendorModel():
         pass
 
     def fit(self, lagged_values:[float]):
-        self.mu = 0.5*(lagged_values[-1]+lagged_values[-2])
+        self.mu = 0.5*(lagged_values[0]+lagged_values[1])
         self.sigma = 1.0
 
     def invcdf(self,p:float) -> float:
