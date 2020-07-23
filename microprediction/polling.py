@@ -142,14 +142,14 @@ class ChangePoll(MicroPoll):
             assert self.prev_value is not None
             self.current_value = source_value
             if self.current_value is None:
-                self.feed_state = "cold"
+                self.feed_state = ChangePoll.COLD
                 self.alert(message='Something amiss with feed')
                 return None
             else:
                 self.current_value = float(source_value)
                 value_change = float(self.current_value) - float(self.prev_value)
                 if abs(value_change) < 1e-5:
-                    self.feed_state = "cold"  # Feed is stale, don't judge
+                    self.feed_state = ChangePoll.COLD  # Feed is stale, don't judge
                     self.logger({'type':'feed_status','message':"****  Feed unchanged at " + str(datetime.datetime.now())})
                 else:
                     self.prev_value = self.current_value
@@ -262,7 +262,7 @@ class MultiChangePoll(MultiPoll):
            assert self.prev_values is not None
            self.current_values = source_values
            if self.current_values is None:
-               self.feed_state = "cold"
+               self.feed_state = MultiChangePoll.COLD
                self.alert(message='Something amiss with feed')
                return None
            else:
@@ -270,7 +270,7 @@ class MultiChangePoll(MultiPoll):
                value_changes    = [ float(current_value) - float(prev_value) for current_value, prev_value in zip(self.current_values, self.prev_values) ]
                material_changes = [ abs(vc)>1e-6 for vc in value_changes ]
                if not any(material_changes):
-                   self.feed_state = "cold"  # Feed is stale, don't judge
+                   self.feed_state = MultiChangePoll.COLD  # Feed is stale, don't judge
                    self.logger(
                        {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
                else:
@@ -286,5 +286,7 @@ class MultiChangePoll(MultiPoll):
                    self.feed_state = MultiChangePoll.WARM
                    self.logger({'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})
            return None
+       else:
+           raise Exception('Brain failure')
 
 
