@@ -10,13 +10,28 @@ class MicroWriter(MicroReader):
         super().__init__(base_url=base_url or api_url(),**kwargs)
         string_write_key = write_key if isinstance(write_key,str) else write_key.decode()
         assert self.key_difficulty(string_write_key), "Invalid write_key. Mine one at muid.org. "
-        self.write_key = string_write_key
+        self.write_key = string_write_key                 # Optional: location of your repo you wish to advertise
         self.verbose   = verbose
         self.code      = self.shash(write_key)            # Unique identifier that can be shared
         self.animal    = self.animal_from_key(write_key)  # ... and corresponding spirit animal
 
     def __repr__(self):
         return {'write_key':self.write_key,"animal":self.animal_from_key(self.write_key)}
+
+    def get_own_repository(self):
+        return self.get_repository(write_key=self.write_key)
+
+    def set_repository(self, url):
+        """ Tell everyone where your repository is """
+        res = requests.put(self.base_url + '/repository/' + self.write_key, params={'url':url})
+        if res.status_code == 200:
+            return res.json()
+
+    def delete_repository(self):
+        """ Tell everyone where your repository is """
+        res = requests.delete(self.base_url + '/repository/' + self.write_key)
+        if res.status_code == 200:
+            return res.json()
 
     def get_home(self):
         res = requests.put(self.base_url + '/live/' + self.write_key )

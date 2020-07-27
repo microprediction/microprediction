@@ -80,6 +80,13 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
             return res.json()
 
+    def get_repository(self, write_key):
+        """ Get repository associated with a write key """
+        # You can also supply a hash of the write key instead
+        res = requests.get(self.base_url + '/repository/' + write_key)
+        if res.status_code == 200:
+            return res.json()
+
     def inv_cdf(self, name, delay=None, p=0.5):
         """ Approximate interpolation of value, defaulting to median"""
         cdf = self.get_cdf(name=name, delay=delay)
@@ -101,7 +108,6 @@ class MicroReader(MicroConventions):
         res = requests.get(self.base_url + '/cdf/' + name, params={"values": comma_sep_values})
         if res.status_code == 200:
             return res.json()
-
 
 
 class MicroReaderStatus(MicroReader):
