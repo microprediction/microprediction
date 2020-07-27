@@ -232,7 +232,8 @@ class MicroCrawler(MicroWriter):
         self.last_withdrawal_reset = time.time()
 
         # State - other
-        self.withdrawn  = list()           # List of horizons we have withdrawn from, or will never enter
+        self.withdrawn  = list()           # List of horizons we have withdrawn from
+        self.stopped = list()              # A list of horizons where we have hit stop loss and will not enter again
         self.next_prediction_time = dict() # A manifest of upcoming data arrivals
         self.message_log = list()          # A log of detailed messages
 
@@ -285,7 +286,7 @@ class MicroCrawler(MicroWriter):
 
     def withdraw(self,horizon):
         """
-            Cancels participation in a horizon by withdrawing predictions, and adds to blacklist
+            Cancels participation in a horizon by withdrawing predictions, and adds to list of stopped out streams
         """
         name, delay = self.split_horizon_name(horizon)
         self.cancel(name=name, delays=[delay])
@@ -293,6 +294,7 @@ class MicroCrawler(MicroWriter):
         if horizon in self.next_prediction_time:
             del self.next_prediction_time[horizon]
         self.withdrawn.append(horizon)
+        self.stopped.append(horizon)
         print("Withdrawing from " + horizon, flush=True)
         self.active      = self.get_active()
         self.performance = self.get_performance()
@@ -311,10 +313,11 @@ class MicroCrawler(MicroWriter):
                 delays = self.candidate_delays(name=name)
                 for delay in delays:
                     horizon = self.horizon_name(name=name,delay=delay)
-                    if not horizon in self.active:
-                        if not horizon in self.withdrawn:
-                            if not (horizon in self.next_prediction_time) or time.time()>self.next_prediction_time[horizon]:
-                                horizons.append(horizon)
+                    if not horizon in self.stopped:
+                        if not horizon in self.active:
+                            if not horizon in self.withdrawn:
+                                if not (horizon in self.next_prediction_time) or time.time()>self.next_prediction_time[horizon]:
+                                    horizons.append(horizon)
             if horizons:
                 return random.choice(horizons)
 
