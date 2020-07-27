@@ -8,7 +8,7 @@ You publish live data repeatedly, and it gets predicted. Simple, eh?
 
     pip install microprediction 
     
-This library can also be used to both solicit and contribute distributional predictions. 
+This library can also be used to make predictions.
 
 ## Microprediction.Org
 
