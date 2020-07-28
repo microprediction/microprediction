@@ -109,6 +109,15 @@ class MicroReader(MicroConventions):
         if res.status_code == 200:
             return res.json()
 
+    # For convenience...
+    # This will move to microconventions
+
+    def percentiles(self):
+        """
+           :returns  [ float ]   A list of 225 evenly spaced numbers in (0,1)
+        """
+        return list(np.linspace(start=1 / (2 * self.num_predictions), stop=1 - 1 / (2 * self.num_predictions), num=self.num_predictions))
+
 
 class MicroReaderStatus(MicroReader):
 

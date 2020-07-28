@@ -520,9 +520,9 @@ class MicroCrawler(MicroWriter):
                 self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=self.active, num=50)
                 self.last_performance_check = time.time()
 
-            # Maybe we look for a new horizon to predict, but do this
+            # Maybe we look for a new horizon to predict
             self.update_seconds_until_next()
-            got_time_to_look = (self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )) or catching_up
+            got_time_to_look = (self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )) or catching_up or len(self.active)<5
             been_a_while_since_last_horizon_added = (time.time()-self.last_new_horizon) > 60
             if got_time_to_look and (been_a_while_since_last_horizon_added or len(self.active)<5):
                 self.active = self.get_active()
@@ -544,32 +544,35 @@ class MicroCrawler(MicroWriter):
             # Then if there is still time, we might call the downtime() method
             self.update_seconds_until_next()
             if self.seconds_until_next>2 and not catching_up:
-                print('Downtime for '+str(self.seconds_until_next)+'s',flush=True)
+                downtime_seconds = min(30,self.seconds_until_next-1)
+                print('Downtime for '+str(downtime_seconds)+'s',flush=True)
                 self.status_report()
-                self.downtime(seconds=self.seconds_until_next-1)
+                self.downtime(seconds=downtime_seconds)
                 self.update_seconds_until_next()
 
-            # If there isn't much time, just hang out and be ready
-            if self.seconds_until_next>0:
-                time.sleep(self.seconds_until_next)
+            if self.seconds_until_next<30:
 
-            # Make predictions in rapid succession until a gap opens
-            go_time = time.time()
-            num_upcoming_to_consider = 10 if not catching_up else 100
-            for horizon, seconds_to_go in self.upcoming(num=num_upcoming_to_consider,relative=True):
-                seconds_since_game_time = time.time()-go_time
-                adjusted_seconds_to_go = seconds_to_go-seconds_since_game_time
-                if adjusted_seconds_to_go<2:
-                    if adjusted_seconds_to_go>0:
-                        time.sleep(adjusted_seconds_to_go)
-                    name, delay  = self.split_horizon_name(horizon)
-                    lagged_times = self.get_lagged_times(name=name)
-                    data_arrived_recently = lagged_times and (abs(time.time()-lagged_times[0])<30)
-                    if adjusted_seconds_to_go<-30 or data_arrived_recently:
-                        name, delay = self.split_horizon_name(horizon)
-                        self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times )
-                    else:
-                        self.next_prediction_time[horizon] = time.time()+delay
+                # If there isn't much time, just hang out and be ready
+                if self.seconds_until_next>0:
+                    time.sleep(self.seconds_until_next)
+
+                # Make predictions in rapid succession until a gap opens
+                go_time = time.time()
+                num_upcoming_to_consider = 10 if not catching_up else 100
+                for horizon, seconds_to_go in self.upcoming(num=num_upcoming_to_consider,relative=True):
+                    seconds_since_game_time = time.time()-go_time
+                    adjusted_seconds_to_go = seconds_to_go-seconds_since_game_time
+                    if adjusted_seconds_to_go<2:
+                        if adjusted_seconds_to_go>0:
+                            time.sleep(adjusted_seconds_to_go)
+                        name, delay  = self.split_horizon_name(horizon)
+                        lagged_times = self.get_lagged_times(name=name)
+                        data_arrived_recently = lagged_times and (abs(time.time()-lagged_times[0])<30)
+                        if adjusted_seconds_to_go<-30 or data_arrived_recently:
+                            name, delay = self.split_horizon_name(horizon)
+                            self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times )
+                        else:
+                            self.next_prediction_time[horizon] = time.time()+delay
 
             # Be nice and don't overwhelm system
             time.sleep(1.5)
