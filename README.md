@@ -57,13 +57,14 @@ and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/ma
 
 If you have a function that returns a live number, do this:
 
+```python
     from microprediction import MicroPoll, create_key
     feed = MicroPoll(write_key=create_key(),        # This takes a while ... see section on mining write_keys below
                      name='my_stream.json',         # Name your data stream
                      func=my_feed_func,             # Provide a callback function that returns a float 
                      interval=20)                   # Poll every twenty minutes
     feed.run()                                      # Start the scheduler
-    
+``` 
     
 ## Retrieving distributional predictions 
 Once a stream is created and some crawlers have found it, you can view activity and predictions at www.microprediction.org, 
@@ -106,6 +107,8 @@ In turn, each of these streams is predicted at four different horizons, as with 
 If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
 deriving from MicroCrawler as follows: 
 
+ 
+```python 
     from microprediction import MicroCrawler, create_key
     from microprediction.samplers import differenced_bootstrap
     
@@ -121,7 +124,8 @@ deriving from MicroCrawler as follows:
     print(my_write_key)
     crawler = MyCrawler(write_key=write_key)
     crawler.run()
-    
+```
+
 Enter your write_key into https://www.microprediction.org/dashboard.html to find out which time series your crawler is good at predicting. Check back in a day, a week or a month. 
  
 
@@ -129,19 +133,23 @@ Enter your write_key into https://www.microprediction.org/dashboard.html to find
 
 It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/cop.json. Use your preferred means such as requests or aiohttp. For example using the former:
 
+```python
     import requests
     lagged_values = requests.get('https://api.microprediction.org/live/lagged_values::cop.json').json()
     lagged        = requests.get('https://api.microprediction.org/lagged/cop.json').json()
+```
 
 However the reader client adds a little convenience. 
 
+```python
     from microprediction import MicroReader
     mr = MicroReader()
  
     current_value = mr.get('cop.json')
     lagged_values = mr.get_lagged_values('cop.json') 
     lagged_times  = mr.get_lagged_times('cop.json')
-    
+```
+
 Your best reference for the API is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py 
     
 ## Write client
@@ -153,9 +161,11 @@ the writer. Your best reference is the client code https://github.com/micropredi
 
 In principle:
 
+```python
     from microprediction import MicroWriter, create_key
     mw = MicroWriter(write_key=create_key(difficulty=12))    # Sub in your own write_key. MUIDs explained at https://vimeo.com/397352413 
-    
+```
+
 In practice you may want to run create_key() separately as it will take many hours, at least for a difficult key. See https://config.microprediction.org/config.json for the current values of min_len, which is the official minimum difficulty to create a stream. If you don't need
 to create streams but only wish to predict, you can use a lower difficulty like 10 or even 9. But the easier your key, the more likely
 you are to go bankrupt. 
@@ -163,34 +173,40 @@ you are to go bankrupt.
 ### Submitting scenarios (manually)
     
 If MicroCrawler does not suit your needs you can submit predictions:
-    
+
+```python
     scenarios = [ i*0.001 for i in range(mw.num_predictions) ]   # You can do better ! 
     mw.submit(name='cop.json',values=scenarios, delay=70)        # Specify stream name and also prediction horizon
-    
+```
+
 See https://config.microprediction.org/config.json for a list of values that delay can take. 
 
 ### Creating a feed (manually)
 
 If MicroPoll does not serve your needs you can create your stream one data point at a time:
 
+```python
     mw  = MicroWriter(write_key=write_key)
     res = mw.set(name='mystream.json',value=3.14157) 
+```
 
 However if you don't do this regularly, your stream's history will die and you will lose rights to the name 'mystream.json' established when you made the first call. If you have a long break between data points, such
  as overnight or over the weekend, consider
 touching the data stream:
 
+```python
     res = mw.touch(name='mystream.json')
-    
+```
+
 to let the system know you still care.  
 
 ### Troubleshooting stream creation
         
 0. Upgrade the library, which is pretty fluid
-   1. pip install --upgrade microprediction 
+   1. `pip install --upgrade microprediction`
         
 1. Check https://github.com/microprediction/microconventions/blob/master/microconventions/stream_conventions.py to see if you are violating a stream naming convention
-   1. Must end in .json  
+   1. Must end in `.json`  
    2. Must contain only alphanumeric, hyphens, underscores, colons (discouraged) and at most one period.
    3. Must not contain double colon. 
    
@@ -204,15 +220,19 @@ to let the system know you still care.
 
 Want more write keys? Cut and paste this bash command into a bash shell:
 
+```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/muid/master/examples/mine_from_venv.sh)"
+```
 
 or use the MUID library (www.muid.org) ...
-    
+
+```
     $pip install muid
     $python3
     >>> import muid
     >>> muid.mine(skip_intro=True)
-    
+```
+
 See www.muid.org or https://vimeo.com/397352413 for more on MUIDs. Use a URL like http://www.muid.org/validate/fb74baf628d43892020d803614f91f29 to 
 reveal the hidden "spirit animal" in a MUID. The difficulty is the length of the animal, not including the space.     
 
