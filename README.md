@@ -1,7 +1,7 @@
 # microprediction
 
 Client library for www.microprediction.org You publish live data repeatedly, and it gets predicted. Simple, eh? 
-Tap into the collective intelligence of community contributed time series algorithms
+Tap into the collective intelligence of community contributed time series algorithms, or add to the intelligence. 
 
 
     pip install microprediction 
