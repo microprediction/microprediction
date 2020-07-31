@@ -45,11 +45,11 @@ Provided classes include the following
 A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [RegularCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [OnlineHorizonCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py), 
-[OnlineStreamCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py),
-[ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py) as well
+[OnlineStreamCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py) and
+[ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py), as well
 as additional conveniences for creating streams such as 
 [ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py), [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py),
-[MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) and so forth. 
+and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
 
                           
       
@@ -258,7 +258,15 @@ reference for these embeddings is at https://github.com/microprediction/microcon
 
 - https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md       
 
-## Further reading
+## Suggested reading
+
+- https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/
+- https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/
+- https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/
+- https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/
+- https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/
+- https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/
+- https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/
 
 See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
                
