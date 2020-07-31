@@ -69,9 +69,9 @@ If you have a function that returns a live number, do this:
 ## Retrieving distributional predictions 
 Once a stream is created and some crawlers have found it, you can view activity and predictions at www.microprediction.org, 
 
-    | Stream      |   Roughly 1 min ahead           | Roughly 5 min ahead             |   Roughly 15 min ahead               | Roughly 1 hr  ahead               |
-    |-------------|---------------------------------|---------------------------------|--------------------------------------|-----------------------------------|
-    | my_stream   | `stream=my_stream&horizon=70`   |  `stream=my_stream&horizon=310` | `stream=my_stream&horizon=910`       | `stream=my_stream&horizon=3555`   | 
+| Stream      |   Roughly 1 min ahead           | Roughly 5 min ahead             |   Roughly 15 min ahead               | Roughly 1 hr  ahead               |
+|-------------|---------------------------------|---------------------------------|--------------------------------------|-----------------------------------|
+| my_stream   | `stream=my_stream&horizon=70`   |  `stream=my_stream&horizon=310` | `stream=my_stream&horizon=910`       | `stream=my_stream&horizon=3555`   | 
 
 Here is an actual example: 
 https://www.microprediction.org/stream_dashboard.html?stream=fcx&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
