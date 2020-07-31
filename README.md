@@ -33,7 +33,7 @@ Questions to  info@microprediction.org
 
 ## Class Hierarchy 
 
-The following classes are provided:
+Provided classes include the following
 
     MicroReader
        |
@@ -41,7 +41,18 @@ The following classes are provided:
        |                                   |
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
-        
+                
+A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
+[RegularCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
+[OnlineHorizonCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py), 
+[OnlineStreamCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py),
+[ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py) as well
+as additional conveniences for creating streams such as 
+[ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py), [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py),
+[MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) and so forth. 
+
+                          
+      
 ## Quickstart: Soliciting predictions 
 
 If you have a function that returns a live number, do this:
