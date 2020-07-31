@@ -245,8 +245,11 @@ Every participating `write_key` has an associated balance. When you create a str
 purpose. If nobody can do a better job that this, your `write_key` balance will neither rise nor fall, on average.  
 
 However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your `write_key` to trend downwards. 
-On an ongoing basis you also need the `write_key` balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and the formula
- -1.0*( abs(self.min_balance)*(16**(write_key_len-9)) ) supercedes whatever is written here. However at time of writing the bankruptcy levels are:
+On an ongoing basis you also need the `write_key` balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and the formula:
+
+<img src="https://render.githubusercontent.com/render/math?math=%5CLarge%0A-1*(abs(self.min%5C_balance)*16%5E%7B(write%5C_key%5C_difficulty-9)%7D">
+
+supercedes whatever is written here. However at time of writing the bankruptcy levels are:
 
 |  write_key difficulty   |  bankruptcy         |  write_key difficulty   |  bankruptcy         |
 |-------------------------|---------------------|-------------------------|---------------------|
