@@ -66,11 +66,11 @@ class DigestCrawler(OnlineStreamCrawler):
 
 if __name__=="__main__":
     try:
-        from microprediction.config_private import DECASTYLE_CAT  # USE YOUR OWN KEY
+        from microprediction.config_private import DECASTYLE_CAT
         crawler = DigestCrawler(write_key=DECASTYLE_CAT)
-    except:
-        crawler = DigestCrawler(write_key=DECASTYLE_CAT)
+        crawler.set_repository(url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/decastyle_cat.py')
+    except ImportError:
+        crawler = DigestCrawler(difficulty=9)
 
     crawler.min_lags = 500
-    crawler.set_repository(url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/decastyle_cat.py')
-    crawler.run(timeout=50000)
+    crawler.run()

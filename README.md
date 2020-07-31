@@ -1,31 +1,37 @@
 # microprediction
 
-Client library for www.microprediction.org
-
+Client library for www.microprediction.org You publish live data repeatedly, and it gets predicted. Simple, eh? 
 Tap into the collective intelligence of community contributed time series algorithms
 
-You publish live data repeatedly, and it gets predicted. Simple, eh? 
 
     pip install microprediction 
     
-This library can also be used to make predictions.
+This library can also be used to submit predictions.
 
-## Microprediction.Org
+## Hello world examples
 
-The simplest way to solicit good predictions of live public data. 
+- https://github.com/microprediction/microprediction/tree/master/hello_world
+
+## Getting help 
+
+- https://www.microprediction.org/contact.html
+- https://github.com/microprediction/microprediction/issues 
+  
+
+## Site documentation at Microprediction.Org
     
-- Creation of feeds (to solicit predictions) is introduced below but also at https://www.microprediction.org/publishing.html 
+- https://www.microprediction.org/publishing.html 
 
-- Crawling (letting loose an algorithm to explore all the time series) is also explained at https://www.microprediction.org/crawling.html
+- https://www.microprediction.org/crawling.html
 
 Questions to  info@microprediction.org 
 
-There is a collection of articles explaining microprediction [here](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
+### New skin coming soon...
 
 
 ![](https://i.imgur.com/6FpjUaR.png)
 
-# Class Hierarchy 
+## Class Hierarchy 
 
 The following classes are provided:
 
@@ -36,7 +42,7 @@ The following classes are provided:
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
         
-# Quickstart: Soliciting predictions 
+## Quickstart: Soliciting predictions 
 
 If you have a function that returns a live number, do this:
 
@@ -84,7 +90,7 @@ In turn, each of these streams is predicted at four different horizons, as with 
 | `z1~cop~3555`| `stream=z1~cop~3555&horizon=70` |  `stream=z1~cop~3555&horizon=310`   | `stream=z1~cop~3555&horizon=910`    | `stream=z1~cop~3555&horizon=3555'
   
      
-# Quickstart: Providing predictions 
+## Quickstart: Providing predictions 
 
 If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
 deriving from MicroCrawler as follows: 
@@ -108,9 +114,7 @@ deriving from MicroCrawler as follows:
 Enter your write_key into https://www.microprediction.org/dashboard.html to find out which time series your crawler is good at predicting. Check back in a day, a week or a month. 
  
 
-
-    
-# Read client
+## Read client
 
 It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/cop.json. Use your preferred means such as requests or aiohttp. For example using the former:
 
@@ -129,7 +133,7 @@ However the reader client adds a little convenience.
     
 Your best reference for the API is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py 
     
-# Write client
+## Write client
 
 As noted above you may prefer to use MicroPoll or MicroCrawler rather than MicroWriter directly. But here are a few more details on the API wrapper those wanting more control. You can create predictions or feeds using only
 the writer. Your best reference is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py 
@@ -169,9 +173,25 @@ touching the data stream:
     
 to let the system know you still care.  
 
-# More on mining write_keys 
+### Troubleshooting stream creation
+        
+0. Upgrade the library, which is pretty fluid
+   1. pip install --upgrade microprediction 
+        
+1. Check https://github.com/microprediction/microconventions/blob/master/microconventions/stream_conventions.py to see if you are violating a stream naming convention
+   1. Must end in .json  
+   2. Must contain only alphanumeric, hyphens, underscores, colons (discouraged) and at most one period.
+   3. Must not contain double colon. 
+   
+2. Log into Dashboard with your write_key:
+   1. https://www.microprediction.org/dashboard.html
+   2. Check for errors/warnings You can also use  mw.get_errors(), mw.get_warnings(), mw.get_confirmations()
+   3. Was the name already taken? 
+   4. Is you write_key bankrupt? 
 
-If you want to collect some write_keys off to the side, you can cut and paste this bash command into a bash shell:
+## Mining write_keys 
+
+Want more write keys? Cut and paste this bash command into a bash shell:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/muid/master/examples/mine_from_venv.sh)"
 
@@ -185,9 +205,8 @@ or use the MUID library (www.muid.org) ...
 See www.muid.org or https://vimeo.com/397352413 for more on MUIDs. Use a URL like http://www.muid.org/validate/fb74baf628d43892020d803614f91f29 to 
 reveal the hidden "spirit animal" in a MUID. The difficulty is the length of the animal, not including the space.     
 
-
-         
-# Maintaining your balance 
+        
+## Balances and bankruptcy 
 
 Every participating write_key has an associated balance. When you create a stream you automatically participate in the prediction of the stream. A benchmark empirical sampling algorithm with some recency adjustment is used for this
 purpose. If nobody can do a better job that this, your write_key balance will neither rise nor fall, on average.  
@@ -207,7 +226,7 @@ a write_key alive that you need for sponsoring a stream. You can also ask others
  might help maintain it. You cannot use a transfer to 
 raise the balance associated with a write_key above zero - that is only possible by means of accurate prediction. 
 
-# Advanced topic: Higher dimensional prediction with cset() 
+## Advanced topic: Higher dimensional prediction with cset() 
 
 Multivariate prediction solicitation is available to those with write_keys of difficulty 1 more than the stream minimum (i.e. 12+1). If you want to use this we suggest you start mining now. My making regular calls
  to mw.cset( ) you can get all these goodies automatically:
@@ -223,27 +242,15 @@ Multivariate prediction solicitation is available to those with write_keys of di
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
 reference for these embeddings is at https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py
          
-                 
-         
-# Troubleshooting stream creation
-        
-0. Upgrade the library, which is pretty fluid
-   1. pip install --upgrade microprediction 
-        
-1. Check https://github.com/microprediction/microconventions/blob/master/microconventions/stream_conventions.py to see if you are violating a stream naming convention
-   1. Must end in .json  
-   2. Must contain only alphanumeric, hyphens, underscores, colons (discouraged) and at most one period.
-   3. Must not contain double colon. 
-   
-2. Log into Dashboard with your write_key:
-   1. https://www.microprediction.org/dashboard.html
-   2. Check for errors/warnings You can also use  mw.get_errors(), mw.get_warnings(), mw.get_confirmations()
-   3. Was the name already taken? 
-   4. Is you write_key bankrupt? 
+  
+## More examples 
 
-3. Get in touch: 
-   1. File an issue at https://github.com/microprediction/microprediction/issues if you believe there is a problem
-   2. Post a question on Quora and request answer from user 'Peter Cotton' if you need advice. 
+- https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md       
+
+## Further reading
+
+See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
+               
 
 
          
