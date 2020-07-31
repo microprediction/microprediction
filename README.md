@@ -76,7 +76,9 @@ Once a stream is created and some crawlers have found it, you can view activity 
 Here is an actual example: 
 https://www.microprediction.org/stream_dashboard.html?stream=fcx&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
 
+```python
          cdf = feed.get_cdf('cop.json',delay=70,values=[0,0.5])
+```
          
 where the delay parameter, in seconds, is the prediction horizon (it is called a delay as the predictions used to compute this CDF have all be quarantine for 70 seconds or more). 
 The community of algorithms provides predictions roughly 1 min, 5 min, 15 minutes and 1 hr ahead of time. The `get_cdf()` above reveals the probability that your future value is less than 0.0, and the probability that it is 
@@ -212,9 +214,9 @@ to let the system know you still care.
    
 2. Log into Dashboard with your write_key:
    1. https://www.microprediction.org/dashboard.html
-   2. Check for errors/warnings You can also use  mw.get_errors(), mw.get_warnings(), mw.get_confirmations()
+   2. Check for errors/warnings You can also use `mw.get_errors()`, `mw.get_warnings()`, `mw.get_confirmations()`
    3. Was the name already taken? 
-   4. Is you write_key bankrupt? 
+   4. Is your `write_key` bankrupt? 
 
 ## Mining write_keys 
 
@@ -239,11 +241,11 @@ reveal the hidden "spirit animal" in a MUID. The difficulty is the length of the
         
 ## Balances and bankruptcy 
 
-Every participating write_key has an associated balance. When you create a stream you automatically participate in the prediction of the stream. A benchmark empirical sampling algorithm with some recency adjustment is used for this
-purpose. If nobody can do a better job that this, your write_key balance will neither rise nor fall, on average.  
+Every participating `write_key` has an associated balance. When you create a stream you automatically participate in the prediction of the stream. A benchmark empirical sampling algorithm with some recency adjustment is used for this
+purpose. If nobody can do a better job that this, your `write_key` balance will neither rise nor fall, on average.  
 
-However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your write_key to trend downwards. 
-On an ongoing basis you also need the write_key balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and the formula
+However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your `write_key` to trend downwards. 
+On an ongoing basis you also need the `write_key` balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and the formula
  -1.0*( abs(self.min_balance)*(16**(write_key_len-9)) ) supercedes whatever is written here. However at time of writing the bankruptcy levels are:
 
 |  write_key difficulty   |  bankruptcy         |  write_key difficulty   |  bankruptcy         |
@@ -252,15 +254,15 @@ On an ongoing basis you also need the write_key balance not to fall below a thre
 |  9                      |  -1.0               |     12                  |   -4,096            |
 | 10                      |  -16.0              |     13                  |   -65,536           |
        
-Balance may be transfered from one write_key to another if the recipient write_key has a negative balance. You can use the transfer function to keep
-a write_key alive that you need for sponsoring a stream. You can also ask others to mine muids for you and contribute in this fashion, say if you have an important civic nowcast and expect that others
+Balance may be transfered from one `write_key` to another if the recipient `write_key` has a negative balance. You can use the transfer function to keep
+a `write_key` alive that you need for sponsoring a stream. You can also ask others to mine (muids)[https://github.com/microprediction/muid] for you and contribute in this fashion, say if you have an important civic nowcast and expect that others
  might help maintain it. You cannot use a transfer to 
-raise the balance associated with a write_key above zero - that is only possible by means of accurate prediction. 
+raise the balance associated with a `write_key` above zero - that is only possible by means of accurate prediction. 
 
-## Advanced topic: Higher dimensional prediction with cset() 
+## Advanced topic: Higher dimensional prediction with `cset()` 
 
 Multivariate prediction solicitation is available to those with write_keys of difficulty 1 more than the stream minimum (i.e. 12+1). If you want to use this we suggest you start mining now. My making regular calls
- to mw.cset( ) you can get all these goodies automatically:
+ to `mw.cset()` you can get all these goodies automatically:
          
 |  Functionality          |  Example dashboard URL                                                            |
 |-------------------------|-----------------------------------------------------------------------------------|
@@ -289,10 +291,3 @@ reference for these embeddings is at https://github.com/microprediction/microcon
 - https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/
 
 See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
-               
-
-
-         
-
-    
- 
