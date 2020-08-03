@@ -574,8 +574,12 @@ class MicroCrawler(MicroWriter):
                         else:
                             self.next_prediction_time[horizon] = time.time()+delay
 
+            else:
+                # Grow slowly so it gets a sense of how much it can manage.
+                time.sleep(30)
+
             # Be nice and don't overwhelm system
-            time.sleep(1.5)
+            time.sleep(2.5)
             catching_up = False
 
         self.retirement_callback()
