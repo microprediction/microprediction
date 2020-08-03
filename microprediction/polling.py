@@ -36,12 +36,13 @@ class MicroPoll(MicroWriter):
     #--------------------------------------------
 
 
-    def __init__(self, name, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, **kwargs):
+    def __init__(self, name, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, mine= False, **kwargs):
         """  Create a stream by polling every 20 minutes, say
             param: name  str   stream name ending in .json
             func:        function    returns float  (data feed function)
             interval:    int     minutes between polls
             func_args    dict    optional dict of arguments to be passed to func
+            mine:        bool    Supply mine=True if you want to automatically mine MUIDs to help keep the stream alive
         """
         assert self.is_valid_name(name),'name not valid'
         super().__init__(base_url=base_url or api_url(),write_key=write_key,verbose=verbose)
@@ -53,6 +54,7 @@ class MicroPoll(MicroWriter):
         self.mining_time = 0
         self.mining_success = 0
         self.test_value = self.call_func()  # Fail fast
+        self.mine = mine
         print('Created poller. Example value '+str(self.test_value))
 
     def __repr__(self):
@@ -89,19 +91,20 @@ class MicroPoll(MicroWriter):
 
     def maybe_bolster_balance_by_mining(self):
         """ Mine just a little to avoid stream dying due to bankruptcy """
-        balance = self.get_balance()
-        if balance < 0:
-            muid_time = time.time()
-            key = self.bolster_balance_by_mining(seconds=max(5, int(abs(balance) / 10)))
-            mining_time = time.time() - muid_time
-            self.mining_time += mining_time
-            if key:
-                print('************************')
-                print('     FOUND MUID !!!     ')
-                print('************************', flush=True)
-                self.mining_success += 1
-            else:
-                print('Did not find MUID this time', flush=True)
+        if self.mine:
+            balance = self.get_balance()
+            if balance < 0:
+                muid_time = time.time()
+                key = self.bolster_balance_by_mining(seconds=max(5, int(abs(balance) / 10)))
+                mining_time = time.time() - muid_time
+                self.mining_time += mining_time
+                if key:
+                    print('************************')
+                    print('     FOUND MUID !!!     ')
+                    print('************************', flush=True)
+                    self.mining_success += 1
+                else:
+                    print('Did not find MUID this time', flush=True)
 
     def run(self):
         data = {'type': 'scheduler', 'scheduler start time': time.time()}
