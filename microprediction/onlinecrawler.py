@@ -40,12 +40,12 @@ class OnlineHorizonCrawler(MicroCrawler):
         """ During downtime we cycle through the state and update it """
         self.add_active_to_queue()
         start_time = time.time()
-        while time.time()< start_time+seconds:
+        while time.time()< start_time+seconds-5:
             if self.queue:
                 state_key, state = self.queue.popitem(0)
                 state = self.update_state(state)
                 self.queue.update({state_key:state})
-                time.sleep(0.1)
+                time.sleep(3)
 
 
 class OnlineStreamCrawler(OnlineHorizonCrawler):
