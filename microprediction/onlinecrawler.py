@@ -4,7 +4,9 @@ import time
 from collections import OrderedDict
 
 
+
 class OnlineHorizonCrawler(MicroCrawler):
+
 
     # Crawler maintains a queue of horizons and cycles through them, calibrating as it goes
     # To use this crawler, override the initial_state() and update_state() methods
@@ -49,6 +51,10 @@ class OnlineHorizonCrawler(MicroCrawler):
 
 
 class OnlineStreamCrawler(OnlineHorizonCrawler):
+
+    # TODO: Derive from StreamCrawler instead and present options to override
+    #       sample() or alternatively, override sample_with_state()
+    #       This is merely the same as StreamCrawler with a default downtime()
 
     # Crawler maintains a queue of streams and cycles through them, calibrating as it goes
     # To use this crawler, override the initial_state() and update_state() methods

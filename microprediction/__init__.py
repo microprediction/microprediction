@@ -5,5 +5,6 @@ from microprediction.crawler import MicroCrawler
 from microprediction.simplecrawler import SimpleCrawler, RegularCrawler
 from microprediction.onlinecrawler import OnlineStreamCrawler, OnlineHorizonCrawler
 from microprediction.statefulcrawler import StreamCrawler
+from microprediction.sequentialcrawler import DistributionMachine, SequentialStreamCrawler
 from microprediction.supporter import donate
 from microprediction.looping import PandasLoop

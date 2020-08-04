@@ -12,6 +12,8 @@ from microprediction.statefulcrawler import StreamCrawler
 class DigestStreamCrawler(StreamCrawler):
 
     # Illustrates use of stateful StreamCrawler
+    # TODO: Move some of the logic into SequentialStreamCrawler so users don't have to be concerned with
+    #       the logic used here to determine which lagged values are new and which have already been assimilated
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
