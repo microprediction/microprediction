@@ -40,3 +40,6 @@ class StreamCrawler(MicroCrawler):
                                           name=name, delay=delay)
         self.stream_state[name] = state
         return samples
+
+
+#TODO: HorizonCrawler
