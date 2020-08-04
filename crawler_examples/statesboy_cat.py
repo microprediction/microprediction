@@ -1,4 +1,5 @@
 # Illustrates use of SequentialStreamCrawler
+# Yes, yet another way to skin the cat
 
 from microprediction.config_private import STATESBOY_CAT
 from tdigest import TDigest
