@@ -6,6 +6,7 @@ from microprediction.crawler import MicroCrawler
 class StreamCrawler(MicroCrawler):
 
     # Crawler maintaining state for each stream
+    # See examples/thallodal_cat.py for an illustration of use
 
     ########################################################
     #  Override the following methods                      #
