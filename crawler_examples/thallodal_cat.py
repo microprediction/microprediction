@@ -1,22 +1,17 @@
-# An example of an online crawler
+# Illustrates use of t-digest, but without background fitting
+# (A different way to skin the cat)
 
-
-from microprediction.onlinecrawler import OnlineStreamCrawler
+from microprediction.config_private import THALLODAL_CAT
 from tdigest import TDigest
 from microprediction.samplers import is_process, inv_cdf_walk, approx_dt
 import numpy as np
 import math
+from microprediction.statefulcrawler import StreamCrawler
 
 
-class DigestCrawler(OnlineStreamCrawler):
+class DigestStreamCrawler(StreamCrawler):
 
-    # This example maintains a running estimate of the CDF for each stream, using the tdigest library
-    # TDigest maintains an efficient representation of CDF using k-means clustering
-    # https://github.com/CamDavidsonPilon/tdigest
-    #
-    # t-Digest is so fast we don't really need separate updating in the downtown() method, so you may
-    # choose not to derive from OnlineStreamCrawler. However this illustrates the pattern one can use
-    # when periodic fitting would otherwise disrupt timely prediction.
+    # Illustrates use of stateful StreamCrawler
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -24,7 +19,10 @@ class DigestCrawler(OnlineStreamCrawler):
     def exclude_stream(self, name=None, **ignore):
         return 'z3~' in name or 'z2~' in name
 
-    def initial_state(self, name, **ignore):
+    def include_delay(self, delay=None, name=None, **ignore):
+        return delay < 5000
+
+    def initial_state(self, name, lagged_values, lagged_times, **ignore):
         """ Decide if it is a process or not, and create initial sketch of CDF of values or changes in values """
         # This is one off. Restarting may change the classification !
         values = self.get_lagged_values(name=name)
@@ -49,18 +47,7 @@ class DigestCrawler(OnlineStreamCrawler):
             state['digest'].update(data)
         return state
 
-    def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
-        """ Sample absolute numbers, or differences added to last value """
-
-        # You could modify this with any other anchor point gleaned from a point estimate
-        # You could also take a larger number of walks and use tdigest to summarize into CDF
-
-        if name not in self.queue:
-            self.queue.update({name: self.initial_state(name=name)})
-
-        state = self.queue[name]
-        self.update_state(state=state, lagged_values=lagged_values, lagged_times=lagged_times)
-
+    def sample_using_state(self, state, lagged_values, lagged_times, name, delay, **ignored):
         digest = state['digest']
         if state['as_process']:
             num_steps = int(math.ceil(delay / state['dt']))
@@ -73,14 +60,8 @@ class DigestCrawler(OnlineStreamCrawler):
 
 
 if __name__ == "__main__":
-    try:
-        from microprediction.config_private import DECASTYLE_CAT
-
-        crawler = DigestCrawler(write_key=DECASTYLE_CAT)
-        crawler.set_repository(
-            url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/decastyle_cat.py')
-    except ImportError:
-        crawler = DigestCrawler(difficulty=9)
-
+    crawler = DigestStreamCrawler(write_key=THALLODAL_CAT, min_lags=500)
+    crawler.set_repository(
+        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/thallodal_cat.py')
     crawler.min_lags = 500
     crawler.run()
