@@ -187,7 +187,7 @@ class MicroCrawler(MicroWriter):
     #############################################################################################
 
 
-    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, use_environ=False, difficulty=10, **ignored):
+    def __init__(self, write_key=None, base_url=None, verbose=False, quietude=50, stop_loss=10, min_budget=0., max_budget=10, min_lags = 25, max_lags=1000000, sponsor_min=12, use_environ=False, difficulty=10, max_active=20, **ignored):
         """
             param: write_key  str    Valid write_key    See www.microprediction.org or www.muid.com for more details
             param: base_url   str    e.g  'http://api.microprediction.org'  or 'http://devapi.microprediction.org' for the brave. Defaults to what is at http://config.microprediction.org
@@ -217,6 +217,7 @@ class MicroCrawler(MicroWriter):
         self.max_budget  = max_budget          # Play with highly competitive algorithms?
         self.min_lags    = min_lags            # Insist on historical data
         self.max_lags    = max_lags
+        self.max_active  = max_active
 
         # Caching somewhat expensive operations to avoid taxing the system unnecessarily
         # There might be a tiny charge implemented for these operations at some point in the future
@@ -522,24 +523,25 @@ class MicroCrawler(MicroWriter):
 
             # Maybe we look for a new horizon to predict
             self.update_seconds_until_next()
-            got_time_to_look = (self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )) or catching_up or len(self.active)<5
-            been_a_while_since_last_horizon_added = (time.time()-self.last_new_horizon) > 60
-            if got_time_to_look and (been_a_while_since_last_horizon_added or len(self.active)<5):
-                self.active = self.get_active()
-                self.stream_candidates = self.candidate_streams()
-                print('Currently predicting for ' + str(len(self.active)) + ' horizons but found '+ str(len(self.stream_candidates))+ ' candidate streams to examine.',flush=True)
-                horizon = self.next_horizon(exclude=self.withdrawn)
-                if horizon is None:
-                    print('Cannot find another horizon. Crawler method next_horizon() did not suggest one. ',flush=True )
-                else:
-                    name, delay = self.split_horizon_name(horizon)
-                    lagged_times = self.get_lagged_times(name=name)
-                    execut = self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)  # Maybe will predict, maybe not
-                    if not execut:
-                        print('Declined horizon '+horizon,flush=True)
+            if len(self.active)<self.max_active:
+                got_time_to_look = (self.seconds_until_next > random.choice( [1.0, 5.0, 20.0, 60.0, 120.0] )) or catching_up or len(self.active)<5
+                been_a_while_since_last_horizon_added = (time.time()-self.last_new_horizon) > 60
+                if got_time_to_look and (been_a_while_since_last_horizon_added or len(self.active)<5):
+                    self.active = self.get_active()
+                    self.stream_candidates = self.candidate_streams()
+                    print('Currently predicting for ' + str(len(self.active)) + ' horizons but found '+ str(len(self.stream_candidates))+ ' candidate streams to examine.',flush=True)
+                    horizon = self.next_horizon(exclude=self.withdrawn)
+                    if horizon is None:
+                        print('Cannot find another horizon. Crawler method next_horizon() did not suggest one. ',flush=True )
                     else:
-                        print('Submitted to horizon '+horizon,flush=True)
-                        self.last_new_horizon = time.time()
+                        name, delay = self.split_horizon_name(horizon)
+                        lagged_times = self.get_lagged_times(name=name)
+                        execut = self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)  # Maybe will predict, maybe not
+                        if not execut:
+                            print('Declined horizon '+horizon,flush=True)
+                        else:
+                            print('Submitted to horizon '+horizon,flush=True)
+                            self.last_new_horizon = time.time()
 
             # Then if there is still time, we might call the downtime() method
             self.update_seconds_until_next()
@@ -575,7 +577,7 @@ class MicroCrawler(MicroWriter):
                             self.next_prediction_time[horizon] = time.time()+delay
 
             else:
-                # Grow slowly so it gets a sense of how much it can manage.
+                # Conserve some CPU
                 time.sleep(30)
 
             # Be nice and don't overwhelm system
