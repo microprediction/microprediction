@@ -8,6 +8,10 @@ Tap into the collective intelligence of community contributed time series algori
     
 This library can also be used to submit predictions.
 
+## Participate immediately with a bash script
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+
 ## Hello world examples
 
 - https://github.com/microprediction/microprediction/tree/master/hello_world
