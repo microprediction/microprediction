@@ -1,6 +1,6 @@
 set -e
 echo "This script will run DefaultCrawler from a new virtual env"
-mkdir crawling_working_dir
+mkdir -p crawling_working_dir
 cd crawling_working_dir
 python3 -m venv crawling
 source crawling/bin/activate
