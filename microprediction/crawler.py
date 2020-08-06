@@ -203,9 +203,9 @@ class MicroCrawler(MicroWriter):
             param: min_lags   int
             param: max_lags   int    These set the short/long limits for the number of lags in a time series. Does your algo need or want a lot of data?
             param: sponsor_min int   Minimum write_key difficulty of the stream sponsor. E.g. set to 13 to only look at streams where people bothered to generate a 13-MUID.
-            param: use_environ bool   Look in environ and store write_key
+            param: use_environ bool  Set True if you want crawler to look in environ for write_key, and store write_key there if it mines one
             param: difficulty  int   Used to create key if none supplied, but otherwise ignored
-            param: **ignored        For future compatability
+            param: **ignored         For future compatibility
 
         """
 
@@ -216,7 +216,10 @@ class MicroCrawler(MicroWriter):
         assert self.key_difficulty(
             self.write_key) >= 7, "Invalid write_key for crawler. Use new_key(difficulty=11) to create one. "
         assert not self.base_url[-1] == '/', 'Base url should not have trailing /'
-        assert stop_loss > 0, "Stop loss must be positive "
+        if stop_loss <= 0:
+            print(
+                'WARNING: Did you mean to set a negative stop loss? If you are running the crawler for the first time this might result in almost immediate withdrawal. ',
+                flush=True)
         self.quietude = int(quietude)  # e.g. if set to 10, will only print 1/10th of the time
         self.sponsor_min = sponsor_min  # Only choose streams with sponsors at least this long
         self.stop_loss = stop_loss  # How much to lose before giving up on a stream
@@ -227,12 +230,14 @@ class MicroCrawler(MicroWriter):
         self.max_active = max_active
 
         # Caching somewhat expensive operations to avoid taxing the system unnecessarily
-        # There might be a tiny charge implemented for these operations at some point in the future
+        # (There might be a tiny charge implemented for these operations at some point in the future)
         self.performance = self.get_performance()
         self.active = self.get_active()  # List of active horizons
         self.stream_candidates = self.candidate_streams()
 
-        # State - times since ...
+        # State - times
+        self.start_time = None  # Don't start this clock until run() is called
+        self.end_time = None  # ditto
         self.seconds_until_next = 10
         self.last_performance_check = time.time()
         self.last_new_horizon = time.time()
@@ -491,6 +496,27 @@ class MicroCrawler(MicroWriter):
             time.sleep(0.1)
         return horizons
 
+    def identity_reminder(self):
+        # In case people run the crawler with initial key mining and lose it in the logs ...
+        print('-------------------------------------------------------------')
+        print('Just a reminder ... ')
+        print('Your write key is ' + self.write_key)
+        print('Your public key is ' + self.code)
+        print('Your nom de plume is ' + self.animal)
+        print('Put your write key in the dashboard at www.microprediction.org')
+        print('--------------------------------------------------------------', flush=True)
+
+    def adjust_stop_loss(self, activity_excess):
+        """ Dictates how stop_loss is adjusted to try to bring into line the number of streams we participate in
+              :param activity_excess  The number of streams we have entered (versus self.max_active)
+        """
+        if activity_excess > 5:
+            print('Active in ' + str(activity_excess) + ' more streams than we would prefer.', flush=True)
+            self.stop_loss = self.stop_loss - 1
+            print('Adjusting stop_loss to ' + str(self.stop_loss), flush=True)
+        else:
+            pass
+
     def run(self, timeout=None):
         """
             The crawler visits streams. It maintains a list of expected times at which new data points will arrive. At the annointed time(s), it
@@ -523,10 +549,17 @@ class MicroCrawler(MicroWriter):
         self.status_report()
         pprint.pprint(self.__repr__())
 
+        self.identity_reminder()
+
         catching_up = True
         while time.time() < self.end_time:
 
-            # Reset withdrawal record just in case some occasionally fail ... defense
+            # Lest it get lost deep in the logs
+            if random.choice(range(25)) == 0:
+                self.identity_reminder()
+
+            # Reset withdrawal records just in case some cancellation requests occasionally fail
+            # Multiple requests to withdraw from 1hr ahead contests won't do any harm
             overdue_for_withdrawal_reset = time.time() - self.last_withdrawal_reset > 20 * 60
             if overdue_for_withdrawal_reset:
                 self.withdrawn = []
@@ -537,18 +570,15 @@ class MicroCrawler(MicroWriter):
             overdue_for_performance_check = (time.time() - self.last_performance_check > 2 * 60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ', flush=True)
-                self.performance = self.get_performance()  # Expensive operation and may attract a small charge in the future
+                self.performance = self.get_performance()
                 self.active = self.get_active()
                 active_not_withdrawn = self.active_not_withdrawn(active=self.active)
                 activity_excess = len(active_not_withdrawn) - self.max_active
-                if activity_excess > 0:
-                    print('Activity excess = '+str(activity_excess), flush=True )
-                    self.withdraw_from_worst_active(stop_loss=0, performance=self.performance, active=active_not_withdrawn,num=activity_excess)
-
-                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance,active=active_not_withdrawn, num=50)
+                self.adjust_stop_loss(activity_excess=activity_excess)
+                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=active_not_withdrawn, num=50)
                 self.last_performance_check = time.time()
 
-            # Maybe we look for a new horizon to predict
+            # Maybe look for a new horizon to predict, if our plate isn't full
             self.update_seconds_until_next()
             if len(self.active) < self.max_active:
                 got_time_to_look = (self.seconds_until_next > random.choice(
@@ -575,6 +605,8 @@ class MicroCrawler(MicroWriter):
                             self.last_new_horizon = time.time()
 
             # Then if there is still time, we might call the downtime() method
+            # You can override the downtime() method to do offline fitting or whatever
+            # See onlinecrawler.py for example
             self.update_seconds_until_next()
             if self.seconds_until_next > 2 and not catching_up:
                 downtime_seconds = min(30, self.seconds_until_next - 1)
@@ -583,6 +615,7 @@ class MicroCrawler(MicroWriter):
                 self.downtime(seconds=downtime_seconds)
                 self.update_seconds_until_next()
 
+            # Make predictions, maybe
             if self.seconds_until_next < 30:
 
                 # If there isn't much time, just hang out and be ready
@@ -608,7 +641,8 @@ class MicroCrawler(MicroWriter):
                             self.next_prediction_time[horizon] = time.time() + delay
 
             else:
-                # Conserve some CPU
+                # Nothing much doing. Conserve some CPU.
+                # If you are running your crawler at PythonAnywhere you won't be charged for sleeping.
                 time.sleep(30)
 
             # Be nice and don't overwhelm system
@@ -620,6 +654,7 @@ class MicroCrawler(MicroWriter):
         print("Retiring gracefully at " + str(datetime.datetime.now()), flush=True)
         pprint.pprint(self.__repr__())
         pprint.pprint(self.recent_updates())
+        self.identity_reminder()
 
 
 if __name__ == "__main__":

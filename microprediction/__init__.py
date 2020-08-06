@@ -8,3 +8,4 @@ from microprediction.statefulcrawler import StreamCrawler
 from microprediction.sequentialcrawler import DistributionMachine, SequentialStreamCrawler
 from microprediction.supporter import donate
 from microprediction.looping import PandasLoop
+from microprediction.defaultcrawler import DefaultCrawler
