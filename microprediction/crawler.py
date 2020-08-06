@@ -515,7 +515,7 @@ class MicroCrawler(MicroWriter):
             print('Active in ' + str(activity_excess) + ' more streams than we would prefer.', flush=True)
             self.stop_loss = self.stop_loss - 1
             print('Adjusting stop_loss to ' + str(self.stop_loss), flush=True)
-        elif activity_excess <= 0:
+        elif activity_excess <= 0 and self.stop_loss < self.original_stop_loss:
             print('Reverting to original stop_loss ' + str(self.stop_loss), flush=True)
             self.stop_loss = self.original_stop_loss
 
