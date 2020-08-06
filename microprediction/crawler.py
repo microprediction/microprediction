@@ -232,8 +232,8 @@ class MicroCrawler(MicroWriter):
 
         # Caching somewhat expensive operations to avoid taxing the system unnecessarily
         # (There might be a tiny charge implemented for these operations at some point in the future)
-        self.performance = self.get_performance()
-        self.active = self.get_active()  # List of active horizons
+        self.performance = self.get_performance() or self.get_performance()
+        self.active = self.get_active() or self.get_active() # List of active horizons
         self.stream_candidates = self.candidate_streams()
 
         # State - times
@@ -310,8 +310,8 @@ class MicroCrawler(MicroWriter):
         self.withdrawn.append(horizon)
         self.stopped.append(horizon)
         print("Withdrawing from " + horizon, flush=True)
-        self.active = self.get_active()
-        self.performance = self.get_performance()
+        self.active = self.get_active() or self.active
+        self.performance = self.get_performance() or self.performance
         self.withdrawal_callback(horizon)
 
     def next_horizon(self, exclude=None):
@@ -533,8 +533,8 @@ class MicroCrawler(MicroWriter):
         self.startup_callback()
 
         # Catch up on what we've missed
-        self.performance = self.get_performance()
-        self.active = self.get_active()
+        self.performance = self.get_performance() or self.get_performance()  # Try twice
+        self.active = self.get_active() or self.get_active()
         self.start_time = time.time()
         self.end_time = time.time() + timeout if timeout is not None else time.time() + 10000000
         self.last_performance_check = time.time() - 1000
@@ -572,8 +572,8 @@ class MicroCrawler(MicroWriter):
             overdue_for_performance_check = (time.time() - self.last_performance_check > 2 * 60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ', flush=True)
-                self.performance = self.get_performance()
-                self.active = self.get_active()
+                self.performance = self.get_performance() or self.percentiles()
+                self.active = self.get_active() or self.active
                 active_not_withdrawn = self.active_not_withdrawn(active=self.active)
                 activity_excess = len(active_not_withdrawn) - self.max_active
                 self.adjust_stop_loss(activity_excess=activity_excess)

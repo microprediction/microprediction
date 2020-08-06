@@ -210,19 +210,33 @@ class MicroWriter(MicroReader):
         last_transaction_time = transactions[0].get("epoch_time")
         return time.time() - last_transaction_time
 
-    def get_active(self):
-        res = requests.get(self.base_url + '/active/' + self.write_key)
-        if res.status_code == 200:
-            return res.json()
-        else:
-            raise Exception('Failed for ' + self.write_key)
+    def get_active(self, throw=False):
+        try:
+            res = requests.get(self.base_url + '/active/' + self.write_key)
+            if res.status_code == 200:
+                return res.json()
+            elif throw:
+                raise Exception('get_active() failed for ' + self.write_key)
+        except requests.exceptions.ConnectionError as e:
+            # Slightly more expensive operation. Very occasionally fails if internet isn't the greatest
+            if throw:
+                raise e
+            else:
+                print('WARNING: Failed to retrieve active ' + str(e))
 
-    def get_performance(self):
-        res = requests.get(self.base_url + '/performance/' + self.write_key)
-        if res.status_code == 200:
-            return res.json()
-        else:
-            raise Exception('Failed for ' + self.write_key)
+    def get_performance(self, throw=False):
+        try:
+            res = requests.get(self.base_url + '/performance/' + self.write_key)
+            if res.status_code == 200:
+                return res.json()
+            else:
+                raise Exception('Failed for ' + self.write_key)
+        except requests.exceptions.ConnectionError as e:
+            # Slightly more expensive operation. Very occasionally fails if internet isn't the greatest
+            if throw:
+                raise e
+            else:
+                print('WARNING: Failed to retrieve active ' + str(e))
 
     def delete_performance(self):
         res = requests.delete(self.base_url + '/performance/' + self.write_key)
