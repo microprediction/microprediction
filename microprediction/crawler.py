@@ -223,6 +223,7 @@ class MicroCrawler(MicroWriter):
         self.quietude = int(quietude)  # e.g. if set to 10, will only print 1/10th of the time
         self.sponsor_min = sponsor_min  # Only choose streams with sponsors at least this long
         self.stop_loss = stop_loss  # How much to lose before giving up on a stream
+        self.original_stop_loss = stop_loss
         self.min_budget = min_budget  # Play with highly competitive algorithms?
         self.max_budget = max_budget  # Play with highly competitive algorithms?
         self.min_lags = min_lags  # Insist on historical data
@@ -514,8 +515,9 @@ class MicroCrawler(MicroWriter):
             print('Active in ' + str(activity_excess) + ' more streams than we would prefer.', flush=True)
             self.stop_loss = self.stop_loss - 1
             print('Adjusting stop_loss to ' + str(self.stop_loss), flush=True)
-        else:
-            pass
+        elif activity_excess <= 0:
+            print('Reverting to original stop_loss ' + str(self.stop_loss), flush=True)
+            self.stop_loss = self.original_stop_loss
 
     def run(self, timeout=None):
         """
@@ -575,7 +577,8 @@ class MicroCrawler(MicroWriter):
                 active_not_withdrawn = self.active_not_withdrawn(active=self.active)
                 activity_excess = len(active_not_withdrawn) - self.max_active
                 self.adjust_stop_loss(activity_excess=activity_excess)
-                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance, active=active_not_withdrawn, num=50)
+                self.withdraw_from_worst_active(stop_loss=self.stop_loss, performance=self.performance,
+                                                active=active_not_withdrawn, num=50)
                 self.last_performance_check = time.time()
 
             # Maybe look for a new horizon to predict, if our plate isn't full
