@@ -2,38 +2,9 @@ from microprediction.samplers import is_process, inv_cdf_walk, approx_dt
 import numpy as np
 import math
 from microprediction.statefulcrawler import StreamCrawler
-from microconventions.stats_conventions import StatsConventions
-from tdigest import TDigest
-
-
-class DistributionMachine(object):
-
-    # SequentialStreamCrawler constructor expects a DistributionMachine type
-    # This is a state engine that has a ppf function
-
-    def __init__(self):
-        pass
-
-    def update(self, value: float, dt=None, **ignored):
-        pass
-
-    def inv_cdf(self, p: float) -> float:
-        return StatsConventions.norminv(p)
-
-
-class DigestMachine(DistributionMachine):
-
-    # Default for SequentialStreamCrawler
-
-    def __init__(self):
-        super().__init__()
-        self.digest = TDigest()
-
-    def update(self, value, dt=None, **ignored):
-        self.digest.update(value)
-
-    def inv_cdf(self, p):
-        return self.digest.percentile(100. * p)
+from microprediction.univariate.distributionmachine import DistributionMachine
+from microprediction.univariate.digestmachine import DigestMachine
+from typing import Type
 
 
 class SequentialStreamCrawler(StreamCrawler):
@@ -44,8 +15,8 @@ class SequentialStreamCrawler(StreamCrawler):
     #   No need to change this class. Supply DistributionMachine type to constructor  #
     ###################################################################################
 
-    def __init__(self, machine_type=DigestMachine, **kwargs):
-        """ You
+    def __init__(self, machine_type: Type[DistributionMachine] = DigestMachine, **kwargs):
+        """
              machine_type : Class
         """
         super().__init__(**kwargs)

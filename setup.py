@@ -20,12 +20,12 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["microprediction", "microprediction.live"],
+    packages=["microprediction", "microprediction.live","microprediction.univariate"],
     test_suite='pytest',
     tests_require=['pytest'],
     include_package_data=True,
     install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests", "getjson", "microconventions>=0.0.7",
-                      'pycoingecko', 'apscheduler', 'tdigest'],
+                      'pycoingecko', 'apscheduler', 'tdigest','creme'],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",

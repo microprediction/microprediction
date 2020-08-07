@@ -9,3 +9,6 @@ from microprediction.sequentialcrawler import DistributionMachine, SequentialStr
 from microprediction.supporter import donate
 from microprediction.looping import PandasLoop
 from microprediction.defaultcrawler import DefaultCrawler
+from microprediction.univariate.digestmachine import DigestMachine
+from microprediction.univariate.normalmachine import NormalMachine
+from microprediction.univariate.distributionmachine import DistributionMachine
