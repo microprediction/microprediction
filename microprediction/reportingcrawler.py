@@ -90,8 +90,8 @@ class ReportingCrawler(MicroCrawler):
                 self.get_leaderboard(name='cop.json',delay=self.DELAYS[0])
 
                 method = 'get_cdf'
-                self.get_cdf(name='cop.json')
-                self.get_cdf(name='three_body_x.json',delay=self.DELAYS[-1])
+                self.get_cdf_lagged(name='cop.json',delay=self.DELAYS[0])
+                self.get_cdf_lagged(name='three_body_x.json',delay=self.DELAYS[-1])
 
                 method = 'get_lagged_times'
                 self.get_lagged_times('cop.json')
