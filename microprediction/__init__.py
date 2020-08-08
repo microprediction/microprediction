@@ -12,3 +12,4 @@ from microprediction.defaultcrawler import DefaultCrawler
 from microprediction.univariate.digestdist import DigestDist
 from microprediction.univariate.normaldist import NormalDist
 from microprediction.univariate.distmachine import DistMachine
+DistributionMachine = DistMachine  # Backward compat

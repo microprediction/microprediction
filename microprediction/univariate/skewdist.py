@@ -1,12 +1,13 @@
 from scipy import stats
 import numpy as np
-
-# Moment based approximate skew normal distribution machine based on this idea:
-# https://stackoverflow.com/questions/49801071/how-can-i-use-skewnorm-to-produce-a-distribution-with-the-specified-skew
-
 from microprediction.univariate.runningmoments import RunningKurtosis
 from microprediction.univariate.distmachine import DistMachine
 from microprediction.samplers import evenly_spaced_percentiles
+
+
+# Moment based approximate skew normal distribution machine based on this idea:
+# https://stackoverflow.com/questions/49801071/how-can-i-use-skewnorm-to-produce-a-distribution-with-the-specified-skew
+# A bit of a whim so use at your own risk
 
 
 class SkewDist(RunningKurtosis, DistMachine):
@@ -23,7 +24,7 @@ class SkewDist(RunningKurtosis, DistMachine):
 
     def inv_cdf(self, p):
         if self.cdf is None:
-            self.cdf = sorted(self.skewed_sample(mean=self.mean, sd=self.std(), skew=self.skew(), num=self.num_predictions))
+            self.cdf = sorted(self.skewed_sample(mean=self.mean, sd=self.std(), skew=self.skewness(), num=self.num_predictions))
         return np.interp(p, self.percentiles, self.cdf)
 
     @staticmethod

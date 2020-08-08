@@ -65,4 +65,4 @@ class RunningKurtosis(RunningVariance):
         return (self.count * self.M4) / (self.M2 * self.M2) - 3
 
     def skewness(self):
-        return self.M3 / (self.M2 * 1.5)
+        return self.M3 / self.M2

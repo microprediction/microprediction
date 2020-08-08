@@ -6,6 +6,6 @@ if __name__ == "__main__":
     # Aside: as of 0.10.12, DigestMachine is the default machine_type, so this need not even be supplied
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/thallodal_cat.py')
-    # Setting repo is optional, it simply hyperlinks your crawler on the leaderboard
+    # Setting repo is optional, it simply hyperlinks your crawler on the leaderboard ... soon
     crawler.min_lags = 500
     crawler.run()

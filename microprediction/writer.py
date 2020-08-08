@@ -263,9 +263,9 @@ class MicroWriter(MicroReader):
 
         comma_sep_values = ",".join([str(v) for v in values])
         res = requests.put(self.base_url + '/submit/' + name,
-                           data={'delay': delay, 'verbose':verbose, 'write_key': self.write_key, 'values': comma_sep_values})
+                           data={'delay': delay, 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code == 200:
-            return res.json if verbose else True
+            return res.json() if verbose else True
         elif res.status_code == 403:
             return False
         else:

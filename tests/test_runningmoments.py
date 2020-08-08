@@ -4,6 +4,7 @@ from statistics import variance, pvariance
 from creme.preprocessing import StandardScaler
 from scipy.stats import kurtosis, skew
 
+
 # Check against creme
 
 def test_normal():
@@ -26,13 +27,19 @@ def test_normal():
 
 
 def test_kurtosis():
-    xs = list(np.random.randn(100))
+    xs = list(np.random.randn(200))
     machine = RunningKurtosis()
     for x in xs:
         machine.update(value=x)
 
-    assert( abs( machine.kurtosis()-kurtosis(xs) )<0.01 )
-    assert (abs(machine.skewness() - skew(xs)) < 0.01)
+    k1 = machine.kurtosis()
+    k2 = kurtosis(xs, fisher=True)
+    k3 = kurtosis(xs, fisher=False)
 
+    assert (abs(k1 - k2) < 0.0001)
 
+    s1 = machine.skewness()
+    s2 = skew(xs, bias=False)
+    s3 = skew(xs, bias=True)
 
+    assert (abs(s1 - s2) < 0.03)

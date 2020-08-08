@@ -14,4 +14,4 @@ def test_getters():
     for delay in mr.DELAYS:
         p1 = mr.get_discrete_pdf_lagged(name=DIE, delay=delay )
         assert p1 is not None
-        assert abs(p1 - 0.1666) < 0.1, "Oh man this die market is so inefficient!"
+        assert abs(p1['y'][0] - 0.1666) < 0.1, "Oh man this die market is so inefficient!"

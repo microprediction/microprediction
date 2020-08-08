@@ -3,11 +3,13 @@
 
 from microprediction.onlinecrawler import OnlineStreamCrawler
 from tdigest import TDigest
-from microprediction.samplers import is_process, inv_cdf_walk, approx_dt
+from microprediction.samplers import is_process, inv_cdf_walk
+from microprediction.univariate.arrivals import approx_dt
 import numpy as np
 import math
 
 # See statesboy_cat.py for a simpler way to achieve the same end
+
 
 class DigestCrawler(OnlineStreamCrawler):
 

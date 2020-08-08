@@ -129,11 +129,10 @@ class MicroReader(MicroConventions):
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
         return discrete_cdf(raw_cdf) if as_discrete else raw_cdf
 
-    def get_cdf(self, name: str, delay: int, values: [float], as_discrete=False):
+    def get_cdf(self, name: str, delay: int, values: [float], as_discrete=False) -> dict:
         """
-
+            Get CDF using supplied x values
         """
-        values = cdf_values(lagged_values=lagged_values, num=num, as_discrete=as_discrete)
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
         return discrete_cdf(raw_cdf) if as_discrete else raw_cdf
 
@@ -171,8 +170,8 @@ class MicroReaderStatus(MicroReader):
                     'get_summary': {'name': 'cop.json'},
                     'get_lagged_values': {'name': 'cop.json'},
                     'get_lagged_times': {'name': 'cop.json'},
-                    'get_delayed_value': {'name': 'cop.json'},
-                    'get_cdf': {'name': 'cop.json'}
+                    'get_delayed_value': {'name': 'cop.json','delay':self.DELAYS[2]},
+                    'get_cdf': {'name': 'cop.json','delay':self.DELAYS[2],'values':[-1,0,1]}
                     }
         report = list()
         for method, kwargs in examples.items():
