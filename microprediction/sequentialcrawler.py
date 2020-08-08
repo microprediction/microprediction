@@ -1,9 +1,10 @@
-from microprediction.samplers import is_process, inv_cdf_walk, approx_dt
+from microprediction.samplers import is_process, inv_cdf_walk
+from microprediction.univariate.arrivals import approx_dt
 import numpy as np
 import math
 from microprediction.statefulcrawler import StreamCrawler
-from microprediction.univariate.distributionmachine import DistributionMachine
-from microprediction.univariate.digestmachine import DigestMachine
+from microprediction.univariate.distmachine import DistMachine
+from microprediction.univariate.digestdist import DigestDist
 from typing import Type
 
 
@@ -15,7 +16,7 @@ class SequentialStreamCrawler(StreamCrawler):
     #   No need to change this class. Supply DistributionMachine type to constructor  #
     ###################################################################################
 
-    def __init__(self, machine_type: Type[DistributionMachine] = DigestMachine, **kwargs):
+    def __init__(self, machine_type: Type[DistMachine] = DigestDist, **kwargs):
         """
              machine_type : Class
         """

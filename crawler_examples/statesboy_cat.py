@@ -3,10 +3,10 @@
 
 from microprediction.config_private import STATESBOY_CAT
 from tdigest import TDigest
-from microprediction import SequentialStreamCrawler, DistributionMachine
+from microprediction import SequentialStreamCrawler, DistMachine
 
 
-class DigestMachine(DistributionMachine):
+class DigestMachine(DistMachine):
 
     def __init__(self):
         super().__init__()

@@ -1,10 +1,10 @@
-from microprediction.univariate.distributionmachine import DistributionMachine
+from microprediction.univariate.distmachine import DistMachine
 from tdigest import TDigest
 
 
-class DigestMachine(DistributionMachine):
+class DigestDist(DistMachine):
 
-    # Default for SequentialStreamCrawler
+    # Default DistMachine used in the SequentialStreamCrawler
 
     def __init__(self):
         super().__init__()

@@ -7,8 +7,8 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="0.10.14",
-    description="Client for www.microprediction.org",
+    version="0.11.4",
+    description="Client for www.microprediction.org turnkey community prediction",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/microprediction/microprediction",
@@ -20,12 +20,12 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["microprediction", "microprediction.live","microprediction.univariate"],
+    packages=["microprediction", "microprediction.live", "microprediction.univariate"],
     test_suite='pytest',
-    tests_require=['pytest'],
+    tests_require=['pytest', 'scipy', 'creme'],
     include_package_data=True,
     install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests", "getjson", "microconventions>=0.0.7",
-                      'pycoingecko', 'apscheduler', 'tdigest','creme'],
+                      'pycoingecko', 'apscheduler', 'tdigest', 'creme'],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",

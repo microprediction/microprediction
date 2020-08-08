@@ -1,7 +1,7 @@
 from microconventions.stats_conventions import StatsConventions
 
 
-class DistributionMachine(object):
+class DistMachine(object):
 
     # Base class for distribution fitting machines
     # SequentialStreamCrawler constructor expects a DistributionMachine

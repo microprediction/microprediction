@@ -245,7 +245,7 @@ class MicroWriter(MicroReader):
         else:
             raise Exception('Failed for ' + self.write_key)
 
-    def submit(self, name, values, delay=None, verbose=None):
+    def submit(self, name, values, delay, verbose=True):
         """ Submit prediction scenarios
         :param name:      str         Examples:    cop.json   z1~cop.json   z2~cop~qp.json
         :param write_key: str         Example:    "5263ee89-e34e-44dc-8b91-445b302b043e"
@@ -259,19 +259,13 @@ class MicroWriter(MicroReader):
                 'It is suggested that you supply delay parameter to submit. Defaulting to shortest horizon but this will be removed in the future',
                 flush=True)
 
-        assert len(values) == self.num_predictions
+        assert len(values) == self.num_predictions,'Wrong number of values submitted. Should be '+str(self.num_predictions)
 
         comma_sep_values = ",".join([str(v) for v in values])
         res = requests.put(self.base_url + '/submit/' + name,
-                           data={'delay': delay, 'write_key': self.write_key, 'values': comma_sep_values})
+                           data={'delay': delay, 'verbose':verbose, 'write_key': self.write_key, 'values': comma_sep_values})
         if res.status_code == 200:
-            if verbose:
-                confirms = self.get_confirms()
-                errors = self.get_errors()
-                pprint.pprint(confirms[-1:])
-                pprint.pprint(errors[-1:])
-                print('', flush=True)
-            return True
+            return res.json if verbose else True
         elif res.status_code == 403:
             return False
         else:

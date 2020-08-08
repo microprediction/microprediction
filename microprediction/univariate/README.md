@@ -1,7 +1,8 @@
 
 # Univariate Distribution Utilities
 
-State machines that increment univariate distributional estimates, and stuff like that
+In our context a DistributionMachine (abbreviated Dist in some derived classes) is a running estimate of a 
+univariate distribution updated one data point at a time. It must possess and inv_cdf function that takes (0,1)->R
 
 ### DistributionMachine in SequentialStreamCrawler 
 

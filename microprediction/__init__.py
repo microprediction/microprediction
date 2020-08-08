@@ -5,10 +5,10 @@ from microprediction.crawler import MicroCrawler
 from microprediction.simplecrawler import SimpleCrawler, RegularCrawler
 from microprediction.onlinecrawler import OnlineStreamCrawler, OnlineHorizonCrawler
 from microprediction.statefulcrawler import StreamCrawler
-from microprediction.sequentialcrawler import DistributionMachine, SequentialStreamCrawler
+from microprediction.sequentialcrawler import DistMachine, SequentialStreamCrawler
 from microprediction.supporter import donate
 from microprediction.looping import PandasLoop
 from microprediction.defaultcrawler import DefaultCrawler
-from microprediction.univariate.digestmachine import DigestMachine
-from microprediction.univariate.normalmachine import NormalMachine
-from microprediction.univariate.distributionmachine import DistributionMachine
+from microprediction.univariate.digestdist import DigestDist
+from microprediction.univariate.normaldist import NormalDist
+from microprediction.univariate.distmachine import DistMachine
