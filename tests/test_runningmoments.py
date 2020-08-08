@@ -42,4 +42,4 @@ def test_kurtosis():
     s2 = skew(xs, bias=False)
     s3 = skew(xs, bias=True)
 
-    assert (abs(s1 - s2) < 0.03)
+    assert (abs(s1 - s2) < 0.06)
