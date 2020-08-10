@@ -22,10 +22,10 @@ setup(
     ],
     packages=["microprediction", "microprediction.live", "microprediction.univariate"],
     test_suite='pytest',
-    tests_require=['pytest', 'scipy', 'creme'],
+    tests_require=['pytest', 'scipy'],
     include_package_data=True,
     install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests", "getjson", "microconventions>=0.0.7",
-                      'pycoingecko', 'apscheduler', 'tdigest', 'creme'],
+                      'pycoingecko', 'apscheduler', 'tdigest'],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",
