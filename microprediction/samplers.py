@@ -70,7 +70,7 @@ def _weighted_random_sample(weights, num, population=None):
     try:
         return random.choices(weights=weights, k=num, population=population)
     except AttributeError:
-        return _alternative_weighted_random_sample(weight=weights, k=num, population=population)
+        return _alternative_weighted_random_sample(weights=weights, k=num, population=population)
 
 
 def _alternative_weighted_random_sample(weights, k, population=None):
