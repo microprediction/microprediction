@@ -67,13 +67,16 @@ def diff_gaussian_samples(lagged, num):
 # --------------------------------------------------------------------------
 
 def _weighted_random_sample(weights, num, population=None):
-    return random.choices(weights=weights, k=num, population=population)
+    try:
+        return random.choices(weights=weights, k=num, population=population)
+    except AttributeError:
+        return _alternative_weighted_random_sample(weight=weights, k=num, population=population)
 
 
-def _alternative_weighted_random_sample(weights, num, population=None):
+def _alternative_weighted_random_sample(weights, k, population=None):
     """ way backward, can probably toss this """
     wrg = _WeightedRandomGenerator(weights)
-    ndx = [wrg() for _ in range(num)]
+    ndx = [wrg() for _ in range(k)]
     return ndx if population is None else [population[k] for k in ndx]
 
 
