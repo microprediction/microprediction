@@ -572,7 +572,7 @@ class MicroCrawler(MicroWriter):
             overdue_for_performance_check = (time.time() - self.last_performance_check > 2 * 60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ', flush=True)
-                self.performance = self.get_performance() or self.percentiles()
+                self.performance = self.get_performance() or self.performance
                 self.active = self.get_active() or self.active
                 active_not_withdrawn = self.active_not_withdrawn(active=self.active)
                 activity_excess = len(active_not_withdrawn) - self.max_active
