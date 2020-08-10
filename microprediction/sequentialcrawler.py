@@ -30,7 +30,7 @@ class SequentialStreamCrawler(StreamCrawler):
         as_process = is_process(chronological_values)
         values = list(np.diff([0.] + chronological_values)) if as_process else chronological_values
         dts = list(np.diff([chronological_times[0] - 1.0] + chronological_times))
-        machine = self.machine_type()
+        machine = self.machine_type(num_predictions=self.num_predictions)
         for value, dt in zip(values, dts):
             machine.update(value=value, dt=dt)
         return {'t': lagged_times[0], 'machine': machine, 'as_process': as_process, 'dt': approx_dt(lagged_times),
