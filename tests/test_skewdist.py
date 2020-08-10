@@ -12,4 +12,4 @@ def test_skewdist():
     percentiles =  [0.25, 0.5, 0.75]
     skew_quantiles = [ sd.inv_cdf(p) for p in percentiles ]
     norm_quantiles = [ StatsConventions.norminv(p) for p in percentiles ]
-    assert abs(skew_quantiles[1])<0.15
+    assert abs(skew_quantiles[1])<0.50
