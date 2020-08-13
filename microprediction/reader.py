@@ -12,6 +12,7 @@ class MicroReader(MicroConventions):
         super().__init__(base_url=base_url or api_url(), **kwargs)
 
     def request_get_json(self, method, arg=None, data=None, throw=True):
+        # TODO: Can remove this after microconventions>0.1.0
         try:
             if data is not None:
                 res = requests.get(self.base_url + '/' + method + '/' + arg, data=data)
