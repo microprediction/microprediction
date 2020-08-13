@@ -7,7 +7,7 @@ class DistMachine(object):
     # SequentialStreamCrawler constructor expects a DistributionMachine
     # This is a state engine that has a ppf function
 
-    def __init__(self):
+    def __init__(self, **ignored):
         pass
 
     def update(self, value: float, dt=None, **ignored):

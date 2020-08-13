@@ -6,7 +6,7 @@ class DigestDist(DistMachine):
 
     # Default DistMachine used in the SequentialStreamCrawler
 
-    def __init__(self):
+    def __init__(self,**ignored):
         super().__init__()
         self.digest = TDigest()
 
