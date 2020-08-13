@@ -45,3 +45,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+      env:
+        MICRO_TEST_CONFIG_URL: ${{secrets.MICRO_TEST_CONFIG_URL}}
+        MICRO_TEST_CONFIG_FAILOVER_URL: ${{secrets.MICRO_TEST_CONFIG_FAILOVER_URL}}

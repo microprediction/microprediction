@@ -31,6 +31,8 @@ jobs:
         pip install setuptools wheel twine
     - name: Build and publish
       env:
+        MICRO_TEST_CONFIG_URL: ${{secrets.MICRO_TEST_CONFIG_URL}}
+        MICRO_TEST_CONFIG_FAILOVER_URL: ${{secrets.MICRO_TEST_CONFIG_FAILOVER_URL}}
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |

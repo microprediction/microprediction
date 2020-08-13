@@ -1,5 +1,6 @@
 from microprediction.reader import MicroReader
 from microconventions import api_url
+from microconventions.value_conventions import ValueConventions
 import requests, pprint, time, json
 from collections import OrderedDict
 
@@ -79,6 +80,64 @@ class MicroWriter(MicroReader):
             pprint.pprint(err)
             print('', flush=True)
             raise Exception('Failed to touch ' + name)
+
+    def delete_state(self, k: int = 0):
+        """ Delete remotely stored state """
+        res = requests.delete(self.base_url + '/state/' + self.write_key, params={'k': k})
+        if res.status_code == 200:
+            return res.json()
+
+    def get_state(self, k: int = 0):
+        """ Get remotely stored state """
+        res = requests.get(self.base_url + '/state/' + self.write_key, data={'k': k})
+        if res.status_code == 200:
+            return self.from_redis_value(res.json())
+
+    def set_state(self, value, k: int = 0):
+        """ Set remotely stored state
+
+              value   dict, list, str
+              k       int               Optional logical index from 0 to 319
+              returns dict
+
+            See https://github.com/microprediction/microstate for current memory size restrictions
+
+        """
+        # It is recommended that value be of type dict, str or list
+        # Other types will come back differently to the way they go in (e.g. tuple->list, float->str)
+        params = {'k': k, 'value': self.to_redis_value(value)}
+        res = requests.put(self.base_url + '/state/' + self.write_key, params=params)
+        if res.status_code == 200:
+            return res.json()
+
+    @staticmethod
+    def to_redis_value(value):
+        """ Used by MicroStateWriter prior to storage in redis database """
+        # This may change if we move to using JSON redis module
+        if ValueConventions.is_valid_value(value):
+            return value
+        elif isinstance(value, (list,dict,tuple)):
+            if ValueConventions.has_nan(value):
+                raise Exception('Values with NaN cannot be stored, sorry')
+            else:
+                try:
+                    return json.dumps(value)
+                except Exception as e:
+                    raise Exception('Value cannot be JSON dumped so cannot be stored '+str(e) )
+
+    @staticmethod
+    def from_redis_value(value):
+        """ Used by MicroStateWriter to infer a Python type """
+        # Note: will not try to convert string back to int or float.
+        # If you wish to preserve type then make it dict, tuple or list
+        try:
+            native = json.loads(value)
+            if isinstance(native, (dict,list,tuple)):
+                return native
+            else:
+                return value
+        except Exception as e:
+            return value
 
     def get_errors(self):
         """ Retrieve private log information """

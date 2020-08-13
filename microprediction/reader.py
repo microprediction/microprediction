@@ -113,7 +113,7 @@ class MicroReader(MicroConventions):
         lagged_values = lagged_values or self.get_lagged_values(name=name)
         values = cdf_values(lagged_values=lagged_values, num=num, as_discrete=True)
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return {'x':raw_cdf['x'], 'y':discrete_pdf(raw_cdf['y'])}
+        return {'x':raw_cdf['x'], 'y':discrete_pdf(raw_cdf['y'])} if raw_cdf.get('x') else raw_cdf
 
     def get_cdf_lagged(self, name: str, delay: int, num: int = 25, lagged_values=None, as_discrete=None):
         """ Get CDF using automatically selected x-values based on lags
@@ -128,14 +128,14 @@ class MicroReader(MicroConventions):
             as_discrete = is_discrete(lagged_values=lagged_values, num=num, ndigits=12)
         values = cdf_values(lagged_values=lagged_values, num=num, as_discrete=as_discrete)
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return discrete_cdf(raw_cdf) if as_discrete else raw_cdf
+        return discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
 
     def get_cdf(self, name: str, delay: int, values: [float], as_discrete=False) -> dict:
         """
             Get CDF using supplied x values
         """
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return discrete_cdf(raw_cdf) if as_discrete else raw_cdf
+        return discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
 
     def _get_cdf(self, name: str, delay: int, values: [float]) -> dict:
         """ Implements approximate cumulative distribution function based on community micropredictions

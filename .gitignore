@@ -1,4 +1,4 @@
-microprediction/config_private.py
+microprediction/set_env_private.py
 **/__pycache*
 *private.py
 bump.sh
