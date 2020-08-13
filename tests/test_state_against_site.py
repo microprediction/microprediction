@@ -18,8 +18,7 @@ def test_state_storage_and_retrieval():
     """ Test on actual redis instance """
     for base_url in BASE_URLS:
         writer = MicroWriter(write_key=TEST_WRITE_KEY,base_url=base_url)
-        k = random.choice(list(range(10)))
-        for value in TEST_VALUES:
+        for k, value in enumerate(TEST_VALUES):
             res1 = writer.set_state(k=k, value=value)
             assert res1['success']
             value_back = writer.get_state(k=k)
