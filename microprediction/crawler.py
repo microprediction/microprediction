@@ -569,7 +569,7 @@ class MicroCrawler(MicroWriter):
                 print('Resetting withdrawal records', flush=True)
 
             # Withdraw if need be from losing propositions
-            overdue_for_performance_check = (time.time() - self.last_performance_check > 2 * 60) or catching_up
+            overdue_for_performance_check = (time.time() - self.last_performance_check > 10 * 60) or catching_up
             if overdue_for_performance_check:
                 print('Checking performance ', flush=True)
                 self.performance = self.get_performance() or self.performance

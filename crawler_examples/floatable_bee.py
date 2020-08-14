@@ -4,13 +4,11 @@ from microprediction.univariate.processes import is_process
 from microprediction.univariate.digestdist import DigestDist
 
 # Illustrates deriving from SequentialStreamCrawler
-# This creates a crawler that (maybe) handles noisy processes better because
-# it floats in a cloud of noisy measurements rather than chasing the last one.
 
-# It is also supposed to demonstrate how you might combine a point estimate
-# with an existing distributional estimate
-
-# Soon there will be a simpler way to do this
+# This creates a crawler that sometimes handles noisy processes better because
+# it "floats" ... moving slowly through observations rather than chasing the last one.
+# (this example is also supposed to demonstrate how you might combine a point estimate
+# with an existing distributional estimate. Soon there will be a simpler way to do this)
 
 
 class FloatingCrawler(SequentialStreamCrawler):
