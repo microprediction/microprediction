@@ -3,6 +3,7 @@ from microprediction.config_private import FLASHY_COYOTE
 import requests
 from pprint import pprint
 
+# Documents payloads, urls, example objects
 
 class MicroReadDocumentor(MicroConventions):
 

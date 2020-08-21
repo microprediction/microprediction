@@ -37,14 +37,24 @@ class MicroReader(MicroConventions):
         return self.request_get_json(method='leaderboards', arg=name, data={"delay": delay}, throw=throw)
         # res = requests.get(self.base_url + '/leaderboards/' + name, data={"delay": delay})
 
-    def get_overall(self):
+    def get_overall(self) -> dict:
         return self.request_get_json(method='overall')
 
-    def get_sponsors(self):
+    def get_sponsors(self) -> dict:
         return self.request_get_json(method='sponsors')
 
-    def get_streams(self):
+    def get_streams(self) -> dict:
         return self.get_sponsors()
+
+    def get_prizes(self) -> dict:
+        return self.request_get_json(method='prizes')
+
+    def get_prize_leaderboard(self, prize_type:str,sponsor: str):
+        assert prize_type in ['overall','regular','bivariate','trivariate']
+        return self.request_get_json(method=prize_type + '/'+sponsor)
+
+    def get_stream_names(self) -> [str]:
+        return [ name for name in self.get_streams() ]
 
     def get_budgets(self):
         return self.request_get_json(method='budgets')
