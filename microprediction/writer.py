@@ -381,3 +381,9 @@ class MicroWriter(MicroReader):
             print('Cancelled participation in ' + str(horizon), flush=True)
             time.sleep(0.1)
         return horizons
+
+    def cancel_all(self):
+        for horizon in self.get_active():
+            name, delay = self.split_horizon_name(horizon)
+            self.cancel(name=name, delays=[delay])
+            time.sleep(0.5)

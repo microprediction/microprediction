@@ -4,9 +4,7 @@ import time
 from collections import OrderedDict
 
 
-
 class OnlineHorizonCrawler(MicroCrawler):
-
 
     # Crawler maintains a queue of horizons and cycles through them, calibrating as it goes
     # To use this crawler, override the initial_state() and update_state() methods
