@@ -11,6 +11,7 @@ def include_crypto(name):
     """ Tell it to only look at some crypto streams """
     return 'btc' in name or 'c5_' in name
 
+
 RESET_PERFORMANCE_ON_RESTART = True
 
 if __name__ == '__main__':

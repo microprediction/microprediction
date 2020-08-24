@@ -3,7 +3,7 @@ from microprediction.crawler import MicroCrawler
 
 CURATED = ['bart_delays.json', 'altitude.json', 'traffic_absolute_speed.json', 'hospital_bike_activity.json',
            'badminton_x.json', 'helicopter_theta.json', 'seattle_wind_direction.json', 'seattle_wind_speed.json',
-           'three_body_z.json', 'pandemic_infected.json', 'goog.json']  # TODO: Replace with featured list API
+           'three_body_z.json', 'pandemic_infected.json', 'goog.json']
 
 
 class SimpleCrawler(MicroCrawler):
