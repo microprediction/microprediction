@@ -22,7 +22,7 @@ if __name__ == '__main__':
         try:
             crawler.cancel_all()
         except Exception:
-            print('Looks like you are using an older version than 0.11.13')
+            print('Looks like you are using an older version than 0.11.13. Not to worry ...')
             for horizon in crawler.get_active():
                 name, delay = crawler.split_horizon_name(horizon)
                 crawler.cancel(name=name, delays=[delay])
