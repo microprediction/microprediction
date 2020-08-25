@@ -1,9 +1,8 @@
-from microprediction import new_key, MicroWriter
-import numpy as np
-try:
-    from microprediction.config_private import DODDLE_MAMMAL
-except:
-    DOODLE_MAMMAL=None
+from microprediction import MicroWriter
+from microprediction.set_config import MICRO_TEST_CONFIG
+
+DODDLE_MAMMAL = MICRO_TEST_CONFIG['DODDLE_MAMMAL']
+
 
 def test_repo_live():
     if DODDLE_MAMMAL is not None:
@@ -15,5 +14,4 @@ def test_repo_live():
         res = mw.delete_repository()
         mw.set_repository(url=saved_url)
         saved_back = mw.get_own_repository()
-        assert saved_back==saved_url
-
+        assert saved_back == saved_url
