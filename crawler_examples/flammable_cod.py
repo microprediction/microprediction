@@ -1,6 +1,7 @@
 from microprediction import MicroCrawler
 import numpy as np
 
+
 class FlammableCod(MicroCrawler):
     " Example crawler ... this guy helps flush the pipes by entering quickly and getting out quickly "
 

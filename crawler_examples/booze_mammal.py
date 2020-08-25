@@ -2,6 +2,7 @@ from microprediction.config_private import BOOZE_MAMMAL
 from microprediction import MicroCrawler
 import numpy as np
 
+
 class BoozeMammal(MicroCrawler):
 
     """Example crawler ... z-streams only and predicts slightly fatter tails
