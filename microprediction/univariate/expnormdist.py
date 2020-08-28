@@ -10,19 +10,33 @@ from microprediction.univariate.runningmoments import RunningVariance
 
 # Example of a distribution that can be fitted using hyperopt
 
+DEFAULT_EXPNORM_PARAMS = {'g1': 0.5, 'g2': 5.0, 'logK': -2., 'loc': 0.0, 'logScale': 0.0}
+DEFAULT_EXPNORM_LOWER = {'g1': 0.001, 'g2': 0.001, 'logK': -5, 'loc': -0.15, 'logScale': -4}
+DEFAULT_EXPNORM_UPPER = {'g1': 1.0, 'g2': 1.2, 'logK': 1, 'loc': 0.15, 'logScale': 4.0}
+DEFAULT_EXPNORM_HYPER = {'lower_bounds': deepcopy(DEFAULT_EXPNORM_LOWER),
+                         'upper_bounds': deepcopy(DEFAULT_EXPNORM_UPPER),
+                         'space': None, 'algo': None, 'max_evals': 11}
+
+
+def dict_sans_none(d):
+    """ Return copy of dict without None fields """
+    return dict([(k, v) for k, v in d.items() if v is not None])
+
 
 class ExpNormDist(FitDist, ABC):
 
     # This moves an anchor point using a two-parameter gain function
     # It judges likelihood based on a symmetric combination of expnorm distributions
 
-    def __init__(self, params: OrderedDict = None, state=None):
-        params = params or OrderedDict({'g1': 0.5, 'g2': 5.0, 'logK': -2.,'loc':0.0,'logScale':0.0})
-        lower_bounds = {'g1': 0.001, 'g2': 0.001, 'logK': -5, 'loc': -0.15,'logScale':-4}
-        upper_bounds = {'g1': 1.0, 'g2': 1.2, 'logK': 1, 'loc': 0.15,'logScale':4.0}
-        state = state or {'anchor': None}
-        super().__init__(params=params, state=state,
-                         lower_bounds=lower_bounds, upper_bounds=upper_bounds)
+    def __init__(self, params: OrderedDict = None, state=None, hyper_params: dict = None):
+        self_params = OrderedDict(deepcopy(DEFAULT_EXPNORM_PARAMS))
+        if params is not None:
+            self_params.update(dict_sans_none(params))
+        self_hyper_params = deepcopy(DEFAULT_EXPNORM_HYPER)
+        if hyper_params is not None:
+            self_hyper_params.update(dict_sans_none(hyper_params))
+        self_state = state or {'anchor': None}
+        super().__init__(params=self_params, state=self_state, hyper_params=self_hyper_params)
         self.cached_params = None
         self.num_interp = 500
         self.cached_samples = None
@@ -50,7 +64,8 @@ class ExpNormDist(FitDist, ABC):
 
     def inv_cdf(self, p: float) -> float:
         """ PPF function for mixture of two exponorm distributions """
-        if self.cached_samples is None or self.cached_params is None or self.params != self.cached_params or any(np.isnan(self.cached_samples)):
+        if self.cached_samples is None or self.cached_params is None or self.params != self.cached_params or any(
+                np.isnan(self.cached_samples)):
             logK, loc, logScale, num = self.params['logK'], self.params['loc'], self.params['logScale'], self.num_interp
             K = math.exp(logK)
             scale = math.exp(logScale)

@@ -2,41 +2,63 @@ from microprediction.univariate.fitdist import FitDist
 from microprediction.sequentialcrawler import SequentialStreamCrawler
 from typing import Type
 from collections import OrderedDict
-from queue import LifoQueue, Empty
 from pprint import pprint
 from microprediction.samplers import is_process
 import math
 import numpy as np
 import random
 import time
+from copy import deepcopy
+from microprediction.univariate.arrivals import approx_dt
+
 
 # Stream crawler that periodically fits parameters
 
 
 class FitCrawler(SequentialStreamCrawler):
 
-    def __init__(self, write_key, machine_type: Type[FitDist], state: dict = None, params: OrderedDict = None,
+    def __init__(self, write_key, machine_type: Type[FitDist], machine_state: dict = None,
+                 machine_params: OrderedDict = None,
                  lower_bounds: dict = None, upper_bounds: dict = None, space=None, algo=None, max_evals=10,
-                 min_seconds=20, min_elapsed = 5*60*60, decay=0.002, **kwargs):
+                 min_seconds=20, min_elapsed=5 * 60 * 60, decay=0.002, **kwargs):
         """
-                state          -  Initial state of HyperDist objects
+                state          -  Dictionary of state held for each stream. Supply None unless restarting.
                 params         -  Initial params of HyperDist objects
-                lower_bounds, upper_bounds - An alternative to providing 'space'
+                lower_bounds, upper_bounds - An easy alternative to providing hyperopt 'space'
                 space          -  Hyperopt space object
-                algo           -  Hyperopt algorithm choice
-                max_evals      -  Number of hyperopt function evaluations to allow
-                min_seconds    -  Minimum number of seconds we need in order to attempt fitting
+                algo           -  Hyperopt algorithm choice (supply None to let it choose)
+                max_evals      -  Total number of trials to keep (=hyperopt function evaluations per fitting)
+                min_seconds    -  Minimum number of seconds that must open up before we attempt a fitting
                 min_elapsed    -  Minimum time between attempts to fit a given time series
 
         """
-        machine_params = {'state': state, 'params': params, 'lower_bounds': lower_bounds,
-                          'upper_bounds': upper_bounds, 'space': space, 'algo': algo, 'max_evals': max_evals}
-        super().__init__(write_key=write_key, machine_type=machine_type, machine_params=machine_params, **kwargs)
-        self.fit_queue = list()          # List of streams that need fitting
-        self.min_seconds = min_seconds   # Minimum time that must open up in order that we try to fit
+        self.machine_hyper_params = {'lower_bounds': lower_bounds, 'upper_bounds': upper_bounds,
+                                     'space': space, 'algo': algo, 'max_evals': max_evals}
+
+        super().__init__(write_key=write_key, machine_type=machine_type, machine_params=machine_params,
+                         machine_state=machine_state, **kwargs)
+        self.fit_queue = list()  # List of streams that need fitting
+        self.min_seconds = min_seconds  # Minimum time that must open up in order that we try to fit
         self.last_fit_time = dict()
         self.min_elapsed = min_elapsed
         self.decay = decay
+
+    def initial_state(self, name, lagged_values, lagged_times, machine_params=None, machine_state=None, **ignore):
+        #
+        machine = self.machine_type(params=deepcopy(machine_params),
+                                    state=deepcopy(machine_state),
+                                    hyper_params=deepcopy(self.machine_hyper_params))
+
+        chronological_values = list(reversed(lagged_values))
+        chronological_times = list(reversed(lagged_times))
+        as_process = is_process(chronological_values)
+        values = list(np.diff([0.] + chronological_values)) if as_process else chronological_values
+        dts = list(np.diff([chronological_times[0] - 1.0] + chronological_times))
+
+        for value, dt in zip(values, dts):
+            machine.update(value=value, dt=dt)
+        return {'t': lagged_times[0], 'machine': machine, 'as_process': True, 'dt': approx_dt(lagged_times),
+                'name': name}
 
     def fit(self, name, lagged_values, lagged_times=None, **ignored):
         """ Fit one stream, but only if the distribution machine supplied has a fit method """
@@ -46,7 +68,6 @@ class FitCrawler(SequentialStreamCrawler):
                 {name: self.initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times)})
         else:
             machine = self.stream_state[name]['machine']
-            changed = machine.fit(lagged_values=lagged_values, lagged_times=lagged_times)
             try:
                 changed = machine.fit(lagged_values=lagged_values, lagged_times=lagged_times)
                 if changed:
@@ -54,7 +75,9 @@ class FitCrawler(SequentialStreamCrawler):
                     pprint(machine.params)
                     print(' ', flush=True)
             except AttributeError:
-                pass
+                print('Keeping the same params for ' + name)
+                pprint(machine.params)
+                print(' ', flush=True)
         return changed
 
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
@@ -63,8 +86,8 @@ class FitCrawler(SequentialStreamCrawler):
         if is_process(lagged_values):
             if name not in self.stream_state:
                 self.stream_state.update(
-                    {name: self.initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times)})
-
+                    {name: self.initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times,
+                                              machine_state=self.machine_state, machine_params=self.machine_params)})
             state = self.stream_state[name]
             state = self.update_state(state=state, lagged_values=lagged_values, lagged_times=lagged_times)
             samples = self.sample_using_state(state=state, lagged_values=lagged_values, lagged_times=lagged_times,
@@ -89,7 +112,7 @@ class FitCrawler(SequentialStreamCrawler):
             except IndexError:
                 pass
         if name is not None:
-            if name not in self.last_fit_time or time.time()-self.last_fit_time[name]>self.min_elapsed:
+            if name not in self.last_fit_time or time.time() - self.last_fit_time[name] > self.min_elapsed:
                 try:
                     lagged_values, lagged_times = self.get_lagged_values_and_times(name=name)
                 except AttributeError:  # backward compat
@@ -98,9 +121,9 @@ class FitCrawler(SequentialStreamCrawler):
                 self.fit(name=name, lagged_values=lagged_values, lagged_times=lagged_times)
                 self.fit_queue.append(name)
                 self.last_fit_time[name] = time.time()
-        seconds_used = time.time()-start_time
+        seconds_used = time.time() - start_time
         seconds_remaining = seconds - seconds_used
-        if seconds_remaining>1:
+        if seconds_remaining > 1:
             super().downtime(seconds=seconds_remaining)
 
     def sample_using_state(self, state, lagged_values, lagged_times, name, delay, **ignored):
@@ -117,7 +140,7 @@ class FitCrawler(SequentialStreamCrawler):
         machine = deepcopy(state['machine'])
 
         # Walk back to get a good place to start
-        for value,dt in zip(lagged_values,dts):
+        for value, dt in zip(lagged_values, dts):
             machine.update(value=value)
 
         # Walk forward tracking anchor
@@ -130,7 +153,7 @@ class FitCrawler(SequentialStreamCrawler):
 
         # Sample randomly from walk and noise distribution, with some recently weighting for the former
         measurement_noise = [machine.inv_cdf(p) for p in self.percentiles()]
-        steps_back = range(num_steps+1, len(lagged_values)-1)
+        steps_back = range(num_steps + 1, len(lagged_values) - 1)
         weights = [math.exp(-self.decay * lag) for lag in steps_back]
         back_choices = random.choices(population=steps_back, weights=weights, k=self.num_predictions)
         num = len(lagged_values)

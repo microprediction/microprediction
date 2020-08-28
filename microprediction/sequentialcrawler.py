@@ -17,7 +17,7 @@ class SequentialStreamCrawler(StreamCrawler):
     #   No need to change this class. Supply DistributionMachine type to constructor  #
     ###################################################################################
 
-    def __init__(self, machine_type: Type[DistMachine] = DigestDist, machine_params=None, machine_state=None, **kwargs):
+    def __init__(self, machine_type: Type[DistMachine] = DigestDist, machine_params=None, machine_state=None,  **kwargs):
         """
              **kwargs     : Arguments to MicroCrawler
              machine_type : Class
