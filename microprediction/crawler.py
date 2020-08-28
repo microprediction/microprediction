@@ -500,6 +500,13 @@ class MicroCrawler(MicroWriter):
             time.sleep(0.1)
         return horizons
 
+    def withdraw_from_all(self):
+        horizons = self.get_active()
+        non_cancelled = [h for h in horizons if not h in self.withdrawn]
+        for horizon in non_cancelled:
+            self.withdraw(horizon=horizon)
+            time.sleep(1.0)
+
     def identity_reminder(self):
         # In case people run the crawler with initial key mining and lose it in the logs ...
         print('-------------------------------------------------------------')
@@ -522,7 +529,7 @@ class MicroCrawler(MicroWriter):
             print('Reverting to original stop_loss ' + str(self.stop_loss), flush=True)
             self.stop_loss = self.original_stop_loss
 
-    def run(self, timeout=None):
+    def run(self, timeout=None, withdraw_all=True):
         """
             The crawler visits streams. It maintains a list of expected times at which new data points will arrive. At the annointed time(s), it
             submits predictions after the new data has arrived. It periodically looks for new horizons. It periodically withdraws from horizons where
@@ -534,10 +541,12 @@ class MicroCrawler(MicroWriter):
         """
         print(self.animal + " restarting at " + str(datetime.datetime.now()), flush=True)
         self.startup_callback()
+        if withdraw_all:
+            self.withdraw_from_all()
 
         # Catch up on what we've missed
-        self.performance = self.get_performance() or self.get_performance()  # Try twice
-        self.active = self.get_active() or self.get_active()
+        self.performance = self.get_performance() or self.get_performance()  or self.get_performance()
+        self.active = self.get_active() or self.get_active() or self.get_active()
         self.start_time = time.time()
         self.end_time = time.time() + timeout if timeout is not None else time.time() + 10000000
         self.last_performance_check = time.time() - 1000
