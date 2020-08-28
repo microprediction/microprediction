@@ -1,0 +1,1 @@
+{"$schema": "http://json-schema.org/schema#", "anyOf": [{"type": "array", "items": [{}]}, {"type": "object", "properties": {"amount": {"type": "integer"}, "article": {"type": "string"}, "description": {"type": "string"}, "sponsor": {"type": "string"}, "type": {"type": "string"}}, "required": ["amount", "article", "description", "sponsor", "type"]}]}
