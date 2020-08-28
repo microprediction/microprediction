@@ -12,7 +12,7 @@ class DigestMachine(DistMachine):
         super().__init__()
         self.digest = TDigest()
 
-    def update(self, value, dt=None, **ignored):
+    def update(self, value, dt=None, **kwargs):
         self.digest.update(value)
 
     def inv_cdf(self, p):

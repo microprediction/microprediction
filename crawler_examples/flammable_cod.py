@@ -27,6 +27,6 @@ if __name__ == "__main__":
         mw.set_repository(
             'https://github.com/microprediction/microprediction/blob/master/crawler_examples/flammable_cod.py')
     except ImportError:
-        mw = FlammableCod(difficulty=9)
-    print(FLAMMABLE_COD.animal,flush=True)
+        mw = FlammableCod(difficulty=10)
+    print(mw.animal,flush=True)
     mw.run()

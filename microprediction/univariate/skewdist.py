@@ -10,22 +10,24 @@ from microprediction.samplers import evenly_spaced_percentiles
 # A bit of a whim so use at your own risk
 
 
-class SkewDist(RunningKurtosis, DistMachine):
+class SkewDist(DistMachine):
 
-    def __init__(self, num_predictions, **kwargs):
-        super().__init__(**kwargs)
-        self.cdf = None
-        self.num_predictions = num_predictions
-        self.percentiles = evenly_spaced_percentiles(num=self.num_predictions)
+    def __init__(self, state:RunningKurtosis=None, num_interp=500, **ignore):
+        state = state or RunningKurtosis()
+        super().__init__(state=state,params=None)
+        self.cached_samples = None
+        self.num_interp = num_interp
+        self.percentiles = evenly_spaced_percentiles(num=self.num_interp)
 
-    def update(self, value, dt=None, **ignored):
-        super().update(value=value, dt=dt, **ignored)
-        self.cdf = None
+    def update(self, value=None, dt=None, **kwargs):
+        self.state.update(value=value, dt=dt)
+        self.cached_samples = None
 
     def inv_cdf(self, p):
-        if self.cdf is None:
-            self.cdf = sorted(self.skewed_sample(mean=self.mean, sd=self.std(), skew=self.skewness(), num=self.num_predictions))
-        return np.interp(p, self.percentiles, self.cdf)
+        if self.cached_samples is None:
+            self.cached_samples = sorted(self.skewed_sample(mean=self.state.mean, sd=self.state.std(),
+                                                            skew=self.state.skewness(), num=self.num_interp))
+        return np.interp(p, self.percentiles, self.cached_samples)
 
     @staticmethod
     def skewed_sample(mean, sd, skew, num):

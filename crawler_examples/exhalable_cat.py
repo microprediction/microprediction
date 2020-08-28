@@ -10,7 +10,7 @@ class ShrinkingDigestDist(DigestDist):
 
     def inv_cdf(self, p):
         """ Sprays just a little less """
-        q = 0.9 * p + 0.1 * 0.5
+        q = 0.95 * p + 0.05 * 0.5
         return super().inv_cdf(100. * q)
 
 

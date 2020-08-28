@@ -63,6 +63,15 @@ class MicroReader(MicroConventions):
         return self.request_get_json(method='live', arg='summary::' + name)
         # res = requests.get(self.base_url + '/live/summary::' + name)
 
+    def get_lagged(self,name):
+        return self.request_get_json(method='lagged',arg=name)
+
+    def get_lagged_values_and_times(self, name):
+        lagged = self.get_lagged(name=name)
+        lagged_values = [l[1] for l in lagged]
+        lagged_times  = [l[0] for l in lagged]
+        return lagged_values, lagged_times
+
     def get_lagged_values(self, name):
         """ Retrieve lagged values of a time series
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json

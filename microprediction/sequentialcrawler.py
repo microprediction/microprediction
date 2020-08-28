@@ -6,6 +6,7 @@ from microprediction.statefulcrawler import StreamCrawler
 from microprediction.univariate.distmachine import DistMachine
 from microprediction.univariate.digestdist import DigestDist
 from typing import Type
+from copy import deepcopy
 
 
 class SequentialStreamCrawler(StreamCrawler):
@@ -16,21 +17,25 @@ class SequentialStreamCrawler(StreamCrawler):
     #   No need to change this class. Supply DistributionMachine type to constructor  #
     ###################################################################################
 
-    def __init__(self, machine_type: Type[DistMachine] = DigestDist, **kwargs):
+    def __init__(self, machine_type: Type[DistMachine] = DigestDist, machine_params=None, machine_state=None, **kwargs):
         """
+             **kwargs     : Arguments to MicroCrawler
              machine_type : Class
+             machine_params : Listing of arguments that create default machine
         """
         super().__init__(**kwargs)
-        self.machine_type = machine_type
+        self.machine_type   = machine_type
+        self.machine_params = machine_params
+        self.machine_state  = machine_state
 
-    def initial_state(self, name, lagged_values, lagged_times, **ignore):
+    def initial_state(self, name, lagged_values, lagged_times, machine_params=None, machine_state=None, **ignore):
         # This is one off. Restarting may change the classification !
         chronological_values = list(reversed(lagged_values))
         chronological_times = list(reversed(lagged_times))
         as_process = is_process(chronological_values)
         values = list(np.diff([0.] + chronological_values)) if as_process else chronological_values
         dts = list(np.diff([chronological_times[0] - 1.0] + chronological_times))
-        machine = self.machine_type(num_predictions=self.num_predictions)
+        machine = self.machine_type(params=deepcopy( machine_params ), state=deepcopy( machine_state) )
         for value, dt in zip(values, dts):
             machine.update(value=value, dt=dt)
         return {'t': lagged_times[0], 'machine': machine, 'as_process': as_process, 'dt': approx_dt(lagged_times),
@@ -63,3 +68,4 @@ class SequentialStreamCrawler(StreamCrawler):
         else:
             samples = [machine.inv_cdf(p) for p in self.percentiles()]
         return samples
+

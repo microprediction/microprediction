@@ -25,9 +25,9 @@ class FloatingCrawler(SequentialStreamCrawler):
             lagged_values = self.get_lagged_values(name=name)
             return is_process(lagged_values)
 
-    def initial_state(self, name, lagged_values, lagged_times, **ignore):
+    def initial_state(self, name, lagged_values, lagged_times, **machine_params):
         """ Simple moving average """
-        state = super().initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times, **ignore)
+        state = super().initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times, **machine_params)
         state['anchor'] = lagged_values[0]
         return state
 

@@ -1,12 +1,11 @@
 from microprediction.univariate.skewdist import SkewDist
-from microconventions.stats_conventions import StatsConventions
 import numpy as np
 from scipy.stats import skewnorm
 import random
 
 
 def test_skewdist():
-    sd = SkewDist(num_predictions=500)
+    sd = SkewDist(num_interp=500)
     a = random.choice([2., 3., 4.])
     xs = skewnorm.rvs(a, size=1000)
 
@@ -18,6 +17,6 @@ def test_skewdist():
     actual_quantiles = [np.quantile(xs, q) for q in percentiles]
     assert all(abs(z1 - z2) < 0.75 for z1, z2 in zip(skew_quantiles, actual_quantiles))
 
-    sd_stats = [sd.mean, sd.var(), sd.skewness(), sd.kurtosis()]
+    sd_stats = [sd.state.mean, sd.state.var(), sd.state.skewness(), sd.state.kurtosis()]
     moment_comparison = list(zip(sd_stats, skewnorm.stats(a, moments='mvsk')))
     pass

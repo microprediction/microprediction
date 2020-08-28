@@ -132,7 +132,7 @@ class MicroCrawler(MicroWriter):
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
         """ An example of a sample method. This is where all the intelligence goes
 
-               :param lagged_times [ float ]    List with most recent listed first
+               :param lagged_values [ float ]    List with most recent listed first
                :param lagged_times [ float ]    List of epoch times, most recent listed first
                :param name          str         Name of stream
                :param delay         int         Prediction horizon in seconds
@@ -418,13 +418,16 @@ class MicroCrawler(MicroWriter):
             self.update_seconds_until_next(exclude=[horizon])
             scenario_values = self.sample(lagged_values=lagged_values, lagged_times=lagged_times, name=name,
                                           delay=delay)
-            execut = self.submit(name=name, values=scenario_values, delay=delay)
-            message.update({'submitted': True, 'exec': execut})
-            message.update({"median": median(scenario_values),
-                            "mean": np.mean(scenario_values),
-                            "std": np.std(scenario_values),
-                            "min": scenario_values[0],
-                            "max": scenario_values[-1]})
+            if scenario_values is not None:
+                execut = self.submit(name=name, values=scenario_values, delay=delay)
+                message.update({'submitted': True, 'exec': execut})
+                message.update({"median": median(scenario_values),
+                                "mean": np.mean(scenario_values),
+                                "std": np.std(scenario_values),
+                                "min": scenario_values[0],
+                                "max": scenario_values[-1]})
+            else:
+                message.update({'submitted': False})
 
             num_intervals = self.update_frequency(name=name, delay=delay)
             predict_time, dt, earliest, latest, expected_at = self.set_next_prediction_time(lagged_times=lagged_times,

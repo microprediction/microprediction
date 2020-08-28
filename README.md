@@ -181,7 +181,7 @@ you are to go bankrupt.
 If MicroCrawler does not suit your needs you can submit predictions:
 
 ```python
-    scenarios = [ i*0.001 for i in range(mw.num_predictions) ]   # You can do better ! 
+    scenarios = [ i*0.001 for i in range(mw.num_interp) ]   # You can do better ! 
     mw.submit(name='cop.json',values=scenarios, delay=70)        # Specify stream name and also prediction horizon
 ```
 
