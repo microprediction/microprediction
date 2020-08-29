@@ -422,8 +422,16 @@ class MicroCrawler(MicroWriter):
                                 "std": np.std(scenario_values),
                                 "min": scenario_values[0],
                                 "max": scenario_values[-1]})
+                if not execut:
+                    message.update({"submitted": False, "reason": "execution failure"})
+                    if len(set(scenario_values))<len(scenario_values):
+                        print('Execution failed because scenario values were not unique. Use univariate.cdfvalues.nudge ',flush=True)
+                    print('You tried to submit the following '+str(len(scenario_values)))
+                    pprint.pprint(scenario_values)
+                    print('-+-',flush=True)
             else:
-                message.update({'submitted': False})
+                message.update({'submitted': False,'message':'sample method did not produce any value'})
+                execut = False
 
             num_intervals = self.update_frequency(name=name, delay=delay)
             predict_time, dt, earliest, latest, expected_at = self.set_next_prediction_time(lagged_times=lagged_times,
@@ -436,12 +444,7 @@ class MicroCrawler(MicroWriter):
                 int(self.prediction_schedule[horizon] - time.time())) + ' seconds.', flush=True)
             self.submission_callback(message=message)
 
-            if not execut:
-                message.update({"submitted": False, "reason": "execution failure", "confirms": self.get_confirms()[-1:],
-                                "errors": self.get_errors()[-1:]})
-                print("---------- Submission error ------------")
-                pprint.pprint(message)
-                print("-----------------------------")
+
 
         if self.feel_like_talking():
             message.update({'balance': self.get_balance(),
