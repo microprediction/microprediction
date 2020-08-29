@@ -10,6 +10,7 @@ import random
 import time
 from copy import deepcopy
 from microprediction.univariate.arrivals import approx_dt
+from microprediction.univariate.cdfvalues import nudged
 
 
 # Stream crawler that periodically fits parameters
@@ -152,7 +153,6 @@ class FitCrawler(SequentialStreamCrawler):
             walk.append(anchor)
 
         # Sample randomly from walk and noise distribution, with some recently weighting for the former
-        #FIXME: Make sure no two samples are the same, and spread them out a little
         measurement_noise = [machine.inv_cdf(p) for p in self.percentiles()]
         steps_back = range(num_steps + 1, len(lagged_values) - 1)
         weights = [math.exp(-self.decay * lag) for lag in steps_back]
@@ -160,4 +160,4 @@ class FitCrawler(SequentialStreamCrawler):
         num = len(lagged_values)
         samples = [walk[num - step_back + num_steps] - walk[num - step_back] + noise for step_back, noise in
                    zip(back_choices, measurement_noise)]
-        return sorted(samples)
+        return sorted(nudged(samples))

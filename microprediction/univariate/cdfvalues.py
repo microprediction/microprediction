@@ -109,3 +109,35 @@ def quantize(xs, num: int, ndigits: int = 12):
         kdigits = kdigits - 1
 
     return list(quantized_xs)
+
+
+def nudged(xs):
+    """ Bump samples around just a little """
+    noise = np.random.randn(len(xs))
+    xs_sorted = sorted([s + 0.00001 * z for s,z in zip(xs, noise)])
+    min_x = xs[0]
+    max_x = xs[-1]
+    eps = (max_x-min_x)/1000
+    xs_extended = [min_x-10*eps]+list(xs_sorted) + [max_x+eps*10]
+    xs_right = xs_extended[2:]
+    xs_left  = xs_extended[:-2]
+
+    def _nudge(x,x_left,x_right,eps):
+        if abs(x-x_left)<eps:
+            if abs(x_right-x)>3*eps:
+                return x+eps
+            else:
+                return (x_right+x)/2.
+        if abs(x_right-x)<eps:
+            if abs(x-x_left)>3*eps:
+                return x-eps
+            else:
+                return (x+x_left)/2.
+        return x
+
+    return [ _nudge(x,xl,xr,eps) for x,xl,xr in zip(xs_sorted,xs_left, xs_right)]
+
+
+if __name__=='__main__':
+    x = [-3.,0.,0.,0.,0.,0.,1.]
+    y = nudged(x)

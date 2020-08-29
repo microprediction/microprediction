@@ -6,6 +6,7 @@ import math
 import numpy as np
 from microprediction.univariate.cdfvalues import evenly_spaced_percentiles
 from copy import deepcopy
+from microprediction.univariate.cdfvalues import nudged
 from microprediction.univariate.runningmoments import RunningVariance
 
 # Example of a distribution that can be fitted using hyperopt
@@ -74,7 +75,7 @@ class ExpNormDist(FitDist, ABC):
             cdf_2 = [-exponnorm.ppf(p, K=K, loc=loc, scale=scale) for p in percentiles]
             if len(cdf_1) + len(cdf_2) < num:
                 cdf_1 = cdf_1 + [0]
-            self.cached_samples = sorted(cdf_1 + cdf_2)
+            self.cached_samples = sorted(nudged(cdf_1 + cdf_2))
             self.cached_params = deepcopy(self.params)
         combined_percentiles = evenly_spaced_percentiles(self.num_interp)
         return np.interp(p, combined_percentiles, self.cached_samples)

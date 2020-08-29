@@ -220,13 +220,13 @@ class MicroCrawler(MicroWriter):
             print(
                 'WARNING: Did you mean to set a negative stop loss? If you are running the crawler for the first time this might result in almost immediate withdrawal. ',
                 flush=True)
-        self.quietude = int(quietude)  # e.g. if set to 10, will only print 1/10th of the time
-        self.sponsor_min = sponsor_min  # Only choose streams with sponsors at least this long
-        self.stop_loss = stop_loss  # How much to lose before giving up on a stream
+        self.quietude = int(quietude)    # e.g. if set to 10, will only print 1/10th of the time
+        self.sponsor_min = sponsor_min   # Only choose streams with sponsors at least this long
+        self.stop_loss = stop_loss       # How much to lose before giving up on a stream
         self.original_stop_loss = stop_loss
-        self.min_budget = min_budget  # Play with highly competitive algorithms?
-        self.max_budget = max_budget  # Play with highly competitive algorithms?
-        self.min_lags = min_lags  # Insist on historical data
+        self.min_budget = min_budget     # Play with highly competitive algorithms?
+        self.max_budget = max_budget     #
+        self.min_lags = min_lags         # Insist on some historical data
         self.max_lags = max_lags
         self.max_active = max_active
 
@@ -242,14 +242,13 @@ class MicroCrawler(MicroWriter):
         self.seconds_until_next = 10
         self.last_performance_check = time.time()
         self.last_new_horizon = time.time()
-        self.next_prediction_time = dict()  # Indexed by horizon
         self.last_withdrawal_reset = time.time()
 
         # State - other
-        self.withdrawn = list()  # List of horizons we have withdrawn from
-        self.stopped = list()  # A list of horizons where we have hit stop loss and will not enter again
-        self.next_prediction_time = dict()  # A manifest of upcoming data arrivals
-        self.message_log = list()  # A log of detailed messages
+        self.pending_cancellations = list()  # List of horizons we have sent cancellation requests
+        self.withdrawing = list()            # A list of horizons where we have or will cancel entries
+        self.prediction_schedule = dict()    # A manifest of upcoming data arrivals, keyed by horizon
+        self.message_log = list()            # A log of detailed messages
 
     def feel_like_talking(self):
         """ Override this, or set quietude parameter, to determine how often to barf longish messages """
@@ -257,7 +256,7 @@ class MicroCrawler(MicroWriter):
 
     def upcoming(self, num=10, relative=True):
         """ List horizons and seconds until next prediction is required  """
-        soon = sorted(self.next_prediction_time.items(), key=lambda d: d[1])[:num]
+        soon = sorted(self.prediction_schedule.items(), key=lambda d: d[1])[:num]
         if relative:
             t = time.time()
             return [(n, int((s - t) * 10) / 10.0) for n, s in soon]
@@ -269,7 +268,7 @@ class MicroCrawler(MicroWriter):
         upcoming = [t for h, t in self.upcoming(num=2, relative=True) if not h in exclude]
         try:
             self.seconds_until_next = min(upcoming)
-        except:
+        except Exception:
             self.seconds_until_next = 10 * 60
         seconds_until_quit = self.end_time - time.time()
         if int(seconds_until_quit) in [1000, 100, 10, 5]:
@@ -280,18 +279,14 @@ class MicroCrawler(MicroWriter):
 
     def __repr__(self):
         return {'quietude': self.quietude,
-                'sponsor_min': self.sponsor_min,
                 'stop_loss': self.stop_loss,
-                'min_budget': self.min_budget,  # Get rid of this stuff
-                'max_budget': self.max_budget,
                 'min_lags': self.min_lags,
-                'max_lags': self.max_lags,
                 'num_active': len(self.active),
-                'num_withdrawn': len(self.withdrawn),
+                'num_pending_cancellations': len(self.pending_cancellations),
                 'current_balance': self.get_balance(),
                 'recent_errors': self.get_errors()[-3:],
                 'currently_worst': self.worst_active_horizons(stop_loss=self.stop_loss)[:10],
-                'withdrawn': self.withdrawn,
+                'pending_cancellations': self.pending_cancellations,
                 'upcoming': self.upcoming(num=3, relative=True)}
 
     def recent_updates(self):
@@ -299,19 +294,18 @@ class MicroCrawler(MicroWriter):
         return dict([(k, v) for k, v in r.items() if ('recent' in k or 'current' in k)])
 
     def withdraw(self, horizon):
-        """
-            Cancels participation in a horizon by withdrawing predictions, and adds to list of stopped out streams
-        """
         name, delay = self.split_horizon_name(horizon)
         self.cancel(name=name, delays=[delay])
         horizon = self.horizon_name(name=name, delay=delay)
-        if horizon in self.next_prediction_time:
-            del self.next_prediction_time[horizon]
-        self.withdrawn.append(horizon)
-        self.stopped.append(horizon)
+        if horizon in self.prediction_schedule:
+            del self.prediction_schedule[horizon]
+        self.pending_cancellations.append(horizon)
+        self.withdrawing.append(horizon)
         print("Withdrawing from " + horizon, flush=True)
         self.active = self.get_active() or self.active
         self.performance = self.get_performance() or self.performance
+        if horizon in self.prediction_schedule:
+            del(self.prediction_schedule[horizon])
         self.withdrawal_callback(horizon)
 
     def next_horizon(self, exclude=None):
@@ -327,11 +321,11 @@ class MicroCrawler(MicroWriter):
                 delays = self.candidate_delays(name=name)
                 for delay in delays:
                     horizon = self.horizon_name(name=name, delay=delay)
-                    if not horizon in self.stopped:
+                    if not horizon in self.withdrawing:
                         if not horizon in self.active:
-                            if not horizon in self.withdrawn:
-                                if not (horizon in self.next_prediction_time) or time.time() > \
-                                        self.next_prediction_time[horizon]:
+                            if not horizon in self.pending_cancellations:
+                                if not (horizon in self.prediction_schedule) or time.time() > \
+                                        self.prediction_schedule[horizon]:
                                     horizons.append(horizon)
             if horizons:
                 return random.choice(horizons)
@@ -383,6 +377,8 @@ class MicroCrawler(MicroWriter):
         # Anticipate predicting some time after arrival of the next data point
         # If num_intervals>1 we skip since updating is not considered necessary (e.g. z-curves)
         earliest = expected_at + 5 + (num_intervals - 1) * dt
+        if earliest<time.time()+45:
+            earliest = time.time()+45
         latest = expected_at + 10 + (num_intervals - 1) * dt
         predict_time = np.random.rand() * (latest - earliest) + earliest
         assert predict_time > time.time() + 40, 'prediction time too soon'
@@ -400,7 +396,7 @@ class MicroCrawler(MicroWriter):
         if len(lagged_values) > self.max_lags:
             message.update({"reason": "Too many lags", "lagged_len": len(lagged_values)})
             self.withdraw(horizon)
-            self.withdrawn.append(horizon)
+            self.pending_cancellations.append(horizon)
         elif len(lagged_values or []) < self.min_lags:
             message.update({"reason": "Too few lags", "lagged_len": len(lagged_values)})
             if len(lagged_times) > 5:
@@ -411,7 +407,7 @@ class MicroCrawler(MicroWriter):
                     print('Difficulty interpreting next prediction time for ' + horizon + ' as dt=' + str(dt))
             else:
                 next_predict_time = time.time() + 5 * 60
-            self.next_prediction_time[horizon] = next_predict_time
+            self.prediction_schedule[horizon] = next_predict_time
             message.update({"next": next_predict_time, "in": next_predict_time - time.time()})
         else:
             # Call self.sample() but first let it know how much time it has
@@ -435,9 +431,9 @@ class MicroCrawler(MicroWriter):
                                                                                             num_intervals=num_intervals)
             message.update({'earliest': earliest, 'latest': latest})
             message.update({'expected_at': expected_at})
-            self.next_prediction_time[horizon] = predict_time
+            self.prediction_schedule[horizon] = predict_time
             print('Submitted to ' + str(name) + ' ' + str(delay) + 's horizon, and will do so again in ' + str(
-                int(self.next_prediction_time[horizon] - time.time())) + ' seconds.', flush=True)
+                int(self.prediction_schedule[horizon] - time.time())) + ' seconds.', flush=True)
             self.submission_callback(message=message)
 
             if not execut:
@@ -464,14 +460,14 @@ class MicroCrawler(MicroWriter):
 
     def active_not_withdrawn(self, active=None):
         active = active or self.get_active()
-        return [a for a in active if not a in self.withdrawn]
+        return [a for a in active if not a in self.pending_cancellations]
 
     def status_report(self):
         """
             Barf some data about current status of horizons that are active or in the process of withdrawal
         """
         # By all means overwrite this for a less verbose crawler
-        active_not_withdrawn = [a for a in self.active if not a in self.withdrawn]
+        active_not_withdrawn = [a for a in self.active if not a in self.pending_cancellations]
         num_active = len(self.active)
         num_active_nw = len(self.active_not_withdrawn(active=self.active))
         print(self.animal + ' has active submissions for ' + str(num_active) + ' horizons (' + str(
@@ -489,7 +485,7 @@ class MicroCrawler(MicroWriter):
 
     def withdraw_from_worst_active(self, stop_loss, num=1000, performance=None, active=None):
         horizons = self.worst_active_horizons(stop_loss=stop_loss, performance=performance, active=active)[:num]
-        non_cancelled = [h for h in horizons if not h in self.withdrawn]
+        non_cancelled = [h for h in horizons if not h in self.pending_cancellations]
         for horizon in non_cancelled:
             self.withdraw(horizon=horizon)
             delay = int(float(self.split_horizon_name(horizon)[1]))
@@ -502,7 +498,7 @@ class MicroCrawler(MicroWriter):
 
     def withdraw_from_all(self):
         horizons = self.get_active()
-        non_cancelled = [h for h in horizons if not h in self.withdrawn]
+        non_cancelled = [h for h in horizons if not h in self.pending_cancellations]
         for horizon in non_cancelled:
             self.withdraw(horizon=horizon)
             time.sleep(1.0)
@@ -554,7 +550,7 @@ class MicroCrawler(MicroWriter):
         self.stream_candidates = self.candidate_streams()
         desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon
                            in [70, 310, 910]]
-        self.next_prediction_time = dict(
+        self.prediction_schedule = dict(
             [(stream, time.time() + k * self.initial_next_prediction_time_multiplier(stream)) \
              for k, stream in enumerate(self.active) if stream in desired_streams])
         pprint.pprint(self.__repr__())
@@ -576,7 +572,7 @@ class MicroCrawler(MicroWriter):
             # Multiple requests to withdraw from 1hr ahead contests won't do any harm
             overdue_for_withdrawal_reset = time.time() - self.last_withdrawal_reset > 20 * 60
             if overdue_for_withdrawal_reset:
-                self.withdrawn = []
+                self.pending_cancellations = []
                 self.last_withdrawal_reset = time.time()
                 print('Resetting withdrawal records', flush=True)
 
@@ -604,7 +600,7 @@ class MicroCrawler(MicroWriter):
                     self.stream_candidates = self.candidate_streams()
                     print('Currently predicting for ' + str(len(self.active)) + ' horizons but found ' + str(
                         len(self.stream_candidates)) + ' candidate streams to examine.', flush=True)
-                    horizon = self.next_horizon(exclude=self.withdrawn)
+                    horizon = self.next_horizon(exclude=self.pending_cancellations)
                     if horizon is None:
                         print('Cannot find another horizon. Crawler method next_horizon() did not suggest one. ',
                               flush=True)
@@ -653,7 +649,7 @@ class MicroCrawler(MicroWriter):
                             name, delay = self.split_horizon_name(horizon)
                             self.predict_and_submit(name=name, delay=delay, lagged_times=lagged_times)
                         else:
-                            self.next_prediction_time[horizon] = time.time() + delay
+                            self.prediction_schedule[horizon] = time.time() + delay
 
             else:
                 # Nothing much doing. Conserve some CPU.
