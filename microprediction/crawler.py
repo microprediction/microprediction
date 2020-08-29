@@ -246,7 +246,7 @@ class MicroCrawler(MicroWriter):
 
         # State - other
         self.pending_cancellations = list()  # List of horizons we have sent cancellation requests
-        self.withdrawing = list()            # A list of horizons where we have or will cancel entries
+        self.given_up = list()            # A list of horizons where we have or will cancel entries
         self.prediction_schedule = dict()    # A manifest of upcoming data arrivals, keyed by horizon
         self.message_log = list()            # A log of detailed messages
 
@@ -293,19 +293,16 @@ class MicroCrawler(MicroWriter):
         r = self.__repr__()
         return dict([(k, v) for k, v in r.items() if ('recent' in k or 'current' in k)])
 
-    def withdraw(self, horizon):
+    def withdraw(self, horizon, give_up=False):
         name, delay = self.split_horizon_name(horizon)
         self.cancel(name=name, delays=[delay])
         horizon = self.horizon_name(name=name, delay=delay)
         if horizon in self.prediction_schedule:
-            del self.prediction_schedule[horizon]
-        self.pending_cancellations.append(horizon)
-        self.withdrawing.append(horizon)
-        print("Withdrawing from " + horizon, flush=True)
-        self.active = self.get_active() or self.active
-        self.performance = self.get_performance() or self.performance
-        if horizon in self.prediction_schedule:
             del(self.prediction_schedule[horizon])
+        self.pending_cancellations.append(horizon)
+        if give_up:
+            self.given_up.append(horizon)
+        print("Withdrawing from " + horizon, flush=True)
         self.withdrawal_callback(horizon)
 
     def next_horizon(self, exclude=None):
@@ -321,7 +318,7 @@ class MicroCrawler(MicroWriter):
                 delays = self.candidate_delays(name=name)
                 for delay in delays:
                     horizon = self.horizon_name(name=name, delay=delay)
-                    if not horizon in self.withdrawing:
+                    if not horizon in self.given_up:
                         if not horizon in self.active:
                             if not horizon in self.pending_cancellations:
                                 if not (horizon in self.prediction_schedule) or time.time() > \
@@ -490,7 +487,7 @@ class MicroCrawler(MicroWriter):
         horizons = self.worst_active_horizons(stop_loss=stop_loss, performance=performance, active=active)[:num]
         non_cancelled = [h for h in horizons if not h in self.pending_cancellations]
         for horizon in non_cancelled:
-            self.withdraw(horizon=horizon)
+            self.withdraw(horizon=horizon, give_up=True)
             delay = int(float(self.split_horizon_name(horizon)[1]))
             effective_time = datetime.datetime.now() + datetime.timedelta(seconds=delay)
             print('Sent request to withdraw from participation in ' + str(
@@ -501,10 +498,10 @@ class MicroCrawler(MicroWriter):
 
     def withdraw_from_all(self):
         horizons = self.get_active()
-        non_cancelled = [h for h in horizons if not h in self.pending_cancellations]
+        non_cancelled = [h for h in horizons if h not in self.pending_cancellations]
         for horizon in non_cancelled:
             self.withdraw(horizon=horizon)
-            time.sleep(1.0)
+            time.sleep(0.25)
 
     def identity_reminder(self):
         # In case people run the crawler with initial key mining and lose it in the logs ...
