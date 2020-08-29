@@ -152,6 +152,7 @@ class FitCrawler(SequentialStreamCrawler):
             walk.append(anchor)
 
         # Sample randomly from walk and noise distribution, with some recently weighting for the former
+        #FIXME: Make sure no two samples are the same, and spread them out a little
         measurement_noise = [machine.inv_cdf(p) for p in self.percentiles()]
         steps_back = range(num_steps + 1, len(lagged_values) - 1)
         weights = [math.exp(-self.decay * lag) for lag in steps_back]
