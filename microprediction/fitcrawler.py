@@ -21,7 +21,7 @@ class FitCrawler(SequentialStreamCrawler):
     def __init__(self, write_key, machine_type: Type[FitDist], machine_state: dict = None,
                  machine_params: OrderedDict = None,
                  lower_bounds: dict = None, upper_bounds: dict = None, space=None, algo=None, max_evals=10,
-                 min_seconds=20, min_elapsed=5 * 60 * 60, decay=0.002, **kwargs):
+                 min_seconds=20, min_elapsed=5 * 60 * 60, decay=0.02, **kwargs):
         """
                 state          -  Dictionary of state held for each stream. Supply None unless restarting.
                 params         -  Initial params of HyperDist objects
@@ -43,6 +43,11 @@ class FitCrawler(SequentialStreamCrawler):
         self.last_fit_time = dict()
         self.min_elapsed = min_elapsed
         self.decay = decay
+
+    def include_delay(self, delay=None, name=None, **ignore):
+        # It isn't recommended to use FitCrawler for long term predictions
+        # Override if you are feeling bold
+        return delay < 1000
 
     def initial_state(self, name, lagged_values, lagged_times, machine_params=None, machine_state=None, **ignore):
         #
@@ -137,7 +142,6 @@ class FitCrawler(SequentialStreamCrawler):
         dts = reversed(chronological_dt)
         num_steps = int(math.ceil(delay / state['dt']))
 
-        from copy import deepcopy
         machine = deepcopy(state['machine'])
 
         # Walk back to get a good place to start
@@ -155,7 +159,7 @@ class FitCrawler(SequentialStreamCrawler):
         # Sample randomly from walk and noise distribution, with some recently weighting for the former
         measurement_noise = [machine.inv_cdf(p) for p in self.percentiles()]
         steps_back = range(num_steps + 1, len(lagged_values) - 1)
-        weights = [math.exp(-self.decay * lag) for lag in steps_back]
+        weights = [ math.exp(-self.decay * lag) for lag in steps_back ]
         back_choices = random.choices(population=steps_back, weights=weights, k=self.num_predictions)
         num = len(lagged_values)
         samples = [walk[num - step_back + num_steps] - walk[num - step_back] + noise for step_back, noise in
