@@ -1,6 +1,5 @@
 import numpy as np
-import math
-from microprediction.univariate.cdfvalues import discrete_pdf
+from microconventions import discrete_pdf
 
 
 def test_discrete():

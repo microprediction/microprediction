@@ -1,17 +1,5 @@
 import numpy as np
-
-
-# --------------------------------------------------------------------------
-#            Diagnostics
-# --------------------------------------------------------------------------
-# Bit of a placeholder for differencing tests
-
-def sign_changes(lagged):
-    return np.nansum([abs(d) > 1.5 for d in np.diff(np.sign(list(lagged) + [0., 0.]))])
-
-
-def is_process(lagged):
-    return sign_changes(np.diff(lagged)) > 2 * sign_changes(lagged)
+from microconventions import sign_changes, is_process
 
 
 # --------------------------------------------------------------------------

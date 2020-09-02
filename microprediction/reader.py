@@ -1,8 +1,9 @@
-from microconventions import MicroConventions, api_url
+from microconventions import MicroConventions, api_url, LeaderboardVariety, Genus
 import requests, time, sys
 from pprint import pprint
 import numpy as np
-from microprediction.univariate.cdfvalues import evenly_spaced_percentiles, cdf_values, is_discrete, discrete_cdf, discrete_pdf
+from microconventions import evenly_spaced_percentiles, cdf_values, is_discrete, discrete_cdf, discrete_pdf
+from logging import warning
 
 
 class MicroReader(MicroConventions):
@@ -33,15 +34,64 @@ class MicroReader(MicroConventions):
     def get_current_value(self, name, throw=True):
         return self.request_get_json(method='live', arg=name, throw=throw)
 
-    def get_leaderboard(self, name, delay=None, throw=True):
-        return self.request_get_json(method='leaderboards', arg=name, data={"delay": delay}, throw=throw)
-        # res = requests.get(self.base_url + '/leaderboards/' + name, data={"delay": delay})
+    def get_leaderboard(self, variety, throw=True, **kwargs ):
+        """ Get any kind of leaderboard
+               variety  str or LeaderboardVariety    e.g.    'name_and_delay'
+               kwargs should include  'name' and 'delay' in this example
+        """
+        valid_variety = str(LeaderboardVariety[str(variety)])
+        return self.request_get_json(method='leaderboard', arg=valid_variety, data=kwargs, throw=throw)
 
-    def get_overall(self) -> dict:
-        return self.request_get_json(method='overall')
+    def get_leaderboard_from_description(self, description='default', throw=True) -> dict:
+        """ Get main overall leaderboards, which is to say the leaderboards indexed only by memory
+                 description str      'short',  'default',  'long'
+        """
+        memory = self.LEADERBOARD_MEMORIES[description]
+        return self.get_leaderboard(variety='memory',memory=memory,throw=throw)
+
+    def get_leaderboard_movers(self, throw=True) -> dict:
+        return self.get_leaderboard_from_description(description='short', throw=throw)
+
+    def get_leaderboard_for_stream(self, name, throw=True):
+        return self.get_leaderboard(variety=LeaderboardVariety.name, name=name, throw=throw)
+
+    def get_leaderboard_for_horizon(self, horizon=None, name=None, delay=None, throw=True):
+        horizon = horizon or self.horizon_name(name=name, delay=delay)
+        name1, delay1 = self.split_horizon_name(horizon)
+        return self.get_leaderboard(variety=LeaderboardVariety.name_and_delay, name=name1, delay=delay1, throw=throw)
+
+    def get_leaderboard_for_sponsor(self, sponsor, delay:int=None, genus=None, throw=True):
+        """ Sponsor leaderboards, optionally breaking down by delay or genus
+                      genus   optional str or Genus     'regular', 'zscore', 'bivariate', 'trivariate'
+        """
+        variety = LeaderboardVariety.sponsor
+        assert delay in self.DELAYS
+        valid_genus = None
+        if delay is not None:
+            variety = LeaderboardVariety.sponsor_and_delay
+        if genus is not None:
+            valid_genus = str(Genus[str(genus)])
+            variety = LeaderboardVariety.sponsor_and_genus
+        return self.get_leaderboard(variety=variety, sponsor=sponsor, delay=delay, genus=valid_genus, throw=throw)
+
+    def get_leaderboard_for_prize(self, prize: dict):
+        amount = prize.pop('amount')
+        variety = prize.pop('variety')
+        return self.get_leaderboard(variety=variety, **prize)
 
     def get_sponsors(self) -> dict:
+        warning('get_sponsors is deprecated, use get_streams_by_sponsor instead ')
+        return self.get_streams_by_sponsor()
+
+    def get_streams_by_sponsor(self):
         return self.request_get_json(method='sponsors')
+
+    def get_budgets(self):
+        warning('get_budgets is deprecated, use get_streams_by_budget instead ')
+        return self.get_streams_by_budget()
+
+    def get_streams_by_budget(self):
+        return self.request_get_json(method='budgets')
 
     def get_streams(self) -> dict:
         return self.get_sponsors()
@@ -49,15 +99,8 @@ class MicroReader(MicroConventions):
     def get_prizes(self) -> dict:
         return self.request_get_json(method='prizes')
 
-    def get_prize_leaderboard(self, prize_type:str,sponsor: str):
-        assert prize_type in ['overall','regular','bivariate','trivariate']
-        return self.request_get_json(method=prize_type + '/'+sponsor)
-
     def get_stream_names(self) -> [str]:
         return [ name for name in self.get_streams() ]
-
-    def get_budgets(self):
-        return self.request_get_json(method='budgets')
 
     def get_summary(self, name):
         return self.request_get_json(method='live', arg='summary::' + name)

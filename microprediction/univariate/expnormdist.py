@@ -4,9 +4,8 @@ from abc import ABC
 from collections import OrderedDict
 import math
 import numpy as np
-from microprediction.univariate.cdfvalues import evenly_spaced_percentiles
+from microconventions import evenly_spaced_percentiles, nudged
 from copy import deepcopy
-from microprediction.univariate.cdfvalues import nudged
 from microprediction.univariate.runningmoments import RunningVariance
 
 # Example of a distribution that can be fitted using hyperopt
