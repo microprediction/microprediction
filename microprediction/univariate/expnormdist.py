@@ -12,7 +12,7 @@ from microprediction.univariate.runningmoments import RunningVariance
 
 DEFAULT_EXPNORM_PARAMS = {'g1': 0.5, 'g2': 5.0, 'logK': -2., 'loc': 0.0, 'logScale': 0.0}
 DEFAULT_EXPNORM_LOWER = {'g1': 0.001, 'g2': 0.001, 'logK': -5, 'loc': -0.15, 'logScale': -4}
-DEFAULT_EXPNORM_UPPER = {'g1': 1.0, 'g2': 1.2, 'logK': 1, 'loc': 0.15, 'logScale': 4.0}
+DEFAULT_EXPNORM_UPPER = {'g1': 1.0, 'g2': 15.0, 'logK': 1, 'loc': 0.15, 'logScale': 4.0}
 DEFAULT_EXPNORM_HYPER = {'lower_bounds': deepcopy(DEFAULT_EXPNORM_LOWER),
                          'upper_bounds': deepcopy(DEFAULT_EXPNORM_UPPER),
                          'space': None, 'algo': None, 'max_evals': 11}
