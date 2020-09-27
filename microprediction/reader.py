@@ -1,9 +1,7 @@
-from microconventions import MicroConventions, api_url, LeaderboardVariety, Genus
+from microconventions import MicroConventions, api_url
 import requests, time, sys
 from pprint import pprint
 import numpy as np
-from microconventions import evenly_spaced_percentiles, cdf_values, is_discrete, discrete_cdf, discrete_pdf
-from logging import warning
 
 
 class MicroReader(MicroConventions):
@@ -34,60 +32,13 @@ class MicroReader(MicroConventions):
     def get_current_value(self, name, throw=True):
         return self.request_get_json(method='live', arg=name, throw=throw)
 
-    def get_leaderboard(self, variety, throw=True, **kwargs ):
-        """ Get any kind of leaderboard
-               variety  str or LeaderboardVariety    e.g.    'name_and_delay'
-               kwargs should include  'name' and 'delay' in this example
-        """
-        valid_variety = str(LeaderboardVariety[str(variety)])
-        return self.request_get_json(method='leaderboard', arg=valid_variety, data=kwargs, throw=throw)
-
-    def get_leaderboard_from_description(self, description='default', throw=True) -> dict:
-        """ Get main overall leaderboards, which is to say the leaderboards indexed only by memory
-                 description str      'short',  'default',  'long'
-        """
-        memory = self.LEADERBOARD_MEMORIES[description]
-        return self.get_leaderboard(variety='memory',memory=memory,throw=throw)
-
-    def get_leaderboard_movers(self, throw=True) -> dict:
-        return self.get_leaderboard_from_description(description='short', throw=throw)
-
-    def get_leaderboard_for_stream(self, name, throw=True):
-        return self.get_leaderboard(variety=LeaderboardVariety.name, name=name, throw=throw)
-
-    def get_leaderboard_for_horizon(self, horizon=None, name=None, delay=None, throw=True):
-        horizon = horizon or self.horizon_name(name=name, delay=delay)
-        name1, delay1 = self.split_horizon_name(horizon)
-        return self.get_leaderboard(variety=LeaderboardVariety.name_and_delay, name=name1, delay=delay1, throw=throw)
-
-    def get_leaderboard_for_sponsor(self, sponsor, delay:int=None, genus=None, throw=True):
-        """ Sponsor leaderboards, optionally breaking down by delay or genus
-                      genus   optional str or Genus     'regular', 'zscore', 'bivariate', 'trivariate'
-        """
-        variety = LeaderboardVariety.sponsor
-        assert delay in self.DELAYS
-        valid_genus = None
-        if delay is not None:
-            variety = LeaderboardVariety.sponsor_and_delay
-        if genus is not None:
-            valid_genus = str(Genus[str(genus)])
-            variety = LeaderboardVariety.sponsor_and_genus
-        return self.get_leaderboard(variety=variety, sponsor=sponsor, delay=delay, genus=valid_genus, throw=throw)
-
-    def get_leaderboard_for_prize(self, prize: dict):
-        amount = prize.pop('amount')
-        variety = prize.pop('variety')
-        return self.get_leaderboard(variety=variety, **prize)
-
     def get_sponsors(self) -> dict:
-        warning('get_sponsors is deprecated, use get_streams_by_sponsor instead ')
         return self.get_streams_by_sponsor()
 
     def get_streams_by_sponsor(self):
         return self.request_get_json(method='sponsors')
 
     def get_budgets(self):
-        warning('get_budgets is deprecated, use get_streams_by_budget instead ')
         return self.get_streams_by_budget()
 
     def get_streams_by_budget(self):
@@ -173,9 +124,9 @@ class MicroReader(MicroConventions):
         """
         # PDF for continuous case is not implemented yet, sorry!
         lagged_values = lagged_values or self.get_lagged_values(name=name)
-        values = cdf_values(lagged_values=lagged_values, num=num, as_discrete=True)
+        values = self.cdf_values(lagged_values=lagged_values, num=num, as_discrete=True)
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return {'x':raw_cdf['x'], 'y':discrete_pdf(raw_cdf['y'])} if raw_cdf.get('x') else raw_cdf
+        return {'x':raw_cdf['x'], 'y':self.discrete_pdf(raw_cdf['y'])} if raw_cdf.get('x') else raw_cdf
 
     def get_cdf_lagged(self, name: str, delay: int, num: int = 25, lagged_values=None, as_discrete=None):
         """ Get CDF using automatically selected x-values based on lags
@@ -187,17 +138,17 @@ class MicroReader(MicroConventions):
         """
         lagged_values = lagged_values or self.get_lagged_values(name=name)
         if as_discrete is None:
-            as_discrete = is_discrete(lagged_values=lagged_values, num=num, ndigits=12)
-        values = cdf_values(lagged_values=lagged_values, num=num, as_discrete=as_discrete)
+            as_discrete = self.is_discrete(lagged_values=lagged_values, num=num, ndigits=12)
+        values = self.cdf_values(lagged_values=lagged_values, num=num, as_discrete=as_discrete)
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
+        return self.discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
 
     def get_cdf(self, name: str, delay: int, values: [float], as_discrete=False) -> dict:
         """
             Get CDF using supplied x values
         """
         raw_cdf = self._get_cdf(name=name, delay=delay, values=values)
-        return discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
+        return self.discrete_cdf(raw_cdf) if as_discrete and raw_cdf.get('x') else raw_cdf
 
     def _get_cdf(self, name: str, delay: int, values: [float]) -> dict:
         """ Implements approximate cumulative distribution function based on community micropredictions
@@ -216,7 +167,7 @@ class MicroReader(MicroConventions):
 
     def percentiles(self) -> [float]:
         """ A list of 225 evenly spaced numbers in (0,1) """
-        return evenly_spaced_percentiles(num=self.num_predictions)
+        return self.evenly_spaced_percentiles(num=self.num_predictions)
 
 
 class MicroReaderStatus(MicroReader):
