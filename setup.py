@@ -25,7 +25,7 @@ setup(
     tests_require=['pytest', 'scipy'],
     include_package_data=True,
     install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests",
-                      "getjson", "microconventions==0.2.12",
+                      "getjson", "microconventions==0.4.6",
                       'pycoingecko', 'apscheduler', 'tdigest','genson','hyperopt'],
     entry_points={
         "console_scripts": [
