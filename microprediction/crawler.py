@@ -525,7 +525,7 @@ class MicroCrawler(MicroWriter):
             print('Reverting to original stop_loss ' + str(self.stop_loss), flush=True)
             self.stop_loss = self.original_stop_loss
 
-    def run(self, timeout=None, withdraw_all=True):
+    def run(self, timeout=None, withdraw_all=False):
         """
             The crawler visits streams. It maintains a list of expected times at which new data points will arrive. At the annointed time(s), it
             submits predictions after the new data has arrived. It periodically looks for new horizons. It periodically withdraws from horizons where
