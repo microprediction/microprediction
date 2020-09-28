@@ -124,9 +124,13 @@ class FitCrawler(SequentialStreamCrawler):
                 except AttributeError:  # backward compat
                     lagged_values = self.get_lagged_values(name=name)
                     lagged_times = self.get_lagged_times(name=name)
-                self.fit(name=name, lagged_values=lagged_values, lagged_times=lagged_times)
-                self.fit_queue.append(name)
-                self.last_fit_time[name] = time.time()
+                if lagged_values is None or lagged_times is None:
+                    self.fit(name=name, lagged_values=lagged_values, lagged_times=lagged_times)
+                    self.fit_queue.append(name)
+                    self.last_fit_time[name] = time.time()
+                else:
+                    import logging
+                    logging.warning("Could not fit " + name + " because we failed to get lagged_values ")
         seconds_used = time.time() - start_time
         seconds_remaining = seconds - seconds_used
         if seconds_remaining > 1:

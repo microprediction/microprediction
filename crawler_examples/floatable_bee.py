@@ -47,4 +47,5 @@ class FloatingCrawler(SequentialStreamCrawler):
 
 if __name__ == '__main__':
     crawler = FloatingCrawler(write_key=FLOATABLE_BEE, machine_type=DigestDist, min_lags=500, max_active=100)
+    lv = crawler.get_lagged_values(name='three_body_x.json')
     crawler.run()
