@@ -1,15 +1,13 @@
-
-# Only used for testing
-
 from microprediction import MicroCrawler
 import time, datetime, os
 import numpy as np
 from pprint import pprint
 
-class ReportingCrawler(MicroCrawler):
 
-        # Crawler created for testing purposes.
-        # By all means use it for your own testing purposes by providing pass_callback and fail_callback
+# A simple testing crawler that takes a pass_callback and a fail_callback.
+
+
+class ReportingCrawler(MicroCrawler):
 
         def __init__(self, write_key, pass_callback, fail_callback, **kwargs):
             """
@@ -22,7 +20,6 @@ class ReportingCrawler(MicroCrawler):
             self.initial_balance = self.get_balance()
             self.max_balance = self.initial_balance
             self.min_balance = self.initial_balance
-
 
         def setup(self,**kwargs):
             """ Return error messages if any """
@@ -80,14 +77,9 @@ class ReportingCrawler(MicroCrawler):
             try:
                 # ... test nullary getters
                 for method in ['get_confirms','get_sponsors','get_budgets','get_sponsors',
-                               'get_balance','get_errors','get_overall','get_elapsed_since_transaction',
+                               'get_balance','get_errors','get_elapsed_since_transaction',
                                'get_elapsed_since_confirm','maybe_create_key','get_home']:
                     getattr(self,method)()
-
-                # ... and a few requiring arguments
-                method = 'get_leaderboard'
-                self.get_leaderboard(name='cop.json')
-                self.get_leaderboard(name='cop.json',delay=self.DELAYS[0])
 
                 method = 'get_cdf'
                 self.get_cdf_lagged(name='cop.json',delay=self.DELAYS[0])
@@ -167,6 +159,9 @@ if __name__=="__main__":
         pass_callback=None
         fail_callback=None
 
-    crawler = ReportingCrawler(base_url='https://stableapi.microprediction.org',write_key=FLASHY_COYOTE, pass_callback=pass_callback, fail_callback=fail_callback)
+    crawler = ReportingCrawler(base_url='https://devapi.microprediction.org',
+                               write_key=FLASHY_COYOTE,
+                               pass_callback=pass_callback,
+                               fail_callback=fail_callback)
     print(crawler.base_url)
     crawler.run_and_report(timeout=300, name='local test')
