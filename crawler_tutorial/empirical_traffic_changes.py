@@ -15,12 +15,17 @@ class EmpiricalTrafficCrawler(MicroCrawler):
         return delay>50000  # Lower this to have any effect
 
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
-        """ Must return a list of 225 numbers """
+        """ Must return a list of 225 numbers
+
+            In this example we use the empirical distribution of changes
+            We add in some singletons to capture (to some extent) the under-sampled possibilities
+
+        """
         changes = np.diff(list(reversed(lagged_values)),n=4)
         counter = dict(Counter(changes))
         d = dict(counter)
         num_total = len(changes)
-        d1 = dict([ (change,round(225*change_count/num_total)) for change, change_count in d.items()])
+        d1 = dict([ (change,round(175*change_count/num_total)) for change, change_count in d.items()])
         values = list()
         for change, rounded_count in d1.items():
             values.extend( [change]*rounded_count )
@@ -33,8 +38,8 @@ class EmpiricalTrafficCrawler(MicroCrawler):
 
 if __name__=='__main__':
     try:
-        from microprediction.config_private import COSTOTOME_BOA
-        crawler = EmpiricalTrafficCrawler(write_key=COSTOTOME_BOA,stop_loss=5, max_active=15, min_lags=100)
+        from microprediction.config_private import MALAXABLE_FOX
+        crawler = EmpiricalTrafficCrawler(write_key=MALAXABLE_FOX,stop_loss=5, max_active=15, min_lags=100)
         crawler.run()
     except ImportError:
         print('You need a write_key. I''m making one for you now. ')

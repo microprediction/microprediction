@@ -3,7 +3,7 @@ from microprediction.writer import MicroWriter
 from microprediction import new_key
 from microconventions import api_url
 import random, time, datetime
-from microprediction.samplers import exponential_bootstrap, approx_mode
+from microprediction.samplers import exponential_bootstrap, approx_mode, _weighted_random_sample
 import pprint
 import numpy as np
 from statistics import median
@@ -52,22 +52,19 @@ class MicroCrawler(MicroWriter):
     """
 
     #############################################################
-    #   Override these methods to select streamsa and horizons  #
+    #   Override these methods to prioritize streams            #
     #############################################################
 
-    def _default_candidate_streams(self):
-        """ Suggests some streams based on arguments passed to constructor """
-        budgets = self.get_budgets()
-        sponsors = self.get_sponsors()
-        # Stream criteria (combines with AND)
-        not_too_dull = [name for name, budget in budgets.items() if float(budget) >= self.min_budget]
-        not_too_competitive = [name for name, budget in budgets.items() if float(budget) <= self.max_budget]
-        well_sponsored = [name for name, sponsor in sponsors.items() if self.include_sponsor(sponsor=sponsor)
-                          and not self.exclude_sponsor(sponsor=sponsor)
-                          and len(sponsor.replace(' ', '')) >= float(self.sponsor_min)]
-        inclusion_criteria = [not_too_dull, not_too_competitive, well_sponsored]
-        names = list(set.intersection(*map(set, inclusion_criteria)))
+    def stream_importance(self, name):
+        """ By default this is a mix of prize, budget and a random factor """
+        return self._default_stream_importance(name=name)
+
+    def stream_ordering(self, names):
+        """ Modify this to change the default manner in which streams are ordered. This will impact the manner
+            by which the crawler will select streams to participate in.
+        """
         return names
+
 
     def include_sponsor(self, sponsor=None, **ignore):
         """ Override this as you see fit to select streams for your crawler """
@@ -99,8 +96,7 @@ class MicroCrawler(MicroWriter):
              :return [ str ]    List of stream names that your bot would be willing to participate in
 
         """
-        names = self._default_candidate_streams()
-        return [n for n in names if self.include_stream(n) and not self.exclude_stream(n)]
+        return self._default_candidate_streams()
 
     def include_delay(self, delay=None, name=None, **ignore):
         return True
@@ -234,7 +230,10 @@ class MicroCrawler(MicroWriter):
         # (There might be a tiny charge implemented for these operations at some point in the future)
         self.performance = self.get_performance() or self.get_performance()
         self.active = self.get_active() or self.get_active() # List of active horizons
-        self.stream_candidates = self.candidate_streams()
+        self.prizes = self.get_prizes()     # These don't change too often
+        self.sponsors = self.get_sponsors() # Ditto
+        self.budgets = self.get_budgets()   # Ditto
+        self.stream_candidates = self.candidate_streams()  # Order important. Should follow other caching
 
         # State - times
         self.start_time = None  # Don't start this clock until run() is called
@@ -249,6 +248,63 @@ class MicroCrawler(MicroWriter):
         self.given_up = list()            # A list of horizons where we have or will cancel entries
         self.prediction_schedule = dict()    # A manifest of upcoming data arrivals, keyed by horizon
         self.message_log = list()            # A log of detailed messages
+
+        #############################################################
+        #   Maybe leave these alone                                 #
+        #############################################################
+
+    def stream_prizes(self, name):
+        """ Return list of prizes for a stream """
+        # (Written so that it can be moved to MicroReader)
+        try:
+            sponsors = self.sponsors
+        except AttributeError:
+            sponsors = self.get_sponsors()
+        try:
+            prizes = self.prizes
+        except AttributeError:
+            prizes = self.get_prizes()
+
+        animal = sponsors[name]
+        return [p for p in prizes if self.animal_from_code(p['sponsor']) == animal]
+
+    def stream_prizemoney(self, name):
+        return sum([float(sp['amount']) for sp in self.stream_prizes(name)])
+
+    def _default_stream_importance(self, name):
+        pm = self.stream_prizemoney(name=name)
+        bd = self.budgets[name]
+        rn = random.choice([0] * 20 + [1] + [10] + [1000] + [10000])
+        ty = -0.1 if '~' in name else 0.0  # downweight derived
+        return pm + bd + rn + ty
+
+    def _default_stream_ordering(self, names):
+        top_to_bottom = sorted([(self.stream_importance(name=n), n) for n in names], reverse=True)
+        return [n for imp,n in top_to_bottom]
+
+    def _default_candidate_streams(self):
+        """ Suggests some streams based on arguments passed to constructor """
+        # These are ordered by prize first then budget
+
+        # Occasionally refresh
+        if random.choice(range(1000)) == 0:
+            self.budgets = self.get_budgets()
+            self.sponsors = self.get_sponsors()
+            self.prizes = self.get_prizes()
+
+        # Stream criteria (combines with AND)
+        is_included = [n for n, b in self.budgets.items() if self.include_stream(n) and not self.exclude_stream(n)]
+        not_too_dull = [name for name, budget in self.budgets.items() if float(budget) >= self.min_budget]
+        not_too_competitive = [name for name, budget in self.budgets.items() if float(budget) <= self.max_budget]
+        well_sponsored = [name for name, sponsor in self.sponsors.items() if self.include_sponsor(sponsor=sponsor)
+                          and not self.exclude_sponsor(sponsor=sponsor)
+                          and len(sponsor.replace(' ', '')) >= float(self.sponsor_min)]
+        inclusion_criteria = [is_included, not_too_dull, not_too_competitive, well_sponsored]
+        names = list(set.intersection(*map(set, inclusion_criteria)))
+
+        # Order by prizemoney, budget etc
+        ordered_names = self._default_stream_ordering(names=names)
+        return ordered_names
 
     def feel_like_talking(self):
         """ Override this, or set quietude parameter, to determine how often to barf longish messages """
@@ -325,7 +381,9 @@ class MicroCrawler(MicroWriter):
                                         self.prediction_schedule[horizon]:
                                     horizons.append(horizon)
             if horizons:
-                return random.choice(horizons)
+                horizon_priority = [1/(i+1) + 1/self.split_horizon_name(h)[1] for i,h in enumerate(horizons) ]
+                horizon_choice = _weighted_random_sample(weights=horizon_priority, num=1, population=horizons)[0]
+                return horizon_choice
 
     def expected_time_of_next_value(self, lagged_times):
         """
@@ -341,7 +399,8 @@ class MicroCrawler(MicroWriter):
             dt = -neg_dt if neg_dt is not None else None
             if dt is None:
                 dt = self.DELAYS[-1]
-            assert dt > 0
+            if dt < 0:
+                pass
             if dt < 10:
                 dt = 10
 
@@ -548,11 +607,10 @@ class MicroCrawler(MicroWriter):
         self.last_performance_check = time.time() - 1000
         self.last_new_horizon = time.time() - 1000
         self.stream_candidates = self.candidate_streams()
-        desired_streams = [self.horizon_name(stream_name, horizon) for stream_name in self.stream_candidates for horizon
-                           in [70, 310, 910]]
+        desired_horizons = [self.horizon_name(stream_name, dly) for stream_name in self.stream_candidates for dly in self.DELAYS]
         self.prediction_schedule = dict(
             [(stream, time.time() + k * self.initial_next_prediction_time_multiplier(stream)) \
-             for k, stream in enumerate(self.active) if stream in desired_streams])
+             for k, stream in enumerate(self.active) if stream in desired_horizons])
         pprint.pprint(self.__repr__())
 
         # Announce basics
