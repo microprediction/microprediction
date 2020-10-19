@@ -3,7 +3,6 @@
 Client library for www.microprediction.org You publish live data repeatedly, and it gets predicted. Simple, eh? 
 Tap into the collective intelligence of community contributed time series algorithms, or add to the intelligence. 
 
-
     pip install microprediction 
     
 This library can also be used to submit predictions.
@@ -18,9 +17,10 @@ This library can also be used to submit predictions.
 
 ## Getting help 
 
-- https://www.microprediction.org/contact.html
+- https://www.microprediction.com/contact-us.html
 - https://github.com/microprediction/microprediction/issues 
-  
+
+[![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
 
 ## Site documentation at Microprediction.Org
     
