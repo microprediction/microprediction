@@ -8,8 +8,8 @@ from microprediction import SequentialStreamCrawler, DistMachine
 
 class DigestMachine(DistMachine):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
         self.digest = TDigest()
 
     def update(self, value, dt=None, **kwargs):
