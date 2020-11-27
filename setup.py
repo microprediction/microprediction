@@ -26,7 +26,8 @@ setup(
     include_package_data=True,
     install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests",
                       "getjson", "microconventions==0.4.6",
-                      'pycoingecko', 'apscheduler', 'tdigest','genson','hyperopt'],
+                      'pycoingecko', 'apscheduler', 'tdigest','genson','hyperopt',
+                      'sklearn','statsmodels'],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",
