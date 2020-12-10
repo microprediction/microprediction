@@ -53,7 +53,7 @@ Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.
 ## Discussion and help
 
 - [discussions on github](https://github.com/microprediction/microprediction/discussions)  (new!)
-- [contact](https://www.microprediction.com/contact-us.html) us to be included in Friday noon contributor chat (very informal)
+- [contact](https://www.microprediction.com/contact-us) us to be included in Friday noon contributor chat (very informal)
 - [issues](https://github.com/microprediction/microprediction/issues) 
 - [![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
 
@@ -104,8 +104,7 @@ Once a stream is created and some crawlers have found it, you can view activity 
 |-------------|---------------------------------|---------------------------------|--------------------------------------|-----------------------------------|
 | my_stream   | `stream=my_stream&horizon=70`   |  `stream=my_stream&horizon=310` | `stream=my_stream&horizon=910`       | `stream=my_stream&horizon=3555`   | 
 
-Here is an actual example: 
-https://www.microprediction.org/stream_dashboard.html?stream=fcx&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
+Full URL example: https://www.microprediction.org/stream_dashboard.html?stream=c5_iota&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
 
 ```python
          cdf = feed.get_cdf('cop.json',delay=70,values=[0,0.5])
@@ -134,8 +133,9 @@ In turn, each of these streams is predicted at four different horizons, as with 
 | Stream       |   Roughly 1 min ahead           | Roughly 5 min ahead                 |   Roughly 15 min ahead              | Roughly 1 hr ahead |
 |--------------|---------------------------------|-------------------------------------|-------------------------------------|---------------------
 | c5_iota          | `stream=c5_iota&horizon=70`         |  `stream=c5_iota&horizon=310`           | `stream=c5_iota&horizon=910`            | `stream=c5_iota&horizon=3555` 
-| `z1~c5_iota~3555`| `stream=z1~c5_iota~3555&horizon=70` |  `stream=z1~c5_iota~3555&horizon=310`   | `stream=z1~c5_iota~3555&horizon=910`    | `stream=z1~c5_iota~3555&horizon=3555'
+| `z1~c5_iota~3555`| `stream=z1~c5_iota~3555&horizon=70` |  `stream=z1~c5_iota~3555&horizon=310`   | `stream=z1~c5_iota~3555&horizon=910`    | `stream=z1~c5_iota~3555&horizon=3555`
   
+Poke around the [stream listing](https://www.microprediction.org/browse_streams.html) near the bottom and you'll see them. 
      
 ## Quickstart: Providing predictions 
 
@@ -197,18 +197,30 @@ the writer. Your best reference is the client code https://github.com/micropredi
 In principle:
 
 ```python
-    from microprediction import MicroWriter, create_key
-    mw = MicroWriter(write_key=create_key(difficulty=12))    # Sub in your own write_key. MUIDs explained at https://vimeo.com/397352413 
+    from microprediction import MicroWriter
+    mw = MicroWriter(difficulty=12)    # Creates new key on the fly, slowly! MUIDs explained at https://vimeo.com/397352413 
 ```
 
-In practice you may want to run create_key() separately as it will take many hours, at least for a difficult key. See https://config.microprediction.org/config.json for the current values of min_len, which is the official minimum difficulty to create a stream. If you don't need
+But better to do 
+
+```python
+      from microprediction import new_key
+      write_key = new_key(difficulty=12)
+```
+separately, then pass in with 
+```python
+      mw = MicroWriter(write_key=write_key)
+```
+
+Thing is, new_key() will take many hours and that avoids the system being flooded with spurious streams. See https://config.microprediction.org/config.json for
+ the current values of min_len, which is the official minimum difficulty to create a stream. If you don't need
 to create streams but only wish to predict, you can use a lower difficulty like 10 or even 9. But the easier your key, the more likely
-you are to go bankrupt. 
+you are to go bankrupt (read on).
     
 ### Submitting scenarios (manually)
     
-If MicroCrawler does not suit your needs you can submit predictions:
-
+If MicroCrawler does not float your boat, you can design your own way to monitor streams and make predictions using MicroWriter. 
+ 
 ```python
     scenarios = [ i*0.001 for i in range(mw.num_interp) ]   # You can do better ! 
     mw.submit(name='c5_iota.json',values=scenarios, delay=70)        # Specify stream name and also prediction horizon
@@ -278,11 +290,14 @@ Every participating `write_key` has an associated balance. When you create a str
 purpose. If nobody can do a better job that this, your `write_key` balance will neither rise nor fall, on average.  
 
 However once smart people and algorithms enter the fray, you can expect this default model to be beaten and the balance on your `write_key` to trend downwards. 
-On an ongoing basis you also need the `write_key` balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and the formula:
+On an ongoing basis you also need the `write_key` balance not to fall below a threshold bankruptcy level. The minimum balance for a key of difficulty 9 is also found at https://api.microprediction.org/config.json and
+ the formula:
+ 
 
 <img src="https://render.githubusercontent.com/render/math?math=%5CLarge%0A-1*(abs(self.min%5C_balance)*16%5E%7B(write%5C_key%5C_difficulty-9)%7D">
 
-supercedes whatever is written here. However at time of writing the bankruptcy levels are:
+
+supercedes whatever is written here. However, at time of writing the bankruptcy levels are:
 
 |  write_key difficulty   |  bankruptcy         |  write_key difficulty   |  bankruptcy         |
 |-------------------------|---------------------|-------------------------|---------------------|
@@ -290,7 +305,9 @@ supercedes whatever is written here. However at time of writing the bankruptcy l
 |  9                      |  -1.0               |     12                  |   -4,096            |
 | 10                      |  -16.0              |     13                  |   -65,536           |
        
-Balance may be transfered from one `write_key` to another if the recipient `write_key` has a negative balance. You can use the transfer function to keep
+You can see why your crawler may live a longer life if the key is more difficult. 
+
+Balance may be transferred from one `write_key` to another if the recipient `write_key` has a negative balance. You can use the transfer function to keep
 a `write_key` alive that you need for sponsoring a stream. You can also ask others to mine (muids)[https://github.com/microprediction/muid] for you and contribute in this fashion, say if you have an important civic nowcast and expect that others
  might help maintain it. You cannot use a transfer to 
 raise the balance associated with a `write_key` above zero - that is only possible by means of accurate prediction. 
@@ -314,7 +331,7 @@ reference for these embeddings is at https://github.com/microprediction/microcon
 ## Follow and help
 
 This project is socialized mostly via Linked-In. See 
-[microprediction](https://www.linkedin.com/company/65109690](microprediction) and other articles. You can 
+[microprediction](https://www.linkedin.com/company/65109690) and other articles. You can 
 help in a small way by celebrating posts and articles like this, should you be so inclined. 
 
 - [Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/)
@@ -331,4 +348,5 @@ See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activit
 
 ## Further reading
 
-See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) and blog.  
+See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) for listings of time series algorithms,
+comparisons of global hyper-parameter optimizers and other tips.   
