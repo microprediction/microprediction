@@ -1,43 +1,71 @@
 # microprediction
 
-Client library for www.microprediction.org You publish live data repeatedly, and it gets predicted. Simple, eh? 
-Tap into the collective intelligence of community contributed time series algorithms, or add to the intelligence. 
+Hi. This is the client library for www.microprediction.org, humble birthplace of the prediction web. Some people call it "Napster meets DataRobot". It challenges
+the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned but for now, a time series focus and here's what's up: 
 
-    pip install microprediction 
+- You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
+ creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
+- As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
+your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
+
+In this way you can:
+ - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
+ - See which R, Julia and Python time series approaches seem to work best, saving you from
+  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
+  
+Here's a [first glimpse](https://www.microprediction.com/welcome) for the uninitiated, some [categories of business application](https://www.microprediction.com/welcome-3), some remarks
+on why [microprediction is synomymous with AI](https://www.microprediction.com/welcome-4) due to the possibility of value function prediction, and a straightforward
+[plausibility argument](https://www.microprediction.com/welcome-2) for why an open source, openly networked collection of algorithms that 
+are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
+of prediction. In order to try to get this idea off the ground, there are some ongoing [competitions](https://www.microprediction.com/competitions) and developer incentives. 
     
-This library can also be used to submit predictions.
+## Presentations
 
-## Participate immediately with a bash script
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
-
-## Hello world examples
-
-- https://github.com/microprediction/microprediction/tree/master/hello_world
-
-## Getting help 
-
-- https://www.microprediction.com/contact-us.html
-- https://github.com/microprediction/microprediction/issues 
-
-[![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
-
-## Site documentation at Microprediction.Org
-    
-- https://www.microprediction.org/publishing.html 
-
-- https://www.microprediction.org/crawling.html
-
-Questions to  info@microprediction.org 
-
-### New skin coming soon...
-
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. A book will be 
+published by MIT Press in 2021 on the topic. There are links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
 
 ![](https://i.imgur.com/6FpjUaR.png)
 
+
+## (New!) Knowledge Center
+
+See the [knowledge center](https://www.microprediction.com/knowledge-center) for a structured set of [Python tutorials](https://www.microprediction.com/python-1) which will 
+show you how to create an identity, enter a live contest and use the [dashboard](https://www.microprediction.org/) to track your algorithms' progress. It will also show you how
+to [retrieve historical data](https://www.microprediction.com/python-3) for time series research, if that is the only way you wish to use the site. You don't have to use
+Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia [example](https://github.com/rustyconover/microprediction-nyiso-electricity) and 
+you can even enter using R from within Kaggle [instructions](https://www.microprediction.com/r-1).  
+
+
+## Participate immediately with a bash script
+Linux and mac users can run the default crawler with a one line cut and paste. This will use a virtual environment, and thus not interfere with you other work.  
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+
+It's a great way to quickly get the joke. You should intend to run this "forever".
+## Examples, examples, examples
+
+- [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) feed creation and submission. 
+- [notebooks](https://github.com/microprediction/microprediction/tree/master/notebook_examples) are available too, but these are harder to run indefinitely
+- [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples)
+
+Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.html) and click on CODE badges. Fork an algorithm that is doing well.  
+
+## Discussion and help
+
+- [discussions on github](https://github.com/microprediction/microprediction/discussions)  (new!)
+- [contact](https://www.microprediction.com/contact-us.html) us to be included in Friday noon contributor chat (very informal)
+- [issues](https://github.com/microprediction/microprediction/issues) 
+- [![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
+
+### Frequently asked questions
+
+- Moved to [FAQ](https://www.microprediction.com/faq)
+- See also the [Knowledge Center](https://www.microprediction.com/knowledge-center)
+
 ## Class Hierarchy 
 
-Provided classes include the following
+Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
+the MicroWriter, or its sub-classes. You can also use MicroWriter to submit predictions, though MicroCrawler adds some conveniences. 
 
     MicroReader
        |
@@ -56,14 +84,13 @@ as additional conveniences for creating streams such as
 and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
 
                           
-      
-## Quickstart: Soliciting predictions 
+## Quickstart: Creating a stream to publish a number every 20 minutes
 
-If you have a function that returns a live number, do this:
+If you have a function that returns a live number, you can do this
 
 ```python
-    from microprediction import MicroPoll, create_key
-    feed = MicroPoll(write_key=create_key(),        # This takes a while ... see section on mining write_keys below
+    from microprediction import MicroPoll
+    feed = MicroPoll(difficulty=12,                 # This takes a long time ... see section on mining write_keys below
                      name='my_stream.json',         # Name your data stream
                      func=my_feed_func,             # Provide a callback function that returns a float 
                      interval=20)                   # Poll every twenty minutes
@@ -91,21 +118,23 @@ less than 0.5. You can view CDFs and activity at MicroPrediction.Org by entering
 
 ## Z-Scores
 
-A bonus! Based on algorithm predictions, every data point you publish creates another two streams, representing community z-scores for your data 
+Now we're getting into the fancy stuff. 
+
+Based on algorithm predictions, every data point you publish creates another two streams, representing community z-scores for your data 
 point based on predictions made at different times prior (those quarantined the shortest, and longest intervals). 
 
 |  Stream                                      |                                                                                   |
 |----------------------------------------------|-----------------------------------------------------------------------------------|
-|  Base stream                                 |  `https://www.microprediction.org/stream_dashboard.html?stream=cop`               |
-|  Z-score relative to 70s ahead predictions   |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~70`         |
-|  Z-score relative to 3555s ahead predictions  |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~3555`        |
+|  Base stream                                 |  `https://www.microprediction.org/stream_dashboard.html?stream=c5_iota`               |
+|  Z-score relative to 70s ahead predictions   |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_iota~70`         |
+|  Z-score relative to 3555s ahead predictions  |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_iota~3555`        |
 
 In turn, each of these streams is predicted at four different horizons, as with the base stream. For example: 
 
 | Stream       |   Roughly 1 min ahead           | Roughly 5 min ahead                 |   Roughly 15 min ahead              | Roughly 1 hr ahead |
 |--------------|---------------------------------|-------------------------------------|-------------------------------------|---------------------
-| cop          | `stream=cop&horizon=70`         |  `stream=cop&horizon=310`           | `stream=cop&horizon=910`            | `stream=cop&horizon=3555` 
-| `z1~cop~3555`| `stream=z1~cop~3555&horizon=70` |  `stream=z1~cop~3555&horizon=310`   | `stream=z1~cop~3555&horizon=910`    | `stream=z1~cop~3555&horizon=3555'
+| c5_iota          | `stream=c5_iota&horizon=70`         |  `stream=c5_iota&horizon=310`           | `stream=c5_iota&horizon=910`            | `stream=c5_iota&horizon=3555` 
+| `z1~c5_iota~3555`| `stream=z1~c5_iota~3555&horizon=70` |  `stream=z1~c5_iota~3555&horizon=310`   | `stream=z1~c5_iota~3555&horizon=910`    | `stream=z1~c5_iota~3555&horizon=3555'
   
      
 ## Quickstart: Providing predictions 
@@ -137,12 +166,12 @@ Enter your write_key into https://www.microprediction.org/dashboard.html to find
 
 ## Read client
 
-It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/cop.json. Use your preferred means such as requests or aiohttp. For example using the former:
+It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/c5_iota.json. Use your preferred means such as requests or aiohttp. For example using the former:
 
 ```python
     import requests
-    lagged_values = requests.get('https://api.microprediction.org/live/lagged_values::cop.json').json()
-    lagged        = requests.get('https://api.microprediction.org/lagged/cop.json').json()
+    lagged_values = requests.get('https://api.microprediction.org/live/lagged_values::c5_iota.json').json()
+    lagged        = requests.get('https://api.microprediction.org/lagged/c5_iota.json').json()
 ```
 
 However the reader client adds a little convenience. 
@@ -151,9 +180,9 @@ However the reader client adds a little convenience.
     from microprediction import MicroReader
     mr = MicroReader()
  
-    current_value = mr.get('cop.json')
-    lagged_values = mr.get_lagged_values('cop.json') 
-    lagged_times  = mr.get_lagged_times('cop.json')
+    current_value = mr.get('c5_iota.json')
+    lagged_values = mr.get_lagged_values('c5_iota.json') 
+    lagged_times  = mr.get_lagged_times('c5_iota.json')
 ```
 
 Your best reference for the API is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py 
@@ -182,7 +211,7 @@ If MicroCrawler does not suit your needs you can submit predictions:
 
 ```python
     scenarios = [ i*0.001 for i in range(mw.num_interp) ]   # You can do better ! 
-    mw.submit(name='cop.json',values=scenarios, delay=70)        # Specify stream name and also prediction horizon
+    mw.submit(name='c5_iota.json',values=scenarios, delay=70)        # Specify stream name and also prediction horizon
 ```
 
 See https://config.microprediction.org/config.json for a list of values that delay can take. 
@@ -273,28 +302,33 @@ Multivariate prediction solicitation is available to those with write_keys of di
          
 |  Functionality          |  Example dashboard URL                                                            |
 |-------------------------|-----------------------------------------------------------------------------------|
-|  Base stream #1         |  `https://www.microprediction.org/stream_dashboard.html?stream=cop`               |
-|  Base stream #2         |  `https://www.microprediction.org/stream_dashboard.html?stream=fcx`               |
-|  Z-scores               |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~cop~310`        |
-|  Bivariate copula       |  `https://www.microprediction.org/stream_dashboard.html?stream=z2~cop~pe~910`     |
-|  Trivariate copula      |  `https://www.microprediction.org/stream_dashboard.html?stream=z3~cop~fcx~pe~910` |         
+|  Base stream #1         |  `https://www.microprediction.org/stream_dashboard.html?stream=c5_iota`               |
+|  Base stream #2         |  `https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin`               |
+|  Z-scores               |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_iota~310`        |
+|  Bivariate c5_iotaula       |  `https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_iota~pe~910`     |
+|  Trivariate c5_iotaula      |  `https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_iota~c5_bitcoin~pe~910` |         
          
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
 reference for these embeddings is at https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py
          
-  
-## More examples 
+## Follow and help
 
-- https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md       
+This project is socialized mostly via Linked-In. See 
+[microprediction](https://www.linkedin.com/company/65109690](microprediction) and other articles. You can 
+help in a small way by celebrating posts and articles like this, should you be so inclined. 
 
-## Suggested reading
-
-- https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/
-- https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/
-- https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/
-- https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/
-- https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/
-- https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/
-- https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/
+- [Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/)
+- [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
+- [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/)
+- [Win With One Line of Code](https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/)
+- [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
+- [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/)
+- [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/)
 
 See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
+
+
+
+## Further reading
+
+See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) and blog.  
