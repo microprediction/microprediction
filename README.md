@@ -24,7 +24,7 @@ of prediction. In order to try to get this idea off the ground, there are some o
 Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. A book will be 
 published by MIT Press in 2021 on the topic. There are links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
 
-![](https://i.imgur.com/6FpjUaR.png)
+![](https://i.imgur.com/uwttTku.png)
 
 
 ## (New!) Knowledge Center
@@ -32,8 +32,8 @@ published by MIT Press in 2021 on the topic. There are links to video presentati
 See the [knowledge center](https://www.microprediction.com/knowledge-center) for a structured set of [Python tutorials](https://www.microprediction.com/python-1) which will 
 show you how to create an identity, enter a live contest and use the [dashboard](https://www.microprediction.org/) to track your algorithms' progress. It will also show you how
 to [retrieve historical data](https://www.microprediction.com/python-3) for time series research, if that is the only way you wish to use the site. You don't have to use
-Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia [example](https://github.com/rustyconover/microprediction-nyiso-electricity) and 
-you can even enter using R from within Kaggle [instructions](https://www.microprediction.com/r-1).  
+Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
+you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)).   
 
 
 ## Participate immediately with a bash script
