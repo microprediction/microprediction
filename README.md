@@ -37,7 +37,7 @@ you can even enter using R from within Kaggle ([tutorial](https://www.micropredi
 
 
 ## Participate immediately with a bash script
-Linux and mac users can run the default crawler with a one line cut and paste. This will use a virtual environment, and thus not interfere with you other work.  
+Linux and mac users can run the default crawler with a one line cut and paste. This will use a virtual environment, and thus not interfere with your other work.  
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
 
@@ -137,7 +137,11 @@ In turn, each of these streams is predicted at four different horizons, as with 
   
 Poke around the [stream listing](https://www.microprediction.org/browse_streams.html) near the bottom and you'll see them. 
      
-## Quickstart: Providing predictions 
+# A Quick Guide to Crawling and the API/Client
+
+See also the [public api](https://www.microprediction.com/public-api) guide. 
+
+## Let your algorithm loose on the world 
 
 If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
 deriving from MicroCrawler as follows: 
@@ -252,7 +256,7 @@ to let the system know you still care.
 0. Upgrade the library, which is pretty fluid
    1. `pip install --upgrade microprediction`
         
-1. Check https://github.com/microprediction/microconventions/blob/master/microconventions/stream_conventions.py to see if you are violating a stream naming convention
+1. Check [stream_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/stream_conventions.py) to see if you are violating a stream naming convention
    1. Must end in `.json`  
    2. Must contain only alphanumeric, hyphens, underscores, colons (discouraged) and at most one period.
    3. Must not contain double colon. 
@@ -322,11 +326,12 @@ Multivariate prediction solicitation is available to those with write_keys of di
 |  Base stream #1         |  `https://www.microprediction.org/stream_dashboard.html?stream=c5_iota`               |
 |  Base stream #2         |  `https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin`               |
 |  Z-scores               |  `https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_iota~310`        |
-|  Bivariate c5_iotaula       |  `https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_iota~pe~910`     |
-|  Trivariate c5_iotaula      |  `https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_iota~c5_bitcoin~pe~910` |         
+|  Bivariate copula       |  `https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_iota~pe~910`     |
+|  Trivariate copula      |  `https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_iota~c5_bitcoin~pe~910` |         
          
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
-reference for these embeddings is at https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py
+reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
+a little video of the embedding in the (FAQ)[https://www.microprediction.com/faq]. 
          
 ## Follow and help
 
