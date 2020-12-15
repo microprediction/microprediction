@@ -20,6 +20,7 @@ class FitDist(LossDist, ABC):
 
     def fit(self, lagged_values, lagged_times=None):
         params_before = deepcopy(self.params)  # Playing safe
+        state_before = deepcopy(self.state)
 
         best_params = self.hyperfit(lagged_values=lagged_values, lagged_times=lagged_times, **self.hyper_params)
         # Is it really better?
@@ -28,14 +29,15 @@ class FitDist(LossDist, ABC):
             self.points_to_evaluate.append(best_params)
             changed = True
         else:
-            loss_before = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=params_before)
-            loss_after  = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=best_params)
+            loss_before = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=params_before, state=state_before)
+            loss_after  = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=best_params, state=state_before)
             changed = loss_after < loss_before
             if loss_after < loss_before:
                 self.params.update(best_params)
                 self.points_to_evaluate.append(best_params)
             else:
                 self.params = deepcopy(params_before)
+        self.state = state_before
         return changed
 
     # Implementation...
@@ -47,9 +49,9 @@ class FitDist(LossDist, ABC):
 
         """
         params = OrderedDict(dict([(k, v) for k, v in zip(self.params.keys(), prms)]))
-        evaluation = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=params)
         try:
-            evaluation = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=params)
+            evaluation = self.loss(lagged_values=lagged_values, lagged_times=lagged_times,
+                                   params=params, state=self.state)
             status = STATUS_OK
         except Exception:
             evaluation = -99999999
