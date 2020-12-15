@@ -1,7 +1,7 @@
 # microprediction
 
 Hi. This is the client library for www.microprediction.org, humble birthplace of the prediction web. Some people call it "Napster meets DataRobot". It challenges
-the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned but for now, a time series focus and here's what's up: 
+the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned. For now, however, a time series focus and here's what's up: 
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
