@@ -11,9 +11,10 @@ import time
 from copy import deepcopy
 from microprediction.univariate.arrivals import approx_dt
 from microprediction.univariate.cdfvalues import nudged
+from getjson import getjson
 
 
-# Stream crawler that periodically fits parameters
+# Stream crawler that periodically fits parameters, or loads them
 
 
 class FitCrawler(SequentialStreamCrawler):
@@ -21,7 +22,7 @@ class FitCrawler(SequentialStreamCrawler):
     def __init__(self, write_key, machine_type: Type[FitDist], machine_state: dict = None,
                  machine_params: OrderedDict = None,
                  lower_bounds: dict = None, upper_bounds: dict = None, space=None, algo=None, max_evals=10,
-                 min_seconds=20, min_elapsed=5 * 60 * 60, decay=0.02, **kwargs):
+                 min_seconds=20, min_elapsed=5 * 60 * 60, decay=0.02, param_base_url=None, **kwargs):
         """
                 state          -  Dictionary of state held for each stream. Supply None unless restarting.
                 params         -  Initial params of HyperDist objects
@@ -43,6 +44,7 @@ class FitCrawler(SequentialStreamCrawler):
         self.last_fit_time = dict()
         self.min_elapsed = min_elapsed
         self.decay = decay
+        self.param_base_url = param_base_url   # Can be used to get offline parameters
 
     def include_delay(self, delay=None, name=None, **ignore):
         # It isn't recommended to use FitCrawler for long term predictions
@@ -68,22 +70,35 @@ class FitCrawler(SequentialStreamCrawler):
 
     def fit(self, name, lagged_values, lagged_times=None, **ignored):
         """ Fit one stream, but only if the distribution machine supplied has a fit method """
+        # Might use offline fit
         changed = False
         if name not in self.stream_state:
             self.stream_state.update(
                 {name: self.initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times)})
         else:
             machine = self.stream_state[name]['machine']
-            try:
-                changed = machine.fit(lagged_values=lagged_values, lagged_times=lagged_times)
-                if changed:
-                    print('Found better params for ' + name)
+
+            stored_params = None
+            if self.param_base_url is not None:
+                url = self.param_base_url + '/' + name
+                try:
+                    stored_params = getjson(url)
+                    machine.params = stored_params
+                except:
+                    print('Failed to get params from '+url)
+
+            if stored_params is None:
+                try:
+                    changed = machine.fit(lagged_values=lagged_values, lagged_times=lagged_times)
+                    if changed:
+                        print('Found better params for ' + name)
+                        pprint(machine.params)
+                        print(' ', flush=True)
+                except AttributeError:
+                    print('Keeping the same params for ' + name)
                     pprint(machine.params)
                     print(' ', flush=True)
-            except AttributeError:
-                print('Keeping the same params for ' + name)
-                pprint(machine.params)
-                print(' ', flush=True)
+
         return changed
 
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
@@ -125,12 +140,13 @@ class FitCrawler(SequentialStreamCrawler):
                     lagged_values = self.get_lagged_values(name=name)
                     lagged_times = self.get_lagged_times(name=name)
                 if lagged_values is None or lagged_times is None:
+                    import logging
+                    logging.warning("Could not fit " + name + " because we failed to get lagged_values ")
+                else:
                     self.fit(name=name, lagged_values=lagged_values, lagged_times=lagged_times)
                     self.fit_queue.append(name)
                     self.last_fit_time[name] = time.time()
-                else:
-                    import logging
-                    logging.warning("Could not fit " + name + " because we failed to get lagged_values ")
+
         seconds_used = time.time() - start_time
         seconds_remaining = seconds - seconds_used
         if seconds_remaining > 1:
@@ -169,3 +185,5 @@ class FitCrawler(SequentialStreamCrawler):
         samples = [walk[num - step_back + num_steps] - walk[num - step_back] + noise for step_back, noise in
                    zip(back_choices, measurement_noise)]
         return sorted(nudged(samples))
+
+

@@ -3,7 +3,8 @@ from abc import ABC
 from collections import OrderedDict
 from hyperopt import fmin, tpe, hp, STATUS_OK, STATUS_FAIL
 from copy import deepcopy
-
+from getjson import getjson
+import json
 
 # Distribution machine that can be fit (using hyperopt by default)
 
@@ -82,3 +83,8 @@ class FitDist(LossDist, ABC):
         best_params = fmin(fn=fn, space=space, algo=algo, max_evals=max_evals,
                               points_to_evaluate=self.points_to_evaluate )
         return best_params
+
+
+
+
+

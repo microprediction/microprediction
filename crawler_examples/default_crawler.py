@@ -1,4 +1,4 @@
-from microprediction import MicroCrawler
+from microprediction.fitcrawler import FitCrawler
 
 if __name__ == '__main__':
-    MicroCrawler().run()
+    FitCrawler().run()
