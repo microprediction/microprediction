@@ -7,6 +7,7 @@ class DistMachine(object):
 
     # This is a state engine that has a ppf function
     # Example of usage: SequentialStreamCrawler
+    # Subclasses: LossDist, FitDist
 
     def __init__(self, state, params: OrderedDict = None):
         self.params = params

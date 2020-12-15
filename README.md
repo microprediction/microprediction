@@ -355,3 +355,8 @@ See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activit
 
 See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) for listings of time series algorithms,
 comparisons of global hyper-parameter optimizers and other tips.   
+
+## PS: Don't mind the litter
+
+There are some mostly unrelated notebooks for www.microprediction.com/blog that will be 
+moved when I have a moment. 
