@@ -64,6 +64,8 @@ class FitDist(LossDist, ABC):
                  algo=None, max_evals=100 ):
 
         if space is None:
+            if self.params is None:
+                pass
             space = [hp.uniform(v, lower_bounds[v], upper_bounds[v]) for v in self.params]
 
         if algo is None:

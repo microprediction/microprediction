@@ -2,7 +2,6 @@ from microprediction.config_private import YEX_CHEETAH
 from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
 
-
 # Illustrates the use of offline parameter estimation
 # See the repo  microprediction/offline for how to use Github actions for this purpose
 

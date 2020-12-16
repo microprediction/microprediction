@@ -8,6 +8,7 @@ import math
 import numpy as np
 import random
 import time
+import logging
 from copy import deepcopy
 from microprediction.univariate.arrivals import approx_dt
 from microprediction.univariate.cdfvalues import nudged
@@ -85,7 +86,9 @@ class FitCrawler(SequentialStreamCrawler):
                 url = self.param_base_url + '/' + name
                 try:
                     stored_params = getjson(url)
-                    machine.params = stored_params
+                    if stored_params is not None:
+                        logging.warning('Empty stored params at '+url+' or get failed.')
+                        machine.params = stored_params
                 except:
                     print('Failed to get params from '+url)
 
