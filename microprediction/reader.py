@@ -85,7 +85,7 @@ class MicroReader(MicroConventions):
         :return: [ float ]
         """
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
-        return lagged_values
+        return lagged_times
 
     def get_delayed_value(self, name: str, delay: int):
         """ Retrieve quarantined value.
