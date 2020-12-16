@@ -48,3 +48,9 @@ this works okay regardless. See for example [Mesole Mammal](https://github.com/m
 See [Soshed Boa](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) for an example of using statsmodels.tsa.ar_model with automated order selection. This is a pretty
 bare-bones crawler at time of writing and could benefit from simple improvements, such as projecting
 onto discrete values when the time series is obviously quantized (see utilities in [cdfvalues](https://github.com/microprediction/microprediction/blob/master/microprediction/univariate/cdfvalues.py)). 
+
+## Echo state machines
+
+See the [echochamber](https://github.com/microprediction/echochamber) package. As you can see from 
+the [crawler code](https://github.com/microprediction/echochamber/blob/master/echochamber/crawler.py), the ESN is so fast to fit that it simply does it on the fly. 
+As with ARIMA example above, this would also benefit from simple improvements. 
