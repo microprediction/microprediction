@@ -1,8 +1,29 @@
+from microprediction.config_private import EXHALABLE_CAT
 from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
-from microprediction.config_private import EXHALABLE_CAT
+
+
+# Illustrates the use of offline parameter estimation
+# See the repo  microprediction/offline for how to use Github actions for this purpose
+
+STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
+
+
+class RegularFitCrawler(FitCrawler):
+
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
+
+    def include_stream(self, name=None, **ignore):
+        return '~' not in name
+
 
 if __name__ == '__main__':
-    crawler = FitCrawler(write_key=EXHALABLE_CAT, machine_type=ExpNormDist, max_evals=3, min_seconds=6, min_elapsed=5*60, max_active=50)
-    crawler.set_repository(url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/exhalable_cat.py')
+    crawler = RegularFitCrawler(write_key=EXHALABLE_CAT, machine_type=ExpNormDist, max_evals=50,
+                         min_seconds=1, min_elapsed=60*60, max_active=500, decay=0.005,
+                         param_base_url=STORED_PARAM_URL, stop_loss=50)
+    crawler.set_repository(
+        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/exhalable_cat.py')
     crawler.run()
+
+

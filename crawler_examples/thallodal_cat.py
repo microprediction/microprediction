@@ -8,4 +8,6 @@ if __name__ == "__main__":
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/thallodal_cat.py')
     # Setting repo is optional, it simply hyperlinks your crawler on the leaderboard ... soon
     crawler.min_lags = 500
+    crawler.max_active = 500
     crawler.run()
+

@@ -1,51 +1,39 @@
 from microprediction import SequentialStreamCrawler
 from microprediction.config_private import FLOATABLE_BEE
-from microprediction.univariate.processes import is_process
-from microprediction.univariate.digestdist import DigestDist
+from microprediction.fitcrawler import FitCrawler
+from microprediction.univariate.expnormdist import ExpNormDist
+from copy import deepcopy
 
-# Illustrates deriving from SequentialStreamCrawler
-
-# This creates a crawler that sometimes handles noisy processes better because
-# it "floats" ... moving slowly through observations rather than chasing the last one.
-# (this example is also supposed to demonstrate how you might combine a point estimate
-# with an existing distributional estimate. Soon there will be a simpler way to do this)
+# Floatable Bee uses on-the-fly fitting only, and does not try to
+# use stored parameters. It is set to ony run for 35 streams.
+# This consumes around 20,000 cpu seconds per month.
 
 
-class FloatingCrawler(SequentialStreamCrawler):
+class ShortOnlyCrawler(FitCrawler):
 
-    def __init__(self, **kwargs):
+    def __init__(self,**kwargs):
         super().__init__(**kwargs)
-        self.stickiness = 0.25
 
-    def include_stream(self, name=None, **ignore):
-        """ Only attempt regular streams that seem to be processes """
-        if '~' in name:
-            return False
-        else:
-            lagged_values = self.get_lagged_values(name=name)
-            return is_process(lagged_values)
+    def exclude_stream(self, name=None, **ignore):
+        # Fit crawler poorly suited for non-process TS
+        return 'emoji' in name or 'die' in name or 'coin' in name
 
-    def initial_state(self, name, lagged_values, lagged_times, **machine_params):
-        """ Simple moving average """
-        state = super().initial_state(name=name, lagged_values=lagged_values, lagged_times=lagged_times, **machine_params)
-        state['anchor'] = lagged_values[0]
-        return state
+    def include_delay(self, delay, name=None, **ignore):
+        return delay<700
 
-    def update_state(self, state, lagged_values=None, lagged_times=None, **ignore):
-        """ Use existing distributional update, but move the anchor slowly """
-        state = super().update_state(state=state, lagged_values=lagged_values, lagged_times=lagged_times, **ignore)
-        state['anchor'] = self.stickiness * state['anchor'] + (1 - self.stickiness) * lagged_values[0]
-        return state
-
-    def sample_using_state(self, state, lagged_values, lagged_times, name, delay, **ignored):
-        """ By default samples are centered around the last value. Center them on anchor instead. """
-        samples = super().sample_using_state(state=state, lagged_values=lagged_values, lagged_times=lagged_times,
-                                             name=name, delay=delay, **ignored)
-        offset = state['anchor'] - lagged_values[0]
-        return [s + offset for s in samples]
-
+DEFAULT_EXPNORM_PARAMS = {'g1': 0.5, 'g2': 5.0, 'logK': -2., 'loc': 0.0, 'logScale': 0.0}
+DEFAULT_EXPNORM_LOWER = {'g1': 0.001, 'g2': 0.001, 'logK': -5, 'loc': -0.15, 'logScale': -4}
+DEFAULT_EXPNORM_UPPER = {'g1': 1.0, 'g2': 15.0, 'logK': 1, 'loc': 0.15, 'logScale': 4.0}
+DEFAULT_EXPNORM_HYPER = {'lower_bounds': deepcopy(DEFAULT_EXPNORM_LOWER),
+                         'upper_bounds': deepcopy(DEFAULT_EXPNORM_UPPER),
+                         'space': None, 'algo': None, 'max_evals': 11}
 
 if __name__ == '__main__':
-    crawler = FloatingCrawler(write_key=FLOATABLE_BEE, machine_type=DigestDist, min_lags=500, max_active=100)
-    lv = crawler.get_lagged_values(name='three_body_x.json')
+    crawler = ShortOnlyCrawler(write_key=FLOATABLE_BEE, machine_type=ExpNormDist, max_evals=200,
+                         min_seconds=20, min_elapsed=24*60*60, max_active=35, decay=0.01)
+    crawler.delete_performance()
+    crawler.hyper_params = DEFAULT_EXPNORM_HYPER
+    crawler.set_repository(
+        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/floatable_bee.py')
     crawler.run()
+
