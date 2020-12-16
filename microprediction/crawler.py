@@ -347,7 +347,7 @@ class MicroCrawler(MicroWriter):
                 'upcoming': self.upcoming(num=3, relative=True)})
 
     def recent_updates(self):
-        r = self.__repr__()
+        r = json.loads(self.__repr__())
         return dict([(k, v) for k, v in r.items() if ('recent' in k or 'current' in k)])
 
     def withdraw(self, horizon, give_up=False):
