@@ -5,5 +5,6 @@ if __name__ == '__main__':
         from microprediction.config_private import DALE_LEECH
         crawler = MicroCrawler(write_key=DALE_LEECH)
     except ImportError:
-        crawler = MicroCrawler(difficulty=9)
+        crawler = MicroCrawler(difficulty=11)
+    crawler.set_repository(url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/dale_leech.py')
     crawler.run()

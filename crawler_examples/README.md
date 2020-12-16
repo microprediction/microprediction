@@ -53,4 +53,31 @@ onto discrete values when the time series is obviously quantized (see utilities 
 
 See the [echochamber](https://github.com/microprediction/echochamber) package. As you can see from 
 the [crawler code](https://github.com/microprediction/echochamber/blob/master/echochamber/crawler.py), the ESN is so fast to fit that it simply does it on the fly. 
-As with ARIMA example above, this would also benefit from simple improvements. 
+As with ARIMA example above, this would also benefit from simple improvements but it works okay when
+there is a lot of structure to be discovered. See [exactable fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/exactable_fox.py) or
+[boatable clam](https://github.com/microprediction/microprediction/blob/master/crawler_examples/boatable_clam.py) for examples
+of crawlers using ESN, and don't forget to pip install echochamber. 
+
+## Ad-hoc empirical 
+
+For example, [malaxable fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/malaxable_fox.py) eeks
+out a living predicting the three-body system. 
+
+## One-off z-predictions
+
+As can be seen from examples like [Booze Mammal](https://github.com/microprediction/microprediction/blob/master/crawler_examples/booze_mammal.py) it is extremely
+easy to make a living if z-streams are not accurate. That particular example always thinks the 
+tails will be too thin, and I'll let you decide if that's a good idea or not.
+
+## Default crawler
+
+This may change from time to time. It is a recency-weighted bootstrappy sort of thing which as the
+name suggests is trivial to run. See [dale leech](https://github.com/microprediction/microprediction/blob/master/crawler_examples/dale_leech.py) for
+an example. Note that as with any crawler or MicroWriter you can instantiate with a difficulty argument and it will create
+a new key on the fly. Thus using the default crawler is as easy as 
+
+    from microprediction import MicroCrawler
+    MicroCrawler(difficulty=11).run()
+    
+Don't discard the possibility that this may get you plenty of credits.  
+   
