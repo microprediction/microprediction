@@ -8,6 +8,7 @@ import pprint
 import numpy as np
 from statistics import median
 import os
+import json
 
 
 def new_key_if_none(write_key, use_environ=False, difficulty=10):
@@ -334,7 +335,7 @@ class MicroCrawler(MicroWriter):
         return self.seconds_until_next
 
     def __repr__(self):
-        return {'quietude': self.quietude,
+        return json.dumps({'quietude': self.quietude,
                 'stop_loss': self.stop_loss,
                 'min_lags': self.min_lags,
                 'num_active': len(self.active),
@@ -343,7 +344,7 @@ class MicroCrawler(MicroWriter):
                 'recent_errors': self.get_errors()[-3:],
                 'currently_worst': self.worst_active_horizons(stop_loss=self.stop_loss)[:10],
                 'pending_cancellations': self.pending_cancellations,
-                'upcoming': self.upcoming(num=3, relative=True)}
+                'upcoming': self.upcoming(num=3, relative=True)})
 
     def recent_updates(self):
         r = self.__repr__()

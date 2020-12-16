@@ -2,6 +2,7 @@ from microconventions import MicroConventions, api_url
 import requests, time, sys
 from pprint import pprint
 import numpy as np
+import json
 
 
 class MicroReader(MicroConventions):
@@ -25,6 +26,9 @@ class MicroReader(MicroConventions):
             print('WARNING: ConnectionError attempting to get ' + method)
             if throw:
                 raise e
+
+    def __repr__(self):
+        return json.dumps({'base_url':self.base_url})
 
     def get(self, name, throw=True):
         return self.request_get_json(method='live', arg=name, throw=throw)
