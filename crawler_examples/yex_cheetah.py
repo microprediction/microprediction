@@ -3,23 +3,27 @@ from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
 
 
-class ShortOnlyCrawler(FitCrawler):
+# Illustrates the use of offline parameter estimation
+# See the repo  microprediction/offline for how to use Github actions for this purpose
+
+STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
+
+
+class RegularFitCrawler(FitCrawler):
 
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
-    def exclude_stream(self, name=None, **ignore):
-        # Fit crawler poorly suited for non-process TS
-        return 'emoji' in name
-
-    def include_delay(self, delay, name=None, **ignore):
-        return delay<700
+    def include_stream(self, name=None, **ignore):
+        return '~' not in name
 
 
 if __name__ == '__main__':
-    crawler = ShortOnlyCrawler(write_key=YEX_CHEETAH, machine_type=ExpNormDist, max_evals=10,
-                         min_seconds=20, min_elapsed=60 * 60, max_active=20, decay=0.005)
-    crawler.delete_performance()
+    crawler = RegularFitCrawler(write_key=YEX_CHEETAH, machine_type=ExpNormDist, max_evals=50,
+                         min_seconds=1, min_elapsed=60*60, max_active=500, decay=0.005,
+                         param_base_url=STORED_PARAM_URL, stop_loss=50)
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/yex_cheetah.py')
     crawler.run()
+
+

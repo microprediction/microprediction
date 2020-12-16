@@ -12,6 +12,8 @@ from copy import deepcopy
 from microprediction.univariate.arrivals import approx_dt
 from microprediction.univariate.cdfvalues import nudged
 from getjson import getjson
+from microprediction.univariate.cdfvalues import project_on_lagged_lattice
+from microconventions.stats_conventions import is_discrete
 
 
 # Stream crawler that periodically fits parameters, or loads them
@@ -184,6 +186,12 @@ class FitCrawler(SequentialStreamCrawler):
         num = len(lagged_values)
         samples = [walk[num - step_back + num_steps] - walk[num - step_back] + noise for step_back, noise in
                    zip(back_choices, measurement_noise)]
-        return sorted(nudged(samples))
+
+        if is_discrete(lagged_values=lagged_values, num=0.75*len(lagged_values), ndigits=5):
+            return project_on_lagged_lattice(values=samples, lagged_values=lagged_values)
+        else:
+            return sorted(nudged(samples))
+
+
 
 

@@ -9,17 +9,17 @@ from microprediction.univariate.expnormdist import ExpNormDist
 STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
 
 
-class TestingFitCrawler(FitCrawler):
+class RegularFitCrawler(FitCrawler):
 
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
     def include_stream(self, name=None, **ignore):
-        return 'emojitracker-twitter-disappointed_face' in name and not '~' in name
+        return '~' not in name
 
 
 if __name__ == '__main__':
-    crawler = TestingFitCrawler(write_key=COMAL_CHEETAH, machine_type=ExpNormDist, max_evals=50,
+    crawler = RegularFitCrawler(write_key=COMAL_CHEETAH, machine_type=ExpNormDist, max_evals=50,
                          min_seconds=1, min_elapsed=60*60, max_active=500, decay=0.005,
                          param_base_url=STORED_PARAM_URL, stop_loss=50)
     crawler.set_repository(
