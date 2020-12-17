@@ -6,6 +6,9 @@ import random
 from datetime import datetime
 from pprint import  pprint
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams (see the 4th module in particular)
+
 from microprediction import MicroWriter
 try:
     from microprediction.config_private import TRAFFIC_WRITE_KEY, BART_KEY

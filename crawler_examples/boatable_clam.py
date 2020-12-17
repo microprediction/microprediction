@@ -1,4 +1,6 @@
 # Example of using the package echochamber, which in turn uses MicroCrawler
+# Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
 
 try:
     from microprediction.config_private import BOATABLE_CLAM

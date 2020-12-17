@@ -4,6 +4,9 @@ from pprint import pprint
 import numpy as np
 import json
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started reading historical data, and the like.
+
 
 class MicroReader(MicroConventions):
 

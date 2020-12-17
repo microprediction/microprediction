@@ -4,9 +4,13 @@ import pytz
 import random
 from datetime import datetime, timedelta
 from pprint import pprint
-
 from microprediction import MicroWriter
 from microprediction.config_private import COVID_API, COVID_UUID, TRAFFIC_WRITE_KEY
+
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams (see the 4th module in particular)
+
+# This might be broken
 
 from ravenpackapi import RPApi, ApiConnectionError
 

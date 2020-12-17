@@ -1,6 +1,10 @@
 from microprediction import MicroWriter
 import time
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams.
+
+
 class PandasLoop(MicroWriter):
 
     # Creates multiple streams by looping over rows of a pandas dataframe

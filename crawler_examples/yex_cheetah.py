@@ -5,6 +5,9 @@ from microprediction.univariate.expnormdist import ExpNormDist
 # Illustrates the use of offline parameter estimation
 # See the repo  microprediction/offline for how to use Github actions for this purpose
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
+
 STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
 
 

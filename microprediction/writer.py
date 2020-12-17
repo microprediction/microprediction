@@ -4,6 +4,9 @@ from microconventions.value_conventions import ValueConventions
 import requests, pprint, time, json
 from collections import OrderedDict
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams and/or submitting predictions.
+
 
 class MicroWriter(MicroReader):
 

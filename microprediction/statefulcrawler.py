@@ -1,6 +1,12 @@
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams and/or submitting predictions.
 
 from collections import OrderedDict
 from microprediction.crawler import MicroCrawler
+
+# Video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
+# at https://www.microprediction.com/fitcrawler
 
 
 class StreamCrawler(MicroCrawler):

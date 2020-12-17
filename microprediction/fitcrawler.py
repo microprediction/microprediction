@@ -13,11 +13,11 @@ from copy import deepcopy
 from microprediction.univariate.arrivals import approx_dt
 from microprediction.univariate.cdfvalues import nudged
 from getjson import getjson
-from microprediction.univariate.cdfvalues import project_on_lagged_lattice
+from microprediction.samplers import project_on_lagged_lattice
 from microconventions.stats_conventions import is_discrete
 
-
 # Stream crawler that periodically fits parameters, or loads them
+# Video explaining this code at https://www.microprediction.com/fitcrawler
 
 
 class FitCrawler(SequentialStreamCrawler):

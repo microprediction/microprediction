@@ -19,6 +19,12 @@ on why [microprediction is synomymous with AI](https://www.microprediction.com/w
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
 of prediction. In order to try to get this idea off the ground, there are some ongoing [competitions](https://www.microprediction.com/competitions) and developer incentives. 
     
+## Video tutorials
+    
+Video tutorials are available at https://www.microprediction.com/python-1 to help you
+get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
+at https://www.microprediction.com/fitcrawler.     
+    
 ## Presentations
 
 Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. A book will be 

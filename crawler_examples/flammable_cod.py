@@ -1,6 +1,8 @@
 from microprediction import MicroCrawler
 import numpy as np
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
 
 class FlammableCod(MicroCrawler):
     " Example crawler ... this guy helps flush the pipes by entering quickly and getting out quickly "

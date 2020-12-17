@@ -1,4 +1,7 @@
 # Simple crawler on curated streams and delays to get you started
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams and/or submitting predictions.
+
 from microprediction.crawler import MicroCrawler
 
 CURATED = ['bart_delays.json', 'altitude.json', 'traffic_absolute_speed.json', 'hospital_bike_activity.json',

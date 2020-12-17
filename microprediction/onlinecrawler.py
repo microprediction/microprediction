@@ -1,4 +1,9 @@
 # Illustrates a crawler that performs incremental estimation
+
+# Video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
+# at https://www.microprediction.com/fitcrawler
+
 from microprediction import MicroCrawler
 import time
 from collections import OrderedDict

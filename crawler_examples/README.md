@@ -3,6 +3,9 @@
 
 Incomplete list but should get you started. 
 
+Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
+get started running crawlers at www.microprediction.com
+
 ## Filtering examples
 
 It probably

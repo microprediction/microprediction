@@ -1,3 +1,6 @@
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams (see the 4th module in particular)
+
 import requests
 
 URL        = "https://data.cityofnewyork.us/resource/i4gi-tjb9.json"  # MTA city of NY realtime feed

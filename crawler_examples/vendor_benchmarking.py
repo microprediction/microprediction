@@ -5,6 +5,10 @@ import numpy as np
 
 # Pseudo-code for Automated time series prediction algorithms.
 # Hack this example to benchmark open source of vendor libraries.
+# ... although most don't provide distributional predictions 'cause they are so lame.
+
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
 
 
 class MockFastVendorModel(object):

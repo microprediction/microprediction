@@ -8,6 +8,9 @@ from microprediction.univariate.digestdist import DigestDist
 from typing import Type
 from copy import deepcopy
 
+# Video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
+# at https://www.microprediction.com/fitcrawler
 
 class SequentialStreamCrawler(StreamCrawler):
 

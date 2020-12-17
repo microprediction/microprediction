@@ -1,3 +1,6 @@
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams (see the 4th module in particular)
+
 import logging
 import requests
 import time
@@ -5,7 +8,6 @@ import pytz
 import random
 from datetime import datetime, timedelta
 from pprint import  pprint
-
 from microprediction import MicroWriter
 from microprediction.config_private import TRAFFIC_WRITE_KEY
 

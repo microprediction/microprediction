@@ -1,4 +1,7 @@
 # Things you can run to help support the overall effort
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams and/or submitting predictions.
+
 import requests, random
 from pprint import pprint
 from microprediction import new_key

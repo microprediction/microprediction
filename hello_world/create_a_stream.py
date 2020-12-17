@@ -1,10 +1,13 @@
-from credentials import ELFEST_BOBCAT  # You'll have to supply your own
+from microprediction.config_private import ELFEST_BOBCAT  # You'll have to supply your own
 import pandas as pd
 from microprediction import MicroWriter
 import time
 
 # Video explanation of this example:
 # https://vimeo.com/443203883
+
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
 
 mw = MicroWriter(write_key=ELFEST_BOBCAT) # See creating_a_key.py
 STREAM_NAME = 'water.json'

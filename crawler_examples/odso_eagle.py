@@ -5,8 +5,11 @@ from statsmodels.tsa.arima.model import ARIMA
 from sklearn.metrics import mean_squared_error
 
 # Forked from a crawler by Dan Carroll
-# ARIMA and Normal sampling
+# ARIMA and Normal sampling.
 
+
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
 
 class MyCrawler(MicroCrawler):
 
@@ -87,6 +90,7 @@ class MyCrawler(MicroCrawler):
             point_est = model_fit.predict(len(lagged_values), len(lagged_values), dynamic=True)
             st_dev = np.std(lagged_values)
             v = [s for s in (np.random.normal(point_est, st_dev, self.num_predictions))]
+                  # See also microprediction.samplers for other ways to do the last part
 
         return sorted(v)
 

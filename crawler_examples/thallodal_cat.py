@@ -1,6 +1,9 @@
 from microprediction.config_private import THALLODAL_CAT
 from microprediction.sequentialcrawler import SequentialStreamCrawler, DigestDist
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
+
 if __name__ == "__main__":
     crawler = SequentialStreamCrawler(write_key=THALLODAL_CAT, min_lags=500, machine_type=DigestDist)
     # Aside: as of 0.10.12, DigestMachine is the default machine_type, so this need not even be supplied

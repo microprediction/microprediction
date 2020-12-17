@@ -1,4 +1,7 @@
 # Provides an example of a self-navigating algorithm which you are under no obligation to use
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started running crawlers at www.microprediction.com
+
 from microprediction.writer import MicroWriter
 from microprediction import new_key
 from microconventions import api_url
@@ -9,6 +12,8 @@ import numpy as np
 from statistics import median
 import os
 import json
+
+
 
 
 def new_key_if_none(write_key, use_environ=False, difficulty=10):

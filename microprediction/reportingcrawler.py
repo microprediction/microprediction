@@ -5,7 +5,9 @@ from pprint import pprint
 
 
 # A simple testing crawler that takes a pass_callback and a fail_callback.
-
+# Video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
+# at https://www.microprediction.com/fitcrawler
 
 class ReportingCrawler(MicroCrawler):
 

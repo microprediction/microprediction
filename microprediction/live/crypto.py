@@ -1,6 +1,8 @@
 from pycoingecko import CoinGeckoAPI
 from pprint import pprint
 
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you
+# get started creating streams (see the 4th module in particular)
 
 def names_and_prices():
     """ Returns bitcoin and ethereum in USD and EUR """
