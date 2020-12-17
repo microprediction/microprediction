@@ -5,6 +5,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from pprint import pprint
 import datetime
 
+
 class MicroPoll(MicroWriter):
 
     #--------------------------------------------

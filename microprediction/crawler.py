@@ -3,7 +3,7 @@ from microprediction.writer import MicroWriter
 from microprediction import new_key
 from microconventions import api_url
 import random, time, datetime
-from microprediction.samplers import exponential_bootstrap, approx_mode, _weighted_random_sample
+from microprediction.samplers import approx_mode, _weighted_random_sample, fox_sample
 import pprint
 import numpy as np
 from statistics import median
@@ -137,8 +137,8 @@ class MicroCrawler(MicroWriter):
                :returns            [ float ]    A vector of numbers somewhat indicative of a probability density, of length self.num_predictions
 
         """
-        scenarios = exponential_bootstrap(lagged=lagged_values, num=self.num_predictions, decay=0.01)
-        assert len(scenarios) == self.num_predictions, "Your sammpler should product a vector of length " + str(
+        scenarios = fox_sample(lagged_values=lagged_values, lagged_times=lagged_times, num=self.num_predictions, delay=delay, name=name)
+        assert len(scenarios) == self.num_predictions, "Your sampler should product a vector of length " + str(
             self.num_predictions)
         return sorted(scenarios)
 

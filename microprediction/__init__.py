@@ -13,4 +13,5 @@ from microprediction.univariate.digestdist import DigestDist
 from microprediction.univariate.normaldist import NormalDist
 from microprediction.univariate.distmachine import DistMachine
 from microprediction.univariate.skewdist import SkewDist
+from microprediction.polling import MicroPoll, ChangePoll
 DistributionMachine = DistMachine  # Backward compat

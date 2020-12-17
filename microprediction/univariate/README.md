@@ -6,10 +6,6 @@ univariate distribution updated one data point at a time. It must possess and in
 
 ### DistributionMachine
 
-
-
-
-
 Examples of usage: 
 
 - [statesboy cat](https://github.com/microprediction/microprediction/blob/master/crawler_examples/statesboy_cat.py)

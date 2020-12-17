@@ -121,12 +121,14 @@ class MicroReader(MicroConventions):
         xs = np.interp(x=ps_, xp=cdf["x"], fp=cdf["y"], left=None, right=None)
         return list(xs) if ps is None else ps[0]
 
-    def get_discrete_pdf_lagged(self, name: str, delay: int = 25, num: int=25, lagged_values=None):
+    def get_discrete_pdf_lagged(self, name: str, delay: int = None, num: int=25, lagged_values=None):
         """ Retrieve estimate of PDF ... only when discrete values are taken
 
                 num   Maximum number of points to compute PDF at
 
         """
+        if delay is None:
+            delay = self.DELAYS[0]
         # PDF for continuous case is not implemented yet, sorry!
         lagged_values = lagged_values or self.get_lagged_values(name=name)
         values = self.cdf_values(lagged_values=lagged_values, num=num, as_discrete=True)
