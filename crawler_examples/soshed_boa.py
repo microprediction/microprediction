@@ -6,6 +6,7 @@ from statsmodels.tsa.ar_model import AutoReg, ar_select_order
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
+
 class MyCrawler(MicroCrawler):
 
     def __init__(self, write_key):
