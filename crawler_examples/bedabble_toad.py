@@ -5,6 +5,7 @@ from microprediction.config_private import BEDABBLE_TOAD
 # Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
+
 class ShortOnlyCrawler(FitCrawler):
 
     def __init__(self,**kwargs):

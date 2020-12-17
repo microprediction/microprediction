@@ -32,7 +32,7 @@ class EmpiricalTrafficAndElectricityCrawler(MicroCrawler):
         values = list()
         for change, rounded_count in d1.items():
             values.extend( [change]*rounded_count )
-        change_spray = list(range(-50,50))
+        change_spray = list(range(-150,150))
         values.extend(change_spray)
         values = values[:self.num_predictions]
         abs_values=[ lagged_values[0]+chg for chg in values ]

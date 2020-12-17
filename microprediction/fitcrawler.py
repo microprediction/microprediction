@@ -86,7 +86,7 @@ class FitCrawler(SequentialStreamCrawler):
                 url = self.param_base_url + '/' + name
                 try:
                     stored_params = getjson(url)
-                    if stored_params is not None:
+                    if stored_params is None:
                         logging.warning('Empty stored params at '+url+' or get failed.')
                         machine.params = stored_params
                 except:
