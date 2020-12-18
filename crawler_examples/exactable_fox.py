@@ -1,12 +1,13 @@
 from microprediction.config_private import EXACTABLE_FOX
+
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
+# This guy uses
 
 if __name__ == "__main__":
     try:
         from echochamber import EchoCrawler
-
 
         class Fox(EchoCrawler):
 
