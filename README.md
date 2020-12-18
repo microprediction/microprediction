@@ -1,6 +1,6 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction)
 
-![tests](https://github.com/microprediction/microprediction/workflows/python-package/badge.svg)
+![python-package](https://github.com/microprediction/microprediction/workflows/python-package/badge.svg)
 
 # microprediction
 
