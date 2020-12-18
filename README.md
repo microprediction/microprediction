@@ -29,8 +29,11 @@ at https://www.microprediction.com/fitcrawler.
     
 ## Presentations
 
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. A book will be 
-published by MIT Press in 2021 on the topic. There are links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+
+## Book
+
+To be published by MIT Press in Fall 2021. 
 
 ![](https://i.imgur.com/uwttTku.png)
 
