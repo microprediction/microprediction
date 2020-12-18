@@ -44,9 +44,9 @@ class ReportingCrawler(MicroCrawler):
             """ Fail fast """
             return [70]
 
-        def sample(self, lagged_values, lagged_times=None, **ignore):
+        def sample(self, lagged_values, lagged_times=None, delay=None, name=None, **ignore):
             if len(lagged_values or []) > 5:
-                return super().sample(lagged_values=lagged_values, lagged_times=lagged_times)
+                return super().sample(lagged_values=lagged_values, lagged_times=lagged_times, delay=delay, name=name)
             else:
                 return sorted(
                     np.random.randn(self.num_predictions))
