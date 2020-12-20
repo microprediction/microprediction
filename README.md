@@ -1,7 +1,9 @@
+[![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction)
+
 # microprediction
 
 Hi. This is the client library for www.microprediction.org, humble birthplace of the prediction web. Some people call it "Napster meets DataRobot". It challenges
-the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned. For now, however, a time series focus and here's what's up: 
+the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned but for now, the focus is *live competitive streaming distributional prediction* of public data. Here's how it works: 
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
@@ -27,8 +29,15 @@ at https://www.microprediction.com/fitcrawler.
     
 ## Presentations
 
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. A book will be 
-published by MIT Press in 2021 on the topic. There are links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+
+## Weekly contributor Google meet
+
+Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for details. We'll help you get started on the spot. 
+
+## Book
+
+To be published by MIT Press in 2021. 
 
 ![](https://i.imgur.com/uwttTku.png)
 
