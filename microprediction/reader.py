@@ -82,6 +82,32 @@ class MicroReader(MicroConventions):
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name,count=count)
         return lagged_values
 
+    def get_lagged_copulas(self, name:str, count:int=5000):
+        """ Retrieve history of implied copulas in [0,1]^n
+             returns [ [p1,p2,p3] ]
+        """
+        assert '~' in name,'This method is intended for copula streams'
+        lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
+        dim = 2 if 'z2~' in name else 3
+        lagged_prctls = [ self.from_zcurve(zvalue,dim=dim) for zvalue in lagged_values ]
+        return lagged_prctls
+
+    def get_lagged_zvalues(self, name:str, count:int=5000):
+        """ Retrieve history of implied z in [-inf,inf]^n
+             returns [ [z1,z2,z3], [ , ,] ]
+        """
+        assert '~' in name, 'This method is intended for bivariate or trivariate copula streams'
+        lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
+        dim = 2 if 'z2~' in name else 3
+
+        def expand(z):
+            ps = self.from_zcurve(zvalue=z,dim=dim)
+            return [ self.norminv(p) for p in ps ]
+
+        lagged_zs = [ expand(z) for z in lagged_values]
+        return lagged_zs
+
+
     def get_lagged_times(self, name:str, count:int=1000) -> list:
         """ Retrieve lagged times
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json

@@ -17,3 +17,15 @@ def test_getters():
         assert p1 is not None
         if p1.get('x'):
             assert abs(p1['y'][0] - 0.1666) < 0.1, "Oh man this die market is so inefficient!"
+
+
+def test_z_getters():
+    zs = mr.get_lagged_zvalues(name='z2~copula_x~copula_y~70.json', count=3)
+    ps = mr.get_lagged_copulas(name='z2~copula_x~copula_y~70.json', count=3)
+    assert len(zs)==3
+    assert len(zs[0])==2
+    assert len(ps) == 3
+    assert len(ps[0]) == 2
+    assert ps[0][0]<=1
+    assert ps[0][0]>=0
+    pass

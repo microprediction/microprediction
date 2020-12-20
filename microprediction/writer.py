@@ -337,6 +337,27 @@ class MicroWriter(MicroReader):
             print('', flush=True)
             raise Exception('Failed to submit')
 
+    def submit_copula(self, name, prctls:[[float]], delay, verbose=True):
+        """ Offers an alternative way to submit to copula streams.
+               prctls: [ [p1,p2,p3] ]   list of percentile vectors in [0,1]^n , where n=2 or 3
+        """
+        assert '~' in name, "This method is intended for implied copula submission"
+        values = [ self.to_zcurve(prctls=prctl) for prctl in prctls ]
+        return self.submit(name=name, values=values, delay=delay, verbose=verbose)
+
+    def submit_zvalues(self, name, zvalues: [[float]], delay, verbose=True):
+        """ Offers an alternative way to submit to copula streams.
+               prctls: [ [z1,z2,z3] ]   list of percentile vectors in [0,1]^n , where n=2 or 3
+        """
+        assert 'z2~' in name or 'z3~' in name, "This method is intended for implied copula submission"
+
+        def squish(zs):
+            prtcls = [ self.normcdf(z) for z in zs ]
+            return self.to_zcurve(prctls=prtcls)
+
+        values = sorted( [squish(zs) for zs in zvalues] )
+        return self.submit(name=name, values=values, delay=delay, verbose=verbose)
+
     def cancel(self, name, delay=None, delays=None):
         """ Send request to cancel scenarios. However predictions won't be deleted immediately.
 
