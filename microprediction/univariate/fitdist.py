@@ -34,8 +34,8 @@ class FitDist(LossDist, ABC):
             loss_after  = self.loss(lagged_values=lagged_values, lagged_times=lagged_times, params=best_params, state=state_before)
             changed = loss_after < loss_before
             if loss_after < loss_before:
-                self.params.update(best_params)
-                self.points_to_evaluate.append(best_params)
+                self.params.update(deepcopy(best_params))
+                self.points_to_evaluate.append(deepcopy(best_params))
             else:
                 self.params = deepcopy(params_before)
         self.state = state_before
