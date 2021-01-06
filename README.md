@@ -2,7 +2,7 @@
 
 # microprediction
 
-Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open loosely coupled way for individuals to collectively create powerful turnkey repeated short term predictions, for any purpose. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what)
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open loosely coupled way for individuals to collectively create powerful turnkey repeated short term predictions, for any purpose. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what).
 
 ## Quick links
 
