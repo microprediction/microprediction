@@ -2,7 +2,9 @@
 
 # microprediction
 
-Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for any one. It is used by two leading financial institutions but very new. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot". It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for anyone, at any time. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so join us! 
+
+You can get free live prediction here. Increasing accuracy over time is *not* predicated on me accepting pull requests, though they are more than welcome. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
 
 ## Quick links
 
