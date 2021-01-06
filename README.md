@@ -2,7 +2,7 @@
 
 # microprediction
 
-Hello. You've found the humble birthplace of the prediction web. 
+Hi. We're trying to build a prediction web. 
 
 Loosely coupled individual contributors collectively effect *turnkey, repeated short term predictions* of *anything*, for *any purpose*, for *anyone*, at *any time* accessed via an API or client library. 
 
