@@ -37,13 +37,11 @@ Structured video introductions:
 
 Notebooks:
 
-- [notebook example: creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
-- [notebook example: listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
-)
-- [notebook example: submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb)
-)
-- [notebook example: crawler choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb)
-- [notebook example: retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
+[creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
+[choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb) |
+[retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
 
 More in the [knowledge center](https://www.micoprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
