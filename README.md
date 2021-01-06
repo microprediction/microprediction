@@ -4,7 +4,12 @@
 
 Hello. You've found the humble birthplace of the prediction web. Call it "Napster meets AutoML". It is an open way for loosely coupled individual contributors to collectively effect turnkey repeated short term distributional predictions, for any purpose, for anyone, at any time. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
 
-You can get free live prediction here. You can contribute to making it better. You get out what you put in, sort of. Increasing accuracy over time is *not* predicated on me or any contributor accepting pull requests, though they are more than welcome. Instead you write, modify and launch algorithms. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo. 
+You can get free live prediction here. You can contribute to making it better. You get out what you put in, sort of. Increasing accuracy over time is *not* predicated on me or any contributor accepting pull requests, though they are more than welcome. Instead you write, modify and launch algorithms. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
+
+## You might be helping already
+
+If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). There is discussion of packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
+[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI.  
 
 ## Quick links
 
@@ -17,10 +22,6 @@ You can get free live prediction here. You can contribute to making it better. Y
 [faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) |
 [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [collective epidemiology](https://www.swarmprediction.com/about.html) | [skater](https://github.com/microprediction/timemachines) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
 [key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
-
-Popular this month:
-- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks) for packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
-[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more. 
 
 Structured video introductions:
 
