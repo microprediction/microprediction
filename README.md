@@ -71,7 +71,7 @@ Here's a [first glimpse](https://www.microprediction.com/welcome) for the uninit
 on why [microprediction is synomymous with AI](https://www.microprediction.com/welcome-4) due to the possibility of value function prediction, and a straightforward
 [plausibility argument](https://www.microprediction.com/welcome-2) for why an open source, openly networked collection of algorithms that 
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
-of prediction. In order to try to get this idea off the ground, there are some ongoing [competitions](https://www.microprediction.com/competitions) and developer incentives. 
+of prediction. In order to try to get this idea off the ground, there are some ongoing [developer incentives](https://www.microprediction.com/competitions).
     
 ## Ultra-Quick Start. 
 The best way to get the joke is by participating. Here are two possibilities, both very easy.  
