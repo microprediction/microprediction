@@ -2,7 +2,9 @@
 
 # microprediction
 
-Hello. You've found the humble birthplace of the prediction web. It is an open way for loosely coupled individual contributors to collectively effect *turnkey, repeated short term predictions* of *anything*, for *any purpose*, for *anyone*, at *any time* accessed via an API or client library. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
+Hello. You've found the humble birthplace of the prediction web. 
+
+Here loosely coupled individual contributors collectively effect *turnkey, repeated short term predictions* of *anything*, for *any purpose*, for *anyone*, at *any time* accessed via an API or client library. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
 
 You can:
 
