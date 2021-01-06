@@ -2,16 +2,15 @@
 
 # microprediction
 
-Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", perhaps. It challenges
-the Automated Machine Learning industry with an open, collective but loosely coupled assembly of powerful turnkey prediction. For now, the focus is *live competitive streaming distributional prediction* of public data. 
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", perhaps. It is an open loosely coupled way for individuals to collectively create powerful turnkey repeated short term predictions, for any purpose. For now, the focus is *live competitive streaming distributional prediction* of public data. 
 
 ## Quick links
 
-[blog](www.micoprediction.com/blog) 
-[competitions](www.micoprediction.com/competitions) 
-[what](www.micoprediction.com/what) 
-[make-predictions](www.micoprediction.com/make-predictions)
-[get-predictions](www.micoprediction.com/get-predictions)
+[dashboard](www.microprediction.org) | [helper site](www.microprediction.com) |
+[what](www.micoprediction.com/what) | [blog](www.micoprediction.com/blog) |
+[competitions](www.micoprediction.com/competitions) |
+[make-predictions](www.micoprediction.com/make-predictions) |
+[get-predictions](www.micoprediction.com/get-predictions) |
 - [python module 1: non-registration](micoprediction.com/python-1)
 - [python module 2: first crawler](micoprediction.com/python-2)
 - [python module 3: retrieving historical data](microprediction.com/python-3)
