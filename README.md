@@ -24,7 +24,7 @@ If you maintain an open source time series package with a permissive license, we
 
 [linked-in](https://www.linkedin.com/company/65109690) |
 [dashboard](https://www.microprediction.org) | [nice looking .com intro site](https://www.microprediction.com) |
-[what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) | [contact] (https://www.microprediction.com/contact-us) |
+[what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) | [contact](https://www.microprediction.com/contact-us) |
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
