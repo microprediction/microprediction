@@ -14,7 +14,9 @@ You can get free live prediction here. You can contribute to making it better. Y
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
-[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu).
+[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) |
+[causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [collective epidemiology](https://www.swarmprediction.com/about.html) | [skater](https://github.com/microprediction/timemachines) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
+[key maker](https://github.com/microprediction/keymaker) | [pandemic](https://github.com/microprediction/pandemic) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
 
 Popular this month:
 - Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks).
