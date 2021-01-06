@@ -11,7 +11,10 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 [competitions](https://www.micoprediction.com/competitions) |
 [make-predictions](https://www.micoprediction.com/make-predictions) |
 [get-predictions](https://www.micoprediction.com/get-predictions) | [knowledge center](https://www.micoprediction.com/knowledge-center) |
-[faq](https://www.micoprediction.com/faq) |
+[faq](https://www.micoprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
+
+Structured video introductions:
+
 - [python module 1: non-registration](https://micoprediction.com/python-1)
 - [python module 2: first crawler](https://micoprediction.com/python-2)
 - [python module 3: retrieving historical data](https://microprediction.com/python-3)
@@ -19,6 +22,9 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 - [python module 5: modifying crawler algorithm](https://microprediction.com/python-5)
 - [python module 6: modifying crawler navigation](https://microprediction.com/python-6)
 - [r module 1: entering from kaggle kernel](https://microprediction.com/r-1)
+
+Notebooks:
+
 - [notebook example: creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
 - [notebook example: listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
 )
