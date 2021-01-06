@@ -12,13 +12,13 @@ the Automated Machine Learning industry with an open, collective but loosely cou
 [what](www.micoprediction.com/what) 
 [make-predictions](www.micoprediction.com/make-predictions)
 [get-predictions](www.micoprediction.com/get-predictions)
-[python module 1: non-registration](micoprediction.com/python-1)
-[python module 2: first crawler](micoprediction.com/python-2)
-[python module 3: retrieving historical data](microprediction.com/python-3)
-[python module 4: creating a data stream](microprediction.com/python-4)
-[python module 5: modifying crawler algorithm](microprediction.com/python-5)
-[python module 6: modifying crawler navigation](microprediction.com/python-6)
-[r module 1: entering from kaggle kernel](microprediction.com/r-1)
+- [python module 1: non-registration](micoprediction.com/python-1)
+- [python module 2: first crawler](micoprediction.com/python-2)
+- [python module 3: retrieving historical data](microprediction.com/python-3)
+- [python module 4: creating a data stream](microprediction.com/python-4)
+- [python module 5: modifying crawler algorithm](microprediction.com/python-5)
+- [python module 6: modifying crawler navigation](microprediction.com/python-6)
+- [r module 1: entering from kaggle kernel](microprediction.com/r-1)
 
 # How turnkey community driven open prediction works: 
 
