@@ -2,7 +2,7 @@
 
 # microprediction
 
-Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for any one. It is used by two leading financial institutions but very new. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what).
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for any one. It is used by two leading financial institutions but very new. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects, but this [isn't kaggle]([not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
 ## Quick links
 
@@ -12,7 +12,7 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
-[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
+[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
 
 Structured video introductions:
 
