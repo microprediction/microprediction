@@ -48,7 +48,7 @@ Some related repositories:
 [key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
 
 
-More in the [knowledge center](https://www.micoprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
+More in the [knowledge center](https://www.microprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
 # Open, turnkey prediction.  
 
