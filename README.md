@@ -21,13 +21,13 @@ Popular this month:
 
 Structured video introductions:
 
-- [python module 1: non-registration](https://microprediction.com/python-1)
-- [python module 2: first crawler](https://microprediction.com/python-2)
-- [python module 3: retrieving historical data](https://microprediction.com/python-3)
-- [python module 4: creating a data stream](https://microprediction.com/python-4)
-- [python module 5: modifying crawler algorithm](https://microprediction.com/python-5)
-- [python module 6: modifying crawler navigation](https://microprediction.com/python-6)
-- [r module 1: entering from kaggle kernel](https://microprediction.com/r-1)
+- [python module 1: non-registration](https://www.microprediction.com/python-1)
+- [python module 2: first crawler](https://www.microprediction.com/python-2)
+- [python module 3: retrieving historical data](https://www.microprediction.com/python-3)
+- [python module 4: creating a data stream](https://www.microprediction.com/python-4)
+- [python module 5: modifying crawler algorithm](https://www.microprediction.com/python-5)
+- [python module 6: modifying crawler navigation](https://www.microprediction.com/python-6)
+- [r module 1: entering from kaggle kernel](https://www.microprediction.com/r-1)
 
 Notebooks:
 
