@@ -16,6 +16,9 @@ You can get free live prediction here. Increasing accuracy over time is *not* pr
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
 [faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
 
+Popular this month:
+- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with notebook examples. 
+
 Structured video introductions:
 
 - [python module 1: non-registration](https://microprediction.com/python-1)
