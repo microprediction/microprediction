@@ -2,8 +2,25 @@
 
 # microprediction
 
-Hi. This is the client library for www.microprediction.org, humble birthplace of the prediction web. Some people call it "Napster meets DataRobot". It challenges
-the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned but for now, the focus is *live competitive streaming distributional prediction* of public data. Here's how it works: 
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", perhaps. It challenges
+the Automated Machine Learning industry with an open, collective but loosely coupled assembly of powerful turnkey prediction. For now, the focus is *live competitive streaming distributional prediction* of public data. 
+
+## Quick links
+
+[blog](www.micoprediction.com/blog) 
+[competitions](www.micoprediction.com/competitions) 
+[what](www.micoprediction.com/what) 
+[make-predictions](www.micoprediction.com/make-predictions)
+[get-predictions](www.micoprediction.com/get-predictions)
+[python module 1: non-registration](micoprediction.com/python-1)
+[python module 2: first crawler](micoprediction.com/python-2)
+[python module 3: retrieving historical data](microprediction.com/python-3)
+[python module 4: creating a data stream](microprediction.com/python-4)
+[python module 5: modifying crawler algorithm](microprediction.com/python-5)
+[python module 6: modifying crawler navigation](microprediction.com/python-6)
+[r module 1: entering from kaggle kernel](microprediction.com/r-1)
+
+# How turnkey community driven open prediction works: 
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
@@ -21,12 +38,30 @@ on why [microprediction is synomymous with AI](https://www.microprediction.com/w
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
 of prediction. In order to try to get this idea off the ground, there are some ongoing [competitions](https://www.microprediction.com/competitions) and developer incentives. 
     
+## Ultra-Quick Start. 
+The best way to get the joke is by participating. Here are two possibilities, both very easy.  
+
+- Fork [microactors](https://github.com/microprediction/microactors) and enable GitHub actions, or 
+- Run the bash script below
+
+The second option will use a virtual environment, and thus not interfere with your other work.  
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+
+You should run that script "forever". Plug your write key into the [dashboard](www.microprediction.org) to view your progress. 
+    
 ## Video tutorials
     
 Video tutorials are available at https://www.microprediction.com/python-1 to help you
 get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
 at https://www.microprediction.com/fitcrawler.     
     
+## Blog
+Here are the most popular [blog](https://www.microprediction.com/blog) articles of 2021:
+- [Popular Python Timeseries Packges](https://www.microprediction.com/blog/popular-timeseries-packages) ranks a hundred open source time series packages by downloads, and provides hello world notebook examples for many of them. 
+- [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
+- [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for the [agent model epidemic time series](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected). 
+
 ## Presentations
 
 Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
@@ -37,7 +72,7 @@ Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for 
 
 ## Book
 
-To be published by MIT Press in 2021. 
+To be published by MIT Press in Fall 2021. 
 
 ![](https://i.imgur.com/uwttTku.png)
 
@@ -49,18 +84,6 @@ show you how to create an identity, enter a live contest and use the [dashboard]
 to [retrieve historical data](https://www.microprediction.com/python-3) for time series research, if that is the only way you wish to use the site. You don't have to use
 Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
 you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)).   
-
-## Ultra-Quick Start. 
-There are two ways to get on the leaderboard almost instantly
-
-- Fork [microactors](https://github.com/microprediction/microactors) and enable GitHub actions. 
-- Or run the bash script below
-
-The second option will use a virtual environment, and thus not interfere with your other work.  
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
-
-It's a great way to quickly get the joke. You should intend to run this "forever".
 
 ## Examples, examples, examples
 
@@ -369,14 +392,10 @@ help in a small way by celebrating posts and articles like this, should you be s
 
 See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
 
-
-
 ## Further reading
 
 See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) for listings of time series algorithms,
 comparisons of global hyper-parameter optimizers and other tips.   
 
-## PS: Don't mind the litter
 
-There are some mostly unrelated notebooks for www.microprediction.com/blog that will be 
-moved when I have a moment. 
+
