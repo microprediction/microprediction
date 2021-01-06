@@ -11,14 +11,12 @@ You can:
  - Get free *live* predictions. 
  - Contribute to making those predictions better. 
 
-We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). 
-
-There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
+We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).   
 
 ## You might be helping already
 
 If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
-[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI.  
+[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
 
 ## Quick links
 
