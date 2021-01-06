@@ -86,7 +86,7 @@ The second option will use a virtual environment, and thus not interfere with yo
 You should run that script "forever". Plug your write key into the [dashboard](www.microprediction.org) to view your progress. 
     
 
-## Blog, presentations, book
+## Blog, presentations, book, etc
 
 Here are the most popular [blog](https://www.microprediction.com/blog) articles of 2021:
 - [Popular Python Timeseries Packges](https://www.microprediction.com/blog/popular-timeseries-packages) ranks a hundred open source time series packages by downloads, and provides hello world notebook examples for many of them. 
