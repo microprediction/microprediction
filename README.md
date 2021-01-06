@@ -32,8 +32,8 @@ If you maintain an open source time series package with a permissive license, we
 
 Structured video introductions:
 
-[python module 1: non-registration](https://www.microprediction.com/python-1) |[python module 2: first crawler](https://www.microprediction.com/python-2) |[python module 3: retrieving historical data](https://www.microprediction.com/python-3) | [python module 4: creating a data stream](https://www.microprediction.com/python-4) | [python module 5: modifying crawler algorithm](https://www.microprediction.com/python-5)
-[python module 6: modifying crawler navigation](https://www.microprediction.com/python-6) | [r module 1: entering from kaggle kernel](https://www.microprediction.com/r-1)
+[1: non-registration](https://www.microprediction.com/python-1) | [2: first crawler](https://www.microprediction.com/python-2) |[3: retrieving historical data](https://www.microprediction.com/python-3) | [4: creating a data stream](https://www.microprediction.com/python-4) | [5: modifying your crawler's algorithm](https://www.microprediction.com/python-5) | 
+[6: modifying crawler navigation](https://www.microprediction.com/python-6) 
 
 Notebooks:
 
