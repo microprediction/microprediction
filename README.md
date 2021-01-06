@@ -50,13 +50,18 @@ to [retrieve historical data](https://www.microprediction.com/python-3) for time
 Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
 you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)).   
 
+## Ultra-Quick Start. 
+There are two ways to get on the leaderboard almost instantly
 
-## Participate immediately with a bash script
-Linux and mac users can run the default crawler with a one line cut and paste. This will use a virtual environment, and thus not interfere with your other work.  
+- Fork [microactors](https://github.com/microprediction/microactors) and enable GitHub actions. 
+- Or run the bash script below
+
+The second option will use a virtual environment, and thus not interfere with your other work.  
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
 
 It's a great way to quickly get the joke. You should intend to run this "forever".
+
 ## Examples, examples, examples
 
 - [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) feed creation and submission. 
