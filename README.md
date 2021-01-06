@@ -83,7 +83,7 @@ The second option will use a virtual environment, and thus not interfere with yo
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
 
-You should run that script "forever". Plug your write key into the [dashboard](www.microprediction.org) to view your progress. 
+You should run that script "forever". Plug your write key into the [dashboard](https://www.microprediction.org) to view your progress. 
     
 
 ## Blog, presentations, book, etc
