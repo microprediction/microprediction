@@ -14,7 +14,7 @@ You can get free live prediction here. You can contribute to making it better. Y
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
-[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
+[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu).
 
 Popular this month:
 - Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks).
