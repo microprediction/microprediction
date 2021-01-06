@@ -10,7 +10,8 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 [what](https://www.micoprediction.com/what) | [blog](https://www.micoprediction.com/blog) |
 [competitions](https://www.micoprediction.com/competitions) |
 [make-predictions](https://www.micoprediction.com/make-predictions) |
-[get-predictions](https://www.micoprediction.com/get-predictions) |
+[get-predictions](https://www.micoprediction.com/get-predictions) | [knowledge center](https://www.micoprediction.com/knowledge-center) |
+[faq](https://www.micoprediction.com/faq) |
 - [python module 1: non-registration](https://micoprediction.com/python-1)
 - [python module 2: first crawler](https://micoprediction.com/python-2)
 - [python module 3: retrieving historical data](https://microprediction.com/python-3)
@@ -18,6 +19,15 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 - [python module 5: modifying crawler algorithm](https://microprediction.com/python-5)
 - [python module 6: modifying crawler navigation](https://microprediction.com/python-6)
 - [r module 1: entering from kaggle kernel](https://microprediction.com/r-1)
+- [notebook example: creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
+- [notebook example: listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb)
+)
+- [notebook example: submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb)
+)
+- [notebook example: crawler choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb)
+- [notebook example: retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
+
+More in the [knowledge center](https://www.micoprediction.com/knowledge-center). 
 
 # How turnkey community driven open prediction works: 
 
