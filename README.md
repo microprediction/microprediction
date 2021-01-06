@@ -1,6 +1,6 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction)
 
-# microprediction
+# microprediction ("Napster meets Hayek meets AutoML")
 
 Hello. You've found the humble birthplace of the prediction web. 
 
@@ -13,7 +13,7 @@ You can:
 
 We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). 
 
-Think of this more as "Napster meets Hayek meets AutoML". There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
+There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
 
 ## You might be helping already
 
