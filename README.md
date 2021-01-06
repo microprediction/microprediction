@@ -17,7 +17,7 @@ You can get free live prediction here. You can contribute to making it better. Y
 [faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
 
 Popular this month:
-- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with notebook examples. 
+- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks).
 
 Structured video introductions:
 
