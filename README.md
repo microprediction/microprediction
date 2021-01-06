@@ -2,7 +2,7 @@
 
 # microprediction
 
-Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for any one. It is used by two leading financial institutions but very new. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects, but this [isn't kaggle]([not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
+Hi. I develop libraries supporting www.microprediction.org, humble birthplace of the prediction web. Call it "Napster meets DataRobot", if you will. It is an open way for loosely coupled individual contributors to collectively create powerful turnkey repeated short term predictions, for any purpose, for any one. It is used by two leading financial institutions but very new. Increasing accuracy over time is *not* predicated on me accepting pull requests. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
 
 ## Quick links
 
@@ -34,7 +34,7 @@ Notebooks:
 - [notebook example: crawler choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb)
 - [notebook example: retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
 
-More in the [knowledge center](https://www.micoprediction.com/knowledge-center). 
+More in the [knowledge center](https://www.micoprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
 # How turnkey community driven open prediction works: 
 
