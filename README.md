@@ -88,8 +88,8 @@ You should run that script "forever". Plug your write key into the [dashboard](w
 
 ## Blog, presentations, book, etc
 
-Here are the most popular [blog](https://www.microprediction.com/blog) articles of 2021:
-- [Popular Python Timeseries Packges](https://www.microprediction.com/blog/popular-timeseries-packages) ranks a hundred open source time series packages by downloads, and provides hello world notebook examples for many of them. 
+Here are the most popular recent [blog](https://www.microprediction.com/blog) posts:
+
 - [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
 - [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for the [agent model epidemic time series](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected). 
 
