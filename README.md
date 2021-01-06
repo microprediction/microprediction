@@ -23,7 +23,7 @@ If you maintain an open source time series package with a permissive license, we
 ## Quick links
 
 [linked-in](https://www.linkedin.com/company/65109690) |
-[dashboard](https://www.microprediction.org) | [helper site](https://www.microprediction.com) |
+[dashboard](https://www.microprediction.org) | [nice looking .com helper site](https://www.microprediction.com) |
 [what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) |
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
