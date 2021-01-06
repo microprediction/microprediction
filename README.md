@@ -2,13 +2,16 @@
 
 # microprediction
 
-Hello. You've found the humble birthplace of the prediction web. It is an open way for loosely coupled individual contributors to collectively effect turnkey repeated short term distributional predictions, for any purpose, for anyone, at any time. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
+Hello. You've found the humble birthplace of the prediction web. It is an open way for loosely coupled individual contributors to collectively effect turnkey repeated short term predictions of *anything*, for *any purpose*, for *anyone*, at *any time*. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
 
-You can get free live prediction here. You can contribute to making it better. You get out what you put in - in the sense that it probably behoves you to get up to speed on this new source of power. 
+You can:
 
-We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on me, or any contributor, accepting pull requests (though they are more than welcome). Instead one writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). Think of this more as "Napster meets AutoML".
+ - Get free *live* predictions. 
+ - Contribute to making those predictions better. 
 
-There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
+We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on acceptatnce of pull requests or some superior approach (though PR's are more than welcome). Instead one writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). 
+
+Think of this more as "Napster meets Hayek meets AutoML". There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
 
 ## You might be helping already
 
@@ -49,8 +52,9 @@ Notebooks:
 
 More in the [knowledge center](https://www.micoprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
-# How a community can drive open, turnkey prediction: 
+# Open, turnkey prediction.  
 
+Here's how it operates. 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
 - As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
