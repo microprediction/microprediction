@@ -20,8 +20,9 @@ If you maintain an open source time series package with a permissive license, we
 
 ## Quick links
 
+Bookmarks:
 [linked-in](https://www.linkedin.com/company/65109690) |
-[dashboard](https://www.microprediction.org) | [nice looking .com intro site](https://www.microprediction.com) |
+[microprediction.org (dashboard)](https://www.microprediction.org) | [microprediction.com (resources)](https://www.microprediction.com) |
 [what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) | [contact](https://www.microprediction.com/contact-us) |
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
@@ -31,12 +32,10 @@ If you maintain an open source time series package with a permissive license, we
 [key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
 
 Structured video introductions:
-
 [1: non-registration](https://www.microprediction.com/python-1) | [2: first crawler](https://www.microprediction.com/python-2) |[3: retrieving historical data](https://www.microprediction.com/python-3) | [4: creating a data stream](https://www.microprediction.com/python-4) | [5: modifying your crawler's algorithm](https://www.microprediction.com/python-5) | 
 [6: modifying crawler navigation](https://www.microprediction.com/python-6) 
 
 Notebooks:
-
 [creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
 [listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
 [submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
