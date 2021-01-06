@@ -7,16 +7,16 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 ## Quick links
 
 [dashboard](https://www.microprediction.org) | [helper site](https://www.microprediction.com) |
-[what](https://www.micoprediction.com/what) | [blog](https://www.micoprediction.com/blog) |
-[competitions](https://www.micoprediction.com/competitions) |
-[make-predictions](https://www.micoprediction.com/make-predictions) |
-[get-predictions](https://www.micoprediction.com/get-predictions) | [knowledge center](https://www.micoprediction.com/knowledge-center) |
-[faq](https://www.micoprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
+[what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) |
+[competitions](https://www.microprediction.com/competitions) |
+[make-predictions](https://www.microprediction.com/make-predictions) |
+[get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
+[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
 
 Structured video introductions:
 
-- [python module 1: non-registration](https://micoprediction.com/python-1)
-- [python module 2: first crawler](https://micoprediction.com/python-2)
+- [python module 1: non-registration](https://microprediction.com/python-1)
+- [python module 2: first crawler](https://microprediction.com/python-2)
 - [python module 3: retrieving historical data](https://microprediction.com/python-3)
 - [python module 4: creating a data stream](https://microprediction.com/python-4)
 - [python module 5: modifying crawler algorithm](https://microprediction.com/python-5)
