@@ -11,7 +11,7 @@ You can:
  - Get free *live* predictions. 
  - Contribute to making those predictions better. 
 
-We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor on acceptatnce of pull requests (though PR's are more than welcome). This is a network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). 
+We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull requests (though PR's are more than welcome). This is a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what). 
 
 Think of this more as "Napster meets Hayek meets AutoML". There are [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly.  
 
