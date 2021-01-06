@@ -16,10 +16,11 @@ You can get free live prediction here. You can contribute to making it better. Y
 [get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
 [faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) |
 [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [collective epidemiology](https://www.swarmprediction.com/about.html) | [skater](https://github.com/microprediction/timemachines) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
-[key maker](https://github.com/microprediction/keymaker) | [pandemic](https://github.com/microprediction/pandemic) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
+[key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
 
 Popular this month:
-- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks).
+- Our listing of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks) for packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
+[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more. 
 
 Structured video introductions:
 
