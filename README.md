@@ -1,6 +1,6 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction)
 
-# microprediction ("Napster meets Hayek meets AutoML")
+# microprediction
 
 Hello. You've found the humble birthplace of the prediction web. 
 
