@@ -2,9 +2,9 @@
 
 # microprediction
 
-Hello. You've found the humble birthplace of the prediction web. Call it "Napster meets AutoML". It is an open way for loosely coupled individual contributors to collectively effect turnkey repeated short term distributional predictions, for any purpose, for anyone, at any time. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so join us! 
+Hello. You've found the humble birthplace of the prediction web. Call it "Napster meets AutoML". It is an open way for loosely coupled individual contributors to collectively effect turnkey repeated short term distributional predictions, for any purpose, for anyone, at any time. It is used by two leading financial institutions despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
 
-You can get free live prediction here. Increasing accuracy over time is *not* predicated on me accepting pull requests, though they are more than welcome. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
+You can get free live prediction here. You can contribute to making it better. You get out what you put in, sort of. Increasing accuracy over time is *not* predicated on me accepting pull requests, though they are more than welcome. The focus is *live competitive streaming distributional prediction* like [this](https://www.microprediction.com/what). There are [prizes](https://www.microprediction.com/competitions/electricity) and we sponsor some open source projects. 
 
 ## Quick links
 
