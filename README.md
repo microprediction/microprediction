@@ -11,7 +11,7 @@ Hi. I develop libraries supporting www.microprediction.org, humble birthplace of
 [competitions](https://www.micoprediction.com/competitions) |
 [make-predictions](https://www.micoprediction.com/make-predictions) |
 [get-predictions](https://www.micoprediction.com/get-predictions) | [knowledge center](https://www.micoprediction.com/knowledge-center) |
-[faq](https://www.micoprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) 
+[faq](https://www.micoprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [not kaggle](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
 
 Structured video introductions:
 
@@ -65,29 +65,19 @@ The second option will use a virtual environment, and thus not interfere with yo
 
 You should run that script "forever". Plug your write key into the [dashboard](www.microprediction.org) to view your progress. 
     
-## Video tutorials
-    
-Video tutorials are available at https://www.microprediction.com/python-1 to help you
-get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
-at https://www.microprediction.com/fitcrawler.     
-    
-## Blog
+
+## Blog, presentations, book
+
 Here are the most popular [blog](https://www.microprediction.com/blog) articles of 2021:
 - [Popular Python Timeseries Packges](https://www.microprediction.com/blog/popular-timeseries-packages) ranks a hundred open source time series packages by downloads, and provides hello world notebook examples for many of them. 
 - [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
 - [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for the [agent model epidemic time series](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected). 
 
-## Presentations
-
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. MIT Press will publish a book on the topic in Fall 2021. 
 
 ## Weekly contributor Google meet
 
 Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for details. We'll help you get started on the spot. 
-
-## Book
-
-To be published by MIT Press in Fall 2021. 
 
 ![](https://i.imgur.com/uwttTku.png)
 
