@@ -131,7 +131,7 @@ Reach us on [Linked-In](https://www.linkedin.com/company/65109690) where we are 
 - Moved to [FAQ](https://www.microprediction.com/faq)
 - See also the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
-## Class Hierarchy 
+# Class Hierarchy 
 
 Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
 the MicroWriter, or its sub-classes. You can also use MicroWriter to submit predictions, though MicroCrawler adds some conveniences. 
@@ -153,7 +153,7 @@ as additional conveniences for creating streams such as
 and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
 
                           
-## Quickstart: Creating a stream to publish a number every 20 minutes
+## Quickstart stream creation: publish a number every 20 minutes
 
 If you have a function that returns a live number, you can do this
 
@@ -206,13 +206,9 @@ In turn, each of these streams is predicted at four different horizons, as with 
   
 Poke around the [stream listing](https://www.microprediction.org/browse_streams.html) near the bottom and you'll see them. 
      
-# A Quick Guide to Crawling and the API/Client
+# Crawling
 
-See also the [public api](https://www.microprediction.com/public-api) guide. 
-
-## Let your algorithm loose on the world 
-
-If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
+See also the [public api](https://www.microprediction.com/public-api) guide. If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
 deriving from MicroCrawler as follows: 
 
  
@@ -236,8 +232,9 @@ deriving from MicroCrawler as follows:
 
 Enter your write_key into https://www.microprediction.org/dashboard.html to find out which time series your crawler is good at predicting. Check back in a day, a week or a month. 
  
+The crawler is also a reader and a writer, so a little about those next. 
 
-## Read client
+# Reading
 
 It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/c5_iota.json. Use your preferred means such as requests or aiohttp. For example using the former:
 
@@ -260,12 +257,12 @@ However the reader client adds a little convenience.
 
 Your best reference for the API is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py 
     
-## Write client
+# Writing
 
 As noted above you may prefer to use MicroPoll or MicroCrawler rather than MicroWriter directly. But here are a few more details on the API wrapper those wanting more control. You can create predictions or feeds using only
 the writer. Your best reference is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py 
 
-### Instantiate a writer 
+## Instantiate a writer 
 
 In principle:
 
@@ -290,7 +287,7 @@ Thing is, new_key() will take many hours and that avoids the system being floode
 to create streams but only wish to predict, you can use a lower difficulty like 10 or even 9. But the easier your key, the more likely
 you are to go bankrupt (read on).
     
-### Submitting scenarios (manually)
+## Submitting scenarios (manually)
     
 If MicroCrawler does not float your boat, you can design your own way to monitor streams and make predictions using MicroWriter. 
  
@@ -301,7 +298,7 @@ If MicroCrawler does not float your boat, you can design your own way to monitor
 
 See https://config.microprediction.org/config.json for a list of values that delay can take. 
 
-### Creating a feed (manually)
+## Creating a feed (manually)
 
 If MicroPoll does not serve your needs you can create your stream one data point at a time:
 
@@ -336,7 +333,7 @@ to let the system know you still care.
    3. Was the name already taken? 
    4. Is your `write_key` bankrupt? 
 
-## Mining write_keys 
+## Write key mining script  
 
 Want more write keys? Cut and paste this bash command into a bash shell:
 
@@ -402,12 +399,14 @@ Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Mo
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
 a little video of the embedding in the (FAQ)[https://www.microprediction.com/faq]. 
          
-## Follow and help
+# Further reading
 
-This project is socialized mostly via Linked-In. See 
-[microprediction](https://www.linkedin.com/company/65109690) and other articles. You can 
-help in a small way by celebrating posts and articles like this, should you be so inclined. 
+As noted ...
+- This project is socialized mostly via [microprediction](https://www.linkedin.com/company/65109690) on Linked-In.
+- The [Knowledge Center](https://www.microprediction.com/knowledge-center) is a good place to start. 
+- The [blog](https://www.microprediction.com/blog)
 
+There are also some articles that in some cases pre-date the knowledge center. 
 - [Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/)
 - [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
 - [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/)
@@ -415,13 +414,9 @@ help in a small way by celebrating posts and articles like this, should you be s
 - [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
 - [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/)
 - [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/)
+Full [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/). 
 
-See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
-
-## Further reading
-
-See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) for listings of time series algorithms,
-comparisons of global hyper-parameter optimizers and other tips.   
+ 
 
 
 
