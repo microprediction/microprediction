@@ -13,7 +13,7 @@ You can:
  
 This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
-### What's different about this particular open source project
+### What's different about this particular time series project?
 
 Nobody can block. 
 
