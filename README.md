@@ -122,8 +122,8 @@ Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.
 
 ## Discussion and help
 
-We mostly natter on Linked-In, but you can [discuss on github](https://github.com/microprediction/microprediction/discussions),  
-[contact](https://www.microprediction.com/contact-us) us directly, raise
+Reach us on [Linked-In](https://www.linkedin.com/company/65109690) where we are most active. You can [discuss on github](https://github.com/microprediction/microprediction/discussions) or   
+[contact](https://www.microprediction.com/contact-us) us directly. By all mean raise
 [issues](https://github.com/microprediction/microprediction/issues) or even leave messages via [![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) if you wish.   
 
 ### Frequently asked questions
