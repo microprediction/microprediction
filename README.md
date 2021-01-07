@@ -4,7 +4,7 @@
 
 Hi. 
 
-Loosely coupled individual contributors collectively effect *turnkey, repeated short term predictions* of *anything*, for *any purpose*, for *anyone*, at *any time* accessed via an API or client library. 
+This project exists so that *loosely coupled* individual contributors can collectively effect turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time (accessed via an API or client library). 
 
 You can:
 
