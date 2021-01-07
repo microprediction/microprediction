@@ -11,9 +11,7 @@ You can:
  - Get free *live* predictions. 
  - Contribute to making those predictions better. 
  
-This project is new. Yet the API is already in active use by two leading financial institutions. 
-
-[Linked-In](https://www.linkedin.com/company/65109690) has updates.   
+This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
 ### What's different about this particular open source project
 
