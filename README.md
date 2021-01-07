@@ -4,11 +4,11 @@
 
 Hello 
 
-This project exists so that *loosely coupled* individual contributors can collectively effect turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time (accessed via an API or client library). 
+This project exists so that *loosely coupled* individual contributors can collectively effect turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. 
 
 You can:
 
- - Get free *live* predictions. 
+ - Get free *live* predictions via this client library, or the API.  
  - Contribute to making those predictions better. 
  
 This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
