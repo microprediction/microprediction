@@ -11,7 +11,9 @@ You can:
  - Get free *live* predictions. 
  - Contribute to making those predictions better. 
  
-This project is new. Half of the 500 followers on Linked-In joined in the last month ([join us](https://www.linkedin.com/company/65109690)). Yet the API is already in active use by two leading financial institutions. 
+This project is new. Yet the API is already in active use by two leading financial institutions. 
+
+([join us](https://www.linkedin.com/company/65109690))
 
 ### What's different about this particular open source project
 
