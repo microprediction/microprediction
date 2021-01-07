@@ -13,7 +13,7 @@ You can:
  
 This project is new. Yet the API is already in active use by two leading financial institutions. 
 
-([join us](https://www.linkedin.com/company/65109690))
+[Follow](https://www.linkedin.com/company/65109690)) on LI. 
 
 ### What's different about this particular open source project
 
