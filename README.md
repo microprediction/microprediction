@@ -11,9 +11,11 @@ You can:
  - Get free *live* predictions. 
  - Contribute to making those predictions better. 
  
-The API is used by two leading financial institutions, despite being very new. The Linked-In community doubled last month, so [join us](https://www.linkedin.com/company/65109690)! 
+This project is new. Half of the 500 followers on Linked-In joined in the last month ([join us](https://www.linkedin.com/company/65109690)). Yet the API is already in active use by two leading financial institutions. 
 
 ### What's different about this particular open source project
+
+Nobody can block. 
 
 We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).   
 
