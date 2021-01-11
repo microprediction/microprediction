@@ -13,8 +13,8 @@ from sklearn.metrics import mean_squared_error
 
 class MyCrawler(MicroCrawler):
 
-    def __init__(self, write_key):
-        super().__init__(stop_loss=3.0, min_lags=50, sleep_time=15 * 60, write_key=write_key, quietude=1, verbose=False)
+    def __init__(self, **kwargs):
+        super().__init__( **kwargs)
 
     def exclude_stream(self, name=None, **ignore):
         return '~' in name
@@ -96,7 +96,7 @@ class MyCrawler(MicroCrawler):
 
 
 if __name__ == "__main__":
-    mw = MyCrawler(write_key=ODSO_EAGLE)
+    mw = MyCrawler(write_key=ODSO_EAGLE,min_lags=50, quietude=1, verbose=False)
     mw.set_repository(
         url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/odso_eagle.py')
     mw.run(withdraw_all=False)
