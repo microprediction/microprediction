@@ -24,7 +24,7 @@ setup(
     test_suite='pytest',
     tests_require=['pytest', 'scipy'],
     include_package_data=True,
-    install_requires=["numpy", "pandas", "pathlib", "contexttimer", "requests",
+    install_requires=["numpy>=1.16.5", "pandas", "pathlib", "contexttimer", "requests",
                       "getjson", "microconventions>=0.5.0",
                       'pycoingecko', 'apscheduler', 'tdigest','genson','hyperopt',
                       'sklearn','statsmodels','copulas'],
