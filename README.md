@@ -1,5 +1,4 @@
 [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction)
-[![Build Status](https://travis-ci.com/microprediction/microprediction.svg?branch=master)](https://travis-ci.com/microprediction/microprediction)
 
 # microprediction
 
