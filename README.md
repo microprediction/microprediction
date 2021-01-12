@@ -3,9 +3,63 @@
 
 # microprediction
 
-Hi. This is the client library for www.microprediction.org, humble birthplace of the prediction web. Some people call it "Napster meets DataRobot". It challenges
-the Automated Machine Learning industry, and mocks artisan data science. We have quite a few things planned but for now, the focus is *live competitive streaming distributional prediction* of public data. Here's how it works: 
+Hello 
 
+This project exists so that *loosely coupled* individual contributors can collectively effect turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. 
+
+You can:
+
+ - Get free *live* predictions via this client library, or the API.  
+ - Contribute to making those predictions better. 
+ 
+This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
+
+### What's different about this particular time series project?
+
+Nobody can block. 
+
+We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).   
+
+### You might be helping already
+
+If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
+[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
+
+## Quick links
+
+Site & resources:
+[linked-in](https://www.linkedin.com/company/65109690) |
+[microprediction.org (dashboard)](https://www.microprediction.org) | [microprediction.com (resources)](https://www.microprediction.com) |
+[what](https://www.microprediction.com/what) | [blog](https://www.microprediction.com/blog) | [contact](https://www.microprediction.com/contact-us) |
+[competitions](https://www.microprediction.com/competitions) |
+[make-predictions](https://www.microprediction.com/make-predictions) |
+[get-predictions](https://www.microprediction.com/get-predictions) | [knowledge center](https://www.microprediction.com/knowledge-center) |
+[faq](https://www.microprediction.com/faq) | [applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) | [collective epidemiology](https://www.swarmprediction.com/about.html) 
+
+Structured video introductions:
+[1: non-registration](https://www.microprediction.com/python-1) | [2: first crawler](https://www.microprediction.com/python-2) |[3: retrieving historical data](https://www.microprediction.com/python-3) | [4: creating a data stream](https://www.microprediction.com/python-4) | [5: modifying your crawler's algorithm](https://www.microprediction.com/python-5) | 
+[6: modifying crawler navigation](https://www.microprediction.com/python-6) 
+
+Client:
+[client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) 
+
+Notebook examples:
+[creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
+[choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb) |
+[retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
+
+Some related repositories:
+[causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery)  [skater](https://github.com/microprediction/timemachines) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
+[key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
+
+
+More in the [knowledge center](https://www.microprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
+
+## Open, turnkey prediction.  
+
+Here's how it operates. 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
 - As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
@@ -20,25 +74,33 @@ Here's a [first glimpse](https://www.microprediction.com/welcome) for the uninit
 on why [microprediction is synomymous with AI](https://www.microprediction.com/welcome-4) due to the possibility of value function prediction, and a straightforward
 [plausibility argument](https://www.microprediction.com/welcome-2) for why an open source, openly networked collection of algorithms that 
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
-of prediction. In order to try to get this idea off the ground, there are some ongoing [competitions](https://www.microprediction.com/competitions) and developer incentives. 
+of prediction. In order to try to get this idea off the ground, there are some ongoing [developer incentives](https://www.microprediction.com/competitions).
     
-## Video tutorials
-    
-Video tutorials are available at https://www.microprediction.com/python-1 to help you
-get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
-at https://www.microprediction.com/fitcrawler.     
-    
-## Presentations
+## Ultra-Quick Start. 
+The best way to get the joke is by participating. Here are two possibilities, both very easy.  
 
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. 
+- Fork [microactors](https://github.com/microprediction/microactors) and enable GitHub actions, or 
+- Run the bash script below
+
+The second option will use a virtual environment, and thus not interfere with your other work.  
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+
+You should run that script "forever". Plug your write key into the [dashboard](https://www.microprediction.org) to view your progress. 
+    
+
+## Blog, presentations, book, etc
+
+Here are the most popular recent [blog](https://www.microprediction.com/blog) posts:
+
+- [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
+- [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for the [agent model epidemic time series](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected). 
+
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. MIT Press will publish a book on the topic in Fall 2021. 
 
 ## Weekly contributor Google meet
 
 Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for details. We'll help you get started on the spot. 
-
-## Book
-
-To be published by MIT Press in 2021. 
 
 ![](https://i.imgur.com/uwttTku.png)
 
@@ -51,13 +113,6 @@ to [retrieve historical data](https://www.microprediction.com/python-3) for time
 Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
 you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)).   
 
-
-## Participate immediately with a bash script
-Linux and mac users can run the default crawler with a one line cut and paste. This will use a virtual environment, and thus not interfere with your other work.  
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
-
-It's a great way to quickly get the joke. You should intend to run this "forever".
 ## Examples, examples, examples
 
 - [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) feed creation and submission. 
@@ -68,17 +123,16 @@ Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.
 
 ## Discussion and help
 
-- [discussions on github](https://github.com/microprediction/microprediction/discussions)  (new!)
-- [contact](https://www.microprediction.com/contact-us) us to be included in Friday noon contributor chat (very informal)
-- [issues](https://github.com/microprediction/microprediction/issues) 
-- [![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  
+Reach us on [Linked-In](https://www.linkedin.com/company/65109690) where we are most active. You can [discuss on github](https://github.com/microprediction/microprediction/discussions) or   
+[contact](https://www.microprediction.com/contact-us) us directly. By all mean raise
+[issues](https://github.com/microprediction/microprediction/issues) or even leave messages via [![Gitter](https://badges.gitter.im/microprediction/community.svg)](https://gitter.im/microprediction/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) if you wish.   
 
 ### Frequently asked questions
 
 - Moved to [FAQ](https://www.microprediction.com/faq)
 - See also the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
-## Class Hierarchy 
+# Class Hierarchy 
 
 Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
 the MicroWriter, or its sub-classes. You can also use MicroWriter to submit predictions, though MicroCrawler adds some conveniences. 
@@ -100,7 +154,7 @@ as additional conveniences for creating streams such as
 and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
 
                           
-## Quickstart: Creating a stream to publish a number every 20 minutes
+## Quickstart stream creation: publish a number every 20 minutes
 
 If you have a function that returns a live number, you can do this
 
@@ -153,13 +207,9 @@ In turn, each of these streams is predicted at four different horizons, as with 
   
 Poke around the [stream listing](https://www.microprediction.org/browse_streams.html) near the bottom and you'll see them. 
      
-# A Quick Guide to Crawling and the API/Client
+# Crawling
 
-See also the [public api](https://www.microprediction.com/public-api) guide. 
-
-## Let your algorithm loose on the world 
-
-If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
+See also the [public api](https://www.microprediction.com/public-api) guide. If you have a function that takes a vector of lagged values of a time series and supplies a *distributional* prediction, a fast way to get going is
 deriving from MicroCrawler as follows: 
 
  
@@ -183,8 +233,9 @@ deriving from MicroCrawler as follows:
 
 Enter your write_key into https://www.microprediction.org/dashboard.html to find out which time series your crawler is good at predicting. Check back in a day, a week or a month. 
  
+The crawler is also a reader and a writer, so a little about those next. 
 
-## Read client
+# Reading
 
 It is possible to retrieve most quantities at api.microprediction.org with direct web calls such as https://api.microprediction.org/live/c5_iota.json. Use your preferred means such as requests or aiohttp. For example using the former:
 
@@ -207,12 +258,12 @@ However the reader client adds a little convenience.
 
 Your best reference for the API is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py 
     
-## Write client
+# Writing
 
 As noted above you may prefer to use MicroPoll or MicroCrawler rather than MicroWriter directly. But here are a few more details on the API wrapper those wanting more control. You can create predictions or feeds using only
 the writer. Your best reference is the client code https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py 
 
-### Instantiate a writer 
+## Instantiate a writer 
 
 In principle:
 
@@ -237,7 +288,7 @@ Thing is, new_key() will take many hours and that avoids the system being floode
 to create streams but only wish to predict, you can use a lower difficulty like 10 or even 9. But the easier your key, the more likely
 you are to go bankrupt (read on).
     
-### Submitting scenarios (manually)
+## Submitting scenarios (manually)
     
 If MicroCrawler does not float your boat, you can design your own way to monitor streams and make predictions using MicroWriter. 
  
@@ -248,7 +299,7 @@ If MicroCrawler does not float your boat, you can design your own way to monitor
 
 See https://config.microprediction.org/config.json for a list of values that delay can take. 
 
-### Creating a feed (manually)
+## Creating a feed (manually)
 
 If MicroPoll does not serve your needs you can create your stream one data point at a time:
 
@@ -283,7 +334,7 @@ to let the system know you still care.
    3. Was the name already taken? 
    4. Is your `write_key` bankrupt? 
 
-## Mining write_keys 
+## Write key mining script  
 
 Want more write keys? Cut and paste this bash command into a bash shell:
 
@@ -349,30 +400,20 @@ Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Mo
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
 a little video of the embedding in the (FAQ)[https://www.microprediction.com/faq]. 
          
-## Follow and help
+# Further reading
 
-This project is socialized mostly via Linked-In. See 
-[microprediction](https://www.linkedin.com/company/65109690) and other articles. You can 
-help in a small way by celebrating posts and articles like this, should you be so inclined. 
+As noted ...
+- This project is socialized mostly via [microprediction](https://www.linkedin.com/company/65109690) on Linked-In.
+- The [Knowledge Center](https://www.microprediction.com/knowledge-center) is a good place to start. 
+- The [blog](https://www.microprediction.com/blog)
 
-- [Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/)
-- [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
-- [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/)
-- [Win With One Line of Code](https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/)
-- [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
-- [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/)
-- [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/)
+There are also some articles that in some cases pre-date the knowledge center. 
+[Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/) | [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/) | [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/) | [Win With One Line of Code](https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/) | [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
+| [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/)
 
-See [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/)
+Full [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/). 
 
+ 
 
 
-## Further reading
 
-See the [Knowledge Center](https://www.microprediction.com/knowledge-center) and [blog](https://www.microprediction.com/blog) for listings of time series algorithms,
-comparisons of global hyper-parameter optimizers and other tips.   
-
-## PS: Don't mind the litter
-
-There are some mostly unrelated notebooks for www.microprediction.com/blog that will be 
-moved when I have a moment. 
