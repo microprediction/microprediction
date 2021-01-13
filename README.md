@@ -3,15 +3,6 @@
 
 A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
-### One thing that's different about this attempt to create good predictions
-
-Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
-
-### You might be helping already
-
-If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
-[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
-
 ## Quick links
 
 **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) 
@@ -56,6 +47,10 @@ on why [microprediction is synomymous with AI](https://www.microprediction.com/w
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
 of prediction. In order to try to get this idea off the ground, there are some ongoing [developer incentives](https://www.microprediction.com/competitions).
     
+### One thing that's different about this attempt to create good predictions
+
+Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).  
+    
 ## Ultra-Quick Start. 
 The best way to get the joke is by participating. Here are two possibilities, both very easy.  
 
@@ -68,6 +63,10 @@ The second option will use a virtual environment, and thus not interfere with yo
 
 You should run that script "forever". Plug your write key into the [dashboard](https://www.microprediction.org) to view your progress. 
     
+### You might be helping already
+
+If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
+[copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
 
 ## Blog, presentations, book, etc
 
@@ -84,22 +83,17 @@ Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for 
 
 ![](https://i.imgur.com/uwttTku.png)
 
-
-## (New!) Knowledge Center
-
-See the [knowledge center](https://www.microprediction.com/knowledge-center) for a structured set of [Python tutorials](https://www.microprediction.com/python-1) which will 
-show you how to create an identity, enter a live contest and use the [dashboard](https://www.microprediction.org/) to track your algorithms' progress. It will also show you how
-to [retrieve historical data](https://www.microprediction.com/python-3) for time series research, if that is the only way you wish to use the site. You don't have to use
-Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
-you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)).   
-
-## Examples, examples, examples
+## Examples, examples, examples 
 
 - [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) feed creation and submission. 
 - [notebooks](https://github.com/microprediction/microprediction/tree/master/notebook_examples) are available too, but these are harder to run indefinitely
 - [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples)
 
-Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.html) and click on CODE badges. Fork an algorithm that is doing well.  
+As noted, see the [knowledge center](https://www.microprediction.com/knowledge-center) for a structured set of [Python tutorials](https://www.microprediction.com/python-1) which will 
+show you how to create an identity, enter a live contest and use the [dashboard](https://www.microprediction.org/) to track your algorithms' progress. It will also show you how
+to [retrieve historical data](https://www.microprediction.com/python-3) for time series research, if that is the only way you wish to use the site. You don't have to use
+Python because the [api](api.microprediction.org) can be accessed in any language. We have contributors using Julia ([example](https://github.com/rustyconover/microprediction-nyiso-electricity)) and 
+you can even enter using R from within Kaggle ([tutorial](https://www.microprediction.com/r-1)). Here are some Python examples. Pro tip: Look at the [leaderboards](https://www.microprediction.org/leaderboard.html) and click on CODE badges. Fork an algorithm that is doing well.  
 
 ## Discussion and help
 
