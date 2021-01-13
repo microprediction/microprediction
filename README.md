@@ -3,8 +3,8 @@
 
 A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. You can:
 
- - Get free *live* predictions via this client library, or the API.  
- - Contribute to making those predictions better. 
+ - Get free *live* predictions of public data, by repeatedly publishing values. 
+ - Contribute to making those predictions better, by creating an algorithm. 
  
 This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
