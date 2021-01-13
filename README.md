@@ -1,14 +1,9 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. You can:
+A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
- - Get free *live* predictions of public data, by repeatedly publishing values. 
- - Contribute to making those predictions better, by creating an algorithm. 
- 
-This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
-
-### One thing that's different...
+### One thing that's different about this attempt to create good predictions
 
 Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
 
