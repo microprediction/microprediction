@@ -374,7 +374,7 @@ Multivariate prediction solicitation is available to those with write_keys of di
          
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
-a little video of the embedding in the (FAQ)[https://www.microprediction.com/faq]. 
+a little video of the embedding in the [FAQ](https://www.microprediction.com/faq). 
          
 # Further reading
 
