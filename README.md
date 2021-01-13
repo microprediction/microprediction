@@ -38,8 +38,8 @@ Notebook examples:
 [retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
 
 Some related repositories:
-[causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery)  [skater](https://github.com/microprediction/timemachines) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
-[key maker](https://github.com/microprediction/keymaker) | [muid](https://github.com/microprediction/muid) | [real data](https://github.com/microprediction/realdata)
+[timemachines](https://github.com/microprediction/timemachines) | [microconventions](https://github.com/microprediction/microconventions) | [muid](https://github.com/microprediction/muid) | [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery)  | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
+[key maker](https://github.com/microprediction/keymaker) | [real data](https://github.com/microprediction/realdata)
 
 
 More in the [knowledge center](https://www.microprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
