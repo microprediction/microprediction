@@ -70,10 +70,12 @@ If you maintain an open source time series package with a permissive license, we
 
 ## Blog, presentations, book, etc
 
-Here are the most popular recent [blog](https://www.microprediction.com/blog) posts:
+Popular [blog](https://www.microprediction.com/blog) posts:
 
+- [How to Enter a Cryptocurrency Copula Contest](https://www.microprediction.com/blog/copula) motivates copula prediction competitions and explains how to train a model and submit predictions. 
 - [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
-- [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for the [agent model epidemic time series](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected). 
+- [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for [this](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected) stream.
+- [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas, as noted. 
 
 Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. MIT Press will publish a book on the topic in Fall 2021. 
 
