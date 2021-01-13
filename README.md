@@ -73,7 +73,7 @@ If you maintain an open source time series package with a permissive license, we
 Popular [blog](https://www.microprediction.com/blog) posts:
 
 - [How to Enter a Cryptocurrency Copula Contest](https://www.microprediction.com/blog/copula) motivates copula prediction competitions and explains how to train a model and submit predictions. 
-- [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. Strongly recommended reading for those of you tweaking model hyper-parameters. 
+- [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. You might also check the timemachines repo. 
 - [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for [this](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected) stream.
 - [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas, as noted. 
 
