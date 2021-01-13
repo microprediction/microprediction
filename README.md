@@ -23,25 +23,19 @@ If you maintain an open source time series package with a permissive license, we
 [competitions](https://www.microprediction.com/competitions) |
 [make-predictions](https://www.microprediction.com/make-predictions) |
 [get-predictions](https://www.microprediction.com/get-predictions) |
-[applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) | [collective epidemiology](https://www.swarmprediction.com/about.html) 
+[applications](https://www.microprediction.com/welcome-3) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [collective epidemiology](https://www.swarmprediction.com/about.html) 
 **Video tutorials** : [1: non-registration](https://www.microprediction.com/python-1) | [2: first crawler](https://www.microprediction.com/python-2) |[3: retrieving historical data](https://www.microprediction.com/python-3) | [4: creating a data stream](https://www.microprediction.com/python-4) | [5: modifying your crawler's algorithm](https://www.microprediction.com/python-5) | 
 [6: modifying crawler navigation](https://www.microprediction.com/python-6) 
-
-
-
-Notebook examples:
+**Colab notebooks**
 [creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
 [listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
 [submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
 [choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb) |
 [retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
+**Repositories**
+[timemachines](https://github.com/microprediction/timemachines) | [microconventions](https://github.com/microprediction/microconventions) | [muid](https://github.com/microprediction/muid) | [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery)   [embarrassingly](https://github.com/microprediction/embarrassingly) | [key maker](https://github.com/microprediction/keymaker) | [real data](https://github.com/microprediction/realdata)
 
-Some related repositories:
-[timemachines](https://github.com/microprediction/timemachines) | [microconventions](https://github.com/microprediction/microconventions) | [muid](https://github.com/microprediction/muid) | [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery)  | [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) |
-[key maker](https://github.com/microprediction/keymaker) | [real data](https://github.com/microprediction/realdata)
-
-
-More in the [knowledge center](https://www.microprediction.com/knowledge-center). Remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
+Probably best to start in the [knowledge center](https://www.microprediction.com/knowledge-center) and remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
 ## Open, turnkey prediction.  
 
