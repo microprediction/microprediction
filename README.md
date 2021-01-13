@@ -5,7 +5,7 @@ A client providing turnkey, *repeated short term predictions* of anything, for a
 
 ### One thing that's different about this attempt to create good predictions
 
-Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
+Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
 
 ### You might be helping already
 
