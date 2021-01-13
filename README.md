@@ -1,7 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-Loosely coupled individual contributors collectively effect turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. You can:
+A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. You can:
 
  - Get free *live* predictions via this client library, or the API.  
  - Contribute to making those predictions better. 
@@ -10,9 +10,7 @@ This project is new. Yet the API is already in active use by two leading financi
 
 ### One thing that's different...
 
-Nobody can block. 
-
-We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
+Nobody can block. We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
 
 ### You might be helping already
 
