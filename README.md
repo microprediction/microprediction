@@ -378,16 +378,9 @@ a little video of the embedding in the (FAQ)[https://www.microprediction.com/faq
          
 # Further reading
 
-As noted ...
-- This project is socialized mostly via [microprediction](https://www.linkedin.com/company/65109690) on Linked-In.
-- The [Knowledge Center](https://www.microprediction.com/knowledge-center) is a good place to start. 
-- The [blog](https://www.microprediction.com/blog)
-
-There are also some articles that in some cases pre-date the knowledge center. 
+As noted, this project is socialized mostly via [linked-in](https://www.linkedin.com/company/65109690) and the [knowledge center](https://www.microprediction.com/knowledge-center) is a good place to start. There are also some articles that pre-date the knowledge center. 
 [Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/) | [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/) | [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/) | [Win With One Line of Code](https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/) | [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
-| [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/)
-
-Full [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/). 
+| [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/). Here's the full [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/). 
 
  
 
