@@ -8,11 +8,11 @@ Loosely coupled individual contributors collectively effect turnkey, *repeated s
  
 This project is new. Yet the API is already in active use by two leading financial institutions. Follow on [Linked-In](https://www.linkedin.com/company/65109690) for updates.   
 
-### What's different about this particular time series project?
+### One thing that's different...
 
 Nobody can block. 
 
-We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked if I fail to approve a pull request (though PR's are more than welcome). This isn't a tyranical pyramid, but a market-inspired, competitive, network approach. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).   
+We're not building a library to rule them all. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked while pull requests wait to be approved. One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).    
 
 ### You might be helping already
 
