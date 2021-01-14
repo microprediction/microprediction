@@ -7,16 +7,17 @@ import time
 import pytz
 import random
 from datetime import datetime
-from pprint import  pprint
+from pprint import pprint
 from microprediction import MicroWriter
 import os
 
 write_key = os.environ.get('WRITE_KEY')    # GitHub action needs to set env variable. You need to create a GitHub secret called WRITE_KEY
 mw = MicroWriter(write_key=write_key)
 assert mw.key_difficulty(mw.write_key)>=13, "You need a key of difficulty 13 for copula streams"
+mw.set_repository(url='https://github.com/microprediction/microprediction/blob/master/microprediction/live/seattle_wind.py') # courtesy
 
-NAME_SPEED = 'wind_seatle_speed.json'
-NAME_DIR   = 'wind_seatle_direction.json'
+NAME_SPEED = 'wind_seattle_speed.json'
+NAME_DIR   = 'wind_seattle_direction.json'
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
