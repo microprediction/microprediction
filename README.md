@@ -6,7 +6,7 @@ A client providing turnkey, *repeated short term predictions* of anything, for a
 ## Quick links
 
 **Data**: [stream list](https://www.microprediction.org/browse_streams.html) | [csv](https://www.microprediction.org/features.html) **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) 
-**Resources**:
+**Resources**: [popular timeseries packages](https://www.microprediction.com/blog/popular-timeseries-packages) |
 [knowledge center](https://www.microprediction.com/knowledge-center) | [faq](https://www.microprediction.com/faq) |
 [linked-in](https://www.linkedin.com/company/65109690) |
 [microprediction.org (dashboard)](https://www.microprediction.org) | [microprediction.com (resources)](https://www.microprediction.com) |
