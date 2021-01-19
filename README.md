@@ -1,7 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle and in active use by two leading financial institutions.
+A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle and in active use by two leading financial institutions. 
 
 ## Quick links
 
@@ -106,7 +106,7 @@ Reach us on [Linked-In](https://www.linkedin.com/company/65109690) where we are 
 
 ### Frequently asked questions
 
-- Moved to [FAQ](https://www.microprediction.com/faq)
+- Moved to [FAQ](https://www.microprediction.com/faq) 
 - See also the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
 # Class Hierarchy 
@@ -153,7 +153,7 @@ Once a stream is created and some crawlers have found it, you can view activity 
 
 Full URL example: https://www.microprediction.org/stream_dashboard.html?stream=c5_iota&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
 
-```python
+```python 
          cdf = feed.get_cdf('cop.json',delay=70,values=[0,0.5])
 ```
          
