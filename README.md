@@ -19,7 +19,7 @@ A client providing turnkey, *repeated short term predictions* of anything, for a
 [6: modifying crawler navigation](https://www.microprediction.com/python-6) 
 **Colab notebooks**
 [creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
-[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/List%20Current%20Prizes.ipynb) |
 [submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
 [choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb) |
 [retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
