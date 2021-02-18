@@ -3,9 +3,9 @@
 
 I guess Github made this a "home page". Okay hi, I'm the author of these packages
 - [HumpDay](https://github.com/microprediction/humpday) - Global optimizer comparisons and selection.
-- [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers
-- [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative)
+- [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form.
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers.
+- [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
 - [Winning](https://github.com/microprediction/winning) - A fast algorithm for relative ability from win probability. 
 
 and the microprediction client/server. I own a dog and a [blog](https://www.microprediction.com/blog). End of my story. 
