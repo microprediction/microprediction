@@ -1,10 +1,11 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-## "User Page"
+### "User Page"
 Hi, I'm the author of these packages
 - [HumpDay](https://github.com/microprediction/humpday)
 - [TimeMachines](https://github.com/microprediction/timemachines)
+
 and a [blog](https://www.microprediction.com/blog). 
 
 ## Microprediction
