@@ -1,7 +1,15 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. 
+## "User Page"
+Hi, I'm the author of these packages
+- [HumpDay](https://github.com/microprediction/humpday)
+- [TimeMachines](https://github.com/microprediction/timemachines)
+and a [blog](https://www.microprediction.com/blog). 
+
+## Microprediction
+
+This package is a client enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. 
 
 ## Quick links
 
