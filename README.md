@@ -6,7 +6,7 @@ I guess Github made this a "user home page". Okay.  Hi, I'm the author of these 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form.
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers.
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
-- [Winning](https://github.com/microprediction/winning) - A fast algorithm for relative ability from win probability. 
+- [Winning](https://github.com/microprediction/winning) - A fast algorithm for inferring relative ability from win probability. 
 
 and a few others including the microprediction client/server. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
