@@ -8,7 +8,7 @@ I guess Github made this a "home page". Okay hi, I'm the author of these package
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
 - [Winning](https://github.com/microprediction/winning) - A fast algorithm for relative ability from win probability. 
 
-and the microprediction client/server. I own a dog and a [blog](https://www.microprediction.com/blog). End of my story. 
+and the microprediction client/server. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
 ## Microprediction
 
