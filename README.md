@@ -2,11 +2,12 @@
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
 ### "User Page"
-Hi, I'm the author of these packages
-- [HumpDay](https://github.com/microprediction/humpday)
-- [TimeMachines](https://github.com/microprediction/timemachines)
+I guess Github made this a "home page". Okay hi, I'm the author of these packages
+- [HumpDay](https://github.com/microprediction/humpday) - Global optimizer comparisons
+- [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers
 
-and a [blog](https://www.microprediction.com/blog). 
+I own a dog and a [blog](https://www.microprediction.com/blog). End of my story. 
 
 ## Microprediction
 
