@@ -12,7 +12,7 @@ and a few others including the microprediction client/server. This is my [dog](h
 
 ## Microprediction
 
-This package is a client enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. 
+This package is a Python client for the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. 
 
 ## Quick links
 
