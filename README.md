@@ -6,7 +6,7 @@ I guess Github made this a "user home page". Hi. I'm the author of these package
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://github.com/microprediction/timemachines-testing/tree/main/skater_elo_ratings/leaderboards) 
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers (stable). 
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
-- [Winning](https://github.com/microprediction/winning) - A fast algorithm for inferring relative ability from win probability (stable). 
+- [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 
 and a few others including the microprediction client/server that you seem to have found. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
