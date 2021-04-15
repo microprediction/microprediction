@@ -1,12 +1,23 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-A client providing turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle and in active use by two leading financial institutions.
+I guess Github made this a "user home page". Hi. I'm the author of these packages:
+- [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
+- [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) 
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers (stable). 
+- [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
+- [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
+
+and a few others including the microprediction [client](https://github.com/microprediction/microprediction) and server that you seem to have found. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
+
+## Microprediction
+
+This package is a Python client for the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
 
 ## Quick links
 
-**Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) 
-**Resources**:
+**Data**: [stream list](https://www.microprediction.org/browse_streams.html) | [stream explanations](https://www.microprediction.com/blog/livedata) | [csv](https://www.microprediction.org/features.html) **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) | [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples) 
+**Resources**: [popular timeseries packages](https://www.microprediction.com/blog/popular-timeseries-packages) |
 [knowledge center](https://www.microprediction.com/knowledge-center) | [faq](https://www.microprediction.com/faq) |
 [linked-in](https://www.linkedin.com/company/65109690) |
 [microprediction.org (dashboard)](https://www.microprediction.org) | [microprediction.com (resources)](https://www.microprediction.com) |
@@ -19,12 +30,11 @@ A client providing turnkey, *repeated short term predictions* of anything, for a
 [6: modifying crawler navigation](https://www.microprediction.com/python-6) 
 **Colab notebooks**
 [creating a new key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
-[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) |
+[listing current prizes](https://github.com/microprediction/microprediction/blob/master/notebook_examples/List%20Current%20Prizes.ipynb) |
 [submitting a prediction](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_1_First_Submission.ipynb) | 
 [choosing streams](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Crawler_choosing_streams.ipynb) |
 [retrieving historical data](https://github.com/microprediction/microprediction/blob/master/notebook_examples/Python_Module_3_Getting_History.ipynb)
-**Related**
-[timemachines](https://github.com/microprediction/timemachines) | [microconventions](https://github.com/microprediction/microconventions) | [muid](https://github.com/microprediction/muid) | [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) | [key maker](https://github.com/microprediction/keymaker) | [real data](https://github.com/microprediction/realdata)
+**Related** [humpday](https://github.com/microprediction/humpday) | [timemachines](https://github.com/microprediction/timemachines) | [timemachines-testing](https://github.com/microprediction/timemachines-testing) | [microconventions](https://github.com/microprediction/microconventions) | [muid](https://github.com/microprediction/muid) | [causality graphs](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [embarrassingly](https://github.com/microprediction/embarrassingly) | [key maker](https://github.com/microprediction/keymaker) | [real data](https://github.com/microprediction/realdata)| [chess ratings prediction](https://github.com/microprediction/chess) 
 **Eye candy** [copula plots](https://github.com/microprediction/microactors-plots/tree/main/gallery) | [causality plots](https://github.com/microprediction/microactors-causality/tree/main/gallery) | [electricity case study](https://www.linkedin.com/posts/rusty-conover-ba5a6_predicting-nys-electricity-using-machine-activity-6750837765761503233-vYFu) 
 
 Probably best to start in the [knowledge center](https://www.microprediction.com/knowledge-center) and remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
@@ -106,7 +116,7 @@ Reach us on [Linked-In](https://www.linkedin.com/company/65109690) where we are 
 
 ### Frequently asked questions
 
-- Moved to [FAQ](https://www.microprediction.com/faq)
+- Moved to [FAQ](https://www.microprediction.com/faq) 
 - See also the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
 # Class Hierarchy 
@@ -153,7 +163,7 @@ Once a stream is created and some crawlers have found it, you can view activity 
 
 Full URL example: https://www.microprediction.org/stream_dashboard.html?stream=c5_iota&horizon=70 for a 1 minute ahead CDF. If you wish to use the Python client:
 
-```python
+```python 
          cdf = feed.get_cdf('cop.json',delay=70,values=[0,0.5])
 ```
          
