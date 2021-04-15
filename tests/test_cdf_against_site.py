@@ -7,7 +7,7 @@ BASE_URLS = MICRO_TEST_CONFIG['BASE_URLS'][:2]
 def test_get_cdf_cop():
     for base_url in BASE_URLS:
         mr = MicroReader(base_url=base_url)
-        res = mr.get_cdf_lagged(name='cop.json', delay=mr.DELAYS[0], num=15)
+        res = mr.get_cdf_lagged(name='die.json', delay=mr.DELAYS[0], num=15)
         if not len(res['x']) > 3:
             assert False
 
