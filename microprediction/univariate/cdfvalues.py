@@ -3,3 +3,7 @@ from microconventions.stats_conventions import is_discrete, evenly_spaced_percen
 import numpy as np
 
 
+# Utilities to help with CDF's
+
+from microprediction.univariate.arrivals import approx_mode
+

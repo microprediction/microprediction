@@ -1,8 +1,9 @@
-
 from collections import OrderedDict
 from microprediction.crawler import MicroCrawler
 from microprediction.univariate.arrivals import approx_dt
-from microconventions.stats_conventions import StatsConventions
+from microprediction.samplers import normal_sample_projected, project_on_lagged_lattice
+from microprediction.univariate.processes import k_std
+from microprediction.samplers import fox_sample
 import math
 import numpy as np
 
@@ -23,26 +24,49 @@ def split_k(approx_k:float):
 
 class StreamSkater(MicroCrawler):
 
-    # Crawler utilizing the "skater" convention from the timemachines package,
-    # and storing state on a stream basis (as compared with by horizon)
+    # Crawler utilizing the timemachines package
 
-    ########################################################
-    #  Override the following methods                      #
-    ########################################################
-
-    def __init__(self, f, n_warm:int=400, n_memory=450, use_std=False, **kwargs):
+    def __init__(self, f, n_warm:int=400, use_std=True, **kwargs):
         """
             f         must be a "skater"
             n_warm    Number of historical data points to use the first time to warm up the skater
-            n_memory  Number of recent points to use in generating the noise
-            See https://github.com/microprediction/timemachines for explanation
+            use_std   If True, we use the model standard deviation. If False, a simple estimate is preferred.
+                      Be aware that some models from the timemachines package give dubious std error estimates.
+
+        See https://github.com/microprediction/timemachines for explanation of "skaters", which are
+        sequential online k-step ahead forecasting functions.
         """
         super().__init__(**kwargs)
         self.f = f
         self.n_warm = n_warm
-        self.n_memory = n_memory
         self.use_std = use_std
         self.stream_state = OrderedDict()
+
+
+    #################################################
+    #                                               #
+    #   You'll likely want to override this ...     #
+    #                                               #
+    #################################################
+
+    def sample_using_point_estimate(self, x:float, x_std:float, k, name, delay, lagged_values, lagged_times):
+        """ Create 225 samples guided by a point estimate, and a standard deviation
+
+              x      - point estimate returned by a function in the timemachines package (i.e. a "skater")
+              x_std  - standard deviation of point estimate
+              returns [float]
+
+            By default this projects onto a lattice of values implied by the history
+        """
+        return normal_sample_projected(prediction_std=x, prediction_mean=x_std,
+                                       num=self.num_predictions, lagged_values=lagged_values)
+
+
+    #####################################################
+    #                                                   #
+    #   You'll likely not need to override this ...     #
+    #                                                   #
+    #####################################################
 
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
         """ Use skater to move and scale """
@@ -87,41 +111,42 @@ class StreamSkater(MicroCrawler):
         # Save stream state for next invocation
         self.stream_state[name] = state
 
-        # Bootstrap default sample ... TODO move this elsewhere
-        sc = StatsConventions()
-        from tdigest import TDigest
-        digest = TDigest()
-        chronological_values = list(reversed(lagged_values))
-        as_process = StatsConventions.is_process(chronological_values)
-        xs = list(np.diff([0.] + chronological_values)) if as_process else chronological_values
-        for x in xs:
-            digest.update(x=x)
-        default_samples = [digest.percentile(p * 100.) for p in StatsConventions.evenly_spaced_percentiles(num=self.num_predictions)]
+        # Create a hacky estimate of standard error, if necessary
+        if not self.use_std:
+            x_std_interp = k_std(lagged_values, k=high_k)
 
-        if not len(default_samples) == self.num_predictions:
-            raise RuntimeError('Wrong number of samples in stream skater')
-
-        # If not discrete, shift to match skater mean and standard deviation
-        num_discrete_threshold = len(lagged_values)/2+5
-        is_discrete = sc.is_discrete(lagged_values, num=num_discrete_threshold) or sc.is_discrete(np.diff(lagged_values),num=num_discrete_threshold)
-        if is_discrete:
-            # TODO: Find lattice and shift on lattice.
-            return sc.nudged(default_samples)
-        else:
-            # Adjust mean of samples to match forecast
-            shifted_samples = [ s + x_interp-np.mean(default_samples) for s in default_samples ]
-            if not self.use_std:
-                return sc.nudged(shifted_samples)
-            else:
-                samples_std = np.std(shifted_samples)
-                if x_std_interp>0.5*samples_std and samples_std > 0.5*x_std_interp:
-                    r = x_std_interp / samples_std
-                else:
-                    r = 1.0
-                scaled_samples = [ s + r*(s-x_interp) for s in shifted_samples]
-                return sc.nudged(scaled_samples)
+        return self.sample_using_point_estimate(x=x_interp, x_std=x_std_interp, k=high_k, name=name, delay=delay, lagged_values=lagged_values, lagged_times=lagged_times)
 
 
+class SkatingFox(StreamSkater):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def sample_using_point_estimate(self, x:float, x_std:float, k:int, name:str, delay, lagged_values:[float], lagged_times):
+        """ Create 225 samples guided by a point estimate, and a standard deviation
+            Provided as an example of sub-classing StreamSkater, and modifying the sample generation.
+
+                k  - Number of lags assumed to correspond to the delay
+
+        """
+        fox_samples = fox_sample(lagged_values=lagged_values, lagged_times=lagged_times, delay=delay,
+                                 num=self.num_predictions, name=name)
+        shifted_fox_samples = [ s + x - np.mean(fox_samples) for s in fox_samples ]
+        r = x_std/np.std(fox_samples) if self.use_std else 1.0
+        scaled_shifted_fox_samples = [ s + r*(s-x) for s in shifted_fox_samples ]
+        return nudged(project_on_lagged_lattice(values=scaled_shifted_fox_samples, lagged_values=lagged_values))
 
 
+class ChoosySkatingFox(SkatingFox):
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def exclude_stream(self, name=None, **ignore):
+        # Example of influencing the navigation
+        return '~' in name or 'emoji' in name
+
+    def include_delay(self, delay=None, name=None, **ignore):
+        # Example of influencing choice of horizons to predict
+        return delay < 10*60

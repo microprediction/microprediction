@@ -3,7 +3,7 @@ from microconventions import sign_changes, is_process
 
 
 # --------------------------------------------------------------------------
-#            Monte Carlo
+#           Miscellaneous utilities
 # --------------------------------------------------------------------------
 
 def inv_cdf_walk(inv_cdf, k: int, x0: float) -> float:
@@ -19,3 +19,22 @@ def inv_cdf_walk(inv_cdf, k: int, x0: float) -> float:
         dx = inv_cdf(u)
         x = x + dx
     return x
+
+
+def k_differences(lagged_values,k=1):
+    chrono_values = [0.]*k + list(reversed(lagged_values))
+    k_diff = list()
+    for j in range(k):
+        k_diff.extend(np.diff(chrono_values[j:-1:k]))
+    return k_diff
+
+
+def k_diff_std(lagged_values,k=1):
+    return np.nanstd(k_differences(lagged_values=lagged_values,k=k))
+
+
+def k_std(lagged_values,k=1):
+    if is_process(lagged_values):
+        return k_diff_std(lagged_values,k=k)
+    else:
+        return np.nanstd(lagged_values)
