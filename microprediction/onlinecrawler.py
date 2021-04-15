@@ -11,9 +11,9 @@ from collections import OrderedDict
 
 class OnlineHorizonCrawler(MicroCrawler):
 
-    # Crawler maintains a queue of horizons and cycles through them, calibrating as it goes
-    # To use this crawler, override the initial_state() and update_state() methods
-    # These store state keyed by horizon so your sample() method can make use of the state conveniently
+    #     # Crawler maintains a queue of horizons and cycles through them, calibrating as it goes
+    #     # To use this crawler, override the initial_state() and update_state() methods
+    #     # These store state keyed by horizon so your sample() method can make use of the state conveniently
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
