@@ -7,6 +7,7 @@ from collections import Counter
 # so you don't actually need all this. It is here for reference
 # See also Toastable Fox https://github.com/microprediction/microprediction/blob/master/crawler_examples/toastable_fox.py
 
+# This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 

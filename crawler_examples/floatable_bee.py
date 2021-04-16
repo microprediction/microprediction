@@ -8,6 +8,7 @@ from copy import deepcopy
 # use stored parameters. It is set to ony run for 35 streams.
 # This consumes around 20,000 cpu seconds per month.
 
+# This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 

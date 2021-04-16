@@ -1,7 +1,7 @@
 from microprediction import MicroCrawler
 
-# New video tutorials are available at https://www.microprediction.com/python-1 to help you
-# get started running crawlers at www.microprediction.com
+# This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
+# New video tutorials are available at https://www.microprediction.com/python-1 to help you get started
 
 if __name__ == '__main__':
     try:
