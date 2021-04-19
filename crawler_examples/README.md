@@ -6,6 +6,12 @@ Incomplete list but should get you started.
 Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
 get started running crawlers at www.microprediction.com
 
+## Timemachines package examples
+
+Probably the easiest way to get a decent crawler going is by using the [timemachines](https://github.com/microprediction/timemachines) package. 
+
+See [Bellehood Fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/bellehood_fox.py) for an example. 
+
 ## Filtering examples
 
 It probably
