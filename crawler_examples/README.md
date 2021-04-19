@@ -12,6 +12,9 @@ Probably the easiest way to get a decent crawler going is by using the [timemach
 
 See [Bellehood Fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/bellehood_fox.py) for an example. 
 
+The timemachines forecasting packages allows you to use popular time series packages with one line of code, and view Elo ratings that give you some idea of whether they are any good at predicting live data at microprediction.org
+
+
 ## Filtering examples
 
 It probably
