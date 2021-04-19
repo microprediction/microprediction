@@ -8,7 +8,7 @@ get started running crawlers at www.microprediction.com
 
 ## Timemachines package examples
 
-Probably the easiest way to get a decent crawler going is by using the [timemachines](https://github.com/microprediction/timemachines) package. 
+Probably the easiest way to get a decent crawler going is by using the [timemachines](https://github.com/microprediction/timemachines) package in conjunction with the [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) class. 
 
 See [Bellehood Fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/bellehood_fox.py) for an example. 
 
