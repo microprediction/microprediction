@@ -79,7 +79,7 @@ You should run that script "forever". Plug your write key into the [dashboard](h
 If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
 [copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
 
-## Blog, presentations, book, etc
+## Blog, presentations
 
 Popular [blog](https://www.microprediction.com/blog) posts:
 
@@ -88,7 +88,11 @@ Popular [blog](https://www.microprediction.com/blog) posts:
 - [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for [this](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected) stream.
 - [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas, as noted. 
 
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. MIT Press will publish a book on the topic in Fall 2021. 
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles.
+
+## Book 
+
+To be published by MIT Press late 2021. Reach out if you're volunteering to proof-read :)
 
 ## Weekly contributor Google meet
 
