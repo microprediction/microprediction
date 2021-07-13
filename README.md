@@ -10,7 +10,7 @@ I guess Github made this a "user home page". Hi. I'm the author of these package
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, community prediction
 
-and a few others including the microprediction [client](https://github.com/microprediction/microprediction) and server that you seem to have found. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
+and a few others. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
 ## Microprediction client
 
