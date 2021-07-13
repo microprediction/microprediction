@@ -17,6 +17,7 @@ Examples include:
  - [Saccade Bee](https://github.com/microprediction/microprediction/blob/master/crawler_examples/saccade_bee.py) moving average ensemble
  - [Healthy Eel](https://github.com/microprediction/microprediction/blob/master/crawler_examples/healthy_eel.py) stacked moving averages
  - [Scotale Bee](https://github.com/microprediction/microprediction/blob/master/crawler_examples/scotale_bee.py) stacked moving averages
+ - [Smeech Clam](https://github.com/microprediction/microprediction/blob/master/crawler_examples/smeech_clam.py) statsmodels.tsa (3,0,1)
 
 As you can see from these examples:
 - The timemachines forecasting packages allows you to use popular time series packages with one line of code, 
