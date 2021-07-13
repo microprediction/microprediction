@@ -10,7 +10,7 @@ except ImportError:
     print('pip install timemachines')
 
 if __name__=='__main__':
-    skater = StreamSkater(write_key=CHOOSY_BEETLE, f=thinking_slow_and_fast, use_std=True, max_active=1000)
+    skater = StreamSkater(write_key=EMYD_MAMMAL, f=thinking_slow_and_fast, use_std=True, max_active=1000)
     skater.set_repository(
         'https://github.com/microprediction/microprediction/blob/master/crawler_examples/emyd_mammal.py')
     skater.run()
