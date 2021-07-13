@@ -12,5 +12,5 @@ except ImportError:
 if __name__=='__main__':
     skater = StreamSkater(write_key=DATABLE_LLAMA, f=tsa_p2_d0_q1, use_std=True, max_active=1000)
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/datable_llama.py')
+        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/choosy_beetle.py')
     skater.run()
