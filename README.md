@@ -8,7 +8,7 @@ I guess Github made this a "user home page". Hi. I'm the author of these package
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
-- [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, community prediction
+- [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction achieved via a high velocity nano-market of sorts. 
 
 and a few others. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
