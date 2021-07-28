@@ -10,11 +10,11 @@ I guess Github made this a "user home page". Hi. I'm the author of these package
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction achieved via a hosted high velocity clearing mechanism. 
 
-and a few others. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
+and a few others. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  
 
 ## Microprediction client
 
-The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST. 
+The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
 
 ## Microprediction bookmarks
 
@@ -392,6 +392,7 @@ Multivariate prediction solicitation is available to those with write_keys of di
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
 a little video of the embedding in the [FAQ](https://www.microprediction.com/faq). 
+         
          
 # Further reading
 
