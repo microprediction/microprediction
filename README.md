@@ -1,7 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-I guess Github made this a "user home page". Hi. I'm the author of these packages:
+I guess Github made this a "user home page". Well hi, I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) 
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers (stable). 
