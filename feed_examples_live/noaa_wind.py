@@ -1,22 +1,13 @@
-# New video tutorials are available at https://www.microprediction.com/python-1 to help you
-# get started creating streams (see the 4th module in particular)
-
+from credentials import HAMOSE_CHEETAH
 import logging
 import urllib
 import time
-import pytz
 import random
-from datetime import datetime
-from pprint import pprint
 from microprediction import MicroWriter
-import os
 
-os.environ['WRITE_KEY']='612a4363e8ba2100de3d12e077d0b13e'
-
-write_key = os.environ.get('WRITE_KEY')    # GitHub action needs to set env variable. You need to create a GitHub secret called WRITE_KEY
-mw = MicroWriter(write_key=write_key)
+mw = MicroWriter(write_key=HAMOSE_CHEETAH)
 assert mw.key_difficulty(mw.write_key)>=13, "You need a key of difficulty 13 for copula streams"
-mw.set_repository(url='https://github.com/microprediction/microprediction/blob/master/microprediction/live/seattle_wind.py') # courtesy
+mw.set_repository(url='https://github.com/microprediction/microprediction/blob/master/microprediction/live/noaa_wind.py') # courtesy
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
