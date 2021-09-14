@@ -12,5 +12,6 @@ except ImportError:
 if __name__=='__main__':
     skater = StreamSkater(write_key=DATABLE_LLAMA, f=precision_ema_ensemble, use_std=True, max_active=1000)
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/datable_llama.py')
+        'https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py')
+    skater.set_email("me@gmail.com")  # Only used to send you a voucher if you win a daily prize
     skater.run()

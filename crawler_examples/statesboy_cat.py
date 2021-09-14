@@ -25,5 +25,6 @@ if __name__ == "__main__":
     crawler = SequentialStreamCrawler(write_key=STATESBOY_CAT, min_lags=500, machine_type=DigestMachine)
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/statesboy_cat.py')
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     crawler.min_lags = 500
     crawler.run()

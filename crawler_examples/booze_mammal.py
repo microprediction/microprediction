@@ -27,6 +27,7 @@ class BoozeMammal(MicroCrawler):
 
 if __name__=="__main__":
     mw = BoozeMammal(write_key=BOOZE_MAMMAL)
+    mw.set_email("me@gmail.com")  # Only used to send you a voucher if you win a daily prize
     mw.run()
 
 

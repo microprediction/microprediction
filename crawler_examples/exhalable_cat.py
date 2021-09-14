@@ -26,6 +26,7 @@ if __name__ == '__main__':
                          param_base_url=STORED_PARAM_URL, stop_loss=50)
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/exhalable_cat.py')
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     crawler.run()
 
 

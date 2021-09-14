@@ -12,5 +12,6 @@ except ImportError:
 if __name__=='__main__':
     skater = StreamSkater(write_key=SACCADE_BEE, f=slow_aggressive_ema_ensemble, use_std=True, max_active=1000)
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/saccade_bee.py')
+        'https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/saccade_bee.py')
+    skater.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     skater.run()

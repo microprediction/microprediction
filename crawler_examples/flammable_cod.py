@@ -28,9 +28,10 @@ if __name__ == "__main__":
     try:
         from microprediction.config_private import FLAMMABLE_COD
         mw = FlammableCod(write_key=FLAMMABLE_COD)
-        mw.set_repository(
-            'https://github.com/microprediction/microprediction/blob/master/crawler_examples/flammable_cod.py')
     except ImportError:
         mw = FlammableCod(difficulty=10)
+    mw.set_repository(
+        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/flammable_cod.py')
+    mw.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     print(mw.animal,flush=True)
     mw.run()

@@ -26,6 +26,7 @@ if __name__ == '__main__':
     crawler.delete_performance()
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/bedabble_toad.py')
+    crawler.set_email("me@gmail.com")  # Only used to send you a voucher if you win a daily prize
     crawler.run()
 
 

@@ -49,7 +49,8 @@ class MyCrawler(MicroCrawler):
 
 
 if __name__ == "__main__":
-    mw = MyCrawler(write_key=SOSHED_BOA)
-    mw.set_repository(
+    crawler = MyCrawler(write_key=SOSHED_BOA)
+    crawler.set_repository(
         url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py')
-    mw.run(withdraw_all=True)
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
+    crawler.run(withdraw_all=True)

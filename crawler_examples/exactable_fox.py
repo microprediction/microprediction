@@ -4,7 +4,6 @@ from microprediction.config_private import EXACTABLE_FOX
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
-# This guy uses
 
 if __name__ == "__main__":
     try:
@@ -27,5 +26,6 @@ if __name__ == "__main__":
     crawler = Fox(write_key=EXACTABLE_FOX)
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/exactable_fox.py')
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     crawler.max_active = 500
     crawler.run()

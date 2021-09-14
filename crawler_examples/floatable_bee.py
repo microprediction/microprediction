@@ -39,5 +39,6 @@ if __name__ == '__main__':
     crawler.hyper_params = DEFAULT_EXPNORM_HYPER
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/floatable_bee.py')
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     crawler.run()
 

@@ -10,4 +10,5 @@ if __name__ == '__main__':
     except ImportError:
         crawler = MicroCrawler(difficulty=11)
     crawler.set_repository(url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/dale_leech.py')
+    crawler.set_email("me@gmail.com")  # Only used to send you a voucher if you win a daily prize
     crawler.run()

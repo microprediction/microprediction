@@ -82,10 +82,11 @@ if __name__ == "__main__":
         from microprediction.config_private import DECASTYLE_CAT
 
         crawler = DigestCrawler(write_key=DECASTYLE_CAT)
-        crawler.set_repository(
-            url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/decastyle_cat.py')
     except ImportError:
         crawler = DigestCrawler(difficulty=9)
 
+    crawler.set_repository(
+        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/decastyle_cat.py')
+    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
     crawler.min_lags = 500
     crawler.run()

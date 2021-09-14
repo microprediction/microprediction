@@ -23,9 +23,10 @@ class ShortOnlyCrawler(FitCrawler):
 if __name__ == '__main__':
     crawler = ShortOnlyCrawler(write_key=ALBAHACA_MOLE, machine_type=ExpNormDist, max_evals=10,
                          min_seconds=20, min_elapsed=60 * 60, max_active=150, decay=0.005)
-    crawler.delete_performance()
+    crawler.delete_performance() # optional
     crawler.set_repository(
-        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/albahaca_mole.py')
+        url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/albahaca_mole.py') # optional
+    crawler.set_email("me@gmail.com")  # Only used to send you a voucher if you win a daily prize
     crawler.run()
 
 
