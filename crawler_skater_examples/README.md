@@ -1,5 +1,5 @@
 
-## Timemachines package examples
+## Timemachines skater-powered crawler examples
 
 Probably the easiest way to get a decent crawler going is by using the [timemachines](https://github.com/microprediction/timemachines) package in conjunction with the [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) class. 
 
