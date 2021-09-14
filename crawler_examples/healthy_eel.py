@@ -12,5 +12,5 @@ except ImportError:
 if __name__=='__main__':
     skater = SkatingFox(write_key=HEALTHY_EEL, f=thinking_slow_and_slow, use_std=False, max_active=1000)
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/shole_gazelle.py')
+        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/healthy_eel.py')
     skater.run()

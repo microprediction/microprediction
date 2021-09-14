@@ -1,20 +1,22 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-I guess Github made this a "user home page". Hi. I'm the author of these packages:
+I guess Github made this a "user home page". Well hi, I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) 
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers (stable). 
-- [Embarrassingly](https://github.com/microprediction/embarrassingly) - Robust optimization (speculative).
+- [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
+- [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
+- [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction via API. (A hosted, high velocity clearing mechanism for probabilstic forecasts of time-series). 
 
-and a few others including the microprediction [client](https://github.com/microprediction/microprediction) and server that you seem to have found. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
+and a few others. This is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  
 
-## Microprediction
+## Microprediction client
 
-The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. It is in active use by two leading financial institutions. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
+The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
 
-## Quick links
+## Microprediction bookmarks
 
 **Data**: [stream list](https://www.microprediction.org/browse_streams.html) | [stream explanations](https://www.microprediction.com/blog/livedata) | [csv](https://www.microprediction.org/features.html) **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) | [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples) 
 **Resources**: [popular timeseries packages](https://www.microprediction.com/blog/popular-timeseries-packages) |
@@ -79,7 +81,7 @@ You should run that script "forever". Plug your write key into the [dashboard](h
 If you maintain an open source time series package with a permissive license, we suggest you enable sponsorships on your repo and let us know if you are not on the list of [Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) with [notebook examples](https://github.com/microprediction/timeseries-notebooks). We've brought some attention to packages like [deep echo](https://www.linkedin.com/posts/petercotton_python-timeseries-activity-6752292529414242304-8G_k), [neural prophet](https://www.linkedin.com/posts/petercotton_timeseries-pytorch-fbprophet-activity-6751554855732699136-Fund), 
 [copulas](https://www.linkedin.com/posts/petercotton_micropredictionmicroactors-plots-activity-6750123629197045760-vwfJ), [auto_ts](https://www.linkedin.com/posts/srivatsan-srinivasan-b8131b_datascience-machinelearning-ml-activity-6751504451347066880-EL5P) and many more on LI. Microprediction offers [prizes](https://www.microprediction.com/competitions/electricity), and we think nano-markets can organize the production of prediction more efficiently than human managers. But we're also conscious of market failure modes and free-riding, and we sponsor some open source projects directly. 
 
-## Blog, presentations, book, etc
+## Blog, presentations
 
 Popular [blog](https://www.microprediction.com/blog) posts:
 
@@ -88,7 +90,11 @@ Popular [blog](https://www.microprediction.com/blog) posts:
 - [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for [this](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected) stream.
 - [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas, as noted. 
 
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles. MIT Press will publish a book on the topic in Fall 2021. 
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles.
+
+## Book 
+
+To be published by MIT Press late 2021. Reach out if you're volunteering to proof-read :)
 
 ## Weekly contributor Google meet
 
@@ -386,6 +392,7 @@ Multivariate prediction solicitation is available to those with write_keys of di
 Copula time series are univariate. An embedding from R^3 or R^2 to R is used (Morton space filling Z-curve). The most up to date
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
 a little video of the embedding in the [FAQ](https://www.microprediction.com/faq). 
+         
          
 # Further reading
 
