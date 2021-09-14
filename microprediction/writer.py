@@ -32,6 +32,12 @@ class MicroWriter(MicroReader):
         if res.status_code == 200:
             return res.json()
 
+    def set_email(self, email:str):
+        """ Tell system, but not anyone else, your email """
+        res = requests.put(self.base_url + '/email/' + self.write_key, params={'email': email})
+        if res.status_code == 200:
+            return res.json()
+
     def delete_repository(self):
         """ Tell everyone where your repository is """
         res = requests.delete(self.base_url + '/repository/' + self.write_key)
