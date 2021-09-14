@@ -3,7 +3,7 @@
 
 The timemachines package provides a simple interface for k-step ahead prediction of univariate (mostly) time-series. You might want to 
 use the [timemachines](https://github.com/microprediction/timemachines) package in a MicroCrawler, or alternatively use the [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) class, which is intended to provide one way of
-seamlessly integrating point-estimates from timemachines into a crawler. 
+seamlessly integrating point estimates from timemachines into a crawler. 
 
 Examples include:
  
