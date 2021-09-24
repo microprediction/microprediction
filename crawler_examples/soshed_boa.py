@@ -12,10 +12,14 @@ from microprediction.config_private import SOSHED_BOA  # <--- You'll need your o
 #  1 - Replace SOSHED_BOA with your own private key. https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb
 #  2 - Set your email down the bottom 
 #  3 - Run the script. Notice that it will tell you to cut and paste your key into https://www.microprediction.org/ 
+#
+# That might be enough but...
+#
 #  4 - See the slack invite at https://www.microprediction.com/knowledge-center and chat with others 
 #  5 - Read https://www.microprediction.com/blog/intro
 #  6 - Improve the script
-#  7 - GOTO 2
+#  7 - Check https://www.microprediction.org/leaderboard.html and click on CODE badges for more inspiration. 
+#  8 - GOTO 3
 
 # Like cheesy tutorials? Start at https://www.microprediction.com/python-1
 
