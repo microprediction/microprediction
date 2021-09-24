@@ -1,7 +1,12 @@
-from microprediction.config_private import SOSHED_BOA
 from microprediction import MicroCrawler
 import numpy as np
 from statsmodels.tsa.ar_model import AutoReg, ar_select_order
+
+from microprediction.config_private import SOSHED_BOA  # <--- You'll need your own key instead
+
+
+# You can create a private key using this colab notebook
+# https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb
 
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
@@ -51,6 +56,6 @@ class MyCrawler(MicroCrawler):
 if __name__ == "__main__":
     crawler = MyCrawler(write_key=SOSHED_BOA)
     crawler.set_repository(
-        url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py')
-    crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
+        url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py') # <--- Optionally include a link to your repo.
+    crawler.set_email("no_email@supplied.com")  # <--- Put your email here. Only used to send you a voucher if you win a daily prize
     crawler.run(withdraw_all=True)
