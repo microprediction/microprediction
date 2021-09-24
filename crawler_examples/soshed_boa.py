@@ -1,15 +1,23 @@
 from microprediction import MicroCrawler
 import numpy as np
 from statsmodels.tsa.ar_model import AutoReg, ar_select_order
-
 from microprediction.config_private import SOSHED_BOA  # <--- You'll need your own key instead
 
 
-# You can create a private key using this colab notebook
-# https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb
+# Example of a script that runs a "crawler" predicting https://www.microprediction.org/browse_streams.html
+# It might win a prize if it is consistently providing good predictions. See https://www.microprediction.com/competitions
 
-# New video tutorials are available at https://www.microprediction.com/python-1 to help you
-# get started running crawlers at www.microprediction.com
+# Required steps: 
+#
+#  1 - Replace SOSHED_BOA with your own private key. https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb
+#  2 - Set your email down the bottom 
+#  3 - Run the script. Notice that it will tell you to cut and paste your key into https://www.microprediction.org/ 
+#  4 - See the slack invite at https://www.microprediction.com/knowledge-center and chat with others 
+#  5 - Read https://www.microprediction.com/blog/intro
+#  6 - Improve the script
+#  7 - GOTO 2
+
+# Like cheesy tutorials? Start at https://www.microprediction.com/python-1
 
 
 class MyCrawler(MicroCrawler):
