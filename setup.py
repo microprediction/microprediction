@@ -27,7 +27,7 @@ setup(
     install_requires=["numpy>=1.20.1", "pandas", "pathlib", "contexttimer", "requests",
                       "getjson", "microconventions>=0.5.0",
                       'pycoingecko', 'apscheduler', 'tdigest','genson','hyperopt',
-                      'sklearn','statsmodels','copulas'],
+                      'scikit-learn','statsmodels','copulas'],
     entry_points={
         "console_scripts": [
             "microprediction=microprediction.__main__:main",
