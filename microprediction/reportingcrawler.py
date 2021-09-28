@@ -84,13 +84,13 @@ class ReportingCrawler(MicroCrawler):
                     getattr(self,method)()
 
                 method = 'get_cdf'
-                self.get_cdf_lagged(name='cop.json',delay=self.DELAYS[0])
+                self.get_cdf_lagged(name='c5_bitcoin.json',delay=self.DELAYS[0])
                 self.get_cdf_lagged(name='three_body_x.json',delay=self.DELAYS[-1])
 
                 method = 'get_lagged_times'
-                self.get_lagged_times('cop.json')
+                self.get_lagged_times('c5_bitcoin.json')
                 method = 'get_lagged_values'
-                self.get_lagged_values('cop.json')
+                self.get_lagged_values('c5_bitcoin.json')
 
             except Exception as e:
                 return {'error':'setup error','method':method,'message':str(e)}

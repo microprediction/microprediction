@@ -4,7 +4,7 @@ from microprediction.set_config import MICRO_TEST_CONFIG
 BASE_URLS = MICRO_TEST_CONFIG['BASE_URLS'][:2]
 
 
-def test_get_cdf_cop():
+def test_get_cdf_die():
     for base_url in BASE_URLS:
         mr = MicroReader(base_url=base_url)
         res = mr.get_cdf_lagged(name='die.json', delay=mr.DELAYS[0], num=15)
