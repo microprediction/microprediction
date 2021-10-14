@@ -9,6 +9,7 @@ I guess Github made this a "user home page". Well hi, this is my [dog](https://i
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction via API. (A hosted, high velocity clearing mechanism for probabilstic forecasts of time-series). 
+- [Microfilter](https://github.com/microprediction/microfilter) - A simple noise-resistant Kalman-inspired filter. 
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (under construction)
 
 and a few others.  
