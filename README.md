@@ -21,6 +21,9 @@ TLDR - Here's the [slack invite](https://join.slack.com/t/microprediction/shared
 
 The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
 
+## Cite
+See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
+
 ## Microprediction bookmarks
 
 **Data**: [stream list](https://www.microprediction.org/browse_streams.html) | [stream explanations](https://www.microprediction.com/blog/livedata) | [csv](https://www.microprediction.org/features.html) **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) | [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples) | [notebook examples](https://github.com/microprediction/microprediction/tree/master/notebook_examples)
