@@ -11,9 +11,9 @@
  
 Or. 
  
-   @electronic{cottontimemachines,
-      title = {{Timemachines: A Python Package for Creating and Assessing Autonomous Time-Series Prediction Algorithms}},
-      year = {2021},
-      author = {Peter Cotton},
-      url = {https://github.com/microprediction/timemachines}
-  }
+        @electronic{cottontimemachines,
+           title = {{Timemachines: A Python Package for Creating and Assessing Autonomous Time-Series Prediction Algorithms}},
+           year = {2021},
+           author = {Peter Cotton},
+           url = {https://github.com/microprediction/timemachines}
+       }
