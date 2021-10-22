@@ -1,5 +1,4 @@
 # For those looking at the meme of the day stocks
-# Complain to Graham 
 
 from re import findall
 from functools import reduce
