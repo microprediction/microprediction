@@ -73,7 +73,7 @@ After you submit, race over to www.microprediction.org and paste your key into t
 
 ## **1. Download Contest Names**
 
-We can download all of the contest names and then subset on different types of streams our models may excel at.
+We can download all of the contest names and then subset on different types of streams our models may excel at.  Here we isolate just the `z1` streams.
 
 ```{r z1}
 # Download all of the contest names
@@ -143,7 +143,7 @@ registerDoSEQ()
 
 ## **3.  Sponsored Contests**
 
-There are sponsored contests which offer daily and monthly prizes, see <https://www.microprediction.com/competitions> for more details.
+There are sponsored contests which offer daily and monthly prizes, see <https://www.microprediction.com/competitions> for more details.  This example will generate a list of streams sponsored by the MUID Offcast Goose.
 
 ```{r contests}
 # Grab all sponsored contests
