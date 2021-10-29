@@ -26,6 +26,10 @@ class MicroWriter(MicroReader):
     def get_own_repository(self):
         return self.get_repository(write_key=self.write_key)
 
+    def get_own_predictions(self, name:str, delay:int, strip=True, consolidate=True ):
+        """ Get predictions by others for a stream you own """
+        return self.get_predictions(write_key=self.write_key,name=name, delay=delay, strip=strip, consolidate=consolidate)
+
     def set_repository(self, url):
         """ Tell everyone where your repository is """
         res = requests.put(self.base_url + '/repository/' + self.write_key, params={'url': url})

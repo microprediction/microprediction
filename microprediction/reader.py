@@ -14,6 +14,13 @@ class MicroReader(MicroConventions):
         """ Establish connection and adopt configuration parameters from site """
         super().__init__(base_url=base_url or api_url(), **kwargs)
 
+    def fix_stream_name(self,name:str)->str:
+        if len(name)<5 or name[-5:]!='.json':
+            print('Stream names should end in .json')
+            return name+'.json'
+        else:
+            return name
+
     def request_get_json(self, method, arg=None, data=None, throw=True):
         # TODO: Can remove this after microconventions>0.1.0
         try:
@@ -37,6 +44,7 @@ class MicroReader(MicroConventions):
         return self.request_get_json(method='live', arg=name, throw=throw)
 
     def get_current_value(self, name, throw=True):
+        name = self.fix_stream_name(name=name)
         return self.request_get_json(method='live', arg=name, throw=throw)
 
     def get_sponsors(self) -> dict:
@@ -65,10 +73,12 @@ class MicroReader(MicroConventions):
         # res = requests.get(self.base_url + '/live/summary::' + name)
 
     def get_lagged(self,name, count=1000):
+        name = self.fix_stream_name(name=name)
         return self.request_get_json(method='lagged',arg=name, data={'count':count-1})
 
     def get_lagged_values_and_times(self, name, count=1000):
         """ Preferred method """
+        name = self.fix_stream_name(name=name)
         lagged = self.get_lagged(name=name, count=count)
         lagged_values = [l[1] for l in lagged]
         lagged_times  = [l[0] for l in lagged]
@@ -79,6 +89,7 @@ class MicroReader(MicroConventions):
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json
         :return: [ float ]
         """
+        name = self.fix_stream_name(name=name)
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name,count=count)
         return lagged_values
 
@@ -86,6 +97,7 @@ class MicroReader(MicroConventions):
         """ Retrieve history of implied copulas in [0,1]^n
              returns [ [p1,p2,p3] ]
         """
+        name = self.fix_stream_name(name=name)
         assert '~' in name,'This method is intended for copula streams'
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
         dim = 2 if 'z2~' in name else 3
@@ -96,6 +108,7 @@ class MicroReader(MicroConventions):
         """ Retrieve history of implied z in [-inf,inf]^n
              returns [ [z1,z2,z3], [ , ,] ]
         """
+        name = self.fix_stream_name(name=name)
         assert '~' in name, 'This method is intended for bivariate or trivariate copula streams'
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
         dim = 2 if 'z2~' in name else 3
@@ -113,6 +126,7 @@ class MicroReader(MicroConventions):
         :param name:    cop.json   z1~cop.json   z2~cop~qp.json
         :return: [ float ]
         """
+        name = self.fix_stream_name(name=name)
         lagged_values, lagged_times = self.get_lagged_values_and_times(name=name, count=count)
         return lagged_times
 
@@ -124,6 +138,7 @@ class MicroReader(MicroConventions):
             param: delay
             :return: [ float ]
         """
+        name = self.fix_stream_name(name=name)
         return self.request_get_json(method='live', arg='delayed::' + str(delay) + self.SEP + name)
         # res = requests.get(self.base_url + '/live/delayed::' + str(delay) + "::" + name)
 
@@ -133,7 +148,30 @@ class MicroReader(MicroConventions):
         return self.request_get_json(method='repository', arg=write_key)
         # res = requests.get(self.base_url + '/repository/' + write_key)
 
+    def get_predictions(self, write_key, name, delay:int, strip=True, consolidate=True):
+        """ Retrieve predictions for a given horizon
+
+              strip_percentiles  If false, returns dictionary with individual submissions
+              consolidate        If false, returns tuples (owner,value)
+                                 Otherwise just returns values
+
+        """
+        name = self.fix_stream_name(name=name)
+        tickets = self.request_get_json(method='predictions', arg=name, data={"write_key":write_key,"delay":delay})
+        if strip:
+            tups = [(ticket.split('::')[1], val) for ticket, val in tickets.items()]
+            if consolidate:
+                return sorted([v for owner,v in tups])
+            else:
+                return tups
+        else:
+            return tickets
+
+
+
+
     def median(self, name: str, delay: int):
+        name = self.fix_stream_name(name=name)
         return self.inv_cdf(name=name, delay=delay, p=0.5, num=15)
 
     def inv_cdf(self, name: str, delay: int, p=None, ps=None, num=25):
@@ -144,6 +182,7 @@ class MicroReader(MicroConventions):
              num Number of interpolation points to use
 
         """
+        name = self.fix_stream_name(name=name)
         # This won't choose x values based on the percentiles supplied, so it is a bit dumb in that sense
         cdf = self.get_cdf_lagged(name=name, delay=delay, num=num)
         ps_ = ps or [p]
