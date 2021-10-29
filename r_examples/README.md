@@ -54,11 +54,18 @@ There is no registration at www.microprediction.org. Instead you create your own
 write_key <- "4c7b09f298bb7eb580b48ada674142cd"  # not a real key, read the above
 ```
 
+We also need to set our email associated with our secret identity so we can receive our prizes!
+```{r email}
+email <- 'your_email@gmail.com'
+res <- httr::PUT(url = paste0("https://api.microprediction.org/email/", write_key), body = list(email = email))
+print(res)
+```
+
 ## **4. Submit your distribution**
 
 ```{r submission, eval=FALSE}
 # We have to supply values as a comma separated list 
-my_values <- toString(q)) 
+my_values <- toString(q) 
 
 # Then we make a PUT to the API
 res <- httr::PUT(url = paste0("https://api.microprediction.org/submit/", name),
