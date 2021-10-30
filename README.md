@@ -1,8 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my [slack invite](
-[slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-xauc5r03-XmIMdy~iL4a3Hw3G1Agv6w). I'm the author of these packages:
+I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-xauc5r03-XmIMdy~iL4a3Hw3G1Agv6w). I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
 - [FirstDown](https://github.com/microprediction/firstdown) - The repo that changed NFL football forever.  
