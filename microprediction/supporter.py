@@ -34,7 +34,7 @@ def donate1(difficulty=None, password=None, donor='anonymous'):
                 difficulty = random.choice([13])
             while True:
                 print("Mining and donating the MUIDs with password "+password+" and donor name "+donor+". Thanks. Difficulty set to "+str(difficulty),flush=True)
-                write_key = new_key(difficulty=12)
+                write_key = new_key(difficulty=difficulty)
                 print(write_key,flush=True)
                 res = requests.post('https://api.microprediction.org/donations/' + write_key, data={'password': password,'donor':donor})
                 pprint(res.json())
