@@ -37,7 +37,6 @@ def horsing_around():
     # Step 5: Submit
     for finish_name, horse_placings in zip(FINISH_NAMES,placegetters):
         values = sorted([ f+1 for f in horse_placings ])
-        mw.set_repository()
         mw.submit(name=finish_name,values=values)
 
 
