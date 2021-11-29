@@ -1,23 +1,22 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-xauc5r03-XmIMdy~iL4a3Hw3G1Agv6w). I'm the author of these packages:
+I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-yr7p7xaq-2p0SMMXGoFBLkgpxNW0z5A). I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
-- [FirstDown](https://github.com/microprediction/firstdown) - The repo that ruined the great game of football.  
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers (stable). 
+- [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction via API. (A hosted, high velocity clearing mechanism for probabilstic forecasts of time-series). 
-- [Microfilter](https://github.com/microprediction/microfilter) - A simple noise-resistant Kalman-inspired filter. 
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (under construction)
 
 and a few others.  
 
 ## Microprediction client
 
-TLDR - Here's the [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-xauc5r03-XmIMdy~iL4a3Hw3G1Agv6w)
+TLDR - There's a slack invite in the [knowledge center](https://www.microprediction.com/knowledge-center). 
 
 The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
 
