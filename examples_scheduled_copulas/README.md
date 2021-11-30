@@ -1,7 +1,4 @@
-# Actors 
 
-Examples of scripts that are intended to be run on a schedule. They are called
-actors because they are often implemented using Github actions. 
 
 While a continuous process might be more suited to submission of rapidly changing
 data, a scheduled job may work just fine. Furthermore, many streams are implied 

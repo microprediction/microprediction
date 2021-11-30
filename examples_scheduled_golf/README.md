@@ -1,4 +1,4 @@
-## Sub-predictions example
+## Defassa Dog
 
 The submitter is DEFASSA_DOG and it is trying to predict
  streams like [tour_17](https://www.microprediction.org/stream_dashboard.html?stream=tour_17). That stream
