@@ -16,6 +16,8 @@ and a few others.
 
 ## Microprediction client
 
+Stop what you are doing. Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. 
+
 TLDR - There's a slack invite in the [knowledge center](https://www.microprediction.com/knowledge-center). 
 
 The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
