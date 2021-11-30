@@ -1,10 +1,9 @@
+## Examples of scheduled copula submissions
 
 
 While a continuous process might be more suited to submission of rapidly changing
 data, a scheduled job may work just fine. Furthermore, many streams are implied 
 copulas that don't change too often. 
-
-They may be a tutorial in the (Knowledge Center)[https://www.microprediction.com/knowledge-center].
 
 ### What are z-streams? 
 
@@ -18,8 +17,11 @@ format using the .get_lagged_copulas or .get_lagged_zvalues methods of the [Micr
 ### Copula estimators
 
 See 
-[Comble Mammal](https://github.com/microprediction/microprediction/blob/master/actor_examples/comble_mammal.py) for 
+[Comble Mammal](https://github.com/microprediction/microprediction/blob/master/examples_scheduled_copulas/comble_mammal.py) for 
 an example of periodically fitting a Copula model to historical three-dimensional vectors extracted
 from z3~ streams. 
 
 
+### See also 
+
+[Knowledge Center](https://www.microprediction.com/knowledge-center)

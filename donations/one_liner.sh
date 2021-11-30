@@ -1,1 +1,0 @@
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/donations/donate.sh)"

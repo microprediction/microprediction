@@ -15,7 +15,7 @@ import numpy as np
 
 WRITE_KEY = DODDLE_MAMMAL
 ANIMAL = MicroWriter.animal_from_key(DODDLE_MAMMAL)
-REPO = 'https://github.com/microprediction/microprediction/blob/master/actor_examples/' + ANIMAL.lower().replace(
+REPO = 'https://github.com/microprediction/microprediction/blob/master/examples_scheduled_copulas/' + ANIMAL.lower().replace(
     ' ', '_') + '.py'
 
 

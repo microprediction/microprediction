@@ -33,7 +33,7 @@ def fit_and_sample(lagged_zvalues:[[float]],num:int, copula=None):
 
 if __name__ == "__main__":
     ANIMAL = MicroWriter.animal_from_key(WRITE_KEY)
-    REPO = 'https://github.com/microprediction/microprediction/blob/master/copula_examples/' + ANIMAL.lower().replace(
+    REPO = 'https://github.com/microprediction/microprediction/blob/master/examples_scheduled_copulas/' + ANIMAL.lower().replace(
         ' ', '_') + '.py'
     print('This is ' + ANIMAL)
     VERBOSE = False
