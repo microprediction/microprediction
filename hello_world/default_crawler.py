@@ -1,7 +1,9 @@
 from microprediction import MicroCrawler
 
-# New video tutorials are available at https://www.microprediction.com/python-1 to help you
-# get started running crawlers at www.microprediction.com
+# This script runs the default crawler
+# If you don't keep it running, it may go broke!
+
+# Video tutorials are available at https://www.microprediction.com/python-1
 
 if __name__ == '__main__':
     MicroCrawler().run()
