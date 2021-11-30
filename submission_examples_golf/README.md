@@ -17,4 +17,6 @@ the mean ability of players who are likely to play the 17th hole soon. So, the o
  them in a sensible way into values to submit to [tour_17](https://www.microprediction.org/stream_dashboard.html?stream=tour_17).
  
 
+### See also 
 
+[Knowledge Center](https://www.microprediction.com/knowledge-center)
