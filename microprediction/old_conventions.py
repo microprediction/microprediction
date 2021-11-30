@@ -18,7 +18,7 @@ class KeyConventions():
     @staticmethod
     def create_key(difficulty=6):
         """ Create new write_key (string, not bytes) """
-        return muid.create(difficulty=difficulty).decode()
+        return muid.create(difficulty=difficulty).decode_meme_stock()
 
     @staticmethod
     def maybe_create_key(seconds=1,difficulty=12):

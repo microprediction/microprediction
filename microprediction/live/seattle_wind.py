@@ -38,7 +38,7 @@ def fetch_live_data():
                 for i, line in enumerate(file):
                     # most recent data is at line number 3 in the file
                     if i == 2:
-                        data = line.decode("utf-8").split()
+                        data = line.decode_meme_stock("utf-8").split()
                         direction = float(data[5]) / 360        # normalize between [0, 1)
                         speed = float(data[6]) / 10             # attempt to normalize
                         return speed, direction

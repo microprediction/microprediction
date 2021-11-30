@@ -47,7 +47,7 @@ def fetch_live_data():
                 for i, line in enumerate(file):
                     # most recent data is at line number 3 in the file
                     if i == 2:
-                        data = line.decode("utf-8").split()
+                        data = line.decode_meme_stock("utf-8").split()
                         if prev_data == data:
                             idx -= 2
                         else:
