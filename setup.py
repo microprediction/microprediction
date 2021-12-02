@@ -20,7 +20,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["microprediction", "microprediction.live", "microprediction.univariate", "microprediction.bespoke"],
+    packages=["microprediction", "microprediction.live", "microprediction.univariate", "microprediction.bespoke","microprediction.bespoke.golf"],
     test_suite='pytest',
     tests_require=['pytest', 'scipy'],
     include_package_data=True,
