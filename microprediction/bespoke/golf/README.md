@@ -39,7 +39,7 @@ Long term mean ability of players who played the 9th hole but not yet the 10th h
 | [tour_10_sg_app](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_app)  |  Approach shots    |
 | [tour_10_sg_ott](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_ott)  |  Off the tee       |
 | [tour_10_sg_arg](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_arg)  |  Scrambling        |
-| [tour_10_sg_arg](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_arg)  |  Scrambling        |
+| [tour_10_sg_putt](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_arg)  |  Putting        |
 | [tour_10_sg_total](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_sg_arg)  |  Total           |
 
 The tournament performance for the same players:
@@ -49,8 +49,9 @@ The tournament performance for the same players:
 | [tour_10_tourn_app](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_app)  |  Approach shots    |
 | [tour_10_tourn_ott](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_ott)  |  Off the tee       |
 | [tour_10_tourn_arg](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_arg)  |  Scrambling        |
-| [tour_10_tourn_arg](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_arg)  |  Scrambling        |
-| [tour_10_tourn_total](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_arg)  |  Total           |
+| [tour_10_tourn_putt](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_putt)  |  Putting        |
+| [tour_10_tourn_t2g](https://www.microprediction.org/stream_dashboard.html?stream=tour_10_tourn_t2g)  |  Total           |
+
 
 ### Auxiliary streams: hole score streams broken down by player ability category 
 
