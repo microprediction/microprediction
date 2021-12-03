@@ -9,9 +9,26 @@ As each golfer finishes player a hole, his score on that hole becomes the next d
 
 | Stream                                                                                         |  Typical values        |  Interpretation |
 | ---------------------------------------------------------------------------------------------- | -------------------|-----------------------|
-| [tour_10](https://www.microprediction.org/stream_dashboard.html?stream=tour_10)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 10'th hole |
-| [tour_18](https://www.microprediction.org/stream_dashboard.html?stream=tour_18)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 18'th hole |
-and so on. Values have the usual interpretation relative to par:
+| [tour_1](https://www.microprediction.org/stream_dashboard.html?stream=tour_1)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 1st hole |
+| [tour_2](https://www.microprediction.org/stream_dashboard.html?stream=tour_2)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 2nd hole |
+| [tour_3](https://www.microprediction.org/stream_dashboard.html?stream=tour_3)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 3rd hole |
+| [tour_4](https://www.microprediction.org/stream_dashboard.html?stream=tour_4)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 4th hole |
+| [tour_5](https://www.microprediction.org/stream_dashboard.html?stream=tour_5)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 5th hole |
+| [tour_6](https://www.microprediction.org/stream_dashboard.html?stream=tour_6)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 6th hole |
+| [tour_7](https://www.microprediction.org/stream_dashboard.html?stream=tour_7)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 7th hole |
+| [tour_8](https://www.microprediction.org/stream_dashboard.html?stream=tour_8)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 8th hole |
+| [tour_9](https://www.microprediction.org/stream_dashboard.html?stream=tour_9)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 9th hole |
+| [tour_10](https://www.microprediction.org/stream_dashboard.html?stream=tour_10)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 10th hole |
+| [tour_11](https://www.microprediction.org/stream_dashboard.html?stream=tour_11)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 11th hole |
+| [tour_12](https://www.microprediction.org/stream_dashboard.html?stream=tour_12)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 12th hole |
+| [tour_13](https://www.microprediction.org/stream_dashboard.html?stream=tour_13)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 13th hole |
+| [tour_14](https://www.microprediction.org/stream_dashboard.html?stream=tour_14)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 14th hole |
+| [tour_15](https://www.microprediction.org/stream_dashboard.html?stream=tour_15)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 15th hole |
+| [tour_16](https://www.microprediction.org/stream_dashboard.html?stream=tour_16)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 16th hole |
+| [tour_17](https://www.microprediction.org/stream_dashboard.html?stream=tour_17)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 17th hole |
+| [tour_18](https://www.microprediction.org/stream_dashboard.html?stream=tour_18)  |  -2, -1, 0, 1, 2, 3, 4 ...    |  Score on 18th hole |
+
+Values have the usual interpretation relative to par:
 
 | Value                                                                                         |  Interpretation       |  
 | ---------------------------------------------------------------------------------------------- | -------------------|
