@@ -40,4 +40,6 @@ largest and smallest returns over the prior data period (one hour).
 * https://www.microprediction.org/stream_dashboard.html?stream=best-crypto-of-the-hour
 * https://www.microprediction.org/stream_dashboard.html?stream=worst-crypto-of-the-hour
 
+Exogenous data
 
+* https://s3.amazonaws.com/public.gillerinvestments.com/crypto-of-the-hour.json
