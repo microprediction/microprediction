@@ -10,7 +10,8 @@ Also bivariate z-scores
 * https://www.microprediction.org/stream_dashboard.html?stream=z2~c2_bitcoin~c2_ethereum~70
 * https://www.microprediction.org/stream_dashboard.html?stream=z2~c2_bitcoin~c2_ethereum~3555
 
-See [crypto daily prize](https://www.microprediction.com/competitions/daily) and other competitions
+See [crypto daily prize](https://www.microprediction.com/competitions/daily) and other competitions motivated in the 
+article [How to Enter a Cryptocurrency contest](https://www.microprediction.com/blog/copula)
 
 ### Other crypto 15 minute changes
 
