@@ -1,6 +1,6 @@
 
-
 ### Ethereum / Bitcoin 5 minute changes
+Scaled logarithmic returns. 
 
 * https://www.microprediction.org/stream_dashboard.html?stream=c2_ethereum
 * https://www.microprediction.org/stream_dashboard.html?stream=c2_bitcoin
@@ -38,4 +38,5 @@ largest and smallest returns over the prior data period (one hour).
 
 * https://www.microprediction.org/stream_dashboard.html?stream=best-crypto-of-the-hour
 * https://www.microprediction.org/stream_dashboard.html?stream=worst-crypto-of-the-hour
+
 
