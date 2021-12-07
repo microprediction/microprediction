@@ -43,3 +43,5 @@ largest and smallest returns over the prior data period (one hour).
 Exogenous data
 
 * https://s3.amazonaws.com/public.gillerinvestments.com/crypto-of-the-hour.json
+
+See also [meme stocks](https://github.com/microprediction/microprediction/tree/master/microprediction/bespoke/meme_stocks) for discussion of categorical variables. 
