@@ -1,4 +1,7 @@
-from microprediction.config_private import TOASTABLE_FOX
+try:
+    from microprediction.config_private import TOASTABLE_FOX
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 from microprediction import MicroCrawler
 
 # Toastable Fox runs the default crawler.
