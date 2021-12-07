@@ -1,4 +1,8 @@
-from microprediction.config_private import MESOLE_MAMMAL
+try:
+    from microprediction.config_private import MESOLE_MAMMAL
+except:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
+    
 from microprediction.sequentialcrawler import SequentialStreamCrawler
 from microprediction.univariate.skewdist import SkewDist
 
