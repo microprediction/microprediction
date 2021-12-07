@@ -1,7 +1,10 @@
 from microprediction import MicroCrawler
 import numpy as np
 from statsmodels.tsa.ar_model import AutoReg, ar_select_order
-from microprediction.config_private import SOSHED_BOA  # <--- You'll need your own key instead
+try:
+    from microprediction.config_private import SOSHED_BOA  # <--- You'll need your own key instead
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 
 
 # Example of a script that runs a "crawler" predicting https://www.microprediction.org/browse_streams.html
