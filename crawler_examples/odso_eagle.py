@@ -1,4 +1,8 @@
-from microprediction.config_private import ODSO_EAGLE
+try:
+    from microprediction.config_private import ODSO_EAGLE
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
+    
 from microprediction import MicroCrawler
 import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
