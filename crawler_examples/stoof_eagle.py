@@ -23,7 +23,7 @@ class MyCrawler(MicroCrawler):
         if 'meme' in name:
             p = 0.8
 
-        if p in locals():
+        if 'p' in locals():
             last_value = lagged_values[-1]
             past_values = [v for v in lagged_values if v != last_value]
 
