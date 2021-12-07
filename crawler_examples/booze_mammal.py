@@ -1,4 +1,7 @@
-from microprediction.config_private import BOOZE_MAMMAL
+try:
+    from microprediction.config_private import BOOZE_MAMMAL
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 from microprediction import MicroCrawler
 import numpy as np
 
