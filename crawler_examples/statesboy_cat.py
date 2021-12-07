@@ -3,7 +3,11 @@
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
-from microprediction.config_private import STATESBOY_CAT
+try:
+    from microprediction.config_private import STATESBOY_CAT
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
+    
 from tdigest import TDigest
 from microprediction import SequentialStreamCrawler, DistMachine
 
