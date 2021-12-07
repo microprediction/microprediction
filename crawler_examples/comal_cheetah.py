@@ -1,4 +1,8 @@
-from microprediction.config_private import COMAL_CHEETAH
+try:
+    from microprediction.config_private import COMAL_CHEETAH
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
+    
 from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
 
