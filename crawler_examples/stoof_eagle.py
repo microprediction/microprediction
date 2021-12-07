@@ -54,5 +54,5 @@ class MyCrawler(MicroCrawler):
 if __name__ == "__main__":
 
     mw = MyCrawler(write_key=STOOF_EAGLE, min_lags=50, max_active=1000, quietude=1, verbose=False)
-    mw.set_repository(url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/bedead_sole.py')
+    mw.set_repository(url='https://github.com//microprediction/microprediction/blob/master/crawler_examples/stoof_eagle.py')
     mw.run(withdraw_all=False)
