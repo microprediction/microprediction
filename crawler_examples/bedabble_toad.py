@@ -1,6 +1,9 @@
 from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
-from microprediction.config_private import BEDABBLE_TOAD
+try:
+    from microprediction.config_private import BEDABBLE_TOAD
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # Need help? New video tutorials are available at https://www.microprediction.com/python-1 to help you
