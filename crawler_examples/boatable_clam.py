@@ -6,7 +6,7 @@
 try:
     from microprediction.config_private import BOATABLE_CLAM
 except ImportError:
-    raise Exception('You will need a write key. See https://www.microprediction.org/muids.html')
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 
 try:
     from echochamber import EchoCrawler
