@@ -3,7 +3,7 @@
 
 
      @electronic{cottonplatform,
-         title = {{A Platform for Assessing and Combining Autonomous Shrot-Horizon Distributional Predictions}},
+         title = {{A Platform for Assessing and Combining Autonomous Short-Horizon Distributional Predictions}},
          year = {2021},
          author = {Peter Cotton},
          url = {https://github.com/microprediction/microprediction/blob/master/microprediction_platform.pdf}
