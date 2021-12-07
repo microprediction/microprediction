@@ -1,5 +1,8 @@
 from microprediction import SequentialStreamCrawler
-from microprediction.config_private import FLOATABLE_BEE
+try:
+    from microprediction.config_private import FLOATABLE_BEE
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 from microprediction.fitcrawler import FitCrawler
 from microprediction.univariate.expnormdist import ExpNormDist
 from copy import deepcopy
