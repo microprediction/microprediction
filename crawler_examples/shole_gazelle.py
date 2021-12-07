@@ -1,4 +1,8 @@
-from microprediction.config_private import SHOLE_GAZELLE
+try:
+    from microprediction.config_private import SHOLE_GAZELLE
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
+    
 from microprediction.streamskater import StreamSkater
 
 # Example of a "skater" that uses the TimeMachines package for point estimates
