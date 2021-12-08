@@ -1,7 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my probably stale [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-yr7p7xaq-2p0SMMXGoFBLkgpxNW0z5A). I'm the author of these packages:
+Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my probably stale [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-yr7p7xaq-2p0SMMXGoFBLkgpxNW0z5A) and there might be one in the TLDR - There's a slack invite in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired.  I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [TimeMachines](https://github.com/microprediction/timemachines) - Time-series algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
 - [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
@@ -16,9 +16,7 @@ and a few others.
 
 ## Microprediction client
 
-Stop what you are doing. Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. 
-
-TLDR - There's a slack invite in the [knowledge center](https://www.microprediction.com/knowledge-center). 
+Stop what you are doing. Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. Your world will change. 
 
 The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. It is supported by Intech Investments, a top five U.S. investment firm by various metrics. There is a site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST .  
 
