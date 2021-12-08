@@ -7,7 +7,7 @@ def test_encodings():
 
 
 def test_round_trip():
-    for ticker in ['GME','ABAB','TSLA','LONGTICKER']:
+    for ticker in ['GME','ABAB','TSLA']:
         y = encode_meme_stock(ticker)
         assert ticker==decode_meme_stock(y)
 
