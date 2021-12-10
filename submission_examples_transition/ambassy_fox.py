@@ -69,6 +69,7 @@ def submit_predictions():
                     print(e)
                     pprint(values)
                 time.sleep(0.5)
+    mw.cancel_worst_active() 
 
 
 
