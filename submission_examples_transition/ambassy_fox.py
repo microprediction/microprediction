@@ -74,10 +74,11 @@ def submit_predictions(writer,horizons_to_avoid):
 
 if __name__=='__main__':
     mw = MicroWriter(write_key=WRITE_KEY)
-    worst_active_horizons = mw.worst_active_horizons(stop_loss=stop_loss)
+    performance = mw.get_performance()
+    horizons_to_avoid = [h for h,b in performance.items() if b<-abs(stop_loss) ]
     mw.cancel_worst_active(stop_loss=stop_loss)
 
     # Assumes this script will be run hourly
     for _ in range(17):
-        submit_predictions(writer=mw,horizons_to_avoid=worst_active_horizons)
+        submit_predictions(writer=mw,horizons_to_avoid=horizons_to_avoid)
         time.sleep(60*3)
