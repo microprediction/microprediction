@@ -8,17 +8,17 @@ Scaled 5-minutely logarithmic changes
 * [c2_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_ethereum)
 
 Logarithmic changes multiplied
-* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum)
-* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin)
+* [quadratic_c2_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum)
+* [quadratic_c2_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin)
 * [quadratic_c2_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_ethereum)
 
 Mean of predictions of logarithmic changes multiplied
-* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected.json](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected)
+* [quadratic_c2_bitcoin_bitcoin_expected](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected)
 and so on
 
 
 Logarithmic changes multiplied relative to 15 minute ahead predictions
-* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel.json](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel)
+* [quadratic_c2_bitcoin_bitcoin_rel](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel)
 and so on
 
 
