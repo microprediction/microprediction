@@ -40,6 +40,19 @@ Std of predicted portfolio returns
 
 Information ratios from predicted means and stds
 * [portfolio_c2_5_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5_info) Predicted 15 minute info ratio holding 5 percent bitcoin, 95 percent Ethereum
+* [portfolio_c2_25_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_25_info) Predicted 15 minute info ratio holding 25 percent bitcoin, 75 percent Ethereum
+* [portfolio_c2_35_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_35_info) Predicted 15 minute info ratio holding 35 percent bitcoin, 65 percent Ethereum
+* [portfolio_c2_45_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_45_info) Predicted 15 minute info ratio holding 45 percent bitcoin, 95 percent Ethereum
+* [portfolio_c2_55_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_55_info) Predicted 15 minute info ratio holding 55 percent bitcoin, 95 percent Ethereum
+* [portfolio_c2_65_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_65_info) Predicted 15 minute info ratio holding 65 percent bitcoin, 35 percent Ethereum
+* [portfolio_c2_95_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_95_info) Predicted 15 minute info ratio holding 95 percent bitcoin, 5 percent Ethereum
+
+Best portfolio 
+* [percent_c2_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=percent_c2_bitcoin) Recommended percentage bitcoin
+* [percent_c2_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=percent_c2_ethereum) Recommended percentage ethereum 
+
+Best portfolio returns
+* [best_c2](https://www.microprediction.org/stream_dashboard.html?stream=best_c2) Changes in log returns for "best" portfolio
 
 
 Relative portfolio relative returns using community-derived weights
