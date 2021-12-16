@@ -8,10 +8,23 @@ Scaled 5-minutely logarithmic changes
 * [c2_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_ethereum)
 
 Logarithmic changes multiplied
-
 * [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum)
 * [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin)
 * [quadratic_c2_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_ethereum)
+
+Mean of predictions of logarithmic changes multiplied
+* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected.json](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected)
+and so on
+
+
+Logarithmic changes multiplied relative to 15 minute ahead predictions
+* [https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel.json](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel)
+and so on
+
+
+
+Scaled 5-minutely logarithmic changes divided by std of predictions
+* [portfolio_c2_60_rel](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_60_rel)
 
 Fixed weight portfolio logarithmic returns
 * [portfolio_c2_5](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5) holding 5 percent bitcoin, 95 percent Ethereum
