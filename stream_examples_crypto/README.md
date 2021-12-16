@@ -43,8 +43,17 @@ Information ratios from predicted means and stds
 
 
 Relative portfolio relative returns using community-derived weights
+* [portfolio_c2_0_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_0_diff) 
+records the difference between the "best" portfolio and Ethereum
+* [portfolio_c2_20_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_20_diff) 
+records the difference between the "best" portfolio and the portfolio with 20 percent bitcoin, the rest Ethereum
+* [portfolio_c2_50_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_50_diff) 
+records the difference between the "best" portfolio and the portfolio with 50 percent bitcoin, the rest Ethereum
 * [portfolio_c2_80_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_80_diff) 
 records the difference between the "best" portfolio and the portfolio with 80 percent bitcoin
+* [portfolio_c2_100_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_100_diff) 
+records the difference between the "best" portfolio and bitcoin
+
 
 
 
