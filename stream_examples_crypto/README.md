@@ -32,6 +32,7 @@ Fixed weight portfolio logarithmic returns
 and so forth
 
 Mean of predicted portfolio returns
+* [portfolio_c2_65_expected](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_65_expected) Trimmed mean of predicted 15 minute ahead returns holding 65 percent bitcoin, 35 percent Ethereum
 * [portfolio_c2_5_expected](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5_expected) Trimmed mean of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
 
 Std of predicted portfolio returns
