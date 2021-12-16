@@ -243,7 +243,7 @@ class MultiChangePoll(MultiPoll):
    COLD = 0
    WARM = 1
 
-   def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, **kwargs):
+   def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, change_func=None, change_func_args=None, **kwargs):
             """  Create multiple streams by polling every 20 minutes, say
                 param:
                 names        [ str ]    stream name ending in .json
@@ -251,14 +251,26 @@ class MultiChangePoll(MultiPoll):
                 interval:    int         minutes between polls
                 func_args    dict        optional dict of arguments to be passed to func
                 with_copulas bool        Whether to create derived copula streams, or just individual unrelated streams
+                change_func              Function acting directly on a list of value changes
+                change_func_args         Additional argument to change function
             """
             super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func, func_args=func_args, interval=interval, names=names, with_copulas=with_copulas, **kwargs)
             self.prev_values = None
             self.feed_state = MultiChangePoll.COLD
             self.current_values = None
+            self.change_func = change_func
+            self.change_func_args = change_func_args
+
+   def call_change_func(self, value_changes:[float])->[float]:
+        if isinstance(self.change_func_args, list):
+            return self.change_func(value_changes, *self.change_func_args)
+        elif isinstance(self.change_func_args, dict):
+            return self.change_func(value_changes, **self.change_func_args)
+        else:
+            return self.change_func(value_changes)
 
    def alert(self, message):
-       print(message, flush=True)
+           print(message, flush=True)
 
    def determine_next_values(self, source_values):
        if self.feed_state == MultiChangePoll.WARM:
@@ -279,7 +291,12 @@ class MultiChangePoll(MultiPoll):
                        {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
                else:
                    self.prev_values = self.current_values
-                   return value_changes
+                   if self.change_func is not None:
+                       altered_changes = self.call_change_func(value_changes = value_changes)
+                   else:
+                       altered_changes = [ c for c in value_changes ]
+                   return altered_changes
+
        elif self.feed_state == MultiChangePoll.COLD:
            # Wait until feed is back up and values start changing
            self.prev_prev = self.prev_values if self.prev_values else None
