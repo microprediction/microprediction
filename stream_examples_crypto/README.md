@@ -71,6 +71,7 @@ records the difference between the "best" portfolio and bitcoin
 
 The raw aggregate regular leaderboard is [https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d](https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d)
 
+See also this [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/List%20Current%20Prizes.ipynb) that shows how to list prizes on offer and related streams. 
 
 ## See also 
 
