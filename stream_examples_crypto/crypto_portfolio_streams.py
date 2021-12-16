@@ -3,11 +3,6 @@ try:
 except ImportError:
   raise('This example is not intended to be run. Obtain your own write_key https://www.microprediction.com/private-keys ')
 
-  
-# Example illustrating the use of MultiChangePoll 
-# This script polls crypto streams and publishes some hypothetical portfolio returns
-# It also publishes the square of the returns 
-  
 from microprediction.polling import MultiChangePoll
 from pprint import pprint
 from microprediction import MicroWriter
@@ -47,16 +42,17 @@ def quadratic_func(changes):
     n_dim = len(C2_NAMES)
     values = list()
     for i in range(n_dim):
-        for j in range(i+1,n_dim):
+        for j in range(i,n_dim):
             values.append(dxx[i,j])
     return values
 
 def quadratic_names():
+    short_names = COINS.split(',')
     names = list()
     n_dim = len(C2_NAMES)
     for i in range(n_dim):
-        for j in range(i+1,n_dim):
-            names.append('quadratic_c2_'+C2_NAMES[i]+'_'+C2_NAMES[j]+'.json')
+        for j in range(i,n_dim):
+            names.append( 'quadratic_c2_'+short_names[i]+'_'+short_names[j]+'.json' )
     return names
 
 
@@ -70,6 +66,10 @@ def func():
 
 
 if __name__=="__main__":
+    # This part is just to tell people where the code that produces the stream is, for transparency
+    from microprediction import MicroWriter
+    MicroWriter(write_key=FATHOM_GAZELLE).set_repository('https://github.com/microprediction/microprediction/blob/master/stream_examples_crypto/crypto_portfolio_streams.py')
+
     print('testing',flush=True)
     names = quadratic_names() + portfolio_names()
     pprint(list(zip(names,func())))
