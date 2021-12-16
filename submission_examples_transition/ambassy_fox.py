@@ -54,7 +54,7 @@ def submit_predictions(writer,horizons_to_avoid):
     """
         Example of creating and submitting predictions for the next meme stock
     """
-    names = [ nm for nm in mw.get_stream_names() if not '~' in nm ][:10]  # Start small 
+    names = [ nm for nm in mw.get_stream_names() if not '~' in nm ][:10]  # Start small
     mw.set_repository('https://github.com/microprediction/microprediction/blob/master/submission_examples_transition/ambassy_fox.py')
     for name in names:
         lagged_values = mw.get_lagged_values(name=name)
@@ -62,8 +62,8 @@ def submit_predictions(writer,horizons_to_avoid):
             lagged_values = [ fix_lagged(x) for x in lagged_values]
             values = values_from_lagged(lagged_values=lagged_values, num_predictions=mw.num_predictions)
             for delay in mw.DELAYS:
-                horizon = mw.horizon_name(name=name,deley=delay)
-                if not horizon in horizons_to_avoid:
+                horizon = mw.horizon_name(name=name,delay=delay)
+                if horizon not in horizons_to_avoid:
                    try:
                        writer.submit(name=name,values=values,delay=delay)
                    except Exception as e:
@@ -75,8 +75,8 @@ def submit_predictions(writer,horizons_to_avoid):
 if __name__=='__main__':
     mw = MicroWriter(write_key=WRITE_KEY)
     worst_active_horizons = mw.worst_active_horizons(stop_loss=stop_loss)
-    mw.cancel_worst_active()
-   
+    mw.cancel_worst_active(stop_loss=stop_loss)
+
     # Assumes this script will be run hourly
     for _ in range(17):
         submit_predictions(writer=mw,horizons_to_avoid=worst_active_horizons)
