@@ -15,9 +15,7 @@ def fix_lagged(x):
         x = x/100.0
     return x
 
-# Implements a quasi-transition model for the Meme stock of the hour
-
-NAME = 'meme-stock-of-the-hour.json'
+# Implements a quasi-transition model for the Meme stock of the hour, and others
 
 def values_from_lagged(lagged_values:[float], num_predictions=225)->[float]:
     """
