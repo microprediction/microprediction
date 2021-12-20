@@ -1,7 +1,8 @@
 
 
 
-## Bitcoin / Ethereum 
+## Bitcoin / Ethereum (c2 series)
+There's an article on medium about this. See [An Empirical Article That Wasn't Immediately Stale](https://microprediction.medium.com/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
 
 Scaled 5-minutely logarithmic changes 
 * [c2_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_bitcoin)
