@@ -67,6 +67,13 @@ records the difference between the "best" portfolio and the portfolio with 80 pe
 * [portfolio_c2_100_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_100_diff) 
 records the difference between the "best" portfolio and bitcoin
 
+Longer term profitability streams (one data point per day)
+* [profit_c2_20](https://www.microprediction.org/stream_dashboard.html?stream=profit_c2_20) relative to 20% Bitcoin
+* [profit_c2_50](https://www.microprediction.org/stream_dashboard.html?stream=profit_c2_50)
+and so forth
+
+
+
 ## Fathom Gazelle prizes
 
 The raw aggregate regular leaderboard is [https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d](https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d)
