@@ -13,7 +13,7 @@ from pprint import pprint
 import numpy as np
 import time
 
-
+stop_loss=10
 verbose = False
 
 def values_from_lagged(lagged_values:[float], num_predictions=225)->[float]:
