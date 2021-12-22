@@ -198,7 +198,7 @@ class MultiPoll(MicroPoll):
     #  Maybe don't override the rest
     # --------------------------------------------
 
-    def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, **kwargs):
+    def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, secondary_func=None, secondary_func_args=None, **kwargs):
             """  Create a stream by polling every 20 minutes, say
                 param: names  [ str ]    stream name ending in .json
                 func:        function    returns raw data from some live source, ideally [ float ] but you can override determine_next_values method
@@ -210,6 +210,16 @@ class MultiPoll(MicroPoll):
             super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func, func_args=func_args, interval=interval, name='never_used.json')
             self.names = names
             self.with_copulas = with_copulas
+            self.secondary_func = secondary_func
+            self.secondary_func_args = secondary_func_args
+
+    def call_secondary_func(self, next_values):
+        if isinstance(self.secondary_func_args,list):
+            return self.secondary_func(next_values, *self.secondary_func_args)
+        elif isinstance(self.secondary_func_args, dict):
+            return self.secondary_func(next_values, **self.secondary_func_args)
+        else:
+            return self.secondary_func(next_values)
 
     def task(self):
         """ Scheduled task that runs every minute """
@@ -223,19 +233,30 @@ class MultiPoll(MicroPoll):
         data.update({'source_values': source_values,
                      'next_values': next_values,
                      'elapsed after polling': time.time() - start_time})
+
+        # Update the values with secondary func
+        if (self.secondary_func is not None) and (next_values is not None):
+            send_values = self.apply_secondary_func(next_values)
+        else:
+            send_values = next_values
+
         # Send the data
         if next_values is None:
             res = {'operation':'touch','exec':[ self.touch(name=name) for name in self.names ]}
         elif self.with_copulas:
-            res = self.cset(names=self.names, values=next_values )
+            res = self.cset(names=self.names, values=send_values )
         else:
-            res = [ self.set(name=name,value=value) for name,value in zip(self.names, next_values) ]
+            res = [ self.set(name=name,value=value) for name,value in zip(self.names, send_values) ]
 
         data.update({'values': next_values, "res": res, 'elapsed after sending': time.time() - start_time})
         self.logger(data=data)
         self.downtime()
         data.update({'elapsed after downtime': time.time() - start_time})
 
+
+
+def default_change_criterion(old_values, new_values):
+    [abs(pp - pv) > 1e-6 for pp, pv in zip(old_values, new_values)]
 
 
 class MultiChangePoll(MultiPoll):
