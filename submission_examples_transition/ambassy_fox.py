@@ -50,12 +50,11 @@ def fix_lagged(x):
         x = x/100.0
     return x
 
-def submit_predictions():
+def submit_predictions(writer,horizons_to_avoid):
     """
         Example of creating and submitting predictions for the next meme stock
     """
-    mw = MicroWriter(write_key=WRITE_KEY)
-    names = [ nm for nm in mw.get_stream_names() if not '~' in nm ][:10]  # Start small 
+    names = [ nm for nm in mw.get_stream_names() if not '~' in nm ][:10]  # Start small
     mw.set_repository('https://github.com/microprediction/microprediction/blob/master/submission_examples_transition/ambassy_fox.py')
     for name in names:
         lagged_values = mw.get_lagged_values(name=name)
@@ -63,18 +62,23 @@ def submit_predictions():
             lagged_values = [ fix_lagged(x) for x in lagged_values]
             values = values_from_lagged(lagged_values=lagged_values, num_predictions=mw.num_predictions)
             for delay in mw.DELAYS:
-                try:
-                    mw.submit(name=name,values=values,delay=delay)
-                except Exception as e:
-                    print(e)
-                    pprint(values)
-                time.sleep(0.5)
-    mw.cancel_worst_active() 
-
+                horizon = mw.horizon_name(name=name,delay=delay)
+                if horizon not in horizons_to_avoid:
+                   try:
+                       writer.submit(name=name,values=values,delay=delay)
+                   except Exception as e:
+                       print(e)
+                       pprint(values)
+                   time.sleep(0.5)
 
 
 if __name__=='__main__':
+    mw = MicroWriter(write_key=WRITE_KEY)
+    performance = mw.get_performance()
+    horizons_to_avoid = [h for h,b in performance.items() if b<-abs(stop_loss) ]
+    mw.cancel_worst_active(stop_loss=stop_loss)
+
     # Assumes this script will be run hourly
     for _ in range(17):
-        submit_predictions()
+        submit_predictions(writer=mw,horizons_to_avoid=horizons_to_avoid)
         time.sleep(60*3)

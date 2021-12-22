@@ -1,4 +1,8 @@
-from credentials import CYSTOSE_EEL
+try:
+  from credentials import CYSTOSE_EEL
+except ImportError:
+  raise Exception('You need to create your own write key')
+
 from microprediction import MicroWriter
 from collections import Counter
 from pprint import pprint
@@ -72,5 +76,3 @@ if __name__=='__main__':
     for _ in range(7):
         submit_predictions(writer=mw,horizons_to_avoid=horizons_to_avoid)
         time.sleep(60*8)
-
-
