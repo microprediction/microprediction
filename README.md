@@ -31,7 +31,9 @@ The [client](https://github.com/microprediction/microprediction) hits the [micro
 
 Thus this is a probabilistic exchange, of sorts. 
 
-This instance is run and supported by Intech Investments, a top five U.S. investment firm by various metrics. The code is open-source, though. There is a glossy educational site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
+## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
+
+The former is an educational site for the latter. 
 
 ## Slack is strongly recommended
 
