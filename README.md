@@ -19,14 +19,12 @@ and a few others. But I suspect you are here for one of these two:
  
 So while both are aimed at time-series, and mostly autonomous univariate prediction of the same, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers "algorithm-crowd-based" distributional prediction. 
 
-## What's this microprediction thing? 
-Make complete sense? 
+## What's this microprediction client? 
+If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. 
 
-Well, if you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. It is a silly little data stream, but I'm sure you can abstract and generalize from this. 
+The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time, as follows: 
 
-The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. 
-
- 0. You create an identity (*new_key* function). 
+ 0. You create an identity (the package's *new_key* function). 
  1. You create a stream one scalar data point at a time. (*set* method on MicroWriter)
  2. Algorithms watch it and submit 225 guesses of the value of future data values.  (*submit* method on MicroWriter)
  3. You retrieve predictions at any time. (*get_predictions* method on MicroReader or get_own_predictions on MicroWriter)
