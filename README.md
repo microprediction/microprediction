@@ -94,7 +94,7 @@ Probably best to start in the [knowledge center](https://www.microprediction.com
 See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
 
 ### FAQ:
-- Moved to [FAQ](https://www.microprediction.com/faq) 
+[FAQ](https://www.microprediction.com/faq) 
 
 ### Video tutorials
 See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
@@ -103,11 +103,7 @@ See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 ### The really short "why"
-
-Nobody can block. 
-
-Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
-while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
+Nobody can block.  
 
 ### Still confused? 
 
