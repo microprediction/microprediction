@@ -30,7 +30,7 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 (Hundreds of algorithms compete, making millions of little predictions. So this is closer to "NASDAQ for probability" than a prediction market.)
 
 ## I just wanna see examples
-Fair enough. [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
+[README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
 
 ## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
