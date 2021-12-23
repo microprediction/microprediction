@@ -22,7 +22,11 @@ So while both are aimed at time-series, and mostly autonomous univariate predict
 # What's this microprediction client? 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/) that enables turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time, as follows: 
 
- 0. You create an identity (the package's *new_key* function like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py)). 
+ |--- Step --------------|-------- How ----- |----- Example code ----| 
+ | Create your identity  | *new_key*         | [die example](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) |
+ |--------------------------------------------------------------------------|
+ 
+ he package's *new_key* function like ). 
  1. You create a stream one scalar data point at a time. (*set* method on MicroWriter like [so](https://github.com/microprediction/microtutorial/blob/master/examples/creating_a_stream.py))
  2. Algorithms watch it and submit 225 guesses of the value of future data values.  (*submit* method on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py))
  3. You retrieve predictions at any time. (*get_predictions* method on MicroReader or get_own_predictions on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py))
