@@ -119,13 +119,12 @@ See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CIT
 ### Video tutorials
 See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
-### The longer README.md for the microprediction client
+### Hey, where did the old README go? 
+
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
-### The really short "why"
-Nobody can block. Exogenous data. Diminimous cost.  
 
-### Still confused? 
+### TLDR
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
@@ -139,6 +138,4 @@ In this way you can:
   
 That's all.
 
-### Hey, where did the old README go? 
 
-[README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
