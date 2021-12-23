@@ -47,7 +47,7 @@ The timemachines package provides autonomous time-series prediction algorithms i
 # [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
-- [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
+- [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html), potentially useful for hyper-parameters.  
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 
