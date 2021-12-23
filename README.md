@@ -16,21 +16,30 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C, mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro).  
 
 
-# TimeMachines Package, et al
+# TimeMachines and related packages
 
  I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  I'm also the author of:
  
  - [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
  
-and that package powers many algorithms behind the microprediction API. My other packages are more tangential: 
+and that package powers many algorithms behind the microprediction API. I also maintain a few other repos required for the microprediction platform
+
+
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
+- [microconventions](https://github.com/microprediction/microconventions) - Required by microprediction client, and [server](https://github.com/microprediction/rediz).  
+- [getjson](https://github.com/microprediction/getjson). 
+
+# M6-Competition and other time-series related packages
 
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
-- [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
-- [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
-- [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
+- [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
+- [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
+
+Unrelated:
+
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
+- [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
 
 and [so on](https://github.com/microprediction?tab=repositories). 
 
