@@ -33,7 +33,7 @@ Thus this is a probabilistic exchange, of sorts.
 
 ## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
-The former is an educational site for the latter. 
+The former is an educational site for the latter. The [blog](https://www.microprediction.com/blog) is a way to create content to help spread the idea of open, collective, community prediction.  
 
 ## Slack / Google Meets are recommended
 
