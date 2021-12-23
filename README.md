@@ -22,14 +22,12 @@ So while both are aimed at time-series, and mostly autonomous univariate predict
 # What's this microprediction client? 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/) that enables turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time, as follows: 
 
- |--- Step --------------|-------- How ----- |----- Example code ----| 
- | Create your identity  | *new_key*         | [die example](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) |
- |--------------------------------------------------------------------------|
- 
- he package's *new_key* function like ). 
- 1. You create a stream one scalar data point at a time. (*set* method on MicroWriter like [so](https://github.com/microprediction/microtutorial/blob/master/examples/creating_a_stream.py))
- 2. Algorithms watch it and submit 225 guesses of the value of future data values.  (*submit* method on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py))
- 3. You retrieve predictions at any time. (*get_predictions* method on MicroReader or get_own_predictions on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py))
+ | Task                                      | Method or function                | Full code example                                                                                                                                   | Video tutorial                                                                    |   |
+|-------------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|---|
+| Create a write_key                        | new_key                           | [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) | [python-1: Your first submission](https://www.microprediction.com/python-1)       |   |
+| Publish one scalar value at a time        | MicroWriter.set()                 | [creating_a_stream.py](https://github.com/microprediction/microtutorial/blob/master/examples/creating_a_stream.py)                                  | [python-4: Creating a stream](https://www.microprediction.com/python-4)           |   |
+| Send 225 guesses of a future scalar value | MicroWriter.submit()              | [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) | [python-2: Creating your first crawler](https://www.microprediction.com/python-2) |   |
+| Retrieve community predictions            | MicroWriter.get_own_predictions() | [defassa_dog.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py)                            |                                                                                   |   |
 
 ## What algorithms are included?
 
