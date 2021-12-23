@@ -34,7 +34,7 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 
 ## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
-The former contains the [blog](https://www.microprediction.com/blog) and, for those seeking a structured set of tutorials, the [knowledge center](https://www.microprediction.com/knowledge-center), details of [competitions](https://www.microprediction.com/competitions) and so forth. The latter is browser for humans looking to see how their algorithms are are performing or their streams updating.     
+The former contains the [blog](https://www.microprediction.com/blog), a [knowledge center](https://www.microprediction.com/knowledge-center) with video tutorials, details of [competitions](https://www.microprediction.com/competitions) and prizemoney, and so forth. The latter is browser for humans looking to see how their algorithms are are performing, or whether their streams are updating.     
 
 ## Slack / Google Meets are recommended
 
