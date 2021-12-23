@@ -72,17 +72,17 @@ See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction
 
 ### Class Hierarchy 
 
-Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
-the MicroWriter, or its sub-classes.  
+Use [MicroReader]((https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
+the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).   
 
-    [MicroReader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py)
+    MicroReader
        |
     MicroWriter ----------------------------
        |                                   |
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
                 
-A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
+Some algorithms run on schedule, others derive from [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py). A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [RegularCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [OnlineHorizonCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py), 
 [OnlineStreamCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py) and
