@@ -96,9 +96,10 @@ A more complete picture would include [SimpleCrawler](https://github.com/micropr
 [ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py).
 
 
-### Classes for stream creation
+### Live quantities versus changes
+It is often better to publish *changes* in values than actual values of live quantities, to avoid race conditions or latency issues. There is a discussion in the [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md). 
 
-Using only the MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) you can easily create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py). However there are a few conveniences provided as well. 
+Certainly it is easy to publish live quantities using only the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) as shown in [traffic_live.py](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py). However you might consider:
 
 - [ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) for publishing only when values change, 
 - [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) for multiple streams
