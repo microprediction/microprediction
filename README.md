@@ -80,5 +80,11 @@ In this way you can:
 ## Cite
 See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
 
-## The longer README.md for the microprediction client
+## FAQ:
+- Moved to [FAQ](https://www.microprediction.com/faq) 
 
+## Video tutorials
+See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
+
+## The longer README.md for the microprediction client
+[README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
