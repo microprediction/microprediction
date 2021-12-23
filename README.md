@@ -123,7 +123,7 @@ See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 ### The really short "why"
-Nobody can block.  
+Nobody can block. Exogenous data. Diminimous cost.  
 
 ### Still confused? 
 
