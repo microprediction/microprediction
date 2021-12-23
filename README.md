@@ -51,14 +51,14 @@ Hundreds of algorithms compete at [Microprediction](https://github.com/micropred
  
 One bridge between the [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) and the microprediction [leaderboards](https://www.microprediction.org/leaderboard.html) is provided by the StreamSkater class in the microprediction package, illustrated in the [StreamSkater examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples) folder. This makes it trivial to use any skater from the TimeMachines package in a MicroCrawler (a live algorithm). 
 
-## More about Microprediction
+## More about the Microprediction Python Client
 Maybe skip to [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md) or 
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 ### Class Hierarchy 
 
 Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
-the MicroWriter, or its sub-classes. You can also use MicroWriter to submit predictions, though MicroCrawler adds some conveniences. 
+the MicroWriter, or its sub-classes.  
 
     MicroReader
        |
