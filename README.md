@@ -72,8 +72,7 @@ See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction
 
 ### Class Hierarchy 
 
-Use [MicroReader]((https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
-the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).   
+Use [MicroReader]((https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key.    
 
     MicroReader
        |
@@ -97,12 +96,13 @@ A more complete picture would include [SimpleCrawler](https://github.com/micropr
 [ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py).
 
 
-### Creating streams
+### Classes for stream creation
 
-as well
-as additional conveniences for creating streams such as 
-[ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py), [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py),
-and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
+Using only the MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) you can easily create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py). However there are a few conveniences provided as well. 
+
+- [ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) for publishing only when values change, 
+- [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py) for multiple streams
+- [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py). 
 
 ### [Microprediction.Com](https://www.microprediction.com/) versus [Microprediction.org](https://www.microprediction.org/)
 
