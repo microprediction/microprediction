@@ -26,11 +26,14 @@ Well, if you don't know about the live algorithm frenzy at [microprediction.org]
 
 The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. 
 
- 1. You create a stream by set()'ng one scalar data point at a time. 
- 2. Algorithms watch it and submit 225 guesses of the value of future data values.  
- 3. You get_predictions() and do what you like with the results. 
+ 0. You create an identity (*new_key* function). 
+ 1. You create a stream one scalar data point at a time. (*set* method on MicroWriter)
+ 2. Algorithms watch it and submit 225 guesses of the value of future data values.  (*submit* method on MicroWriter)
+ 3. You retrieve predictions at any time. (*get_predictions* method on MicroReader or get_own_predictions on MicroWriter)
 
-Thus this is a probabilistic exchange, of sorts. This instance is run and supported by Intech Investments, a top five U.S. investment firm by various metrics. The code is open-source, though. There is a glossy educational site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
+Thus this is a probabilistic exchange, of sorts. 
+
+This instance is run and supported by Intech Investments, a top five U.S. investment firm by various metrics. The code is open-source, though. There is a glossy educational site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
 
 ## Slack is strongly recommended
 
