@@ -7,13 +7,6 @@ See the [README.md](https://github.com/microprediction/microprediction/blob/mast
 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing context to predict the next roll of a die. It is a silly little example, but I'm sure you can abstract and generalize from this. 
 
-
-### The really short "why"
-
-Nobody can block. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
-while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
-One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational
-problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).  
     
 ## Ultra-Quick start shell script 
 If you didn't take my advice above, or even if you did, here's another really fast way to get going (linux/osx). Cut and paste to a terminal:
