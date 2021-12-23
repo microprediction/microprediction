@@ -16,13 +16,13 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C, mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro).  
 
 
-# TimeMachines Package
+# TimeMachines Package, et al
 
  I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  I'm also the author of:
  
  - [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
  
-and that package powers many algorithms behind the microprediction API. Also of potential interest:  
+and that package powers many algorithms behind the microprediction API. My other packages are more tangential: 
 
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
@@ -32,31 +32,32 @@ and that package powers many algorithms behind the microprediction API. Also of 
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 
-and a few others. 
+and [so on](https://github.com/microprediction?tab=repositories). 
 
-- [Microprediction](https://github.com/microprediction/microprediction) - The client for [api.microprediction.org](https://api.microprediction.org/) making it easier to either publish live data one point at a time so it will be predicted, or submit predictions for existing streams. 
+
+# Microprediction versus TimeMachines
+
+The [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live "algorithm-crowd-based" distributional prediction that can potentially take advantage of exogenous data. 
+
+Hundreds of algorithms compete at [Microprediction](https://github.com/microprediction/microprediction) and quite a few of the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)) are involved, drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
+   Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
  
-So while both are aimed at time-series, and mostly autonomous univariate prediction of the same, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers "algorithm-crowd-based" distributional prediction. 
+One bridge between the [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) and the microprediction [leaderboards](https://www.microprediction.org/leaderboard.html) is provided by the StreamSkater class in the microprediction package, illustrated in the [StreamSkater examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples) folder. This makes it trivial to use any skater from the TimeMachines package in a MicroCrawler (a live algorithm). 
 
-
-## What algorithms are included?
-
-Hundreds of algorithms compete, making millions of little predictions. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
-
-## I just wanna see examples
+## More about Microprediction
 [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
 
-## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
+### What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
 The former contains the [blog](https://www.microprediction.com/blog), a [knowledge center](https://www.microprediction.com/knowledge-center) with video tutorials, details of [competitions](https://www.microprediction.com/competitions) and prizemoney, and so forth. The latter is browser for humans looking to see how their algorithms are are performing, or whether their streams are updating.     
 
-## Slack / Google Meets are recommended
+### Slack / Google Meets are recommended
 
 Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. 
 
 Many contributors also stop by our twice weekly virtual chats which you are welcoem to. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST.  
 
-## Microprediction bookmarks
+### Microprediction bookmarks
 
 **Data**: [stream list](https://www.microprediction.org/browse_streams.html) | [stream explanations](https://www.microprediction.com/blog/livedata) | [csv](https://www.microprediction.org/features.html) **Client**: [client](https://github.com/microprediction/microprediction) | [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) | [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) | [crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) | [crawler examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples) | [notebook examples](https://github.com/microprediction/microprediction/tree/master/notebook_examples)
 **Resources**: [popular timeseries packages](https://www.microprediction.com/blog/popular-timeseries-packages) |
@@ -81,9 +82,8 @@ Many contributors also stop by our twice weekly virtual chats which you are welc
 
 Probably best to start in the [knowledge center](https://www.microprediction.com/knowledge-center) and remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
-## Open, turnkey prediction.  
+### Executive summary:
 
-Here's how it operates. 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
 - As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
@@ -94,24 +94,21 @@ In this way you can:
  - See which R, Julia and Python time series approaches seem to work best, saving you from
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
-
-## Cite
+### Cite
 See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
 
-## FAQ:
+### FAQ:
 - Moved to [FAQ](https://www.microprediction.com/faq) 
 
-## Video tutorials
+### Video tutorials
 See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
-## The longer README.md for the microprediction client
+### The longer README.md for the microprediction client
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
-## The really short "why"
+### The really short "why"
 
 Nobody can block. 
 
 Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
 while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
-One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational
-problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).  
