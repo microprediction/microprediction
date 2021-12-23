@@ -81,7 +81,7 @@ Use [MicroReader](https://github.com/microprediction/microprediction/blob/master
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
                 
-### Scheduled submissions versus crawling
+### Scheduled submissions versus "crawling"
 The [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) class can publish data or submit predictions. However if you intend to run a continuous process you might consider the [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) class or its derivatives. 
 
 | Type                               | Suggestion                                                                                                     | Example                                                                                                                     | More examples                                                                                                                   |
