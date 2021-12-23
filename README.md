@@ -2,7 +2,7 @@
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [m6](https://github.com/microprediction/m6) or 
-[timemachines](https://github.com/microprediction/timemachines)?
+[timemachines](https://github.com/microprediction/timemachines)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  
 
 
 # Microprediction client
@@ -20,7 +20,7 @@ Someone wanting live information predicted performs A, B and D. Someone providin
 
 # TimeMachines and related packages
 
- I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  I'm also the author of:
+ I'm also the author of:
  
  - [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
  
@@ -90,17 +90,6 @@ Many contributors also stop by our twice weekly virtual chats which you are welc
 
 Probably best to start in the [knowledge center](https://www.microprediction.com/knowledge-center) and remember [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/). 
 
-### Executive summary:
-
-- You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
- creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
-- As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
-your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
-
-In this way you can:
- - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
- - See which R, Julia and Python time series approaches seem to work best, saving you from
-  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
 ### Cite
 See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
@@ -120,3 +109,15 @@ Nobody can block.
 
 Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
 while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
+
+### Another attempt to summarize:
+
+- You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
+ creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
+- As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
+your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
+
+In this way you can:
+ - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
+ - See which R, Julia and Python time series approaches seem to work best, saving you from
+  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
