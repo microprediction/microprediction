@@ -13,7 +13,7 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 | C | Send 225 guesses of a future value | MicroWriter.submit()              | [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) | [python-2: Creating your first crawler](https://www.microprediction.com/python-2) |
 | D | Retrieve community predictions            | MicroWriter.get_own_predictions() | [defassa_dog.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py)                            |                                                                                   |                  |                                                                                   |   |
 
-Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C. 
+Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C, mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro).  
 
 
 # TimeMachines Package
