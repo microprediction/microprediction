@@ -75,7 +75,7 @@ See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction
 Use MicroReader if you just need to get data and don't care to use a key. Create streams [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) using
 the MicroWriter, or its sub-classes.  
 
-    MicroReader
+    [MicroReader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py)
        |
     MicroWriter ----------------------------
        |                                   |
