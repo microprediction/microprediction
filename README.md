@@ -52,7 +52,8 @@ Hundreds of algorithms compete at [Microprediction](https://github.com/micropred
 One bridge between the [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) and the microprediction [leaderboards](https://www.microprediction.org/leaderboard.html) is provided by the StreamSkater class in the microprediction package, illustrated in the [StreamSkater examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples) folder. This makes it trivial to use any skater from the TimeMachines package in a MicroCrawler (a live algorithm). 
 
 ## More about Microprediction
-Maybe skip to [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
+Maybe skip to [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md) or 
+[README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 ### What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
@@ -118,3 +119,7 @@ In this way you can:
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
 That's all.
+
+### Hey, where did the old README go? 
+
+[README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
