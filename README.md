@@ -1,20 +1,24 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
+## Who is this microprediction user?
+
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my probably stale [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ) and there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired.  I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
-- [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
 - [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
-- [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction via API. (A hosted, high velocity clearing mechanism for probabilstic forecasts of time-series). 
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (under construction)
 
-and a few others.  
+and a few others. But I suspect you are here for one of these two:
+
+- [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
+- [Microprediction](https://github.com/microprediction/microprediction) - Free, short-horizon, real-time, distributional community prediction via API. (A hosted, high velocity clearing mechanism for probabilstic forecasts of time-series). 
 
 ## What's this microprediction thing? 
+Now, about that repot [https://github.com/microprediction/microprediction](https://github.com/microprediction/microprediction). 
 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing context to predict the next roll of a die. It is a silly little example, but I'm sure you can abstract and generalize from this. 
 
