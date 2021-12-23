@@ -10,7 +10,7 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
-- [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (under construction)
+- [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo)
 
 and a few others. But I suspect you are here for one of these two:
 
