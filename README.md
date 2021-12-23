@@ -31,6 +31,9 @@ The [client](https://github.com/microprediction/microprediction) hits the [micro
 
 Thus this is a probabilistic exchange, of sorts. 
 
+## I just wanna see examples
+Fair enough. [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
+
 ## What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
 The former is an educational site for the latter. The [blog](https://www.microprediction.com/blog) is a way to create content to help spread the idea of open, collective, community prediction.  
