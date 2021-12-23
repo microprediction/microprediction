@@ -1,11 +1,11 @@
 
 # README (LONGER)
 
-### Recap: What's microprediction.org about? 
+See the [README.md](https://github.com/microprediction/microprediction/blob/master/README.md) first. 
+
+### Another plea to just run the darn notebook already: 
 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing context to predict the next roll of a die. It is a silly little example, but I'm sure you can abstract and generalize from this. 
-
-
 
 ### The longer "why" stuff: 
 
@@ -15,7 +15,6 @@ on why [microprediction is synomymous with AI](https://www.microprediction.com/w
 are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
 of prediction. In order to try to get this idea off the ground, there are some ongoing [developer incentives](https://www.microprediction.com/competitions).
     
-
 ### The really short "why"
 
 Nobody can block. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
@@ -30,25 +29,7 @@ If you didn't take my advice above, or even if you did, here's another really fa
 
 You should run that script "forever". It will print your write key and remind you to plug that into the [dashboard](https://www.microprediction.org) to
 view your progress. 
-    
-## Slack
-See the README
-    
-## Blog
-
-See [blog](https://www.microprediction.com/blog)
-
-- [How to Enter a Cryptocurrency Copula Contest](https://www.microprediction.com/blog/copula) motivates copula prediction competitions and explains how to train a model and submit predictions. 
-- [Comparing Python Global Optimization Packages](https://www.microprediction.com/blog/optimize) puts hyperopt, optuna, pysot, shgo and other derivative free optimizers through their paces. You might also check the timemachines repo. 
-- [Modeling the Term Structure of a Pandemic with Negative Interest Rates](https://www.microprediction.com/blog/modeling-the-term-structure-of-a-pandemic-with-negative-interest-rates) might give you some ideas for [this](https://www.microprediction.org/stream_dashboard.html?stream=pandemic_infected) stream.
-- [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas, as noted. 
-
-Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles.
-
-## Book 
-
-To be published by MIT Press late 2021.
-
+        
 ## Weekly contributor Google meet
 
 Noon Friday's EST. [Contact us](https://www.microprediction.com/contact-us) for details. We'll help you get started on the spot. 
@@ -347,11 +328,20 @@ reference for these embeddings is the code (see [zcurve_conventions](https://git
 a little video of the embedding in the [FAQ](https://www.microprediction.com/faq). 
          
          
-# Further reading
+# Miscellaneous collateral / blog articles 
 
-As noted, this project is socialized mostly via [linked-in](https://www.linkedin.com/company/65109690) and the [knowledge center](https://www.microprediction.com/knowledge-center) is a good place to start. There are also some articles that pre-date the knowledge center. 
-[Introduction to Z-Streams](https://www.linkedin.com/pulse/short-introduction-z-streams-peter-cotton-phd/) | [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/) | [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/) | [Win With One Line of Code](https://www.linkedin.com/pulse/can-one-line-python-win-contest-micropredictionorg-peter-cotton-phd/) | [Copulas and Crypto](https://www.linkedin.com/pulse/call-contributions-copula-contest-where-carefully-can-cotton-phd/)
-| [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/). Here's the full [article list](https://www.linkedin.com/in/petercotton/detail/recent-activity/posts/). 
+As noted, this project is socialized mostly via [linked-in](https://www.linkedin.com/company/65109690) and the [knowledge center](https://www.microprediction.com/knowledge-center) is a good place to start. 
 
- 
+Some of the [blog](https://www.microprediction.com/blog) articles might help introduce microprediction: 
+
+- [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)
+- [Dorothy, You're Not in Kaggle Anymore](https://www.linkedin.com/pulse/dorothy-youre-kaggle-anymore-peter-cotton-phd/)
+- [How to Enter a Cryptocurrency Copula Contest](https://www.microprediction.com/blog/copula) motivates copula prediction competitions and explains how to train a model and submit predictions. 
+- [Popular Python Time Series Packages](https://www.microprediction.com/blog/popular-timeseries-packages) should give you lots of ideas. Some are in the timemachines package already.  
+
+Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](https://github.com/microprediction/micropresentations) repo. There are also links to video presentations in some of the [blog](https://www.microprediction.com/blog) articles.
+
+There are also some articles that pre-date the blog. 
+ [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/)
+| [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/). 
 
