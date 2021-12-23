@@ -72,7 +72,7 @@ See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction
 
 ### Class Hierarchy 
 
-Use [MicroReader]((https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key.    
+Use [MicroReader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key (or pull [directly](https://www.microprediction.com/public-api)).     
 
     MicroReader
        |
