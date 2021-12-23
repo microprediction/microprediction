@@ -30,7 +30,7 @@ The timemachines package provides autonomous time-series prediction algorithms i
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
 - [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
 
-# M6-Competition and other time-series related packages
+# [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
