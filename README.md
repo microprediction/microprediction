@@ -4,7 +4,19 @@
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [m6](https://github.com/microprediction/m6) or 
 [timemachines](https://github.com/microprediction/timemachines)? Hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week announced in the Slack. 
 
-TLDR at bottom.   
+### Microprediction TLDR
+
+- You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
+ creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
+- As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
+your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
+
+In this way you can:
+ - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
+ - See which R, Julia and Python time series approaches seem to work best, saving you from
+  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
+  
+That's all.
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
@@ -126,18 +138,6 @@ See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 
-### TLDR
 
-- You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
- creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
-- As soon as you do, algorithm "crawlers" like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
-your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
-
-In this way you can:
- - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
- - See which R, Julia and Python time series approaches seem to work best, saving you from
-  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
-  
-That's all.
 
 
