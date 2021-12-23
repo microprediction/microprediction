@@ -3,18 +3,11 @@
 
 See the [README.md](https://github.com/microprediction/microprediction/blob/master/README.md) first. 
 
-### Another plea to just run the darn notebook already: 
+### But first, another plea to just run the darn notebook already: 
 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing context to predict the next roll of a die. It is a silly little example, but I'm sure you can abstract and generalize from this. 
 
-### The longer "why" stuff: 
 
-Here's a [first glimpse](https://www.microprediction.com/welcome) for the uninitiated, some [categories of business application](https://www.microprediction.com/welcome-3), some remarks
-on why [microprediction is synomymous with AI](https://www.microprediction.com/welcome-4) due to the possibility of value function prediction, and a straightforward
-[plausibility argument](https://www.microprediction.com/welcome-2) for why an open source, openly networked collection of algorithms that 
-are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
-of prediction. In order to try to get this idea off the ground, there are some ongoing [developer incentives](https://www.microprediction.com/competitions).
-    
 ### The really short "why"
 
 Nobody can block. Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
@@ -344,4 +337,11 @@ Presentations at Rutgers, MIT and elsewhere can be found in the [presentations](
 There are also some articles that pre-date the blog. 
  [Online Distributional Estimation](https://www.linkedin.com/pulse/live-online-distribution-estimation-using-t-digests-peter-cotton-phd/)
 | [Badminton](https://www.linkedin.com/pulse/where-badminton-player-move-next-how-should-we-same-peter-cotton-phd/) | [Helicopulas](https://www.linkedin.com/pulse/helicopulas-peter-cotton-phd/). 
+
+
+The longer "why" stuff, if you have the time and inclination. There's a [first glimpse](https://www.microprediction.com/welcome), some [categories of business application](https://www.microprediction.com/welcome-3), some remarks
+on why [microprediction is synomymous with AI](https://www.microprediction.com/welcome-4) due to the possibility of value function prediction, and a straightforward
+[plausibility argument](https://www.microprediction.com/welcome-2) for why an open source, openly networked collection of algorithms that 
+are perfectly capable of [managing each other](https://www.microprediction.com/welcome-5) will sooner or later eclipse all other modes of production
+of prediction. 
 
