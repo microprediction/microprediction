@@ -52,7 +52,7 @@ Hundreds of algorithms compete at [Microprediction](https://github.com/micropred
 One bridge between the [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) and the microprediction [leaderboards](https://www.microprediction.org/leaderboard.html) is provided by the StreamSkater class in the microprediction package, illustrated in the [StreamSkater examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples) folder. This makes it trivial to use any skater from the TimeMachines package in a MicroCrawler (a live algorithm). 
 
 ## More about Microprediction
-[README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
+Maybe skip to [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
 
 ### What's the difference between [Microprediction.Com](https://www.microprediction.com/) and [Microprediction.org](https://www.microprediction.org/)?
 
@@ -109,7 +109,7 @@ Nobody can block.
 Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
 while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
 
-### Another attempt to summarize:
+### Still confused? 
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
@@ -120,3 +120,5 @@ In this way you can:
  - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
  - See which R, Julia and Python time series approaches seem to work best, saving you from
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
+  
+That's all.
