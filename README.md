@@ -3,7 +3,7 @@
 
 ## Who is this microprediction user?
 
-Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This is my probably stale [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ) and there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired.  I'm the author of these packages:
+Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
 - [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
@@ -24,12 +24,19 @@ Make complete sense?
 
 Well, if you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. It is a silly little data stream, but I'm sure you can abstract and generalize from this. 
 
-The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. This project is new, but simple in principle. You create a stream. Algorithms watch it and submit predictions. 
+The [client](https://github.com/microprediction/microprediction) hits the [microprediction api](http://api.microprediction.org/), enabling turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. 
 
-This instance of a probabilistic exchange, as one might think of it, is run and supported by Intech Investments, a top five U.S. investment firm by various metrics. The code is open-source. There is an educational site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. You can also stop by our twice weekly virtual chats. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details and join our slack. Tue 8pm and Fri noon EST .  
+ 1. You create a stream by set()'ng one scalar data point at a time. 
+ 2. Algorithms watch it and submit 225 guesses of the value of future data values.  
+ 3. You get_predictions() and do what you like with the results. 
 
-## Cite
-See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
+Thus this is a probabilistic exchange, of sorts. This instance is run and supported by Intech Investments, a top five U.S. investment firm by various metrics. The code is open-source, though. There is a glossy educational site [microprediction.com](https://www.microprediction.com/) serving to introduce the concept of [microprediction.org](https://www.microprediction.org) where the action takes place. 
+
+## Slack is strongly recommended
+
+Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. 
+
+Many contributors also stop by our twice weekly virtual chats which you are welcoem to. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST.  
 
 ## Microprediction bookmarks
 
@@ -70,5 +77,8 @@ In this way you can:
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
 
+## Cite
+See [CITE.md](https://github.com/microprediction/microprediction/blob/master/CITE.md)
 
+## The longer README.md for the microprediction client
 
