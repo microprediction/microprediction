@@ -1,7 +1,7 @@
 
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-## Who is this microprediction user?
+# Who is this microprediction user?
 
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction)? I guess Github made this a "user home page". Well hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog).  I'm the author of these packages:
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
@@ -19,7 +19,7 @@ and a few others. But I suspect you are here for one of these two:
  
 So while both are aimed at time-series, and mostly autonomous univariate prediction of the same, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers "algorithm-crowd-based" distributional prediction. 
 
-## What's this microprediction client? 
+# What's this microprediction client? 
 If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) then an extremely simple way to grok it is to open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/) that enables turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time, as follows: 
 
  0. You create an identity (the package's *new_key* function like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py)). 
@@ -94,3 +94,12 @@ See the [Knowledge Center](https://www.microprediction.com/knowledge-center)
 
 ## The longer README.md for the microprediction client
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
+
+## The really short "why"
+
+Nobody can block. 
+
+Increasing accuracy over time is *not* predicated on a superior methodology, nor is progress blocked
+while pull requests wait to be approved. Instead, predictions collide in a "micro-market", every minute of the day. 
+One writes, modifies and launches algorithms that bring existing repositories to life - training them on real-world operational
+problems and providing *live streaming distributional prediction* like [this](https://www.microprediction.com/what).  
