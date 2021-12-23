@@ -16,7 +16,9 @@ In this way you can:
  - See which R, Julia and Python time series approaches seem to work best, saving you from
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
-That's all.
+On the flip side you can :
+  - Contribute algorithms and win beer money
+  - Benchmark your work
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
