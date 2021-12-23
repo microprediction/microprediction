@@ -97,7 +97,7 @@ A more complete picture would include [SimpleCrawler](https://github.com/micropr
 [ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py).
 
 
-### Live quantities versus changes
+### Publishing absolute quantities versus changes
 It is often better to publish *changes* in values than actual values of live quantities, to avoid race conditions or latency issues. There is a discussion in the [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md). 
 
 Certainly it is easy to publish live quantities using only the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) as shown in [traffic_live.py](https://github.com/microprediction/microprediction/blob/master/feed_examples_live/traffic_live.py). However you might consider:
