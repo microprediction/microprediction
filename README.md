@@ -25,9 +25,9 @@ Someone wanting live information predicted performs A, B and D. Someone providin
  
 and that package powers some algorithms behind the microprediction API. I also maintain a few other repos required for the microprediction platform
 
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
-- [microconventions](https://github.com/microprediction/microconventions) - Required by microprediction client
-- [rediz](https://github.com/microprediction/rediz) - Server side. 
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers used as write keys. The only thing I'll be remembered for. 
+- [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
+- [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
 - [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
 
 # M6-Competition and other time-series related packages
