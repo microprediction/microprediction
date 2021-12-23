@@ -35,7 +35,7 @@ Thus this is a probabilistic exchange, of sorts.
 
 The former is an educational site for the latter. 
 
-## Slack is strongly recommended
+## Slack / Google Meets are recommended
 
 Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. 
 
