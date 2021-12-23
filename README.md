@@ -44,7 +44,7 @@ Unrelated:
 
 # Microprediction versus TimeMachines
 
-The [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live "algorithm-crowd-based" distributional prediction that can potentially take advantage of exogenous data. 
+The [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for point-estimates and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based distributional prediction.
 
 Hundreds of algorithms compete at [Microprediction](https://github.com/microprediction/microprediction) and quite a few of the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)) are involved, drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
