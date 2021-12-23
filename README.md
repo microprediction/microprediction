@@ -18,12 +18,12 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
 Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C, mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro).  
 
 
-# TimeMachines and related packages
- I'm also the author of:
+# [TimeMachines](https://github.com/microprediction/timemachines) and related packages
+
+The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
+[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
  
- - [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
- 
-and that package powers some algorithms behind the microprediction API. I also maintain a few other repos required for the microprediction platform
+ I also maintain a few other repos required for the microprediction platform
 
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers used as write keys. The only thing I'll be remembered for. 
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
