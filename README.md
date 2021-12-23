@@ -52,7 +52,7 @@ Hundreds of algorithms compete at [Microprediction](https://github.com/micropred
 One bridge between the [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) and the microprediction [leaderboards](https://www.microprediction.org/leaderboard.html) is provided by the StreamSkater class in the microprediction package, illustrated in the [StreamSkater examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples) folder. This makes it trivial to use any skater from the TimeMachines package in a MicroCrawler (a live algorithm). 
 
 ## More about the Microprediction Python Client
-Maybe skip to [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md) or 
+See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md) or 
 [README_LONGER.md](https://github.com/microprediction/microprediction/blob/master/README_LONGER.md)
 
 ### Class Hierarchy 
@@ -80,11 +80,9 @@ and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/ma
 
 The former contains the [blog](https://www.microprediction.com/blog), a [knowledge center](https://www.microprediction.com/knowledge-center) with video tutorials, details of [competitions](https://www.microprediction.com/competitions) and prizemoney, and so forth. The latter is browser for humans looking to see how their algorithms are are performing, or whether their streams are updating.     
 
-### Slack / Google Meets are recommended
+### Slack & Google Meets Tue 8pm/ Fri noon EST
 
-Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. 
-
-Many contributors also stop by our twice weekly virtual chats which you are welcoem to. See the [knowledge center](https://www.microprediction.com/knowledge-center) for Google Meet details. Tue 8pm and Fri noon EST.  
+Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. There you will find Google Meet invite details for our regular informal chats.  
 
 ### Microprediction bookmarks
 
