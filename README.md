@@ -82,11 +82,24 @@ the [MicroWriter](https://github.com/microprediction/microprediction/blob/master
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
                 
-Some algorithms run on schedule, others derive from [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py). A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
+### Scheduled submissions versus crawling
+
+| Type                               | Suggestion                                                                                                     | Example                                                                                                                     | More examples                                                                                                                   |
+|------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Scheduled submission               | [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py)        | [Ambassy Fox](https://github.com/microprediction/microprediction/blob/master/submission_examples_transition/ambassy_fox.py) | [submission_examples_transition](https://github.com/microprediction/microprediction/tree/master/submission_examples_transition) |
+| Running process                    | [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py)      | [Malaxable Fox](https://github.com/microprediction/microprediction/blob/master/crawler_examples/malaxable_fox.py)           | [crawler_examples](https://github.com/microprediction/microprediction/tree/master/crawler_examples)                             |
+| Running process using timemachines | [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) | [Shole Gazelle](https://github.com/microprediction/microprediction/blob/master/crawler_examples/shole_gazelle.py)           | [crawler_skater_examples](https://github.com/microprediction/microprediction/tree/master/crawler_skater_examples)               |
+
+A more complete picture would include [SimpleCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [RegularCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/simplecrawler.py), 
 [OnlineHorizonCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py), 
 [OnlineStreamCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/onlinecrawler.py) and
-[ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py), as well
+[ReportingCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/reportingcrawler.py).
+
+
+### Creating streams
+
+as well
 as additional conveniences for creating streams such as 
 [ChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py), [MultiPoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py),
 and [MultiChangePoll](https://github.com/microprediction/microprediction/blob/master/microprediction/polling.py).
