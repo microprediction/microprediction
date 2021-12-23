@@ -27,7 +27,9 @@ If you don't know about the live algorithm frenzy at [microprediction.org](https
  2. Algorithms watch it and submit 225 guesses of the value of future data values.  (*submit* method on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py))
  3. You retrieve predictions at any time. (*get_predictions* method on MicroReader or get_own_predictions on MicroWriter like [so](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py))
 
-(Hundreds of algorithms compete, making millions of little predictions. So this is closer to "NASDAQ for probability" than a prediction market.)
+## What algorithms are included?
+
+Hundreds of algorithms compete, making millions of little predictions. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
 
 ## I just wanna see examples
 [README_EXAMPLES.md](https://github.com/microprediction/microprediction/blob/master/README_EXAMPLES.md)
