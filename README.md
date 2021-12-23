@@ -17,8 +17,9 @@ In this way you can:
   trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
   
 On the flip side you can :
-  - Contribute algorithms and win beer money
-  - Benchmark your work
+  - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
+  - Automatically benchmark your work
+  - Automatically find an unexpected use for your work (see [streams](https://www.microprediction.org/browse_streams.html))
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
