@@ -2,7 +2,7 @@
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [m6](https://github.com/microprediction/m6) or 
-[timemachines](https://github.com/microprediction/timemachines)? Hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week.  
+[timemachines](https://github.com/microprediction/timemachines)? Hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week. See below.   
 
 
 # Microprediction client
@@ -19,20 +19,19 @@ Someone wanting live information predicted performs A, B and D. Someone providin
 
 
 # TimeMachines and related packages
-
  I'm also the author of:
  
  - [TimeMachines](https://github.com/microprediction/timemachines) - Autonomous time-series prediction algorithms in simple functional form, also with [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)
  
-and that package powers many algorithms behind the microprediction API. I also maintain a few other repos required for the microprediction platform
-
+and that package powers some algorithms behind the microprediction API. I also maintain a few other repos required for the microprediction platform
 
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers. The only thing I'll be remembered for. 
-- [microconventions](https://github.com/microprediction/microconventions) - Required by microprediction client, and [server](https://github.com/microprediction/rediz).  
-- [getjson](https://github.com/microprediction/getjson). 
+- [microconventions](https://github.com/microprediction/microconventions) - Required by microprediction client
+- [rediz](https://github.com/microprediction/rediz) - Server side. 
+- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
 
 # M6-Competition and other time-series related packages
-
+If you are chasing the $300,000 in M6 prizes...
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (stable). 
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) 
