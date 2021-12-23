@@ -9,8 +9,7 @@ Algorithms come to you.
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
-- Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions of
-your data feed 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
+- Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way you can:
  - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
