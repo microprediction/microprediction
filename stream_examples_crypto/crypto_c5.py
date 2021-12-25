@@ -1,12 +1,15 @@
-from microprediction.config_private import EMBLOSSOM_MOTH  # Burn your own with new_key(difficulty=13)
+try:
+    from credentials import EMBLOSSOM_MOTH as WRITE_KEY
+except ImportError:
+    raise('This is just for show, not intended for running')
+
 from microprediction.polling import MultiChangePoll
 from pycoingecko import CoinGeckoAPI
 import math
 from pprint import pprint
 
-# This is the actual code used to generate the copula contests
 
-COINS = 'bitcoin,ethereum,ripple,cardano,iota'
+COINS = 'bitcoin,ethereum,tether,cardano,solana'
 NAMES = [ 'c5_'+name+'.json' for name in COINS.split(',') ]
 
 def func():
@@ -17,9 +20,11 @@ def func():
     raw  = [ data[coin]['usd'] for coin in COINS.split(',') ]
     return [ 1000*math.log(v) for v in raw ]
 
+
 if __name__=="__main__":
     print('testing',flush=True)
     pprint(func())
     print('starting',flush=True)
-    poll = MultiChangePoll(write_key=EMBLOSSOM_MOTH,func=func,names=NAMES,interval=5,with_copulas=True, verbose=True)
+    poll = MultiChangePoll(write_key=WRITE_KEY,func=func,names=NAMES,interval=15,with_copulas=True, verbose=True)
     poll.run()
+

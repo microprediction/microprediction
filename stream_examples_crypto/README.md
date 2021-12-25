@@ -2,82 +2,77 @@
 
 
 ## Bitcoin / Ethereum (c2 series)
-See [An Empirical Article That Wasn't Immediately Stale](https://microprediction.medium.com/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
+See [An Empirical Article That Wasn't Immediately Stale](https://microprediction.medium.com/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f) but note that it might be stale.  
 
-Scaled 5-minutely logarithmic changes 
-* [c2_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_bitcoin)
-* [c2_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_ethereum)
-
-Logarithmic changes multiplied
-* [quadratic_c2_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_ethereum_ethereum)
-* [quadratic_c2_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin)
-* [quadratic_c2_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_ethereum)
-
-Mean of predictions of logarithmic changes multiplied
-* [quadratic_c2_bitcoin_bitcoin_expected](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_expected)
-and so on
+### Scaled 5-minutely logarithmic changes 
+Difference in change in log(price) multiplied by 1000x
+* [c2_change_in_log_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_change_in_log_bitcoin)
+* [c2_change_in_log_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_change_in_log_ethereum)
 
 
-Logarithmic changes multiplied relative to 15 minute ahead predictions
-* [quadratic_c2_bitcoin_bitcoin_rel](https://www.microprediction.org/stream_dashboard.html?stream=quadratic_c2_bitcoin_bitcoin_rel)
-and so on
+### Changes in log of value of rebalanced portfolios 
+
+* [c2_rebalanced_5](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_5) holding 5 percent bitcoin, 95 percent Ethereum
+* [c2_rebalanced_55](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_55) holding 55 percent bitcoin, 45 percent Ethereum
+
+and so forth, for increments of 5 percent. 
+
+### Auxiliary streams possibly relevant to portfolio construction
+
+The quadratic terms (changes in log prices multiplied)
+* [c2_quadratic_full_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_full_ethereum_ethereum)
+* [c2_quadratic_full_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_full_bitcoin_bitcoin)
+* [c2_quadratic_full_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_full_bitcoin_ethereum)
+ 
+... also same thing focussed on lower moments (downside)
+* [c2_quadratic_lower_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_lower_ethereum_ethereum)
+* [c2_quadratic_lower_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_lower_bitcoin_bitcoin)
+* [c2_quadratic_lower_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_lower_bitcoin_ethereum)
+
+... also same thing focussed on upper moments (upside)
+* [c2_quadratic_upper_ethereum_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_upper_ethereum_ethereum)
+* [c2_quadratic_upper_bitcoin_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_upper_bitcoin_bitcoin)
+* [c2_quadratic_upper_bitcoin_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_quadratic_upper_bitcoin_ethereum)
+
+### Crowd moments
+
+Mean of all samples submitted for 15 minute ahead predictions of rebalanced portfolios
+* [c2_rebalanced_65_expected](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_65_expected) Trimmed mean of predicted 15 minute ahead returns holding 65 percent bitcoin, 35 percent Ethereum
+* [c2_rebalanced_5_expected](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_5_expected) Trimmed mean of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
+(and so on)
+
+Also the standard deviations 
+* [c2_rebalanced_5_std](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_5_std) Trimmed std of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
+
+### Some "info" porfolios
+
+Info portfolio is created by looking at the crowd's predictions of the rebalanced portfolios and choosing one with the best info ratio 
+* [c2_info_percent_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_percent_bitcoin) Recommended percentage bitcoin
+* [c2_info_percent_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_percent_ethereum) Recommended percentage ethereum 
 
 
+Information ratio suggested portfolio returns, minus rebalanced
+* [c2_info_return](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_return) Changes in log returns for "info" portfolio
+* [c2_info_minus_rebalanced_5_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_5_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin, 95 percent Ethereum
+* [c2_info_minus_rebalanced_25_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_25_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 25 percent bitcoin, 75 percent Ethereum
+* [c2_info_minus_rebalanced_35_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_35_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 35 percent bitcoin, 65 percent Ethereum
+* [c2_info_minus_rebalanced_45_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_45_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 45 percent bitcoin, 95 percent Ethereum
+* [c2_info_minus_rebalanced_55_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_55_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 55 percent bitcoin, 95 percent Ethereum
+* [c2_info_minus_rebalanced_65_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_65_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 65 percent bitcoin, 35 percent Ethereum
+* [c2_info_minus_rebalanced_95_info](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_95_info) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 95 percent bitcoin, 5 percent Ethereum
 
-Scaled 5-minutely logarithmic changes divided by std of predictions
-* [portfolio_c2_60_rel](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_60_rel)
-
-Fixed weight portfolio logarithmic returns
-* [portfolio_c2_5](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5) holding 5 percent bitcoin, 95 percent Ethereum
-* [portfolio_c2_55](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_55) holding 55 percent bitcoin, 45 percent Ethereum
-and so forth
-
-Mean of predicted portfolio returns
-* [portfolio_c2_65_expected](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_65_expected) Trimmed mean of predicted 15 minute ahead returns holding 65 percent bitcoin, 35 percent Ethereum
-* [portfolio_c2_5_expected](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5_expected) Trimmed mean of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
-
-Std of predicted portfolio returns
-* [portfolio_c2_5_std](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5_std) Trimmed std of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
-
-Information ratios from predicted means and stds
-* [portfolio_c2_5_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_5_info) Predicted 15 minute info ratio holding 5 percent bitcoin, 95 percent Ethereum
-* [portfolio_c2_25_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_25_info) Predicted 15 minute info ratio holding 25 percent bitcoin, 75 percent Ethereum
-* [portfolio_c2_35_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_35_info) Predicted 15 minute info ratio holding 35 percent bitcoin, 65 percent Ethereum
-* [portfolio_c2_45_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_45_info) Predicted 15 minute info ratio holding 45 percent bitcoin, 95 percent Ethereum
-* [portfolio_c2_55_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_55_info) Predicted 15 minute info ratio holding 55 percent bitcoin, 95 percent Ethereum
-* [portfolio_c2_65_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_65_info) Predicted 15 minute info ratio holding 65 percent bitcoin, 35 percent Ethereum
-* [portfolio_c2_95_info](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_95_info) Predicted 15 minute info ratio holding 95 percent bitcoin, 5 percent Ethereum
-
-Best portfolio 
-* [percent_c2_bitcoin](https://www.microprediction.org/stream_dashboard.html?stream=percent_c2_bitcoin) Recommended percentage bitcoin
-* [percent_c2_ethereum](https://www.microprediction.org/stream_dashboard.html?stream=percent_c2_ethereum) Recommended percentage ethereum 
-
-Best portfolio returns
-* [best_c2](https://www.microprediction.org/stream_dashboard.html?stream=best_c2) Changes in log returns for "best" portfolio
-
-
-Relative portfolio relative returns using community-derived weights
-* [portfolio_c2_0_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_0_diff) 
-records the difference between the "best" portfolio and Ethereum
-* [portfolio_c2_20_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_20_diff) 
-records the difference between the "best" portfolio and the portfolio with 20 percent bitcoin, the rest Ethereum
-* [portfolio_c2_50_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_50_diff) 
-records the difference between the "best" portfolio and the portfolio with 50 percent bitcoin, the rest Ethereum
-* [portfolio_c2_80_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_80_diff) 
-records the difference between the "best" portfolio and the portfolio with 80 percent bitcoin
-* [portfolio_c2_100_diff](https://www.microprediction.org/stream_dashboard.html?stream=portfolio_c2_100_diff) 
-records the difference between the "best" portfolio and bitcoin
-
-Longer term profitability streams (one data point per day)
-* [profit_c2_20](https://www.microprediction.org/stream_dashboard.html?stream=profit_c2_20) relative to 20% Bitcoin
-* [profit_c2_50](https://www.microprediction.org/stream_dashboard.html?stream=profit_c2_50)
+Longer term profitability
+* [c2_info_profit_20](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_20) relative to 20% Bitcoin
+* [c2_info_profit_50](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_50) relative to 50% Bitcoin
+* [c2_info_profit_80](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_80) relative to 80% Bitcoin
 and so forth
 
 
+## Related prizes
 
-## Fathom Gazelle prizes
-
-The raw aggregate regular leaderboard is [https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d](https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfef240455d)
+The raw aggregate regular leaderboards:
+    - Emblossom Moth [https://api.microprediction.org/regular/e3b1055033076108b4279c473cde3a67](https://api.microprediction.org/regular/e3b1055033076108b4279c473cde3a67)
+    - Fathon Gazelle [https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfec240455d](https://api.microprediction.org/regular/fa76039a2e11ed1f7d5d2cfec240455d)
 
 See also this [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/List%20Current%20Prizes.ipynb) that shows how to list prizes on offer and related streams. 
 
