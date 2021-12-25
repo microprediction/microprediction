@@ -53,7 +53,7 @@ Info portfolio is created by looking at the crowd's predictions of the rebalance
 
 Information ratio suggested portfolio returns, minus rebalanced
 * [c2_info_return](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_return) Changes in log returns for "info" portfolio
-* [c2_info_minus_rebalanced_5](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_5) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin, 95 percent Ethereum
+1* [c2_info_minus_rebalanced_5](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_5) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin, 95 percent Ethereum
 * [c2_info_minus_rebalanced_25](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_25) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 25 percent bitcoin, 75 percent Ethereum
 * [c2_info_minus_rebalanced_35](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_35) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 35 percent bitcoin, 65 percent Ethereum
 * [c2_info_minus_rebalanced_45](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_minus_rebalanced_45) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 45 percent bitcoin, 95 percent Ethereum
@@ -62,10 +62,13 @@ Information ratio suggested portfolio returns, minus rebalanced
 * [c2_info_minus_rebalanced_95](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_95) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 95 percent bitcoin, 5 percent Ethereum
 
 Longer term profitability
-* [c2_info_profit_20](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_20) relative to 20% Bitcoin
-* [c2_info_profit_50](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_50) relative to 50% Bitcoin
-* [c2_info_profit_80](https://www.microprediction.org/stream_dashboard.html?stream=c2_info_profit_80) relative to 80% Bitcoin
-and so forth
+* [c2_daily_info_minus_rebalanced_5](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_5) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin, 95 percent Ethereum
+* [c2_daily_info_minus_rebalanced_25](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_25) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 25 percent bitcoin, 75 percent Ethereum
+* [c2_daily_info_minus_rebalanced_35](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_35) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 35 percent bitcoin, 65 percent Ethereum
+* [c2_daily_info_minus_rebalanced_45](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_45) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 45 percent bitcoin, 55 percent Ethereum
+* [c2_daily_info_minus_rebalanced_55](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_55) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 55 percent bitcoin, 45 percent Ethereum
+* [c2_daily_info_minus_rebalanced_65](https://www.microprediction.org/stream_dashboard.html?stream=c2_daily_info_minus_rebalanced_65) Return of "info" strategy, less balanced portfolio with 5 percent bitcoin 65 percent bitcoin, 35 percent Ethereum
+and so forth for all increments of 5 percent. 
 
 
 ## Related prizes
