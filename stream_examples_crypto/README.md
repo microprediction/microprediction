@@ -37,8 +37,8 @@ The quadratic terms (changes in log prices multiplied)
 ### Crowd moments
 
 Mean of all samples submitted for 15 minute ahead predictions of rebalanced portfolios
-* [c2_rebalanced_65_expected](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_65_expected) Trimmed mean of predicted 15 minute ahead returns holding 65 percent bitcoin, 35 percent Ethereum
-* [c2_rebalanced_5_expected](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_5_expected) Trimmed mean of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
+* [c2_rebalanced_65_mean](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_65_mean) Trimmed mean of predicted 15 minute ahead returns holding 65 percent bitcoin, 35 percent Ethereum
+* [c2_rebalanced_5_mean](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_5_mean) Trimmed mean of predicted 15 minute ahead returns holding 5 percent bitcoin, 95 percent Ethereum
 (and so on)
 
 Also the standard deviations 
