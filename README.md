@@ -41,7 +41,7 @@ The timemachines package provides autonomous time-series prediction algorithms i
  
  I also maintain a few other repos required for the microprediction platform
 
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers used as write keys. The only thing I'll be remembered for. 
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers explained in this [video](https://vimeo.com/397352413).
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
 - [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
