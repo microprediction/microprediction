@@ -12,9 +12,8 @@ Algorithms come to you.
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way you can:
- - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
- - See which R, Julia and Python time series approaches seem to work best, saving you from
-  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
+ - Get live prediction of public data for free
+ - Avoid trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality. 
   
 On the flip side you can :
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
