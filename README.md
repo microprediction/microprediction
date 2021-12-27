@@ -13,6 +13,8 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 In this way you can:
  - Get live prediction of public data for free
  - Avoid trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality. 
+ - Avoid model deployment hassles
+ - Avoid the endless cycle of model improvement
   
 On the flip side you can :
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
