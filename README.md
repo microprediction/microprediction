@@ -17,8 +17,7 @@ In this way you can:
   
 On the flip side you can :
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
-  - Automatically benchmark your work
-  - Automatically find an unexpected use for your work (see [streams](https://www.microprediction.org/browse_streams.html))
+  - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html))
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
