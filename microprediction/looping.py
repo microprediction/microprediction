@@ -31,7 +31,7 @@ class PandasLoop(MicroWriter):
         return self.df.__repr__()
 
     def _valid_size(self,df):
-        return len(df.index)>10000 and len(df.columns)<=5
+        return len(df.index)>10000 and len(df.columns)<=10
 
     def _fix_name(self,name):
         return name+'.json' if '.json' not in name else name
