@@ -2,28 +2,31 @@
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [m6](https://github.com/microprediction/m6) or 
-[timemachines](https://github.com/microprediction/timemachines)? Hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week announced in the Slack. 
+[timemachines](https://github.com/microprediction/timemachines)? Github made this a user page so hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
-### Microprediction TLDR
-Algorithms come to you. 
+### Slack / Google Meets
+
+I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week announced in the Slack (usually Tue 8pm and Fri noon EST).  
+
+### Microprediction TLDR: Algorithms come to you. 
 
 - You publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way you can:
- - Get live prediction of public data for free (yes it really is an [api](http://api.microprediction.org/) that predicts anything!)
- - See which R, Julia and Python time series approaches seem to work best, saving you from
-  trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from PyPI and github of uncertain quality. 
+ - Get live prediction of public data for free
+ - Avoid trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality. 
+ - Avoid model deployment hassles
+ - Avoid the endless cycle of model improvement
   
 On the flip side you can :
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
-  - Automatically benchmark your work
-  - Automatically find an unexpected use for your work (see [streams](https://www.microprediction.org/browse_streams.html))
+  - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html))
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
-The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/) that enables turnkey, *repeated short term predictions* of anything, for any purpose, for anyone, at any time. If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) making this possible, an extremely simple way to grok it is to open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it on Google's dime. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. There are only four API methods you really need to know about initially to understand the system. 
+The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/). If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) making this possible, an extremely simple way to grok it is to open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it on Google's dime. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. There are only four API methods you really need to know about initially to understand the system. 
 
 |   | Task                                      | Method or function                | Full code example                                                                                                                                   | Video tutorial                                                                    |
 |---|-------------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -32,7 +35,7 @@ The [client](https://github.com/microprediction/microprediction) assists use of 
 | C | Send 225 guesses of the next value of a stream, after a fixed quarantine period. | MicroWriter.submit()              | [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/enter_die_contest_one_off.py) | [python-2: Creating your first crawler](https://www.microprediction.com/python-2) |
 | D | Retrieve community predictions (PDF) 1min, 5min, 15min or 1hr ahead.            | MicroWriter.get_own_predictions() | [defassa_dog.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_golf/defassa_dog.py)                            |  [colab example](https://github.com/microprediction/microprediction/blob/master/notebook_examples/get_and_show_submitted_predictions.ipynb)                                                                                 |                  |                                                                                   |   |
 
-Someone wanting live information predicted performs A, B and D. Someone providing predictions performs A and C, mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro).  
+Someone wanting something predicted performs A, B and D. Someone providing predictions performs A and C (mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)).   
 
 
 # [TimeMachines](https://github.com/microprediction/timemachines) and related packages
@@ -42,7 +45,7 @@ The timemachines package provides autonomous time-series prediction algorithms i
  
  I also maintain a few other repos required for the microprediction platform
 
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers used as write keys. The only thing I'll be remembered for. 
+- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers explained in this [video](https://vimeo.com/397352413).
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
 - [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
