@@ -83,4 +83,9 @@ See also this [notebook](https://github.com/microprediction/microprediction/blob
 
 [Get Predictions](https://www.microprediction.com/get-predictions) guide at Microprediction.Com
 
- 
+## Literature
+Lots of GARCH stuff. Examples. 
+
+ - Modelling volatility of cryptocurrencies using Markov-Switching GARCH models. Caporale. Zekokh. [pdf](https://www.researchgate.net/publication/329866602_Modelling_volatility_of_cryptocurrencies_using_Markov-Switching_GARCH_models)
+
+- Forecasting Bitcoin Risk Measures: A Robust Approach [pdf](https://www.researchgate.net/publication/325533373_Forecasting_Bitcoin_Risk_Measures_A_Robust_Approach)
