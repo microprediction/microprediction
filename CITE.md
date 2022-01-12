@@ -16,7 +16,7 @@ or
          title = {{A Platform for Assessing and Combining Autonomous Short-Horizon Distributional Predictions}},
          year = {2021},
          author = {Peter Cotton},
-         url = {https://github.com/microprediction/microprediction/tree/master/doc}
+         url = {https://github.com/microprediction/microprediction}
      }
  
 or 
