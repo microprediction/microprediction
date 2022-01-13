@@ -46,11 +46,11 @@ The timemachines package provides autonomous time-series prediction algorithms i
 - [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers explained in this [video](https://vimeo.com/397352413).
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
-- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum) and other rats and mice.  
+- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum), [precise](https://github.com/microprediction/precise) and other rats and mice.  
 
 # [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
-- [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo) 
+- [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo ... though less useful now as they changed the rules!).  
 - [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html), potentially useful for hyper-parameters.  
 - [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
