@@ -40,14 +40,11 @@ Someone wanting something predicted performs A, B and D. Someone providing predi
 # [TimeMachines](https://github.com/microprediction/timemachines) and related packages
 
 The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
-[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
- 
- I also maintain a few other repos required for the microprediction platform
+[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. I also maintain a few other repos required for the microprediction platform
 
-- [MUID](https://github.com/microprediction/muid) - Memorable Unique Identifiers explained in this [video](https://vimeo.com/397352413).
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
-- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum), [precise](https://github.com/microprediction/precise) and other rats and mice.  
+- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum), [precise](https://github.com/microprediction/precise), [MUID](https://github.com/microprediction/muid) (explained in this [video](https://vimeo.com/397352413)) and other rats and mice.  
 
 # [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
