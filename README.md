@@ -9,13 +9,14 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ)) and informal Google Meets twice a week announced in the Slack (usually Tue 8pm and Fri noon EST).  
 
 ### Microprediction TLDR: Let time-series algorithms come to you. 
+I am lazy so:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream like [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall).
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way I can:
- - Get live prediction of public data for free (public can be obscure too)
+ - Get live prediction of public data for free ("public" can be obscure)
  - Avoid trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality. Though I seem to do that too. 
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. On the flip side you can also contribute predictive power. You can:
