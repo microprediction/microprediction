@@ -21,7 +21,7 @@ In this way I can:
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. On the flip side you can also contribute predictive power. You can:
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
-  - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html))
+  - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html) and [how to predict them](https://www.microprediction.com/make-predictions)).
 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
