@@ -46,7 +46,7 @@ The timemachines package provides autonomous time-series prediction algorithms i
 
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
-- [getjson](https://github.com/microprediction/getjson), [momentum](https://github.com/microprediction/momentum), [precise](https://github.com/microprediction/precise), [MUID](https://github.com/microprediction/muid) (explained in this [video](https://vimeo.com/397352413)) and other rats and mice.  
+- [precise](https://github.com/microprediction/precise), [MUID](https://github.com/microprediction/muid) (explained in this [video](https://vimeo.com/397352413)) and other rats and mice like [getjson](https://github.com/microprediction/getjson) and [momentum](https://github.com/microprediction/momentum).  
 
 # [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
