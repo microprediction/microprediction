@@ -21,7 +21,7 @@ In this way I can:
  - Sip pina coladas while the accuracy magically improves over time. 
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
-  - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
+  - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions)). About $50,000 a year and trending up. 
   - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html) and [how to predict them](https://www.microprediction.com/make-predictions)).
 
 
