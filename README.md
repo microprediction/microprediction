@@ -20,7 +20,7 @@ In this way I can:
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.   
  - Sip pina coladas while the accuracy magically improves over time. 
   
-You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. On the flip side you can also contribute predictive power. You can:
+You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
   - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html) and [how to predict them](https://www.microprediction.com/make-predictions)).
 
