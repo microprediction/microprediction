@@ -22,7 +22,7 @@ In this way I can:
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
   - Contribute predictive intelligence, win beer money (see [competitions](https://www.microprediction.com/competitions)) and then trash talk people in our slack channel. About $50,000 a year helps along the scientific objectives. 
-  - Automatically benchmark your work or find unexpected [uses](https://www.microprediction.org/browse_streams.html) to include in your next paper. You just need to know [how to predict them](https://www.microprediction.com/make-predictions), which amounts to modifying a Python script and running it. 
+  - Automatically benchmark your work or find unexpected [uses](https://www.microprediction.org/browse_streams.html) to include in your next paper. You just need to know [how to predict them](https://www.microprediction.com/make-predictions), which amounts to modifying a Python script (or R or Julia) and running it. 
   
 It's up to you if you choose to reveal your code. 
 
