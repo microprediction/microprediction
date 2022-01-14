@@ -51,14 +51,14 @@ The timemachines package provides autonomous time-series prediction algorithms i
 # [M6](https://github.com/microprediction/m6) and other time-series related packages
 If you are chasing the $300,000 in M6 prizes...
 - [m6](https://github.com/microprediction/m6) - Some utilities for the M6 Forecasting competition (fast numerical rank probabilities without Monte Carlo ... though less useful now as they changed the rules!).  
-- [Winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
+- [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
 - [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html), potentially useful for hyper-parameters.  
-- [Embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
+- [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 
 Unrelated:
 
-- [Pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
-- [FirstDown](https://github.com/microprediction/firstdown) - The repo that might ruin the great game of football.  
+- [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
+- [FirstDown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 
 # Microprediction versus TimeMachines
 
