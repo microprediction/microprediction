@@ -21,9 +21,9 @@ In this way I can:
  - Sip pina coladas while the accuracy magically improves over time. 
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
-  - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions)). About $50,000 a year and trending up. 
+  - Contribute predictive intelligence and win beer money (see [competitions](https://www.microprediction.com/competitions)). About $50,000 a year and trending up. 
   - Automatically benchmark your work or find unexpected uses for it (see [streams](https://www.microprediction.org/browse_streams.html) and [how to predict them](https://www.microprediction.com/make-predictions)).
-
+It's up to you if you choose to reveal the code. 
 
 # [Microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) Python client
 The [client](https://github.com/microprediction/microprediction) assists use of the [microprediction api](http://api.microprediction.org/). If you don't know about the live algorithm frenzy at [microprediction.org](https://www.microprediction.org/) making this possible, an extremely simple way to grok it is to open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it on Google's dime. This will create an identity for you and enter your algorithm in an ongoing contest to predict the next roll of a die. You'll get the joke and be exactly half way to understanding the four critical pieces of functionality.  
