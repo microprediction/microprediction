@@ -17,7 +17,8 @@ I am lazy so:
 
 In this way I can:
  - Get live prediction of public data for free ("public" can be obscure)
- - Avoid trying out [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality. Though I seem to do that too. 
+ - Indirectly survey [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality.  
+ - Sip pina coladas while the accuracy of your application or business magically improves over time. 
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. On the flip side you can also contribute predictive power. You can:
   - Contribute algorithms and win beer money (see [competitions](https://www.microprediction.com/competitions))
