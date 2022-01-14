@@ -12,7 +12,7 @@ I run a slack channel for those interested in open-source time-series prediction
 I am lazy so:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
- creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html). 
+ creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way I can:
@@ -22,7 +22,7 @@ In this way I can:
   
 You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
   - Contribute predictive intelligence, win beer money (see [competitions](https://www.microprediction.com/competitions)) and then trash talk people in our slack channel. About $50,000 a year helps along the scientific objectives. 
-  - Automatically benchmark your work or find unexpected uses for your next paper (see [streams](https://www.microprediction.org/browse_streams.html) and [how to predict them](https://www.microprediction.com/make-predictions)).
+  - Automatically benchmark your work or find unexpected [uses](https://www.microprediction.org/browse_streams.html) to include in your next paper. See [how to predict them](https://www.microprediction.com/make-predictions)).
   
 It's up to you if you choose to reveal your code. 
 
