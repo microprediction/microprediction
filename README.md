@@ -6,7 +6,7 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 
 ### Slack / Google Meets
 
-I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (usually Tue 8pm and Fri noon EST).  
+I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST).  
 
 ### Microprediction TLDR: Let time-series algorithms come to you. 
 I am lazy so:
