@@ -4,6 +4,9 @@
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [m6](https://github.com/microprediction/m6) or 
 [timemachines](https://github.com/microprediction/timemachines)? Github made this a user page so hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
 
+### Quick start
+Open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it.
+
 ### Slack / Google Meets
 
 I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST).  
