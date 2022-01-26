@@ -49,14 +49,15 @@ The timemachines package provides autonomous time-series prediction algorithms i
 
 - [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
 - [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
-- The [precise](https://github.com/microprediction/precise) package for covariance estimation. [MUID](https://github.com/microprediction/muid) (explained in this [video](https://vimeo.com/397352413)) and other rats and mice like [getjson](https://github.com/microprediction/getjson) and [momentum](https://github.com/microprediction/momentum).  
+- The [precise](https://github.com/microprediction/precise) package for covariance estimation.
+- The - [HumpDay](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+- The [MUID](https://github.com/microprediction/muid) package explained in this [video](https://vimeo.com/397352413)) and other rats and mice like [getjson](https://github.com/microprediction/getjson) and [momentum](https://github.com/microprediction/momentum).  
 
 # [M6](https://github.com/microprediction/m6) related packages
 If you are chasing the $300,000 in M6 prizes... well I was going to provide more but they changed the rules so my stuff isn't so useful now. 
 
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations. 
 - [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
-- [HumpDay](https://github.com/microprediction/humpday) - Derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html), potentially useful for hyper-parameters.  
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 
 Unrelated:
