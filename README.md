@@ -2,16 +2,12 @@
 # microprediction [![Downloads](https://static.pepy.tech/personalized-badge/microprediction?period=total&units=international_system&left_color=green&right_color=grey&left_text=Downloads)](https://pepy.tech/project/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [precise](https://github.com/microprediction/precise), [m6](https://github.com/microprediction/m6) or 
-[timemachines](https://github.com/microprediction/timemachines)? Github made this a user page so hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). 
+[timemachines](https://github.com/microprediction/timemachines)? Github made this a user page so hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST). If that link requires an email domain, it has expired so DM [me](https://www.linkedin.com/petercotton) on Linked-In for an invite.  
 
 ### Microprediction quick start
 Open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it.
 
-### Slack / Google Meets
-
-I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST).  
-
-# [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), [HumpDay](https://github.com/microprediction/precis) packages 
+# The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
 I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
 [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
