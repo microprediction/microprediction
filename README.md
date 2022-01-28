@@ -21,8 +21,6 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 # The [microprediction.org](https://www.microprediction.org/) platform
 I maintain a live platform matching time-series prediction to problems via a data interface. I am lazy so:
 
-### Microprediction TLDR: Let time-series algorithms come to you. 
-
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
@@ -32,7 +30,7 @@ In this way I can:
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.   
  - Sip pina coladas while the accuracy magically improves over time. 
   
-You can do this too, if you wish. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
+*You can do this too, if you wish*. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
   - Contribute predictive intelligence, win beer money (see [competitions](https://www.microprediction.com/competitions)) and then trash talk people in our slack channel. About $50,000 a year helps along the scientific objectives. 
   - Automatically benchmark your work or find unexpected [uses](https://www.microprediction.org/browse_streams.html) to include in your next paper. You just need to know [how to predict them](https://www.microprediction.com/make-predictions), which amounts to modifying a Python script (or R or Julia) and running it. 
   
