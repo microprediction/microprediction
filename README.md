@@ -9,7 +9,7 @@ Oh fine just open this ten line colab [notebook](https://github.com/micropredict
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. 
+I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. They help my company surf the open-source wave. 
 
 - In the case of  [timemachines](https://github.com/microprediction/timemachines) for time-series, many open-source methods are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
 
