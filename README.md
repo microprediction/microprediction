@@ -18,7 +18,7 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 - The [precise](https://github.com/microprediction/precise) package is new, and follows the style of timemachines. It supplies a plurality of methods for online covariance forecasting. Elo ratings are also produced, though not in HTML at time of writing. See the package.  
 
 
-# The [www.microprediction.org](https://www.microprediction.org/) Platform
+# The [microprediction.org](https://www.microprediction.org/) platform
 I maintain a live platform matching time-series prediction to problems via a data interface. I am lazy so:
 
 ### Microprediction TLDR: Let time-series algorithms come to you. 
