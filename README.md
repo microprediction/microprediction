@@ -19,7 +19,7 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 
 
 # The [microprediction.org](https://www.microprediction.org/) platform
-I maintain a live platform matching time-series prediction to problems via a data interface. I am lazy so:
+I maintain a live platform matching community contributed live time-series prediction algorithms (Python, R, Julia mostly) to problems via a data interface. Think of it as the laziest possible way to get really good live distributional prediction. 
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
@@ -28,7 +28,7 @@ I maintain a live platform matching time-series prediction to problems via a dat
 In this way I can:
  - Get live prediction of public data for free (sometimes I make the "public" data obscure)
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.   
- - Sip pina coladas while the accuracy magically improves over time. 
+ - Sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
   
 *You can do this too, if you wish*. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. On the flip side you can:
   - Contribute predictive intelligence, win beer money (see [competitions](https://www.microprediction.com/competitions)) and then trash talk people in our slack channel. About $50,000 a year in prizes complements the scientific motivations. 
