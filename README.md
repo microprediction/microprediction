@@ -13,7 +13,7 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 
 - In the case of  [timemachines](https://github.com/microprediction/timemachines) for time-series, many open-source methods are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
 
-- The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, also with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+- The [humpday](https://github.com/microprediction/humpday) package serves up global derivative-free optimizers in canonical form, and also computes [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) as a rough guide.   
 
 - The [precise](https://github.com/microprediction/precise) package is new, and follows the style of timemachines. It supplies a plurality of methods for online covariance forecasting. Elo ratings are also produced, though not in HTML at time of writing. See the package.  
 
