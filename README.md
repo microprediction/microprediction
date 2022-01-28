@@ -9,14 +9,16 @@ Open this colab [notebook](https://github.com/microprediction/microprediction/bl
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. In the case of time-series, they are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
+I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. 
 
-The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+- In the case of  [timemachines](https://github.com/microprediction/timemachines) for time-series, many open-source methods are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
 
-The (new) [precise](https://github.com/microprediction/precise) package supplies a plurality of benchmarked methods for online covariance forecasting. 
+- The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, also with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+
+- The [precise](https://github.com/microprediction/precise) package is new, and follows the style of timemachines. It supplies a plurality of methods for online covariance forecasting. Elo ratings are also produced, though not in HTML at time of writing. See the package.  
 
 ### Microprediction TLDR: Let time-series algorithms come to you. 
-I am lazy so:
+I maintain a live platform matching time-series prediction to problems via a data interface. I am lazy so:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
