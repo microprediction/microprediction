@@ -42,25 +42,29 @@ The [client](https://github.com/microprediction/microprediction) assists use of 
 Someone wanting something predicted performs A, B and D. Someone providing predictions performs A and C (mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)).   
 
 
-# [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), [HumpDay](https://github.com/microprediction/precis) et al
+# [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), [HumpDay](https://github.com/microprediction/precis) benchmarking 
 
-The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
-[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. I also maintain a few other packages where the common theme is autonomous prediction. 
+I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
+[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
 
-- [microconventions](https://github.com/microprediction/microconventions) - common to client and server may answer many of your questions. 
-- [rediz](https://github.com/microprediction/rediz) - Server side code, for the brave. 
-- The [precise](https://github.com/microprediction/precise) package for covariance estimation.
-- The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+
+The (new) [precise](https://github.com/microprediction/precise) package supplies a plurality of benchmarked methods for online covariance forecasting. 
+
+# MUID and micrprediction platform related repos
+
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413)).
+- [microconventions](https://github.com/microprediction/microconventions) - common to client and server (may answer many of your questions). 
+- [rediz](https://github.com/microprediction/rediz) - Microprediction server side code, for the brave. 
 - Other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
-- [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability (used by M6). 
-- [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 
-More ad-hoc: 
+# Some of my other repos 
+
+- [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability. 
+- [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations. 
-
 
 # Microprediction versus TimeMachines
 
