@@ -14,11 +14,8 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 | Topic                  | Package           | Elo ratings | Data sources | 
 |------------------------|-------------------|-------------|--------------| 
 | Univariate time-series | [timemachines](https://github.com/microprediction/timemachines)  | [Timeseries Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)  | [microprediction streams](https://www.microprediction.org/browse_streams.html) |
-
-
-- The [humpday](https://github.com/microprediction/humpday) package serves up global derivative-free optimizers in canonical form, and also computes [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) as a rough guide.   
-
-- The [precise](https://github.com/microprediction/precise) package is new, and follows the style of timemachines. It supplies a plurality of methods for online covariance forecasting. Elo ratings are also produced, though not in HTML at time of writing. See the package.  
+| Global derivative-free optimization | [humpday](https://github.com/microprediction/humpday) |  [Optimizer Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) |  A mix of classic and new [objectives](https://github.com/microprediction/humpday/tree/main/humpday/objectives)      |
+| Covariance, precision, correlation prediction | [precise](https://github.com/microprediction/precise) | See [notebooks](https://github.com/microprediction/precise/tree/main/examples_colab_notebooks) | Stocks, timeseries residuals etc | 
 
 
 # The [microprediction.org](https://www.microprediction.org/) platform
