@@ -17,8 +17,11 @@ I maintain three benchmarking packages that aspire to make online autonomous cho
 
 - The [precise](https://github.com/microprediction/precise) package is new, and follows the style of timemachines. It supplies a plurality of methods for online covariance forecasting. Elo ratings are also produced, though not in HTML at time of writing. See the package.  
 
-### Microprediction TLDR: Let time-series algorithms come to you. 
+
+# The [www.microprediction.org](https://www.microprediction.org/) Platform
 I maintain a live platform matching time-series prediction to problems via a data interface. I am lazy so:
+
+### Microprediction TLDR: Let time-series algorithms come to you. 
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
