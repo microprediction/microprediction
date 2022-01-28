@@ -26,7 +26,7 @@ I maintain a live platform matching time-series prediction to problems via a dat
 - Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
 
 In this way I can:
- - Get live prediction of public data for free ("public" can be obscure)
+ - Get live prediction of public data for free (sometimes I make the "public" data obscure)
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.   
  - Sip pina coladas while the accuracy magically improves over time. 
   
