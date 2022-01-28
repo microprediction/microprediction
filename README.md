@@ -11,7 +11,10 @@ Open this ten line colab [notebook](https://github.com/microprediction/micropred
 
 I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. They help my company surf the open-source wave. 
 
-- In the case of  [timemachines](https://github.com/microprediction/timemachines) for time-series, many open-source methods are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
+| Topic                  | Package           | Elo ratings | Data sources | 
+|------------------------|-------------------|-------------|--------------| 
+| Univariate time-series | [timemachines](https://github.com/microprediction/timemachines)  | [Timeseries Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)  | [microprediction streams](https://www.microprediction.org/browse_streams.html) |
+
 
 - The [humpday](https://github.com/microprediction/humpday) package serves up global derivative-free optimizers in canonical form, and also computes [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) as a rough guide.   
 
