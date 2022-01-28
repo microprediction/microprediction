@@ -11,6 +11,15 @@ Open this colab [notebook](https://github.com/microprediction/microprediction/bl
 
 I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST).  
 
+# [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), [HumpDay](https://github.com/microprediction/precis) packages 
+
+I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
+[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
+
+The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
+
+The (new) [precise](https://github.com/microprediction/precise) package supplies a plurality of benchmarked methods for online covariance forecasting. 
+
 ### Microprediction TLDR: Let time-series algorithms come to you. 
 I am lazy so:
 
@@ -41,15 +50,6 @@ The [client](https://github.com/microprediction/microprediction) assists use of 
 
 Someone wanting something predicted performs A, B and D. Someone providing predictions performs A and C (mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)).   
 
-
-# [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), [HumpDay](https://github.com/microprediction/precis) benchmarking 
-
-I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
-[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
-
-The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
-
-The (new) [precise](https://github.com/microprediction/precise) package supplies a plurality of benchmarked methods for online covariance forecasting. 
 
 # MUID and micrprediction platform related repos
 
