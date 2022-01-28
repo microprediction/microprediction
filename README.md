@@ -9,8 +9,7 @@ Open this colab [notebook](https://github.com/microprediction/microprediction/bl
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. The timemachines package provides autonomous time-series prediction algorithms in a simple functional form. They are benchmarked using a subset of the 
-[microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
+I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. In the case of time-series, they are benchmarked using a subset of the [microprediction streams](https://www.microprediction.org/browse_streams.html) and thus, [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) are published. 
 
 The [humpday](https://github.com/microprediction/humpday) package serves derivative-free optimizers in canonical form, with [Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html).  
 
