@@ -4,8 +4,8 @@
 Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction), [precise](https://github.com/microprediction/precise), [m6](https://github.com/microprediction/m6) or 
 [timemachines](https://github.com/microprediction/timemachines)? Github made this a user page so hi, this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I run a slack channel for those interested in open-source time-series prediction ([invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)) and informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST). If that link requires an email domain, it has expired so DM [me](https://www.linkedin.com/petercotton) on Linked-In for an invite.  
 
-### Microprediction quick start
-Open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it.
+### TLDR
+Oh fine just open this colab [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. You'd have to be pretty thick not to grok microprediction after doing that. 
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
