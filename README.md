@@ -49,20 +49,25 @@ The [client](https://github.com/microprediction/microprediction) assists use of 
 Someone wanting something predicted performs A, B and D. Someone providing predictions performs A and C (mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)).   
 
 
-# MUID and micrprediction platform related repos
+# [Memorable Unique Identifiers](https://github.com/microprediction/muid) and micrprediction platform related repos
 
-- The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413)).
-- [microconventions](https://github.com/microprediction/microconventions) - common to client and server (may answer many of your questions). 
-- [rediz](https://github.com/microprediction/rediz) - Microprediction server side code, for the brave. 
-- Other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
+- The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
+- [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
+- [rediz](https://github.com/microprediction/rediz) is thes erver side code, for now, although there's a new version on the way that is cleaner. 
+- There are other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
 
-# Some of my other repos 
+# Some of my other packages: 
 
 - [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability. 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
+
+# For football fans
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
-- [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations. 
+
+# For M6 participants
+
+- [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. There are some other resources there although you might be better served by [precise](https://github.com/microprediction/precise). Good luck. 
 
 # Microprediction versus TimeMachines
 
