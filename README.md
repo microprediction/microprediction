@@ -11,11 +11,11 @@ Open this ten line colab [notebook](https://github.com/microprediction/micropred
 
 I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. They help my company surf the open-source wave. 
 
-| Topic                  | Package           | Elo ratings | Data sources | 
-|------------------------|-------------------|-------------|--------------| 
-| Univariate time-series | [timemachines](https://github.com/microprediction/timemachines)  | [Timeseries Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html)  | [microprediction streams](https://www.microprediction.org/browse_streams.html) |
-| Global derivative-free optimization | [humpday](https://github.com/microprediction/humpday) |  [Optimizer Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) |  A mix of classic and new [objectives](https://github.com/microprediction/humpday/tree/main/humpday/objectives)      |
-| Covariance, precision, correlation prediction | [precise](https://github.com/microprediction/precise) | See [notebooks](https://github.com/microprediction/precise/tree/main/examples_colab_notebooks) | Stocks, timeseries residuals etc | 
+| Topic                  | Package           | Elo ratings | Methods | Data sources | 
+|------------------------|-------------------|-------------|---------|--------------| 
+| Univariate time-series | [timemachines](https://github.com/microprediction/timemachines)  | [Timeseries Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) | Most popular packages [list](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters) | [microprediction streams](https://www.microprediction.org/browse_streams.html) |
+| Global derivative-free optimization | [humpday](https://github.com/microprediction/humpday) |  [Optimizer Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) | Most popular packages [list](https://github.com/microprediction/humpday/tree/main/humpday/optimizers) | A mix of classic and new [objectives](https://github.com/microprediction/humpday/tree/main/humpday/objectives)      |
+| Covariance, precision, correlation prediction | [precise](https://github.com/microprediction/precise) | See [notebooks](https://github.com/microprediction/precise/tree/main/examples_colab_notebooks) | See [notebook](https://github.com/microprediction/precise/blob/main/examples_colab_notebooks/list_all_cov_methods.ipynb) |Stocks, timeseries residuals etc | 
 
 
 # The [microprediction.org](https://www.microprediction.org/) platform
