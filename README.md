@@ -48,7 +48,7 @@ The [client](https://github.com/microprediction/microprediction) assists use of 
 Someone wanting something predicted performs A, B and D. Someone providing predictions performs A and C (mindful of the reward mechanism explained in [Collective Distributional Prediction](https://www.microprediction.com/blog/intro)).   
 
 
-# [Memorable Unique Identifiers](https://github.com/microprediction/muid) and micrprediction platform related repos
+# [Memorable Unique Identifiers](https://github.com/microprediction/muid) and other platform repos
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
