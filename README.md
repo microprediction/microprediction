@@ -66,11 +66,10 @@ Someone wanting something predicted performs A, B and D. Someone providing predi
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 
-# For football fans
+For (American) football fans
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 
-# For M6 participants
-
+For M6 competitors:
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. There are some other resources there although you might be better served by [precise](https://github.com/microprediction/precise). Good luck. 
 
 # Microprediction versus TimeMachines
