@@ -57,7 +57,7 @@ Someone wanting something predicted performs A, B and D. Someone providing predi
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
-- [rediz](https://github.com/microprediction/rediz) is thes erver side code, for now, although there's a new version on the way that is cleaner. 
+- [rediz](https://github.com/microprediction/rediz) contains server side code. For the brave. 
 - There are other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
 
 # Some of my other packages: 
