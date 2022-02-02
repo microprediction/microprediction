@@ -87,7 +87,7 @@ See also [README_EXAMPLES.md](https://github.com/microprediction/microprediction
 
 ### Class Hierarchy 
 
-Use [MicroReader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key (or pull [directly](https://www.microprediction.com/public-api)).     
+Use [MicroReader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py) if you just need to get data and don't care to use a key..     
 
     MicroReader
        |
@@ -95,7 +95,9 @@ Use [MicroReader](https://github.com/microprediction/microprediction/blob/master
        |                                   |
     MicroPoll                         MicroCrawler
     (feed creator)               (self-navigating algorithm)
-                
+             
+You can pull most data [directly](https://www.microprediction.com/public-api), by the way, without a key. 
+             
 ### Scheduled submissions versus "crawling"
 The [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) class can publish data or submit predictions. However if you intend to run a continuous process you might consider the [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) class or its derivatives. 
 
