@@ -8,7 +8,7 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages that aspire to make online autonomous choice of methods more convenient. They help my company surf the open-source wave. 
+I maintain three benchmarking packages to surf the open-source wave. They aspire to advance online autonomous prediction. 
 
 | Topic                  | Package           | Elo ratings | Methods | Data sources | 
 |------------------------|-------------------|-------------|---------|--------------| 
