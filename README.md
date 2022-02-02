@@ -30,7 +30,7 @@ In this way I can:
  - Sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
   
 ### Wanna use it? 
-Knock yourself out. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. 
+Knock yourself out. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. There are even [video instructions](https://www.microprediction.com/python-4).  
 
 ### Wanna make it better?
 
