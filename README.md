@@ -11,7 +11,7 @@ If the Slack invite requires an email domain, it has expired so DM [me](https://
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages to try to surf the Python open-source wave. 
+I maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
 
 | Topic                  | Package           | Elo ratings | Methods | Data sources | 
 |------------------------|-------------------|-------------|---------|--------------| 
