@@ -7,7 +7,7 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages to surf the open-source wave. 
+I maintain three benchmarking packages to try to surf the Python open-source wave. 
 
 | Topic                  | Package           | Elo ratings | Methods | Data sources | 
 |------------------------|-------------------|-------------|---------|--------------| 
