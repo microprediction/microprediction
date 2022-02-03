@@ -26,7 +26,8 @@ I maintain a *live platform* where distributional time-series prediction algorit
 In this way I can:
  - Get live prediction of public data for free (sometimes I make the "public" data obscure)
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.   
- - Sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
+
+I then sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
   
 ### Wanna use it? 
 Knock yourself out. My company funds the platform because algorithms that help solve your problem might also help solve mine. The marginal cost of their doing so is tiny. There are even [video instructions](https://www.microprediction.com/python-4).  
