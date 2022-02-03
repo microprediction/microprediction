@@ -3,7 +3,7 @@
 
 ### TLDR: Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. 
 
-Looking for [microprediction](https://github.com/microprediction/microprediction/tree/master/microprediction) client? 
+Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction)?
 
 Github made this a "user page" so hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I work in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). I run a slack channel for those interested in collective open-source time-series, covariance prediction, and optimization (here's the [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-11qt4brxu-6C~rPuUifALpXsvtN4SweA)). We have very informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST usually). 
 
