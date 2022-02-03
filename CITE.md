@@ -27,3 +27,12 @@ or
            author = {Peter Cotton},
            url = {https://github.com/microprediction/timemachines}
        }
+       
+or 
+ 
+        @electronic{cottonprecise,
+           title = {{Precise: A Python Package for Streaming Covariance Prediction}},
+           year = {2022},
+           author = {Peter Cotton},
+           url = {https://github.com/microprediction/precise}
+       }
