@@ -1,7 +1,6 @@
 
 # Cite 
 
-
      @book{cotton2022,
        title     = "Microprediction. Building an Open AI Network.",
        author    = "Cottom, Peter",
@@ -36,3 +35,5 @@ or
            author = {Peter Cotton},
            url = {https://github.com/microprediction/precise}
        }
+       
+  or one of my [papers](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). Thanks. 
