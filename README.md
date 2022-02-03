@@ -7,7 +7,7 @@ Looking for [microprediction](https://github.com/microprediction/microprediction
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
 
-I maintain three benchmarking packages to surf the open-source wave. They aspire to advance online autonomous prediction. 
+I maintain three benchmarking packages to surf the open-source wave. 
 
 | Topic                  | Package           | Elo ratings | Methods | Data sources | 
 |------------------------|-------------------|-------------|---------|--------------| 
@@ -15,6 +15,7 @@ I maintain three benchmarking packages to surf the open-source wave. They aspire
 | Global derivative-free optimization | [humpday](https://github.com/microprediction/humpday) |  [Optimizer Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) | Most popular packages ([list](https://github.com/microprediction/humpday/tree/main/humpday/optimizers)) | A mix of classic and new [objectives](https://github.com/microprediction/humpday/tree/main/humpday/objectives)      |
 | Covariance, precision, correlation | [precise](https://github.com/microprediction/precise) | See [notebooks](https://github.com/microprediction/precise/tree/main/examples_colab_notebooks) | See [notebook](https://github.com/microprediction/precise/blob/main/examples_colab_notebooks/list_all_cov_methods.ipynb) |Stocks, timeseries residuals etc | 
 
+These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
 # The [microprediction.org](https://www.microprediction.org/) platform
 I maintain a *live platform* where distributional time-series prediction algorithms (Python, R, Julia mostly) duke it out. 
