@@ -18,7 +18,7 @@ I maintain three benchmarking packages to try to surf the Python open-source wav
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
 # The [microprediction.org](https://www.microprediction.org/) platform
-I maintain a *live platform* where distributional time-series prediction algorithms (Python, R, Julia mostly) duke it out. 
+I also maintain a *live platform* where distributional time-series prediction algorithms (Python, R, Julia mostly) duke it out. 
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
