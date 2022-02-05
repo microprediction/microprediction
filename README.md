@@ -9,7 +9,7 @@ Github made this a "user page" so hi this is my [dog](https://i.imgur.com/2E3psk
 
 If the Slack invite requires an email domain, it has expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In for a new one. 
 
-# The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/precis) packages 
+# The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
 I maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
 
