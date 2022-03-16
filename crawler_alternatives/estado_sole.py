@@ -4,6 +4,9 @@ try:
 except:
     WRITE_KEY=None
 
+# Becomma Cat is similar
+    
+    
 # Step 2: Instantiate writer
 from microprediction import MicroWriter
 mw = MicroWriter(write_key=WRITE_KEY)
