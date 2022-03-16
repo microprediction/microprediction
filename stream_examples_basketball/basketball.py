@@ -1,4 +1,4 @@
-# Example of using MultiPoll
+# Example of using PandasLoop
 # Loops over pre-canned data in a dataframe
 # Each column is a different stream (max 10 columns)
 

@@ -4,6 +4,8 @@ import time
 from apscheduler.schedulers.blocking import BlockingScheduler
 from pprint import pprint
 import datetime
+import threading
+import schedule
 
 
 class MicroPoll(MicroWriter):
@@ -107,7 +109,11 @@ class MicroPoll(MicroWriter):
                 else:
                     print('Did not find MUID this time', flush=True)
 
-    def run(self):
+    def run_with_blocking_scheduler(self):
+        """
+          The old way. However this scheduler creates some problems so we are trying
+          schedule instead, for now.
+        """
         data = {'type': 'scheduler', 'scheduler start time': time.time()}
         data.update(self.__repr__())
         self.logger(data=data)
@@ -118,6 +124,33 @@ class MicroPoll(MicroWriter):
         except (KeyboardInterrupt, SystemExit):
             pass
         data.update({'stopping time':time.time()})
+        self.logger(data=data)
+
+
+    def run(self, persist=False):
+        """
+             Use the schedule package
+        """
+        data = {'type': 'scheduler', 'scheduler start time': time.time()}
+        data.update(self.__repr__())
+        self.logger(data=data)
+
+        def job():
+            self.task()
+
+        def run_threaded(job_func):
+            job_thread = threading.Thread(target=job_func)
+            job_thread.start()
+
+        schedule.every(self.interval).minutes.do(run_threaded, job)
+        workin = True
+        while workin or persist:
+            try:
+                schedule.run_pending()
+            except Exception as e:
+                workin = False
+
+        data.update({'stopping time': time.time()})
         self.logger(data=data)
 
 

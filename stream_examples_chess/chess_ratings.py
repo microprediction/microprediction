@@ -2,14 +2,12 @@ import os
 from getjson import getjson
 from microprediction import MicroWriter
 
-# See https://github.com/microprediction/chess/blob/main/set.py for a more up to date version of this file.
+# This is a 'bare-bones' example of using mw.set
+# You might also consider use of ChangePoll or Poll, as per https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_deltas_change_poll.py
 
-import os
-from getjson import getjson
-from microprediction import MicroWriter
 
 write_key = os.environ.get(
-    'WRITE_KEY')  # GitHub action needs to set env variable. You need to create a GitHub secret called WRITE_KEY
+    'WRITE_KEY')  # Or get your key somehow. See https://www.microprediction.com/private-keys
 mw = MicroWriter(write_key=write_key)
 assert mw.key_difficulty(mw.write_key) >= 12, "You need a key of difficulty 12 to create a stream"
 

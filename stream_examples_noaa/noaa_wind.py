@@ -9,6 +9,14 @@ import time
 import random
 from microprediction import MicroWriter
 
+
+# Example of a one-off grab of data, and subsequent publishing to api.microprediction.org, in a rather manual way
+# You might also consider MicroPoll, or cousins, which obviate most of this boilerplate
+# (https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live_micro_poll.py)
+
+
+
+
 mw = MicroWriter(write_key=HAMOSE_CHEETAH)
 assert mw.key_difficulty(mw.write_key)>=13, "You need a key of difficulty 13 for copula streams"
 mw.set_repository(url='https://github.com/microprediction/microprediction/blob/master/microprediction/live/noaa_wind.py') # courtesy
