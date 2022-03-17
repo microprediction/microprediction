@@ -4,6 +4,8 @@ from microprediction.polling import MultiChangePoll
 from microprediction.live.iex import iex_latest_prices
 import math
 import numpy as np
+import os
+import json
 
 
 # Creates a collection of streams related to stocks and portfolios of the same
@@ -26,13 +28,21 @@ def weights_from_comb(c):
     return w
 
 
-def name_from_comb(c):
+def readable_weights_from_comb(c):
+    w = weights_from_comb(c)
+    return 'Portfolio comprising '+', '.join( [ str(round(wi*100,0))+'% '+ticker for wi,ticker in zip(w,FAANG)])
+
+
+def gnaff_name(c):
     return 'gnaaf_'+''.join([ str(cj) for cj in c]) + '.json'
 
 
-comb_weights_names = [ (c, weights_from_comb(c), name_from_comb(c)) for c in comb ]
-GNAAF = [ name_from_comb(c) for c in comb]
+comb_weights_names = [(c, weights_from_comb(c), gnaff_name(c)) for c in comb]
+GNAAF = [gnaff_name(c) for c in comb]
+GNAAF_LISTING = dict( [ ( readable_weights_from_comb(c), 'https://www.microprediction.org/stream_dashboard.html?stream='+gnaff_name(c).replace('.json','')) for c in comb] )
 
+faang_names = ['faang_' + str(k) + '.json' for k, ticker in enumerate(TICKERS)]
+names = faang_names + GNAAF
 
 def scaled_log_faang():
     sp = iex_latest_prices(tickers=FAANG, api_key=IEX_KEY)
@@ -54,9 +64,21 @@ def change_func(changes):
     return [scaled_portfolio_return(changes,w) for _,w,_ in comb_weights_names ]
 
 
+def create_listing_file():
+    from microprediction.whereami import ROOT
+    fn = os.path.join(ROOT, 'stream_examples_faang', 'stream_list.json')
+
+    with open(fn,'wt') as fh:
+        json.dump(GNAAF_LISTING,fh)
+
+
+
+
 if __name__=='__main__':
-    faang_names = [ 'faang_'+str(k)+'.json' for k,ticker in enumerate(TICKERS) ]
-    names = faang_names + GNAAF
+    from pprint import pprint
+    create_listing_file()
+
+
 
     mcp = MultiChangePoll(write_key=WRITE_KEY, names = names, interval=5, func=scaled_log_faang, with_copulas=False,
                           change_func=change_func)
