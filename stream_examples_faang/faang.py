@@ -44,8 +44,8 @@ def scaled_portfolio_return(changes, w:[float]):
        Compute scaled portfolio log changes from scaled asset log changes
     """
     w = np.array(w)/np.sum(w)   # Ensure weights normalized
-    f = np.exp( changes/1000.)  # Multiplicative increase in wealth
-    w_post = np.inner( w, f)    # Posterior unit portfolio wealth
+    f = np.exp( np.array(changes)/1000.)  # Multiplicative increase in wealth
+    w_post = float( np.inner( w, f) )    # Posterior unit portfolio wealth
     change = 1000*math.log( w_post )
     return change
 
@@ -55,7 +55,7 @@ def change_func(changes):
 
 
 if __name__=='__main__':
-    faang_names = [ 'faang_'+ticker+'.json' for ticker in TICKERS ]
+    faang_names = [ 'faang_'+str(k)+'.json' for k,ticker in enumerate(TICKERS) ]
     names = faang_names + GNAAF
 
     mcp = MultiChangePoll(write_key=WRITE_KEY, names = names, interval=5, func=scaled_log_faang, with_copulas=False,
