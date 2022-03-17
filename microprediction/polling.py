@@ -42,9 +42,9 @@ class MicroPoll(MicroWriter):
     def __init__(self, name, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, mine= False, **kwargs):
         """  Create a stream by polling every 20 minutes, say
             param: name  str   stream name ending in .json
-            func:        function    returns float  (data feed function)
+            get_iex_realtime_price:        function    returns float  (data feed function)
             interval:    int     minutes between polls
-            func_args    dict    optional dict of arguments to be passed to func
+            func_args    dict    optional dict of arguments to be passed to get_iex_realtime_price
             mine:        bool    Supply mine=True if you want to automatically mine MUIDs to help keep the stream alive
         """
         assert self.is_valid_name(name),'name not valid'
@@ -61,7 +61,7 @@ class MicroPoll(MicroWriter):
         print('Created poller. Example value '+str(self.test_value))
 
     def __repr__(self):
-        self_data= {'func':str(self.func),'interval':self.interval,'mining_time':self.mining_time}
+        self_data= {'get_iex_realtime_price':str(self.func),'interval':self.interval,'mining_time':self.mining_time}
         if self.func_args is not None:
             self_data.update(self.func_args)
         return self_data
@@ -149,6 +149,7 @@ class MicroPoll(MicroWriter):
                 schedule.run_pending()
             except Exception as e:
                 workin = False
+            time.sleep(1)
 
         data.update({'stopping time': time.time()})
         self.logger(data=data)
@@ -210,7 +211,7 @@ class MultiPoll(MicroPoll):
 
     # -------------------------------------------
     #  You may wish to override this method if the
-    #  data retrieval function func() you provide
+    #  data retrieval function get_iex_realtime_price() you provide
     #  does not return [ float ] or [ str ] that is
     #  convertable to float
     # --------------------------------------------
@@ -218,7 +219,7 @@ class MultiPoll(MicroPoll):
     def determine_next_values(self, source_values):
         """ Should receive raw source data and decides what to send, if anything
 
-            :param source_values   [ float ] or whatever type is returned by self.func. Simplest would be [ float ]
+            :param source_values   [ float ] or whatever type is returned by self.get_iex_realtime_price. Simplest would be [ float ]
             :returns  [ float ]  or None
         """
 
@@ -234,9 +235,9 @@ class MultiPoll(MicroPoll):
     def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None, with_copulas=False, secondary_func=None, secondary_func_args=None, **kwargs):
             """  Create a stream by polling every 20 minutes, say
                 param: names  [ str ]    stream name ending in .json
-                func:        function    returns raw data from some live source, ideally [ float ] but you can override determine_next_values method
+                get_iex_realtime_price:        function    returns raw data from some live source, ideally [ float ] but you can override determine_next_values method
                 interval:    int         minutes between polls
-                func_args    dict        optional dict of arguments to be passed to func
+                func_args    dict        optional dict of arguments to be passed to get_iex_realtime_price
 
             """
             assert all( [ self.is_valid_name(name) for name in names]), 'name not valid'
@@ -267,7 +268,7 @@ class MultiPoll(MicroPoll):
                      'next_values': next_values,
                      'elapsed after polling': time.time() - start_time})
 
-        # Update the values with secondary func
+        # Update the values with secondary get_iex_realtime_price
         if (self.secondary_func is not None) and (next_values is not None):
             send_values = self.apply_secondary_func(next_values)
         else:
@@ -301,9 +302,9 @@ class MultiChangePoll(MultiPoll):
             """  Create multiple streams by polling every 20 minutes, say
                 param:
                 names        [ str ]    stream name ending in .json
-                func:        function    returns data from some live source, ideally [ float ] but you can override determine_next_values method
+                get_iex_realtime_price:        function    returns data from some live source, ideally [ float ] but you can override determine_next_values method
                 interval:    int         minutes between polls
-                func_args    dict        optional dict of arguments to be passed to func
+                func_args    dict        optional dict of arguments to be passed to get_iex_realtime_price
                 with_copulas bool        Whether to create derived copula streams, or just individual unrelated streams
                 change_func              Function acting directly on a list of value changes
                 change_func_args         Additional argument to change function

@@ -53,8 +53,8 @@ class LossDist(DistMachine):
 
                 state         set initial state
                 params        set params
-                pre_getter    func( state, value, machine=None ) -> any   Before .update() called
-                post_getter   func( state, value, machine=None ) -> any   After  .update() called
+                pre_getter    get_iex_realtime_price( state, value, machine=None ) -> any   Before .update() called
+                post_getter   get_iex_realtime_price( state, value, machine=None ) -> any   After  .update() called
                 returns: [ pre_getter(), post_getter(), pre_getter(),... ] but omits if None
         """
         saved_params = deepcopy(self.params)
