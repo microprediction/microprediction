@@ -17,7 +17,7 @@ from microprediction.univariate.arrivals import approx_dt
 
 
 # --------------------------------------------------------------------------
-#            Empirical discretization
+#            Empirical discretization and basic utilities
 # --------------------------------------------------------------------------
 
 def implied_lattice(lagged_values):
@@ -48,9 +48,38 @@ def project_on_lagged_lattice(values, lagged_values):
     return nearest
 
 
+def center_values_list(values, new_mean=None):
+    if (new_mean is not None):
+        prior_mean = np.nanmean(values)
+        values = [v + new_mean - prior_mean for v in values]
+    return values
+
+
+def scale_values_list(values, new_std=None):
+    if (new_std is not None) and (new_std > 0):
+        prior_std = np.nanstd(values)
+        prior_mean = np.nanmean(values)
+        values = [(v - prior_mean) * (new_std / prior_std) + prior_mean for v in values]
+    return values
+
+
+def center_and_scale_values_list(values, new_mean=None, new_std=None):
+    """
+       Shift mean and/or adjust std
+    """
+    return scale_values_list(center_values_list(values=values, new_mean=new_mean), new_std=new_std)
+
 # --------------------------------------------------------------------------
 #          Recency bootstrappy things
 # --------------------------------------------------------------------------
+
+
+def exponential_bootstrap_projected(lagged_values, decay, num, as_process=None, new_mean=None, new_std=None):
+    """ Returns bootstrampped samples taking values only on lattice implied by history """
+    values = exponential_bootstrap(lagged=lagged_values, decay=decay, num=num, as_process=as_process)
+    values = center_and_scale_values_list(values=values, new_mean=new_mean, new_std=new_std)
+    return project_on_lagged_lattice(values=values, lagged_values=lagged_values)
+
 
 def exponential_bootstrap(lagged, decay, num, as_process=None):
     as_process = as_process or is_process(lagged)
@@ -96,23 +125,24 @@ def normal_sample_projected(prediction_mean: float, prediction_std: float, num: 
 #           Gaussian implied by lagged values
 # --------------------------------------------------------------------------
 
-def gaussian_samples(lagged, num, as_process=None):
-    as_process = as_process or is_process(lagged)
-    return diff_gaussian_samples(lagged=lagged, num=num) if as_process else independent_gaussian_samples(lagged=lagged,
-                                                                                                         num=num)
+def gaussian_samples(lagged_values, num, as_process=None):
+    as_process = as_process or is_process(lagged_values)
+    return diff_gaussian_samples(lagged_values=lagged_values, num=num) if as_process else independent_gaussian_samples(
+        lagged_values=lagged_values,
+        num=num)
 
 
-def independent_gaussian_samples(lagged, num):
-    shrunk_std = np.nanstd(list(lagged) + [0.01, -0.01])
-    shrunk_mean = np.nanmean(lagged + [0.0])
+def independent_gaussian_samples(lagged_values, num):
+    shrunk_std = np.nanstd(list(lagged_values) + [0.01, -0.01])
+    shrunk_mean = np.nanmean(lagged_values + [0.0])
     return normal_sample_projected(prediction_mean=shrunk_mean, prediction_std=shrunk_std, num=num)
 
 
-def diff_gaussian_samples(lagged, num):
+def diff_gaussian_samples(lagged_values, num):
     """ Samples from differences """
-    safe_diff_lagged = np.diff(list(lagged) + [0., 0.])
-    diff_samples = independent_gaussian_samples(lagged=safe_diff_lagged, num=num)
-    return [lagged[0] + dx for dx in diff_samples]
+    safe_diff_lagged = np.diff(list(lagged_values) + [0., 0.])
+    diff_samples = independent_gaussian_samples(lagged_values=safe_diff_lagged, num=num)
+    return [lagged_values[0] + dx for dx in diff_samples]
 
 
 # --------------------------------------------------------------------------
@@ -120,7 +150,7 @@ def diff_gaussian_samples(lagged, num):
 # --------------------------------------------------------------------------
 
 
-def fox_sample(lagged_values, lagged_times, delay, num, name, as_process=None):
+def fox_sample(lagged_values, lagged_times, delay, num, name, as_process=None, new_mean=None, new_std=None):
     " Elementary but not completely woeful sampler, used by Malaxable Fox"
     dt = approx_dt(lagged_times)
     lag = max(10, math.ceil(delay / dt))
@@ -146,6 +176,8 @@ def fox_sample(lagged_values, lagged_times, delay, num, name, as_process=None):
             # Too many rounded down ... may not be discrete
             abs_values = exponential_bootstrap(lagged=lagged_values, decay=0.1, num=num, as_process=True)
         ret_values = StatsConventions.nudged(project_on_lagged_lattice(values=abs_values, lagged_values=lagged_values))
+
+    ret_values = center_and_scale_values_list(values=ret_values, new_mean=new_mean, new_std=new_std)
 
     return ret_values
 

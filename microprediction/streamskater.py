@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from microprediction.crawler import MicroCrawler
 from microprediction.univariate.arrivals import approx_dt
-from microprediction.samplers import normal_sample_projected, project_on_lagged_lattice
+from microprediction.samplers import normal_sample_projected, project_on_lagged_lattice, exponential_bootstrap_projected
 from microprediction.univariate.processes import k_std
 from microprediction.samplers import fox_sample
 import math
@@ -29,7 +29,7 @@ class StreamSkater(MicroCrawler):
 
     # Crawler utilizing the timemachines package
 
-    def __init__(self, f, n_warm:int=400, use_std=True, **kwargs):
+    def __init__(self, f, n_warm:int=400, use_mean=True, use_std=True, decay=0.01, **kwargs):
         """
             f         must be a "skater"
             n_warm    Number of historical data points to use the first time to warm up the skater
@@ -42,7 +42,9 @@ class StreamSkater(MicroCrawler):
         super().__init__(**kwargs)
         self.f = f
         self.n_warm = n_warm
+        self.use_mean = use_mean
         self.use_std = use_std
+        self.decay = decay
         self.stream_state = OrderedDict()
 
 
@@ -52,6 +54,7 @@ class StreamSkater(MicroCrawler):
     #                                               #
     #################################################
 
+
     def sample_using_point_estimate(self, x:float, x_std:float, k, name, delay, lagged_values, lagged_times):
         """ Create 225 samples guided by a point estimate, and a standard deviation
 
@@ -59,10 +62,12 @@ class StreamSkater(MicroCrawler):
               x_std  - standard deviation of point estimate
               returns [float]
 
-            By default this projects onto a lattice of values implied by the history
+            By default this rescales recency weighted points and then projects onto a lattice of values that is also implied by the history
         """
-        return normal_sample_projected(prediction_std=x, prediction_mean=x_std,
-                                       num=self.num_predictions, lagged_values=lagged_values)
+        new_mean = x if self.use_mean else None
+        new_std = x_std if self.use_std else None
+        return exponential_bootstrap_projected(lagged_values=lagged_values, decay=self.decay,
+                                       num=self.num_predictions, new_mean=new_mean, new_std=new_std)
 
 
     #####################################################
