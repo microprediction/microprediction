@@ -2,10 +2,10 @@
 # microprediction   ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction)?
 
-### Lucky you $$
+### Lucky you!
 Running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - but few know that. There's an even gentler introduction taking the form of a [colab notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) you can open and run now. 
 
-# Me and my [slack](https://join.slack.com/t/microprediction/shared_invite/zt-15mald9ph-oalX5h0wbKXRMdokGoPKZA)
+# [Me](https://www.linkedin.com/in/petercotton/) and my [slack](https://join.slack.com/t/microprediction/shared_invite/zt-15mald9ph-oalX5h0wbKXRMdokGoPKZA)
 Yeah this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) page. Github made this a "user page" so hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon. I'm dynamic and fascinating. Not really but I run a slack channel for those interested in collective open-source time-series, covariance prediction, and optimization (here's the [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-15mald9ph-oalX5h0wbKXRMdokGoPKZA)). Join the google meet Fri noon EST - see the slack. If the Slack invite requires an email domain, it has expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In for a new one. 
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
