@@ -14,6 +14,9 @@ Examples include:
  - [Healthy Eel](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/healthy_eel.py) stacked moving averages
  - [Scotale Bee](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/scotale_bee.py) stacked moving averages
  - [Smeech Clam](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/smeech_clam.py) statsmodels.tsa (3,0,1)
+ - [Cobego Bobcat](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/cobego_bobcat.py) 
+ - [Coecal Bobat](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/coecal_bobcat.py) ensemble of composed models 
+ - [Leachy Bobcat](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/leachy_bobcat.py) ensemble of models with high Elo ratings
 
 As you can see from these examples:
 - The timemachines forecasting packages allows you to use popular time series packages with one line of code, 
