@@ -29,7 +29,7 @@ Thus these skaters are quite terse. You can view [Elo ratings](https://micropred
 
 ### $ Equity streams $
 
-See [Secable Llama](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/secable_llama.py) for an example of how to 
+See [Datable Llama](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) for an example of how to 
 aim a skating crawler at equity market streams which have prize-money associated with them. 
 
 
