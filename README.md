@@ -1,7 +1,9 @@
 
 # microprediction   ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 
-### TLDR: Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. 
+### TLDR: You run python scripts and make way more than bitcoin mining
+Open this [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it. 
+Or read this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py), modify and run it. 
 
 Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction)?
 
