@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from microprediction.crawler import MicroCrawler
 from microprediction.univariate.arrivals import approx_dt
-from microprediction.samplers import normal_sample_projected, project_on_lagged_lattice, exponential_bootstrap_projected
+from microprediction.samplers import normal_sample_projected, project_on_lagged_lattice, exponential_bootstrap_projected, center_and_scale_values_list
 from microprediction.univariate.processes import k_std
 from microprediction.samplers import fox_sample
 import math
@@ -15,6 +15,7 @@ from microconventions.stats_conventions import evenly_spaced_percentiles, nudged
 # at https://www.microprediction.com/fitcrawler
 
 MAX_SKATER_K = 30
+
 
 def split_k(approx_k:float):
     """ Represent a float 'k' as weighted combination of two integer ks  """
@@ -31,13 +32,15 @@ class StreamSkater(MicroCrawler):
 
     def __init__(self, f, n_warm:int=400, use_mean=True, use_std=True, decay=0.01, **kwargs):
         """
-            f         must be a "skater"
+            f         A "skater" https://github.com/microprediction/timemachines
             n_warm    Number of historical data points to use the first time to warm up the skater
-            use_std   If True, we use the model standard deviation. If False, a simple estimate is preferred.
-                      Be aware that some models from the timemachines package give dubious std error estimates.
+            use_mean  If True, the mean of samples matches the skater estimate prior to any lattice projection
+            use_std   If True, we use the model standard deviation.
+                        (Be aware that some models from the timemachines package give dubious std error estimates)
 
-        See https://github.com/microprediction/timemachines for explanation of "skaters", which are
-        sequential online k-step ahead forecasting functions.
+        See https://github.com/microprediction/timemachines for explanation of "skaters"
+        A skater is a sequential online k-step ahead forecasting function.
+        The timemachines package contains dozens of skaters, any one of which might be used here.
         """
         super().__init__(**kwargs)
         self.f = f
@@ -72,8 +75,8 @@ class StreamSkater(MicroCrawler):
 
     #####################################################
     #                                                   #
-    #   You'll likely not need to override this ...     #
-    #                                                   #
+    #   You'll likely NOT need to override this ...     #
+    #       (just skater maintenance)                   #
     #####################################################
 
     def sample(self, lagged_values, lagged_times=None, name=None, delay=None, **ignored):
@@ -139,7 +142,17 @@ class StreamSkater(MicroCrawler):
         return self.sample_using_point_estimate(x=x_interp, x_std=x_std_interp, k=high_k, name=name, delay=delay, lagged_values=lagged_values, lagged_times=lagged_times)
 
 
+
+#################################################
+#                                               #
+#   And now for examples ...                  #
+#                                               #
+#################################################
+
+
 class SkatingFox(StreamSkater):
+
+    # Shows how to swap out the default method of creating 225 guesses from x, x_std skater predictions
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -161,6 +174,8 @@ class SkatingFox(StreamSkater):
 
 class ChoosySkatingFox(SkatingFox):
 
+    # Illustrates how to direct a StreamSkater to particular streams
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -171,3 +186,19 @@ class ChoosySkatingFox(SkatingFox):
     def include_delay(self, delay=None, name=None, **ignore):
         # Example of influencing choice of horizons to predict
         return delay < 10*60
+
+
+class RegularFaangStreamSkater(StreamSkater):
+
+    # In particular ... this one hits regular streams only for the longest two horizons
+
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
+
+    def include_stream(self, name=None, **ignore):
+        return ('~' not in name) and (('faang' in name) or ('gnaaf' in name))
+
+    def include_delay(self, delay=None, name=None, **ignore):
+        # Example of influencing choice of horizons to predict
+        # We skip the shortest horizons
+        return delay > self.DELAYS[1]
