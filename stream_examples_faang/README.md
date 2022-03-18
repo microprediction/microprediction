@@ -1,4 +1,4 @@
-See [stream list.json](https://raw.githubusercontent.com/microprediction/microprediction/master/stream_examples_faang/stream_list.json)
+Raw [stream list.json](https://raw.githubusercontent.com/microprediction/microprediction/master/stream_examples_faang/stream_list.json) provides links. 
 
 ## MultiChangePoll
 
