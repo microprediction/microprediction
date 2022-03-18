@@ -5,7 +5,7 @@ Looking for the microprediction [client](https://github.com/microprediction/micr
 ### Lucky you
 Running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - but few know that.   
 
-If you're a notebook person, fine, open [this notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) and run it on Google's dime. You won't win money but you'll instantly grok what is going on here. 
+(Prefer a [colab notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb)?)
 
 # Me 
 Yeah this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) page. Github made this a "user page" so hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). I'm dynamic and fascinating. I run a slack channel for those interested in collective open-source time-series, covariance prediction, and optimization (here's the [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-13k1xuwlj-Bmq~h2utrLlKW5jlqFzzlA)). We have very informal Google Meets twice a week announced in the Slack (Tue 8pm and Fri noon EST usually). If the Slack invite requires an email domain, it has expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In for a new one. 
