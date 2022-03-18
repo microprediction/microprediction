@@ -18,7 +18,7 @@
 #                 grabs lagged data values using api.microprediction.org
 #                      submits 225 guesses of future values
 #
-# A sentient data scientist can also improve the accuracy of the predictions, naturally.
+# A sentient data scientist can also improve the accuracy of the predictions, naturally, and make even more money. 
 
 
 # Step 0: Modify these
