@@ -5,9 +5,10 @@ from microprediction.streamskater import StreamSkater
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 
 try:
-    from timemachines.skaters.simple.movingaverage import precision_ema_ensemble as f
+    from timemachines.skaters.simple.hypocraticensemble import slow_precision_ema_ensemble as f
 except ImportError:
     print('pip install timemachines')
+    raise EnvironmentError
 
 if __name__=='__main__':
     skater = StreamSkater(write_key=WRITE_KEY, f=f, use_std=True, max_active=1000)
