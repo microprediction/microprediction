@@ -6,6 +6,7 @@ from microprediction.univariate.processes import k_std
 from microprediction.samplers import fox_sample
 import math
 import numpy as np
+from pprint import pprint
 
 from microconventions.stats_conventions import evenly_spaced_percentiles, nudged
 
@@ -13,9 +14,11 @@ from microconventions.stats_conventions import evenly_spaced_percentiles, nudged
 # get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
 # at https://www.microprediction.com/fitcrawler
 
+MAX_SKATER_K = 30
 
 def split_k(approx_k:float):
     """ Represent a float 'k' as weighted combination of two integer ks  """
+    approx_k = min(MAX_SKATER_K-0.1, approx_k)
     l = math.floor(approx_k)
     u = math.ceil(approx_k)
     r = approx_k - l
@@ -85,7 +88,8 @@ class StreamSkater(MicroCrawler):
             # Initialize lookups from delay to steps ahead
             state['dt'] = approx_dt(lagged_times)
             state['lookup'] = dict([(dly, split_k( max(1,0.1+dly / (0.01 + state['dt']))-1)) for dly in self.DELAYS])
-            state['k'] = int( math.ceil( (self.DELAYS[-1]+1.0)/state['dt'] ) )  # max k
+            max_k = max( [ spl[1][0] for k, spl in state['lookup'].items() ]) + 1
+            state['k'] = max_k  # max k
 
         # Determine which observations are yet to be processed by the skater
         if state['t'] is None:
@@ -105,8 +109,20 @@ class StreamSkater(MicroCrawler):
 
         # Interpolate point estimate and std errors
         (low_k,low_k_weight), (high_k, high_k_weight) = state['lookup'][delay]
-        x_interp = low_k_weight*state['x'][low_k] + high_k_weight*state['x'][high_k]
-        x_std_interp = low_k_weight*state['x_std'][low_k] + high_k_weight*state['x_std'][high_k]
+        try:
+            x_interp = low_k_weight*state['x'][low_k] + high_k_weight*state['x'][high_k]
+        except IndexError:
+            print('!!!!!!!!!!!!!!!!!!!!!!!!!')
+            print('Stream Skater interp failure')
+            flr = {'low_k':low_k,'high_k':high_k,'low_k_weight':low_k_weight,'high_k_weight':high_k_weight,
+                   'state[x]':state['x'],' len(state[x])':len(state['x']),'state':state}
+            pprint(flr)
+            x_interp = state['x'][low_k]
+
+        try:
+            x_std_interp = low_k_weight*state['x_std'][low_k] + high_k_weight*state['x_std'][high_k]
+        except IndexError:
+            x_std_interp = state['x_std'][low_k]
 
         # Save stream state for next invocation
         self.stream_state[name] = state
