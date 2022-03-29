@@ -126,11 +126,13 @@ class MicroPoll(MicroWriter):
         data.update({'stopping time':time.time()})
         self.logger(data=data)
 
-
-    def run(self, persist=False):
+    def run(self, persist=False, use_thread=False):
         """
-             Use the schedule package
+             Run task regularly
+             This will *not* run missed jobs
         """
+        import os
+        os.environ['GEVENT_SUPPORT']="1"
         data = {'type': 'scheduler', 'scheduler start time': time.time()}
         data.update(self.__repr__())
         self.logger(data=data)
@@ -142,7 +144,11 @@ class MicroPoll(MicroWriter):
             job_thread = threading.Thread(target=job_func)
             job_thread.start()
 
-        schedule.every(self.interval).minutes.do(run_threaded, job)
+        if use_thread:
+            schedule.every(self.interval).minutes.do(run_threaded, job)
+        else:
+            schedule.every(self.interval).minutes.do(job)
+
         workin = True
         while workin or persist:
             try:

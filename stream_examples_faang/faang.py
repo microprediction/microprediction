@@ -31,7 +31,8 @@ def change_func(changes:[float])->[float]:
 
 
 if __name__=='__main__':
-    mcp = MultiChangePoll(write_key=WRITE_KEY, names = NAMES, interval=10,
+    print(NAMES)
+    mcp = MultiChangePoll(write_key=WRITE_KEY, names = NAMES, interval=15,
                           func=func, with_copulas=False, change_func=change_func)
     mcp.set_repository('https://github.com/microprediction/microprediction/tree/master/stream_examples_stocks')
     mcp.run()

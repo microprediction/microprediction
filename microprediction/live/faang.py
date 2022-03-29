@@ -9,7 +9,7 @@ from microprediction.live.iex import iex_latest_prices
 
 
 FAANG_TICKERS = ['fb', 'aapl', 'amzn', 'nflx', 'googl']
-FAANG_NAMES = ['faang_' + ticker + '.json' for ticker in FAANG_TICKERS] # Stream names
+FAANG_NAMES = ['faang_' + str(k) + '.json' for k,ticker in enumerate(FAANG_TICKERS)] # Stream names
 N_FAANG = len(FAANG_TICKERS)
 FAANG_COMBINATIONS = list(combinations_with_replacement(range(N_FAANG), r=5))
 
