@@ -20,7 +20,7 @@ I maintain three benchmarking packages to help me, and maybe you, surf the open-
 
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
-# The [microprediction.org](https://www.microprediction.org/) [streams](https://www.microprediction.org/browse_streams.html) ($50,000 in prediction prizes)
+# The [microprediction.org](https://www.microprediction.org/) [streams](https://www.microprediction.org/browse_streams.html) ($50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily))
 I also maintain a *live exchange* where distributional time-series prediction algorithms (Python, R, Julia mostly) duke it out.  
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_live.py) say, and it
