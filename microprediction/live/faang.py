@@ -141,7 +141,7 @@ def naafg_community_portfolios(write_key)->[[float]]:
 if __name__=='__main__':
     create_listing_file()
     from microprediction.config_private import LEGLESS_OCELOT
-    ports = gnaff_community_portfolios(write_key=LEGLESS_OCELOT)
+    ports = naafg_community_portfolios(write_key=LEGLESS_OCELOT)
     from pprint import pprint
     pprint(ports)
 
