@@ -2,9 +2,7 @@
 
 See the [stream list.json](https://raw.githubusercontent.com/microprediction/microprediction/master/stream_examples_faang/stream_list.json) for fifteen minute returns of fixed proportion portfolios of FAANG stocks. 
 
-Based on predictions of these returns, a small number of recommended portfolios are created. The 15-minute returns of these portfolios can be found in streams with names like [naafg_0](https://www.microprediction.org/stream_dashboard.html?stream=naafg_8), [naagf_1](https://www.microprediction.org/stream_dashboard.html?stream=naafg_1) and so forth. Some use information ratio. Others use semi-variance. Some use kurtosis. 
-
-The averge daily returns relative to the uniform FAANG portfolio are reported in streams such as [daily_naafg_8](https://www.microprediction.org/stream_dashboard.html?stream=daily_naafg_8). This is a new experiment, so we'll see how these perform over time. 
+Based on predictions of these returns, a small number of recommended portfolios are created. The 15-minute returns of these portfolios can be found in streams with names like [naafg_0](https://www.microprediction.org/stream_dashboard.html?stream=naafg_8), [naagf_1](https://www.microprediction.org/stream_dashboard.html?stream=naafg_1) and so forth. Some use information ratio. Others use semi-variance. Some use kurtosis. The averge daily returns relative to the uniform FAANG portfolio are reported in streams such as [daily_naafg_8](https://www.microprediction.org/stream_dashboard.html?stream=daily_naafg_8). This is a new experiment, so we'll see how these perform over time. 
 
 
 ## MultiChangePoll
