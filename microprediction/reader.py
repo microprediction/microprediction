@@ -76,6 +76,13 @@ class MicroReader(MicroConventions):
         name = self.fix_stream_name(name=name)
         return self.request_get_json(method='lagged',arg=name, data={'count':count-1})
 
+    def get_recent_lagged_values(self, name, seconds:int, count=2000 ):
+        lagged = self.get_lagged(name=name, count=count)
+        t_cutoff = time.time() - seconds
+        lagged_values = [v for (t, v) in lagged if t > t_cutoff]
+        return lagged_values
+
+
     def get_lagged_values_and_times(self, name, count=1000):
         """ Preferred method """
         name = self.fix_stream_name(name=name)
