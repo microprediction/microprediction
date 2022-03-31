@@ -12,6 +12,6 @@ except ImportError:
 if __name__=='__main__':
     skater = SkatingFox(write_key=HEALTHY_EEL, f=thinking_slow_and_slow, use_std=False, max_active=1000)
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_examples/healthy_eel.py')
-    skater.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize
+        'https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/healthy_eel.py')
+    skater.set_email("pcotton@intechinvestments.com")
     skater.run()

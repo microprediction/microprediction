@@ -3,7 +3,8 @@ from getjson import getjson
 from microprediction import MicroWriter
 
 # This is a 'bare-bones' example of using mw.set
-# You might also consider use of ChangePoll or Poll, as per https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_deltas_change_poll.py
+# You might also consider use of ChangePoll or Poll,
+# (See  https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic )
 
 
 write_key = os.environ.get(

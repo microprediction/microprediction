@@ -9,6 +9,11 @@ from pprint import pprint
 # get started. There's a video explanation of FitCrawler, SequentialCrawler and friends
 # at https://www.microprediction.com/fitcrawler
 
+
+# Remark: You can use this very sparingly :)
+# requests.post(url='https://alerts.microprediction.org/slack',json={'text':'hello again via requests'})
+
+
 class ReportingCrawler(MicroCrawler):
 
         def __init__(self, write_key, pass_callback, fail_callback, **kwargs):

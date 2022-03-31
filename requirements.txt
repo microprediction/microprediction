@@ -6,7 +6,6 @@ getjson>=1.2.0
 microconventions>=0.5.0
 pytz>=2021.3
 pycoingecko
-apscheduler
 tdigest
 genson
 hyperopt
@@ -14,4 +13,3 @@ schedule
 scikit-learn
 statsmodels
 copulas
-schedule
