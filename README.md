@@ -1,6 +1,6 @@
 
 # microprediction   ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
-Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction)?
+Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) or [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world)?
 
 ### Lucky you!
 Running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - but few know that. There's an even gentler introduction taking the form of a [colab notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) you can open and run now. 
