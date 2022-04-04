@@ -40,7 +40,7 @@ n <- 225
 probs <- seq(1/(2*n), 1-1/(2*n), length.out = n)
 
 # Sample from the ECDF of the new vector
-q <- quantile(y, probs = probs, names=FALSE )
+q <- quantile(y, probs = probs, names=FALSE)
 head(q)
 
 hist(q, main = "My predicted distribution", breaks = 15)
@@ -179,5 +179,23 @@ Here are 2 methods to constantly submit based on desired frequency:
 -   Enclose the entire script in an infinite `repeat{ … }` loop with a `Sys.sleep(time = …)` call for the desired interval in submissions.
 
 
+# **Publish A Stream**
 
+Do you want a swarm of fiercely competiting algorithms to predict your data? State of the art algorithms will find your stream of data and start predicting it. They even find relevant data. The quintessential use is live, public, frequently updated data. However there are many ways to use the API for private prediction if you are sneaky.  See more uses of publishing <https://www.microprediction.com/get-predictions>.
 
+In the same manner one would submit constant predictions via the `taskscheduleR` or `repeat{...}` loop, your stream values can be submitted analogously.
+
+Once you have a `wrtie_key` of difficulty 12 or higher and you have identified the data you wish to receive predictions on, you can publish the latest value `my_stream_value` using a specific name for your stream `my_stream_name`.
+
+```{r streams}
+my_stream_name <- "blah.json"
+
+repeat{
+  my_stream_value <- {Some code or retrieval generating a value to publish}
+
+  httr::PUT(url = paste0("https://api.microprediction.org/live/", my_stream_name),
+                   body = list(write_key = write_key, budget = 1, value = my_stream_value))
+                   
+  sys.sleep(time = …)
+}
+```
