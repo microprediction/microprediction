@@ -3,6 +3,7 @@ import requests, time, sys
 from pprint import pprint
 import numpy as np
 import json
+from typing import List, Tuple
 
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started reading historical data, and the like.
@@ -82,6 +83,17 @@ class MicroReader(MicroConventions):
         lagged_values = [v for (t, v) in lagged if t > t_cutoff]
         return lagged_values
 
+    def append_chrono(self, name, chrono:List[Tuple], seconds=24 * 60 * 60, count=2000):
+        """ Splice existing collection of historical time-value pairs to recent history stored on server
+
+            chrono:  [(t,v)] history of values, preferably in chronological ordering
+            returns: [(t,v)] extended history to present
+        """
+        chrono = sorted( chrono )
+        lagged = self.get_recent_lagged_values(name=name, seconds=seconds, count=count)
+        t_cutoff = max([ t for (t,v) in lagged])
+        chrono_new = sorted( [ (t,v) for (t,v) in chrono if t>1e-6+t_cutoff ] )
+        return list(chrono)+list(chrono_new)
 
     def get_lagged_values_and_times(self, name, count=1000):
         """ Preferred method """
