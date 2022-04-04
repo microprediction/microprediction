@@ -91,9 +91,12 @@ class MicroReader(MicroConventions):
         """
         chrono = sorted( chrono )
         lagged = self.get_recent_lagged_values(name=name, seconds=seconds, count=count)
-        t_cutoff = max([ t for (t,v) in lagged])
-        chrono_new = sorted( [ (t,v) for (t,v) in chrono if t>1e-6+t_cutoff ] )
-        return list(chrono)+list(chrono_new)
+        if len(chrono):
+            t_cutoff = max([ t for (t,v) in chrono])
+        else:
+            t_cutoff = 0
+        lagged_new = sorted( [ (t,v) for (t,v) in lagged if t>1e-6+t_cutoff ] )
+        return list(chrono)+list(lagged_new)
 
     def get_lagged_values_and_times(self, name, count=1000):
         """ Preferred method """
