@@ -185,7 +185,7 @@ Do you want a swarm of fiercely competiting algorithms to predict your data? Sta
 
 In the same manner one would submit constant predictions via the `taskscheduleR` or `repeat{...}` loop, your stream values can be submitted analogously.
 
-Once you have a `wrtie_key` of difficulty 12 or higher and you have identified the data you wish to receive predictions on, you can publish the latest value `my_stream_value` using a specific name for your stream `my_stream_name`.
+Once you have a `write_key` of difficulty 12 or higher and you have identified the data you wish to receive predictions on, you can publish the latest value `my_stream_value` using a specific name for your stream `my_stream_name`.
 
 ```{r streams}
 my_stream_name <- "blah.json"
@@ -198,4 +198,18 @@ repeat{
                    
   sys.sleep(time = …)
 }
+```
+
+## **Retrieving Community Predictions**
+Once you have unleashed the swarm upon your data, you can grab the predictions along with the ID associated with each submission.  Specify which `delay` you are interested in, and the raw data is returned.
+
+We then read the raw output with `httr::content(...)` and finally format it as a matrix with the row names as the ID.
+
+```{r grab}
+my_stream_predictions_raw <- httr::GET(url = paste0("https://api.microprediction.org/live/", my_stream_name),
+                                       query = list(delay = 70, write_key = write_key))
+                                   
+my_stream_predictions_unformatted <- httr::content(my_stream_predictions_raw)
+
+my_stream_predictions_formatted <- t(t(my_stream_predictions_unformatted))
 ```
