@@ -77,7 +77,7 @@ class PandasLoop(MicroWriter):
                     res.append( self.set(name=name,value=value) )
                 except Exception as e:
                     print(str(e))
-                    error_msg = 'Could not set '+name+' to value='+str(value)) + str(e)
+                    error_msg = 'Could not set '+name+' to value='+str(value) + str(e)
                     print(error_msg)
                     res.append(0)
             return res
