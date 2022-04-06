@@ -6,17 +6,6 @@ import time
 # See https://iexcloud.io/docs/api/#quote
 
 
-def iex_weighted_mid(d, expon=-1.5):
-    x1 = d['iexBidPrice']
-    x2 = d['iexAskPrice']
-    m1 = d['iexBidSize']
-    m2 = d['iexAskSize']
-    if (x1 != 0) and (x2 != 0) and (m1 != 0) and (m2 != 0) and (x2 > x1):
-        wm = weighted_mid(x1=x1, x2=x2, m1=m1, m2=m2)
-        print({'x1': x1, 'm1': m1, 'x2': x2, 'm2': m2, 'wm': wm})
-        return wm
-    else:
-        return d['latestPrice']
 
     
   
