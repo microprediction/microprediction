@@ -26,7 +26,7 @@ setup(
     tests_require=['pytest', 'scipy'],
     include_package_data=True,
     install_requires=["numpy>=1.20.1", "pandas", "contexttimer", "requests",
-                      "getjson>=1.2.0", "microconventions>=0.5.0","pytz>=2021.3",
+                      "getjson>=1.2.0", "microconventions>=1.0.0","pytz>=2021.3",
                       'pycoingecko', 'tdigest','genson','hyperopt',
                       'scikit-learn','statsmodels','copulas'],
     entry_points={
