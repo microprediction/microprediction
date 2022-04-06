@@ -35,11 +35,16 @@ def iex_weighted_mid(d, expon=-1.5):
     else:
         return d['latestPrice']
 
-
+    
+    
 def iex_weighted_mid_prices(tickers, api_key: str, use_free_api=False) -> [float]:
     """
         Asynchronously grab multiple stock prices
     """
+    def mgetjson():
+        # For lint
+        return None
+    
     try:
         from mgetjson import mgetjson
     except ImportError:
@@ -47,7 +52,6 @@ def iex_weighted_mid_prices(tickers, api_key: str, use_free_api=False) -> [float
         print('But hopefully you see the conventions')
         raise NotImplementedError()
         
-    
     PAID_URL = 'https://cloud.iexapis.com/stable/stock/TICKER/quote?token=YOUR_TOKEN_HERE'
     FREE_URL = 'https://cloud.iexapis.com/stable/tops?token=YOUR_TOKEN_HERE&symbols=TICKER'
     URL = FREE_URL if use_free_api else PAID_URL
@@ -61,6 +65,17 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
     """
         Asynchronously grab multiple stock prices
     """
+    def mgetjson():
+        # For lint
+        return None
+    
+    try:
+        from mgetjson import mgetjson
+    except ImportError:
+        print('This example is too dangerous to include in the client due to monkey patching in grequests')
+        print('But hopefully you see the conventions')
+        raise NotImplementedError()
+    
     PAID_URL = 'https://cloud.iexapis.com/stable/stock/TICKER/quote?token=YOUR_TOKEN_HERE'
     price_urls = [PAID_URL.replace('YOUR_TOKEN_HERE', api_key).replace('TICKER', ticker) for ticker in tickers]
     d = mgetjson(urls=price_urls)
