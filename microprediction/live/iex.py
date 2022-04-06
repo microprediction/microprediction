@@ -1,4 +1,4 @@
-from getjson import mgetjson
+
 from scipy.optimize import newton
 import time
 
@@ -40,6 +40,14 @@ def iex_weighted_mid_prices(tickers, api_key: str, use_free_api=False) -> [float
     """
         Asynchronously grab multiple stock prices
     """
+    try:
+        from mgetjson import mgetjson
+    except ImportError:
+        print('This example is too dangerous to include in the client due to monkey patching in grequests')
+        print('But hopefully you see the conventions')
+        raise NotImplementedError()
+        
+    
     PAID_URL = 'https://cloud.iexapis.com/stable/stock/TICKER/quote?token=YOUR_TOKEN_HERE'
     FREE_URL = 'https://cloud.iexapis.com/stable/tops?token=YOUR_TOKEN_HERE&symbols=TICKER'
     URL = FREE_URL if use_free_api else PAID_URL
