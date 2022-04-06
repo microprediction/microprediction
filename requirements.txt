@@ -2,8 +2,8 @@ numpy>=1.20.1
 pandas
 contexttimer
 requests
-getjson>=1.2.0
-microconventions>=0.5.0
+getjson>=2.0.0
+microconventions>=1.0.0
 pytz>=2021.3
 pycoingecko
 tdigest
