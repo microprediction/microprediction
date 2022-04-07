@@ -73,16 +73,25 @@ class PandasLoop(MicroWriter):
         else:
             res = list()
             for name, value in zip(names, values):
-                res.append( self.set(name=name,value=value) )
+                try:
+                    res.append( self.set(name=name,value=value) )
+                except Exception as e:
+                    print(str(e))
+                    error_msg = 'Could not set '+name+' to value='+str(value) + str(e)
+                    print(error_msg)
+                    res.append(0)
             return res
 
     def run(self,minutes=60):
         loop_start = time.time()
         self.wait_until_no_race_condition()
         while time.time()<loop_start+60*minutes:
+            execut_start_time = time.time()
             res = self.publish()
             self.publish_callback(res)
-            time.sleep(self.interval*60)
+            execut_end_time = time.time()
+            sleep_time = (execut_start_time-execut_end_time % (60*self.interval))
+            time.sleep(sleep_time)
 
     def publish_callback(self,res):
         """ In case you want to do something with publishing results """
