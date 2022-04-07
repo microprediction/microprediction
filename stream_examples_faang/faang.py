@@ -39,5 +39,5 @@ if __name__=='__main__':
     print(NAMES)
     mcp = MultiChangePoll(write_key=WRITE_KEY, names = NAMES, interval=15,
                           func=func, with_copulas=False, change_func=change_func)
-    mcp.set_repository('https://github.com/microprediction/microprediction/tree/master/stream_examples_stocks')
+    mcp.set_repository('https://github.com/microprediction/microprediction/tree/master/stream_examples_faang')
     mcp.run()

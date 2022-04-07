@@ -1,6 +1,7 @@
 # IEX stock prices
 # You can get your api_key at https://iexcloud.io/
 # See https://iexcloud.io/docs/api/#quote
+from getjson import getjson
 
 
 def iex_latest_prices(tickers, api_key:str)->[float]:
