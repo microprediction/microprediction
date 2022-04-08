@@ -96,6 +96,7 @@ class PandasLoop(MicroWriter):
             self.publish_callback(res)
             execut_end_time = time.time()
             sleep_time = (execut_start_time-execut_end_time % (60*self.interval))
+            print('Sleeping for '+str(sleep_time))
             time.sleep(sleep_time)
 
     def publish_callback(self,res):
