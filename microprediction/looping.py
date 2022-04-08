@@ -65,6 +65,7 @@ class PandasLoop(MicroWriter):
         """ Delay until we are not near the boundary of an interval """
         while abs(self._intervals() % 1) < 0.05:
             time.sleep(1)
+            print('Waiting to avoid race condition')
 
     def publish(self):
         names = self.names()
