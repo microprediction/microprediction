@@ -1,6 +1,8 @@
 
 # Basketball streams
 
+See this [post](https://www.linkedin.com/feed/update/urn:li:activity:6917849513739071488)
+
 Some streams to surface good ways of modeling basketball performance from one game to the next. 
 
 ## Statistics streams (historical)
