@@ -66,6 +66,7 @@ class PandasLoop(MicroWriter):
         while abs(self._intervals() % 1) < 0.05:
             time.sleep(1)
             print('Waiting to avoid race condition')
+        print('Okay we are good to go')
 
     def publish(self):
         names = self.names()
