@@ -11,7 +11,7 @@ class PandasLoop(MicroWriter):
     # One column per stream.
     # Column names should be value stream names
 
-    def __init__(self, df, interval, write_key, origin, with_copulas=False):
+    def __init__(self, df, interval, write_key, origin, with_copulas=False, verbose=False):
         """
         :param df:            pd.DataFrame   row names become stream names
         :param interval:
@@ -25,6 +25,7 @@ class PandasLoop(MicroWriter):
         self.origin       = origin           # Epoch time for start of loop
         self.interval     = interval         # Minutes between each update
         self.with_copulas = with_copulas
+        self.verbose = verbose
         super().__init__(write_key=write_key)
 
     def __repr__(self):
@@ -75,11 +76,15 @@ class PandasLoop(MicroWriter):
             for name, value in zip(names, values):
                 try:
                     res.append( self.set(name=name,value=value) )
+                    if self.verbose:
+                        print({'name':name,'value':value})
                 except Exception as e:
                     print(str(e))
                     error_msg = 'Could not set '+name+' to value='+str(value) + str(e)
                     print(error_msg)
                     res.append(0)
+            if self.verbose:
+                print(' ', flush=True)
             return res
 
     def run(self,minutes=60):
