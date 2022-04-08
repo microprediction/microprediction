@@ -1,4 +1,4 @@
-from microprediction.config_private import LEGLESS_OCELOT as WRITE_KEY
+from microprediction.config_private import ZOOBLAST_MOOSE as WRITE_KEY
 from microprediction.polling import MultiChangePoll
 from microprediction.live.grains import GRAIN_NAMES, iex_scaled_log_grains
 
@@ -14,7 +14,7 @@ def func()->[float]:
 
 
 if __name__=='__main__':
-    mcp = MultiChangePoll(write_key=WRITE_KEY, names = GRAIN_NAMES, interval=5, func=func, with_copulas=False)
+    mcp = MultiChangePoll(write_key=WRITE_KEY, names = GRAIN_NAMES, interval=5, func=func, with_copulas=True)
     mcp.set_repository('https://github.com/microprediction/microprediction/tree/master/stream_examples_grains')
     mcp.run()
 
