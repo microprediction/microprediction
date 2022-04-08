@@ -92,13 +92,14 @@ class PandasLoop(MicroWriter):
     def run(self,minutes=60):
         loop_start = time.time()
         self.wait_until_no_race_condition()
+
+        st = time.time()
         while time.time()<loop_start+60*minutes:
-            execut_start_time = time.time()
             res = self.publish()
             self.publish_callback(res)
-            execut_end_time = time.time()
-            sleep_time = (execut_start_time-execut_end_time % (60*self.interval))
-            print('Sleeping for '+str(sleep_time))
+            et = time.time()
+            sleep_time = ( (st-et) % (60*self.interval))
+            print('Sleeping for '+str(sleep_time)+' seconds.')
             time.sleep(sleep_time)
 
     def publish_callback(self,res):
