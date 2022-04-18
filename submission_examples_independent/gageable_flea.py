@@ -9,7 +9,7 @@ import time
 
 # Every algorithm submitting requires a WRITE_KEY. Alter this part.
 try:
-    from microprediction.config_private import CALLABLE_FLEA as WRITE_KEY
+    from microprediction.config_private import GAGEABLE_FLEA as WRITE_KEY
 except:
     raise EnvironmentError('You need a write key. See https://www.microprediction.com/private-keys for explanation')
 
@@ -26,7 +26,7 @@ if __name__=='__main__':
     # Loop over streams, making predictions
     for name in XRAY_NAMES:
         lagged_values = mw.get_lagged_values(name=name)
-        padded = [0] + list(lagged_values)
+        padded = [-1, 0, 1 ] + list(lagged_values) + list(lagged_values[:5]) + list(lagged_values[:15])
         devo = np.std(padded)
         values = sorted( [ devo*mw.norminv(p) +  0.001 * np.random.randn() for p in mw.percentiles()] )
         nudged = StatsConventions.nudged(values)
