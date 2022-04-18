@@ -20,8 +20,8 @@ def test_getters():
 
 
 def test_z_getters():
-    zs = mr.get_lagged_zvalues(name='z2~copula_x~copula_y~70.json', count=3)
-    ps = mr.get_lagged_copulas(name='z2~copula_x~copula_y~70.json', count=3)
+    zs = mr.get_lagged_zvalues(name='z2~coin_a~coin_b~70.json', count=3)
+    ps = mr.get_lagged_copulas(name='z2~coin_a~coin_b~70.json', count=3)
     assert len(zs)==3
     assert len(zs[0])==2
     assert len(ps) == 3

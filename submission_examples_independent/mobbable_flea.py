@@ -9,7 +9,7 @@ import time
 
 # Every algorithm submitting requires a WRITE_KEY. Alter this part.
 try:
-    from microprediction.config_private import CALLABLE_FLEA as WRITE_KEY
+    from microprediction.config_private import MOBBABLE_FLEA as WRITE_KEY
 except:
     raise EnvironmentError('You need a write key. See https://www.microprediction.com/private-keys for explanation')
 
