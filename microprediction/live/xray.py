@@ -1,7 +1,7 @@
 import math
 from microprediction.live.iex import iex_latest_prices
 
-XRAY_NUM = 200 # Gentle rollout
+XRAY_NUM = 500 # Gentle rollout
 
 XRAY_TICKERS = [ticker.lower() for ticker in ['A', 'AA', 'AAIC', 'AAN', 'AAP', 'AAT', 'ABBV', 'ABC', 'ABG', 'ABM', 'ABR', 'ABT', 'AC', 'ACA', 'ACC',
                    'ACCO','ACEL','ACI','ACM','ACN','ACP','ACRE','ACV','ADC','ADCT','ADM','ADNT','ADT','ADX',
