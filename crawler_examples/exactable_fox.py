@@ -1,11 +1,14 @@
-from microprediction.config_private import EXACTABLE_FOX
+try:
+    from credentials import EXACTABLE_FOX as WRITE_KEY
+except ImportError:
+    raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
 
-
 if __name__ == "__main__":
+
     try:
         from echochamber import EchoCrawler
 
@@ -23,7 +26,7 @@ if __name__ == "__main__":
     except ImportError:
         print('pip install echochamber')
 
-    crawler = Fox(write_key=EXACTABLE_FOX)
+    crawler = Fox(write_key=WRITE_KEY)
     crawler.set_repository(
         url='https://github.com/microprediction/microprediction/blob/master/crawler_examples/exactable_fox.py')
     crawler.set_email("no_email@supplied.com")  # Only used to send you a voucher if you win a daily prize

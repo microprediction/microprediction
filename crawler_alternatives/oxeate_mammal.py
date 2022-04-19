@@ -9,9 +9,9 @@ from pprint import pprint
 
 try:
     from microprediction.config_private import OXEATE_MAMMAL
-
     WRITE_KEY = OXEATE_MAMMAL  # Replace with your own
 except ImportError:
+    print('Burning you a new key. If this was not intended, stop the script!')
     WRITE_KEY = new_key(difficulty=10)
     print(WRITE_KEY)
 
