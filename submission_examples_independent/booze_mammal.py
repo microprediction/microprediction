@@ -2,7 +2,7 @@ from microprediction import MicroCrawler
 import numpy as np
 
 try:
-   from credentials import BOOZE_MAMMAL as WRITEKEY
+   from credentials import BOOZE_MAMMAL as WRITE_KEY
 except ImportError:
    raise EnvironmentError('You need a write key, explained at https://www.microprediction.com/private-keys')
 
