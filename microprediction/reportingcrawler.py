@@ -89,8 +89,8 @@ class ReportingCrawler(MicroCrawler):
                     getattr(self,method)()
 
                 method = 'get_cdf'
-                self.get_cdf_lagged(name='c5_bitcoin.json',delay=self.DELAYS[0])
-                self.get_cdf_lagged(name='three_body_x.json',delay=self.DELAYS[-1])
+                self.get_cdf(name='c5_bitcoin.json',delay=self.DELAYS[0], values=[0,5,10])
+                self.get_cdf(name='tour_11.json',delay=self.DELAYS[-1], values=[-2,-1,0,1,2], as_discrete=True)
 
                 method = 'get_lagged_times'
                 self.get_lagged_times('c5_bitcoin.json')
