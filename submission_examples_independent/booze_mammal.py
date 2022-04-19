@@ -22,7 +22,7 @@ class BoozeMammal(MicroCrawler):
         return sponsor.lower() == 'doomsday stoat'       # Avoid the DOOM
 
     def candidate_streams(self):
-        return [name for name, sponsor in self.get_stream_names() if (name[:2]=='z1') ]
+        return [name for name in self.get_stream_names() if (name[:2]=='z1') ]
 
     def sample(self, lagged_values, lagged_times=None, **ignore ):
         """ Fat tails """
