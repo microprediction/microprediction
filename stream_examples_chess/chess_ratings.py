@@ -2,14 +2,15 @@ import os
 from getjson import getjson
 from microprediction import MicroWriter
 
-# This is a 'bare-bones' example of using mw.set
+# This is a 'bare-bones' example of using MicroWriter.set(name=, value=)
+# To be used with cron or some scheduler
 # You might also consider use of ChangePoll or Poll,
 # (See  https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic )
 
 
-write_key = os.environ.get(
+WRITE_KEY = os.environ.get(
     'WRITE_KEY')  # Or get your key somehow. See https://www.microprediction.com/private-keys
-mw = MicroWriter(write_key=write_key)
+mw = MicroWriter(write_key=WRITE_KEY)
 assert mw.key_difficulty(mw.write_key) >= 12, "You need a key of difficulty 12 to create a stream"
 
 # Active players
