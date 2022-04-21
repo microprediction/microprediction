@@ -23,6 +23,18 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         return mids
 
 
+def iex_common_stock(tickers, api_key:str)->[float]:
+    import time
+    common = list()
+    for ticker in tickers:
+        paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'balance-sheet&token=' + api_key
+        data = getjson(paid_url, paid_url)
+        common.append(data['commonStock'])
+        time.sleep(0.1)
+    return common
+
+
+
 if __name__ == '__main__':
     from pprint import pprint
     from getjson import getjson

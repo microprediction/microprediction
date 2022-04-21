@@ -2,8 +2,9 @@ import math
 from microprediction.live.iex import iex_latest_prices
 from microprediction.live.xraytickers import XRAY_TICKERS
 
-XRAY_NUM = len(XRAY_TICKERS)
 
+
+XRAY_NUM = len(XRAY_TICKERS)
 XRAY_NAMES = ['r_' + str(k) + '.json' for k, ticker in enumerate(XRAY_TICKERS)]
 
 
