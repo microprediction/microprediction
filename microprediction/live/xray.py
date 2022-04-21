@@ -1,7 +1,6 @@
 import math
 from microprediction.live.iex import iex_latest_prices
 
-XRAY_NUM = 500 # Gentle rollout
 
 XRAY_TICKERS = [ticker.lower() for ticker in ['A', 'AA', 'AAIC', 'AAN', 'AAP', 'AAT', 'ABBV', 'ABC', 'ABG', 'ABM', 'ABR', 'ABT', 'AC', 'ACA', 'ACC',
                    'ACCO','ACEL','ACI','ACM','ACN','ACP','ACRE','ACV','ADC','ADCT','ADM','ADNT','ADT','ADX',
@@ -114,7 +113,9 @@ XRAY_TICKERS = [ticker.lower() for ticker in ['A', 'AA', 'AAIC', 'AAN', 'AAP', '
                                               'WAT', 'WBS', 'WBT', 'WCC', 'WCN', 'WD', 'WEA', 'WEC', 'WELL', 'WEX', 'WFC', 'WGO', 'WH', 'WHD', 'WHG', 'WHR', 'WIA',
                                               'WIW', 'WK', 'WLK', 'WLL', 'WM', 'WMB', 'WMC', 'WMK', 'WMS', 'WMT', 'WNC', 'WOR', 'WOW', 'WPC', 'WPM', 'WRB', 'WRE',
                                               'WRK', 'WSM', 'WSO', 'WSO.B', 'WSR', 'WST', 'WTI', 'WTM', 'WTRG', 'WTS', 'WTTR', 'WU', 'WWE', 'WWW', 'WY', 'X',
-                                              'XFLT', 'XHR', 'XOM', 'XPO', 'XYL', 'Y', 'YELP', 'YETI', 'YEXT', 'YUM', 'YUMC', 'ZBH', 'ZEN', 'ZTR', 'ZTS', 'ZUO', 'ZYME'][:XRAY_NUM]]
+                                              'XFLT', 'XHR', 'XOM', 'XPO', 'XYL', 'Y', 'YELP', 'YETI', 'YEXT', 'YUM', 'YUMC', 'ZBH', 'ZEN', 'ZTR', 'ZTS', 'ZUO', 'ZYME']]
+
+XRAY_NUM = len(XRAY_TICKERS)
 
 XRAY_NAMES = ['r_' + str(k) + '.json' for k, ticker in enumerate(XRAY_TICKERS)]
 
@@ -128,5 +129,7 @@ def iex_scaled_log_xray(api_key:str):
     return [1000 * math.log(v) for v in sp]
 
 
+if __name__=='__main__':
+    print(len(XRAY_NAMES))
 
 
