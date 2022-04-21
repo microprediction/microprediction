@@ -10,7 +10,7 @@ from getjson import getjson
 def xray_portfolios():
     """ Retrieve xray portfolios """
     data = getjson('https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json')
-    return [ data[i] for i in range(len(data)) ]
+    return [ data[str(i)] for i in range(len(data)) ]
 
 if False:
     XRAY_PORTFOLIOS = xray_portfolios()
