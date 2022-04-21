@@ -12,8 +12,10 @@ def xray_portfolios():
     data = getjson('https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json')
     return [ data[i] for i in range(len(data)) ]
 
-XRAY_PORTFOLIOS = xray_portfolios()
-NUM_PORTFOLIOS = 2000
+if False:
+    XRAY_PORTFOLIOS = xray_portfolios()
+
+NUM_PORTFOLIOS = 1500
 XRAY_PORTFOLIO_NAMES = ['xray_' + str(i) for i in range(NUM_PORTFOLIOS)]
 
 
@@ -40,6 +42,11 @@ def create_xray_portfolios():
 
 
 if __name__=='__main__':
-    portfolios = xray_portfolios()
-    print(len(portfolios))
+    CREATING = False
+    if CREATING:
+        # DON'T DO THIS ... SUPPOSED TO BE ONE-OFF
+        create_xray_portfolios()
+    else:
+        portfolios = xray_portfolios()
+        print(len(portfolios))
 
