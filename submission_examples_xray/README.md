@@ -1,6 +1,6 @@
 
 ### Stock and stock portfolio prediction examples
-See also [submission_examples_independent](https://github.com/microprediction/microprediction/tree/master/submission_examples_independent). This directory provides examples of 
+This directory provides examples of 
 submitting distributional predictions of 45-minute ahead stock returns, and returns of portfolios of stocks. 
 
 The stock streams:
@@ -31,5 +31,5 @@ Similarly you can get [portfolios](https://raw.githubusercontent.com/micropredic
 Since the portfolio returns are determined from the stock returns, one pattern involves [estimating covariance](https://github.com/microprediction/precise/blob/main/examples_basic_usage/running_empirical_population_covariance.py) for all stocks using one of a hundred of
 so methods provided in the precise package, then inferring the portfolio variances. Some adjustment for tails can be made. 
 
-However it is also possible to directly forecast individual portfolios. Time will tell if one approach beats the other. 
+However it is also possible to directly forecast individual portfolios. See also [submission_examples_independent](https://github.com/microprediction/microprediction/tree/master/submission_examples_independent). 
 

@@ -6,8 +6,8 @@ import numpy as np
 import math
 from getjson import getjson
 
-tickers = XRAY_TICKERS[:10]
-NUM_PORTFOLIOS = 50
+tickers = XRAY_TICKERS
+NUM_PORTFOLIOS = 2000
 
 
 def xray_portfolios():
@@ -24,9 +24,9 @@ def create_xray_portfolios():
     # One-off determination of portfolio weights, as perturbations of pseudo-index
     common = iex_common_stock(tickers=tickers, api_key=IEX_KEY)
     print(common)
-    prices = iex_latest_prices(tickers=tickers)
+    prices = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
     index_like = normalize([price * common for price, common in zip(prices, common)])
-    XRAY_PORTFOLIOS = [normalize([wi * math.exp(3 * np.random.randn()) for wi in index_like]) for _ in
+    XRAY_PORTFOLIOS = [normalize([wi * math.exp(np.random.randn()) for wi in index_like]) for _ in
                        range(NUM_PORTFOLIOS)]
     XRAY_PORTFOLIOS_DICT = dict([(k, p) for k, p in enumerate(XRAY_PORTFOLIOS)])
 

@@ -26,11 +26,19 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
 def iex_common_stock(tickers, api_key:str)->[float]:
     import time
     common = list()
+    missing = list()
     for ticker in tickers:
-        paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'balance-sheet&token=' + api_key
+        paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'/balance-sheet?token=' + api_key
         data = getjson(paid_url, paid_url)
-        common.append(data['commonStock'])
+        try:
+            cm = data['balancesheet'][0]['commonStock']
+        except:
+            cm = 0
+            missing.append(ticker)
+        common.append(cm)
         time.sleep(0.1)
+    print('The following are missing balance sheet information ')
+    print(missing)
     return common
 
 
@@ -42,3 +50,5 @@ if __name__ == '__main__':
     tickers = ['aapl','googl']
     data = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
     pprint(data)
+    common = iex_common_stock(tickers=tickers, api_key=IEX_KEY)
+    print(common)
