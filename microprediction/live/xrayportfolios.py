@@ -6,14 +6,18 @@ import numpy as np
 import math
 from getjson import getjson
 
-tickers = XRAY_TICKERS
-NUM_PORTFOLIOS = 2000
-
 
 def xray_portfolios():
     """ Retrieve xray portfolios """
     data = getjson('https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json')
     return [ data[i] for i in range(len(data)) ]
+
+
+if False:
+    XRAY_PORTFOLIOS = xray_portfolios()
+
+NUM_PORTFOLIOS = 2000
+XRAY_PORTFOLIO_NAMES = ['xray_' + str(i) for i in range(NUM_PORTFOLIOS)]
 
 
 def normalize(w):
@@ -22,9 +26,9 @@ def normalize(w):
 
 def create_xray_portfolios():
     # One-off determination of portfolio weights, as perturbations of pseudo-index
-    common = iex_common_stock(tickers=tickers, api_key=IEX_KEY)
+    common = iex_common_stock(tickers=XRAY_TICKERS, api_key=IEX_KEY)
     print(common)
-    prices = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
+    prices = iex_latest_prices(tickers=XRAY_TICKERS, api_key=IEX_KEY)
     index_like = normalize([price * common for price, common in zip(prices, common)])
     XRAY_PORTFOLIOS = [normalize([wi * math.exp(np.random.randn()) for wi in index_like]) for _ in
                        range(NUM_PORTFOLIOS)]

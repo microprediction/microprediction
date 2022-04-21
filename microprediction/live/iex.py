@@ -27,7 +27,9 @@ def iex_common_stock(tickers, api_key:str)->[float]:
     import time
     common = list()
     missing = list()
-    for ticker in tickers:
+    for ticker_no, ticker in enumerate(tickers):
+        if ticker_no % 100 ==0:
+            print(ticker_no)
         paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'/balance-sheet?token=' + api_key
         data = getjson(paid_url, paid_url)
         try:
