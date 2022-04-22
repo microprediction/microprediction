@@ -3,12 +3,10 @@
 This directory provides examples of 
 submitting distributional predictions of 45-minute ahead stock returns, and returns of portfolios of stocks. 
 
- |----------------|-------------------------------------------------------------------------------------------|
  | Type           | Example                                                                                   | 
  |----------------|-------------------------------------------------------------------------------------------|
  | Stocks         | [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)        |
  | Portfolios     | [streams=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) |
- |----------------|-------------------------------------------------------------------------------------------|
 
 
 The former correspond to tickers:
