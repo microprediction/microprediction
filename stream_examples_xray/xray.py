@@ -9,8 +9,7 @@ from microprediction.live.xrayportfolios import get_xray_portfolios, XRAY_PORTFO
 
 XRAY_PORTFOLIOS = get_xray_portfolios()
 XRAY_TICKERS = get_xray_tickers()
-XRAY_STOCK_NAMES = [ 'r_'+str(i) for i in range(len(XRAY_TICKERS)) ]
-XRAY_PORTFOLIO_NAMES = [ 'xray_'+str(i) for i in range(len(XRAY_TICKERS)) ]
+XRAY_STOCK_NAMES = [ 'r_'+str(i)+'.json' for i in range(len(XRAY_TICKERS)) ]
 XRAY_NAMES = XRAY_STOCK_NAMES + XRAY_PORTFOLIO_NAMES
 
 
