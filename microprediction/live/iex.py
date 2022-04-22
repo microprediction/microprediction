@@ -77,9 +77,3 @@ def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True
             print('There are ' + str(len(common)) + ' stocks with balance sheet information ')
     return common
 
-
-def iex_common_stock_outstanding(tickers:[str], api_key:str) -> [float]:
-    """  """
-    url = 'https://cloud.iexapis.com/beta/ref-data/symbols?token='+api_key
-    data = getjson(url)
-    return sorted( [ d['symbol'].lower() for d in data if (d['exchange'] in exchanges) and (d['type']=='cs')])
