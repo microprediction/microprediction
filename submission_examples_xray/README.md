@@ -1,9 +1,7 @@
 
 ### Stock and stock portfolio streams
 
-This directory provides examples of submitting distributional predictions of:
-  - Changes in log prices over 45 minute intervals. 
-  - Returns of portfolios of stocks, governed by the same. 
+This directory provides examples of submitting distributional predictions for stock and portfolio price movements.
 
 The portfolio [weights](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) are provided as JSON.  
 
