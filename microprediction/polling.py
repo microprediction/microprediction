@@ -268,7 +268,7 @@ class MultiChangePoll(MultiPoll):
                  with_copulas=False, change_func=None, change_func_args=None, **kwargs):
         """  Create multiple streams by polling every 20 minutes, say
                 param:
-                names        [ str ]    stream name ending in .json
+                names        [ str ]    stream name ending in .json should include names of change streams as well, if change_func is not None
                 get_iex_realtime_price:        function    returns data from some live source, ideally [ float ] but you can override determine_next_values method
                 interval:    int         minutes between polls
                 func_args    dict        optional dict of arguments to be passed to get_iex_realtime_price

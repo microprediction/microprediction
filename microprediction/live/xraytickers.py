@@ -24,16 +24,6 @@ def get_xray_tickers() -> [str]:
     return [data[str(i)] for i in range(len(data))]
 
 
-def iex_scaled_log_xray(api_key:str):
-    """  Polling function
-         Retrieve live prices for the tickers in the xray list
-         api_key: An IEX api key
-    """
-    tickers = get_xray_tickers()
-    sp = iex_latest_prices(tickers=tickers, api_key=api_key)
-    return [1000 * math.log(v) for v in sp]
-
-
 
 if __name__ == '__main__':
     CREATE_TICKERS = True
