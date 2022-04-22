@@ -1,7 +1,11 @@
 
 ### Stock and stock portfolio streams
-This directory provides examples of 
-submitting distributional predictions of 45-minute ahead stock returns, and returns of portfolios of stocks. Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
+
+This directory provides examples of submitting distributional predictions of:
+  - 45-minute ahead stock returns
+  - Returns of portfolios of stocks. 
+  
+Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
 
 
  | Type           | Example                                                                                   | Meaning       |
@@ -9,11 +13,13 @@ submitting distributional predictions of 45-minute ahead stock returns, and retu
  | Stocks         | [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)        | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) |
  | Portfolios     | [stream=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) |
 
-Some conveniences are provided in the client:
+### Universe
+Roughly, the universe is the set of IEX [eligible stocks](https://iextrading.com/trading/eligible-symbols/) for which balance sheet information is known. Some conveniences are provided in the client if you don't wish to read JSON directly. 
 
-    from microprediction.live.xraytickers import XRAY_TICKERS 
-    from microprediction.live.xrayportfolios import xray_portfolios
-    w = xray_portfolios()
+    from microprediction.live.xraytickers import get_xray_tickers 
+    from microprediction.live.xrayportfolios import get_xray_portfolios
+    symbols = get_xray_tickers()
+    weights = get_xray_portfolios()
       
       
 ### Examples of predicting portfolio returns directly
