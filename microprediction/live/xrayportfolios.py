@@ -1,10 +1,5 @@
-
 from microprediction.live.xraytickers import XRAY_TICKERS
 from microprediction.live.iex import iex_common_stock, iex_latest_prices
-try:
-    from credentials import IEX_KEY
-except ImportError:
-    raise EnvironmentError('You need a write key')
 import numpy as np
 import math
 from getjson import getjson
@@ -28,6 +23,10 @@ def normalize(w):
 
 def create_xray_portfolios():
     # One-off determination of portfolio weights, as perturbations of pseudo-index
+    try:
+        from credentials import IEX_KEY
+    except ImportError:
+        raise EnvironmentError('You need a write key')
     common = iex_common_stock(tickers=XRAY_TICKERS, api_key=IEX_KEY)
     print(common)
     prices = iex_latest_prices(tickers=XRAY_TICKERS, api_key=IEX_KEY)
