@@ -48,7 +48,10 @@ def iex_common_stock(tickers, api_key:str)->[float]:
 if __name__ == '__main__':
     from pprint import pprint
     from getjson import getjson
-    from microprediction.config_private import IEX_KEY
+    try:
+        from credentials import IEX_KEY
+    except ImportError:
+        raise EnvironmentError('you need a write key')
     tickers = ['aapl','googl']
     data = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
     pprint(data)

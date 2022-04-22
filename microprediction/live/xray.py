@@ -1,6 +1,7 @@
 import math
 from microprediction.live.iex import iex_latest_prices
 from microprediction.live.xraytickers import XRAY_TICKERS
+from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
 
 
 
