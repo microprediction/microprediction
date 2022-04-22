@@ -7,10 +7,10 @@ This directory provides examples of submitting distributional predictions of:
 
 The portfolio [weights](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) are provided as JSON.  
 
- | Type           | Example stream                                                                            | How to interpret       |
- |----------------|-------------------------------------------------------------------------------------------|---------------|
- | Stocks         | [stream=yarx_googl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_googl)    | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) |
- | Portfolios     | [stream=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) |
+ | Type           | Example stream                                                                            | Lookup       | Reverse lookup |
+ |----------------|-------------------------------------------------------------------------------------------|---------------|---------------|
+ | Stocks         | [stream=yarx_googl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_googl)    | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) | [xraytickersreverse.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickersreverse.json) |
+ | Portfolios     | [stream=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) | |
 
 Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
 
