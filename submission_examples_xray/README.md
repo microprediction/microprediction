@@ -2,16 +2,17 @@
 ### Stock and stock portfolio streams
 
 This directory provides examples of submitting distributional predictions of:
-  - 45-minute ahead stock returns
-  - Returns of portfolios of stocks. 
-  
-Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
+  - Changes in log prices over 45 minute intervals. 
+  - Returns of portfolios of stocks, governed by the same. 
 
+The portfolio [weights](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) are provided as JSON.  
 
- | Type           | Example                                                                                   | Lookup       |
+ | Type           | Example stream                                                                            | Lookup       |
  |----------------|-------------------------------------------------------------------------------------------|---------------|
  | Stocks         | [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)        | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) |
  | Portfolios     | [stream=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) |
+
+Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
 
 ### Universe
 Roughly, the universe is the set of IEX [eligible stocks](https://iextrading.com/trading/eligible-symbols/) for which balance sheet information is known. Some conveniences are provided in the client if you don't wish to read JSON directly. 
