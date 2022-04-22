@@ -40,7 +40,7 @@ def get_xray_portfolios():
 
 
 if __name__=='__main__':
-    CREAT_PORTFOLIOS = False
+    CREAT_PORTFOLIOS = True
     if CREAT_PORTFOLIOS:
         # DON'T DO THIS ... SUPPOSED TO BE ONE-OFF
         create_xray_portfolios()
