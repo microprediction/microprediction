@@ -1,15 +1,15 @@
 
-### Stock and stock portfolio prediction examples
+### Stock and stock portfolio streams
 This directory provides examples of 
 submitting distributional predictions of 45-minute ahead stock returns, and returns of portfolios of stocks. 
 
-The stock streams:
+ |----------------|-------------------------------------------------------------------------------------------|
+ | Type           | Example                                                                                   | 
+ |----------------|-------------------------------------------------------------------------------------------|
+ | Stocks         | [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)        |
+ | Portfolios     | [streams=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) |
+ |----------------|-------------------------------------------------------------------------------------------|
 
-- [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)
- 
-The portfolio streams:
-
-- [streams=p_334](https://www.microprediction.org/stream_dashboard.html?stream=p_34) 
 
 The former correspond to tickers:
  
