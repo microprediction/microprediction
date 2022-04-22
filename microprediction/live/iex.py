@@ -44,25 +44,32 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         return mids
 
 
-def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True, tickers=None)->[float]:
+def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True, tickers=None, threshold=3000000)->[float]:
     """
         return_tickers: bool   If True, returns list of tickers. If False, returns list of common stock counts
     """
     if tickers is None:
         tickers = iex_common_stock_tickers(api_key=api_key)
 
+    prices = iex_latest_prices(tickers=tickers,api_key=api_key)
+
     import time
     common = list()
     missing = list()
-    for ticker_no, ticker in enumerate(tickers):
+    small = list()
+    for ticker_no, (ticker, price) in enumerate(zip(tickers,prices)):
         paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'/balance-sheet?token=' + api_key
         data = getjson(paid_url, paid_url)
         try:
             cm = data['balancesheet'][0]['commonStock']
-            if return_tickers:
-                common.append(ticker)
+            value = float(cm)*float(price)
+            if value>threshold:
+                if return_tickers:
+                    common.append(ticker)
+                else:
+                    common.append(cm)
             else:
-                common.append(cm)
+                small.append(ticker)
         except:
             if return_tickers:
                 missing.append(ticker)
@@ -71,9 +78,11 @@ def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True
                 common.append(0)
 
         time.sleep(0.1)
-        if ticker_no % 100 == 0:
+        if ticker_no % 50 == 0:
             print(ticker_no)
             print('There are '+str(len(missing))+' stocks missing balance sheet information ')
-            print('There are ' + str(len(common)) + ' stocks with balance sheet information ')
+            print('There are ' + str(len(common)) + ' stocks with balance sheet that are not too small ')
+            print('There are ' + str(len(small)) + ' stocks considered too small ')
+
     return common
 

@@ -9,7 +9,7 @@ from microprediction.live.xrayportfolios import get_xray_portfolios, XRAY_PORTFO
 
 XRAY_PORTFOLIOS = get_xray_portfolios()
 XRAY_TICKERS = get_xray_tickers()
-XRAY_STOCK_NAMES = [ 'r_'+str(i)+'.json' for i in range(len(XRAY_TICKERS)) ]
+XRAY_STOCK_NAMES = [ 'yarx_'+ticker+'.json' for ticker in XRAY_TICKERS ]
 XRAY_NAMES = XRAY_STOCK_NAMES + XRAY_PORTFOLIO_NAMES
 
 
@@ -27,7 +27,6 @@ def change_func(changes:[float])->[float]:
     """
     portfolio_changes = [scaled_portfolio_return(changes,w) for w in XRAY_PORTFOLIOS]
     return list(changes) + portfolio_changes
-
 
 
 if __name__=='__main__':
