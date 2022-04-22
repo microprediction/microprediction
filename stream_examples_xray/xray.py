@@ -1,6 +1,6 @@
 from microprediction.config_private import HEBDOMAD_LEECH as WRITE_KEY
 from microprediction.polling import MultiChangePoll
-from microprediction.live.xray import XRAY_NAMES, iex_scaled_log_xray
+from microprediction.live.xraytickers import XRAY_NAMES, iex_scaled_log_xray
 from microprediction.live.faang import scaled_portfolio_return
 from microprediction.live.xrayportfolios import XRAY_PORTFOLIOS, XRAY_PORTFOLIO_NAMES
 

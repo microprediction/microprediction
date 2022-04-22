@@ -1,7 +1,28 @@
 # IEX stock prices
 # You can get your api_key at https://iexcloud.io/
 # See https://iexcloud.io/docs/api/#quote
+
 from getjson import getjson
+from pprint import pprint
+import os
+import json
+
+DEFAULT_EXCHANGES = ['XNYS', 'BATS', 'ARCX', 'XASE',  'XNAS']  # XPOR
+
+
+def iex_exchanges(api_key:str):
+    url = 'https://cloud.iexapis.com/beta/ref-data/symbols?token=' + api_key
+    data = getjson(url)
+    return list(set([d['exchange'] for d in data]))
+
+
+def iex_common_stock_tickers(api_key:str, exchanges=None) -> [str]:
+    """ Listing of all common stock tickers """
+    if exchanges is None:
+        exchanges = DEFAULT_EXCHANGES
+    url = 'https://cloud.iexapis.com/beta/ref-data/symbols?token='+api_key
+    data = getjson(url)
+    return sorted( [ d['symbol'].lower() for d in data if (d['exchange'] in exchanges) and (d['type']=='cs')])
 
 
 def iex_latest_prices(tickers, api_key:str)->[float]:
@@ -23,37 +44,42 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         return mids
 
 
-def iex_common_stock(tickers, api_key:str)->[float]:
+def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True, tickers=None)->[float]:
+    """
+        return_tickers: bool   If True, returns list of tickers. If False, returns list of common stock counts
+    """
+    if tickers is None:
+        tickers = iex_common_stock_tickers(api_key=api_key)
+
     import time
     common = list()
     missing = list()
     for ticker_no, ticker in enumerate(tickers):
-        if ticker_no % 100 ==0:
-            print(ticker_no)
         paid_url = 'https://cloud.iexapis.com/v1/stock/'+ticker+'/balance-sheet?token=' + api_key
         data = getjson(paid_url, paid_url)
         try:
             cm = data['balancesheet'][0]['commonStock']
+            if return_tickers:
+                common.append(ticker)
+            else:
+                common.append(cm)
         except:
-            cm = 0
-            missing.append(ticker)
-        common.append(cm)
+            if return_tickers:
+                missing.append(ticker)
+            else:
+                missing.append(ticker)
+                common.append(0)
+
         time.sleep(0.1)
-    print('The following are missing balance sheet information ')
-    print(missing)
+        if ticker_no % 100 == 0:
+            print(ticker_no)
+            print('There are '+str(len(missing))+' stocks missing balance sheet information ')
+            print('There are ' + str(len(common)) + ' stocks with balance sheet information ')
     return common
 
 
-
-if __name__ == '__main__':
-    from pprint import pprint
-    from getjson import getjson
-    try:
-        from credentials import IEX_KEY
-    except ImportError:
-        raise EnvironmentError('you need a write key')
-    tickers = ['aapl','googl']
-    data = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
-    pprint(data)
-    common = iex_common_stock(tickers=tickers, api_key=IEX_KEY)
-    print(common)
+def iex_common_stock_outstanding(tickers:[str], api_key:str) -> [float]:
+    """  """
+    url = 'https://cloud.iexapis.com/beta/ref-data/symbols?token='+api_key
+    data = getjson(url)
+    return sorted( [ d['symbol'].lower() for d in data if (d['exchange'] in exchanges) and (d['type']=='cs')])

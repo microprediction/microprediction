@@ -1,5 +1,5 @@
 from microprediction import MicroWriter
-from microprediction.live.xray import XRAY_NAMES
+from microprediction.live.xraytickers import XRAY_NAMES
 import numpy as np
 from microconventions.stats_conventions import StatsConventions
 import time
