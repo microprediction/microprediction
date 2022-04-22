@@ -8,7 +8,7 @@ This directory provides examples of submitting distributional predictions of:
 Only 1 hour ahead predictions are considered relevant, since at present the data sometimes falls back to 15 min delayed numbers (this may change).  
 
 
- | Type           | Example                                                                                   | Meaning       |
+ | Type           | Example                                                                                   | Lookup       |
  |----------------|-------------------------------------------------------------------------------------------|---------------|
  | Stocks         | [stream=r_197](https://www.microprediction.org/stream_dashboard.html?stream=r_197)        | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) |
  | Portfolios     | [stream=xray_334](https://www.microprediction.org/stream_dashboard.html?stream=xray_334) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) |
