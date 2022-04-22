@@ -14,7 +14,7 @@ if True:
     XRAY_PORTFOLIOS = xray_portfolios()
 
 NUM_PORTFOLIOS = 1500
-XRAY_PORTFOLIO_NAMES = ['xray_' + str(i) for i in range(NUM_PORTFOLIOS)]
+XRAY_PORTFOLIO_NAMES = ['xray_' + str(i)+'.json' for i in range(NUM_PORTFOLIOS)]
 
 
 def normalize(w):
