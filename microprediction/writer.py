@@ -78,8 +78,8 @@ class MicroWriter(MicroReader):
             chunks = chunks[:-1]
         last_res = None
         for chunk in chunks:
-            names_chunk = [ names[j] for j in chunk]
-            values_chunk = [ values[j] for j in chunk]
+            names_chunk = [ names[j] for j in range(len(chunk))]
+            values_chunk = [ values[j] for j in range(len(chunk))]
             last_res = self.cset(names=names_chunk, values=values_chunk)
         return last_res
 
