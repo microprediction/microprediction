@@ -66,8 +66,29 @@ class MicroWriter(MicroReader):
             print('', flush=True)
             raise Exception('Failed to update')
 
+    def cset_in_chunks(self, names, values):
+        """
+           Call cset on moderate sized chunks to avoid straining system
+        """
+        n = len(names)
+        assert len(names)==len(values)
+        chunks = [list(range(i, i + 100)) for i in range(0, n, 100)]
+        if len(chunks)>1:
+            chunks[-2] = chunks[-2]+chunks[-1] # Make sure there isn't a small chunk at the end
+            chunks = chunks[:-1]
+        last_res = None
+        for chunk in chunks:
+            names_chunk = [ names[j] for j in chunk]
+            values_chunk = [ values[j] for j in chunk]
+            last_res = self.cset(names=names_chunk, values=values_chunk)
+        return last_res
+
+
     def cset(self, names, values):
         """ Set multiple values linked by copula """
+        if len(names)>200:
+            return self.cset_in_chunks(names=names, values=values)
+
         request_data = {"names": ",".join(names), "write_key": self.write_key}
         request_data.update({"values": ",".join([str(v) for v in values])})
         res = requests.put(self.base_url + '/copula/', data=request_data)

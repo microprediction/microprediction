@@ -1,5 +1,6 @@
 from microprediction import MicroWriter
-from microprediction.live.xraytickers import XRAY_NAMES
+from microprediction.live.xraytickers import get_xray_stock_names
+from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
 import numpy as np
 from microconventions.stats_conventions import StatsConventions
 import time
@@ -15,6 +16,7 @@ except:
 
 
 if __name__=='__main__':
+    NAMES = get_xray_stock_names() + XRAY_PORTFOLIO_NAMES
 
     # Create a writer, and give the system a backlink for the convenience of others
     mw = MicroWriter(write_key=WRITE_KEY)
@@ -24,7 +26,7 @@ if __name__=='__main__':
     mw.set_repository(url=REPO)
 
     # Loop over streams, making predictions
-    for name in XRAY_NAMES:
+    for name in NAMES:
         lagged_values = mw.get_lagged_values(name=name)
         padded = [0] + list(lagged_values)
         devo = np.std(padded)

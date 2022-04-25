@@ -42,6 +42,9 @@ def get_xray_tickers() -> [str]:
     return [data[str(i)] for i in range(len(data))]
 
 
+def get_xray_stock_names():
+    return [ 'yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+
 
 if __name__ == '__main__':
     CREATE_TICKERS = True

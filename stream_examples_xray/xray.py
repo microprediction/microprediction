@@ -1,4 +1,7 @@
-from microprediction.config_private import HEBDOMAD_LEECH as WRITE_KEY
+try:
+    from microprediction.config_private import HEBDOMAD_LEECH as WRITE_KEY
+except ImportError:
+    raise EnvironmentError('Need stream write key')
 from microprediction.polling import MultiChangePoll
 from microprediction.live.xraytickers import get_xray_tickers
 from microprediction.live.xrayprices import get_xray_prices
