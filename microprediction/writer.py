@@ -70,9 +70,10 @@ class MicroWriter(MicroReader):
         """
            Call cset on moderate sized chunks to avoid straining system
         """
+        CHUNK_SIZE = 250
         n = len(names)
         assert len(names)==len(values)
-        chunks = [list(range(i, min(i + 100,n-1))) for i in range(0, n, 100)]
+        chunks = [list(range(i, min(i + CHUNK_SIZE,n-1))) for i in range(0, n, CHUNK_SIZE)]
         if len(chunks)>1:
             chunks[-2] = chunks[-2]+chunks[-1] # Make sure there isn't a small chunk at the end
             chunks = chunks[:-1]
