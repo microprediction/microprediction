@@ -72,14 +72,18 @@ class MicroWriter(MicroReader):
         """
         n = len(names)
         assert len(names)==len(values)
-        chunks = [list(range(i, i + 100)) for i in range(0, n, 100)]
+        chunks = [list(range(i, min(i + 100,n-1))) for i in range(0, n, 100)]
         if len(chunks)>1:
             chunks[-2] = chunks[-2]+chunks[-1] # Make sure there isn't a small chunk at the end
             chunks = chunks[:-1]
         last_res = None
         for chunk in chunks:
-            names_chunk = [ names[j] for j in range(len(chunk))]
-            values_chunk = [ values[j] for j in range(len(chunk))]
+            try:
+                names_chunk = [ names[j] for j in chunk]
+                values_chunk = [ values[j] for j in chunk]
+            except IndexError:
+                print(chunk)
+                raise NotImplementedError("WTF")
             last_res = self.cset(names=names_chunk, values=values_chunk)
         return last_res
 
@@ -88,21 +92,23 @@ class MicroWriter(MicroReader):
         """ Set multiple values linked by copula """
         if len(names)>200:
             return self.cset_in_chunks(names=names, values=values)
-
-        request_data = {"names": ",".join(names), "write_key": self.write_key}
-        request_data.update({"values": ",".join([str(v) for v in values])})
-        res = requests.put(self.base_url + '/copula/', data=request_data)
-        if self.verbose:
-            pprint.pprint(res.content)
-        if res.status_code == 200:
-            return res.json()
-        elif res.status_code == 500:
-            raise Exception("server error")
         else:
-            err = self.get_errors()
-            pprint.pprint(err)
-            print('', flush=True)
-            raise Exception('Failed to update')
+            request_data = {"names": ",".join(names), "write_key": self.write_key}
+            request_data.update({"values": ",".join([str(v) for v in values])})
+            res = requests.put(self.base_url + '/copula/', data=request_data)
+            print('Sent /copula/ request with '+str(len(names))+' names. ')
+            if res.status_code == 200:
+                res_json = res.json()
+                if isinstance(res_json,list) and len(res_json)>20:
+                    res_json = res_json[:5] + res_json[-5:]
+                return res_json
+            elif res.status_code == 500:
+                raise Exception("server error")
+            else:
+                err = self.get_errors()
+                pprint.pprint(err)
+                print('', flush=True)
+                raise Exception('Failed to update')
 
     def touch(self, name):
         """ Extend TTL of stream without updating """

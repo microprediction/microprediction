@@ -7,6 +7,15 @@ import threading
 import os
 
 
+def shorten_lists(v):
+    if isinstance(v, dict):
+        return dict([(k, shorten_lists(v1)) for k, v1 in v.items()])
+    elif isinstance(v, list) and len(v) > 50:
+        return v[:5] + v[-5:]
+    else:
+        return v
+
+
 class MicroPoll(MicroWriter):
 
     # --------------------------------------------
@@ -15,11 +24,13 @@ class MicroPoll(MicroWriter):
 
     def logger(self, data):
         """ Called after each attempt to poll data and send it """
+
         self.recent.append(data)
         if len(self.recent) > 100:
             self.recent = self.recent[-100:]
         if self.verbose:
-            pprint(data)
+            data_to_print = dict([(k,shorten_lists(v)) for k,v in data.items()])
+            pprint(data_to_print)
             print(' ', flush=True)
 
     def downtime(self):
@@ -185,7 +196,7 @@ class MultiPoll(MicroPoll):
     def determine_next_values(self, source_values):
         """ Should receive raw source data and decides what to send, if anything
 
-            :param source_values   [ float ] or whatever type is returned by self.get_iex_realtime_price. Simplest would be [ float ]
+            :param source_values   [ float ] typically, though this method provides a way to relax that assumption
             :returns  [ float ]  or None
         """
 
@@ -206,7 +217,7 @@ class MultiPoll(MicroPoll):
                 interval:    int         minutes between polls
                 func_args    dict        optional dict of arguments to be passed to get_iex_realtime_price
 
-            """
+        """
         assert all([self.is_valid_name(name) for name in names]), 'name not valid'
         super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func,
                          func_args=func_args, interval=interval, name='never_used.json')
@@ -236,7 +247,7 @@ class MultiPoll(MicroPoll):
                      'next_values': next_values,
                      'elapsed after polling': time.time() - start_time})
 
-        # Update the values with secondary get_iex_realtime_price
+        # Update the values with secondary
         if (self.secondary_func is not None) and (next_values is not None):
             send_values = self.apply_secondary_func(next_values)
         else:
