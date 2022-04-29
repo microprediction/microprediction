@@ -30,6 +30,16 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         Grab multiple stock prices
         IEX allows only 100 at a time
     """
+    SENTINEL = 666
+    def price_or_sentinel(s):
+        if s is None:
+            return SENTINEL
+        else:
+            if s.get('price') is None:
+                return SENTINEL
+            else:
+                return s.get('price')
+
     if len(tickers)>100:
         tickerlists = [tickers[i:i + 100] for i in range(0, len(tickers), 100)]
         mids = [ iex_latest_prices(tickers=ticks, api_key=api_key) for ticks in tickerlists ]
@@ -40,7 +50,7 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         paid_url = 'https://cloud.iexapis.com/v1/stock/market/batch?types=price&symbols='+symbols+'&token=' + api_key
         print(paid_url)
         data = getjson(paid_url)
-        mids = [ data[ticker.upper()]['price'] for ticker in tickers]
+        mids = [ price_or_sentinel(data.get(ticker.upper())) for ticker in tickers]
         return mids
 
 
