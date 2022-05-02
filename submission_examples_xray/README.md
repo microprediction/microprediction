@@ -27,7 +27,9 @@ It is also possible to directly forecast individual portfolios using only their 
       
 ### Examples of predicting portfolio returns from stock returns
 
-One pattern involves estimating covariance:
+COMING SOON. 
+
+Should you wish to beat me to it, one pattern involves estimating covariance:
 
  - See [basic examples of covariance estimation](https://github.com/microprediction/precise/blob/main/examples_basic_usage/running_empirical_population_covariance.py) 
  - Swap out the covariance estimation for any method in the [precise](https://github.com/microprediction/precise) package. 
