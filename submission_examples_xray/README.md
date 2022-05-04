@@ -3,6 +3,10 @@
 
 This directory provides examples of submitting distributional predictions for stock and portfolio price movements.
 
+Sponsor is Hebdomad Leech, full ID:
+
+    6ebd03ad1eec6897b9414ff2a1b4501a
+
 The portfolio [weights](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) are provided as JSON.  
 
  | Type           | Example stream                                                                            | Lookup       | Reverse lookup |
