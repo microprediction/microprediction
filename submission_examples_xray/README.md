@@ -3,7 +3,7 @@
 
 This directory provides examples of submitting distributional predictions for stock and portfolio price movements.
 
-Sponsor is Hebdomad Leech, full ID:
+These streams are sponsored by Hebdomad Leech, whose full public sponsor code is
 
     6ebd03ad1eec6897b9414ff2a1b4501a
 
