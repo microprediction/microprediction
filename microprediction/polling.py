@@ -35,7 +35,8 @@ class MicroPoll(MicroWriter):
 
     def downtime(self):
         """ Also called after each attempt to send data """
-        # By default it does a little MUID mining, or a little more if the balance is sinking
+        # Here we do a little MUID mining, or a little more if the balance is sinking
+        # But note the default constructor arguments above, as mining=False by default
         self.maybe_bolster_balance_by_mining()
 
     def determine_next_value(self, source_value):
@@ -268,7 +269,7 @@ class MultiPoll(MicroPoll):
 
 
 def default_change_criterion(old_values, new_values):
-    [abs(pp - pv) > 1e-6 for pp, pv in zip(old_values, new_values)]
+    return any([abs(pp - pv) > 1e-6 for pp, pv in zip(old_values, new_values)])
 
 
 class MultiChangePoll(MultiPoll):
@@ -276,7 +277,7 @@ class MultiChangePoll(MultiPoll):
     WARM = 1
 
     def __init__(self, names, func, interval, write_key="invalid_key", base_url=None, verbose=True, func_args=None,
-                 with_copulas=False, change_func=None, change_func_args=None, **kwargs):
+                 with_copulas=False, change_func=None, change_func_args=None, min_change_count=1, **kwargs):
         """  Create multiple streams by polling every 20 minutes, say
                 param:
                 names        [ str ]    stream name ending in .json should include names of change streams as well, if change_func is not None
@@ -286,6 +287,7 @@ class MultiChangePoll(MultiPoll):
                 with_copulas bool        Whether to create derived copula streams, or just individual unrelated streams
                 change_func              Function acting directly on a list of value changes
                 change_func_args         Additional argument to change function
+                min_change_count         Minimum number of changes required to trigger an update
             """
         super().__init__(base_url=base_url or api_url(), write_key=write_key, verbose=verbose, func=func,
                          func_args=func_args, interval=interval, names=names, with_copulas=with_copulas, **kwargs)
@@ -294,6 +296,7 @@ class MultiChangePoll(MultiPoll):
         self.current_values = None
         self.change_func = change_func
         self.change_func_args = change_func_args
+        self.min_change_count=min_change_count
 
     def call_change_func(self, value_changes: [float]) -> [float]:
         if isinstance(self.change_func_args, list):
@@ -320,7 +323,7 @@ class MultiChangePoll(MultiPoll):
                 value_changes = [float(current_value) - float(prev_value) for current_value, prev_value in
                                  zip(self.current_values, self.prev_values)]
                 material_changes = [abs(vc) > 1e-6 for vc in value_changes]
-                if not any(material_changes):
+                if sum(material_changes)>=self.min_change_count:
                     self.feed_state = MultiChangePoll.COLD  # Feed is stale, don't judge
                     self.logger(
                         {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
@@ -338,7 +341,7 @@ class MultiChangePoll(MultiPoll):
             self.prev_values = source_values
             if (self.prev_values is not None) and (self.prev_prev is not None):
                 material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(self.prev_prev, self.prev_values)]
-                if any(material_changes):
+                if sum(material_changes)>=self.min_change_count:
                     self.feed_state = MultiChangePoll.WARM
                     self.logger(
                         {'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})

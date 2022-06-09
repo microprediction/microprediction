@@ -33,7 +33,7 @@ def change_func(changes:[float])->[float]:
 
 
 if __name__=='__main__':
-    mcp = MultiChangePoll(write_key=WRITE_KEY, names = XRAY_NAMES, interval=5, func=func, change_func=change_func, with_copulas=True)
+    mcp = MultiChangePoll(write_key=WRITE_KEY, names = XRAY_NAMES, interval=5, func=func, change_func=change_func, with_copulas=True, min_change_count=10)
     mcp.set_repository('https://github.com/microprediction/microprediction/tree/master/stream_examples_xray')
     mcp.run()
 
