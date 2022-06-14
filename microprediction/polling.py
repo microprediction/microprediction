@@ -323,7 +323,7 @@ class MultiChangePoll(MultiPoll):
                 value_changes = [float(current_value) - float(prev_value) for current_value, prev_value in
                                  zip(self.current_values, self.prev_values)]
                 material_changes = [abs(vc) > 1e-6 for vc in value_changes]
-                if sum(material_changes)>=self.min_change_count:
+                if sum(material_changes)<=self.min_change_count:
                     self.feed_state = MultiChangePoll.COLD  # Feed is stale, don't judge
                     self.logger(
                         {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
