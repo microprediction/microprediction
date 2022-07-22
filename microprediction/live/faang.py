@@ -116,8 +116,8 @@ def get_gnaff_prediction_metrics(write_key):
             the_kurtosis.append(kurtosis(chopped))
             # Vol horizon ratio
             all_predictions_long = reader.get_predictions(name=name, write_key=write_key, delay=reader.DELAYS[3], strip=True, consolidate=True)
-            long_trimmed, long_chopped = trim_and_chop(all_predictions)
-            slope = np.std(long_chopped)/(2*np.std(chopped))
+            long_trimmed, long_chopped = trim_and_chop(all_predictions_long)
+            slope = np.std(long_chopped)/(np.std(chopped))
             the_slopes.append(slope)
         except Exception:
             print('Something wrong with get_gnaff_prediction_metrics')
