@@ -57,7 +57,10 @@ NAAFG_METHODS = [('info', 1),  # The second entry is an exponent
                  ('kurtosis', 4),
                  ('semi', 1),
                  ('semi', 2),
-                 ('semi', 4)]
+                 ('semi', 4),
+                 ('slope',1),
+                 ('slope',2),
+                 ('slope',4)]
 NAAFG_NAMES = ['naafg_' + str(k) + '.json' for k, _ in enumerate(NAAFG_METHODS)] # Community portfolios
 
 
@@ -84,6 +87,13 @@ def scaled_portfolio_return(changes, w:[float]):
     return portfolio_change
 
 
+def trim_and_chop(predictions):
+    trimmed = [v if abs(v) < 100. else 100 * v / abs(v) for v in all_predictions]
+    n_chop = int(math.ceil(len(trimmed)) / 50)
+    chopped = trimmed[n_chop:-n_chop]
+    return trimmed, chopped
+
+
 def get_gnaff_prediction_metrics(write_key):
     """
        Get metrics for current predictions for GNAAF streams
@@ -93,26 +103,31 @@ def get_gnaff_prediction_metrics(write_key):
     the_stds = list()
     the_semis = list()
     the_kurtosis = list()
+    the_slopes = list()
     reader = MicroReader()
     for name in GNAAF_NAMES:
         try:
             all_predictions = reader.get_predictions(name=name, write_key=write_key, delay=reader.DELAYS[2], strip=True, consolidate=True)
-            trimmed_values = [v if abs(v) < 100. else 100 * v / abs(v) for v in all_predictions]
-            n_chop = int(math.ceil(len(trimmed_values)) / 50)
-            chopped = trimmed_values[n_chop:-n_chop]
+            _, chopped = trim_and_chop(all_predictions)
             neg_chopped = [ 0 if (ch>=0) else ch*ch for ch in chopped ]
             the_means.append(np.mean(chopped))
             the_stds.append(np.std(chopped))
             the_semis.append(math.sqrt(np.mean(neg_chopped)))
             the_kurtosis.append(kurtosis(chopped))
+            # Vol horizon ratio
+            all_predictions_long = reader.get_predictions(name=name, write_key=write_key, delay=reader.DELAYS[3], strip=True, consolidate=True)
+            long_trimmed, long_chopped = trim_and_chop(all_predictions)
+            slope = np.std(long_chopped)/(2*np.std(chopped))
+            the_slopes.append(slope)
         except Exception:
             print('Something wrong with get_gnaff_prediction_metrics')
             the_means.append(0)
             the_stds.append(1)
             the_kurtosis.append(-0.01)
             the_semis.append(1)
+            the_slopes.append(1)
     assert len(the_means)+len(the_stds)==2*len(GNAAF_NAMES)
-    return the_means, the_stds, the_semis, the_kurtosis
+    return the_means, the_stds, the_semis, the_kurtosis, the_slopes
 
 
 def naafg_community_portfolios(write_key)->[[float]]:
@@ -120,14 +135,14 @@ def naafg_community_portfolios(write_key)->[[float]]:
         A collection of community constructed portfolios of FAANG stocks
            write_key: the private key for LEGLESS_OCELOT, creator of the GNAAF portfolio return streams
     """
-    the_means, the_stds, the_semis, the_kurtosis = get_gnaff_prediction_metrics(write_key=write_key)
+    the_means, the_stds, the_semis, the_kurtosis, the_slopes = get_gnaff_prediction_metrics(write_key=write_key)
     scaled_infos = [ 5*mn/st for mn, st in zip(the_means, the_stds)]
     scaled_semi_infos = [ 5*mn/ss for mn,ss in zip(the_means, the_semis)]
     scaled_kurtosis = [ 0.7*kt for kt in the_kurtosis]
-
+    scaled_slopes = [ sl for sl in the_slopes ]
     the_portfolios = list()
     metrics = {'info':scaled_infos,'semi':scaled_semi_infos,
-               'kurtosis':scaled_kurtosis}
+               'kurtosis':scaled_kurtosis,'slope':scaled_slopes}
     for metric_name,expon in NAAFG_METHODS:
         the_weighting = [ math.exp(expon*mtc) for mtc in metrics[metric_name] ]
         the_unnormalized_portfolio = np.array([ 0 for _ in FAANG_NAMES ])

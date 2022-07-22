@@ -26,3 +26,7 @@ def test_die_cdf():
     for base_url in BASE_URLS:
         mr = MicroReader(base_url=base_url)
         pdf = mr.get_discrete_pdf_lagged(name='die.json', delay=mr.DELAYS[0])
+
+
+if __name__=='__main__':
+    test_die_cdf()
