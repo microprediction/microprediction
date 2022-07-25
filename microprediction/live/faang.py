@@ -88,7 +88,7 @@ def scaled_portfolio_return(changes, w:[float]):
 
 
 def trim_and_chop(predictions):
-    trimmed = [v if abs(v) < 100. else 100 * v / abs(v) for v in all_predictions]
+    trimmed = [v if abs(v) < 100. else 100 * v / abs(v) for v in predictions]
     n_chop = int(math.ceil(len(trimmed)) / 50)
     chopped = trimmed[n_chop:-n_chop]
     return trimmed, chopped
@@ -119,8 +119,9 @@ def get_gnaff_prediction_metrics(write_key):
             long_trimmed, long_chopped = trim_and_chop(all_predictions_long)
             slope = np.std(long_chopped)/(np.std(chopped))
             the_slopes.append(slope)
-        except Exception:
+        except Exception as e:
             print('Something wrong with get_gnaff_prediction_metrics')
+            print(e)
             the_means.append(0)
             the_stds.append(1)
             the_kurtosis.append(-0.01)
