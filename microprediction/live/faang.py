@@ -138,14 +138,23 @@ def naafg_community_portfolios(write_key)->[[float]]:
     """
     the_means, the_stds, the_semis, the_kurtosis, the_slopes = get_gnaff_prediction_metrics(write_key=write_key)
     scaled_infos = [ 5*mn/st for mn, st in zip(the_means, the_stds)]
-    scaled_semi_infos = [ 5*mn/ss for mn,ss in zip(the_means, the_semis)]
+    the_translated_semis = [ s-min(the_semis)+1 for s in the_semis]
+    the_scaled_semis = [ math.sqrt(s) for s in the_translated_semis]
+    scaled_semi_infos = [ 1/ss for mn,ss in zip(the_means, the_scaled_semis)]
     scaled_kurtosis = [ 0.7*kt for kt in the_kurtosis]
     scaled_slopes = [ sl for sl in the_slopes ]
     the_portfolios = list()
     metrics = {'info':scaled_infos,'semi':scaled_semi_infos,
                'kurtosis':scaled_kurtosis,'slope':scaled_slopes}
     for metric_name,expon in NAAFG_METHODS:
-        the_weighting = [ math.exp(expon*mtc) for mtc in metrics[metric_name] ]
+        try:
+            the_weighting = [ math.exp(expon*mtc) for mtc in metrics[metric_name] ]
+        except OverflowError as e:
+            print('Warning. Metric ' + str(metric_name) + ' yields an overflow ')
+            n_port = len(metrics[metric_name])
+            the_weighting = [ 1.0/n_port for _ in range(n_port)]
+
+
         the_unnormalized_portfolio = np.array([ 0 for _ in FAANG_NAMES ])
         for weight, w in zip( the_weighting, GNAAF_WEIGHTS):
             the_unnormalized_portfolio = the_unnormalized_portfolio + weight*np.array(w)

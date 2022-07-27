@@ -46,7 +46,8 @@ def iex_latest_prices(tickers, api_key:str)->[float]:
         mids_flat = [item for sublist in mids for item in sublist]
         return mids_flat
     else:
-        symbols = ','.join(tickers)
+        substituted = [ 'meta' if t=='fb' else t for t in tickers]
+        symbols = ','.join(substituted)
         paid_url = 'https://cloud.iexapis.com/v1/stock/market/batch?types=price&symbols='+symbols+'&token=' + api_key
         print(paid_url)
         data = getjson(paid_url)
@@ -96,3 +97,7 @@ def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True
 
     return common
 
+
+if __name__=='__main__':
+    from microprediction.config_private import IEX_KEY
+    print(iex_latest_prices(tickers=['meta'], api_key=IEX_KEY))
