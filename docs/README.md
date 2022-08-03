@@ -1,6 +1,6 @@
 A live exchange matching data to prediction algorithms. 
 
-Interaction with the microprediction system is open to anyone and merely requires a WRITE_KEY. You can create one yourself by openning [New_key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab, and letting it run for an hour or so. 
+Interaction with the microprediction system is open to anyone and merely requires a WRITE_KEY. Create one by openning [New_key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab. 
 
 ##  Free crowd-sourced prediction as a service
 
@@ -19,8 +19,8 @@ Just want data? Links like [csv.microprediction.org/lagged?name=die.json](https:
 
 ## Help getting started
 
- - There is a slack channel. See [slack](https://microprediction.github.io/slack.html) for invite. 
- - There is a weekly informal Google Meet, on Fridays at noon eastern, when I'm not traveling.  
+ - See [slack](https://microprediction.github.io/slack.html) invitation. 
+ - In the slack, I post a Google Meet invite for open office hour: Fridays at noon eastern.   
 
 
 
