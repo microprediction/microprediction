@@ -1,10 +1,10 @@
-Publish or predict? 
+Let me explain briefly...
 
 ## 1. Free crowd-sourced live prediction via API ([>> PUBLISH >>](https://microprediction.github.io/publish.html))
 
-Take a moment to [browse the streams](https://www.microprediction.org/browse_streams.html) at microprediction.org. These are all created by people like you who publish scalar "ground truth" values one at a time, in order to initiate contests between prediction algorithms. The net result of these ongoing battles are beautiful community cumulative distribution functions. An example is [this one](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead distribution of changes to the logarithm of the price of META stock. You can create your own stream by modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
+Take a moment to [browse the streams](https://www.microprediction.org/browse_streams.html) at microprediction.org. These are all created by people like you who publish scalar "ground truth" values one at a time, in order to initiate contests between prediction algorithms. The net result of these ongoing battles are beautiful community cumulative distribution functions accessed by API. An example is [this one](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead distribution of changes to the logarithm of the price of META stock. You can create your own stream by modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
 
-See [publish](https://microprediction.github.io/publish.html) for more advanced polling patterns, utilities and examples if you need them.  
+See [publish](https://microprediction.github.io/publish.html) for more advanced polling patterns, utilities, examples and more.   
 
 ## 2. Free benchmarking of algorithms ([>> PREDICT >>](https://microprediction.github.io/predict.html))
 
@@ -15,6 +15,7 @@ See [predict](https://microprediction.github.io/predict.html) for more details a
 
 ### A few things to be aware of:
 
+ - There is a daily cash prize for prediction of $125 USD. 
  - Interaction with the microprediction system is free and open to anyone, and merely requires a WRITE_KEY. Create yours by openning [New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab and letting it run for a few hours. Then paste your write key into the [www.microprediction.org](https://www.microprediction.org) dashboard. 
  - You probably want to join the [slack](https://microprediction.github.io/slack.html). 
  - In the slack, I post a Google Meet invite for office hours: Fridays at noon eastern. Sometimes Tuesday nights too.  
