@@ -1,4 +1,4 @@
-Streams are the result of repeatedly publishing (*setting*) a scalar value. 
+[Streams](https://www.microprediction.org/browse_streams.html) are the result of repeatedly publishing (*setting*) a scalar value. 
 
 ## 1. Python
 Use the MicroWriter class viz:
