@@ -1,5 +1,5 @@
 
-# microprediction   ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
+# [microprediction](https://microprediction.github.io/microprediction/)  ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
 Looking for the microprediction [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction/tree/master/microprediction) or [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world), [stuff I've written](https://github.com/microprediction/home) on this topic and others?
 
 ### Get in the game and win $125 every day
