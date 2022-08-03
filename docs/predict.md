@@ -1,7 +1,7 @@
 
-### Submit API 
+### Submitting predictions 
 
-Conceptually speaking, to "predict" is to supply the following:
+Conceptually speaking, on microprediction to "predict" is to supply the following:
 
  - A list of *225* float 
  - A delay, which must be 70, 310, 910 or 3555 seconds. 
@@ -18,7 +18,7 @@ the first number published after the delay has elapsed.
     values = list(range(225))
     mw.submit(name='sombody_else_stream.json',delay=910, values=values)
 
-See [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) for patterns and more. 
+This example is largely inadequate as it is not informed by the history of the stream in question. See [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) for typical patterns.  
 
 ### R 
 Following [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples)...
