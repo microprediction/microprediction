@@ -1,4 +1,4 @@
-To publish a value to a new or existing stream:
+Streams are the result of repeatedly publishing (*setting*) a scalar value. 
 
 ## 1. Python
 Use the MicroWriter class viz:
