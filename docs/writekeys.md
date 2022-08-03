@@ -1,11 +1,19 @@
-A WRITE_KEY is a private unique identifier whose hash is partly memorable. Options for obtaining one:
+## Write keys
 
-### Python colab notebook
+A private unique identifier whose hash is partly memorable, as explained at [muid.org](https://www.muid.org) where there is a [video](https://vimeo.com/397352413).
 
-Open [notebook_examples/New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) and run it for hours. 
+Difficult keys take longer to create. You need a difficulty 12 key to create streams. You are also well served by a difficult key when making predictions, due to the 
+[bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html) rules.
 
-### Python 
+Here's how to create one for yourself. 
+
+### Python
+
+Open [notebook_examples/New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) and be patient. Or:
 
     from microprediction import new_key
     print(new_key(difficulty=12))
     
+and be patient. 
+
+

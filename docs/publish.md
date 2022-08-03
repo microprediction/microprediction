@@ -1,4 +1,7 @@
-[Streams](https://www.microprediction.org/browse_streams.html) are the result of repeatedly publishing (*setting*) a scalar value. 
+## Publishing a stream
+
+Here's how to add to the list of [streams](https://www.microprediction.org/browse_streams.html). 
+
 
 ## 1. [Python](https://microprediction.github.io/microprediction/publish-using-python.html)
 

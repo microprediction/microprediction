@@ -1,3 +1,5 @@
+## Crawling
+
 The MicroCrawler class, found in [micropredicton/crawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) is intended to
 make it easier to shauffeur algorithms from one stream to the next. 
 

@@ -1,5 +1,5 @@
 
-### Submitting predictions 
+## Submitting predictions 
 
 Conceptually speaking, on microprediction to "predict" is to supply the following:
 

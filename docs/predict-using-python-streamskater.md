@@ -1,3 +1,5 @@
+## Skating
+
 The [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) is intended to make it easy to use any time-series
 point forecast method from the timemachines package. 
 
