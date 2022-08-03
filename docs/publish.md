@@ -36,4 +36,4 @@ Send a PUT request to [https://api.microprediction.org/live/my_stream.json](http
    - value (e.g. 3.14157)
 
 
-[Back](https://microprediction.github.io/microprediction/)
+[Docs home](https://microprediction.github.io/microprediction/)
