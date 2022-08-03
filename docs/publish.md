@@ -1,12 +1,12 @@
 [Streams](https://www.microprediction.org/browse_streams.html) are the result of repeatedly publishing (*setting*) a scalar value. 
 
-## 1. Python
+## 1. [Python](https://microprediction.github.io/microprediction/publish-using-python.html)
 
     from microprediction import MicroWriter
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
     mw.set(name='my_stream.json',value=3.14157) 
     
-See [publish-using-python.md](https://microprediction.github.io/microprediction/publish-using-python.html) for more utilities and patterns. 
+See [publish-using-python](https://microprediction.github.io/microprediction/publish-using-python.html) for more utilities and patterns. 
 
 ## 2. R 
 
@@ -35,5 +35,6 @@ Send a PUT request to [https://api.microprediction.org/live/my_stream.json](http
    - budget (can just set to 1)
    - value (e.g. 3.14157)
 
+## Retrieving results
 
-[Docs home](https://microprediction.github.io/microprediction/)
+See [retrieve](https://microprediction.github.io/microprediction/retrieve.html), after the algorithms have had time to find your stream.  
