@@ -7,7 +7,7 @@ Use the MicroWriter class viz:
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
     mw.set(name='my_stream.json',value=3.14157) 
     
-See [get-predictions-python.md](https://microprediction.github.io/microprediction/get-predictions-python.html) for more utilities and patterns. 
+See [publish-using-python.md](https://microprediction.github.io/microprediction/get-predictions-python.html) for more utilities and patterns. 
 
 ## 2. R 
 There is no official R client, but you can do this:
