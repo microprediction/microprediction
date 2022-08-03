@@ -1,7 +1,6 @@
 [Streams](https://www.microprediction.org/browse_streams.html) are the result of repeatedly publishing (*setting*) a scalar value. 
 
 ## 1. Python
-Use the MicroWriter class viz:
 
     from microprediction import MicroWriter
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
@@ -10,22 +9,23 @@ Use the MicroWriter class viz:
 See [publish-using-python.md](https://microprediction.github.io/microprediction/publish-using-python.html) for more utilities and patterns. 
 
 ## 2. R 
-There is no official R client, but you can do this:
 
     library(httr)
     httr::PUT(url = paste0("https://api.microprediction.org/live/", 'my_stream.json'),
                   body = list(write_key = 'YOUR WRITE KEY HERE', budget = 1, value = 3.1457))
        
-See [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples). 
+See Fred Viole's [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples). 
 
 ## 3. Julia 
-I suggest using or modifying [Rusty Conover's Julia Client](https://github.com/rustyconover/Microprediction/blob/master/src/Microprediction.jl). e.g.:
 
     r = HTTP.request("PUT", "https://api.microprediction.org/live/my_stream.json";
     query=Dict(
         "write_key" => 'YOUR WRITE KEY',
         value => 3.14157))
     JSON.parse(String(r.body))
+    
+This example is from [Rusty Conover's Julia Client](https://github.com/rustyconover/Microprediction/blob/master/src/Microprediction.jl).
+
     
 ## 4. API 
 
