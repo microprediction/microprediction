@@ -1,11 +1,11 @@
 
 ### Submit API 
 
-To "predict" is to do the following:
+Conceptually speaking, to "predict" is to supply the following:
 
- - Submit a list of *225* float (ultimately via api.microprediction.org/submit)
- - Specify a delay, which must be 70, 310, 910 or 3555 seconds. 
- - Specify a stream name.  
+ - A list of *225* float 
+ - A delay, which must be 70, 310, 910 or 3555 seconds. 
+ - A stream name.  
 
 The goal is to have as many guesses as possible close in value to the 'ground truth'. The ground truth is 
 the first number published after the delay has elapsed. 
