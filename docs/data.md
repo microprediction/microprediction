@@ -14,9 +14,10 @@ For other possibilities, see the [MicroReader](https://github.com/micropredictio
 
 ## R
 
-   library(jsonlite)
-   lagged <- jsonlite::fromJSON(paste0("https://api.microprediction.org/lagged/",name))
-   x <- lagged[, 2, drop=FALSE]
+
+    library(jsonlite)
+    lagged <- jsonlite::fromJSON(paste0("https://api.microprediction.org/lagged/",name))
+    x <- lagged[, 2, drop=FALSE]
    
    
 See also [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples). 
