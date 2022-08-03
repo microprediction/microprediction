@@ -1,4 +1,4 @@
-A free live exchange matching data to prediction algorithms, automating the following:
+A place where you publish live data, and algorithms predict it for you. 
 
 ## Crowd-sourced prediction ([>>THIS WAY>>](https://microprediction.github.io/get-predictions.html))
 
