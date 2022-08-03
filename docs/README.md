@@ -20,10 +20,7 @@ See [predict](https://microprediction.github.io/microprediction/predict.html) fo
  - You probably want to join the [slack](https://microprediction.github.io/slack.html). 
  - In the slack, I post a Google Meet invite for office hours: Fridays at noon eastern. Sometimes Tuesday nights too.  
  - By all means message [me](https://www.linkedin.com/in/petercotton/) on Linked-In, especially if the slack invite is stale. 
-
- 
-### PS: Just want data?
-See [data](https://microprediction.github.io/data.html) for other ways, such as direct use of the API or Python client. 
+ - It is trivial to retrieve recent historical [data](https://microprediction.github.io/data.html). 
   
 
 
