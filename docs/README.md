@@ -1,5 +1,3 @@
-A place where you publish live data, and algorithms predict it for you. 
-
 ## Free crowd-sourced live prediction via API ([>>THIS WAY>>](https://microprediction.github.io/get-predictions.html))
 
 Take a moment to [browse the streams](https://www.microprediction.org/browse_streams.html) at microprediction.org. These are all created by people like you who publish scalar "ground truth" values one at a time, in order to initiate contests between prediction algorithms. The net result of these ongoing battles are beautiful community cumulative distribution functions. An example is [this one](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead distribution of changes to the logarithm of the price of META stock. You can create your own stream by modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
@@ -19,7 +17,7 @@ See [make-predictions](https://microprediction.github.io/make-predictions.html) 
  - You probably want to join the [slack](https://microprediction.github.io/slack.html). 
  - By all means message [me](https://www.linkedin.com/in/petercotton/) on Linked-In.
  - In the slack, I post a Google Meet invite for office hours: Fridays at noon eastern. Sometimes Tuesday nights too.  
- - If you merely want data for research, then links such as [https://csv.microprediction.org/lagged?name=die.json](https://csv.microprediction.org/lagged?name=die.json) download the recent history of die rolls (say). See [get-data](https://microprediction.github.io/get-data.html) for other ways, such as direct use of the API or Python client.
+ - If you merely want data for research, see [get-data](https://microprediction.github.io/get-data.html) for other ways, such as direct use of the API or Python client. 
   
 
 
