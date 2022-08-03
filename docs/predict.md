@@ -1,10 +1,17 @@
 
+### Submit API 
 
-### Conceptual 
-At microprediction to "predict" is to supply *225* guesses of the future value of a stream that is in the process of being created by someone else. Each submission of 
-225 guesses 
+To "predict" is to do the following:
+
+ - Submit via api.microprediction.org/submit a list of *225* float 
+ - Specify a delay, which must be 70, 310, 910 or 3555 seconds. 
+ - Specify a stream name.  
+
+The goal is to have as many guesses as possible close in value to the 'ground truth'. The ground truth is 
+the first number published after the delay has elapsed. 
+
 
 ### Python
-
+Use the 
 
 
