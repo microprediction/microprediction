@@ -7,7 +7,7 @@ Use the MicroWriter class viz:
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
     mw.set(name='my_stream.json',value=3.14157) 
     
-See [publish-using-python.md](https://microprediction.github.io/microprediction/get-predictions-python.html) for more utilities and patterns. 
+See [publish-using-python.md](https://microprediction.github.io/microprediction/publish-using-python.html) for more utilities and patterns. 
 
 ## 2. R 
 There is no official R client, but you can do this:
@@ -36,3 +36,4 @@ Send a PUT request to [https://api.microprediction.org/live/my_stream.json](http
    - value (e.g. 3.14157)
 
 
+[Back](https://microprediction.github.io/microprediction/)
