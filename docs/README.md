@@ -14,18 +14,17 @@ On the other hand, perhaps you have an strong opinion about the distribution of 
 See [make-predictions](https://microprediction.github.io/make-predictions.html) for more details and examples. 
 '
 
-### Help  
+### Help getting started
 
-To get you over bumps getting started, there is a slack channel and a weekly informal Google Meet, Friday's noon EST. See [get-help](https://microprediction.github.io/get-help.html). 
+There is a slack channel and a weekly informal Google Meet, Friday's noon EST. See [get-help](https://microprediction.github.io/get-help.html). 
 
-### Write Keys
+### Write keys
 
-Beyond the mere reading of data, interaction with the microprediction system requires a WRITE_KEY. You can create one yourself using 
+Beyond the mere reading of data, interaction with the microprediction system requires a WRITE_KEY. You can create one yourself by openning [New_key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab and letting it run for an hour or so. 
 
+### Time-series data
 
-### Data
-
-Just want free fresh data for time-series research? You can download the recent history of die rolls from [csv.microprediction.org/lagged?name=die.json](https://csv.microprediction.org/lagged?name=die.json), but see [get-data](https://microprediction.github.io/get-data.html) for other ways, such as direct use of the API or Python client. 
+Just want free fresh data for time-series research? You can download the recent history of die rolls (say) from [csv.microprediction.org/lagged?name=die.json](https://csv.microprediction.org/lagged?name=die.json), but see [get-data](https://microprediction.github.io/get-data.html) for other ways, such as direct use of the API or Python client. 
 
 
 
