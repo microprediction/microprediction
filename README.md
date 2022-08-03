@@ -1,6 +1,6 @@
 
 # microprediction   ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg)
-Looking for the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) or [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) or [stuff I've written](https://github.com/microprediction/home)?
+Looking for the microprediction [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction/tree/master/microprediction) or [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world), [stuff I've written](https://github.com/microprediction/home) on this topic and others?
 
 ### Get in the game and win $125 every day
 Running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - but few know that. There's an even gentler introduction taking the form of a [colab notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) you can open and run now. See also the examples of how to predict 979 stocks and 1000 portfolio intra-day changes in [submission_examples_xray](https://github.com/microprediction/microprediction/tree/master/submission_examples_xray).
