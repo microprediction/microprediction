@@ -1,10 +1,13 @@
-Your options for publishing a data point:
+To publish a value to a new or existing stream:
 
-## 1. Python client 
+## 1. Python
+Use the MicroWriter class viz:
 
     from microprediction import MicroWriter
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
     mw.set(name='my_stream.json',value=3.14157) 
+    
+See [get-predictions-python.md](https://microprediction.github.io/microprediction/get-predictions-python.html) for more utilities and patterns. 
 
 ## 2. R 
 There is no official R client, but you can do this:
@@ -25,4 +28,11 @@ I suggest using or modifying [Rusty Conover's Julia Client](https://github.com/r
     JSON.parse(String(r.body))
     
 ## 4. API 
+
+Send a PUT request to [https://api.microprediction.org/live/my_stream.json](https://api.microprediction.org/live/my_stream.json) with the following parameters in the payload:
+
+   - write_key
+   - budget (can just set to 1)
+   - value (e.g. 3.14157)
+
 
