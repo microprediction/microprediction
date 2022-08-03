@@ -2,7 +2,7 @@ The MicroCrawler class, found in [micropredicton/crawler](https://github.com/mic
 make it easier to shauffeur algorithms from one stream to the next. 
 
 ### Running the default crawler
-
+Not a terrible way to get familiar with the system. 
 
     from microprediction import MicroCrawler
     crawler = MicroCrawler(write_key='YOUR WRITE KEY')
