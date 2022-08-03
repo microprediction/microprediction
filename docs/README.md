@@ -17,8 +17,8 @@ PS: Just want data? Links like [csv.microprediction.org/lagged?name=die.json](ht
 
 ## Before you start
 
- - Interaction with the microprediction system is free and open to anyone, and merely requires a WRITE_KEY. Create yours by openning [New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab and letting it run. Then paste your write key 
- - See the [slack](https://microprediction.github.io/slack.html) invitation and DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In if this is stale. 
+ - Interaction with the microprediction system is free and open to anyone, and merely requires a WRITE_KEY. Create yours by openning [New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab and letting it run for a few hours. Then paste your write key into the [www.microprediction.org](https://www.microprediction.org) dashboard. 
+ - You probably want to use the [slack](https://microprediction.github.io/slack.html) invitation (or message [me](https://www.linkedin.com/in/petercotton/) on Linked-In if this is stale).
  - In the slack, I post a Google Meet invite for open office hour: Fridays at noon eastern.   
 
 
