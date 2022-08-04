@@ -43,4 +43,8 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
     - values (as a string with comma-separated values)
 
 
+### Prerequisite
+Get your [writekey](https://microprediction.github.io/microprediction/writekeys.html) and 
+learn about [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html).
+
 

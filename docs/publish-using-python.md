@@ -25,7 +25,7 @@ as illustrated by [traffic_speed.py](https://github.com/microprediction/micropre
     poller.run()
 
 Here interval is in minutes. The argument `func` should be a function returning
-a float, and you can supply 'func_args` if needed. 
+a float, and you can supply `func_args` if needed. 
 
 ### MicroChangePoll
 It often pays to publish changes to live quantities, rather than absolute values, as this 

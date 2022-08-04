@@ -43,4 +43,6 @@ Indeed there are several
 algorithms whose only purpose in life is making $N(0,1)$-inspired predictions of z1~ streams. However, your algorithm might notice departure from standard normality and profit from the same. 
 
 
- 
+### Feeling fancy?
+See [copulas](https://microprediction.github.io/microprediction/copulas.html) for 
+an extension of the community zscore idea to two and three dimensions. 

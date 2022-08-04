@@ -14,6 +14,9 @@ Open [notebook_examples/New_Key](https://github.com/microprediction/micropredict
     from microprediction import new_key
     print(new_key(difficulty=12))
     
-and be patient. 
+and be patient either way. 
+
+### Stuck
+... or just bored waiting for a 13-strength key? Ping us in the [slack](https://microprediction.github.io/microprediction/slack.html)
 
 

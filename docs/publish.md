@@ -38,6 +38,12 @@ Send a PUT request to [https://api.microprediction.org/live/my_stream.json](http
    - budget (can just set to 1)
    - value (e.g. 3.14157)
 
+
+## Before you publish
+Get your [writekey](https://microprediction.github.io/microprediction/writekeys.html) of difficulty 12 at least,
+and learn about [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html).
+
+
 ## After you publish
 
 - Be patient, keep publishing, and promote your stream. 
