@@ -27,9 +27,8 @@ a new point \(x\) is published. We also assume a mapping:
 $$ F_{70}: x \rightarrow [0,1] $$
 
 that is the distributional transform implied by (most of the) community predictions for $x$ pertaining to the $70$ second horizon. 
-Here I skip over some engineering nuances.  
-
-Given the `community distributional transform` thus defined, the 'z-score' is given by
+Here I skip over some engineering nuances, to be honest, but assuming
+the `community distributional transform` is thus defined, the 'z-score' is given by
 
 $$
    z_1 = \Phi^{-1}\left( F_{70}(x)  \right)
