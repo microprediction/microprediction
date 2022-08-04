@@ -1,5 +1,6 @@
 set -e
 echo "This script will run DefaultCrawler from a new virtual env"
+echo "If it fails you might need to brew install python"
 mkdir -p crawling_working_dir
 cd crawling_working_dir
 python3 -m venv crawling
