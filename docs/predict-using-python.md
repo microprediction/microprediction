@@ -1,19 +1,23 @@
 ## Submitting predictions using python
 Usually you'd use one of
 
-      MicroWriter        (memoryless cron job, say)
+      MicroWriter        
           |
-      MicroCrawler       (intended to be run as continuous process)
+      MicroCrawler       
 
-or a fancy descendent of MicroCrawler. 
+or perhaps a fancy descendant of MicroCrawler. We consider each in turn.
 
-### Option 1. BYO scheduling with MicroWriter
-Use [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit() as illustratd by
+### Option 1. Use [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit()
+If you intend to periodically run a script (say with cron) or otherwise
+manage periodic submissions, then you may only need the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit() method
+to get the job done. This is illustratd by
 [callable_flea.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_independent/callable_flea.py)
 
-    NAMES = get_xray_stock_names() + XRAY_PORTFOLIO_NAMES
+    from microprediction import MicroWriter
     from microprediction.live.xraytickers import get_xray_stock_names
     from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
+    NAMES = get_xray_stock_names() + XRAY_PORTFOLIO_NAMES
+    mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
 
     for name in NAMES:
         lagged_values = mw.get_lagged_values(name=name)
@@ -25,23 +29,27 @@ Use [MicroWriter](https://github.com/microprediction/microprediction/blob/master
             mw.submit(name=name, values=values, delay=delay)
             time.sleep(1)  # <-- Out of consideration for the system
 
-This might be run once an hour, or once a day say. 
+This might be run once an hour, or once a day say. Naturally you'll want to replace
+the dubious model above with your own statistical ingenuity. 
 
-### Option 2: [Use MicroCrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
-Another pattern is:
+### Option 1a: MicroWriter copula submission
+See [predict-using-python-copulas](https://microprediction.github.io/microprediction/predict-using-python-copulas.html).
+
+
+### Option 2: Use [MicroCrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).run()
+As an alternative to scheduled predictions, you can use a single long running process. 
 
   1. Subclass MicroCrawler
   2. Instantiate with your WRITE_KEY
   3. Call the run() method
 
-This will create an algorithm that slowly explores the stream universe. You can override the
-default prediction and navigation logic. See [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
+This will create an algorithm that slowly explores the stream universe. In the first step
+you can override the default prediction and navigation logic. See [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
 
-
-### Option 3: MicroWriter copula submission methods
-Applicable only to copula streams. See [predict-using-python-copulas](https://microprediction.github.io/microprediction/predict-using-python-copulas.html).
-
-
+### Option 2a: Use a specialized version of MicroCrawler
+You can also hunt in the [repository](https://github.com/microprediction/microprediction/tree/master/microprediction) for
+classes modifying and extending MicroCrawler. For now I document only
+[StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html).
 
 
 

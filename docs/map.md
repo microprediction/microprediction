@@ -20,6 +20,7 @@
 - [predict](https://microprediction.github.io/microprediction/predict.html)
 - [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html)
 - [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)
+- [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
 - [writekeys](https://microprediction.github.io/microprediction/writekeys.html)
 - [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html)
 - [transfers](https://microprediction.github.io/microprediction/transfers.html)
