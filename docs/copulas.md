@@ -23,7 +23,7 @@ The following family of streams illustrates the pattern.
 
 
 To reiterate there are NO MULTIVARIATE streams on microprediction.org. However there are
-univariate streams whose values represent a point in R^2 or R^3. The mapping from one dimension to 
+univariate streams whose values represent a point in $$R^2$$ or $$R^3$. The mapping from one dimension to 
 two or three is implied. The former is used by streams prefixed by z2~, the latter by streams prefixed by
 z3~.
 
@@ -38,16 +38,15 @@ Very similar to the use of set()
 
 ### Definition
 Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
-are not $$y=x^2$$ dissimilar:
+are not dissimilar:
 
-\( z_2 = 17 \)
+$$ z(x_1,x_2) = \Phi^{-1} \left( H( F_1(x_1), F_2(x_2) ) \right) $$
 
-Or this 
+where $$F_1$$ is the community distributional transform applied to a published 
+data point $x_1$ for one stream, and similarly for $x_2$, and
+$$H:[0,1]^2 \rightarrow [0,1]$$ is the inverse of a space-filling curve. 
 
-$$x^2 + 3$$
-
-
-Morton space filling Z-curves are employed. The most up to date
+For $$H$$, Morton Z-curves are employed. The most up to date
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
 writing these docs, the heart of this calculation is:
 
