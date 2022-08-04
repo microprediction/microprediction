@@ -16,6 +16,7 @@
        
 ### All pages 
 
+- [home](https://microprediction.github.io/microprediction)
 - [predict](https://microprediction.github.io/microprediction/predict.html)
 - [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html)
 - [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)
