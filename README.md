@@ -70,6 +70,7 @@ is that hundreds of algorithms compete at [Microprediction](https://github.com/m
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
  # The book is on the way 
+ You can [help me choose](https://www.linkedin.com/posts/petercotton_machinelearning-datascience-artificialintelligence-activity-6960853808872579072-SzDO?utm_source=linkedin_share&utm_medium=member_desktop_web)!
  
  ![](https://github.com/microprediction/home/blob/main/books/cover_choices.png)
 
