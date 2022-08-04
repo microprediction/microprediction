@@ -11,13 +11,15 @@ might consider some more advanced functionality. The /copula API serves two purp
 The following family of streams illustrates the pattern.
     
      
-|  Functionality          | Example dashboard URL                                                                     |
-|-------------------------|-------------------------------------------------------------------------------------------|
-|  Base stream #1         | https://www.microprediction.org/stream_dashboard.html?stream=c5_iota                      |
-|  Base stream #2         | https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin                   |
-|  Z-scores               | https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_iota~310               |
-|  Bivariate copula       | https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_iota~pe~910            |
-|  Trivariate copula      | https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_iota~c5_bitcoin~pe~910 |         
+| Type of stream           | Examples                                                                                               |
+|--------------------------|--------------------------------------------------------------------------------------------------------|
+| Base stream #1           | https://www.microprediction.org/stream_dashboard.html?stream=c5_ethereum                               |
+| Base stream #2           | https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin                                |
+| Base stream #2           | https://www.microprediction.org/stream_dashboard.html?stream=c5_cardano                                |
+| Z-scores stream #1       | https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_ethereum~3555                       |
+| Bivariate copula #1,#2   | https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_bitcoin~c5_ethereum~3555            |
+| Trivariate copula (70s)  | https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~70   |         
+| Trivariate copula (1 hr) | https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~3555 |         
 
 
 To reiterate there are NO MULTIVARIATE streams on microprediction.org. However there are
