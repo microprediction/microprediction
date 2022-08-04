@@ -4,16 +4,16 @@ Looking for the microprediction [docs](https://microprediction.github.io/micropr
 API [summary](https://microprediction.github.io/microprediction/summary.html) or
 [install](https://microprediction.github.io/microprediction/install.html) instructions?
 
+Yup this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. 
+
 # [Me](https://github.com/microprediction/home), my [slack](https://microprediction.github.io/microprediction/slack.html) and [I](https://www.linkedin.com/in/petercotton/)
 
-This was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) page. Github made this a "user page". Well, hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This page describes some of my open-source projects. 
-I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon and here's a list of other 
+Well then hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This page describes some of my open-source projects. I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon and here's a list of other 
 [stuff I've written](https://github.com/microprediction/home). 
 
 I'm dynamic and fascinating. Not really but I run a
-slack channel for those interested in collective open-source time-series, covariance
-prediction, optimization and things enabling
-collective microprediction. You're [invited](https://microprediction.github.io/microprediction/slack.html) to that and
+slack channel for those interested in time-series, covariance
+prediction, optimization and other things enabling semi-autonomous collective microprediction. You're [invited](https://microprediction.github.io/microprediction/slack.html) to that and
 weekly informal Google meets on Fridays noon EST - see the slack. If the
 Slack invite requires an email domain, it has
 expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In
@@ -37,10 +37,9 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 # The [microprediction.org](https://www.microprediction.org/) platform
 Yes I maintain a *live exchange* where distributional time-series prediction
- algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there are ($50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily)) I'll send you to the 
-better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. I spent the entirety of a New York to Sydney flight creating that so really, just [go to the documentation](https://microprediction.github.io/microprediction/) and tell me why it sucks. 
+ algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. I spent the entirety of a New York to Sydney flight creating that so really, just [go to the documentation](https://microprediction.github.io/microprediction/) and tell me why it sucks. 
 
-Still here? Okay fine:
+No? Okay fine. TLDR:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
