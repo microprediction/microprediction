@@ -27,6 +27,7 @@ On the other hand, you can easily test prediction algorithms by:
  - Join the [slack](https://microprediction.github.io/microprediction/slack.html). 
  - Regular Friday Google [meet](https://microprediction.github.io/microprediction/meet.html)
  - Free [data](https://microprediction.github.io/microprediction/data.html). 
+ - [Summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
 
 -+- 
 

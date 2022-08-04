@@ -5,7 +5,7 @@
        |----------------------------------------------|----------------------
        |                   |                          |                     |
     predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
-       |                            |                 |                     data, map
+       |                            |                 |                     data, map, summary
        |                            |                 |
     predict-using-python          transfers         publish-using-python
        |                                               |            |
@@ -33,3 +33,4 @@
 - [slack](https://microprediction.github.io/microprediction/slack.html)
 - [meet](https://microprediction.github.io/microprediction/meet.html)
 - [data](https://microprediction.github.io/microprediction/data.html)
+- [summary](https://microprediction.github.io/microprediction/summary.html)
