@@ -34,7 +34,7 @@ Given the `community distributional transform` thus defined, the 'z-score' is gi
 $$
    z_1 = \Phi^{-1}\left( F_{70}(x)  \right)
 $$
-where $$\Phi$$ is the standard normal distribution function. 
+where $\Phi$ is the standard normal distribution function. 
 
 ### Approximate standard normality of z1~ streams
 
