@@ -12,9 +12,8 @@ Well then hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog
 [stuff I've written](https://github.com/microprediction/home). 
 
 I'm dynamic and fascinating. Not really but I run a
-slack channel for those interested in collective open-source time-series, covariance
-prediction, optimization and things enabling
-collective microprediction. You're [invited](https://microprediction.github.io/microprediction/slack.html) to that and
+slack channel for those interested in time-series, covariance
+prediction, optimization and other things enabling semi-autonomous collective microprediction. You're [invited](https://microprediction.github.io/microprediction/slack.html) to that and
 weekly informal Google meets on Fridays noon EST - see the slack. If the
 Slack invite requires an email domain, it has
 expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In
