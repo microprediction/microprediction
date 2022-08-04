@@ -31,9 +31,9 @@ Here I skip over some engineering nuances.
 
 Given the `community distributional transform` thus defined, the 'z-score' is given by
 
-$$
+\\[
    x \rightarrow z = \Phi^{-1}\left( F_{70}(x)   \right)
-$$
+\\]
 
 ### Approximate standard normality of z1~ streams
 
