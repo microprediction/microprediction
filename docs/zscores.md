@@ -33,6 +33,7 @@ the `community distributional transform` is thus defined, the 'z-score' is given
 $$
    z_1 = \Phi^{-1}\left( F_{70}(x)  \right)
 $$
+
 where $\Phi$ is the standard normal distribution function. 
 
 ### Approximate standard normality of z1~ streams
