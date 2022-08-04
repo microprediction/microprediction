@@ -24,8 +24,7 @@ when you [publish](https://microprediction.github.io/microprediction/publish.htm
 Using the example [z1~die~70.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~die~70) we assume
 a new point \(x\) is published. We also assume a mapping: 
 
-$$ 
-   F_{70}: x \rightarrow [0,1]
+$$ F_{70}: x \rightarrow [0,1]
 $$
 
 that is the distributional transform implied by (most of the) community predictions for $x$ pertaining to the $70$ second horizon. 
@@ -33,9 +32,9 @@ Here I skip over some engineering nuances.
 
 Given the `community distributional transform` thus defined, the 'z-score' is given by
 
-$$$
+$$
    x \rightarrow z = \Phi^{-1}\left( F_{70}(x)   \right)
-$$$
+$$
 
 ### Approximate standard normality of z1~ streams
 
