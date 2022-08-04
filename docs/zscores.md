@@ -30,9 +30,7 @@ that is the distributional transform implied by (most of the) community predicti
 Here I skip over some engineering nuances, to be honest, but assuming
 the `community distributional transform` is thus defined, the 'z-score' is given by
 
-
 $$ z_1 = \Phi^{-1}\left( F_{70}(x)  \right) $$
-
 
 where $\Phi$ is the standard normal distribution function. 
 
