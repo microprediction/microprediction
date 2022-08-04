@@ -38,9 +38,14 @@ Very similar to the use of set()
 
 ### Definition
 Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
-are not dissimilar:
+are not $$y=x^2$$ dissimilar:
 
 \( z_2 = 17 \)
+
+Or this 
+
+$$x^2 + 3$$
+
 
 Morton space filling Z-curves are employed. The most up to date
 reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
