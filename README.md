@@ -4,7 +4,7 @@ Looking for the microprediction [docs](https://microprediction.github.io/micropr
 API [summary](https://microprediction.github.io/microprediction/summary.html) or
 [install](https://microprediction.github.io/microprediction/install.html) instructions?
 
-Yup this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page".  
+Yup this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. 
 
 # [Me](https://github.com/microprediction/home), my [slack](https://microprediction.github.io/microprediction/slack.html) and [I](https://www.linkedin.com/in/petercotton/)
 
