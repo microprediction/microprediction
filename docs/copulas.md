@@ -11,22 +11,21 @@ might consider some more advanced functionality. The /copula API serves two purp
 The following family of streams illustrates the pattern.
     
      
-| Type of stream           | Examples                                                                                               |
-|--------------------------|--------------------------------------------------------------------------------------------------------|
-| Base stream #1           | https://www.microprediction.org/stream_dashboard.html?stream=c5_ethereum                               |
-| Base stream #2           | https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin                                |
-| Base stream #2           | https://www.microprediction.org/stream_dashboard.html?stream=c5_cardano                                |
-| Z-scores stream #1       | https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_ethereum~3555                       |
-| Bivariate copula #1,#2   | https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_bitcoin~c5_ethereum~3555            |
-| Trivariate copula (70s)  | https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~70   |         
-| Trivariate copula (1 hr) | https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~3555 |         
+| Type of stream           | Examples                                                                                                                                            |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Regular #1               | [c5_bitcoin.json](https://www.microprediction.org/stream_dashboard.html?stream=c5_bitcoin)                                                          |
+| Regular #2               | [c5_ethereum.json](https://www.microprediction.org/stream_dashboard.html?stream=c5_ethereum)                                                        |
+| Regular #3               | [c5_cardano.json](https://www.microprediction.org/stream_dashboard.html?stream=c5_cardano)                                                          |
+| Z-scores stream #1       | [z1~c5_ethereum~3555](https://www.microprediction.org/stream_dashboard.html?stream=z1~c5_ethereum~3555)                                             |
+| Bivariate copula #1,#2   | [z2~c5_bitcoin~c5_ethereum~3555](https://www.microprediction.org/stream_dashboard.html?stream=z2~c5_bitcoin~c5_ethereum~3555)                       |
+| Trivariate copula (70s)  | [z3~c5_bitcoin~c5_cardano~c5_ethereum~70](https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~70)     |         
+| Trivariate copula (1 hr) | [z3~c5_bitcoin~c5_cardano~c5_ethereum~3555](https://www.microprediction.org/stream_dashboard.html?stream=z3~c5_bitcoin~c5_cardano~c5_ethereum~3555) |         
 
 
 To reiterate there are NO MULTIVARIATE streams on microprediction.org. However there are
 univariate streams whose values represent a point in R^2 or R^3. The mapping from one dimension to 
 two or three is implied. The former is used by streams prefixed by z2~, the latter by streams prefixed by
-z3~. For this purpose Morton space filling Z-curves are employed. The most up to date
-reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py) ). There is
+z3~.
 
 ### Python 
 Very similar to the use of set()
@@ -38,12 +37,16 @@ Very similar to the use of set()
     res = mw.cset(names=names,values=values)
 
 ### Definition
-You are encouraged to first grok [zscores](https://microprediction.github.io/microprediction/zscores.html) and z1~ streams, but 
-anyway:
+Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
+are not dissimilar:
 
-$$
-     z_2 =  
-$$
+\( z_2 = 17 \)
 
+Morton space filling Z-curves are employed. The most up to date
+reference for these embeddings is the code (see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
+writing these docs, the heart of this calculation is:
 
+    pymorton.interleave(prctls)
+
+where 'prctls' are the 
  
