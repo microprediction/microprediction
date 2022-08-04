@@ -13,14 +13,13 @@ On the other hand, perhaps you have an strong opinion about the distribution of 
 
 See [predict](https://microprediction.github.io/microprediction/predict.html) for more details and examples. 
 
-### A few things to be aware of:
+## Highlights
 
- - There is a daily cash prize for prediction of $125 USD. 
- - Interaction with the microprediction system is free and open to anyone, and merely requires a WRITE_KEY. Create yours by openning [New_Key](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) in colab and letting it run for a few hours. Then paste your write key into the [www.microprediction.org](https://www.microprediction.org) dashboard. 
- - You probably want to join the [slack](https://microprediction.github.io/microprediction/slack.html). 
- - In the slack, I post a Google Meet invite for office hours: Fridays at noon eastern. Sometimes Tuesday nights too.  
- - By all means message [me](https://www.linkedin.com/in/petercotton/) on Linked-In, especially if the slack invite is stale. 
- - It is trivial to retrieve recent historical [data](https://microprediction.github.io/microprediction/data.html). 
+ - Daily $125 [prize](https://www.microprediction.com/competitions/daily).  
+ - Use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to get your WRITE_KEY. 
+ - Join the [slack](https://microprediction.github.io/microprediction/slack.html). 
+ - Office hours: Fridays at noon eastern. Sometimes Tuesday nights.  
+ - Free [data](https://microprediction.github.io/microprediction/data.html). 
   
 
 
