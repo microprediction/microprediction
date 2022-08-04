@@ -1,4 +1,5 @@
 
+
 ## Copulas
 
 If you are familiar with how to [predict](https://microprediction.github.io/microprediction/predict.html) and
@@ -40,15 +41,16 @@ Very similar to the use of set()
 Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
 are not dissimilar:
 
-$$ z(x_1,x_2) = \Phi^{-1} \left( H( F^1_{70}(x_1), F^2_{70}(x_2) ) \right) $$
+$$ z(x_1,x_2) = \Phi^{-1} \left( H\left( F^1_{70}(x_1), F^2_{70}(x_2) \right) \right) $$
 
-where $F^1_{70}(x_1)$ is the community distributional transform applied to a published 
-data point $x_1$ for one stream (using predictions for the 70 second horizon); similarly
-for $F^2_{70}(x_2)$; and 
-$H:[0,1]^2 \rightarrow [0,1]$ is the inverse of a space-filling curve described presently; and
-as before $\Phi$ is the standard normal distribution function.
+where:
+  - $$F^1_{70}(x_1)$$ is the community distributional transform applied to a published 
+data point $x_1$ for one stream (using predictions for the 70 second horizon); 
+  - similarly for $$F^2_{70}(x_2)$$; 
+  - $$H:[0,1]^2 \rightarrow [0,1]$$ is the inverse of a space-filling curve described presently; and
+  - as before $$\Phi$$ is the standard normal distribution function.
 
-### The choice of space-filling curve
+### The choice of space-filling curve H
 
 As for $$H$$, a Morton Z-curves are employed. Actually the most up to date
 reference for these embeddings is the code, so see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
