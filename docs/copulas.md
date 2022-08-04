@@ -35,6 +35,13 @@ Very similar to the use of set()
     values = [5,6,4,9]
     res = mw.cset(names=names,values=values)
 
+### Definition
+You are encouraged to first grok [zscores](https://microprediction.github.io/microprediction/zscores.html) and z1~ streams, but 
+anyway:
+
+$$
+     z_2 =  
+$$
 
 
  
