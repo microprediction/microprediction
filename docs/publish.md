@@ -38,6 +38,8 @@ Send a PUT request to [https://api.microprediction.org/live/my_stream.json](http
    - budget (can just set to 1)
    - value (e.g. 3.14157)
 
-## Retrieving results
+## After you publish
 
-See [retrieve](https://microprediction.github.io/microprediction/retrieve.html), after the algorithms have had time to find your stream.  
+- Be patient, keep publishing, and promote your stream. 
+- [Retrieve](https://microprediction.github.io/microprediction/retrieve.html) predictions.  
+- View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
