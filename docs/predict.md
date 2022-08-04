@@ -18,7 +18,8 @@ the first number published after the delay has elapsed.
     values = list(range(225))
     mw.submit(name='sombody_else_stream.json',delay=910, values=values)
 
-This example is largely inadequate as it is not informed by the history of the stream in question. See [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) for typical patterns.  
+This example is largely inadequate as it is not informed by
+the history of the stream in question. See [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) for typical patterns.  
 
 ### R 
 Following [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples)...
@@ -43,9 +44,17 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
     - values (as a string with comma-separated values)
 
 
-### Prerequisite
-Get your [writekey](https://microprediction.github.io/microprediction/writekeys.html) and 
-learn about [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html).
+### The first rule of prediction club is
+... you have to predict. If you don't like the above just cut and paste:
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+
+into a terminal. 
+
+
+### Prerequisites
+Get your [WRITE_KEY](https://microprediction.github.io/microprediction/writekeys.html) and scan
+the [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html) rules.
 
 
 -+-
