@@ -44,7 +44,7 @@ are not dissimilar:
 $$ z(x_1,x_2) = \Phi^{-1} \left( H\left( F^1_{70}(x_1), F^2_{70}(x_2) \right) \right) $$
 
 where:
-  - $$F^1_{70}(x_1)$$ is the community distributional transform applied to a published 
+  - $F^1_{70}(x_1)$ is the community distributional transform applied to a published 
 data point $x_1$ for one stream (using predictions for the 70 second horizon); 
   - similarly for $$F^2_{70}(x_2)$$; 
   - $$H:[0,1]^2 \rightarrow [0,1]$$ is the inverse of a space-filling curve described presently; and
