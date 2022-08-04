@@ -36,11 +36,13 @@ I maintain three benchmarking packages to help me, and maybe you, surf the open-
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
 # The [microprediction.org](https://www.microprediction.org/) platform
- ($50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily))
-I also maintain a *live exchange* where distributional time-series prediction
+Yes I maintain a *live exchange* where distributional time-series prediction
  algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). 
 
-Briefly:
+But after reiterating that there are ($50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily)) I'll send you to the 
+better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes these notes. 
+
+Well I tried and you're still here so briefly:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
@@ -54,17 +56,6 @@ In this way I can:
 Just to lean on the differences, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction. But the similarity
 is that hundreds of algorithms compete at [Microprediction](https://github.com/microprediction/microprediction) and quite a few of the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)) are involved, drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
-
-If you need live distributional predictions too, knock yourself out. My
-company funds the platform because algorithms that help solve your problem
-might also help solve mine. The marginal cost of their doing both is tiny.
-
-On the flip side you can:
-  - Contribute predictive intelligence, win beer money (see [competitions](https://www.microprediction.com/competitions)) and then trash talk people in our slack channel. About $50,000 a year in prizes complements the scientific motivations. 
-  - Automatically benchmark your work or find unexpected [uses](https://www.microprediction.org/browse_streams.html) to include in your next paper. You just need to know [how to predict data streams](https://www.microprediction.com/make-predictions), which amounts to modifying a Python script and running it. 
-  
-It's up to you if you choose to reveal your code. 
-
 
 # [Memorable Unique Identifiers](https://github.com/microprediction/muid) and other platform repos
 
