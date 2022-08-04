@@ -44,14 +44,13 @@ in values.
 
 
 
-
-
-
-
-
 ### After you publish
 
 - Be patient, keep publishing, and promote your stream. 
 - [Retrieve](https://microprediction.github.io/microprediction/retrieve.html) predictions.  
 - View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
 
+
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)

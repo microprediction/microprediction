@@ -18,4 +18,9 @@ Someone wanting something predicted performs A, B and D. Someone providing predi
 An extremely fast way to get familiar with two of these four key pieces of functionality is
 provided in a [notebook](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb) that
 you can open in colab and run on Google's dime. This will create an identity for you and enter
-your algorithm in an ongoing contest to predict the next roll of a die.  
+your algorithm in an ongoing contest to predict the next roll of a die. 
+
+
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)

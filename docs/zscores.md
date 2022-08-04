@@ -46,3 +46,7 @@ algorithms whose only purpose in life is making $N(0,1)$-inspired predictions of
 ### Feeling fancy?
 See [copulas](https://microprediction.github.io/microprediction/copulas.html) for 
 an extension of the community zscore idea to two and three dimensions. 
+
+-+- 
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)

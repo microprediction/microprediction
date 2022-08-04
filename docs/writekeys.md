@@ -19,4 +19,8 @@ and be patient either way.
 ### Stuck
 ... or just bored waiting for a 13-strength key? Ping us in the [slack](https://microprediction.github.io/microprediction/slack.html)
 
+-+- 
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
 

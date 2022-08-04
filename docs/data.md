@@ -29,3 +29,6 @@ Use get_lagged from [julia client](https://github.com/rustyconover/Micropredicti
 ### API
 
 GET [https://api.microprediction.org/lagged/die.json](https://api.microprediction.org/lagged/die.json)
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
+  

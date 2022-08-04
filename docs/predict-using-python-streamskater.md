@@ -30,5 +30,8 @@ See [timemachines/INSTALL](https://github.com/microprediction/timemachines/blob/
 
 Thus if you want more control, you can [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
 
-         
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
 

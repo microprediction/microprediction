@@ -10,4 +10,7 @@ a `write_key` alive that you need for sponsoring a stream.
 You cannot use a transfer to 
 raise the balance associated with a `write_key` above zero - that is only possible by means of accurate prediction. 
 
+-+- 
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
 

@@ -48,3 +48,6 @@ Get your [writekey](https://microprediction.github.io/microprediction/writekeys.
 learn about [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html).
 
 
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)

@@ -59,4 +59,8 @@ writing these docs, the heart of this calculation is:
     pymorton.interleave(prctls)
 
 where 'prctls' are the $F^1_{70}(x_1), F^2_{70}(x_2)$. 
- 
+
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
+  
