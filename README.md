@@ -38,10 +38,9 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 # The [microprediction.org](https://www.microprediction.org/) platform
 Yes I maintain a *live exchange* where distributional time-series prediction
- algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there are ($50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily)) I'll send you to the 
-better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. I spent the entirety of a New York to Sydney flight creating that so really, just [go to the documentation](https://microprediction.github.io/microprediction/) and tell me why it sucks. 
+ algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. I spent the entirety of a New York to Sydney flight creating that so really, just [go to the documentation](https://microprediction.github.io/microprediction/) and tell me why it sucks. 
 
-Still here? Okay fine:
+No? Okay fine. TLDR:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
