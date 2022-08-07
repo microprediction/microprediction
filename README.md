@@ -6,6 +6,8 @@ API [summary](https://microprediction.github.io/microprediction/summary.html) or
 
 Yup this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. 
 
+# New [microprediction docs](https://microprediction.github.io/microprediction/)
+
 # [Me](https://github.com/microprediction/home), my [slack](https://microprediction.github.io/microprediction/slack.html) and [I](https://www.linkedin.com/in/petercotton/)
 
 Well then hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This page describes some of my open-source projects. I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon and here's a list of other 
