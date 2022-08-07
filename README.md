@@ -6,7 +6,8 @@ API [summary](https://microprediction.github.io/microprediction/summary.html) or
 
 Yup this was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. 
 
-# New [microprediction docs](https://microprediction.github.io/microprediction/)
+# New -->  [microprediction docs](https://microprediction.github.io/microprediction/)
+LMK what you think.
 
 # [Me](https://github.com/microprediction/home), my [slack](https://microprediction.github.io/microprediction/slack.html) and [I](https://www.linkedin.com/in/petercotton/)
 
