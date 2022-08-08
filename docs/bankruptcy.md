@@ -32,4 +32,4 @@ Once smart people and algorithms enter the fray, you can expect the default mode
 
 ### Avoiding bankruptcy
 
-See [transfers](https://github.com/microprediction/microprediction/edit/master/docs/transfers.md)
+See [transfers](https://microprediction.github.io/microprediction/transfers.html). 
