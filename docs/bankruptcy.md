@@ -30,19 +30,6 @@ Yes, when you create a stream you *automatically participate in the prediction o
 
 Once smart people and algorithms enter the fray, you can expect the default model to be beaten and the balance on your `write_key` to trend downwards. 
 
-### Transfer API
+### Avoiding bankruptcy
 
-Balance may be transferred from one `write_key` to another if the recipient `write_key` has a negative balance. You can use the transfer method to keep
-a `write_key` alive that you need for sponsoring a stream. 
-
-You cannot use a transfer to 
-raise the balance associated with a `write_key` above zero - that is only possible by means of accurate prediction. 
-
-### Balance bolstering methods
-I suggest you look at the [writer](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) for convenient methods that can help you avoid bankruptcy. For example:
-
-    mw = MicroWriter(write_key='YOUR KEY HERE')
-    mw.put_balance(source_write_key='SOME OTHER WRITE KEY', amount=100.)
-
-See also [writekeys](https://github.com/microprediction/microprediction/edit/master/docs/writekeys.md) and 
-[transfers](https://github.com/microprediction/microprediction/edit/master/docs/transfers.md)
+See [transfers](https://github.com/microprediction/microprediction/edit/master/docs/transfers.md)
