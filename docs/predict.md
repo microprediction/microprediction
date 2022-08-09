@@ -24,7 +24,7 @@ the history of the stream in question. See [predict-using-python](https://microp
 ### R 
 Following [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples)...
 
-    name = 'name <- "z2~c5_iota~c5_ripple~3555.json"
+    name <- "z2~c5_iota~c5_ripple~3555.json"
     lagged <- jsonlite::fromJSON(paste0("https://api.microprediction.org/lagged/",name))
     x <- lagged[, 2, drop=FALSE]
     y <- c(x[1:50], x[1:200], x) 
