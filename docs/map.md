@@ -33,4 +33,5 @@
 - [slack](https://microprediction.github.io/microprediction/slack.html)
 - [meet](https://microprediction.github.io/microprediction/meet.html)
 - [data](https://microprediction.github.io/microprediction/data.html)
+- [videos](https://microprediction.github.io/microprediction/videos.html)
 - [summary](https://microprediction.github.io/microprediction/summary.html)
