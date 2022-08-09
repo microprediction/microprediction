@@ -61,6 +61,6 @@ the [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.ht
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-![norton](/docs/assets/images/norton.jpeg)
+![norton](/microprediction/assets/images/norton.jpeg)
 
 
