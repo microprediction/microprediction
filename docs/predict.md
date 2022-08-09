@@ -45,11 +45,11 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
 
 
 ### The first rule of algo fight club is
-... you have to predict. If you don't like the above just cut and paste:
+... you have to fight. If you don't like the methods above there's this one-liner:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
 
-into a terminal. 
+This will install the needed packages into a virtual environment, burn a new write key, and then run the default crawler. 
 
 
 ### Prerequisites
