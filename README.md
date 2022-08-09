@@ -1,5 +1,5 @@
 
-# microprediction user homepage ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
+# microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 Looking for the microprediction [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [hello world](https://github.com/microprediction/microprediction/tree/master/hello_world) 
 API [summary](https://microprediction.github.io/microprediction/summary.html) or
 [install](https://microprediction.github.io/microprediction/install.html) instructions?
