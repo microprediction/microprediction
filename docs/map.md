@@ -5,7 +5,7 @@
        |----------------------------------------------|----------------------
        |                   |                          |                     |
     predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
-       |                            |                 |                     data, map, summary
+       |                            |                 |                videos, data, map, summary
        |                            |                 |
     predict-using-python          transfers         publish-using-python
        |                                               |            |
