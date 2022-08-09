@@ -61,7 +61,6 @@ the [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.ht
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-
-![image 1]({{site.baseurl}}/images/norton.jpeg "You have to fight")
+![norton](/docs/assets/norton.jpeg)
 
 
