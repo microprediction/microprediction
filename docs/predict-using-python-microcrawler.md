@@ -33,7 +33,12 @@ In this pattern we subclass MicroCrawler and override the method that takes lagg
 
 Note self.num_predictions=225
 
+### Other modifications
+See [microprediction/crawler_examples_modification](https://github.com/microprediction/microprediction/tree/master/crawler_examples_modification). 
 
+
+### Microcrawler examples
+See [predict-using-python-microcrawler-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-examples.html).
 
 ### Where MicroCrawler sits in the hierarchy
 
