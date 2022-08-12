@@ -2,24 +2,15 @@
 
 
 
-| Shorthand | Intent                |
+| Term      | Intent                |
 |-----------|-----------------------|
-| scov      | Sample covariance     |
+| microprediction   | Sample covariance     |
 | pcov      | Population covariance |
 | spre      | Sample precision      |
 | spre      | Sample precision      |
 
 
 
-
-| Term             | Meaning                                                  |
-|-----------------------------------------------------------------------------|
-| Microprediction  | Repeatedly predicting the same thing thousands of times  |
-|                  |                                                          |
-
-
-
-asdf
 
 
 
