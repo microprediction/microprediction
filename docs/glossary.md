@@ -2,12 +2,12 @@
 
 
 
-| Term      | Intent                |
-|-----------|-----------------------|
+| Term              | Intent                |
+|-------------------|-----------------------|
 | microprediction   | Sample covariance     |
-| pcov      | Population covariance |
-| spre      | Sample precision      |
-| spre      | Sample precision      |
+| [crawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)  | A python class for predicting multiple streams using a long-running single process |
+| spre              | Sample precision      |
+| spre              | Sample precision      |
 
 
 
