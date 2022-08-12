@@ -52,13 +52,13 @@ data point $x_1$ for one stream (using predictions for the 70 second horizon);
 
 ### The choice of space-filling curve H
 
-As for $$H$$, a Morton Z-curves are employed. Actually the most up to date
+As for *H*, a Morton Z-curves are employed. Actually the most up to date
 reference for these embeddings is the code, so see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
 writing these docs, the heart of this calculation is:
 
     pymorton.interleave(prctls)
 
-where 'prctls' are the $F^1_{70}(x_1), F^2_{70}(x_2)$. 
+where 'prctls' comprisese the pair $$F^1_{70}(x_1), F^2_{70}(x_2)$$ in the bivariate case, and similarly for trivariate.  
 
 -+-
 
