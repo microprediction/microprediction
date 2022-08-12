@@ -6,7 +6,7 @@
        |                   |                          |                     |
     predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
        |                            |                 |                videos, data, map, summary
-       |                            |                 |
+       |                            |                 |                   glossary
     predict-using-python          transfers         publish-using-python
        |                                               |            |
     predict-using-python-microcrawler -----|        zscores    retrieve-predictions
@@ -43,3 +43,4 @@
 - [data](https://microprediction.github.io/microprediction/data.html)
 - [videos](https://microprediction.github.io/microprediction/videos.html)
 - [summary](https://microprediction.github.io/microprediction/summary.html)
+- [glossary](https://microprediction.github.io/microprediction/glossary.html)
