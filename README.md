@@ -69,6 +69,8 @@ is that hundreds of algorithms compete at [Microprediction](https://github.com/m
  # The book is on the way 
  You can [help me choose](https://www.linkedin.com/posts/petercotton_machinelearning-datascience-artificialintelligence-activity-6960853808872579072-SzDO?utm_source=linkedin_share&utm_medium=member_desktop_web)!
  
+ There's a nascent [book website](https://microprediction.github.io/building_an_open_ai_network/) too. 
+ 
  ![](https://github.com/microprediction/home/blob/main/books/cover_choices.png)
 
 
