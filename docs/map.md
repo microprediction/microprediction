@@ -9,13 +9,13 @@
        |                            |                 |
     predict-using-python          transfers         publish-using-python
        |                                               |            |
-    predict-using-python-microcrawler --|           zscores    retrieve-predictions
-       |                                |              |
-    predict-using-python-streamskater,  |            copulas
-    predict-using-python-fitcrawler
-       |                                |
+    predict-using-python-microcrawler -----|        zscores    retrieve-predictions
+       |                                   |           |
+    predict-using-python-streamskater,     |         copulas
+    predict-using-python-fitcrawler        |
+       |                                   |
     preedict-using-python-microcrawler-modification
-                                        | 
+                                           | 
     preedict-using-python-microcrawler-modification-examples
     
        
