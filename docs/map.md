@@ -9,10 +9,15 @@
        |                            |                 |
     predict-using-python          transfers         publish-using-python
        |                                               |            |
-    predict-using-python-microcrawler                zscores    retrieve-predictions
-       |                                               |
-    predict-using-python-streamskater                copulas
-     
+    predict-using-python-microcrawler --|           zscores    retrieve-predictions
+       |                                |              |
+    predict-using-python-streamskater,  |            copulas
+    predict-using-python-fitcrawler
+       |                                |
+    preedict-using-python-microcrawler-modification
+                                        | 
+    preedict-using-python-microcrawler-modification-examples
+    
        
 ### All pages 
 
@@ -21,6 +26,9 @@
 - [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html)
 - [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)
 - [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
+- [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
+- [predict-using-python-microcrawler-modification](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification.html)
+- [predict-using-python-microcrawler-modification-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification-examples.html)
 - [writekeys](https://microprediction.github.io/microprediction/writekeys.html)
 - [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html)
 - [transfers](https://microprediction.github.io/microprediction/transfers.html)

@@ -37,8 +37,13 @@ Note self.num_predictions=225
 See [microprediction/crawler_examples_modification](https://github.com/microprediction/microprediction/tree/master/crawler_examples_modification). 
 
 
-### Microcrawler examples
+### Examples
 See [predict-using-python-microcrawler-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-examples.html).
+
+### Skating
+
+See [predict-using-python-streamskater](https://microprediction.github.io/microprediction/streamskater.html).
+
 
 ### Where MicroCrawler sits in the hierarchy
 
@@ -47,7 +52,9 @@ See [predict-using-python-microcrawler-examples](https://microprediction.github.
              |
          MicroWriter
              |
-         MicroCrawler
+         MicroCrawler -----|
+             |             |
+         StreamSkater    
 
 
 Thus if you want more control, you can [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) using MicroWriter. 

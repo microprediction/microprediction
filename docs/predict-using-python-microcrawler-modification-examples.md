@@ -10,3 +10,7 @@ and so on.
 See [predict-using-python-microcrawler-modifications](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-examples.html) for more explanation.  
   
 
+
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
