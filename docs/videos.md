@@ -8,6 +8,9 @@
 - [5. Modifying crawler predictions](https://microprediction.github.io/microprediction/video-python-5.html)
 - [6. Modifying crawler navigation](https://microprediction.github.io/microprediction/video-python-6.html)
 
+## Other videos
+
+- The ten minute data science project [vimeo](https://vimeo.com/443203883).
 
 -+- 
 
