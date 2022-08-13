@@ -50,6 +50,10 @@ in values.
 - [Retrieve](https://microprediction.github.io/microprediction/retrieve.html) predictions.  
 - View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
 
+## Videos 
+
+- The ten minute data science project [vimeo](https://vimeo.com/443203883)
+- [Creating a data stream](https://microprediction.github.io/microprediction/video-python-4.html)
 
 -+-
 
