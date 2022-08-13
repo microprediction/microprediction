@@ -5,7 +5,7 @@ More detail on publishing streams using Python. See [publish](https://micropredi
     pip install microprediction
 
 ### BYO scheduling
-Just use [MicroWriter.set()](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) to publish. 
+If you are happy scheduling things yourself by whatever means, just use [MicroWriter.set()](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) to publish. 
 
     from microprediction import MicroWriter
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
@@ -50,6 +50,10 @@ in values.
 - [Retrieve](https://microprediction.github.io/microprediction/retrieve.html) predictions.  
 - View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
 
+### Video tutorials 
+
+- The ten minute data science project [vimeo](https://vimeo.com/443203883)
+- [Creating a data stream](https://microprediction.github.io/microprediction/video-python-4.html)
 
 ### Reminder: write keys
 
