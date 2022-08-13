@@ -5,7 +5,7 @@ More detail on publishing streams using Python. See [publish](https://micropredi
     pip install microprediction
 
 ### BYO scheduling
-Just use [MicroWriter.set()](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) to publish. 
+If you are happy scheduling things yourself by whatever means, just use [MicroWriter.set()](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py) to publish. 
 
     from microprediction import MicroWriter
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
