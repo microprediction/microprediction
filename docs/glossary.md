@@ -33,8 +33,8 @@
 | submit | To send 225 scalars to microprediction. See [predict](https://microprediction.github.io/microprediction/predict.html) | 
 | client | Usually refers to the microprediction [python package](https://github.com/microprediction/microprediction/tree/master/microprediction) | 
 | leaderboard | Usually refers to [leaderboards](https://www.microprediction.org/leaderboard.html) shown at microprediction.org | 
-| browser | Refers to [microprediction.org], a way for humans to see their performance and transactions |
-| dashboard | Refers to [microprediction.org] after you paste a write key in. |
+| browser | Refers to [microprediction.org](https://www.microprediction.org). |
+| dashboard | Refers to [microprediction.org](https://www.microprediction.org) after you paste a write key in to see their performance and transactions. |
 | lagged values | Refers to recent values of streams. See [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) for usage example. |
 | z1~ streams | Streams prefixed by z1~. See [zscores](https://microprediction.github.io/microprediction/zscores.html) |
 | z2~ streams | Streams prefixed by z2~. See [copulas](https://microprediction.github.io/microprediction/copulas.html) |
