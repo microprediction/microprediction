@@ -29,6 +29,10 @@ In code:
 
 Of course, submit_zvalues() calls [MicroWriter.submit()](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).
 
+### Reminder: write keys
+
+You can use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to burn a new WRITE_KEY. 
+
 
 -+-
 

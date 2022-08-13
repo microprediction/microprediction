@@ -24,7 +24,7 @@ On the other hand, you can easily test prediction algorithms by:
 
  - Daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction.  
  - [Summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
- - Use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to get your WRITE_KEY. 
+ - [Glossary](https://microprediction.github.io/microprediction/summary.html).
  - Join the [slack](https://microprediction.github.io/microprediction/slack.html). 
  - Regular Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html)
  - Free [data](https://microprediction.github.io/microprediction/data.html). 

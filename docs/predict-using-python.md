@@ -53,6 +53,9 @@ See
 
 You can also hunt in the [repository](https://github.com/microprediction/microprediction/tree/master/microprediction).
 
+### Reminder: write keys
+
+You can use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to burn a new WRITE_KEY. 
 
 
 -+-

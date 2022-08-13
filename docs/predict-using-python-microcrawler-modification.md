@@ -9,6 +9,11 @@ In [predict-using-python-microcrawler](https://microprediction.github.io/micropr
 See also [predict-using-python-microcrawler-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification-examples.html).
 
 
+### Reminder: write keys
+
+You can use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to burn a new WRITE_KEY. 
+
+
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)

@@ -51,6 +51,11 @@ in values.
 - View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
 
 
+### Reminder: write keys
+
+You can use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to burn a new WRITE_KEY. 
+
+
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
