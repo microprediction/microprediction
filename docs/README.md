@@ -26,10 +26,11 @@ There are rewards for good prediction. To chase the daily $125 [prize](https://w
 
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials and free [data](https://microprediction.github.io/microprediction/data.html). 
+ - [Consulting](https://github.com/microprediction/microprediction/blob/master/docs/consulting.md) 
  
 -+- 
 
-Documentation [map](https://microprediction.github.io/microprediction/map.html)
+Documentation [map](https://microprediction.github.io/microprediction/map.html) 
 
 
 
