@@ -16,7 +16,7 @@ Some questions to ask:
 4. Can the assessement be performed with non-confidential data?
 5. Is the prediction problem relatively short horizon (1 min to 1 hour)? 
 
-If the answer is no, then some assessment of vendor solutions is still possible, for instance using the timemachines package. However these questions hint at the sweet spot for engagement with Microprediction LLC. If the answers are mostly yes, it would be hard to imagine a better way to assess your potential solutions. 
+If the answer is no, then some assessment of vendor solutions is still possible, for instance using the timemachines package, obfuscation, residuals and so forth. However these questions hint at the sweet spot for engagement with Microprediction LLC. If the answers are mostly yes, it would be hard to imagine a better way to assess your potential solutions. 
 
 ### Self-assessment
 
