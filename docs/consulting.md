@@ -1,6 +1,6 @@
 # Consulting
 
-On a limited basis, Microprediction LLC can help firms independently assess vendor solutions.
+On a limited basis, Microprediction LLC can help firms independently assess in-house or vendor solutions.
 
 ### Advantages
 
