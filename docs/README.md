@@ -1,6 +1,6 @@
-The microprediction platform offers you two key pieces of functionality:
+Microprediction is a free experimental but stable platform offering:
 
-## 1. Crowd-sourced live prediction ([>>PUBLISH >>](https://microprediction.github.io/microprediction/publish.html))
+## 1. Turnkey crowd-sourced live prediction ([>>PUBLISH >>](https://microprediction.github.io/microprediction/publish.html))
 
 The [streams](https://www.microprediction.org/browse_streams.html) at
 microprediction.org are all created by people who repeatedly publish ground truths. Algorithms
@@ -20,10 +20,11 @@ On the other hand, you can easily test prediction algorithms by:
 [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it.
  - Or review [predict](https://microprediction.github.io/microprediction/predict.html) for patterns addressing more useful examples. 
 
+There are rewards for good prediction. To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested tht you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
+
 ## Not to be overlooked:
 
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
- - Chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction. Join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html)
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials and free [data](https://microprediction.github.io/microprediction/data.html). 
  
 -+- 
