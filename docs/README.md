@@ -22,13 +22,9 @@ On the other hand, you can easily test prediction algorithms by:
 
 ## Not to be overlooked:
 
- - Daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction.  
- - [Summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
- - [Glossary](https://microprediction.github.io/microprediction/summary.html).
- - Join the [slack](https://microprediction.github.io/microprediction/slack.html). 
- - Regular Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html)
- - Free [data](https://microprediction.github.io/microprediction/data.html). 
- - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials. 
+ - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
+ - Chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction. Join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html)
+ - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials and free [data](https://microprediction.github.io/microprediction/data.html). 
  
 -+- 
 
