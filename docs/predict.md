@@ -45,7 +45,7 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
 
 
 ### The 8th rule of algo fight club is
-... you have to fight. If you don't like the methods above there's this one-liner:
+... if this is your first visit you have to fight. Go on, here's a one-liner:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
 
