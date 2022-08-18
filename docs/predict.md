@@ -44,7 +44,7 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
     - values (as a string with comma-separated values)
 
 
-### The first rule of algo fight club is
+### The eights rule of algo fight club is
 ... you have to fight. If you don't like the methods above there's this one-liner:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
