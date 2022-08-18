@@ -1,7 +1,7 @@
 
 ## Submitting predictions 
 
-Conceptually speaking, on microprediction to "predict" is to supply the following:
+Conceptually speaking, to "predict" is to supply the following:
 
  - A list of *225* float 
  - A delay, which must be 70, 310, 910 or 3555 seconds. 
