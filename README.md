@@ -1,8 +1,6 @@
 
 # microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), and [examples](https://github.com/microprediction/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
-
-# The microprediction [docs](https://microprediction.github.io/microprediction/)
-are cleaned up and include [install](https://microprediction.github.io/microprediction/install.html) instructions. 
+The [docs](https://microprediction.github.io/microprediction/) include [install](https://microprediction.github.io/microprediction/install.html) instructions. 
 
 # [Me](https://github.com/microprediction/home), my [slack](https://microprediction.github.io/microprediction/slack.html) and [I](https://www.linkedin.com/in/petercotton/)
 
