@@ -15,10 +15,6 @@ Slack invite requires an email domain, it has
 expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In
 for a new one. 
 
-Should you be interested in microprediction? Well if nothing else, I'll 
-point out that due to its obscurity, running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - 
-try it out or see the [docs](https://microprediction.github.io/microprediction).
-
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
 I maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
@@ -33,7 +29,7 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 # The [microprediction.org](https://www.microprediction.org/) platform
 Yes I maintain a *live exchange* where distributional time-series prediction
- algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. I spent the entirety of a New York to Sydney flight creating that so really, just [go to the documentation](https://microprediction.github.io/microprediction/) and tell me why it sucks. 
+ algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. 
 
 No? Okay fine. TLDR:
 
@@ -45,8 +41,12 @@ In this way I can:
  - Get live prediction of public data for free (sometimes I make the "public" data obscure)
  - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.
  - Sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
+
+Should you be interested in helping micropredict stuff? Well if nothing else, I'll 
+point out that due to its obscurity, running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - 
+try it out or see the [docs](https://microprediction.github.io/microprediction).
   
-Just to lean on the differences, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction and also, in theory, exogenous data search. But the similarity
+Just to lean on the differences between this and the other benchmarking efforts, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction and also, in theory, exogenous data search. But the similarity
 is that hundreds of algorithms compete at [Microprediction](https://github.com/microprediction/microprediction) and quite a few of the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)) are involved, drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
 
