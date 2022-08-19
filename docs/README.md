@@ -1,6 +1,6 @@
 Microprediction is a free experimental but stable platform offering:
 
-## 1. Turnkey crowd-sourced live prediction ([>>PUBLISH >>](https://microprediction.github.io/microprediction/publish.html))
+## 1. Turnkey crowd-sourced live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
 The [streams](https://www.microprediction.org/browse_streams.html) at
 microprediction.org are all created by people who repeatedly publish ground truths. Algorithms
@@ -12,7 +12,7 @@ You can create your own stream by:
  - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
  - Perusing [publish](https://microprediction.github.io/microprediction/publish.html)  documentation, for non-python options, polling patterns, and examples.   
 
-## 2. Benchmarking of algorithms ([>> PREDICT >>](https://microprediction.github.io/microprediction/predict.html))
+## 2. Benchmarking of algorithms ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
 
 On the other hand, you can easily test prediction algorithms by: 
 
@@ -26,7 +26,7 @@ There are rewards for good prediction. To chase the daily $125 [prize](https://w
 
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials and free [data](https://microprediction.github.io/microprediction/data.html). 
- - [Consulting](https://github.com/microprediction/microprediction/blob/master/docs/consulting.md) 
+ - [Consulting](https://microprediction.github.io/microprediction/glossary.html) 
  
 -+- 
 
