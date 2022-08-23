@@ -4,9 +4,7 @@ The [docs](https://microprediction.github.io/microprediction/) include [install]
 
 I'm dynamic and fascinating. Not really but I run a slack channel for those interested in time-series, covariance
 prediction, optimization and other things enabling semi-autonomous collective microprediction. Most Friday's at noon
-I make myself available to anyone interesting in these things via a regular open google meet (see [here](https://microprediction.github.io/microprediction/meet.html)). I'm not big on booking things
-on my calendar, ever, as there is no way to predict in advance if a given 15 minute product pitch will derail continguous work. Thanks
-for you understanding. 
+I make myself available to anyone interesting in these things via a regular open google meet (see [here](https://microprediction.github.io/microprediction/meet.html)). I'm not big on creating other deterministic future work interruptions even though I do realize there is excellent tooling for this. 
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
