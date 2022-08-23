@@ -1,19 +1,16 @@
 
 # microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), and [examples](https://github.com/microprediction/microprediction) ![tests](https://github.com/microprediction/microprediction/workflows/tests/badge.svg) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
-The [docs](https://microprediction.github.io/microprediction/) include [install](https://microprediction.github.io/microprediction/install.html) instructions. 
+The [docs](https://microprediction.github.io/microprediction/) include [install](https://microprediction.github.io/microprediction/install.html) instructions or a way to complain about [issues with my book](https://github.com/microprediction/building_an_open_ai_network)?  
 
-# [Work](https://github.com/microprediction/home), [slack](https://microprediction.github.io/microprediction/slack.html), [linked-in](https://www.linkedin.com/in/petercotton/), [book](https://github.com/microprediction/building_an_open_ai_network).
+### 
 
-This was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. Well then hi this is my [dog](https://i.imgur.com/2E3pskp.jpg). This is my [blog](https://www.microprediction.com/blog). This page describes some of my open-source projects. I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon and here's a list of other 
-[stuff I've written](https://github.com/microprediction/home). 
+This was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) README. Github made this a "user page". They know best. Well then hi this is my [dog](https://microprediction.github.io/microprediction/slack.html). This is my [blog](https://www.microprediction.com/blog). I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon and here's a list of other [stuff I've written](https://github.com/microprediction/home). 
 
-I'm dynamic and fascinating. Not really but I run a
-slack channel for those interested in time-series, covariance
-prediction, optimization and other things enabling semi-autonomous collective microprediction. You're [invited](https://microprediction.github.io/microprediction/slack.html) to that and
-weekly informal Google meets on Fridays noon EST - see the slack. If the
-Slack invite requires an email domain, it has
-expired so DM [me](https://www.linkedin.com/in/petercotton/) on Linked-In
-for a new one. 
+I'm dynamic and fascinating. Not really but I run a slack channel for those interested in time-series, covariance
+prediction, optimization and other things enabling semi-autonomous collective microprediction. Most Friday's at noon
+I make myself available to anyone interesting in these things via a regular open google meet (see [here](https://microprediction.github.io/microprediction/meet.html)) on Friday's at noon. I'm not big on booking things
+on my calendar, ever, as there is no way to predict in advance if a given 15 minute product pitch will derail continguous work. Thanks
+for you understanding. 
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
