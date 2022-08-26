@@ -1,4 +1,4 @@
-Microprediction is a free, experimental, but stable platform for:
+Minimalist docs for a free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/publish.html).
 
 ## 1. Turnkey crowd-sourced live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
