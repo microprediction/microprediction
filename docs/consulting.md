@@ -1,10 +1,10 @@
 # Consulting
 
-On a limited basis, Microprediction LLC can help firms independently assess in-house or vendor solutions.
+Microprediction LLC can help firms independently assess in-house or vendor solutions.
 
-### Advantages
+### Key advantage
 
-We maintain [various benchmarking packages](https://github.com/microprediction) and a live competitive platform.   
+We maintain [various benchmarking packages](https://github.com/microprediction) and a live competitive platform, so can accomplish in days what might take others months ... but only if the fit is right.     
 
 ### Suitability
 
