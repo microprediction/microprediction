@@ -4,8 +4,8 @@ MIT Press. Due Nov 8, 2022.
 
 ### Praise and critique
 
- - [Feedback](https://github.com/microprediction/building_an_open_ai_network/blob/main/feedback.md).
- - [Issues](https://github.com/microprediction/building_an_open_ai_network/issues). 
+ - [Feedback](https://github.com/microprediction/building_an_open_ai_network/blob/main/feedback.md) from readers. 
+ - File an [issue](https://github.com/microprediction/building_an_open_ai_network/issues) or idea.  
 
 ### Teasers
 
