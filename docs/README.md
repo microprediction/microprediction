@@ -1,4 +1,4 @@
-Microprediction is a free experimental but stable platform offering:
+Microprediction is a free, experimental, but stable platform for:
 
 ## 1. Turnkey crowd-sourced live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
@@ -25,8 +25,8 @@ There are rewards for good prediction. To chase the daily $125 [prize](https://w
 ## Not to be overlooked:
 
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
- - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials and free [data](https://microprediction.github.io/microprediction/data.html). 
- - [Consulting](https://microprediction.github.io/microprediction/consulting.html) 
+ - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials, free [data](https://microprediction.github.io/microprediction/data.html) and [prizes](https://microprediction.github.io/microprediction/consulting.html). 
+ - Limited [consulting](https://microprediction.github.io/microprediction/consulting.html) to help you assess vendors. 
  
 -+- 
 
