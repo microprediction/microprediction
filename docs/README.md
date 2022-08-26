@@ -29,7 +29,7 @@ There are rewards for good prediction.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials, free [data](https://microprediction.github.io/microprediction/data.html) and [prizes](https://microprediction.github.io/microprediction/prizes.html). 
  - Limited [consulting](https://microprediction.github.io/microprediction/consulting.html) to help you assess vendors. 
  
- To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
+ To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
  
 -+- 
 
