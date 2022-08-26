@@ -31,6 +31,8 @@ There are rewards for good prediction.
  
  To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
  
+ The [book](https://microprediction.github.io/microprediction/book.html) is nearly out. 
+ 
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html) 
