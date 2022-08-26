@@ -20,13 +20,16 @@ On the other hand, you can easily test prediction algorithms by:
 [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it.
  - Or review [predict](https://microprediction.github.io/microprediction/predict.html) for patterns addressing more useful examples. 
 
-There are rewards for good prediction. To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
+There are rewards for good prediction. 
 
 ## Not to be overlooked:
 
+ - [Slack](https://microprediction.github.io/microprediction/slack.html) channel or Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials, free [data](https://microprediction.github.io/microprediction/data.html) and [prizes](https://microprediction.github.io/microprediction/prizes.html). 
  - Limited [consulting](https://microprediction.github.io/microprediction/consulting.html) to help you assess vendors. 
+ 
+ To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [Google Meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
  
 -+- 
 
