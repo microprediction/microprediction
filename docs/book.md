@@ -1,6 +1,6 @@
 # Microprediction: Building an Open AI Network
 
-Due Nov 8, 2022. 
+MIT Press. Due Nov 8, 2022. 
 
 ### Praise and critique
 
