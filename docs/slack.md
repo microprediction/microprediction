@@ -9,7 +9,7 @@ updating every month. Message [me](https://www.linkedin.com/in/petercotton/) on 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
 
-![firehose](/microprediction/assets/images/firehose.jpg)
+![slack](/microprediction/assets/images/slack.png)
 
 
 
