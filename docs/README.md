@@ -10,7 +10,7 @@ forecasts of the logarithm of META price changes. You can create your own stream
  - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
  - Perusing the [PUBLISH](https://microprediction.github.io/microprediction/publish.html)  documentation, for non-python options, polling patterns, and examples.   
 
-## 2. An easy way to benchmarking time-series algorithms ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
+## 2. An easy way to benchmark time-series algorithms ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
 
 On the other hand, you can easily test prediction algorithms by: 
 
