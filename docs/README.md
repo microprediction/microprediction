@@ -7,8 +7,8 @@ microprediction.org are all created by people who repeatedly publish ground trut
 poll these streams and the ongoing battles produce 
 beautiful community cumulative distribution functions, such as the [CDF](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead
 forecasts of the logarithm of META price changes. You can create your own stream by:
- - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
- - Perusing the [PUBLISH](https://microprediction.github.io/microprediction/publish.html)  documentation, for non-python options, polling patterns, and examples.   
+ - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it, just to get in the game. 
+ - Then perusing the [PUBLISH](https://microprediction.github.io/microprediction/publish.html)  documentation.
 
 ## 2. Turnkey benchmarking ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
 
