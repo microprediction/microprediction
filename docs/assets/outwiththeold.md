@@ -1,9 +1,9 @@
 
-## Your Shitty Job
-- Long commute to a crime ridden slum
-- Technology compliance ad absurdum
-- Pretentious powerpoint puffins
-- Windows "operating system" 
-- Sixty page employee handbook
-- Soul crushing beaurocracy 
+## Your New Job
+- Short drive to a beautiful clean office
+- pip install whateverthefuckyouwant
+- Only ever deal with smart people
+- How many 3090s do you need?
+- Say what you like on social media
+- Get awesome shit done 
 
