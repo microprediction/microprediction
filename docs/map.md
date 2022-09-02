@@ -13,6 +13,7 @@
        |                                   |           |
     predict-using-python-streamskater,     |         copulas
     predict-using-python-fitcrawler        |
+    predict-using-python-onlinecrawler     |
        |                                   |
     preedict-using-python-microcrawler-modification
                                            | 
@@ -26,6 +27,7 @@
 - [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html)
 - [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)
 - [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
+- [predict-using-python-onlinecrawler](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
 - [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
 - [predict-using-python-microcrawler-modification](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification.html)
 - [predict-using-python-microcrawler-modification-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification-examples.html)
