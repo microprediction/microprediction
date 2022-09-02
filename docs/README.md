@@ -1,4 +1,4 @@
-Minimalist docs for a free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html).
+A free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html).
 
 ## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
