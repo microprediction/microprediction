@@ -14,7 +14,7 @@
     predict-using-python-streamskater,     |         copulas
     predict-using-python-fitcrawler        |
     predict-using-python-onlinecrawler     |
-       |                                   |
+                                           |
     preedict-using-python-microcrawler-modification
                                            | 
     preedict-using-python-microcrawler-modification-examples
