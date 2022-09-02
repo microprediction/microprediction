@@ -42,7 +42,7 @@ For publishing data to be predicted:
 The rest...
 
 - [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html) ... lets you pimp out your crawler with any skater in the [timemachines](https://github.com/microprediction/timemachines) package. 
-- [predict-using-python-onlinecrawler](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html) ... turns any [distribution machine](https://github.com/microprediction/microprediction/blob/master/microprediction/univariate/distmachine.py) into a crawler for you.
+- [predict-using-python-onlinecrawler](https://microprediction.github.io/microprediction/predict-using-python-onlinecrawler.html) ... turns any [distribution machine](https://github.com/microprediction/microprediction/blob/master/microprediction/univariate/distmachine.py) into a crawler for you.
 - [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html) ... and anticipates offline parameters.
 - [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html)
 - [transfers](https://microprediction.github.io/microprediction/transfers.html)
