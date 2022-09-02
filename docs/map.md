@@ -23,12 +23,12 @@
 ### All pages 
 
 - [home](https://microprediction.github.io/microprediction)
-- [predict](https://microprediction.github.io/microprediction/predict.html)
-- [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html)
-- [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)
-- [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
-- [predict-using-python-onlinecrawler](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
-- [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
+- [predict](https://microprediction.github.io/microprediction/predict.html) ... using R, Python, Julia or API
+- [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) 
+- [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html) ... provides stream navigation logic
+- [predict-using-python-streamskater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html) ... provides a simple connection to timemachines.
+- [predict-using-python-onlinecrawler](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html) ... lets you use any distribution fitting algorithm easily.
+- [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html) ... and offline parameters.
 - [predict-using-python-microcrawler-modification](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification.html)
 - [predict-using-python-microcrawler-modification-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification-examples.html)
 - [writekeys](https://microprediction.github.io/microprediction/writekeys.html)
