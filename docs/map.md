@@ -31,18 +31,18 @@
 - [predict-using-python-fitcrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html) ... and offline parameters.
 - [predict-using-python-microcrawler-modification](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification.html)
 - [predict-using-python-microcrawler-modification-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification-examples.html)
-- [writekeys](https://microprediction.github.io/microprediction/writekeys.html)
+- [writekeys](https://microprediction.github.io/microprediction/writekeys.html) ... are your private identity
 - [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html)
 - [transfers](https://microprediction.github.io/microprediction/transfers.html)
-- [publish](https://microprediction.github.io/microprediction/publish.html)
+- [publish](https://microprediction.github.io/microprediction/publish.html) ... using R, Python, Julia or API
 - [publish-using-python](https://microprediction.github.io/microprediction/publish-using-python.html)
-- [zscores](https://microprediction.github.io/microprediction/zscores.html)
+- [zscores](https://microprediction.github.io/microprediction/zscores.html) 
 - [copulas](https://microprediction.github.io/microprediction/copulas.html)
-- [retrieve-predictions](https://microprediction.github.io/microprediction/retrieve-predictions.html)
-- [install](https://microprediction.github.io/microprediction/install.html)
-- [slack](https://microprediction.github.io/microprediction/slack.html)
-- [meet](https://microprediction.github.io/microprediction/meet.html)
-- [data](https://microprediction.github.io/microprediction/data.html)
+- [retrieve-predictions](https://microprediction.github.io/microprediction/retrieve-predictions.html) ... then get your predictions back. 
+- [install](https://microprediction.github.io/microprediction/install.html) ... the microprediction Python client. 
+- [slack](https://microprediction.github.io/microprediction/slack.html) ... is a good place to ask questions.
+- [meet](https://microprediction.github.io/microprediction/meet.html) ... every Friday noon EST. 
+- [data](https://microprediction.github.io/microprediction/data.html) ... you can help yourself to. 
 - [videos](https://microprediction.github.io/microprediction/videos.html)
-- [summary](https://microprediction.github.io/microprediction/summary.html)
+- [summary](https://microprediction.github.io/microprediction/summary.html) ... of essential API. 
 - [glossary](https://microprediction.github.io/microprediction/glossary.html)
