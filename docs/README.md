@@ -1,6 +1,6 @@
 Minimalist docs for a free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html).
 
-## 1. Turnkey crowd-sourced live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
+## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
 The [streams](https://www.microprediction.org/browse_streams.html) at
 microprediction.org are all created by people who repeatedly publish ground truths. Algorithms
@@ -10,13 +10,13 @@ forecasts of the logarithm of META price changes. You can create your own stream
  - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it. 
  - Perusing the [PUBLISH](https://microprediction.github.io/microprediction/publish.html)  documentation, for non-python options, polling patterns, and examples.   
 
-## 2. An easy way to benchmark time-series algorithms ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
+## 2. Turnkey benchmarking ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
 
-On the other hand, you can easily test prediction algorithms by: 
+On the other hand, you can easily test *distributional time-series prediction* algorithms by: 
 
  - Modifying the script
-[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it.
- - Or review the [PREDICT](https://microprediction.github.io/microprediction/predict.html) docs for more useful patterns. 
+[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it, just to get started.
+ - Reviewing the [PREDICT](https://microprediction.github.io/microprediction/predict.html) docs for much more useful patterns. 
 
 There are [rewards](https://www.microprediction.com/competitions/daily) for good prediction determined daily. 
 
