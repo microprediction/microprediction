@@ -35,10 +35,10 @@
 - [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.html)
 - [transfers](https://microprediction.github.io/microprediction/transfers.html)
 - [publish](https://microprediction.github.io/microprediction/publish.html) ... using R, Python, Julia or API
+- [retrieve-predictions](https://microprediction.github.io/microprediction/retrieve-predictions.html) ... submitted by all algorithms that predict the stream you publish.
 - [publish-using-python](https://microprediction.github.io/microprediction/publish-using-python.html)
 - [zscores](https://microprediction.github.io/microprediction/zscores.html) 
 - [copulas](https://microprediction.github.io/microprediction/copulas.html)
-- [retrieve-predictions](https://microprediction.github.io/microprediction/retrieve-predictions.html) ... then get your predictions back. 
 - [install](https://microprediction.github.io/microprediction/install.html) ... the microprediction Python client. 
 - [slack](https://microprediction.github.io/microprediction/slack.html) ... is a good place to ask questions.
 - [meet](https://microprediction.github.io/microprediction/meet.html) ... every Friday noon EST. 
