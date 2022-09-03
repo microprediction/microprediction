@@ -10,4 +10,9 @@ Then go for lunch. Before long you'll understand.
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+
+![slack](/microprediction/assets/images/dashboard.png)
+
+
  
