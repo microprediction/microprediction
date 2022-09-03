@@ -10,3 +10,7 @@ Previous  [TOPIC](https://microprediction.github.io/microprediction/TOPIC.html)
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
  
+
+
+![slack](/microprediction/assets/images/slack.png)
+
