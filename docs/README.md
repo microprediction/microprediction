@@ -22,6 +22,7 @@ There are [rewards](https://www.microprediction.com/competitions/daily) for good
 
 ## Not to be overlooked:
 
+ - [Setup](https://microprediction.github.io/microprediction/setup.html) will get you participating in under a minute.
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials, free [data](https://microprediction.github.io/microprediction/data.html) and [prizes](https://microprediction.github.io/microprediction/prizes.html). 
