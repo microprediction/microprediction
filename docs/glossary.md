@@ -6,8 +6,7 @@
 |-------------------|-----------------------|
 | microprediction   | The act of making repeated predictions of the same thing frequently enough for autonomous assessment to be meaningful     |
 | [crawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html)  | A python class for predicting multiple streams using a long-running single process |
-| submission vector    | A list of 225 monte carlo samples indicative of the distribution of a future measurement. Known elsewhere as 
-a "stochastic information packet". |
+| submission vector    | A list of 225 monte carlo samples indicative of the distribution of a future measurement. Aka stochastic information packet. |
 |  [skating](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)              | Refers to the making of predictions in an online fashion. Applies to both time-series methods in the timemachines package, and also the StreamSkater crawler.       |
 | cdf              | Cumulative distribution. Usually that implied by all the predictions contributed to a given forecast horizon. See any page such as [faang1&horizon=3555](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555).      |
 | daily prize | See [daily prize](https://www.microprediction.com/competitions/daily)                           | 
