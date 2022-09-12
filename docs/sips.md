@@ -1,22 +1,18 @@
 ## Stochastic Information Packets
 
-For background on stochastic information packages (sips) see [analytica wiki](http://wiki.analytica.com/Stochastic_Information_Packets_(SIPs)). The microprediction
-Python client supports different standard representations of probability distributions:
+For background on stochastic information packages (sips) see [analytica wiki](http://wiki.analytica.com/Stochastic_Information_Packets_(SIPs)). The microprediction site can 
+be viewed as a source of real-time SIPs.
 
-1.  PDF (Monte Carlo samples) - part of the csv API coming soon. 
-2.  Metalog expansions
-
-### Python 
+### Example 
 
 
+<img src="/microprediction/assets/images/sip_logo.png"  width="300" height="300">
 
-### API
+[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
+
+
 
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
  
-
-
-![](/microprediction/assets/images/sip_logo.png)
-
