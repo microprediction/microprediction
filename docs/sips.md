@@ -1,4 +1,8 @@
-## Stochastic Information Packets
+# One Hour Ahead Distributional Wind-Speed Predictions
+
+
+
+### Stochastic Library
 
 For background on stochastic information packages (sips) see [analytica wiki](http://wiki.analytica.com/Stochastic_Information_Packets_(SIPs)). The microprediction site can be viewed as a source of real-time SIPs. 
 
