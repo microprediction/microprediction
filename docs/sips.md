@@ -5,7 +5,7 @@ For background on stochastic information packages (sips) see [analytica wiki](ht
 Use URL's like [https://csv.microprediction.org/noaa?zip=46073](https://csv.microprediction.org/noaa?zip=46073) or click the logo below for an example of one hour ahead wind speed prediction. 
 
 <a href="https://csv.microprediction.org/noaa"><img src="/microprediction/assets/images/sip_logo.png"> </a>
-Uses the Open SIPmath(tm)
+Uses the Open SIPmath(tm) convention. 
 
 
 
