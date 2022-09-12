@@ -12,5 +12,5 @@ Documentation [map](https://microprediction.github.io/microprediction/map.html)
  
 
 
-![slack](/microprediction/assets/images/slack.png)
+![slack](/microprediction/assets/images/algo_fight_club.png)
 
