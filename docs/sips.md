@@ -6,9 +6,9 @@ be viewed as a source of real-time SIPs.
 ### Example 
 
 
-<img src="/microprediction/assets/images/sip_logo.png"  width="300" height="300">
+<a href="csv.microprediction.org/predictions"><img src="/microprediction/assets/images/sip_logo.png"> </a>
 
-[<img src="http://www.google.com.au/images/nav_logo7.png">](http://google.com.au/)
+
 
 
 
