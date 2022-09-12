@@ -1,6 +1,8 @@
 ## Google Meet-ups
 
-Friday noon EST most weeks. See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.
+Want to get beaten up by algorithms? Want to ask questions in real time? 
+
+"Office hours" are Friday noon EST most weeks. See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.
 
 The microprediction Google Meet:
 
@@ -18,7 +20,9 @@ Microprediction [slack](https://microprediction.github.io/microprediction/slack.
 -|-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
-  
+    
+
+![](/microprediction/assets/images/algo_fight_club.png)
 
 
 
