@@ -1,8 +1,8 @@
 ## Google Meet-ups
 
-Want to get beaten up by algorithms? Want to ask questions in real time? 
+Want to get beaten up by algorithms and your fellow contributors? It's good for you!
 
-"Office hours" are Friday noon EST most weeks. See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.
+Want to ask questions in real time? "Office hours" are Friday noon EST most weeks. See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.
 
 The microprediction Google Meet:
 
