@@ -44,6 +44,13 @@
 
 
 
+-+-
+
+![algo_fight_club](/microprediction/assets/images/algo_fight_club.png)
+
+
+
+
 
 
 
