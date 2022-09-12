@@ -46,7 +46,7 @@
 
 -+-
 
-![algo_fight_club](/microprediction/assets/images/algo_fight_club.png)
+![algo_fight_club](/microprediction/assets/images/overfit_in.png)
 
 
 
