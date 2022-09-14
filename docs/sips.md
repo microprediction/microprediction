@@ -3,7 +3,7 @@
 It is easy to draw predictions made by algorithms into an Open SIPmath(tm) standard, so they can be used
 in Monte Carlo or other calculations in Excel using ChanceCalc(tm). 
 
-### Stochastic Information Packages Library
+### SIP Library
 
 For background on stochastic information packets (SIPs) see the Wikipedia entry on [probability management](https://en.wikipedia.org/wiki/Probability_management). The microprediction site can be viewed as a source of real-time SIPs. Click on the logo to download a live wind speed distribution, and then use directly in ChanceCalc to make chance-informed decisions in Excel, or import into R, Python or the 
 platform of your choice.
