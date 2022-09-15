@@ -37,6 +37,10 @@ Very similar to the use of set()
     values = [5,6,4,9]
     res = mw.cset(names=names,values=values)
 
+### Python examples
+
+See [/submission_examples_copulas](https://github.com/microprediction/microprediction/tree/master/submission_examples_copulas).
+
 ### The meaning of values in z2~ streams
 Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
 are not dissimilar:
