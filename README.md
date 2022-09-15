@@ -19,7 +19,7 @@ I maintain three benchmarking packages to help me, and maybe you, surf the open-
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
 # The [microprediction.org](https://www.microprediction.org/) platform
-I also maintain a *live exchange* (high velocity prediction market of sorts, in the broad category of ``colliders'' per my [book](https://mitpress.mit.edu/9780262047326/microprediction/)) where distributional time-series prediction
+I also maintain a *live exchange* (high velocity prediction market of sorts, in the broad category of colliders, per my [book](https://mitpress.mit.edu/9780262047326/microprediction/)'s outrageous neologism) where distributional time-series prediction
  algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). Let it not go unemphasized that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!). More importantly it gives clever people the opportunity to *let their algorithms help someone* without their getting in the middle, should they wish to. It remains a social experiment to determine whether that's sufficient motivation. You can see [examples](https://github.com/microprediction/microprediction) of what I've let loose and of course we need more people in the C-suite to realize they can abstract most of ``AI'' into commodity prediction. If you want to help, I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. 
 
 No? Prefer to read an entire page before following links. Totally respect that. TLDR:
