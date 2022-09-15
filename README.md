@@ -20,9 +20,9 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 # The [microprediction.org](https://www.microprediction.org/) platform
 I also maintain a *live exchange* (high velocity prediction market of sorts) where distributional time-series prediction
- algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. 
+ algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). But after reiterating that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs (wow that's incredible!) and more importantly it gives clever people the opportunity to *let their algorithms help someone* without their getting in the middle. It remains a social experiment to determine whether that's sufficient motivation. You can see [examples](https://github.com/microprediction/microprediction) of what I've let loose and if you want to help, I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README. 
 
-No? Okay fine. TLDR:
+No? Prefer to read an entire page before following links. Totally respect that. TLDR:
 
 - I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
