@@ -4,7 +4,7 @@ This was supposed to be the microprediction [client](https://github.com/micropre
 
 I'm dynamic and fascinating. Not really but I run a [slack channel](https://microprediction.github.io/microprediction/slack.html) for those interested in time-series, covariance
 prediction, optimization and other things enabling semi-autonomous collective microprediction. Most Friday's at noon
-I make myself available to anyone interested in these things via a regular open google meet (see [here](https://microprediction.github.io/microprediction/meet.html)). I'm not big on creating other deterministic future work interruptions even though I do realize there is excellent tooling for this. 
+I make myself available to anyone interested in these things (see [meet](https://microprediction.github.io/microprediction/meet.html)). I'm not big on creating other deterministic future work interruptions even though I do realize there is excellent tooling for this. 
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
