@@ -1,15 +1,24 @@
-What are those [yarx](https://www.microprediction.org/stream_dashboard.html?stream=yarx_1n) streams? 
+What are those [yarx](https://www.microprediction.org/stream_dashboard.html?stream=yarx_1n) streams? What about [xray](https://www.microprediction.org/stream_dashboard.html?stream=xray_182)? 
 
-## Equity streams
+## Yarx equity streams
 
-The honest answer is that they are a highly imperfect record of *some* changes in log prices of stocks, subject to pretty severe limitations in the feed that drives them. Unfortunately, even 
-if live stock prices were ingested we would not have the rights to distribute them. But, that doesn't mean they aren't an important statistical exercise in the prediction of near-martingales and 
+The honest answer is that the former represent a highly imperfect record of *some* changes in scaled log prices of stocks, and the latter are transparent linear combinations of those same changes published almost at the same time. 
+
+This is, unfortunately, all subject to pretty severe limitations in the feed that drives them including delays and, shall we say, anomalies. Unfortunately, even 
+if high quality live stock prices were ingested we would not have the rights to distribute them. But, that doesn't mean they aren't an important statistical exercise in the prediction of near-martingales and 
 their curious distributional properties that have attracted considerable comment in the literature! 
 
-
-These streams are sponsored by Hebdomad Leech, whose full public sponsor code is
+These streams are sponsored by Hebdomad Leech by the way, whose full public sponsor code is
 
     6ebd03ad1eec6897b9414ff2a1b4501a
+
+and you can use that to steer your crawler that way, shoud you wish. There are prizes on offer for aggregate performance across Hebdomad Leech's streams, as you may have noticed on the [sub-leaderboards](https://www.microprediction.org/leaderboard.html). 
+
+
+## Xray portfolio streams
+
+These are intended to provide "xray vision" into the joint behaviour of stocks. As noted these are portfolios, and indeed they are very loosely 
+
 
 The portfolio [weights](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) are provided as JSON.  
 
