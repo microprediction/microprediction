@@ -50,3 +50,10 @@ and learn about [bankruptcy](https://microprediction.github.io/microprediction/b
 - [Retrieve](https://microprediction.github.io/microprediction/retrieve.html) predictions.  
 - View [zscores](https://microprediction.github.io/microprediction/zscores.html) to assess market efficiency.  
 
+
+
+-+-
+
+Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+![electricity](/microprediction/assets/images/electricity.jpeg)
