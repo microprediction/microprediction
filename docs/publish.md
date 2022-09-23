@@ -56,4 +56,4 @@ and learn about [bankruptcy](https://microprediction.github.io/microprediction/b
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-![electricity](/microprediction/assets/images/electricity.jpeg)
+![electricity](/microprediction/assets/images/electricity.png)
