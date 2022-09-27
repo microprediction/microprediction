@@ -9,18 +9,25 @@ pip install --upgrade wheel
 pip install --upgrade git+https://github.com/microprediction/microprediction.git
  
 echo "------ Installation complete ------"
-echo "Next, burning a write_key which will be your identity. This may take a long time."
-sleep 3
 
-python3 -c "from microprediction import new_key;WRITE_KEY = new_key(difficulty=11);print(WRITE_KEY)" > "WRITE_KEY.txt"
+WRITE_KEY_FILE = "WRITE_KEY.txt"
+if [ -f "$WRITE_KEY_FILE" ]
+then
+   echo "Found "$WRITE_KEY_FILE
+else
+   echo "Next, burning a write_key which will be your identity. This may take a long time. Go get lunch."
+   echo 
+   sleep 3
+   python3 -c "from microprediction import new_key;WRITE_KEY = new_key(difficulty=11);print(WRITE_KEY)" > "WRITE_KEY.txt"
+fi
+
 
 sleep 3 
 write_key=$(cat "WRITE_KEY.txt")
 echo $write_key
 
-
 START=`date +%s` 
-while [ $(( $(date +%s) - 30000000 )) -lt $START ]; do
+while [ $(( $(date +%s) - 300000 )) -lt $START ]; do
     write_key=$(cat "WRITE_KEY.txt")
     pip install --upgrade microprediction.git
     python3 -c "from microprediction import DefaultCrawler;crawler = DefaultCrawler(write_key='"$write_key"'); crawler.run()"
