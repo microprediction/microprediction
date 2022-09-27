@@ -10,7 +10,7 @@ pip install --upgrade git+https://github.com/microprediction/microprediction.git
  
 echo "------ Installation complete ------"
 
-WRITE_KEY_FILE = "WRITE_KEY.txt"
+WRITE_KEY_FILE="WRITE_KEY.txt"
 if [ -f "$WRITE_KEY_FILE" ]
 then
    echo "Found "$WRITE_KEY_FILE
