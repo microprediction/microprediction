@@ -5,8 +5,8 @@ mkdir -p crawling_working_dir
 cd crawling_working_dir
 python3 -m venv crawling
 source crawling/bin/activate
+pip install --ugprade pip
 pip install --upgrade wheel
-pip install --upgrade pip
 pip install --upgrade microprediction
  
 echo "------ Installation complete ------"
