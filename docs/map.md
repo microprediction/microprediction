@@ -23,7 +23,7 @@
 ### All pages 
 
 - [home](https://microprediction.github.io/microprediction)
-- [setup](https://microprediction.github.io/setup) ... to participate in under a minute. 
+- [setup](https://microprediction.github.io/microprediction/setup) ... to participate in under a minute. 
 
 
 For submitting predictions
