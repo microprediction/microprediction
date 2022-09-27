@@ -13,7 +13,7 @@ It would be prudent to first [read](https://raw.githubusercontent.com/micropredi
 4. Burn a new private identity for you and save it to WRITE_KEY.txt (this takes a long time, sorry)
 5. Instantiate a [MicroCrawler](https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py) which is an algorithm chauffeur. 
 6. Run the crawler 
-7. Invite you to cut and paste your writekey into the dashboard [dashboard](https://www.microprediction.org/) where you can view the things it is predicting and how well it is doing.  
+7. Invite you to cut and paste your writekey into the dashboard [dashboard](https://www.microprediction.org/) to see what [streams](https://www.microprediction.com/blog/livedata) it is predicting, and how well.    
 8. Periodically bounce and upgrade.  
 
 Once you are familiar with this process, you can return to the [crawler documentation](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html) to see how to swap out the forecasting method for one that you invent or prefer.  
