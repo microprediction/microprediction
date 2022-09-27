@@ -1,7 +1,7 @@
 
 
 ## Setup
-Sorry this won't work for windows folks without emulation but for everyone else, you can merely cut and paste into a terminal the following command.  
+Sorry this won't work for windows folks but for everyone else, you can merely cut and paste into a terminal the following command.  
 
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/setup.sh)"
      
