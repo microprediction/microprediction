@@ -1,5 +1,5 @@
-A free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html). Got to [setup](https://microprediction.github.io/microprediction/setup) to launch your
-algorithm in ten seconds or less. 
+A free, stable platform illustrating "[microprediction](https://microprediction.github.io/microprediction/book.html)". Got to [setup](https://microprediction.github.io/microprediction/setup) to immediately participate. 
+
 
 ## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
