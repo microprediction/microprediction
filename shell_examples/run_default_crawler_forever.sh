@@ -8,12 +8,15 @@ source crawling/bin/activate
 pip install --upgrade wheel
 pip install --upgrade pip
 pip install --upgrade microprediction
-
+ 
 echo "------ Installation complete ------"
 echo "Next, burning a write_key which will be your identity. This may take a long time."
+sleep 3
 
 # Make a write key
 python3 -c "from microprediction import new_key;WRITE_KEY = new_key();print(WRITE_KEY)" > "WRITE_KEY.txt"
+
+sleep 3 
 source "WRITE_KEY.txt"
 write_key=$(cat "$file")
 echo $write_key
