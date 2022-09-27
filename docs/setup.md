@@ -16,7 +16,7 @@ It would be prudent to first [read](https://raw.githubusercontent.com/micropredi
 7. Invite you to cut and paste your writekey into the dashboard [dashboard](https://www.microprediction.org/) to see what [streams](https://www.microprediction.com/blog/livedata) it is predicting, and how well.    
 8. Periodically bounce and upgrade.  
 
-Once you are familiar with this process, you can return to the [crawler documentation](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html) to see how to swap out the forecasting method for one that you invent or prefer.  
+Once you are familiar with this process, you can return to the [crawler documentation](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html) to see how to swap out the forecasting method for one that you invent, or simply prefer. You can also modify the navigation.  
 
 -+- 
 
