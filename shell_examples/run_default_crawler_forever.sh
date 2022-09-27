@@ -17,17 +17,15 @@ sleep 3
 python3 -c "from microprediction import new_key;WRITE_KEY = new_key();print(WRITE_KEY)" > "WRITE_KEY.txt"
 
 sleep 3 
-source "WRITE_KEY.txt"
-write_key=$(cat "$file")
+write_key=$(cat "WRITE_KEY.txt")
 echo $write_key
 
 
 START=`date +%s` 
 while [ $(( $(date +%s) - 30000000 )) -lt $START ]; do
-    set -e
-    . /home/me/.virtualenvs/micro/bin/activate
-    pip install git+git://github.com/microprediction/microprediction.git
-    python3 -c "from microprediction import DefaultCrawler;crawler = DefaultCrawler(write_key=$write_key); crawler.run()"
+    write_key=$(cat "WRITE_KEY.txt")
+    pip install --upgrade microprediction.git
+    python3 -c "from microprediction import DefaultCrawler;crawler = DefaultCrawler(write_key='"$write_key"'); crawler.run()"
     sleep 60
 done
 
