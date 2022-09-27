@@ -13,7 +13,7 @@ echo "------ Installation complete ------"
 echo "Next, burning a write_key which will be your identity. This may take a long time."
 
 # Make a write key
-python3 -c "from microprediction import new_key;WRITE_KEY = new_key();print(new_key)" > "WRITE_KEY.txt"
+python3 -c "from microprediction import new_key;WRITE_KEY = new_key();print(WRITE_KEY)" > "WRITE_KEY.txt"
 source "WRITE_KEY.txt"
 write_key=$(cat "$file")
 echo $write_key
