@@ -4,9 +4,9 @@ mkdir -p crawling_working_dir
 cd crawling_working_dir
 python3 -m venv crawling
 source crawling/bin/activate
-pip install --ugprade pip
+pip install --upgrade pip
 pip install --upgrade wheel
-pip install --upgrade microprediction
+pip install --upgrade git+https://github.com/microprediction/microprediction.git
  
 echo "------ Installation complete ------"
 echo "Next, burning a write_key which will be your identity. This may take a long time."
