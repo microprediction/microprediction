@@ -1,4 +1,5 @@
-A free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html).
+A free, stable platform illustrating live, collective "microprediction", the topic of a new [book](https://microprediction.github.io/microprediction/book.html). Got to [setup](https://microprediction.github.io/microprediction/setup) to launch your
+algorithm in ten seconds or less. 
 
 ## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
 
@@ -22,7 +23,7 @@ There are [rewards](https://www.microprediction.com/competitions/daily) for good
 
 ## Not to be overlooked:
 
- - [Setup](https://microprediction.github.io/microprediction/setup.html) will get you participating in under a minute.
+ - [Setup](https://microprediction.github.io/microprediction/setup.html) will get you participating immediately. 
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials, free [data](https://microprediction.github.io/microprediction/data.html) and [prizes](https://microprediction.github.io/microprediction/prizes.html). 
