@@ -1,11 +1,19 @@
 
 
-## Setup
+## Instant participation
 Sorry this won't work for windows folks but for everyone else, you can merely cut and paste into a terminal the following command.  
 
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/setup.sh)"
      
-It would be prudent to first [read](https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_forever.sh) what it will do. It will:
+or even shorter for the trusting ...
+
+     /bin/bash -c "$(curl -fsSLhttps://tinyurl.com/32jjebu9)"
+
+It would be prudent to first [read](https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_forever.sh) what it will do.
+
+### Explanation
+
+The script will:
 
 1. Create a crawling_working_dir
 2. Create and activate a virtual python environment
