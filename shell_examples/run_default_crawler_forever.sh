@@ -27,11 +27,11 @@ write_key=$(cat "WRITE_KEY.txt")
 echo $write_key
 
 START=`date +%s` 
-while [ $(( $(date +%s) - 300000 )) -lt $START ]; do
+while [ $(( $(date +%s) - 30000000 )) -lt $START ]; do
     write_key=$(cat "WRITE_KEY.txt")
     pip install --upgrade git+https://github.com/microprediction/microprediction.git
-    python3 -c "from microprediction import DefaultCrawler;crawler = DefaultCrawler(write_key='"$write_key"'); crawler.run()"
-    echo "I guess something went wrong, or this is a scheduled update time. Not to worry either way. We shall resume in 60 seconds". 
+    python3 -c "from microprediction import DefaultCrawler;crawler = DefaultCrawler(write_key='"$write_key"',timeout=3600); crawler.run()"
+    echo "Either the crawler crashed, or this is a scheduled update time. Not to worry either way. We shall resume in 60 seconds". 
     sleep 60
 done
 
