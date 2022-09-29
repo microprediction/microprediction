@@ -7,6 +7,7 @@ source crawling/bin/activate
 pip install --upgrade pip
 pip install --upgrade wheel
 pip install --upgrade git+https://github.com/microprediction/microprediction.git
+pip install --upgrade git+https://github.com/microprediction/muid.git
  
 echo "------ Installation complete ------"
 
