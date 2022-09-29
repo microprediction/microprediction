@@ -19,8 +19,7 @@ else
    echo "Next, burning a write_key which will be your identity. This may take a long time. Go get lunch."
    echo 
    sleep 3
-   export MUID_VERBOSITY=1 
-   python3 -c "from microprediction import new_key;WRITE_KEY = new_key(difficulty=11);print(WRITE_KEY)" > "WRITE_KEY.txt"
+   python3 -c "import os;os.environ['MUID_VERBOSITY']=1;from microprediction import new_key;WRITE_KEY = new_key(difficulty=11);print(WRITE_KEY)" > "WRITE_KEY.txt"
 fi
 
 
