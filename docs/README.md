@@ -38,5 +38,10 @@ Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
 
 
+![skipped](/microprediction/assets/images/skipped_statistics.png)
+
+
+
+
 
 
