@@ -44,12 +44,13 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
     - values (as a string with comma-separated values)
 
 
-### The 8th rule of algo fight club is
-... if this is your first visit you have to fight. Go on, here's a one-liner:
+### The 8th rule of algo fight club is ...
+... if this is your first visit you have to fight. Go to setup
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+  /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
 
-This will install the needed packages into a virtual environment, burn a new write key, and then run the default crawler. 
+This will install the needed packages into a virtual environment, burn a new write key, and then run the default crawler. It will then guide you
+to relevant documentation, and to your dashboard. 
 
 
 ### Prerequisites
