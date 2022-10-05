@@ -45,9 +45,9 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
 
 
 ### The 8th rule of algo fight club is ...
-... if this is your first visit you have to fight. Go to setup
+... if this is your first visit you have to fight. If you have a spare bash shell:
 
-  /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
+         /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
 
 This will install the needed packages into a virtual environment, burn a new write key, and then run the default crawler. It will then guide you
 to relevant documentation, and to your dashboard. 
