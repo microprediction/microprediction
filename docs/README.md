@@ -1,4 +1,4 @@
-A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/publish.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) to participate in seconds.
+A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) to participate in seconds.
 
 
 ## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
