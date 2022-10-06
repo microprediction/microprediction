@@ -2,11 +2,10 @@
 
 Markets are better than models. Until now, they've just been less convenient. 
 
-## The case for a microprediction prediction web 
-
-If you don't believe that statement, I probably can't convince you of anything. I suppose you could
+If you don't believe that statement, I probably can't convince you of anything in one paragraph. I suppose you could
 look at what [people are saying](https://microprediction.github.io/building_an_open_ai_network/feedback.html) about
-the [book](https://mitpress.mit.edu/9780262047326/microprediction/) and decide to read it.   
+the [book](https://mitpress.mit.edu/9780262047326/microprediction/) and decide to read it, however. Otherwise, see you 
+in a few years when this has reached to Towards Data Science echo chamber. 
 
 
 -+- 
