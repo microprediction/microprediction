@@ -1,6 +1,6 @@
 ## TLDR
 
-Markets are better than models. Until now, they've just been less convenient. 
+Markets are better than models. But markets have been harder to wield, until now. 
 
 If you don't believe that statement, I probably can't convince you of anything in one paragraph. I suppose you could
 look at what [people are saying](https://microprediction.github.io/building_an_open_ai_network/feedback.html) about
