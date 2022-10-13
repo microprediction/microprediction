@@ -1,9 +1,9 @@
 ## TLDR
 
-Markets are better than models. But markets have been harder to wield, until now. 
+Markets are better than models for short horizon prediction. But markets have been harder to wield, until now. 
 
 If you are not remotely sympathetic to the first statement, see you in a few years. Similarly, if you are not 
-willing to [cut and paste one line](https://microprediction.github.io/microprediction/setup.html) to immediately participate in an options market, thus demonstrating to yourself that progress has been made towards the second statement being true, then I probably can't convince you of anything in one paragraph. 
+willing to [cut and paste one line](https://microprediction.github.io/microprediction/setup.html) to immediately participate in a stripped-down improvement of an options market, thus demonstrating to yourself that progress has been made towards the second statement being true, then I probably can't convince you of anything in one paragraph. 
 
 (Though by all means look
 at what [people are saying](https://microprediction.github.io/building_an_open_ai_network/feedback.html) about
