@@ -17,8 +17,10 @@ def fetch_live_data(key,field):
             record = selection[0]
             return record[field]
         else:
+            print('Data format may have changed at '+URL)
             return None
     else:
+        print('Not getting a good response from ' + URL)
         return None
 
 def verrazano_speed():
