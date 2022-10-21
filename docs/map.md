@@ -14,7 +14,7 @@
     predict-using-python-streamskater                copulas
      
        
-### All pages 
+### All doc pages 
 
 - [home](https://microprediction.github.io/microprediction)
 - [predict](https://microprediction.github.io/microprediction/predict.html)
@@ -35,3 +35,4 @@
 - [data](https://microprediction.github.io/microprediction/data.html)
 - [videos](https://microprediction.github.io/microprediction/videos.html)
 - [summary](https://microprediction.github.io/microprediction/summary.html)
+
