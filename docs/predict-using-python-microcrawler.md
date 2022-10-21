@@ -19,7 +19,7 @@ In this pattern we subclass MicroCrawler and override the method that takes lagg
     
     class MyCrawler(MicroCrawler):
 
-    def __init__(self,write_key,**kwargs):
+    def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
     def sample(self, lagged_values, lagged_times=None, **ignore ):
