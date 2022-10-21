@@ -16,6 +16,7 @@ to get the job done. This is illustratd by
     from microprediction import MicroWriter
     from microprediction.live.xraytickers import get_xray_stock_names
     from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
+    from microconventions import MicroConventions
     NAMES = get_xray_stock_names() + XRAY_PORTFOLIO_NAMES
     mw = MicroWriter(write_key='YOUR WRITE KEY HERE')
 
