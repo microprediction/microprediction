@@ -5,7 +5,7 @@ Want to get beaten up by algorithms and your fellow contributors? It's good for 
  | Purpose                                                   | Time                | Procedure                                                    |
  |-----------------------------------------------------------|---------------------|--------------------------------------------------------------|
  | Individual help getting started                           |  11:30am Friday EST | Send a cal invite to peter dot cotton at microprediction.com |
- | General banter, see below.                                |  noon Friday EST    | See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.                                              |
+ | General banter, see below.                                |  Noon Friday EST    | See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.                                              |
  
 The micropredition meetup:
 
