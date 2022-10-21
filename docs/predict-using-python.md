@@ -47,11 +47,15 @@ This will create an algorithm that slowly explores the stream universe. In the f
 you can override the default prediction and navigation logic. See [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
 
 ### Option 2a: Use a specialized version of MicroCrawler
-You can also hunt in the [repository](https://github.com/microprediction/microprediction/tree/master/microprediction) for
-classes modifying and extending MicroCrawler. For now I document only
-[StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html).
+See 
+ - [FitCrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
+ - [StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
 
+You can also hunt in the [repository](https://github.com/microprediction/microprediction/tree/master/microprediction).
 
+### Reminder: write keys
+
+You can use a [colab notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples/New_Key.ipynb) to burn a new WRITE_KEY. 
 
 
 -+-

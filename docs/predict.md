@@ -1,7 +1,7 @@
 
 ## Submitting predictions 
 
-Conceptually speaking, on microprediction to "predict" is to supply the following:
+Conceptually speaking, to "predict" is to supply the following:
 
  - A list of *225* float 
  - A delay, which must be 70, 310, 910 or 3555 seconds. 
@@ -24,7 +24,7 @@ the history of the stream in question. See [predict-using-python](https://microp
 ### R 
 Following [r_examples](https://github.com/microprediction/microprediction/tree/master/r_examples)...
 
-    name = 'name <- "z2~c5_iota~c5_ripple~3555.json"
+    name <- "z2~c5_iota~c5_ripple~3555.json"
     lagged <- jsonlite::fromJSON(paste0("https://api.microprediction.org/lagged/",name))
     x <- lagged[, 2, drop=FALSE]
     y <- c(x[1:50], x[1:200], x) 
@@ -44,12 +44,13 @@ As suggested by the R example above, send PUT to https://api.microprediction.org
     - values (as a string with comma-separated values)
 
 
-### The first rule of prediction club is
-... you have to predict. If you don't like the above just cut and paste:
+### The 8th rule of algo fight club is ...
+... if this is your first visit you have to fight. If you have a spare bash shell:
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_from_new_venv.sh)"
+         /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
 
-into a terminal. 
+This will install the needed packages into a virtual environment, burn a new write key, and then run the default crawler. It will then guide you
+to relevant documentation, and to your dashboard. 
 
 
 ### Prerequisites
@@ -60,3 +61,7 @@ the [bankruptcy](https://microprediction.github.io/microprediction/bankruptcy.ht
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+![norton](/microprediction/assets/images/norton.jpeg)
+
+

@@ -19,7 +19,7 @@ In this pattern we subclass MicroCrawler and override the method that takes lagg
     
     class MyCrawler(MicroCrawler):
 
-    def __init__(self,write_key,**kwargs):
+    def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
     def sample(self, lagged_values, lagged_times=None, **ignore ):
@@ -33,6 +33,16 @@ In this pattern we subclass MicroCrawler and override the method that takes lagg
 
 Note self.num_predictions=225
 
+### Other modifications
+See [microprediction/crawler_examples_modification](https://github.com/microprediction/microprediction/tree/master/crawler_examples_modification). 
+
+
+### Examples
+See [predict-using-python-microcrawler-examples](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-examples.html).
+
+### Skating
+
+See [predict-using-python-streamskater](https://microprediction.github.io/microprediction/streamskater.html).
 
 
 ### Where MicroCrawler sits in the hierarchy
@@ -42,7 +52,9 @@ Note self.num_predictions=225
              |
          MicroWriter
              |
-         MicroCrawler
+         MicroCrawler -----|
+             |             |
+         StreamSkater    
 
 
 Thus if you want more control, you can [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) using MicroWriter. 

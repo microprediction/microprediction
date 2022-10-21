@@ -1,6 +1,6 @@
 ## Bankruptcy
 
-Bankruptcy is a basic maechanism to discourage noise predictions and spurious streams. 
+Bankruptcy is a rudimentary mechanism to discourage noise predictions and spurious streams. 
 
 ### Predicting
 

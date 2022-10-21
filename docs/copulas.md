@@ -37,6 +37,10 @@ Very similar to the use of set()
     values = [5,6,4,9]
     res = mw.cset(names=names,values=values)
 
+### Python examples
+
+See [/submission_examples_copulas](https://github.com/microprediction/microprediction/tree/master/submission_examples_copulas).
+
 ### The meaning of values in z2~ streams
 Probably you've already grok'd [zscores](https://microprediction.github.io/microprediction/zscores.html), and the bivariate and trivariate counterparts
 are not dissimilar:
@@ -52,13 +56,13 @@ data point $x_1$ for one stream (using predictions for the 70 second horizon);
 
 ### The choice of space-filling curve H
 
-As for $$H$$, a Morton Z-curves are employed. Actually the most up to date
+As for *H*, a Morton Z-curves are employed. Actually the most up to date
 reference for these embeddings is the code, so see [zcurve_conventions](https://github.com/microprediction/microconventions/blob/master/microconventions/zcurve_conventions.py). At time of
 writing these docs, the heart of this calculation is:
 
     pymorton.interleave(prctls)
 
-where 'prctls' are the $F^1_{70}(x_1), F^2_{70}(x_2)$. 
+where 'prctls' comprisese the pair $$F^1_{70}(x_1), F^2_{70}(x_2)$$ in the bivariate case, and similarly for trivariate.  
 
 -+-
 
