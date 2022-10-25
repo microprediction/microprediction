@@ -1,15 +1,13 @@
 ## Submitting predictions using python
-Usually you'd use one of
+The main choices are
 
-      MicroWriter        
-          |
-      MicroCrawler       
+   1. Use MicroWriter to send predictions for a specific stream and forecast horizon (read on).
+   2. Use MicroCrawler instead, which will drive an algorithm to many streams ([instructions]((https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html))
 
-or perhaps a fancy descendant of MicroCrawler. We consider each in turn.
+The first option is suitable if you intend to run a program on a schedule, say using cron. 
 
-### Option 1. Use [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit()
-If you intend to periodically run a script (say with cron) or otherwise
-manage periodic submissions, then you may only need the [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit() method
+### Option 1. Use MicroWriter
+The [MicroWriter](https://github.com/microprediction/microprediction/blob/master/microprediction/writer.py).submit() method
 to get the job done. This is illustratd by
 [callable_flea.py](https://github.com/microprediction/microprediction/blob/master/submission_examples_independent/callable_flea.py)
 
@@ -38,7 +36,7 @@ See [predict-using-python-copulas](https://microprediction.github.io/micropredic
 
 
 ### Option 2: Use [MicroCrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).run()
-As an alternative to scheduled predictions, you can use a single long running process. 
+As noted there is an alternative to scheduled predictions. You can use a single long running process as follows: 
 
   1. Subclass MicroCrawler
   2. Instantiate with your WRITE_KEY
