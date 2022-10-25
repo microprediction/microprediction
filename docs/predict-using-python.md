@@ -2,7 +2,7 @@
 The main choices are
 
    1. Use MicroWriter to send predictions for a specific stream and forecast horizon (read on).
-   2. Use MicroCrawler instead, which will drive an algorithm to many streams ([instructions]((https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html))
+   2. Use MicroCrawler instead, which will drive an algorithm to many streams ([instructions](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html))
 
 The first option is suitable if you intend to run a program on a schedule, say using cron. 
 
