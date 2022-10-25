@@ -32,7 +32,7 @@ This might be run once an hour, or once a day say. Naturally you'll want to repl
 the dubious model above with your own statistical ingenuity. 
 
 ### Option 1a: MicroWriter copula submission
-See [predict-using-python-copulas](https://microprediction.github.io/microprediction/predict-using-python-copulas.html).
+There is a rather specialized option that can make submission to so-called copula streams easier. For explanation, see[predict-using-python-copulas](https://microprediction.github.io/microprediction/predict-using-python-copulas.html).
 
 
 ### Option 2: Use [MicroCrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).run()
@@ -47,6 +47,7 @@ you can override the default prediction and navigation logic. See [predict-using
 
 ### Option 2a: Use a specialized version of MicroCrawler
 See 
+
  - [FitCrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
  - [StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)
 
