@@ -7,7 +7,7 @@ second assertion I make. You can [publish live data](https://microprediction.git
 
 For markets to work efficiently with almost no trade friction, participation by humans and inaminate autonomous algorithms should be seamless. If you are willing to [cut and paste one line](https://microprediction.github.io/microprediction/setup.html) on bash command you'll be on the way to being convinced of that fact, since this will initiate your participation in a stripped-down improvement of an options market (no email or ISDA required). 
 
-There's one more thing: recursion. By all means look at what [people are saying](https://microprediction.github.io/building_an_open_ai_network/feedback.html) about
+There are other important ideas such as recursion, privacy, and the reformulation of control theory and reinforcement learning. By all means look at what [people are saying](https://microprediction.github.io/building_an_open_ai_network/feedback.html) about
 the [book](https://mitpress.mit.edu/9780262047326/microprediction/) and decide to wade deeper into this future vision of bespoke quantitative business optimization, powered by a million copies of what you see here, and improvements on the same. 
 
 
