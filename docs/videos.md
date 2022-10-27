@@ -10,7 +10,7 @@
 - [6. Modifying crawler navigation](https://microprediction.github.io/microprediction/video-python-6.html)
 
 
-## Conceptual 
+## Conceptual / business focussed 
 
 - [A first look at microprediction](https://www.microprediction.com/welcome?hsLang=en) and how it gives rise to the "ten minute data science project". 
 - [What must a microprediction oracle do?](https://www.microprediction.com/welcome-2?hsLang=en)  The answer isn't Kaggle, or DataRobot. 
