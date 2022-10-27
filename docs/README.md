@@ -1,13 +1,13 @@
 A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) to participate in seconds.
 
 
-## 1. Turnkey live prediction ([>> publishing docs >>](https://microprediction.github.io/microprediction/publish.html))
+## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
 You can create your own stream by:
  - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it, just to get in the game. 
  - Then perusing the [publising docs](https://microprediction.github.io/microprediction/publish.html) for more conveniences. 
 
-## 2. Turnkey benchmarking ([>> prediction docs >>](https://microprediction.github.io/microprediction/predict.html))
+## 2. Turnkey benchmarking (see [prediction docs](https://microprediction.github.io/microprediction/predict.html))
 
 On the other hand, you can easily test *distributional time-series prediction* algorithms by: 
 
