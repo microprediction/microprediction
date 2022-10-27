@@ -1,7 +1,7 @@
 
-# microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), [install](https://microprediction.github.io/microprediction/install.html), [in-person help](https://microprediction.github.io/microprediction/meet.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
+# microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), [install](https://microprediction.github.io/microprediction/install.html), [help](https://microprediction.github.io/microprediction/meet.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 
-  - [leaderboards](https://www.microprediction.org/leaderboard.html) 
+  - [leaderboards](https://www.microprediction.org/leaderboard.html) include links to algorithm code.
   - [glossary](https://microprediction.github.io/microprediction/glossary.html)
   - [examples](https://github.com/microprediction/microprediction) 
   - [slack](https://microprediction.github.io/microprediction/slack.html) 
