@@ -21,6 +21,8 @@ There is also a weekly Google [meet](https://microprediction.github.io/micropred
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/slack.md) this page. 
+
 
 ![slack](/microprediction/assets/images/slack.png)
 
