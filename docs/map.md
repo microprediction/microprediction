@@ -1,5 +1,8 @@
 ## Documentation map
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/map.md) this page. 
+
+
                         README - setup
                            |
        |----------------------------------------------|----------------------
