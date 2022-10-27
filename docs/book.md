@@ -1,6 +1,6 @@
 # Microprediction: Building an Open AI Network
 
-MIT Press. Due Nov 8, 2022. 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/book.md) this page. 
 
 ### Praise and critique
 
