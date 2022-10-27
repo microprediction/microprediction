@@ -22,4 +22,6 @@
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/videos.md) this page. 
  
