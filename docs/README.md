@@ -9,11 +9,12 @@ You can create your own stream by:
 
 ## 2. Turnkey benchmarking (see [prediction docs](https://microprediction.github.io/microprediction/predict.html))
 
-On the other hand, you can easily test *distributional time-series prediction* algorithms by: 
+On the other hand, you can supply predictions in real-time:
 
- - Modifying the script
-[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it, just to get started.
- - Reviewing the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
+ a. Instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)).
+ b. Manually submit by modifying the simple script 
+[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it.
+ c. Reviewing the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
 
 ## Brief explanation
 
