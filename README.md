@@ -5,7 +5,8 @@
   - [glossary](https://microprediction.github.io/microprediction/glossary.html)
   - [examples](https://github.com/microprediction/microprediction) 
   - [slack](https://microprediction.github.io/microprediction/slack.html) 
-  - [book](https://microprediction.github.io/building_an_open_ai_network/)  
+  - [videos](https://microprediction.github.io/microprediction/videos.html)
+  - [book](https://microprediction.github.io/building_an_open_ai_network/) and [mp3](https://github.com/microprediction/building_an_open_ai_network/raw/main/docs/assets/audio/Microprediction_Chapter_1.mp3) for Chapter 1. 
  
 Just go to [setup](https://microprediction.github.io/microprediction/setup) to instantly participate and grok microprediction. Or ping me a cal invite for Fridays 11:30am EST and I'll walk you through getting started deploying your models. See [meet](https://microprediction.github.io/microprediction/meet.html). This was supposed to be the microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction) page btw but Github made this a "user page" and they know best. Hi, this is my [blog](https://www.microprediction.com/blog) and, oh, so is [this](https://microprediction.medium.com/). I've always worked in the private sector, though very occasionally [publish](https://scholar.google.com/citations?user=V5wB8lEAAAAJ&hl=en). My [book](https://mitpress.mit.edu/books/microprediction) is out soon (complain at [/building_an_open_ai_network](https://github.com/microprediction/building_an_open_ai_network)) and here's other [other stuff I've written](https://github.com/microprediction/home). I've been [annointed](https://www.linkedin.com/posts/richadbecker_there-are-only-4-data-science-people-on-li-activity-6975483922784612352--JmQ) "influencer", aka LinkedIn jackass.  
 
