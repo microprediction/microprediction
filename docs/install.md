@@ -10,4 +10,5 @@ Bleeding edge
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
   
- 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/install.md) this page. 
+
