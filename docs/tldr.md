@@ -1,6 +1,6 @@
 ## TLDR
 
-Markets are better than models for short horizon prediction - but harder to wield, until now. 
+*Markets are better than models* for short horizon prediction - but harder to wield, until now. 
 
 If you are not remotely sympathetic to the first assertion, I'll have an uphill battle convincing you of anything. So let's focus on the
 second assertion I make. You can [publish live data](https://microprediction.github.io/microprediction/publish.html) such as your own prediction model errors. This will create a market immediately where bots and their authors will try to find signal that you missed. 
