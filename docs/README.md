@@ -40,8 +40,6 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html) 
 
--+- 
-
 View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
 
 
