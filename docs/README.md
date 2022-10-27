@@ -4,17 +4,17 @@ A free, stable platform illustrating "microprediction" ([long story](https://mic
 ## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
 You can create your own stream by:
- - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) and running it, just to get in the game. 
+ - Modifying [create_a_stream.py](https://github.com/microprediction/microprediction/blob/master/hello_world/create_a_stream.py) to get in the game. 
  - Then perusing the [publising docs](https://microprediction.github.io/microprediction/publish.html) for more conveniences. 
 
 ## 2. Turnkey benchmarking (see [prediction docs](https://microprediction.github.io/microprediction/predict.html))
 
 On the other hand, you can supply predictions in real-time:
 
- a. Instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)).
- b. Manually submit by modifying the simple script 
-[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py) and running it.
- c. Reviewing the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
+  - Instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)).
+  - Manually submit predictions by modifying
+[enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py).
+  - Then reviewing the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
 
 ## Brief explanation
 
