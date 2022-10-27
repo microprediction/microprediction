@@ -68,3 +68,5 @@ where 'prctls' comprisese the pair $$F^1_{70}(x_1), F^2_{70}(x_2)$$ in the bivar
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
   
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/copulas.md) this page. 
+  
