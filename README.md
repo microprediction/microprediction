@@ -1,5 +1,5 @@
 
-# microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), [install](https://microprediction.github.io/microprediction/install.html), [in-person help](https://microprediction.github.io/microprediction/meet.html) [deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
+# microprediction [client](https://github.com/microprediction/microprediction/tree/master/microprediction), [docs](https://microprediction.github.io/microprediction/), [install](https://microprediction.github.io/microprediction/install.html), [in-person help](https://microprediction.github.io/microprediction/meet.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 
 
 Also
