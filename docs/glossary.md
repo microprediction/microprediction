@@ -1,5 +1,7 @@
 ## Glossary
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/glossary.md) this page. 
+
 
 
 | Term              | Intent                |
@@ -43,6 +45,9 @@
 
 
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/book.md) this page. 
+
+
 
 -+-
 
@@ -62,9 +67,3 @@
 
 
                 
-
-
--+- 
-
-Documentation [map](https://microprediction.github.io/microprediction/map.html)
- 
