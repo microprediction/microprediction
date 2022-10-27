@@ -72,7 +72,12 @@ But the connection is provided by the fact that among the algorithms that compet
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
  # My book is here!  
- See the beginnings of a [book website](https://microprediction.github.io/building_an_open_ai_network/) or [Amazon](https://www.amazon.com/Microprediction-Building-Open-AI-Network/dp/0262047322).  
+ 
+  - [book website](https://microprediction.github.io/building_an_open_ai_network/) or 
+  - [Amazon](https://www.amazon.com/Microprediction-Building-Open-AI-Network/dp/0262047322).  
+  - [MIT Press](https://mitpress.mit.edu/9780262047326/microprediction/)
+
+Hope you like it. 
  
  ![](https://github.com/microprediction/home/blob/main/books/cover_choices.png)
 
