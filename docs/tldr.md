@@ -15,6 +15,8 @@ the [book](https://mitpress.mit.edu/9780262047326/microprediction/) and decide t
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/tldr.md) this page. 
+
 
 
 ![book_side](/microprediction/assets/images/cotton_microprediction_3d_side.png)
