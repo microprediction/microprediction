@@ -71,10 +71,8 @@ But the connection is provided by the fact that among the algorithms that compet
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
- # The book is on the way 
- You can [help me choose](https://www.linkedin.com/posts/petercotton_machinelearning-datascience-artificialintelligence-activity-6960853808872579072-SzDO?utm_source=linkedin_share&utm_medium=member_desktop_web)!
- 
- The beginnings of a [book website](https://microprediction.github.io/building_an_open_ai_network/) includes [issues](https://github.com/microprediction/building_an_open_ai_network/issues) allowing you to complain about bugs. 
+ # The book is here!  
+ See the beginnings of a [book website](https://microprediction.github.io/building_an_open_ai_network/) or [Amazon](https://www.amazon.com/Microprediction-Building-Open-AI-Network/dp/0262047322).  
  
  ![](https://github.com/microprediction/home/blob/main/books/cover_choices.png)
 
