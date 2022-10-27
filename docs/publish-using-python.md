@@ -63,3 +63,5 @@ You can use a [colab notebook](https://github.com/microprediction/micropredictio
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish-using-python.md) this page. 
