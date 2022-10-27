@@ -1,4 +1,4 @@
-A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) to participate in seconds.
+A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) and participate instantly. 
 
 
 ## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
@@ -40,7 +40,9 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html) 
 
+-+- 
 
+View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
 
 
 ![skipped](/microprediction/assets/images/skipped_statistics.png)
