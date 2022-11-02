@@ -34,27 +34,19 @@ A prediction exchange on steroids
  - [setup](https://microprediction.github.io/microprediction/setup)
  - [streams](https://www.microprediction.org/browse_streams.html)
  - [stocks](https://microprediction.github.io/microprediction/yarx)
- 
-But there's a bigger picture too per the [book](https://microprediction.github.io/building_an_open_ai_network/) and let it not go unemphasized that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs to foster progress in that direction. A prediction web will give clever people the opportunity to *let their algorithms help someone* without their getting in the middle, should they wish to. It remains a social experiment to determine whether that's sufficient motivation. You can see [examples](https://github.com/microprediction/microprediction) of what I've let loose and those will attack any problem you pose too. I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README, should you wish to either consume or supply prediction.  
+ - [book](https://microprediction.github.io/building_an_open_ai_network/) 
+ - [prizes](https://www.microprediction.com/competitions/daily) 
+ - [examples](https://github.com/microprediction/microprediction)
+ - [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) for time-series
 
-No? Prefer to read an entire page before following links. Totally respect that. TLDR:
+### For people who refuse to go to the documentation:
 
-- I publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
- creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). 
-- Algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. 
+Go to [documentation](https://microprediction.github.io/microprediction/) that supercedes this README, should you wish to either consume or supply prediction. It will show you how to publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
+ creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). This is so that algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. I can sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
 
-In this way I can:
- - Get live prediction of public data for free (sometimes I make the "public" data obscure)
- - Indirectly benefit from [hundreds of packages](https://www.microprediction.com/blog/popular-timeseries-packages) from Github of uncertain quality, and not just Python.
- - Sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
+### Connection between microprediction and timemachines
 
-Again, *should* you be interested in helping I'll 
-point out that due to its obscurity, running this [script](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/datable_llama.py) makes a heck of a lot more economic sense than bitcoin mining - 
-try it out or see the [docs](https://microprediction.github.io/microprediction).
-  
-Just to lean on the differences between this and the other benchmarking efforts, the [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction and also, in theory, exogenous data search. 
-
-But the connection is provided by the fact that among the algorithms that compete at [Microprediction](https://github.com/microprediction/microprediction) quite a few use the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)), drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
+The [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction and also, in theory, exogenous data search. But the connection is provided by the fact that among the algorithms that compete at [Microprediction](https://github.com/microprediction/microprediction) quite a few use the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)), drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
 
 # [Memorable Unique Identifiers](https://github.com/microprediction/muid) and other platform repos
