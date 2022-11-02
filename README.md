@@ -4,7 +4,7 @@
 Assertions:
  - Markets are better at short-horizon prediction than models ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) 
  - The microprediction platform makes it [pretty trivial](https://microprediction.github.io/microprediction/publish.html) to initiate your own bespoke market
- - [Many algorithms](https://www.microprediction.org/leaderboard.html) already compete. Many more will in the future. 
+ - [Many algorithms](https://www.microprediction.org/leaderboard.html) already compete. Many more will in the future ([examples](https://www.microprediction.com/blog/popular-timeseries-packages). Anyone can launch a new one.  
  - Therefore no single timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
  - This microprediction thing (see [glossary](https://microprediction.github.io/microprediction/glossary)) could really lead somewhere (see the [book](https://mitpress.mit.edu/books/microprediction)).
 
