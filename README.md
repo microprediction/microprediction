@@ -17,7 +17,7 @@ If you would like to see how *easy* it is to wield a *new kind of market* to eff
 
 - No single timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - Prediction capability must be extended beyond the capabilities of a single mind ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
-- Most of "AI" will be done this way eventually. See the [book](https://mitpress.mit.edu/books/microprediction)).
+- Most of "AI" will be done this way eventually. See the [book](https://mitpress.mit.edu/books/microprediction) and what people are [saying about it](https://microprediction.github.io/building_an_open_ai_network/feedback.html).
 
 
 ### About me ([home](https://github.com/microprediction/home))
