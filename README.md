@@ -19,6 +19,9 @@ If you would like to see how *easy* it is to wield a *new kind of market* to eff
 - Prediction capability must be extended beyond the capabilities of a single mind ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
 - Most of "AI" will be done this way eventually. See the [book](https://mitpress.mit.edu/books/microprediction) and what people are [saying about it](https://microprediction.github.io/building_an_open_ai_network/feedback.html).
 
+ 
+ ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
+
 
 ### About me ([home](https://github.com/microprediction/home))
   - [book](https://mitpress.mit.edu/books/microprediction)
@@ -64,8 +67,5 @@ Aw c'mon just go to the [documentation](https://microprediction.github.io/microp
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
-Hope you like the book! 
- 
- ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
