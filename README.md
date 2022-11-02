@@ -3,7 +3,7 @@
 Because:
 
  - *Markets are better at prediction than models* ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
- - Small "microprediction" ([glossary](https://microprediction.github.io/microprediction/glossary)) markets are surprisingly efficient.
+ - Small "microprediction" markets ([glossary](https://microprediction.github.io/microprediction/glossary)) are surprisingly efficient.
 
 ## Try it out ([docs](https://microprediction.github.io/microprediction/) and live [help](https://microprediction.github.io/microprediction/meet.html))
 
