@@ -2,7 +2,7 @@
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [prize money](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 Because:
 
- - **Markets are better at short-horizon prediction than models** ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
+ - **Markets are better at prediction than models** ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
  - Your company needs to extend prediction capability beyond the capabilities of a single mind ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
 
 ## Try it out ([docs](https://microprediction.github.io/microprediction/) and live [help](https://microprediction.github.io/microprediction/meet.html))
