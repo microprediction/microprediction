@@ -43,23 +43,13 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 The [TimeMachines](https://github.com/microprediction/timemachines) package is traditional open-source software for *point-estimates* and confidence, whereas the [Microprediction](https://github.com/microprediction/microprediction) client offers live crowd based *distributional* prediction and also, in theory, exogenous data search. But the connection is provided by the fact that among the algorithms that compete at [Microprediction](https://github.com/microprediction/microprediction) quite a few use the [TimeMachines](https://github.com/microprediction/timemachines) algorithms (see [/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)), drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Some are open source (look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html)) but others are private to their author.  
 
-# The [microprediction.org](https://www.microprediction.org/) shortcuts
-A prediction exchange on steroids 
-
- - [setup](https://microprediction.github.io/microprediction/setup)
- - [streams](https://www.microprediction.org/browse_streams.html)
- - [stocks](https://microprediction.github.io/microprediction/yarx)
- - [book](https://microprediction.github.io/building_an_open_ai_network/) 
- - [prizes](https://www.microprediction.com/competitions/daily) 
- - [examples](https://github.com/microprediction/microprediction)
-
 ### For people who refuse to go to the documentation and are still reading this page...
 
 Aw c'mon just go to the [documentation](https://microprediction.github.io/microprediction/) that supercedes this README, should you wish to either consume or supply prediction. It will show you how to publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
  creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). This is so that algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. I can sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
 
 
-# [Memorable Unique Identifiers](https://github.com/microprediction/muid) and other platform repos
+### Some platform repos
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
@@ -74,14 +64,8 @@ Aw c'mon just go to the [documentation](https://microprediction.github.io/microp
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
- # More on the book:  
+Hope you like the book! 
  
-  - [book website](https://microprediction.github.io/building_an_open_ai_network/) or 
-  - [Amazon](https://www.amazon.com/Microprediction-Building-Open-AI-Network/dp/0262047322).  
-  - [MIT Press](https://mitpress.mit.edu/9780262047326/microprediction/)
-
-Hope you like it. 
- 
- ![](https://github.com/microprediction/home/blob/main/books/cover_choices.png)
+ ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
