@@ -19,6 +19,7 @@ If you would like to see how *easy* it is to wield a *new kind of options market
   - [blog](https://microprediction.medium.com)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
   - [office hours](https://microprediction.github.io/microprediction/meet.html)
+  - [papers, articles etc](https://github.com/microprediction/home)
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
