@@ -16,6 +16,7 @@ If you would like to see how *easy* it is to wield a *new kind of options market
 
 ### About me ([home](https://github.com/microprediction/home))
   - [book](https://mitpress.mit.edu/books/microprediction)
+  - [blog](https://microprediction.medium.com)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
   - [office hours](https://microprediction.github.io/microprediction/meet.html)
 
