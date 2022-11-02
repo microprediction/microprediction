@@ -16,7 +16,7 @@ Implications:
 - This microprediction thing (see [glossary](https://microprediction.github.io/microprediction/glossary)) could really lead somewhere (see the [book](https://mitpress.mit.edu/books/microprediction)).
 
 
-### About me ([home]([other stuff I've written](https://github.com/microprediction/home))
+### About me ([home](https://github.com/microprediction/home))
   - [book](https://mitpress.mit.edu/books/microprediction)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
   - [office hours](https://microprediction.github.io/microprediction/meet.html)
