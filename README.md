@@ -1,7 +1,8 @@
 
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [leaderboards](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 
-Also:
+Microprediction is for people who think markets are better at short-horizon prediction than models ([debate me here](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop))
+
   - [help](https://microprediction.github.io/microprediction/meet.html)  <-- Google Meet details for live help getting started
   - [slack](https://microprediction.github.io/microprediction/slack.html) 
   - [glossary](https://microprediction.github.io/microprediction/glossary.html)
