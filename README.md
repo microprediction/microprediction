@@ -10,7 +10,7 @@ If you would to see how *easy* it is to wield a *new kind of market*, see the [d
   - [book](https://mitpress.mit.edu/books/microprediction)
   - [other stuff I've written](https://github.com/microprediction/home)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
-  - [office hours](https://microprediction.github.io/microprediction/meet.html))
+  - [office hours](https://microprediction.github.io/microprediction/meet.html)
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
