@@ -1,7 +1,10 @@
 
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [leaderboards](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 
-For people who think markets are better at short-horizon prediction than models ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop) of read my [book](https://mitpress.mit.edu/books/microprediction)), just harder to wield. 
+Assertions:
+ - Markets are better at short-horizon prediction than models ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) 
+ - The microprediction platform makes it trivial to create an wield your own bespoke market. 
+ - This could lead somewhere (see the [book](https://mitpress.mit.edu/books/microprediction)).
 
 If you would to see how *easy* it is to wield a *new kind of market*, see the [docs](https://microprediction.github.io/microprediction/) and, therein, observe that you can receive live [help](https://microprediction.github.io/microprediction/meet.html) getting started on Fridays, or in the [slack channel](https://microprediction.github.io/microprediction/slack.html).
 
@@ -24,12 +27,12 @@ I maintain three benchmarking packages to help me, and maybe you, surf the open-
 
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does!  
 
-# The [microprediction.org](https://www.microprediction.org/) platform
-Just go to [setup](https://microprediction.github.io/microprediction/setup), really. 
+# The [microprediction.org](https://www.microprediction.org/) shortcuts
+A prediction exchange on steroids 
 
-I also maintain a *live exchange* (high velocity prediction market of sorts, in the broad category of colliders, per my [book](https://mitpress.mit.edu/9780262047326/microprediction/)'s outrageous neologism) where distributional time-series prediction
- algorithms (Python, R, Julia mostly) duke it out, trying to predict future values of [streams](https://www.microprediction.org/browse_streams.html). 
-Why? So my hedge fund can forever be at the forefront of open-source algorithmic advances that help predict [stocks](https://microprediction.github.io/microprediction/yarx) and related quantities. 
+ - [setup](https://microprediction.github.io/microprediction/setup)
+ - [streams](https://www.microprediction.org/browse_streams.html)
+ - [stocks](https://microprediction.github.io/microprediction/yarx)
  
 But there's a bigger picture too per the [book](https://microprediction.github.io/building_an_open_ai_network/) and let it not go unemphasized that there is $50,000 in prediction [prizes](https://www.microprediction.com/competitions/daily) up for grabs to foster progress in that direction. A prediction web will give clever people the opportunity to *let their algorithms help someone* without their getting in the middle, should they wish to. It remains a social experiment to determine whether that's sufficient motivation. You can see [examples](https://github.com/microprediction/microprediction) of what I've let loose and those will attack any problem you pose too. I'll send you to the better organized [documentation](https://microprediction.github.io/microprediction/) that supercedes this README, should you wish to either consume or supply prediction.  
 
