@@ -1,14 +1,12 @@
 
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [leaderboards](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 
-Microprediction is for people who think markets are better at short-horizon prediction than models ([debate me here](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop) or read my new [book]([book](https://mitpress.mit.edu/books/microprediction)). If you would like to 
+Microprediction is for people who think markets are better at short-horizon prediction than models ([debate me here](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop) or read my new [book](https://mitpress.mit.edu/books/microprediction)). If you would like to 
 try it out see the [docs](https://microprediction.github.io/microprediction/) and, therein, observe that you can receive live 
-[help](https://microprediction.github.io/microprediction/meet.html) getting started. 
+[help](https://microprediction.github.io/microprediction/meet.html) getting started on Fridays, or in the [slack channel](https://microprediction.github.io/microprediction/slack.html).
 
 
-### Author 
-  - [blog](https://www.microprediction.com/blog)
-  - [medium blog](https://microprediction.medium.com/)
+### About the author / maintainer: 
   - [book](https://mitpress.mit.edu/books/microprediction)
   - [other stuff I've written](https://github.com/microprediction/home)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
