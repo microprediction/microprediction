@@ -9,7 +9,7 @@ Because:
 
 - No single timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - Prediction capability must be extended beyond the capabilities of a single mind ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
-- Most of "AI" will be done this way eventually. See the [book](https://mitpress.mit.edu/books/microprediction) and what people are [saying about it](https://microprediction.github.io/building_an_open_ai_network/feedback.html).
+- Most of "AI" will be done this way eventually. See the [book](https://mitpress.mit.edu/books/microprediction) and what people are [saying about it](https://microprediction.github.io/building_an_open_ai_network/feedback.html) or [discuss](https://github.com/microprediction/building_an_open_ai_network/discussions).
 
  
  ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
