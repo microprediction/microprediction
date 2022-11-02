@@ -16,15 +16,14 @@ Implications:
 - This microprediction thing (see [glossary](https://microprediction.github.io/microprediction/glossary)) could really lead somewhere (see the [book](https://mitpress.mit.edu/books/microprediction)).
 
 
-### About the author / maintainer: 
+### About me ([home]([other stuff I've written](https://github.com/microprediction/home))
   - [book](https://mitpress.mit.edu/books/microprediction)
-  - [other stuff I've written](https://github.com/microprediction/home)
   - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
   - [office hours](https://microprediction.github.io/microprediction/meet.html)
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
-I maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
+I also maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
 
 | Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
 |------------------------|-------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------| 
