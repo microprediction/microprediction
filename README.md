@@ -2,14 +2,13 @@
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [prize money](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 If you would to see how *easy* it is to wield a *new kind of options market*, for prediction of whatever you want, see the [docs](https://microprediction.github.io/microprediction/) and, therein, observe that you can receive live [help](https://microprediction.github.io/microprediction/meet.html) getting started on Fridays, or in the [slack channel](https://microprediction.github.io/microprediction/slack.html).
 
-
- - The microprediction platform makes it [pretty trivial](https://microprediction.github.io/microprediction/publish.html) to initiate your own bespoke market
- - [Many algorithms](https://www.microprediction.org/leaderboard.html) already competing won't mind helping your market too.
- - Many more will do so in the future ([examples](https://www.microprediction.com/blog/popular-timeseries-packages). Anyone can [launch a new algorithm](https://microprediction.github.io/microprediction/predict.html).  
-
-Dicussion:
-
  - Markets are better at short-horizon prediction than models ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) 
+ - The microprediction platform makes it [pretty trivial](https://microprediction.github.io/microprediction/publish.html) to initiate your own bespoke market.
+ - [Many algorithms](https://www.microprediction.org/leaderboard.html) already competing elsewhere will ensure minimal efficiency.
+ - Many more will do so in the future. Anyone can [launch a new algorithm](https://microprediction.github.io/microprediction/predict.html) using anything they like in the Julia, R or Python [ecosystem](https://www.microprediction.com/blog/popular-timeseries-packages). 
+
+Implications:
+
 - No single timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - This microprediction thing (see [glossary](https://microprediction.github.io/microprediction/glossary)) could really lead somewhere (see the [book](https://mitpress.mit.edu/books/microprediction)).
 
