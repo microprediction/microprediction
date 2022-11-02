@@ -5,7 +5,7 @@ Because:
  - *Markets are better at prediction than models* ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
  - Small "microprediction" markets ([glossary](https://microprediction.github.io/microprediction/glossary)) are surprisingly efficient.
 
-### Provocations ([book](https://mitpress.mit.edu/books/microprediction))
+### Provocations (more in the [book](https://mitpress.mit.edu/books/microprediction))
 
 - No single timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - Prediction capability must be extended beyond the capabilities of a single mind ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
