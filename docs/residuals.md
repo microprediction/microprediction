@@ -1,17 +1,12 @@
 
 # How to use microprediction for ongoing model residual analysis
 Steps
-
-   1. Get permission from compliance
-
-   2. (optional) Rotate, obfuscate as you see fit, if necessary. 
    
-   3. Publish model residuals (see [publishing docs](https://microprediction.github.io/microprediction/publish.html)
+   1. Publish model residuals (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
-   4. (optional) Submit a simple prediction, such as N(0,1), or whatever you believe your model residuals to be. 
+   2. (optional) Submit a simple prediction, such as N(0,1), or whatever you believe your model residuals to be (see [prediction docs](https://microprediction.github.io/microprediction/predict.html)). 
 
-
-That's all. Later, you can see how well the null hypothesis is performing on the leaderboards that will be created for your stream. 
+That's all. Later, you can see how well the null hypothesis is performing on the leaderboards that will be created for your stream. If you consider model residuals proprietary, then by all means transform them first. And check with your compliance department. 
 
 
 ## Brief explanation
