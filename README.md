@@ -1,6 +1,6 @@
 
 # microprediction [docs](https://microprediction.github.io/microprediction/) and [prize money](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
-Because:
+Packages and a platform for autonomous prediction a new way because:
 
  - *Markets are better at prediction than models* ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
  - Small "microprediction" markets ([glossary](https://microprediction.github.io/microprediction/glossary)) are surprisingly efficient.
