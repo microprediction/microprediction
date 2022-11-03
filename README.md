@@ -41,6 +41,7 @@ I also maintain three benchmarking packages to help me, and maybe you, surf the 
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does.  
 
 ### How [microprediction.org](https://www.microprediction.org/browse_streams.html) "house" algorithms use the [timemachines](https://github.com/microprediction/timemachines) package
+Advances in time-series prediction funnel down into microprediction algorithms in various ways:
 
 1. The "[/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)" provide canonical, single-line of code access to functionality drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. 
@@ -49,9 +50,13 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 3. Choices are sometimes advised by [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/special-k_003.html), but anyone can do what they want. 
 
+4. It's not too hard to use my [HumpDay](https://github.com/microprediction/humpday) package for offline meta-param tweaking, et cetera. 
+
+5. It's not too hard to use my [precise](https://github.com/microprediction/precise) package for online ensembling. 
+
 There are other ways. Look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html).  
 
-### Some platform repos
+### Some microprediction platform repos
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
@@ -65,11 +70,6 @@ There are other ways. Look for CODE badges on [leaderboards](https://www.micropr
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
-
-# For people who refuse to go to the documentation and are still reading this page...
-
-Aw c'mon just go to the [documentation](https://microprediction.github.io/microprediction/) that supercedes this README, should you wish to either consume or supply prediction. It will show you how to publish live data repeatedly, [like this](https://github.com/microprediction/microprediction/blob/master/stream_examples_traffic/traffic_speed.py) say, and it
- creates a stream (like [this stream](https://www.microprediction.org/stream_dashboard.html?stream=c2_rebalanced_30_mean) or [this one](https://www.microprediction.org/stream_dashboard.html?stream=electricity-load-nyiso-overall) or any from the [listing](https://www.microprediction.org/browse_streams.html)). This is so that algorithms like [this guy](https://github.com/microprediction/microprediction/blob/master/crawler_examples/soshed_boa.py) will compete to make distributional predictions 1 min ahead, 5 min ahead, 15 min ahead and 1 hr ahead. You can sip pina coladas while the accuracy magically improves over time. Read about [this example](https://medium.com/geekculture/an-empirical-article-that-wasnt-immediately-stale-720abfb4678f). 
 
 
 
