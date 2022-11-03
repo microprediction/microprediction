@@ -27,7 +27,7 @@ Documentation [map](https://microprediction.github.io/microprediction/map.html)
 [Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 
     
 
-![](/microprediction/assets/images/algo_fight_club.png)
+ ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
 
