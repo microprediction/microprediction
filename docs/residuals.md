@@ -4,9 +4,11 @@ Steps
    
    1. Publish model residuals (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
-   2. (optional) Submit a simple prediction, such as N(0,1), or whatever you believe your model residuals to be (see [prediction docs](https://microprediction.github.io/microprediction/predict.html)). 
+   2. (optional) Submit a distributional prediction (see [prediction docs](https://microprediction.github.io/microprediction/predict.html)). 
 
-That's all. Later, you can see how well the N(0,1) null hypothesis is performing on the leaderboards that will be created for your stream. If you consider model residuals proprietary, then by all means transform them first. And check with your compliance department. 
+That's all. Later, you can see how well the N(0,1) null hypothesis is performing on the custom leaderboards that will be created for your stream. If you notice some "trendy" models (Auto-ARIMA etc) doing well, there might be signal. If you consider model residuals proprietary, then by all means transform them first. If you have some other believe about your model residual distribution, then submit that instead. 
+
+And check with your compliance department. 
 
 
 ## Brief explanation
