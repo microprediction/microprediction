@@ -13,7 +13,7 @@
 ## Conceptual / business focussed 
 
 - [A first look at microprediction](https://www.microprediction.com/welcome?hsLang=en) and how it gives rise to the "ten minute data science project". 
-- [What must a microprediction oracle do?](https://www.microprediction.com/welcome-2?hsLang=en)  The answer isn't Kaggle, or DataRobot. 
+- [What must a microprediction oracle do?](https://www.microprediction.com/welcome-2?hsLang=en)  
 - [Business uses of microprediction oracle](https://www.microprediction.com/welcome-3) include pretty much everything (unless "prediction" is in the name, ironically). 
  - [Repeated value function prediction](https://www.microprediction.com/welcome-4) provides the link between microprediction and Control Theory and Reinforcement Learning, which is why microprediction is truly general. 
 - [Why algorithms make excellent managers](https://www.microprediction.com/welcome-5) and by implication why humans are terrible. Copious theory means algorithms are well placed to orchestrate production of prediction. Humans need not occupy a blocking role.
