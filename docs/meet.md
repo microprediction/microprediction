@@ -18,13 +18,10 @@ The micropredition meetup:
 
 ### See also 
 
-Microprediction [slack](https://microprediction.github.io/microprediction/slack.html). 
+ - Microprediction [slack](https://microprediction.github.io/microprediction/slack.html). 
+ - Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
--|-
-
-Documentation [map](https://microprediction.github.io/microprediction/map.html)
-
-[Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/meet.md) this page. 
     
 
  ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
