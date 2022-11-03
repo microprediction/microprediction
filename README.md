@@ -22,12 +22,6 @@ If you would like to see how *easy* it is to wield a *new kind of market* to eff
  - [Many algorithms](https://www.microprediction.org/leaderboard.html) already competing to predict [other streams](https://www.microprediction.org/browse_streams.html) can easily predict yours too. 
  - Many more will do so in the future. Anyone can [launch a new algorithm](https://microprediction.github.io/microprediction/predict.html) using anything they like in the Julia, R or Python [ecosystem](https://www.microprediction.com/blog/popular-timeseries-packages). 
 
-### About me ([home](https://github.com/microprediction/home))
-  - [blog](https://microprediction.medium.com)
-  - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
-  - [office hours](https://microprediction.github.io/microprediction/meet.html)
-  - [papers, articles etc](https://github.com/microprediction/home)
-
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
 I also maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
@@ -71,5 +65,11 @@ There are other ways. Look for CODE badges on [leaderboards](https://www.micropr
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).  
 - [m6](https://github.com/microprediction/m6) - Illustrates fast numerical rank probability calculations, using [winning](https://github.com/microprediction/winning). However since the rules changed, this isn't that useful for M6 anymore. The [precise](https://github.com/microprediction/precise) package is way more useful, and put one person on the podium! 
 
+
+# About me ([home](https://github.com/microprediction/home))
+  - [blog](https://microprediction.medium.com)
+  - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
+  - [office hours](https://microprediction.github.io/microprediction/meet.html)
+  - [papers, articles etc](https://github.com/microprediction/home)
 
 
