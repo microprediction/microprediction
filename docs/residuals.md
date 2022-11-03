@@ -25,4 +25,4 @@ Documentation [map](https://microprediction.github.io/microprediction/map.html)
 View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
 
 
-![skipped](/microprediction/assets/images/skipped_statistics.png)
+![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
