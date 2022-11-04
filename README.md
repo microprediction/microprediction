@@ -34,7 +34,7 @@ I also maintain three benchmarking packages to help me, and maybe you, surf the 
 
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does.  
 
-### How [microprediction.org](https://www.microprediction.org/browse_streams.html) "house" algorithms use the [timemachines](https://github.com/microprediction/timemachines) package
+### How [microprediction.org](https://www.microprediction.org/browse_streams.html) "house" algorithms use these packages
 Advances in time-series prediction funnel down into microprediction algorithms in various ways:
 
 1. The "[/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)" provide canonical, single-line of code access to functionality drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
