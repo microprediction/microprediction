@@ -15,9 +15,10 @@ Someone, somewhere might have deployed an algorithm that finds signal in your no
 
  - You'll add to the list of [streams](https://www.microprediction.org/browse_streams.html).
  - Algorithms (Python, Julia, R mostly) fight to predict your residuals (distributionally)
+ - More arrive all the time. See [github/microprediction](https://github.com/microprediction) for an explanation of how new methods trickle in from the Python ecosystem. But anyone can deploy algorithms using R, Julia or whatever as well. 
  - The ongoing battles produce beautiful community cumulative distribution functions, such as the [CDF](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead
 forecasts of the logarithm of META price changes. 
- - You may glean quite a lot from the outcome of that fight.  
+ - You may glean quite a lot from the outcome of that fight, especially if the winners aren't "null hypothesis" algorithms.    
 
 
 ### Optional steps:
@@ -33,7 +34,6 @@ forecasts of the logarithm of META price changes.
 ### Why is Intech allowing other funds to use this?
 
 Read the [book](https://mitpress.mit.edu/9780262047326/microprediction/). 
-
 
 
 -+- 
