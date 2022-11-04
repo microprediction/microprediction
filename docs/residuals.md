@@ -36,7 +36,7 @@ forecasts of the logarithm of META price changes.
 
 Read the [book](https://mitpress.mit.edu/9780262047326/microprediction/). 
 
-![book_cover_with_blurb](/microprediction/assets/images/book_cover_with_blurb.png)
+![book](/microprediction/assets/images/cotton_microprediction_3d_side.png)
 
 -+- 
 
