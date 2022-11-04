@@ -6,6 +6,7 @@ The no-brainer use of the world's only microprediction oracle. See Chapter 9 of 
    
    1. Publish model residuals (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
  
+(I guess if you are lazy you could send me a really long skinny CSV, though live is the quintessential use case)
 
 ### Why?
 
