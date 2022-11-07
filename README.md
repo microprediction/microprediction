@@ -1,5 +1,5 @@
 
-# microprediction [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction) and [prizes](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
+# microprediction [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction) and [beer money](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 Packages and a platform for effecting autonomous prediction a new way, because:
 
  - *Markets are better at prediction than models* ([discuss](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB?utm_source=share&utm_medium=member_desktop)) - just harder to create and wield, until now. 
