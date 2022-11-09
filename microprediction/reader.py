@@ -102,8 +102,13 @@ class MicroReader(MicroConventions):
         """ Preferred method """
         name = self.fix_stream_name(name=name)
         lagged = self.get_lagged(name=name, count=count)
-        lagged_values = [l[1] for l in lagged]
-        lagged_times  = [l[0] for l in lagged]
+        try:
+            lagged_values = [l[1] for l in lagged]
+            lagged_times  = [l[0] for l in lagged]
+        except TypeError:
+            # Lagged may be missing
+            return [], []
+
         return lagged_values, lagged_times
 
     def get_lagged_values(self, name:str, count:int=1000):
