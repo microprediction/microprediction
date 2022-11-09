@@ -17,6 +17,7 @@ def test_die_pdf():
         mr = MicroReader(base_url=base_url)
         pdf = mr.get_discrete_pdf_lagged(name='die.json', delay=mr.DELAYS[0])
 
+
 def test_troublesome():
     mr = MicroReader()
     pdf = mr.get_discrete_pdf_lagged(name='die.json', delay=mr.DELAYS[0])
