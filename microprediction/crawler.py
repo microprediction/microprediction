@@ -282,7 +282,8 @@ class MicroCrawler(MicroWriter):
         bd = self.budgets[name]
         rn = random.choice([0] * 20 + [1] + [10] + [1000] + [10000])
         ty = -0.1 if '~' in name else 0.0  # downweight derived
-        return pm + bd + rn + ty
+        rk = 2.9 if 'ricky_bobby' in name else 0.0
+        return pm + bd + rn + ty + rk
 
     def _default_stream_ordering(self, names):
         top_to_bottom = sorted([(self.stream_importance(name=n), n) for n in names], reverse=True)
@@ -307,6 +308,10 @@ class MicroCrawler(MicroWriter):
                           and len(sponsor.replace(' ', '')) >= float(self.sponsor_min)]
         inclusion_criteria = [is_included, not_too_dull, not_too_competitive, well_sponsored]
         names = list(set.intersection(*map(set, inclusion_criteria)))
+
+        # Add Ricky Bobby!
+        ricky = [ name for name, budget in self.budgets.items() if 'ricky_bobby' in name ]
+        names = list( set( names + ricky ))
 
         # Order by prizemoney, budget etc
         ordered_names = self._default_stream_ordering(names=names)
