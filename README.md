@@ -10,7 +10,7 @@ Packages and a platform for effecting autonomous prediction a new way, because:
 - No timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - Prediction capability shouldn't be limited by the capabilities of a single mind, algorithm or company ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
 - Somebody's algorithm or data will find signal in your model residuals, someday ([instructions](https://microprediction.github.io/microprediction/residuals)).
-- Most of "AI" will be done analogously, eventually, though this will take work. See the [book](https://mitpress.mit.edu/books/microprediction) or [discuss](https://github.com/microprediction/building_an_open_ai_network/discussions).
+- Most of "AI" will be done analogously, eventually, though this will take work. See the [book](https://mitpress.mit.edu/books/microprediction) or [challenge me](https://github.com/microprediction/building_an_open_ai_network/discussions).
 
  
  ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
