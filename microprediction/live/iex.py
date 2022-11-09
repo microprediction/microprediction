@@ -62,8 +62,6 @@ def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True
     if tickers is None:
         tickers = iex_common_stock_tickers(api_key=api_key)
 
-    print('Total of '+len(tickers)+' tickers')
-
     prices = iex_latest_prices(tickers=tickers,api_key=api_key)
 
     import time
