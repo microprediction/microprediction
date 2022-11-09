@@ -9,7 +9,7 @@ import json
 
 
 
-NUM_PORTFOLIOS = 1000
+NUM_PORTFOLIOS = 100
 XRAY_PORTFOLIO_NAMES = ['xray_' + str(i)+'.json' for i in range(NUM_PORTFOLIOS)]
 
 
