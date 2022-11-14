@@ -46,5 +46,5 @@ if __name__=='__main__':
         create_xray_portfolios()
     else:
         portfolios = get_xray_portfolios()
-        print(len(portfolios))
+        print(np.shape(portfolios))
 
