@@ -30,10 +30,10 @@ Following [r_examples](https://github.com/microprediction/microprediction/tree/m
     y <- c(x[1:50], x[1:200], x) 
     n <- 225
     probs <- seq(1/(2*n), 1-1/(2*n), length.out = n)
-    q <- quantile(y, probs = probs, names=FALSE)
+    q <- quantile(y, probs = probs, names = FALSE)
     my_values <- toString(q) 
     res <- httr::PUT(url = paste0("https://api.microprediction.org/submit/", name),
-                 body = list(write_key = 'YOUR WRITE KEY HERE', delay=70, values = my_values))
+                 body = list(write_key = 'YOUR WRITE KEY HERE', delay = 70, values = my_values))
 
 
 ### API

@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="1.1.7",
+    version="1.1.11",
     description="Client for www.microprediction.org turnkey community prediction",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -21,7 +21,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
-    packages=["microprediction", "microprediction.live", "microprediction.univariate", "microprediction.bespoke",
+    packages=["microprediction", "microprediction.live", "microprediction.inclusion","microprediction.univariate", "microprediction.bespoke",
               "microprediction.bespoke.meme_stocks","microprediction.bespoke.golf","microprediction.bespoke.crypto"],
     test_suite='pytest',
     tests_require=['pytest', 'scipy'],

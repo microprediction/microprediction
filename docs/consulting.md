@@ -28,6 +28,10 @@ benchmarking packages (see [github/microprediction](https://github.com/micropred
 peter.cotton@microprediction.com 
 
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/book.md) this page. 
+
+
+
 
 
 

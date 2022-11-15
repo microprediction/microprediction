@@ -3,6 +3,7 @@
 Here's how to add to the list of [streams](https://www.microprediction.org/browse_streams.html). 
 
 
+
 ## 1. [Python](https://microprediction.github.io/microprediction/publish-using-python.html)
 
     from microprediction import MicroWriter
@@ -55,5 +56,7 @@ and learn about [bankruptcy](https://microprediction.github.io/microprediction/b
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 
 
 ![electricity](/microprediction/assets/images/electricity.png)

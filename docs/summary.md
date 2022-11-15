@@ -24,3 +24,5 @@ your algorithm in an ongoing contest to predict the next roll of a die.
 -+-
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
+
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 

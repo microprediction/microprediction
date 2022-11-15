@@ -7,10 +7,10 @@ from microprediction.whereami import TOP
 from microprediction.live.iex import iex_common_stock_with_balance_sheet_tickers
 
 
-XRAY_TICKERS_JSON = os.path.join(TOP ,'live' ,'xraytickers.json')
+XRAY_TICKERS_JSON = os.path.join(TOP,'live', 'xraytickers.json')
 XRAY_TICKERS_REVERSE_JSON = os.path.join(TOP ,'live' ,'xraytickersreverse.json')
 
-STOCK_THRESHOLD = 5*1000*1000*1000
+STOCK_THRESHOLD = 100*1000*1000*1000
 
 
 def reasonable_threshold():

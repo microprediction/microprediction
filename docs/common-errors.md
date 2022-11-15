@@ -1,5 +1,6 @@
 ## Common errrors
 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/common-errors.md) this page. 
 
 
 | Error             | Intent                |

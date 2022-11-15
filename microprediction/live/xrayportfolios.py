@@ -8,10 +8,10 @@ import os
 import json
 
 
-
-NUM_PORTFOLIOS = 1000
+NUM_PORTFOLIOS = 500
 XRAY_PORTFOLIO_NAMES = ['xray_' + str(i)+'.json' for i in range(NUM_PORTFOLIOS)]
 
+from microprediction.live.xraytickers import STOCK_THRESHOLD
 
 def normalize(w):
     return [ wi/sum(w) for wi in w]
@@ -23,7 +23,7 @@ def create_xray_portfolios():
     IEX_KEY = get_iex_key()
     tickers = get_xray_tickers()
     prices = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
-    common = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=tickers, return_tickers=False)
+    common = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=tickers, return_tickers=False, threshold=STOCK_THRESHOLD)
     index_like = normalize([price * cm for price, cm in zip(prices, common)])
     XRAY_PORTFOLIOS = [normalize([wi * math.exp(np.random.randn()) for wi in index_like]) for _ in
                        range(NUM_PORTFOLIOS)]
@@ -46,5 +46,5 @@ if __name__=='__main__':
         create_xray_portfolios()
     else:
         portfolios = get_xray_portfolios()
-        print(len(portfolios))
+        print(np.shape(portfolios))
 
