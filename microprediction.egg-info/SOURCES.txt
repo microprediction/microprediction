@@ -1,11 +1,11 @@
 README.md
 setup.py
 microprediction/__init__.py
-microprediction/config_private.py
 microprediction/conventions.py
 microprediction/crawler.py
 microprediction/defaultcrawler.py
 microprediction/fitcrawler.py
+microprediction/install.py
 microprediction/looping.py
 microprediction/old_conventions.py
 microprediction/onlinecrawler.py
@@ -15,7 +15,6 @@ microprediction/reportingcrawler.py
 microprediction/samplers.py
 microprediction/sequentialcrawler.py
 microprediction/set_config.py
-microprediction/set_env_private.py
 microprediction/simplecrawler.py
 microprediction/slack.py
 microprediction/statefulcrawler.py

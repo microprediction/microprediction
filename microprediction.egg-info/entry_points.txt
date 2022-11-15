@@ -1,3 +1,2 @@
 [console_scripts]
 microprediction = microprediction.__main__:main
-

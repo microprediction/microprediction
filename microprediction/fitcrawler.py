@@ -98,7 +98,8 @@ class FitCrawler(SequentialStreamCrawler):
                         print('Found better params for ' + name)
                         pprint(machine.params)
                         print(' ', flush=True)
-                except AttributeError:
+                except (AttributeError, TypeError):
+                    print('There was an error trying to use machine.fit inside fitcrawler')
                     print('Keeping the same params for ' + name)
                     pprint(machine.params)
                     print(' ', flush=True)
