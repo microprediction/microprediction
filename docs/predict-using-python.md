@@ -3,6 +3,7 @@ The main choices are
 
    1. Use MicroWriter to send predictions for a specific stream and forecast horizon (read on).
    2. Use MicroCrawler instead, which will drive an algorithm to many streams ([instructions](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html))
+   3. Use StreamSkater, which is a special case of MicroCrawler that makes it easy to use the timemachines functionality ([instructions](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)).
 
 The first option is suitable if you intend to run a program on a schedule, say using cron. 
 
@@ -46,7 +47,7 @@ This will create an algorithm that slowly explores the stream universe. In the f
 you can override the default prediction and navigation logic. See [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html).
 
 ### Option 2a: Use a specialized version of MicroCrawler
-See 
+See in particular:
 
  - [FitCrawler](https://microprediction.github.io/microprediction/predict-using-python-fitcrawler.html)
  - [StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html)

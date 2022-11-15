@@ -1,7 +1,7 @@
 ## Skating
 
 The [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) is intended to make it easy to use any time-series
-point forecast method from the timemachines package. You can simply use it as is, or sub-class. 
+point forecast method from the timemachines package. You can simply use it as is, or sub-class. There is a [template](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py) Python file you might wish to follow. 
 
 ### Option 1. Use [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) without modification
 Steps are:
@@ -33,6 +33,8 @@ to receive more skater contributions.
 3. Sub-class [StreamSkater](https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py) and modify the `sample_using_point_estimat` method
 4. Instantiate using your WRITE_KEY ([remember](https://microprediction.github.io/microprediction/writekeys.html) ?)
 5. Call the run() method
+
+Again, see the [template](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py) Python file.
 
 As a reminder,  this is the hierarchy we have covered. 
 
