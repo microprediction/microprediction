@@ -34,6 +34,8 @@ to receive more skater contributions.
 4. Instantiate using your WRITE_KEY ([remember](https://microprediction.github.io/microprediction/writekeys.html) ?)
 5. Call the run() method
 
+Again, see the [template](https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py) Python file.
+
 As a reminder,  this is the hierarchy we have covered. 
 
      MicroReader
