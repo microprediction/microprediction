@@ -2,6 +2,8 @@ from microprediction import MicroCrawler
 
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you get started
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 if __name__ == '__main__':
     try:

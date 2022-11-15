@@ -6,6 +6,7 @@ except ImportError:
 from microprediction.streamskater import StreamSkater
 
 # Example of a "skater" that uses the TimeMachines package for point estimates
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
 
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 

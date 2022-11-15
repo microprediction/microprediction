@@ -6,6 +6,8 @@ except ImportError:
 
 
 # Allow crawler to lose a large number of credits on a given horizon, but not give up
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 STOP_LOSS = 100
 

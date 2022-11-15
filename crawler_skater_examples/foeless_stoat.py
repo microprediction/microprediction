@@ -1,3 +1,6 @@
+# See also https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py
+
+
 try:
     from microprediction.streamskater import StreamSkater
     from timemachines.skaters.tsa.tsaensembles import tsa_precision_combined_ensemble

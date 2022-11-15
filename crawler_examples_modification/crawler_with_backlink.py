@@ -7,6 +7,8 @@ except ImportError:
 
 # Crawler with a CODE badge
 # See https://www.microprediction.org/leaderboard.html for how this looks
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 URL_YOU_WANT_ON_LEADERBOARD = "https://github.com/microprediction/microprediction/blob/master/crawler_examples/bedabble_toad.py"
 

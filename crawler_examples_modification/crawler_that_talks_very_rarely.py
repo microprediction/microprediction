@@ -7,6 +7,8 @@ except ImportError:
 
 QUIETUDE = 1000  # Only 1:1000 chance of producing stdout
 
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 if __name__=='__main__':
     mw = MicroCrawler(write_key=WRITE_KEY, quietude=QUIETUDE)

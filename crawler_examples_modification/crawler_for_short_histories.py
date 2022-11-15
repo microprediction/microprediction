@@ -6,6 +6,8 @@ except ImportError:
 
 
 # Allow crawler to participate in streams even if the history is quite short
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 MIN_LAGS = 5
 

@@ -5,6 +5,8 @@ from microprediction.config_private import dev_fail_callback, dev_pass_callback,
 
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 if __name__=="__main__":
     print(TESTABLE_CLAM)

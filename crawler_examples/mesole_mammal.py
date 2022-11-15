@@ -10,6 +10,8 @@ from microprediction.univariate.skewdist import SkewDist
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 if __name__ == "__main__":
     crawler = SequentialStreamCrawler(write_key=MESOLE_MAMMAL, min_lags=20, machine_type=SkewDist)

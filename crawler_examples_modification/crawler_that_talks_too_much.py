@@ -6,6 +6,7 @@ except ImportError:
 
 
 # Provides more stdout
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
 
 
 if __name__=='__main__':

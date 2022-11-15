@@ -7,6 +7,7 @@ except ImportError:
 
 # Crawler submitting to streams with a known sponsor only.
 # (Requires us to create a new class, using the standard boilerplate for __init__)
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
 
 
 SPONSOR_CODES = ["fa76039a2e11ed1f7d5d2cfef240455d", "e3b1055033076108b4279c473cde3a67"]

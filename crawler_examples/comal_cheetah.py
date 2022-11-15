@@ -12,6 +12,8 @@ from microprediction.univariate.expnormdist import ExpNormDist
 
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you get started
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
 

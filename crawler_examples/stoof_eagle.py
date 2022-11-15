@@ -4,6 +4,9 @@ import numpy as np
 import pandas as pd
 import random
 
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
+
 class MyCrawler(MicroCrawler):
 
     def __init__(self, **kwargs):

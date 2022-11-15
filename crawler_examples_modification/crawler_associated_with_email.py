@@ -7,6 +7,8 @@ except ImportError:
 
 # Crawler with an associated email
 # (This is required to qualify for https://www.microprediction.com/competitions/daily)
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 EMAIL = "pcotton@intechnvestments.com"
 

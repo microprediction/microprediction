@@ -6,6 +6,8 @@ try:
 except ImportError:
     raise Exception('You will need a write key. See https://www.microprediction.com/private-keys')
 
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 # Example of a script that runs a "crawler" predicting https://www.microprediction.org/browse_streams.html
 # It might win a prize if it is consistently providing good predictions. See https://www.microprediction.com/competitions

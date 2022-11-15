@@ -1,3 +1,5 @@
+# See also https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py
+
 
 # Datable Llama
 # -------------

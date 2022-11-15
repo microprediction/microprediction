@@ -3,6 +3,8 @@ from microprediction.streamskater import ChoosySkatingFox
 
 # Example of a "skater" that uses the TimeMachines package for point estimates
 # This crawls www.microprediction.org, as explained by the helper site www.microprediction.com
+# See also https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py
+
 
 try:
     from timemachines.skaters.simple.movingaverage import aggressive_ema_ensemble

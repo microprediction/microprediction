@@ -1,3 +1,6 @@
+# See also https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py
+
+
 try:
     from timemachines.skaters.simple.hypocraticensemble import quick_aggressive_ema_ensemble as f
 except ImportError:

@@ -1,4 +1,6 @@
 # Example of a "skater" that uses the TimeMachines package for point estimates
+# See also https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py
+
 from microprediction.streamskater import SkatingFox
 
 # 1. Supply your WRITE_KEY

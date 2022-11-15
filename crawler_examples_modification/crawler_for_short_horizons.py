@@ -7,6 +7,8 @@ except ImportError:
 
 # Crawler submitting predictions for only the 1 and 5 minute horizons, not the 15 minute and 1hr ones.
 # (Requires us to create a new class, using the standard boilerplate for __init__)
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 class MyCrawler(MicroCrawler):
 

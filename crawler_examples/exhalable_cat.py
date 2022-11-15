@@ -7,6 +7,8 @@ from microprediction.univariate.expnormdist import ExpNormDist
 # See the repo  microprediction/offline for how to use Github actions for this purpose
 # New video tutorials are available at https://www.microprediction.com/python-1 to help you
 # get started running crawlers at www.microprediction.com
+# And see the crawling docs: https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html
+
 
 STORED_PARAM_URL = 'https://raw.githubusercontent.com/microprediction/offline/main/modelfits/expnorm'
 
