@@ -1,4 +1,5 @@
-# Example of a "skater" that uses the TimeMachines package for point estimates
+# Template for a crawler that uses the timemachines package.
+
 from microprediction.streamskater import SkatingFox
 
 # 1. Supply your WRITE_KEY
@@ -25,9 +26,13 @@ except ImportError:
 # See https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py for
 # some choices of classes to derive from. Here we choose "SkatingFox" which comes with a default
 # method fo specifying the spray of guesses around a point estimate provided by a timemachines point forecaster.
-# This step is optional, as you can also just use StreamSkater or subclasses of the same directly. See
-# the docs https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html for
-# more advice on how to modify a crawler.
+#
+# This step is optional, as you can also just use StreamSkater or subclasses of the same directly. But if you do
+# decide to customize your StreamSkater in this fashion, then see the documention on how to do so
+# https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html or maybe
+# just read the crawler code at https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py
+# and the StreamSkater at https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py to
+# decide which methods to modify. 
 
 
 class CompetitiveSkatingFox(SkatingFox):
@@ -44,13 +49,16 @@ class CompetitiveSkatingFox(SkatingFox):
     def include_delay(self, delay=None, name=None, **ignore):
         return delay >= self.delays[2]
 
-
 # 4. Instantiate and run the crawler.
 # If this script ever errors out, the crawler can recover somewhat gracefully.
 # See https://www.microprediction.com/bouncing
+# It is optional to supply an email. But if you don't supply one, then you will not
+# be eligible for the daily prize https://www.microprediction.com/competitions/daily
+# It is also optional to supply a URL in the set_repository method.
 
 if __name__ == '__main__':
     skater = CompetitiveSkatingFox(write_key=WRITE_KEY, f=f, use_std=False, max_active=1000)
+    skater.set_email(email='youremail@here.com') # <---
     skater.set_repository(
-        'https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/healthy_eel.py')
+        'https://github.com/microprediction/microprediction/blob/master/crawler_skater_examples/a_skater_template.py')
     skater.run()
