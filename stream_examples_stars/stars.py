@@ -29,7 +29,7 @@ if __name__=="__main__":
     print({'value':prev_value,'url':STREAM_URL})
 
     while time.time()-start_time<DAY:
-        time.sleep(60*10)
+        time.sleep(60*60)
         next_value = github_stars()
         change = next_value-prev_value
         mw.set(name=STREAM_NAME, value=change)
