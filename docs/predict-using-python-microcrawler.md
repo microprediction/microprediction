@@ -62,5 +62,5 @@ Thus if you want more control, you can [predict-using-python](https://micropredi
 [Edit](https://github.com/microprediction/microprediction/blob/master/docs/predict-using-python-microcrawler.md) this page. 
 
 
-![norton](/microprediction/assets/images/hardcore.jpeg)
+![musk](/microprediction/assets/images/hardcore.jpeg)
 
