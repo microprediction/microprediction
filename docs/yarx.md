@@ -14,7 +14,7 @@ The portfolio [weights](https://raw.githubusercontent.com/microprediction/microp
 
  | Type           | Example stream                                                                            | Lookup       | Reverse lookup |
  |----------------|-------------------------------------------------------------------------------------------|---------------|---------------|
- | Stocks         | [stream=quick_yarx_googl](https://www.microprediction.org/stream_dashboard.html?stream=quikc_yarx_googl)    | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) | [xraytickersreverse.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickersreverse.json) |
+ | Stocks         | [stream=quick_yarx_googl](https://www.microprediction.org/stream_dashboard.html?stream=quick_yarx_googl)    | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) | [xraytickersreverse.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickersreverse.json) |
  | Portfolios     | [stream=quick_xray_33](https://www.microprediction.org/stream_dashboard.html?stream=quick_xray_33) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) | |
 
 
