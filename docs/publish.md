@@ -1,6 +1,6 @@
 ## Publishing a stream
 
-Here's how to add to the list of [streams](https://www.microprediction.org/browse_streams.html). 
+Everyone is [doing it](https://www.linkedin.com/posts/thomashthoresen_datascience-microprediction-timeseriesforecasting-activity-6999971006274514944-lDID?utm_source=share&utm_medium=member_desktop). Here's how you can add to the list of [streams](https://www.microprediction.org/browse_streams.html). 
 
 
 

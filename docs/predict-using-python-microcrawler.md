@@ -60,3 +60,7 @@ See [predict-using-python-streamskater](https://microprediction.github.io/microp
 Thus if you want more control, you can [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) using MicroWriter. 
 
 [Edit](https://github.com/microprediction/microprediction/blob/master/docs/predict-using-python-microcrawler.md) this page. 
+
+
+![musk](/microprediction/assets/images/hardcore.png)
+

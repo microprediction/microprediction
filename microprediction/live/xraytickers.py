@@ -45,6 +45,19 @@ def get_xray_tickers() -> [str]:
 def get_xray_stock_names():
     return [ 'yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
 
+def get_quick_yarx_stream_names():
+    return [ 'quick_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+
+def get_middling_yarx_stream_names():
+    return [ 'middling_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+
+def get_slow_yarx_stream_names():
+    return [ 'slow_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+
+
+
+
+
 
 if __name__ == '__main__':
     CREATE_TICKERS = True
