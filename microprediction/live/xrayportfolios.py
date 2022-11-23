@@ -8,7 +8,7 @@ import os
 import json
 
 
-NUM_PORTFOLIOS = 150
+NUM_PORTFOLIOS = 80
 XRAY_PORTFOLIO_NAMES = ['xray_' + str(i)+'.json' for i in range(NUM_PORTFOLIOS)]
 
 from microprediction.live.xraytickers import STOCK_THRESHOLD
