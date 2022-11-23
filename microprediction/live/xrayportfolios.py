@@ -8,7 +8,7 @@ import os
 import json
 
 
-NUM_PORTFOLIOS = 500
+NUM_PORTFOLIOS = 150
 XRAY_PORTFOLIO_NAMES = ['xray_' + str(i)+'.json' for i in range(NUM_PORTFOLIOS)]
 
 from microprediction.live.xraytickers import STOCK_THRESHOLD
@@ -47,4 +47,9 @@ if __name__=='__main__':
     else:
         portfolios = get_xray_portfolios()
         print(np.shape(portfolios))
+        # Check they are all there
+        tickers = get_xray_tickers()
+        n_tickers = len(tickers)
+        assert n_tickers == np.shape(portfolios)[1]
+
 
