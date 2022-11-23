@@ -32,7 +32,7 @@ except ImportError:
 # https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html or maybe
 # just read the crawler code at https://github.com/microprediction/microprediction/blob/master/microprediction/crawler.py
 # and the StreamSkater at https://github.com/microprediction/microprediction/blob/master/microprediction/streamskater.py to
-# decide which methods to modify. 
+# decide which methods to modify.
 
 
 class CompetitiveSkatingFox(SkatingFox):
@@ -44,7 +44,7 @@ class CompetitiveSkatingFox(SkatingFox):
         return ('~' not in name) and (
                     ('faang' in name) or ('sateb_' in name) or ('gnaaf' in name) or ('c2' in name) or (
                         'c5' in name) or ('fathom' in name) or ('xray' in name) or ('yarx' in name) or (
-                                'electricity' in name))
+                                'electricity' in name) or ('ricky' in name))
 
     def include_delay(self, delay=None, name=None, **ignore):
         return delay >= self.delays[2]
