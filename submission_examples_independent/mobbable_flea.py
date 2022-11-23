@@ -1,3 +1,12 @@
+from microprediction import MicroWriter
+from microprediction.live.xraytickers import get_xray_stock_names
+from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
+import numpy as np
+from microconventions.stats_conventions import StatsConventions
+import time
+
+# Example of a prediction script that only needs to be run sporadically, since here it is assumed the
+# data comprises independent identically distributed samples
 # Example of a prediction script that only needs to be run sporadically, since here it is assumed the
 # data comprises independent identically distributed samples
 
