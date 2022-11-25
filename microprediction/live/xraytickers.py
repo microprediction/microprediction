@@ -48,8 +48,6 @@ def cull_xray_tickers_json(new_threshold):
     save_tickers(tickers=tickers)
 
 
-
-
 def get_xray_tickers() -> [str]:
     """ Retrieve xray tickers """
     url = 'https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json'
@@ -57,14 +55,17 @@ def get_xray_tickers() -> [str]:
     return [data[str(i)] for i in range(len(data))]
 
 
-def get_xray_stock_names():
-    return [ 'yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+def get_yarx_generic_names():
+    return [ 'yarx_'+ticker.replace('.','-')+'.json' for ticker in get_xray_tickers() ]
 
-def get_quick_yarx_stream_names():
-    return [ 'quick_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
 
-def get_middling_yarx_stream_names():
+def get_quick_yarx_names():
+    return [name.replace('yarx','quick_yarx') for name in get_yarx_generic_names()]
+
+
+def get_middling_yarx_names():
     return [ 'middling_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
+
 
 def get_slow_yarx_stream_names():
     return [ 'slow_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]

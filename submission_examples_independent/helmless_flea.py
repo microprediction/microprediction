@@ -1,5 +1,5 @@
 from microprediction import MicroWriter
-from microprediction.live.xraytickers import get_xray_stock_names
+from microprediction.live.xraytickers import get_yarx_generic_names
 from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
 import numpy as np
 from microconventions.stats_conventions import StatsConventions
@@ -18,7 +18,7 @@ except:
 
 if __name__=='__main__':
     for speed in ['quick_','middling_','slow_']:
-        YARX_NAMES = [ nm.replace('yarx_',speed+'yarx_') for nm in get_xray_stock_names() ]
+        YARX_NAMES = [nm.replace('yarx_',speed+'yarx_') for nm in get_yarx_generic_names()]
         XRAY_NAMES = [ nm.replace('yarx_',speed+'yarx_') for nm in XRAY_PORTFOLIO_NAMES ]
         NAMES = YARX_NAMES + XRAY_NAMES
 
