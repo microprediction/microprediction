@@ -10,7 +10,7 @@ from microprediction.live.iex import iex_common_stock_with_balance_sheet_tickers
 XRAY_TICKERS_JSON = os.path.join(TOP,'live', 'xraytickers.json')
 XRAY_TICKERS_REVERSE_JSON = os.path.join(TOP ,'live' ,'xraytickersreverse.json')
 
-STOCK_THRESHOLD = 50*1000*1000*1000
+STOCK_THRESHOLD = 250*1000*1000*1000
 
 
 def reasonable_threshold():
@@ -27,12 +27,27 @@ def create_xray_tickers_json():
        Create JSON file storing "official" list of tickers using in the x-ray experiment
     """
     tickers = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, return_tickers=True, threshold=STOCK_THRESHOLD)
+    save_tickers(tickers=tickers )
+
+
+def save_tickers(tickers):
     tickers_dict = dict([(k, ticker) for k, ticker in enumerate(tickers)])
     with open(XRAY_TICKERS_JSON, 'wt') as fp:
         json.dump(obj=tickers_dict, fp=fp)
-    tickers_reverse_dict = dict( sorted( [(ticker, k) for k, ticker in enumerate(tickers)]))
+    tickers_reverse_dict = dict(sorted([(ticker, k) for k, ticker in enumerate(tickers)]))
     with open(XRAY_TICKERS_REVERSE_JSON, 'wt') as fp:
         json.dump(obj=tickers_reverse_dict, fp=fp)
+
+
+def cull_xray_tickers_json(new_threshold):
+    """
+       Create JSON file storing "official" list of tickers using in the x-ray experiment
+    """
+    all_tickers = get_xray_tickers()
+    tickers = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=all_tickers, return_tickers=True,threshold=new_threshold)
+    save_tickers(tickers=tickers)
+
+
 
 
 def get_xray_tickers() -> [str]:
@@ -57,11 +72,13 @@ def get_slow_yarx_stream_names():
 
 
 
-
-
 if __name__ == '__main__':
     CREATE_TICKERS = True
     if CREATE_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key
         IEX_KEY = get_iex_key()
         create_xray_tickers_json()
+    else:
+        from microprediction.live.iexcredentials import get_iex_key
+        IEX_KEY = get_iex_key()
+        cull_xray_tickers_json(new_threshold=STOCK_THRESHOLD*1)
