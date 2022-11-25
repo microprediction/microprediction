@@ -73,7 +73,7 @@ def get_slow_yarx_stream_names():
 
 
 if __name__ == '__main__':
-    CREATE_TICKERS = True
+    CREATE_TICKERS = False
     if CREATE_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key
         IEX_KEY = get_iex_key()
