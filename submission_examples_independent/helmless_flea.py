@@ -1,5 +1,5 @@
 from microprediction import MicroWriter
-from microprediction.live.xraytickers import get_yarx_generic_names
+from microprediction.live.xraytickers import get_xray_tickers
 from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
 import numpy as np
 from microconventions.stats_conventions import StatsConventions
@@ -15,11 +15,13 @@ except:
     raise EnvironmentError('You need a write key. See https://www.microprediction.com/private-keys for explanation')
 
 
+def yarx_names():
+    return [ 'yarx_'+ticker.replace('.','-')+'.json' for ticker in get_xray_tickers() ]
 
 if __name__=='__main__':
-    for speed in ['quick_','middling_','slow_']:
-        YARX_NAMES = [nm.replace('yarx_',speed+'yarx_') for nm in get_yarx_generic_names()]
-        XRAY_NAMES = [ nm.replace('yarx_',speed+'yarx_') for nm in XRAY_PORTFOLIO_NAMES ]
+    for speed in ['quick_']:
+        YARX_NAMES = [nm.replace('yarx_',speed+'yarx_') for nm in yarx_names()]
+        XRAY_NAMES = [ nm.replace('yarx_',speed+'yarx_') for nm in XRAY_PORTFOLIO_NAMES[:15] ]
         NAMES = YARX_NAMES + XRAY_NAMES
 
         # Create a writer, and give the system a backlink for the convenience of others
@@ -36,9 +38,9 @@ if __name__=='__main__':
             devo = np.std(padded)
             values = sorted( [ devo*mw.norminv(p) +  0.001 * np.random.randn() for p in mw.percentiles()] )
             nudged = StatsConventions.nudged(values)
-            for delay in mw.DELAYS[-2:]:
+            for delay in mw.DELAYS[-1:]:
                 mw.submit(name=name, values=values, delay=delay)
                 stream_url = 'https://www.microprediction.org/stream_dashboard.html?stream='+name.replace('.json','')+'&horizon='+str(delay)
                 print(stream_url)
-                time.sleep(1)  # <-- Out of consideration for the system    
-    
+                time.sleep(1)  # <-- Out of consideration for the system
+

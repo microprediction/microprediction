@@ -13,7 +13,7 @@ from microprediction.live.xrayportfolios import get_xray_portfolios, XRAY_PORTFO
 XRAY_PORTFOLIOS = get_xray_portfolios()
 XRAY_TICKERS = get_xray_tickers()
 XRAY_STOCK_NAMES = [ 'yarx_'+ticker+'.json' for ticker in XRAY_TICKERS ]
-XRAY_NAMES = XRAY_STOCK_NAMES + XRAY_PORTFOLIO_NAMES
+XRAY_NAMES = XRAY_STOCK_NAMES + XRAY_PORTFOLIO_NAMES[:15]
 
 
 def func()->[float]:
