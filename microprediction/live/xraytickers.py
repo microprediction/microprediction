@@ -12,6 +12,24 @@ XRAY_TICKERS_REVERSE_JSON = os.path.join(TOP ,'live' ,'xraytickersreverse.json')
 
 STOCK_THRESHOLD = 250*1000*1000*1000
 
+HARDWIRED_TICKERS=['aapl','abbv','abt','acn','adbe',
+                   'aig','amd','amgn','amt','amzn',
+                   'avgo','axp','ba','bac','bk','blk',
+                   'bmy','brk.b','c','cat','chtr','cl',
+                   'cmcsa','cof','cop','cost','crm','csco',
+                   'cvs','dhr','dis','dow','duk','emr',
+                   'exc','f','fdx','gd','ge',
+                   'gild','gm','goog','googl','gs',
+                   'hd','hon','ibm','intc','jnj','jpm',
+                   'khc','ko','lin','lly','lmt','low',
+                   'ma','mcd','mdlz','mdt','met','meta',
+                   'mmm','mo','mrk','ms','msft','nee',
+                   'nflx','nke','nvda','orcl','pep',
+                   'pfe','pg','pm','pypl','qcom','rtx',
+                   'sbux','schw','so','spg','t','tgt',
+                   'tmo','tmus','tsla','txn','unh',
+                   'unp','ups','usb','v','vz','wba',
+                   'wfc','wmt','xom']
 
 def reasonable_threshold():
     # Get common stock value for VSAT, the smallest company in Russell 1000
@@ -80,6 +98,7 @@ if __name__ == '__main__':
         IEX_KEY = get_iex_key()
         create_xray_tickers_json()
     else:
+        print(reasonable_threshold())
         from microprediction.live.iexcredentials import get_iex_key
         IEX_KEY = get_iex_key()
         cull_xray_tickers_json(new_threshold=STOCK_THRESHOLD*1)
