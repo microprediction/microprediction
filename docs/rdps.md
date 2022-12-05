@@ -18,3 +18,5 @@ For convenience:
 
 Probably some in [submission_examples_independent](https://github.com/microprediction/microprediction/tree/master/submission_examples_independent) soon. 
       
+      
+View [source](https://github.com/microprediction/microprediction/blob/master/docs/tdps.md)
