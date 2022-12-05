@@ -93,6 +93,8 @@ def get_slow_yarx_stream_names():
 
 
 if __name__ == '__main__':
+    tickers = get_xray_tickers()
+    print('There are '+str(len(tickers))+' on github JSON ')
     CULL_TICKERS = False
     if CULL_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key

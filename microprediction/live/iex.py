@@ -100,5 +100,5 @@ def iex_common_stock_with_balance_sheet_tickers(api_key:str, return_tickers=True
 
 if __name__=='__main__':
     from microprediction.config_private import IEX_KEY
-    #print(iex_latest_prices(tickers=['meta'], api_key=IEX_KEY))
+    tickers = ["aapl","abbv","amzn","bac"]
     print(iex_common_stock_with_balance_sheet_tickers(tickers=['googl'], api_key=IEX_KEY))
