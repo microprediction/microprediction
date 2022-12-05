@@ -15,11 +15,12 @@ For convenience:
     from microprediction.live.rdpstickers import get_rdps_tickers
 
 ## Sector copula z2-streams 
+Reported bivariate relationships
 
- | Type           | Example stream                                                                            | Purpose       |
+ | Type           | Example stream                                                                            | Explanation       |
  |----------------|-------------------------------------------------------------------------------------------|---------------|
- | z1-stream        | [z1\~rdps_xlp\~3555](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)    | Outliers |
- | z2-stream        | [stream=z2\~rdps_xlp\~rdps_xlv\~3555'](https://www.microprediction.org/stream_dashboard.html?stream=z2~rdps_xlp~rdps_xlv~3555)    | Bivariate |
+ | z1-stream        | [z1\~rdps_xlp\~3555](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)    | [Z-scores](https://microprediction.github.io/microprediction/zscores.html)  |
+ | z2-stream        | [stream=z2\~rdps_xlp\~rdps_xlv\~3555](https://www.microprediction.org/stream_dashboard.html?stream=z2~rdps_xlp~rdps_xlv~3555)    | [copulas](https://microprediction.github.io/microprediction/copulas.html) |
  
 
 
