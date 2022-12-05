@@ -31,6 +31,7 @@ HARDWIRED_TICKERS=['aapl','abbv','abt','acn','adbe',
                    'unp','ups','usb','v','vz','wba',
                    'wfc','wmt','xom']
 
+
 def reasonable_threshold():
     # Get common stock value for VSAT, the smallest company in Russell 1000
     from microprediction.live.iexcredentials import get_iex_key
@@ -61,7 +62,7 @@ def cull_xray_tickers_json(new_threshold):
     """
        Create JSON file storing "official" list of tickers using in the x-ray experiment
     """
-    all_tickers = get_xray_tickers()
+    all_tickers = HARDWIRED_TICKERS
     tickers = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=all_tickers, return_tickers=True,threshold=new_threshold)
     save_tickers(tickers=tickers)
 
@@ -92,11 +93,11 @@ def get_slow_yarx_stream_names():
 
 
 if __name__ == '__main__':
-    CREATE_TICKERS = False
-    if CREATE_TICKERS:
+    CULL_TICKERS = False
+    if CULL_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key
         IEX_KEY = get_iex_key()
-        create_xray_tickers_json()
+        cull_xray_tickers_json()
     else:
         print(reasonable_threshold())
         from microprediction.live.iexcredentials import get_iex_key
