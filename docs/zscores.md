@@ -11,13 +11,11 @@ of the 'die.json' stream we have the following:
 | Z-scores    | [z1\~rdps_xlp\~70.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~70)     | rdps_xlp.json [70 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp&horizon=70)     |
 | Z-scores    | [z1\~rdps_xlp\~3555.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)     | rdps_xlp.json [3555 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp&horizon=3555)     |
 
+### Creating z1-streams
 
-### Creating z1~ streams
-Nothing to do. 
+Pass an argument with_percentiles in the payload, set to any value (say 1), when you call the API. Or using the microwriter:
 
-The z1~ streams are created automatically 
-when you [publish](https://microprediction.github.io/microprediction/publish.html) a regular stream. 
-
+    mw.set(name=name, value=value, with_percentiles=True)
 
 ### The meaning of z1~ streams 
 
