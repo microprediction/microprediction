@@ -7,9 +7,9 @@ of the 'die.json' stream we have the following:
  
 | Type        | Example stream pages                                                                         | CDF used (the F)                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Base stream | [die.json](https://www.microprediction.org/stream_dashboard.html?stream=die)                 |                                                                                                               |
-| Z-scores    | [z1~die~70.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~die~70)     | die.json [70 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=die&horizon=70)     |
-| Z-scores    | [z1~die~3555.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~die~3555) | die.json [3555 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=die&horizon=3555) |
+| Base stream | [rdps_xlp.json](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp)                 |                                                                                                               |
+| Z-scores    | [z1~rdps_xlp~70.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~70)     | die.json [70 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp&horizon=70)     |
+| Z-scores    | [z1~rdps_xlp~3555.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)     | die.json [3555 second horizon](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp&horizon=3555)     |
 
 
 ### Creating z1~ streams
