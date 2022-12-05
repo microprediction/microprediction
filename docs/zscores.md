@@ -21,7 +21,7 @@ when you [publish](https://microprediction.github.io/microprediction/publish.htm
 
 ### The meaning of z1~ streams 
 
-Using the example [z1~die~70.json](https://www.microprediction.org/stream_dashboard.html?stream=z1~die~70) we assume
+Using the example [rdps_xlp\~70.json](https://www.microprediction.org/stream_dashboard.html?stream=rdps_xlp\~70.json) we assume
 a new point \(x\) is published. We also assume a mapping: 
 
 $$ F_{70}: x \rightarrow [0,1] $$
