@@ -38,7 +38,7 @@ def create_xray_portfolios():
     tickers = get_xray_tickers()
     num_tickers = len(tickers)
     prices = iex_latest_prices(tickers=tickers, api_key=IEX_KEY)
-    common = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=tickers, return_tickers=False, threshold=STOCK_THRESHOLD)
+    common = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=tickers, return_tickers=False, threshold=2*STOCK_THRESHOLD)
     norm_common = normalize(common)
     norm_cap = normalize([price * cm for price, cm in zip(prices, norm_common)])
     centered_cap = [ (nc-np.mean(norm_cap))/np.std(norm_cap) for nc in norm_cap ]
@@ -75,7 +75,7 @@ def get_xray_portfolios():
 
 
 if __name__=='__main__':
-    CREAT_PORTFOLIOS = True
+    CREAT_PORTFOLIOS = False
     if CREAT_PORTFOLIOS:
         # DON'T DO THIS ... SUPPOSED TO BE ONE-OFF
         create_xray_portfolios()
