@@ -48,6 +48,8 @@ Should you wish to beat me to it, one pattern involves estimating covariance:
 
 
 
+View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
+
 
 
 
