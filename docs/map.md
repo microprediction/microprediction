@@ -9,7 +9,7 @@
        |                   |                          |                     |
     predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
        |                            |                 |                videos, data, map, summary
-       |                            |                 |                   glossary, yarx, xpdr
+       |                            |                 |                   glossary, yarx, rdps
     predict-using-python          transfers         publish-using-python
        |                                               |            |
     predict-using-python-microcrawler -----|        zscores    retrieve-predictions
