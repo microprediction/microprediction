@@ -18,8 +18,8 @@ For convenience:
 
  | Type           | Example stream                                                                            | Purpose       |
  |----------------|-------------------------------------------------------------------------------------------|---------------|
- | z1-stream        | [z1~rdps_xlp~3555](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)    | Outliers |
- | z2-stream        | ['stream=z2~rdps_xlp~rdps_xlv~3555'](https://www.microprediction.org/stream_dashboard.html?stream=z2~rdps_xlp~rdps_xlv~3555)    | Bivariate |
+ | z1-stream        | [z1\~rdps_xlp\~3555](https://www.microprediction.org/stream_dashboard.html?stream=z1~rdps_xlp~3555)    | Outliers |
+ | z2-stream        | [stream=z2~rdps_xlp~rdps_xlv~3555'](https://www.microprediction.org/stream_dashboard.html?stream=z2~rdps_xlp~rdps_xlv~3555)    | Bivariate |
  
 
 
