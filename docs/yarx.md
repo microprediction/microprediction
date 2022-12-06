@@ -22,9 +22,9 @@ There are derived feature streams
 
  | Type           | Example stream                                                                            | 
  |----------------|-------------------------------------------------------------------------------------------|
- | Vol            | [stream=vol_0_ma](https://www.microprediction.org/stream_dashboard.html?stream=vol_0_aapl)     |
- | Vol slope      | [stream=vol_1_ma](https://www.microprediction.org/stream_dashboard.html?stream=vol_1_aapl)     |
- | Vol convexity  | [stream=vol_2_ma](https://www.microprediction.org/stream_dashboard.html?stream=vol_2_aapl)     |
+ | Vol            | [stream=vol_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vol_0_aapl)     |
+ | Vol slope      | [stream=vol_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vol_1_aapl)     |
+ | Vol convexity  | [stream=vol_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vol_2_aapl)     |
  
 
 ### Universe
