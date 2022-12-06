@@ -53,9 +53,13 @@ class MicroWriter(MicroReader):
         if res.status_code == 200:
             return res.json()
 
-    def set(self, name, value):
+    def set(self, name, value, with_percentiles=False):
         """ Create or update a stream """
-        res = requests.put(self.base_url + '/live/' + name, data={"write_key": self.write_key, "value": value})
+        if with_percentiles:
+            data = {"write_key": self.write_key, "value": value, "with_percentiles":"1"}
+        else:
+            data = {"write_key": self.write_key, "value": value}
+        res = requests.put(self.base_url + '/live/' + name, data)
         if res.status_code == 200:
             return res.json()
         elif res.status_code == 500:

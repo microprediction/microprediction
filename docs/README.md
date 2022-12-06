@@ -37,7 +37,12 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
  
  To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
   
- - [Equity streams](https://microprediction.github.io/microprediction/yarx.html)
+  
+## Equity contest streams:
+Want to win the daily $125 prize?
+
+ - [yarx](https://microprediction.github.io/microprediction/yarx.html) ... stock changes and features
+ - [rdps](https://microprediction.github.io/microprediction/rdps.html) ... sector changes and copulas
   
   
 -+- 

@@ -9,7 +9,7 @@
        |                   |                          |                     |
     predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
        |                            |                 |                videos, data, map, summary
-       |                            |                 |                   glossary
+       |                            |                 |                   glossary, yarx, rdps
     predict-using-python          transfers         publish-using-python
        |                                               |            |
     predict-using-python-microcrawler -----|        zscores    retrieve-predictions
@@ -60,3 +60,6 @@ The rest...
 - [data](https://microprediction.github.io/microprediction/data.html) ... you can help yourself to. 
 - [videos](https://microprediction.github.io/microprediction/videos.html)
 - [summary](https://microprediction.github.io/microprediction/summary.html) ... of essential API. 
+- [yarx](https://microprediction.github.io/microprediction/yarx.html) ... equity contest stream explanation
+- [rdps](https://microprediction.github.io/microprediction/rdps.html) ... equity contest stream explanation
+
