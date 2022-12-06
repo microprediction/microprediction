@@ -24,6 +24,8 @@ else
    sleep 10
    echo "Or listen to the first chapter of the book https://github.com/microprediction/building_an_open_ai_network/blob/main/docs/assets/audio/Microprediction_Chapter_1.mp3"
    sleep 10
+   echo "By the way until Jan 31, 2023 you can use code MITPHoliday22 at https://www.penguinrandomhouse.com/search/site/?q=9780262047326 for 20 percent off."
+   sleep 10
    echo "Or read our blog https://medium.com/@microprediction" 
    sleep 10
    echo "Or view the video tutorials https://microprediction.github.io/microprediction/videos.html"
