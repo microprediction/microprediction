@@ -11,12 +11,30 @@ def yarx_moving() -> bool :
     return (time.time()-lagged_times[0])<10*60
 
 
-def eastern():
+def eastern(as_str=True):
     # Get the current time in Eastern Time
-    eastern_time = datetime.datetime.now(datetime.timezone.utc).astimezone(datetime.timezone(-datetime.timedelta(hours=5)))
+    from pytz import timezone
+    eastern_zone = timezone('US/Eastern')
+    eastern_time = datetime.datetime.now(eastern_zone)
+    return eastern_time.strftime("%Y-%m-%d %H:%M:%S.%f") if as_str else eastern_time
 
-    # Format the time as a string in Snowflake-friendly format
-    return eastern_time.strftime("%Y-%m-%d %H:%M:%S.%f")
+
+def relative_to_4pm():
+    today_4pm = datetime.datetime.combine(datetime.date.today(),datetime.time(hour=16))
+    dt = eastern(as_str=False).replace(tzinfo=None) - today_4pm
+    return dt
+
+
+def is_near_4pm_eastern(mins=5, seconds=0):
+    return abs(relative_to_4pm().total_seconds())<60*mins+seconds
+
+
+if __name__=='__main__':
+    print(relative_to_4pm().total_seconds())
+    print(is_near_4pm_eastern())
+
+
+
 
 
 
