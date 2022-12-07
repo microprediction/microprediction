@@ -22,8 +22,8 @@ There are derived feature streams
 
  | Type           | Example stream                                                                            | Meaning        |
  |----------------|-------------------------------------------------------------------------------------------|----------------
- | Vol            | [stream=vlty_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_0_aapl)     | Scaled log of middling predictions IQR |
- | Vol slope      | [stream=vlty_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_1_aapl)     | Difference between log quick and log slow |
+ | Vol            | [stream=vlty_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_0_aapl)     | Scaled log of middling_yarx_appl predictions interquartile range |
+ | Vol slope      | [stream=vlty_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_1_aapl)     | Difference between scaled log quick and log slow inter-quartile ranges |
  | Vol convexity  | [stream=vlty_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_2_aapl)     | Similar, but the convexity | 
  
 
