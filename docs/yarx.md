@@ -20,11 +20,11 @@ Only 1 hour ahead predictions are considered relevant for prizes.
 ### Volatility streams
 There are derived feature streams
 
- | Type           | Example stream                                                                            | 
- |----------------|-------------------------------------------------------------------------------------------|
- | Vol            | [stream=vlty_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_0_aapl)     |
- | Vol slope      | [stream=vlty_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_1_aapl)     |
- | Vol convexity  | [stream=vlty_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_2_aapl)     |
+ | Type           | Example stream                                                                            | Meaning        |
+ |----------------|-------------------------------------------------------------------------------------------|----------------
+ | Vol            | [stream=vlty_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_0_aapl)     | Scaled log of middling predictions IQR |
+ | Vol slope      | [stream=vlty_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_1_aapl)     | Difference between log quick and log slow |
+ | Vol convexity  | [stream=vlty_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=vlty_2_aapl)     | Similar, but the convexity | 
  
 
 ### Universe
