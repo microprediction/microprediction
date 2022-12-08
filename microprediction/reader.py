@@ -194,7 +194,24 @@ class MicroReader(MicroConventions):
         else:
             return tickets
 
+    def get_samples(self, write_key, name, delay:int, strip=True, consolidate=True):
+        """ Retrieve samples for a given horizon (i.e. predictions that have left quarantine)
 
+              strip_percentiles  If false, returns dictionary with individual submissions
+              consolidate        If false, returns tuples (owner,value)
+                                 Otherwise just returns values
+
+        """
+        name = self.fix_stream_name(name=name)
+        tickets = self.request_get_json(method='samples', arg=name, data={"write_key":write_key,"delay":delay})
+        if strip:
+            tups = [(ticket.split('::')[1], val) for ticket, val in tickets.items()]
+            if consolidate:
+                return sorted([v for owner,v in tups])
+            else:
+                return tups
+        else:
+            return tickets
 
 
     def median(self, name: str, delay: int):
