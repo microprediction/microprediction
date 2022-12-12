@@ -30,7 +30,7 @@ def my_brilliant_sampler(lagged_values):
     nudged = StatsConventions.nudged(values)
 
 
-
+def weighted_die():
     FACES=[1,2,3,4,5,6]
     return random.choices(population=FACES,weights=FACES)[0]
 
