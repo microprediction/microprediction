@@ -63,4 +63,4 @@ You can use a [colab notebook](https://github.com/microprediction/micropredictio
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-![fired](/microprediction/assets/images/fired.jpeg)
+![fired](/microprediction/assets/images/fired.png)
