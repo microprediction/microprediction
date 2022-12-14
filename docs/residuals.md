@@ -24,7 +24,7 @@ forecasts of the logarithm of META price changes.
 
 ### Optional steps:
 
-   2. (optional) Submit a distributional prediction of your own residuals (see [prediction docs (https://microprediction.github.io/microprediction/predict.html)) 
+   2. (optional) Submit a distributional prediction of your own residuals (see [prediction docs](https://microprediction.github.io/microprediction/predict.html)) 
 
    3. Check with compliance. 
 
@@ -42,7 +42,7 @@ Read the [book](https://mitpress.mit.edu/9780262047326/microprediction/).
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html) 
 
-View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
+View [source](https://github.com/microprediction/microprediction/blob/master/docs/residuals.md)
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
