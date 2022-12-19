@@ -29,6 +29,12 @@ def is_near_4pm_eastern(mins=5, seconds=0):
     return abs(relative_to_4pm().total_seconds())<60*mins+seconds
 
 
+def seconds_until_next_half_hour():
+    current_time = datetime.datetime.now()
+    return 30*60-(current_time.minute * 60 + current_time.second) % 1800
+
+
+
 if __name__=='__main__':
     print(relative_to_4pm().total_seconds())
     print(is_near_4pm_eastern())
