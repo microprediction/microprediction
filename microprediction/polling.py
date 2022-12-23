@@ -137,6 +137,7 @@ class MicroPoll(MicroWriter):
             self.task()
             et = int(round(time.time()))
             sleep_time = (st - et) % (60 * self.interval)
+            print('Sleeping for '+str(sleep_time)+' seconds. ', flush=True)
             time.sleep(sleep_time)
 
 
@@ -241,7 +242,7 @@ class MultiPoll(MicroPoll):
             return self.secondary_func(next_values)
 
     def task(self):
-        """ Scheduled task that runs every minute """
+        """ Scheduled task """
         start_time = time.time()
         data = {'start_time': str(datetime.datetime.now())}
         try:
