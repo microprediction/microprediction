@@ -327,16 +327,24 @@ class MultiChangePoll(MultiPoll):
                 self.current_values = [float(source_value) for source_value in source_values]
                 value_changes = [float(current_value) - float(prev_value) for current_value, prev_value in
                                  zip(self.current_values, self.prev_values)]
-                material_changes = [abs(vc) > 1e-6 for vc in value_changes]
-                if sum(material_changes) < self.min_change_count:
+                material_changes = [ int(abs(vc) > 1e-6) for vc in value_changes]
+                n_material_changes = sum(material_changes)
+                if n_material_changes < self.min_change_count:
                     self.feed_state = MultiChangePoll.COLD  # Feed is stale, don't judge
                     self.logger(
-                        {'type': 'feed_status', 'message': "****  Feed status changed from WARM to COLD at " + str(datetime.datetime.now())})
+                        {'type': 'feed_status',
+                                 'n_material_changes':n_material_changes,
+                                 'min_change_count':self.min_change_count,
+                                 'Currently retrieved values':self.current_values,
+                                 'Previously retrieved values':self.prev_values,
+                                  'message': "****  Changes not material. Feed status WARM --> COLD at " + str(datetime.datetime.now())})
                     return None
                 else:
                     self.logger(
                         {'type': 'feed_status',
-                         'message': "****  Changes were material at " + str(datetime.datetime.now())})
+                         'n_material_changes': n_material_changes,
+                         'min_change_count': self.min_change_count,
+                         'message': "****  Changes were material. Feed status WARM --> WARM " + str(datetime.datetime.now())})
                     self.prev_values = [ v for v in self.current_values ]
                     if self.change_func is not None:
                         altered_changes = self.call_change_func(value_changes=value_changes)
@@ -350,16 +358,25 @@ class MultiChangePoll(MultiPoll):
             self.prev_values = [ v for v in source_values ] if (source_values is not None) else None
             if (self.prev_values is not None) and (self.prev_prev is not None):
                 material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(self.prev_prev, self.prev_values)]
-                if sum(material_changes)>=self.min_change_count:
+                n_material_changes = sum(material_changes)
+                if n_material_changes>=self.min_change_count:
                     self.feed_state = MultiChangePoll.WARM
                     self.logger(
-                        {'type': 'feed_status', 'message': '**** Feed status changed from COLD to WARM at ' + str(datetime.datetime.now())})
+                        {'type': 'feed_status',
+                          'n_material_changes':n_material_changes,
+                          'min_change_count':self.min_change_count,
+                          'message': '**** Feed status COLD --> WARM at ' + str(datetime.datetime.now())})
             elif self.prev_values is not None:
                  self.logger(
-                        {'type': 'feed_status', 'message': '**** Feed status remains at COLD, but values seen ' + str(datetime.datetime.now())})
+                        {'type': 'feed_status',
+                         'reason': 'The previously retrieved value was None, have to wait',
+                         'message': '**** Feed status COLD --> COLD, but values seen ' + str(datetime.datetime.now())})
             elif self.prev_values is None:
                   self.logger(
-                        {'type': 'feed_status', 'message': '**** Warning: failed to get current value ' + str(datetime.datetime.now())})
+                        {'type': 'feed_status',
+                         'reason': 'The currently retrieved value was None, have to wait',
+                         'message': '**** Feed status COLD --> COLD at ' + str(datetime.datetime.now()),
+                         'warning': '**** Warning: failed to get current value ' + str(datetime.datetime.now())})
             return None
         else:
             raise Exception('Brain failure')
