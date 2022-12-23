@@ -323,12 +323,13 @@ class MultiChangePoll(MultiPoll):
                 value_changes = [float(current_value) - float(prev_value) for current_value, prev_value in
                                  zip(self.current_values, self.prev_values)]
                 material_changes = [abs(vc) > 1e-6 for vc in value_changes]
-                if sum(material_changes)<=self.min_change_count:
+                if sum(material_changes) < self.min_change_count:
                     self.feed_state = MultiChangePoll.COLD  # Feed is stale, don't judge
                     self.logger(
-                        {'type': 'feed_status', 'message': "****  Feed unchanged at " + str(datetime.datetime.now())})
+                        {'type': 'feed_status', 'message': "****  Feed status changed from WARM to COLD at " + str(datetime.datetime.now())})
+                    return None
                 else:
-                    self.prev_values = self.current_values
+                    self.prev_values = [ v for v in self.current_values ]
                     if self.change_func is not None:
                         altered_changes = self.call_change_func(value_changes=value_changes)
                     else:
@@ -337,14 +338,20 @@ class MultiChangePoll(MultiPoll):
 
         elif self.feed_state == MultiChangePoll.COLD:
             # Wait until feed is back up and values start changing
-            self.prev_prev = self.prev_values if self.prev_values else None
-            self.prev_values = source_values
+            self.prev_prev = [ v for v in self.prev_values ] if (self.prev_values is not None) else None
+            self.prev_values = [ v for v in source_values ] if (source_values is not None) else None
             if (self.prev_values is not None) and (self.prev_prev is not None):
                 material_changes = [abs(pp - pv) > 1e-6 for pp, pv in zip(self.prev_prev, self.prev_values)]
                 if sum(material_changes)>=self.min_change_count:
                     self.feed_state = MultiChangePoll.WARM
                     self.logger(
-                        {'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})
+                        {'type': 'feed_status', 'message': '**** Feed status changed from COLD to WARM at ' + str(datetime.datetime.now())})
+            elif self.prev_values is not None:
+                 self.logger(
+                        {'type': 'feed_status', 'message': '**** Values seen but another iteration is required before warming feed ' + str(datetime.datetime.now())})
+            elif self.prev_values is None:
+                  self.logger(
+                        {'type': 'feed_status', 'message': '**** Warning: failed to get current value ' + str(datetime.datetime.now())})
             return None
         else:
             raise Exception('Brain failure')
