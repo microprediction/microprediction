@@ -345,6 +345,12 @@ class MultiChangePoll(MultiPoll):
                     self.feed_state = MultiChangePoll.WARM
                     self.logger(
                         {'type': 'feed_status', 'message': '**** Feed resumed at ' + str(datetime.datetime.now())})
+            elif self.prev_values is not None:
+                 self.logger(
+                        {'type': 'feed_status', 'message': '**** Values seen but another iteration is required before warming feed ' + str(datetime.datetime.now())})
+            elif self.prev_values is None:
+                  self.logger(
+                        {'type': 'feed_status', 'message': '**** Warning: failed to get current value ' + str(datetime.datetime.now())})
             return None
         else:
             raise Exception('Brain failure')
