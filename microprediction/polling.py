@@ -268,7 +268,8 @@ class MultiPoll(MicroPoll):
             res = [self.set(name=name, value=value) for name, value in zip(self.names, send_values)]
 
         data.update({'source_values':source_values,'next_values': next_values, "res": res, 'elapsed after sending': time.time() - start_time})
-        self.logger(data=data)
+        if False:
+            self.logger(data=data)
         self.downtime()
         data.update({'elapsed after downtime': time.time() - start_time})
 
