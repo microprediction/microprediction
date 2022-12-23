@@ -26,8 +26,8 @@ class MicroPoll(MicroWriter):
         """ Called after each attempt to poll data and send it """
 
         self.recent.append(data)
-        if len(self.recent) > 100:
-            self.recent = self.recent[-100:]
+        if len(self.recent) > 10:
+            self.recent = self.recent[-10:]
         if self.verbose:
             data_to_print = dict([(k,shorten_lists(v)) for k,v in data.items()])
             pprint(data_to_print)
@@ -92,16 +92,21 @@ class MicroPoll(MicroWriter):
         try:
             source_value = self.call_func()
         except Exception as e:
+            data.update({'exception':str(e),'exception_note':'call to call_func failed'})
             source_value = None
+
+        # Send the current value to the sub-routine that must decide whether to return
+        # changes or puke and return None (if the feed is cold, say)
         next_value = self.determine_next_value(source_value)
         data.update({'source_value': source_value,
-                     'next_value': next_value,
+                     'next_values': next_value,
                      'elapsed after polling': time.time() - start_time})
+        if next_value is None:
+            data.update({'explanation':'the feed will not publish as it is COLD'})
         res = self.touch(self.name) if next_value is None else self.set(name=self.name, value=next_value)
         data.update({'value': next_value, "res": res, 'elapsed after sending': time.time() - start_time})
         self.logger(data=data)
         self.downtime()
-        data.update({'elapsed after downtime': time.time() - start_time})
 
     def maybe_bolster_balance_by_mining(self):
         """ Mine just a little to avoid stream dying due to bankruptcy """
@@ -329,6 +334,9 @@ class MultiChangePoll(MultiPoll):
                         {'type': 'feed_status', 'message': "****  Feed status changed from WARM to COLD at " + str(datetime.datetime.now())})
                     return None
                 else:
+                    self.logger(
+                        {'type': 'feed_status',
+                         'message': "****  Changes were material at " + str(datetime.datetime.now())})
                     self.prev_values = [ v for v in self.current_values ]
                     if self.change_func is not None:
                         altered_changes = self.call_change_func(value_changes=value_changes)
@@ -348,7 +356,7 @@ class MultiChangePoll(MultiPoll):
                         {'type': 'feed_status', 'message': '**** Feed status changed from COLD to WARM at ' + str(datetime.datetime.now())})
             elif self.prev_values is not None:
                  self.logger(
-                        {'type': 'feed_status', 'message': '**** Values seen but another iteration is required before warming feed ' + str(datetime.datetime.now())})
+                        {'type': 'feed_status', 'message': '**** Feed status remains at COLD, but values seen ' + str(datetime.datetime.now())})
             elif self.prev_values is None:
                   self.logger(
                         {'type': 'feed_status', 'message': '**** Warning: failed to get current value ' + str(datetime.datetime.now())})
