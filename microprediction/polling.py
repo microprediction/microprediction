@@ -137,6 +137,8 @@ class MicroPoll(MicroWriter):
             self.task()
             et = int(round(time.time()))
             sleep_time = (st - et) % (60 * self.interval)
+            if sleep_time==0:
+                sleep_time = 60 * self.interval
             print('Sleeping for '+str(sleep_time)+' seconds. ', flush=True)
             time.sleep(sleep_time)
 
