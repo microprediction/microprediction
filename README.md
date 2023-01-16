@@ -15,7 +15,7 @@ Packages and a platform for effecting autonomous prediction using lightweight ma
  
  ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
-## Try it out ([docs](https://microprediction.github.io/microprediction/) and live [help](https://microprediction.github.io/microprediction/meet.html))
+## Try it out ([docs](https://microprediction.github.io/microprediction/), [install](https://github.com/microprediction/microprediction/blob/master/INSTALL.md) and live [help](https://microprediction.github.io/microprediction/meet.html))
 
 If you would like to see how *easy* it is to wield a *new kind of market* to effect turnkey distributional prediction, see the [docs](https://microprediction.github.io/microprediction/) and, therein, observe that you can receive live [help](https://microprediction.github.io/microprediction/meet.html) getting started on Fridays, or in the [slack channel](https://microprediction.github.io/microprediction/slack.html). Key points:
 
