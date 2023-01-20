@@ -21,17 +21,19 @@ Actually, its my view that there is plenty of room for collaboration with those 
 
 Some things that delineate the microprediction fund from past crowd-sourcing efforts but also, more importantly, the broader institutional investing competition can include:
 
-   - Crowd-sourcing of *explicit* horizon-based predictions of various kinds, and prediction of intermediate and derived quantities including in-house model residuals. It is worth comparing this approach to the very difficult task of combining together trading strategies whose intent is unknown. It is the opinion, if I may speak for him, of Jonathan Larkin that this was the primary challenge faced by Quantopian.  
+   - **(c.f. Quantopian)** Crowd-sourcing of *explicit* horizon-based predictions of various kinds, and prediction of intermediate and derived quantities including in-house model residuals. It is worth comparing this approach to the very difficult task of combining together trading strategies whose intent is unknown. It is the opinion, if I may speak for him, of Jonathan Larkin that this was the primary challenge faced by Quantopian.  
 
-   - A novel way to directly addressing the primary pitfall with portfolio selection methodologies: namely overfitting. The microprediction platform is not the only way to attack this, naturally, but it arguably represents a state of elegance compared to, say, the human-heavy organizational framework advocated by Lopez de Prado say ([book](https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)).  
+   - **(c.f. Numerai)** Crowd-sourcing of relatively short-horizon quantities, leading to a much larger *n* for judging algorithm performance compared, say, to Numerai's monthly time-scale. 
+
+   - **(c.f. ADIA etc)** A novel way to directly addressing the primary pitfall with portfolio selection methodologies: namely overfitting. The microprediction platform is not the only way to attack this, naturally, but it arguably represents a state of elegance compared to, say, the human-heavy organizational framework advocated by Lopez de Prado say ([book](https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)).  
    
-   - The generation of novel sources of information as artifacts of prediction competitions on live equity prices changes. Perhaps the closest analogy here lies with Echo state networks (reservoir computing). 
+   - **(c.f. Quant hedge funds)** The generation of novel sources of information as artifacts of prediction competitions on live equity prices changes. Perhaps the closest analogy here lies with Echo state networks (reservoir computing). 
    
-   - A ruthless way to chain together distributional transforms from combinations of different people's algorithms (stay tuned for advances in the platform that facilitate ideas closer to Ch3 and Ch5 of my book).  
+   - **(c.f. The usual way of orchestrating quant work)** A ruthless way to chain together distributional transforms from combinations of different people's algorithms (stay tuned for advances in the platform that facilitate ideas closer to Ch3 and Ch5 of my [book](https://mitpress.mit.edu/9780262047326/microprediction/)).  
   
-   - A more rigorous approach to defensive diversified portfolio construction. There are various threads to this research, not all public, but see for example my work on [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f). The combination of mathematically rigorous high-dimensional portfolio construction with non-overfitted inputs is going to be a very strong proposition. 
+   - **(c.f Smart weights competitiors)** A more rigorous approach to defensive diversified portfolio construction. There are various threads to this research, not all public, but see for example my work on [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f). The combination of mathematically rigorous high-dimensional portfolio construction with non-overfitted inputs is going to be a very strong proposition. 
       
-   - Incorporation of investment ideas from Intech's long history. 
+   - **(c.f. Everyone other than Intech)** Incorporation of investment ideas from Intech's long history. 
 
 
 Notice that success is *not* predicated on: 
