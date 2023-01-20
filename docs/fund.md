@@ -3,7 +3,7 @@ The use of lightweight overfitting-free automated prediction is [catching on](ht
 # Microprediction Fund 
 
 However, in addition to whatever
-anyone else chooses to do, I want to explain here briefly a direction that might significantly change the economics of the whole system.  Currently the economics for participation involve relatively small prizes intended to add to the scientific incentives for participation (free benchmarking of algorithms etc). 
+anyone else chooses to do, I want to explain here briefly a direction that might significantly change the economics of the whole system.  Currently the rewards for participation involve relatively small prizes intended to add to the scientific incentives for participation (free benchmarking of algorithms etc). 
 
 ### Incentive
 
