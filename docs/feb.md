@@ -15,11 +15,10 @@ Sort of kidding. Anyone who wins in Feb will get a copy of the book whether you 
  
  - See [prizes](https://microprediction.github.io/microprediction/prizes.html)
  - Join the Microprediction [slack](https://microprediction.github.io/microprediction/slack.html) to see daily prize announcements. 
- - See [setup](https://microprediction.github.io/microprediction/setup.html) if you do nothing else. 
-
  
+See [setup](https://microprediction.github.io/microprediction/setup.html) if you do nothing else, since you can participate just by cutting and pasting a one-line bash command. 
 
-
+-+- 
 
  - Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
