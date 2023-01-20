@@ -5,11 +5,11 @@ The daily prize is doubled in February only.
 
  | Place |  Prize |
  |-------|--------|
- | 1st   | $225   |
+ | 1st   | $250   |
  | 2nd   | Copy of the book |
  | 3rd   | Two copies of the book |
 
-
+Sort of kidding. Anyone who wins in Feb will get a copy of the book whether you like it or not. Donate to your local library as you see fit. 
  
 ### Get in the game:
  
@@ -18,8 +18,6 @@ The daily prize is doubled in February only.
  - See [setup](https://microprediction.github.io/microprediction/setup.html) if you do nothing else. 
 
  
-
-
 
 
 
