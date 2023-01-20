@@ -13,7 +13,7 @@ a guarrantee, advice or anything else, the intent among the management of Intech
 In broad brush terms, the use of the microprediction platform in this particular context is rather different to present or past alpha-chasing initiatives like Numerai, Quantopian, Quantconnect and so forth,
 all of which are interesting in their own way. 
 
-Some things that delineate the microprediction fund from the competition can be:
+Some things that delineate the microprediction fund from the investment industry competition can include:
 
    - Directly addressing the primary pitfall with portfolio selection methodologies: overfitting. 
    
