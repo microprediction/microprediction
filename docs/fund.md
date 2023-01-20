@@ -29,7 +29,7 @@ Some things that delineate the microprediction fund from past crowd-sourcing eff
    
    - A ruthless way to chain together distributional transforms from combinations of different people's algorithms (stay tuned for advances in the platform that facilitate ideas closer to Ch3 and Ch5 of my book).  
   
-   - A more rigorous approach to defensive diversified portfolio construction. There are various threads to this research, not all public, but see for example my work on [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f). 
+   - A more rigorous approach to defensive diversified portfolio construction. There are various threads to this research, not all public, but see for example my work on [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f). The combination of mathematically rigorous high-dimensional portfolio construction with non-overfitted inputs is going to be a very strong proposition. 
       
    - Incorporation of investment ideas from Intech's long history. 
 
