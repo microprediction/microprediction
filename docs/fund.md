@@ -53,6 +53,6 @@ This field is highly competitive, but Intech's 35 year track record and extensiv
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-[Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 
+[Edit](https://github.com/microprediction/microprediction/blob/master/docs/fund.md) this page. 
 
 ![somewhatarbitrarypicture](/microprediction/assets/images/database.png)
