@@ -36,4 +36,4 @@ Documentation [map](https://microprediction.github.io/microprediction/map.html)
 
 [Edit](https://github.com/microprediction/microprediction/blob/master/docs/publish.md) this page. 
 
-![electricity](/microprediction/assets/images/database.png)
+![somewhatarbitrarypicture](/microprediction/assets/images/database.png)
