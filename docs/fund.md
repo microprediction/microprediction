@@ -11,7 +11,7 @@ I'm all in on creating a fund under the Intech Investments umbrella that is driv
 
  - Microprediction participants should share in the upside. 
  
- - Said sharing can be transparent and linear, thus providing legitimate incentive.  
+ - Said sharing can be transparent and piecewise-linear, thus providing legitimate incentive for the deployment of high quality algorithms.   
 
 ### Delineation 
 
