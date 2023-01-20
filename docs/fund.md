@@ -11,7 +11,7 @@ I'm all in on creating a fund under the Intech Investments umbrella that is driv
 
  - Microprediction participants should share in the upside. 
  
- - Said sharing can be transparent and piecewise-linear, thus providing legitimate incentive for the deployment of high quality algorithms.   
+ - Said sharing can be transparent (e.g. linear).   
 
 ### Delineation 
 
@@ -19,7 +19,7 @@ To address up front a frequent question, the use of the microprediction platform
 
 Actually, its my view that there is plenty of room for collaboration with those ventures and learning from them (I'm grateful to Jonathan Larkin and Richard Craib for interesting discussions) and that the real competition lies elsewhere in the investment industry, including very serious competition from passive investing. 
 
-Ssome things that delineate the microprediction fund from past crowd-sourcing efforts but also, more importantly, the broader institutional investing competition include:
+Some things that delineate the microprediction fund from past crowd-sourcing efforts but also, more importantly, the broader institutional investing competition can include:
 
    - Crowd-sourcing of *explicit* horizon-based predictions of various kinds, and prediction of intermediate and derived quantities including in-house model residuals. It is worth comparing this approach to the very difficult task of combining together trading strategies whose intent is unknown. It is the opinion, if I may speak for him, of Jonathan Larkin that this was the primary challenge faced by Quantopian.  
 
