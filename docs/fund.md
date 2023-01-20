@@ -19,7 +19,7 @@ Some things that delineate the microprediction fund from the investment industry
    
    - Generating novel sources of information as artifacts of prediction competitions on live equity prices changes
   
-   - A more rigorous approach to defensive diversified portfolio construction (various threads here, including [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f)
+   - A more rigorous approach to defensive diversified portfolio construction. There are various threads to this research, not all public, but see for example my work on [Schur portfolios](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f). 
    
    - Incorporation of ideas from Intech's long history. 
 
