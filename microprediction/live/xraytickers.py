@@ -111,4 +111,5 @@ if __name__ == '__main__':
     tickers = get_xray_tickers()
     print('There are '+str(len(tickers))+' on github JSON ')
     print('There are ' + str(len(HARDWIRED_TICKERS)) + ' hardwired tickers ')
-    save_hardwired_tickers()
+    if False:
+        save_hardwired_tickers()
