@@ -94,13 +94,7 @@ def get_slow_yarx_stream_names():
     return [ 'slow_yarx_'+ticker+'.json' for ticker in get_xray_tickers() ]
 
 
-
-
-if __name__ == '__main__':
-    tickers = get_xray_tickers()
-    print('There are '+str(len(tickers))+' on github JSON ')
-    print('There are ' + str(len(HARDWIRED_TICKERS)) + ' hardwired tickers ')
-
+def save_culled():
     CULL_TICKERS = False
     if CULL_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key
@@ -110,4 +104,11 @@ if __name__ == '__main__':
         print(reasonable_threshold())
         from microprediction.live.iexcredentials import get_iex_key
         IEX_KEY = get_iex_key()
-        cull_xray_tickers_json(new_threshold=STOCK_THRESHOLD*1)
+        cull_xray_tickers_json(new_threshold=STOCK_THRESHOLD * 1)
+
+
+if __name__ == '__main__':
+    tickers = get_xray_tickers()
+    print('There are '+str(len(tickers))+' on github JSON ')
+    print('There are ' + str(len(HARDWIRED_TICKERS)) + ' hardwired tickers ')
+    save_hardwired_tickers()
