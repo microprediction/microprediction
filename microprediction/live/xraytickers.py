@@ -14,8 +14,8 @@ STOCK_THRESHOLD = 250*1000*1000*1000
 
 HARDWIRED_TICKERS=['aapl','abbv','abt','acn','adbe',
                    'aig','amd','amgn','amt','amzn',
-                   'avgo','axp','ba','bac','bk','blk',
-                   'bmy','brk.b','c','cat','chtr','cl',
+                   'avgo','axp','ba','bac','bk','blk','bkng',
+                   'bmy','brk-b','c','cat','chtr','cl',
                    'cmcsa','cof','cop','cost','crm','csco',
                    'cvs','dhr','dis','dow','duk','emr',
                    'exc','f','fdx','gd','ge',
@@ -67,6 +67,10 @@ def cull_xray_tickers_json(new_threshold):
     save_tickers(tickers=tickers)
 
 
+def save_hardwired_tickers():
+    save_tickers(tickers=HARDWIRED_TICKERS)
+
+
 def get_xray_tickers() -> [str]:
     """ Retrieve xray tickers """
     url = 'https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json'
@@ -95,6 +99,8 @@ def get_slow_yarx_stream_names():
 if __name__ == '__main__':
     tickers = get_xray_tickers()
     print('There are '+str(len(tickers))+' on github JSON ')
+    print('There are ' + str(len(HARDWIRED_TICKERS)) + ' hardwired tickers ')
+
     CULL_TICKERS = False
     if CULL_TICKERS:
         from microprediction.live.iexcredentials import get_iex_key
