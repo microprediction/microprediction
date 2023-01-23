@@ -1,13 +1,20 @@
 
 
 ## Instant participation
-Sorry this won't work for windows folks but for everyone else, you can merely cut and paste into a terminal the following command.  
+
+### Option 1: Open a colab notebook and run it
+
+See [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples_submission/enter_microprediction_contest.ipynb). 
+
+See the [README](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission) for limitations, but this is not a terrible way to get going. 
+
+### Option 2: Cut and paste one line terminal
+
+Rather than make just a one-off submission, the following bash script will make multiple predictions forever: 
 
      /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
 
 It would be prudent to first [read](https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_forever.sh) what it will do.
-
-### Explanation
 
 The script will:
 
