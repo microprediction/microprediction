@@ -6,7 +6,9 @@ Running a default algorithm is a good way to understand the site setup and mecha
 
 ### Option 1: Open a colab notebook and run it
 
-See [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples_submission/enter_microprediction_contest.ipynb). 
+ 1. Open [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples_submission/enter_microprediction_contest.ipynb) in Colab (blue button)
+ 2. Edit the email address
+ 3. Run it. 
 
 See the [README](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission) for limitations, but this is not a terrible way to get going. 
 
