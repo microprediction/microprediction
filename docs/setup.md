@@ -10,7 +10,7 @@ Running a default algorithm is a good way to understand the site setup and mecha
  2. Edit the email address
  3. Run it. 
 
-See the [README](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission) for limitations, but this is not a terrible way to get going. 
+See the [README](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission) for limitations (other than not working on Windows :) but this is not a terrible way to get going. 
 
 ### Option 2: A bash one-liner:
 
