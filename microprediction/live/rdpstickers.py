@@ -1,10 +1,7 @@
-import math
-from microprediction.live.iex import iex_latest_prices, iex_common_stock_with_balance_sheet_tickers
 import os
 import json
 from getjson import getjson
 from microprediction.whereami import TOP
-from microprediction.live.iex import iex_common_stock_with_balance_sheet_tickers
 from collections import OrderedDict
 
 RDPS_DESCRIPTIONS = OrderedDict({'e':'energy',
@@ -77,6 +74,5 @@ def rdps_index_fraction(prices):
 
 
 if __name__=='__main__':
-    if False:
-        save_rdps_tickers(RDPS_TICKERS)
-    print(RDPS_SHARES)
+    pass
+    # save_rdps_tickers(RDPS_TICKERS)
