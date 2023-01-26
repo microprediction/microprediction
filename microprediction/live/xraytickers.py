@@ -45,6 +45,8 @@ def create_xray_tickers_json():
     """
        Create JSON file storing "official" list of tickers using in the x-ray experiment
     """
+    from microprediction.live.iexcredentials import get_iex_key
+    IEX_KEY = get_iex_key()
     tickers = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, return_tickers=True, threshold=STOCK_THRESHOLD)
     save_tickers(tickers=tickers )
 
@@ -62,6 +64,8 @@ def cull_xray_tickers_json(new_threshold):
     """
        Create JSON file storing "official" list of tickers using in the x-ray experiment
     """
+    from microprediction.live.iexcredentials import get_iex_key
+    IEX_KEY = get_iex_key()
     all_tickers = HARDWIRED_TICKERS
     tickers = iex_common_stock_with_balance_sheet_tickers(api_key=IEX_KEY, tickers=all_tickers, return_tickers=True,threshold=new_threshold)
     save_tickers(tickers=tickers)
