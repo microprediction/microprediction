@@ -23,7 +23,9 @@ If you would like to see how *easy* it is to wield a *new kind of market* to eff
  - The microprediction platform makes it [pretty trivial](https://microprediction.github.io/microprediction/publish.html) to initiate your own bespoke market too. Just ask Thomas Hjelde Thorensen who recently [posted](https://www.linkedin.com/posts/thomashthoresen_datascience-microprediction-timeseriesforecasting-activity-6999971006274514944-lDID?utm_source=share&utm_medium=member_desktop) about his experience. 
  - [Many algorithms](https://www.microprediction.org/leaderboard.html) already competing to predict [other streams](https://www.microprediction.org/browse_streams.html) can easily predict yours too. 
  - Many more will do so in the future. Anyone can [launch a new algorithm](https://microprediction.github.io/microprediction/predict.html) using anything they like in the Julia, R or Python [ecosystem](https://www.microprediction.com/blog/popular-timeseries-packages) for example (it's a data interface). 
- - If you have a CSV with historical data (one column per variable) you can just send it to me (chat in [slack](https://microprediction.github.io/microprediction/slack.html) say).   
+
+
+Too hard? If you have a CSV with historical data (one column per variable) you can just send it to me (chat in [slack](https://microprediction.github.io/microprediction/slack.html) say). You can also just grab data, see the [reader](https://github.com/microprediction/microprediction/blob/master/microprediction/reader.py).    
 
 # The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
 
