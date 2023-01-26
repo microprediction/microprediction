@@ -1,15 +1,24 @@
 
 
 ## Instant participation
-Sorry this won't work for windows folks but for everyone else, you can merely cut and paste into a terminal the following command.  
+
+Running a default algorithm is a good way to understand the site setup and mechanics. 
+
+### Option 1: Open a colab notebook and run it
+
+ 1. Open [notebook](https://github.com/microprediction/microprediction/blob/master/notebook_examples_submission/enter_microprediction_contest.ipynb) in Colab (blue button)
+ 2. Edit the email address
+ 3. Run it. 
+
+See the [README](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission) for limitations (other than not working on Windows :) but this is not a terrible way to get going. 
+
+### Option 2: A bash one-liner:
+
+Rather than make just a one-off submission, the following bash script will make multiple predictions forever: 
 
      /bin/bash -c "$(curl -fsSL https://tinyurl.com/32jjebu9)"
 
-It would be prudent to first [read](https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_forever.sh) what it will do.
-
-### Explanation
-
-The script will:
+It would be prudent to first [read](https://raw.githubusercontent.com/microprediction/microprediction/master/shell_examples/run_default_crawler_forever.sh) what it will do, namely: 
 
 1. Create a crawling_working_dir
 2. Create and activate a virtual python environment

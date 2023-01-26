@@ -1,8 +1,12 @@
 The first colab notebook example you should try is 
 
  * [first submission](https://github.com/microprediction/microprediction/blob/master/submission_examples_die/first_submission.ipynb)
+ 
+and then maybe see
 
-That will get you an identity, and some credits. 
+ * [notebook_examples_submission](https://github.com/microprediction/microprediction/tree/master/notebook_examples_submission)
+
+That will get you an identity, and some credits, and you might even win cash. 
 
 ### Why aren't there lots of notebook examples? 
 

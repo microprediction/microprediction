@@ -28,7 +28,7 @@ There are derived feature streams
  
 
 ### Universe
-Roughly, the top twenty stocks. 
+Roughly, the top 100 stocks. 
 
     from microprediction.live.xraytickers import get_xray_tickers
     from microprediction.live.xrayportfolios import get_xray_portfolios

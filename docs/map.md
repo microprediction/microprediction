@@ -30,7 +30,7 @@
 - [glossary](https://microprediction.github.io/microprediction/glossary.html)
 
 
-For submitting predictions
+For submitting predictions:
 
 - [writekeys](https://microprediction.github.io/microprediction/writekeys.html) ... are your private identity
 - [predict](https://microprediction.github.io/microprediction/predict.html) ... using R, Python, Julia or API
