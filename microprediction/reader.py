@@ -194,6 +194,105 @@ class MicroReader(MicroConventions):
         else:
             return tickets
 
+
+    def get_predictions_robust_std(self, write_key, name, delay, verify_regular=True):
+        """ A robust estimate of std of the predictions for a given stream and horizon """
+        from microprediction.univariate.cdfvalues import robust_std
+        if verify_regular and 'z2~' in name or 'z3~' in name:
+            raise NotImplementedError('Intended for regular streams')
+        predictions = self.get_predictions(write_key=write_key, name=name, delay=delay, strip=True, consolidate=True)
+        return robust_std(predictions)
+
+    def get_z2_predictions_correlation(self, write_key, name, delay, verify_z2=True, small=1e-6) -> float:
+        """ Retrieves one single pairwise correlation implied by predictions of a z2~ stream
+
+               name:      full name of a z2~ stream
+               delay:     prediction horizon selected from self.DELAYS
+
+        """
+        if verify_z2:
+            assert 'z2~' in name, 'Expecting a z2 stream'
+
+        def expand2(z):
+            def safenorminv(p):
+                try:
+                    return self.norminv(p)
+                except Exception as e:
+                    if p<0.5:
+                       return self.norminv(small)
+                    else:
+                       return self.norminv(1-small)
+
+            ps = self.from_zcurve(zvalue=z,dim=2)
+            return [ safenorminv(p) for p in ps ]
+
+        predictions = self.get_predictions(write_key=write_key, name=name, delay=delay, strip=True, consolidate=True)
+        expanded = [ expand2(z) for z in predictions ]
+
+        if expanded:
+            x0 = [e[0] for e in expanded]
+            x1 = [e[1] for e in expanded]
+            cc = np.corrcoef(x0,x1)
+            if False:
+                print({'x0':x0[:5],'x1':x1[:5],'cc':cc})
+            return float(cc[0][1])
+        else:
+            return 0.0
+
+    def get_z2_predictions_correlation_matrix(self, write_key, names, delay, mercy=0.05, throw=False):
+        """ Given a list of parent streams, returns the corr matrix for predictions of the implied z2 child streams
+
+               names:     [ str ] list of parent streams
+               delay:     prediction horizon selected from self.DELAYS
+               mercy:     small time delay to be nice to the system.
+
+        """
+        n_dim = len(names)
+        corr_mat = np.ones(shape=(n_dim,n_dim))
+        for ndx1, name1 in enumerate(names):
+            for ndx2, name2 in enumerate(names):
+                if ndx2>ndx1:
+                    z2_name = self.zcurve_name(names=[name1,name2], delay=self.DELAYS[-1])
+                    try:
+                        try:
+                            rho = self.get_z2_predictions_correlation(write_key=write_key, name=z2_name, delay=delay)
+                        except Exception:
+                            z2_name_rev = self.zcurve_name(names=[name2, name1], delay=self.DELAYS[-1])
+                            rho = self.get_z2_predictions_correlation(write_key=write_key, name=z2_name_rev, delay=delay)
+                    except Exception as e:
+                        print(e)
+                        if throw:
+                            raise Exception('missing z2 predictions for '+str(z2_name)+' so cannot construct matrix')
+                        else:
+                            rho = np.nan
+                    corr_mat[ndx1,ndx2] = rho
+                    corr_mat[ndx2,ndx1] = rho
+                    time.sleep(mercy)
+        return corr_mat
+
+    def get_z2_predictions_robust_covariance_matrix(self, write_key, names, delay, throw=True):
+        """ Retrieves an implied covariance matrix using variances of predictions of parent streams, and correlations of z2~ children
+            This can only be used effectively if child streams exist for all pairs of names
+
+               name:      full name of a z2~ stream
+               delay:     prediction horizon selected from self.DELAYS
+
+            The result may not be positive definite, as it is a composition of pairwise estimates.
+            You can "fix" it using tools from the precise package such as skaters.covfunctions.nearest_pos_def etc
+        """
+
+        """ Given a list of parent streams, return the corr matrix for predictions of the z2 children, if they exist, otherwise np.nan """
+        D = np.diag([ self.get_predictions_robust_std(write_key=write_key, name=name, delay=delay) for name in names ])
+        corr_mat = self.get_z2_predictions_correlation_matrix(write_key=write_key, names=names, delay=delay)
+        if np.isnan(corr_mat).any() or np.isnan(D).any():
+            if throw:
+                raise Exception('Some predictions are missing or corrs are nan, so cannot create cov matrix')
+            else:
+                return np.matmul(D,D)
+        else:
+            return np.matmul(np.matmul(D,corr_mat), D)
+
+
     def get_samples(self, write_key, name, delay:int, strip=True, consolidate=True):
         """ Retrieve samples for a given horizon (i.e. predictions that have left quarantine)
 
