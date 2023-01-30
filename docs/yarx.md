@@ -26,12 +26,13 @@ There are derived feature streams
  | Vol convexity  | [stream=yarx_vlty_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_vlty_2_aapl)     | Similar, but the convexity | 
  
 ### Exogenous data streams
-Some exogenous features are being added 
+Some exogenous features are being added that tick infrequently. They may be useful in your models, however. 
 
  | Type           | Example stream                                                                            | Meaning        |
  |----------------|-------------------------------------------------------------------------------------------|----------------
  | Vol            | [stream=yarx_exog_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_exog_0_aapl)     | Vol feature |
 
+(ignore any exog_yarx streams they are deprecated)
 
 
 ### Universe
