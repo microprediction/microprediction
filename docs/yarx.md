@@ -13,8 +13,7 @@ These are intended to provide "xray vision" into the joint behaviour of stocks. 
  | Portfolios     | [stream=middling_xray_3](https://www.microprediction.org/stream_dashboard.html?stream=middling_xray_3) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) | |
  | Stocks         | [stream=slow_yarx_googl](https://www.microprediction.org/stream_dashboard.html?stream=slow_yarx_googl)    | [xraytickers.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) | [xraytickersreverse.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickersreverse.json) |
  | Portfolios     | [stream=slow_xray_3](https://www.microprediction.org/stream_dashboard.html?stream=slow_xray_3) | [portfolios.json](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xrayportfolios.json) | |
-
-
+ 
 Only 1 hour ahead predictions are considered relevant for prizes. 
 
 ### Volatility streams
@@ -26,6 +25,14 @@ There are derived feature streams
  | Vol slope      | [stream=yarx_vlty_1_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_vlty_1_aapl)     | Difference between scaled log quick and log slow inter-quartile ranges |
  | Vol convexity  | [stream=yarx_vlty_2_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_vlty_2_aapl)     | Similar, but the convexity | 
  
+### Exogenous data streams
+Some exogenous features are being added 
+
+ | Type           | Example stream                                                                            | Meaning        |
+ |----------------|-------------------------------------------------------------------------------------------|----------------
+ | Vol            | [stream=yarx_exog_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_exog_0_aapl)     | Vol feature |
+
+
 
 ### Universe
 Roughly, the top 100 stocks. 
