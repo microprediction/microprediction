@@ -10,9 +10,15 @@ What are those [rdps](https://www.microprediction.org/stream_dashboard.html?stre
 
 Only 1 hour ahead predictions are considered relevant for prizes. 
 
-For convenience:
+### Exogenous data streams
+Some exogenous features are being added that tick infrequently. They may be useful in your models, however. 
 
-    from microprediction.live.rdpstickers import get_rdps_tickers
+ | Type           | Example stream                                                                            | Meaning        |
+ |----------------|-------------------------------------------------------------------------------------------|----------------
+ | Vol            | [stream=rdps_exog_0_aapl](https://www.microprediction.org/stream_dashboard.html?stream=yarx_exog_0_aapl)     | Vol feature |
+
+(ignore any exog_rdps or exog_0_rdps streams as they are deprecated)
+
 
 ## Sector copula z2-streams 
 Reported bivariate relationships
@@ -23,9 +29,12 @@ Reported bivariate relationships
  | z2-stream        | [stream=z2\~rdps_xlp\~rdps_xlv\~3555](https://www.microprediction.org/stream_dashboard.html?stream=z2~rdps_xlp~rdps_xlv~3555)    | [copulas](https://microprediction.github.io/microprediction/copulas.html) |
  
 
+### Client helper functions
+For convenience:
 
+    from microprediction.live.rdpstickers import get_rdps_tickers
 
-
+Might be more [here](https://github.com/microprediction/microprediction/tree/master/microprediction/live). 
 
 ### Examples of predicting sector streams directly:
 
