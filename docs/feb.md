@@ -5,8 +5,8 @@ The daily prize is doubled in February only.
 
  | Place |  Prize |
  |-------|--------|
- | 1st   | $250   |
- | 2nd   | Copy of the book |
+ | 1st   | $350   |
+ | 2nd   | Copy of the [book](https://www.amazon.com/Microprediction-Building-Open-AI-Network/dp/0262047322) |
  | 3rd   | Two copies of the book |
 
 Sort of kidding. Anyone who wins in Feb will get a copy of the book whether you like it or not. Donate to your local library as you see fit. 
