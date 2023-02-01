@@ -7,8 +7,8 @@ So you have a stock signal eh? Great. Does the signal apply to one or more of [t
 The [streams](https://www.microprediction.org/browse_streams.html) at
 microprediction.org are all created by people who repeatedly publish ground truths. Algorithms
 poll these streams and the ongoing battles produce 
-beautiful community cumulative distribution functions, such as the [CDF](https://www.microprediction.org/stream_dashboard.html?stream=faang_1&horizon=3555) representing the 1-hour ahead
-forecasts of the logarithm of META price changes. There are [rewards](https://www.microprediction.com/competitions/daily) for good prediction determined daily. 
+beautiful community cumulative distribution functions, such as the [CDF](https://www.microprediction.org/stream_dashboard.html?stream=quick_yarx_goog&horizon=3555) representing the 1-hour ahead
+forecasts of the logarithm of Google price changes. There are [rewards](https://www.microprediction.com/competitions/daily) for good prediction determined daily. 
 
  - [yarx](https://microprediction.github.io/microprediction/yarx.html) ... stock changes and features
  - [rdps](https://microprediction.github.io/microprediction/rdps.html) ... sector changes and copulas
