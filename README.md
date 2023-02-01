@@ -7,7 +7,7 @@ Packages and a platform for effecting autonomous prediction using lightweight ma
 
 ### Provocations (more in the [book](https://mitpress.mit.edu/books/microprediction))
 
-- A market beat 96% of participants in the M6 contest, and the rest were lucky [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop).
+- A market beat 96% of participants in the M6 contest, and the rest were lucky ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)).
 - No timeseries model should ever be called SOTA again ([discuss](https://www.linkedin.com/posts/petercotton_timeseries-forecasting-timeseriesanalysis-activity-6987561356862353408-iy2Z?utm_source=share&utm_medium=member_desktop)).  
 - Prediction capability shouldn't be limited by the capabilities of a single mind, algorithm or company ([discuss](https://www.linkedin.com/posts/petercotton_machinelearning-reinforcementlearning-datascience-activity-6992560556863803392-FOM6?utm_source=share&utm_medium=member_desktop)) 
 - Somebody's algorithm or data will find signal in your model residuals, someday ([instructions](https://microprediction.github.io/microprediction/residuals)).
