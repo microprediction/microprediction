@@ -1,4 +1,4 @@
-A free, stable platform illustrating collective "microprediction" 
+A free, stable platform illustrating turnkey collective "microprediction" 
 
  - The [setup](https://microprediction.github.io/microprediction/setup) for instant participation.  
  - The [book](https://microprediction.github.io/building_an_open_ai_network/)-length motivation and [tldr](https://microprediction.github.io/microprediction/tldr.html). 
