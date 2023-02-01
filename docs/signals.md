@@ -17,7 +17,7 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
 
  - Create a program that produces 225 samples of the hour-ahead log price change. 
  - Presumably, these samples are nudged in the direction of your signal. 
- - Then see [prediction docs](https://microprediction.github.io/microprediction/predict.html)) for how to enter the fray. 
+ - Then see [prediction docs](https://microprediction.github.io/microprediction/predict.html) for how to programmatically send them. 
 
 
 ### Dispensing with lame excuses:
