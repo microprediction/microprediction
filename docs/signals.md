@@ -1,8 +1,8 @@
-So you have a stock signal. This page is intended to determine whether or not it is possible for you to prove this in real-time easily or not
+So you have a stock signal eh? Great. Prove it in realtime. 
 
 ### Criteria:
 
- - Does the signal apply to one or more of [these stocks](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json)?
+ - Does the signal apply to one or more of [these stocks](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) or to sectors ETFs? If not, sorry.  
 
 ### What to do: 
 
