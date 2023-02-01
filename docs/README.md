@@ -1,5 +1,6 @@
-A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). Go to [setup](https://microprediction.github.io/microprediction/setup) and participate instantly. 
+A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). 
 
+- Go to [setup](https://microprediction.github.io/microprediction/setup) and participate instantly. 
 
 ## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
@@ -26,7 +27,12 @@ beautiful community cumulative distribution functions, such as the [CDF](https:/
 forecasts of the logarithm of META price changes. There are [rewards](https://www.microprediction.com/competitions/daily) for good prediction determined daily. For a longer discussion see the [videos](https://github.com/microprediction/microprediction/blob/master/docs/videos.md) or the 
 [book](https://microprediction.github.io/building_an_open_ai_network/) collateral.  
 
+## Equity contest streams:
+Want to win the daily prize?
 
+ - [yarx](https://microprediction.github.io/microprediction/yarx.html) ... stock changes and features
+ - [rdps](https://microprediction.github.io/microprediction/rdps.html) ... sector changes and copulas
+  
 ## Not to be overlooked:
 
  - [Setup](https://microprediction.github.io/microprediction/setup.html) will get you participating immediately. 
@@ -38,12 +44,7 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
  To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
   
   
-## Equity contest streams:
-Want to win the daily $125 prize?
 
- - [yarx](https://microprediction.github.io/microprediction/yarx.html) ... stock changes and features
- - [rdps](https://microprediction.github.io/microprediction/rdps.html) ... sector changes and copulas
-  
   
 -+- 
 
