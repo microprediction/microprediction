@@ -1,6 +1,10 @@
-A free, stable platform illustrating "microprediction" ([long story](https://microprediction.github.io/building_an_open_ai_network/) or [tldr](https://microprediction.github.io/microprediction/tldr.html)). 
+A free, stable platform illustrating "microprediction" 
 
-- Go to [setup](https://microprediction.github.io/microprediction/setup) and participate instantly. 
+ - Documentation [map](https://microprediction.github.io/microprediction/map.html)
+ - The ([book](https://microprediction.github.io/building_an_open_ai_network/)-length motivation or [tldr](https://microprediction.github.io/microprediction/tldr.html)). 
+ - The [setup](https://microprediction.github.io/microprediction/setup) for instant participation.  
+
+You can predict here, or have thing predicted for you...
 
 ## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
@@ -43,8 +47,7 @@ Want to win the daily prize?
  
  To chase the daily $125 [prize](https://www.microprediction.com/competitions/daily) for prediction, it is suggested that you join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
   
-  
-
+ 
   
 -+- 
 
