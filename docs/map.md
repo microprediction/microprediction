@@ -35,6 +35,7 @@ For submitting predictions:
 
 - [writekeys](https://microprediction.github.io/microprediction/writekeys.html) ... are your private identity
 - [predict](https://microprediction.github.io/microprediction/predict.html) ... using R, Python, Julia or API
+- [signls](https://microprediction.github.io/microprediction/predict.html) ... explains what you can do with signals you claim to have. 
 - [predict-using-python](https://microprediction.github.io/microprediction/predict-using-python.html) ... outlines your options for submitting predictions.
 - [predict-using-python-microcrawler](https://microprediction.github.io/microprediction/predict-using-python-microcrawler.html) ... is the default way to create an itinerant predicting algorithm. 
 - [predict-using-python-microcrawler-modification](https://microprediction.github.io/microprediction/predict-using-python-microcrawler-modification.html) ... to crawler navigation, for example.
