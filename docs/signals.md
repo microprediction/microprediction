@@ -22,14 +22,14 @@ forecasts of the logarithm of META price changes. There are [rewards](https://ww
 
 ### Dispensing with lame excuses:
 
-- If your signal is a "long-term" signal (say 3 days) that's perfectly fine. Use that thing called [division](https://en.wikipedia.org/wiki/Division_(mathematics)) or, if necessary taking a square root. 
+- If your signal is "long-term" use that thing called [division](https://en.wikipedia.org/wiki/Division_(mathematics)) or, if necessary taking a square root. 
 
-- If you don't get the mechanics, then first just instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)). Or even manually submit predictions by modifying
+- If you don't grok the mechanics, then first just instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)). Or even manually submit predictions by modifying
 [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py). Then circle back and review the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
 
 - If you don't understand the game, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html).
 
-If you are smart enough to beat the market you are smart enough to grok a simple game. No, I'm not going to create some other bespoke mechanism to benchmark your signal. No, I'm not even going to read your p-hacked report. But I offer the following: 
+If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. But I offer the following: 
 
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
