@@ -49,7 +49,7 @@ Want to win the daily $125 prize?
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html) 
 
-View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md)
+View [source](https://github.com/microprediction/microprediction/blob/master/docs/README.md) or as [web page](https://microprediction.github.io/microprediction/)
 
 
 ![skipped](/microprediction/assets/images/skipped_statistics.png)
