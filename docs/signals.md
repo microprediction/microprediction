@@ -45,7 +45,7 @@ View [source](https://github.com/microprediction/microprediction/blob/master/doc
 
 ![where_did_my_money_go](/microprediction/assets/images/where_did_my_money_go.png)
 
-
+[Acknowledgement](https://xkcd.com/1570/)
 
 
 
