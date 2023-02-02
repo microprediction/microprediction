@@ -19,8 +19,10 @@ To get prizes and sponsors from in Python I suggest:
     prizes = getjson('https://api.microprediction.org/prizes/')
 
 ### Rules, legalities and additional background information
+Short version: you need to be in a country where Paypal operates. 
 
- - See [daily prize](https://www.microprediction.com/competitions/daily) on the .com informational site, but be aware that the APIs provide the definitive numbers. 
+ - See [daily prize](https://www.microprediction.com/competitions/daily) on the .com informational site for advice, but be aware that the APIs provide the definitive numbers and sponsor lists.  
+ - See the [full contest rules](https://www.microprediction.com/contest-rules). 
 
 
 
