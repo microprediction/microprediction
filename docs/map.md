@@ -7,7 +7,7 @@
                            |
        |----------------------------------------------|----------------------
        |                   |                          |                     |
-    predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet
+    predict  -------    writekeys, bankruptcy ----- publish             install, slack, meet, prizes
        |  |                           |                 |                videos, data, map, summary
        |  signals                     |                 |                   glossary, yarx, rdps
        |
@@ -58,6 +58,7 @@ Need help ...
 
 Equity and sector contests for real cash ...
 
+- [prizes](https://microprediction.github.io/microprediction/prizes.html) ... given out daily
 - [yarx](https://microprediction.github.io/microprediction/yarx.html) ... equity contest stream explanation
 - [rdps](https://microprediction.github.io/microprediction/rdps.html) ... equity contest stream explanation
 
