@@ -2,9 +2,10 @@
 # microprediction [tldr](https://microprediction.github.io/microprediction/tldr), [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction) and [beer money](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 Packages and a platform for effecting autonomous prediction using lightweight markets instead of models because:
 
- - *Markets are better at prediction than models - just harder to create and wield, until now.
+ - Markets are better at prediction than models - just harder to create and wield, until now.
  - Small "microprediction" ([glossary](https://microprediction.github.io/microprediction/glossary)) markets are surprisingly accurate too, and you can create one any time you like for any reason.  
 
+See [tldr](https://microprediction.github.io/microprediction/tldr). 
 ### Provocations (more in the [book](https://mitpress.mit.edu/books/microprediction))
 
 - A market beat 98% of participants in the M6 contest, and the rest were lucky ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). 
