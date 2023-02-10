@@ -17,7 +17,7 @@ format using the .get_lagged_copulas or .get_lagged_zvalues methods of the [Micr
 ### Copula estimators
 
 See 
-[Comble Mammal](https://github.com/microprediction/microprediction/blob/master/examples_scheduled_copulas/comble_mammal.py) for 
+[Comble Mammal](https://github.com/microprediction/microprediction/tree/master/submission_examples_copulas) for 
 an example of periodically fitting a Copula model to historical three-dimensional vectors extracted
 from z3~ streams. 
 
