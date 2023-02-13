@@ -1,4 +1,4 @@
-# Submitting stock signals
+# Submitting stock or volatility signals
 
 So you have a stock signal eh? Great. Does the signal apply to one or more of [these stocks](https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/xraytickers.json) or to sectors ETFs? Does it help predict either the mean *or the distribution* of log stock prices? Wonderful, unlike all those other people you spammed on Linked-In I am actually willing to form an opinion on your work and I'm even willing to help you win the [prizes](https://microprediction.github.io/microprediction/prizes.html). I do not, however, give a damn how your system performed in the past.     
 
