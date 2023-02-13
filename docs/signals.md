@@ -17,7 +17,7 @@ forecasts of the logarithm of Google price changes. There are [rewards](https://
 The platform simultaneously benchmarks both distributional and directional signals. 
 
  - Create a program that produces 225 samples of the hour-ahead log price change. 
- - Presumably, these samples are nudged in the direction of your signal. You can approximate a long or short position, if you wish.   
+ - Presumably, these samples are nudged in the direction of your directional signal or dilated according to your volatility signal. You can approximate a long or short position, if you wish, or any options payoff, more or less.   
  - Then see [prediction docs](https://microprediction.github.io/microprediction/predict.html) for how to programmatically send them. 
 
 
