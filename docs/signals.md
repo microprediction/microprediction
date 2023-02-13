@@ -23,12 +23,12 @@ The platform simultaneously benchmarks both distributional and directional signa
 
 ### Dispensing with lame excuses:
 
-  1. If your signal is "long-term" use that thing called [division](https://en.wikipedia.org/wiki/Division_(mathematics)) or, if necessary taking a square root. 
+  1. If your signal is "long-term" use that thing called [division](https://en.wikipedia.org/wiki/Division_(mathematics)) or, if necessary taking a square root. And yes, to reiterate, one can easily create approximate long or short positions in a continuous generalization of a parimutuel. Just multiply a reasonable guess of the market distribution Q(x) by your desired payoff if you can't devise a more precise way. And you need only submit once, since your submission will carry over for a day or week or month if you don't cancel it.  
 
   2. If you don't grok the mechanics, then first just instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)). Or even manually submit predictions by modifying
 [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py). Then circle back and review the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
 
- 3. If you don't understand the game or its strategy, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html). And yes, to reiterate, one can easily create approximate long or short positions in a continuous generalization of a parimutuel. Just multiply a reasonable guess of the market distribution Q(x) by your desired payoff if you can't devise a more precise way. 
+ 3. If you don't understand the game or its strategy, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html). 
 
 
 If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. For example, if you have a strategy that profits with longs and shorts and it can't also win this game (with approximate longs and shorts) then your strategy might be among the most overfitted in history. So I will not accept the response that "your strategy cannot be tested on this platform". That is clearly a nonsense position. 
