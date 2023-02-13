@@ -30,7 +30,7 @@ The platform simultaneously benchmarks both distributional and directional signa
 
 - If you don't understand the game or its strategy, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html). 
 
-- And yes, to reiterate, one can easily create approximate long or short positions in a continuous generalization of a parimutuel.
+- And yes, to reiterate, one can easily create approximate long or short positions in a continuous generalization of a parimutuel. Just multiply a reasonable guess of the market distribution Q(x) by your desired payoff if you can't devise a more precise way. 
 
 
 If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client, and the last point made above. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. It is perfectly adequate. But I offer the following: 
