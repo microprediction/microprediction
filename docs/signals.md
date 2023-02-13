@@ -33,7 +33,7 @@ The platform simultaneously benchmarks both distributional and directional signa
 - Yes, one can easily create approximate long or short positions in a continuous generalization of a parimutuel.
 
 
-If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client, or the last point above then no, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. But I offer the following: 
+If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client, and the last point made above. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. It is perfectly adequate. But I offer the following: 
 
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
