@@ -7,7 +7,7 @@ So you have a stock signal eh? Great. Does the signal apply to one or more of [t
 The [streams](https://www.microprediction.org/browse_streams.html) at
 microprediction.org are all created by people who repeatedly publish ground truths. Some are stock market streams. Others electricity, and so on.
 
-Algorithms poll these streams and the ongoing battles produce 
+Algorithms hosted and run by anyone can poll these streams and send predictions to the server. The ongoing battles produce 
 beautiful community cumulative distribution functions, such as the [CDF](https://www.microprediction.org/stream_dashboard.html?stream=quick_yarx_goog&horizon=3555) representing the 1-hour ahead
 forecasts of the logarithm of Google price changes. See these doc pages:
 
