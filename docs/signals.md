@@ -28,9 +28,9 @@ The platform simultaneously benchmarks both distributional and directional signa
 - If you don't grok the mechanics, then first just instantly participate using a default algorithm (see [setup](https://microprediction.github.io/microprediction/setup.html)). Or even manually submit predictions by modifying
 [enter_die_contest_one_off.py](https://github.com/microprediction/microprediction/blob/master/hello_world/enter_die_contest_one_off.py). Then circle back and review the [prediction docs](https://microprediction.github.io/microprediction/predict.html) for submission patterns more likely to generalize.
 
-- If you don't understand the game, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html).
+- If you don't understand the game or its strategy, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html). 
 
-- Yes, one can easily create approximate long or short positions in a continuous generalization of a parimutuel.
+- And yes, to reiterate, one can easily create approximate long or short positions in a continuous generalization of a parimutuel.
 
 
 If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client, and the last point made above. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. It is perfectly adequate. But I offer the following: 
