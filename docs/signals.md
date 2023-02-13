@@ -16,7 +16,7 @@ forecasts of the logarithm of Google price changes. There are [rewards](https://
 ### How to use this platform to prove that you have a useful signal
 
  - Create a program that produces 225 samples of the hour-ahead log price change. 
- - Presumably, these samples are nudged in the direction of your signal. 
+ - Presumably, these samples are nudged in the direction of your signal. You can create approximate long or short positions.  
  - Then see [prediction docs](https://microprediction.github.io/microprediction/predict.html) for how to programmatically send them. 
 
 
@@ -29,7 +29,10 @@ forecasts of the logarithm of Google price changes. There are [rewards](https://
 
 - If you don't understand the game, read about it [here](https://www.microprediction.com/blog/intro) or read the [prediction docs](https://microprediction.github.io/microprediction/predict.html).
 
-If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client. No, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. But I offer the following: 
+- Yes, one can easily create approximate long or short positions in a continuous generalization of a parimutuel.
+
+
+If you are smart enough to beat the market you are smart enough to grok a simple game, and API or Python client, or the last point above then no, I'm not going to create some other bespoke mechanism to benchmark your signal or do any work beyond what I've already done. But I offer the following: 
 
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
