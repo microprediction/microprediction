@@ -10,12 +10,15 @@ from tdigest import TDigest
 # Example of a prediction script that only needs to be run sporadically, since here it is assumed the
 # data comprises independent identically distributed samples.
 
+# For each stream this performs a somewhat lazy resampling, and then scales using options data
+# Think of it as a global forecast
+
+
 # Every algorithm submitting requires a WRITE_KEY. Alter this part.
 try:
     from credentials import MOBBABLE_FLEA as WRITE_KEY
 except:
     raise EnvironmentError('You need a write key. See https://www.microprediction.com/private-keys for explanation')
-
 
 
 
@@ -40,6 +43,8 @@ if __name__=='__main__':
 
     # Get the approximate volatility premium (multiplier)
     lagged_data = dict([(name,mw.get_lagged_values(name=name)) for name in NAMES ])
+    lagged_data_everyone = [x for nm,lgs in lagged_data.items() for x in lgs]  # Flatten into a global lagged list
+    lagged_data_everyone_recent = [x for nm,lgs in lagged_data.items() for x in lgs[:50]]
 
     iqrs = [ iqr(lagged_data[name]+[-1,1]) for name in NAMES ]
     median_iqr = np.median(iqrs)
@@ -47,14 +52,14 @@ if __name__=='__main__':
     iqr_multiplier = median_iqr / median_implied_vol
     print({'iqr_multiplier':iqr_multiplier})
 
-    # For each stream perform a rather lazy resampling, then scale to match the options-implied IQR
+
     def jiggle(xs):
         return [ x + 0.01*np.random.randn() for x in xs ]
 
     for name, ticker in zip(NAMES,tickers):
         # Use lagged values to boostrap an approximate distribution with a little recency weighting
-        lagged_values = lagged_data[name]
-        padded = [-1, 0, 1 ] + list(jiggle(lagged_values)) + list(jiggle(lagged_values[:50]))
+        lagged_values = 20*lagged_data[name] + 5*lagged_data_everyone_recent + lagged_data_everyone
+        padded = [-1, 0, 1 ] + list(jiggle(lagged_values))
 
         if True:
             # Rescale? Suit yourself
@@ -71,3 +76,4 @@ if __name__=='__main__':
             stream_url = 'https://www.microprediction.org/stream_dashboard.html?stream='+name.replace('.json','')+'&horizon='+str(delay)
             print(stream_url)
             time.sleep(1)  # <-- Out of consideration for the system
+
