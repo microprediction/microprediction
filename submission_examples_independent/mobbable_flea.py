@@ -54,7 +54,7 @@ if __name__=='__main__':
     for name, ticker in zip(NAMES,tickers):
         # Use lagged values to boostrap an approximate distribution with a little recency weighting
         lagged_values = lagged_data[name]
-        padded = [-1, 0, 1 ] + list(jiggle(lagged_values)) + list(jiggle(lagged_values[:5])) + list(jiggle(lagged_values[:15])) + list(jiggle(lagged_values[:50]))
+        padded = [-1, 0, 1 ] + list(jiggle(lagged_values)) + list(jiggle(lagged_values[:50]))
 
         if True:
             # Rescale? Suit yourself
