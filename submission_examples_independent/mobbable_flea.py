@@ -6,6 +6,7 @@ import time
 from getjson import getjson
 from scipy.stats import iqr
 from tdigest import TDigest
+import math
 
 # Example of a prediction script that only needs to be run sporadically, since here it is assumed the
 # data comprises independent identically distributed samples.
@@ -52,19 +53,18 @@ if __name__=='__main__':
     iqr_multiplier = median_iqr / median_implied_vol
     print({'iqr_multiplier':iqr_multiplier})
 
-
     def jiggle(xs):
         return [ x + 0.01*np.random.randn() for x in xs ]
 
     for name, ticker in zip(NAMES,tickers):
         # Use lagged values to boostrap an approximate distribution with a little recency weighting
-        lagged_values = 20*lagged_data[name] + 5*lagged_data_everyone_recent + lagged_data_everyone
+        lagged_values = 30*lagged_data[name] + 5*lagged_data_everyone_recent + lagged_data_everyone
         padded = [-1, 0, 1 ] + list(jiggle(lagged_values))
 
         if True:
             # Rescale? Suit yourself
             scale = (implied_vols[ticker]/median_implied_vol)*(median_iqr/iqr(padded))
-            padded = [ scale*x for x in padded ]
+            padded = [ math.sqrt(scale)*x for x in padded ]
 
         # Borrow tdigest for percentiles
         digest = TDigest()
