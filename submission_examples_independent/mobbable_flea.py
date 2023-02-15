@@ -46,4 +46,3 @@ if __name__=='__main__':
                 stream_url = 'https://www.microprediction.org/stream_dashboard.html?stream='+name.replace('.json','')+'&horizon='+str(delay)
                 print(stream_url)
                 time.sleep(1)  # <-- Out of consideration for the system
-
