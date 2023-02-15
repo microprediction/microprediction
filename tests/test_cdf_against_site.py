@@ -3,6 +3,7 @@ from microprediction.set_config import MICRO_TEST_CONFIG
 
 BASE_URLS = MICRO_TEST_CONFIG['BASE_URLS'][:2]
 
+# CDF is deprecated
 
 def dont_test_get_cdf_die():
     for base_url in BASE_URLS:
@@ -30,4 +31,4 @@ def test_die_cdf():
 
 
 if __name__=='__main__':
-    test_die_cdf()
+    dont_test_die_cdf()
