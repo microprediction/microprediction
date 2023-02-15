@@ -1,4 +1,4 @@
-Ways to retrieve data for research, or whatever. 
+Ways to retrieve data from the [live streams](https://www.microprediction.org/browse_streams.html) for research, or whatever. 
 
 ### CSV 
 Links uch as [https://csv.microprediction.org/lagged?name=die.json](https://csv.microprediction.org/lagged?name=die.json) download
