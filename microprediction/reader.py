@@ -229,9 +229,13 @@ class MicroReader(MicroConventions):
         predictions = self.get_predictions(write_key=write_key, name=name, delay=delay, strip=True, consolidate=True)
         expanded = [ expand2(z) for z in predictions ]
 
+        def winsorize(z):
+            import math
+            return 5*math.tanh(z/5)
+        
         if expanded:
-            x0 = [e[0] for e in expanded]
-            x1 = [e[1] for e in expanded]
+            x0 = [ winsorize(e[0]) for e in expanded]
+            x1 = [ winsorize(e[1]) for e in expanded]
             cc = np.corrcoef(x0,x1)
             if False:
                 print({'x0':x0[:5],'x1':x1[:5],'cc':cc})
