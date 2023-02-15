@@ -1,4 +1,6 @@
-What are those [yarx](https://www.microprediction.org/stream_dashboard.html?stream=yarx_1n) streams? What about [xray](https://www.microprediction.org/stream_dashboard.html?stream=xray_182)? An approximate answer is the [code](https://github.com/microprediction/microprediction/blob/master/stream_examples_xray/xray.py) that generates them but actually that isn't quite the code that runs. There are prizes on offer for aggregate performance as you may have noticed on the [sub-leaderboards](https://www.microprediction.org/leaderboard.html). 
+Are you into [volatility watching](https://medium.com/@microprediction/the-nerdiest-way-to-watch-googles-week-of-volatility-298e792eb007)? Are you looking for the short end of the curve ... shorter than one day? You found it! Peek at [yarx](https://www.microprediction.org/stream_dashboard.html?stream=yarx_1n) streams and perhaps [xray](https://www.microprediction.org/stream_dashboard.html?stream=xray_182) too. An approximate description is the [code](https://github.com/microprediction/microprediction/blob/master/stream_examples_xray/xray.py) that generates them but TBH that isn't quite the code that runs. 
+
+Oh yeah. There are prizes on offer for aggregate performance as you may have noticed on the [sub-leaderboards](https://www.microprediction.org/leaderboard.html). 
 
 
 ## Stock and protfolio streams
