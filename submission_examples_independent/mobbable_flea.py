@@ -1,14 +1,14 @@
 from microprediction import MicroWriter
-from microprediction.live.xraytickers import get_xray_tickers
-from microprediction.live.xrayportfolios import XRAY_PORTFOLIO_NAMES
+from microprediction.live.rdpstickers import get_rdps_tickers, RDPS_GENERIC_NAMES
 import numpy as np
 from microconventions.stats_conventions import StatsConventions
 import time
+from getjson import getjson
+from scipy.stats import iqr
+from tdigest import TDigest
 
 # Example of a prediction script that only needs to be run sporadically, since here it is assumed the
-# data comprises independent identically distributed samples
-# Example of a prediction script that only needs to be run sporadically, since here it is assumed the
-# data comprises independent identically distributed samples
+# data comprises independent identically distributed samples.
 
 # Every algorithm submitting requires a WRITE_KEY. Alter this part.
 try:
@@ -18,31 +18,56 @@ except:
 
 
 
-def yarx_names():
-    return [ 'yarx_'+ticker.replace('.','-')+'.json' for ticker in get_xray_tickers() ]
 
 if __name__=='__main__':
-    for speed in ['quick_']:
-        YARX_NAMES = [nm.replace('yarx_',speed+'yarx_') for nm in yarx_names()]
-        XRAY_NAMES = [ nm.replace('yarx_',speed+'yarx_') for nm in XRAY_PORTFOLIO_NAMES[:15] ]
-        NAMES = YARX_NAMES + XRAY_NAMES
+    NAMES = ['rdps_spy.json'] + RDPS_GENERIC_NAMES
+    print({'NAMES':NAMES})
 
-        # Create a writer, and give the system a backlink for the convenience of others
-        mw = MicroWriter(write_key=WRITE_KEY)
-        ANIMAL = mw.animal_from_key(WRITE_KEY)
-        REPO = 'https://github.com/microprediction/microprediction/blob/master/submission_examples_independent/' + ANIMAL.lower().replace(
-            ' ', '_') + '.py'
-        mw.set_repository(url=REPO)
+    # Create a writer, and give the system a backlink for the convenience of others (edit the repo to your own if you like)
+    mw = MicroWriter(write_key=WRITE_KEY)
+    ANIMAL = mw.animal_from_key(WRITE_KEY)
+    REPO = 'https://github.com/microprediction/microprediction/blob/master/submission_examples_independent/' + ANIMAL.lower().replace(
+        ' ', '_') + '.py'
+    mw.set_repository(url=REPO)
 
-        # Loop over streams, making predictions
-        for name in NAMES:
-            lagged_values = mw.get_lagged_values(name=name)
-            padded = [-1, 0, 1 ] + list(lagged_values) + list(lagged_values[:5]) + list(lagged_values[:15])
-            devo = np.std(padded)
-            values = sorted( [ devo*mw.norminv(p) +  0.001 * np.random.randn() for p in mw.percentiles()] )
-            nudged = StatsConventions.nudged(values)
-            for delay in mw.DELAYS[-1:]:
-                mw.submit(name=name, values=values, delay=delay)
-                stream_url = 'https://www.microprediction.org/stream_dashboard.html?stream='+name.replace('.json','')+'&horizon='+str(delay)
-                print(stream_url)
-                time.sleep(1)  # <-- Out of consideration for the system
+    # Grab stale implied vols
+    implied_vols = getjson('https://raw.githubusercontent.com/microprediction/microprediction/master/microprediction/live/etfimpliedvols.json')
+
+
+    # Infer tickers
+    tickers = [ name.split('_')[1].replace('.json','') for name in NAMES ]
+    print(tickers)
+
+    # Get the approximate volatility premium (multiplier)
+    lagged_data = dict([(name,mw.get_lagged_values(name=name)) for name in NAMES ])
+
+    iqrs = [ iqr(lagged_data[name]+[-1,1]) for name in NAMES ]
+    median_iqr = np.median(iqrs)
+    median_implied_vol = np.median(list(implied_vols.values()))
+    iqr_multiplier = median_iqr / median_implied_vol
+    print({'iqr_multiplier':iqr_multiplier})
+
+    # For each stream perform a rather lazy resampling, then scale to match the options-implied IQR
+    def jiggle(xs):
+        return [ x + 0.01*np.random.randn() for x in xs ]
+
+    for name, ticker in zip(NAMES,tickers):
+        # Use lagged values to boostrap an approximate distribution with a little recency weighting
+        lagged_values = lagged_data[name]
+        padded = [-1, 0, 1 ] + list(jiggle(lagged_values)) + list(jiggle(lagged_values[:5])) + list(jiggle(lagged_values[:15])) + list(jiggle(lagged_values[:50]))
+
+        if True:
+            # Rescale? Suit yourself
+            scale = (implied_vols[ticker]/median_implied_vol)*(median_iqr/iqr(padded))
+            padded = [ scale*x for x in padded ]
+
+        # Borrow tdigest for percentiles
+        digest = TDigest()
+        digest.batch_update(padded)
+        values = [ digest.percentile(p*100) for p in mw.percentiles() ]
+        nudged = StatsConventions.nudged(values)  # <-- Make tiny changes to stay clear of others' points
+        for delay in mw.DELAYS[-1:]:
+            mw.submit(name=name, values=nudged, delay=delay)
+            stream_url = 'https://www.microprediction.org/stream_dashboard.html?stream='+name.replace('.json','')+'&horizon='+str(delay)
+            print(stream_url)
+            time.sleep(1)  # <-- Out of consideration for the system
