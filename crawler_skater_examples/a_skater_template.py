@@ -47,7 +47,7 @@ class CompetitiveSkatingFox(SkatingFox):
                                 'electricity' in name) or ('ricky' in name))
 
     def include_delay(self, delay=None, name=None, **ignore):
-        return delay >= self.delays[2]
+        return delay >= self.DELAYS[2]
 
 # 4. Instantiate and run the crawler.
 # If this script ever errors out, the crawler can recover somewhat gracefully.
