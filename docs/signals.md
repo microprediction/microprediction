@@ -41,7 +41,7 @@ But I offer the following:
  - [Slack](https://microprediction.github.io/microprediction/slack.html) channel and Friday google [meet](https://microprediction.github.io/microprediction/meet.html).
  - [Glossary](https://microprediction.github.io/microprediction/glossary.html) and [summary](https://microprediction.github.io/microprediction/summary.html) of key API commands.
  - [Video](https://microprediction.github.io/microprediction/videos.html) tutorials
- - Join the [slack](https://microprediction.github.io/microprediction/slack.html) or Friday [meet](https://microprediction.github.io/microprediction/meet.html) so we can help you get started.
+
   
   
 -+- 
