@@ -4,7 +4,7 @@ A free, stable platform illustrating turnkey collective "microprediction"
  - The [book](https://microprediction.github.io/building_an_open_ai_network/)-length motivation and [tldr](https://microprediction.github.io/microprediction/tldr.html). 
  - The documentation [map](https://microprediction.github.io/microprediction/map.html)
 
-You can predict here, or have things predicted for you...
+You can predict here, or have things predicted for you. Even [chatgpt groks it](https://github.com/microprediction/microprediction/blob/master/notebook_examples_blog/chatgpt_microprediction_1.ipynb). 
 
 ## 1. Turnkey live prediction (see [publishing docs](https://microprediction.github.io/microprediction/publish.html))
 
