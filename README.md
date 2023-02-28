@@ -3,7 +3,7 @@
 Packages and a platform for effecting autonomous prediction using lightweight markets instead of models because:
  
  - Markets are better at prediction than models - just harder to create and wield, until now.
- - Small "microprediction" ([glossary](https://microprediction.github.io/microprediction/glossary)) markets are surprisingly accurate too, and you can create one any time you like.  
+ - Small "microprediction" ([glossary](https://microprediction.github.io/microprediction/glossary)) markets are surprisingly accurate too, and even [chatGPT can create one](https://medium.com/geekculture/chatgpt-acquires-realtime-operational-intelligence-23675d2e0f3b).
 
 See [tldr](https://microprediction.github.io/microprediction/tldr) or just [instantly participate](https://microprediction.github.io/microprediction/setup) and you'll grok it, I promise.  
 ### Provocations (more in the [book](https://mitpress.mit.edu/books/microprediction))
