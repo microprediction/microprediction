@@ -8,7 +8,7 @@ def yarx_moving() -> bool :
     from microprediction import MicroReader
     mr = MicroReader()
     lagged_values, lagged_times = mr.get_lagged_values_and_times(name='quick_yarx_aapl.json')
-    return (time.time()-lagged_times[0])<10*60
+    return (time.time()-lagged_times[0])<15*60
 
 
 def eastern(as_str=True):
