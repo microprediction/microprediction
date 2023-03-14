@@ -1,14 +1,22 @@
 import datetime
 
-def yarx_moving() -> bool :
+def yarx_moving(test_name='quick_yarx_appl.json', failover_name='quick_yarx_amd.json') -> bool :
     """
-        Slightly lagged proxy for the market being open
+        A lagged indicator of whether the market is open
     """
     import time
     from microprediction import MicroReader
     mr = MicroReader()
-    lagged_values, lagged_times = mr.get_lagged_values_and_times(name='quick_yarx_aapl.json')
-    return (time.time()-lagged_times[0])<15*60
+    for name in [test_name,failover_name]:
+        try:
+            lagged_values, lagged_times = mr.get_lagged_values_and_times(name=name)
+            name_moving = (time.time()-lagged_times[0])<15*60
+            if name_moving:
+                return True
+        except:
+            pass
+    return False 
+        
 
 
 def eastern(as_str=True):
