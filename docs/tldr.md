@@ -5,7 +5,7 @@ Markets are:
   1. Better than models for short horizon prediction, but 
   2. Harder to wield, until now
 
-If you watch this [video](https://www.youtube.com/watch?v=5NIyCJC9ehQ) and lean towards Hayek, not Keynes, then read on. 
+[Hayek](https://www.youtube.com/watch?v=GTQnarzmTOc) meets ML, if you will. 
 
 **1 Efficacy of existing markets** Yup, if you are not remotely sympathetic to the first assertion, then space is too limited here but by all means join this [discussion](https://www.linkedin.com/posts/petercotton_tldr-activity-6983896509490610176-JTJB/?utm_source=share&utm_medium=member_desktop), or better, [this one](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) where I revealed my hijacking of the M6 Forecasting contest using a market. My contribution to the age old question of market efficacy (in the specific context of realtime operational intelligence) is also the subject of my [book](https://mitpress.mit.edu/9780262047326/microprediction/) which you are welcome to [listen to](https://github.com/microprediction/building_an_open_ai_network/tree/main/docs/assets/audio), at least in part.   
 
