@@ -14,3 +14,6 @@ Incorporating microprediction into an agile approach to data management can lead
 5. **Data-driven decision-making**: Agile development emphasizes evidence-based decision-making, and microprediction provides a data-driven approach to making predictions and decisions, ensuring that decisions are rooted in the best available information.
 
 By integrating microprediction into an agile approach to data management, organizations can create a more adaptive, collaborative, and data-driven environment that is well-suited to the rapidly changing landscape of today's data-driven world.
+
+
+See the [book](https://mitpress.mit.edu/9780262047326/microprediction/)
