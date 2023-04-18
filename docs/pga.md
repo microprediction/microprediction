@@ -11,12 +11,12 @@
 
 ### Definition of "good" etc
 
-| Category | Skill Range                              | Description                                          |
-|----------|------------------------------------------|------------------------------------------------------|
-| great    | \(1.34 \leq \text{skill} \leq 2.0\)      | Player's skill is within 0.33 of 1.67                |
-| good     | \(0.67 \leq \text{skill} \leq 1.33\)     | Player's skill is within 0.33 of 1.0                 |
-| okay     | \(-0.25 \leq \text{skill} \leq 0.25\)    | Player's skill is within 0.25 of 0.0                 |
-| bad      | \(-1.33 \leq \text{skill} \leq -0.67\)   | Player's skill is within 0.33 of -1.0                |
+| Category | Skill Range                           | Description                                          |
+|----------|---------------------------------------|------------------------------------------------------|
+| great    | 1.34 ≤ skill ≤ 2.0                    | Player's skill is within 0.33 of 1.67                |
+| good     | 0.67 ≤ skill ≤ 1.33                   | Player's skill is within 0.33 of 1.0                 |
+| okay     | -0.25 ≤ skill ≤ 0.25                  | Player's skill is within 0.25 of 0.0                 |
+| bad      | -1.33 ≤ skill ≤ -0.67                 | Player's skill is within 0.33 of -1.0                |
 
 
 -+- 
