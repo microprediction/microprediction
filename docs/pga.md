@@ -1,12 +1,14 @@
 ## PGA Tour streams
 
 
-| Description             | Example                                                                                                | Description                                      |
+| Shorthand             | Example                                                                                                | Description                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| Scores by all players   | [tour_11_great.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_11_great)          | Next net hole score by a great player on hole 11     |
+| Scores by greats players   | [tour_11_great.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_11_great)          | Next net hole score by a great player on hole 11     |
 | Scores by good players  | [tour_18_good.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_18_good)     | Next net hole score by any good player on hole 18|
 | Scores by okay players   | [tour_17_okay.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_17_okay)      | Next net hole score by any okay player on hole 17 |
 | Scores by bad players   | [tour_13_bad.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_13_bad)      | Next net hole score by any bad player on hole 17 |
+| Scores by any player   | [tour_7.json](https://www.microprediction.org/stream_dashboard.html?stream=tour_7)      | Next net hole score by any player on hole 7 |
+
 
 
 ### Definition of "good" etc
