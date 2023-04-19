@@ -43,6 +43,14 @@ Also:
          return 'pga_contender_'+str(contender_ndx)+'_hole_'+str(hole)+'.json'
 
 
+### Approximate player skill (contenders only)
+
+To get a rough idea of player ability:
+
+   - https://micropredictionmiscstreams.pythonanywhere.com/contenders/form/sg_total
+   
+
+
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
