@@ -28,13 +28,18 @@ See the updated contenders [names](https://micropredictionmiscstreams.pythonanyw
     from getjson import getjson
     contenders = getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/name')
     
-Once you know who the contenders are (fixed daily):    
+There are contender streams where the actual score is published repeatedly to reward the truth    
+
+        def contender_stream_name(contender_ndx, hole):
+            return 'pga_contender_'+str(contender_ndx)+'_hole_'+str(hole)+'.json'
+
+However predictions are also useful and ground truths from other players playing the holes are included to try to create a mix between
+the two. 
 
 
 | Shorthand             | Example                                                                                                | Description                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-|    | [pga_contender_1_hole_11.json](https://www.microprediction.org/stream_dashboard.html?stream=pga_contender_1_hole_11)          | The score on hole 11 by the 2nd listed condender    |
-
+| Player 1 hole 11   | [pga_contender_1_hole_11.json](https://www.microprediction.org/stream_dashboard.html?stream=pga_contender_1_hole_11)          | The score on hole 11 by the 2nd listed condender, but also other scores by other players on the same hole prior to that    |
 
 
 
