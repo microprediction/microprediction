@@ -2,7 +2,7 @@
 from getjson import getjson
 
 def pga_contenders():
-    return getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders')
+    return getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/names')
   
   
 def contender_index(player_name, contenders=None):
