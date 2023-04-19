@@ -21,6 +21,27 @@
 | bad      | -1.33 ≤ skill ≤ -0.67                 | Player's skill is within 0.33 of -1.0                |
 
 
+### Contender hole streams
+
+See the updated contenders [names](https://micropredictionmiscstreams.pythonanywhere.com/contenders/names) and [scores](https://micropredictionmiscstreams.pythonanywhere.com/contenders/scores). For instance:
+
+    from getjson import getjson
+    contenders = getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/name')
+    
+Once you know who the contenders are (fixed daily):    
+
+
+| Shorthand             | Example                                                                                                | Description                                      |
+|-------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+|    | [pga_contender_1_hole_11.json](https://www.microprediction.org/stream_dashboard.html?stream=pga_contender_1_hole_11)          | The score on hole 11 by the 2nd listed condender    |
+
+
+
+
+
+
+
+
 -+- 
 
 Documentation [map](https://microprediction.github.io/microprediction/map.html)
