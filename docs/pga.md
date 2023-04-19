@@ -1,5 +1,6 @@
 ## PGA Tour streams
 
+There are streams intended to provide a handle on the course:
 
 | Shorthand             | Example                                                                                                | Description                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------|
@@ -23,18 +24,7 @@
 
 ### Contender hole streams
 
-See the updated contenders [names](https://micropredictionmiscstreams.pythonanywhere.com/contenders/names) and [scores](https://micropredictionmiscstreams.pythonanywhere.com/contenders/scores). For instance:
-
-    from getjson import getjson
-    contenders = getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/name')
-    
-There are contender streams where the actual score is published repeatedly to reward the truth    
-
-        def contender_stream_name(contender_ndx, hole):
-            return 'pga_contender_'+str(contender_ndx)+'_hole_'+str(hole)+'.json'
-
-However predictions are also useful and ground truths from other players playing the holes are included to try to create a mix between
-the two. 
+There are also streams intended to serve as something better than a leaderboard. There are contender streams where the actual score by a particular player on a particular hole is published repeatedly when that truth is revealed. However prior to that, scores from other players playing the hole previously are also included. This is an experimental hybrid setup. 
 
 
 | Shorthand             | Example                                                                                                | Description                                      |
@@ -42,9 +32,15 @@ the two.
 | Player 1 hole 11   | [pga_contender_1_hole_11.json](https://www.microprediction.org/stream_dashboard.html?stream=pga_contender_1_hole_11)          | The score on hole 11 by the 2nd listed condender, but also other scores by other players on the same hole prior to that    |
 
 
+See the updated contenders [names](https://micropredictionmiscstreams.pythonanywhere.com/contenders/names) and [scores](https://micropredictionmiscstreams.pythonanywhere.com/contenders/scores). For instance:
 
+    from getjson import getjson
+    contenders = getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/name')
 
+Also:
 
+    def contender_stream_name(contender_ndx, hole):
+         return 'pga_contender_'+str(contender_ndx)+'_hole_'+str(hole)+'.json'
 
 
 -+- 
