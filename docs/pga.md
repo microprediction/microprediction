@@ -47,7 +47,11 @@ Also:
 
 To get a rough idea of player ability:
 
-   - https://micropredictionmiscstreams.pythonanywhere.com/contenders/form/sg_total
+   - [sg_total](https://micropredictionmiscstreams.pythonanywhere.com/contenders/form/sg_total)
+
+for example:
+
+    ability = getjson('https://micropredictionmiscstreams.pythonanywhere.com/contenders/form/sg_total')
    
 
 
