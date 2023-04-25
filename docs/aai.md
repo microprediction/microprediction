@@ -4,13 +4,13 @@ A new initiative designed to bring together all sides in harmony.
 
 ### Why do we need AAI? 
 
-Artifical Intelligence (AI) is clearly just hype. This puts humanity at risk. Or it doesn't. Nobody can decidee. Calling it 
+Artifical Intelligence (AI) is clearly just hype. This puts humanity at risk. Or it doesn't. Nobody can decide. But calling it 
 Artificial Artificial Intelligence (AAI) avoids any possible confusion. 
-Look, AI can't really think because it is artificial. End of story. But with AAI expectations are set:
 
-1. Artificial artificial output avoids the perception that everything to come out of an LLM should be true. 
-2. Things that act intelligently across a stunningly broad spectrum of tasks can be labelled AAI without the risk of enraging anyone. 
-3. Human egos are absolutely safe in all other respects. 
+Look, AI can't really think because it is artificial. Just backprop. End of story. With AAI expectations are set:
+
+1. Things that act intelligently across a stunningly broad spectrum of tasks can be labelled AAI without the risk of enraging anyone. 
+2. Human egos are absolutely safe in all other respects. 
 
 
 ### But it already says "artificial" in AI
