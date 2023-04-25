@@ -22,13 +22,14 @@ Oh right, yes so it does.
 Yeah that too. Apologies to Bezos. 
 
 
+### Where can I learn more about AAI? 
 
-
+It isn't clear that humans can truly learn. But if you would like to build algorithms that fake it:
 
  | Purpose                                                   | Time                | Procedure                                                    |
  |-----------------------------------------------------------|---------------------|--------------------------------------------------------------|
  | Individual help getting started                           |  11:30am Friday EST | Send a cal invite to peter dot cotton at microprediction.com |
- | General banter, see below.                                |  Noon Friday EST    | See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.                                              |
+ | General stochastic banter, see below.                     |  Noon Friday EST    | See the [slack](https://microprediction.github.io/microprediction/slack.html) channel for invite and cancellations.                                              |
  
 
 ### See also 
