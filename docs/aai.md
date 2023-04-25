@@ -2,42 +2,30 @@
 
 A new initiative designed to bring together all sides in harmony. 
 
-### Why do we need AAI? 
-The problem:
-
-- Artifical Intelligence (AI) is clearly just hype. 
-- This puts humanity at risk. Or it doesn't. Nobody can decide. 
-- A hundred million people want to use AI, but some worry that they don't know what they are doing with it. 
-- Or we should regulate it away.
-- Or we should even regulate a different approach to AI that is completely unproven. 
-- Or we should regulate away a path to accurate AI that runs through inaccurate AI. 
-
-We can have the best of all worlds by calling it Artificial Artificial Intelligence (AAI) and avoiding any possible confusion. 
-
 ### A quick review of the argument against machines being intelligent
 
 - AI can't really think because it is artificial. 
 - Just backprop or simple rules.
-- And you are a hype-monkey if you suggest otherwise. 
 - And you are so irresponsible for suggesting that a machine could do lots of different things quite intelligently.
 - And Theranos, and blockchain.   
 - And something really, really vague about quantum computing from Penrose
-- And some examples of things ChatGPT got wrong last year. Oh wait, [most are fixed](https://microprediction.medium.com/remind-me-again-why-large-language-models-cant-think-acab12da63de) already.   
+- And some examples of things ChatGPT got wrong last year. Oh wait, [most are fixed](https://microprediction.medium.com/remind-me-again-why-large-language-models-cant-think-acab12da63de) already. 
+- And some upset people from vague fields whose definitions never really helped anyone build anything useful.   
 
 ### The hype problem
 
 - Humanity is as dumb as a rock so you have an obligation to avoid them getting confused...
 - ... by all the people claiming that more than "sparks of AGI".
-- Oh wait, nobody can actually point to a single paper claiming more than sparks of AGI.
-- But its a massive hype problem, clearly. 
-- Caused by computer scientists, statisticians, or other abstraction-and oversimplification-oriented individuals [source](https://www.linkedin.com/feed/update/urn:li:activity:7056580712321216512?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056590319382884352%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056638793025495041%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287056590319382884352%2Curn%3Ali%3Aactivity%3A7056580712321216512%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287056638793025495041%2Curn%3Ali%3Aactivity%3A7056580712321216512%29).
-- Just ask the 100 million users of ChatGPT. They are all idiots.  
-- I'm probably missing something
+- ... except they aren't. Nobody can actually point to a single paper making outrageous claims, more than "sparks of AGI".
+- But its a massive hype problem, clearly ... 
+- ... caused by "computer scientists, statisticians, or other abstraction-and oversimplification-oriented individuals" ([source](https://www.linkedin.com/feed/update/urn:li:activity:7056580712321216512?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056590319382884352%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056638793025495041%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287056590319382884352%2Curn%3Ali%3Aactivity%3A7056580712321216512%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287056638793025495041%2Curn%3Ali%3Aactivity%3A7056580712321216512%29)). 
+- For example the 100 million users of ChatGPT are presumably all idiots. 
 
-### Let's all get along: 
+### Let's all get along by calling it Artificial Artificial Intelligence
 
 1. Things that act intelligently across a stunningly broad spectrum of tasks can be labelled AAI without the risk of enraging anyone. 
 2. Human egos are absolutely safe in all other respects. 
+3. Mostly useless fields won't be forced into contorsion as performance steadily improves. 
 
 
 ### FAQ:
