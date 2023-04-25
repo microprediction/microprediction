@@ -79,4 +79,5 @@ There are other ways. Look for CODE badges on [leaderboards](https://www.micropr
   - [office hours](https://microprediction.github.io/microprediction/meet.html)
   - [papers, articles etc](https://github.com/microprediction/home)
 
-
+# Acknowledgements
+The live microprediction platform is supported by [Intech Investments](https://www.intechinvestments.com/) and not, as rumoured, the [Center for Artificial Artificial Intelligence](https://microprediction.github.io/microprediction/aai). 
