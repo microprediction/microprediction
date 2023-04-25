@@ -14,13 +14,13 @@ The problem:
 
 We can have the best of all worlds by calling it Artificial Artificial Intelligence (AAI) and avoiding any possible confusion. 
 
-### A quick review of the argument against AGI
+### A quick review of the argument against machines being intelligent
 
 - AI can't really think because it is artificial. 
 - Just backprop or simple rules.
 - And you are a hype-monkey if you suggest otherwise. 
 - And you are so irresponsible for suggesting that a machine could do lots of different things quite intelligently.
-- And Theranos, and blockchain.  
+- And Theranos, and blockchain.   
 - And something really, really vague about quantum computing from Penrose
 - And some examples of things ChatGPT got wrong last year. Oh wait, [most are fixed](https://microprediction.medium.com/remind-me-again-why-large-language-models-cant-think-acab12da63de) already.   
 
@@ -30,6 +30,7 @@ We can have the best of all worlds by calling it Artificial Artificial Intellige
 - ... by all the people claiming that more than "sparks of AGI".
 - Oh wait, nobody can actually point to a single paper claiming more than sparks of AGI.
 - But its a massive hype problem, clearly. 
+- Caused by computer scientists, statisticians, or other abstraction-and oversimplification-oriented individuals [source](https://www.linkedin.com/feed/update/urn:li:activity:7056580712321216512?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056590319382884352%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7056580712321216512%2C7056638793025495041%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287056590319382884352%2Curn%3Ali%3Aactivity%3A7056580712321216512%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287056638793025495041%2Curn%3Ali%3Aactivity%3A7056580712321216512%29).
 - Just ask the 100 million users of ChatGPT. They are all idiots.  
 - I'm probably missing something
 
