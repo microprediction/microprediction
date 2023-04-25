@@ -8,17 +8,23 @@ The problem:
 - Artifical Intelligence (AI) is clearly just hype. 
 - This puts humanity at risk. Or it doesn't. Nobody can decide. 
 - A hundred million people want to use AI, but some worry that they don't know what they are doing with it. 
-- Calling it Artificial Artificial Intelligence (AAI) avoids any possible confusion. 
+- Or we should regulate it away.
+- Or we should even regulate a different approach to AI that is completely unproven. 
+- Or we should regulate away a path to accurate AI that runs through inaccurate AI. 
 
-A quick review of the reductionist argument:
+We can have the best of all worlds by calling it Artificial Artificial Intelligence (AAI) and avoiding any possible confusion. 
+
+### A quick review of the argument against AGI
 
 - AI can't really think because it is artificial. 
 - Just backprop or simple rules.
 - And you are a hype-monkey if you suggest otherwise. 
-- And you are so irresponsible for suggesting that a machine could do lots of different things quite intelligently
-- Because humanity is as dumb as a rock so you have an obligation to avoid them getting confused. 
+- And you are so irresponsible for suggesting that a machine could do lots of different things quite intelligently.
+- And Theranos, and blockchain, and all that. 
 - And something really, really vague about quantum computing from Penrose
-- And some examples of things ChatGPT got wrong last year. 
+- And some examples of things ChatGPT got wrong last year. Oh wait, [most are fixed](https://microprediction.medium.com/remind-me-again-why-large-language-models-cant-think-acab12da63de) already.   
+- But humanity is as dumb as a rock so you have an obligation to avoid them getting confused ...
+- By all the people claiming that more than "sparks of AGI" (so many that none can be named). 
 - I'm probably missing something
 
 Let's all get along: 
