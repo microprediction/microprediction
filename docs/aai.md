@@ -20,14 +20,20 @@ We can have the best of all worlds by calling it Artificial Artificial Intellige
 - Just backprop or simple rules.
 - And you are a hype-monkey if you suggest otherwise. 
 - And you are so irresponsible for suggesting that a machine could do lots of different things quite intelligently.
-- And Theranos, and blockchain, and all that. 
+- And Theranos, and blockchain.  
 - And something really, really vague about quantum computing from Penrose
 - And some examples of things ChatGPT got wrong last year. Oh wait, [most are fixed](https://microprediction.medium.com/remind-me-again-why-large-language-models-cant-think-acab12da63de) already.   
-- But humanity is as dumb as a rock so you have an obligation to avoid them getting confused ...
-- By all the people claiming that more than "sparks of AGI" (so many that none can be named). 
+
+### The hype problem
+
+- Humanity is as dumb as a rock so you have an obligation to avoid them getting confused
+- By all the people claiming that more than "sparks of AGI".
+- Oh wait, nobody can actually point to a single paper claiming more than sparks of AGI.
+- But its a massive hype problem.
+- Just ask the 100 million users of ChatGPT. They are all idiots.  
 - I'm probably missing something
 
-Let's all get along: 
+### Let's all get along: 
 
 1. Things that act intelligently across a stunningly broad spectrum of tasks can be labelled AAI without the risk of enraging anyone. 
 2. Human egos are absolutely safe in all other respects. 
