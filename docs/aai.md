@@ -26,10 +26,10 @@ We can have the best of all worlds by calling it Artificial Artificial Intellige
 
 ### The hype problem
 
-- Humanity is as dumb as a rock so you have an obligation to avoid them getting confused
-- By all the people claiming that more than "sparks of AGI".
+- Humanity is as dumb as a rock so you have an obligation to avoid them getting confused...
+- ... by all the people claiming that more than "sparks of AGI".
 - Oh wait, nobody can actually point to a single paper claiming more than sparks of AGI.
-- But its a massive hype problem.
+- But its a massive hype problem, clearly. 
 - Just ask the 100 million users of ChatGPT. They are all idiots.  
 - I'm probably missing something
 
