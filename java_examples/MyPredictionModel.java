@@ -1,10 +1,11 @@
-//The program below is to send an HTTP request to the server of micropredictions to check for streams (sending request to check our stream)
+//The program below is to send an HTTP request to the server of micropredictions to check for lagged values of streams. 
 import java.io.BufferedReader; import java.io.InputStreamReader; import java.net.HttpURLConnection; import java.net.URL;
 
 public class MyPredictionModel {
     public static void main(String[] args) {
       try{
-      //Defining a URL string that includes the stream name and write key. And also horizon, which is an hour for the code below.
+      //Defining a URL string that includes the stream name.
+      //You can add your stream name. "quick_yarx_abbv" is a stream used as a test
           String url = "http://api.microprediction.org/lagged/quick_yarx_abbv.json";
           URL obj = new URL(url);
           HttpURLConnection con = (HttpURLConnection) obj.openConnection();
