@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="microprediction",
-    version="1.1.34",
+    version="1.2.0",
     description="Client for www.microprediction.org turnkey community prediction",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -26,7 +26,7 @@ setup(
     test_suite='pytest',
     tests_require=['pytest', 'scipy'],
     include_package_data=True,
-    install_requires=["numpy>=1.20.1", "pandas", "contexttimer", "requests",
+    install_requires=["numpy>=1.23.5", "pandas", "contexttimer", "requests",
                       "getjson>=2.0.0", "microconventions>=1.0.0","pytz>=2021.3",
                       'pycoingecko', 'tdigest','genson','hyperopt',
                       'scikit-learn','statsmodels','copulas'],
