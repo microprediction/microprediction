@@ -1,5 +1,5 @@
 
-# microprediction [tldr](https://microprediction.github.io/microprediction/tldr), [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction) and [live leaderboards](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
+# microprediction [tldr](https://microprediction.github.io/microprediction/tldr), [blog](https://microprediction.medium.com/), [docs](https://microprediction.github.io/microprediction/), [client](https://github.com/microprediction/microprediction) and [live leaderboards](https://www.microprediction.org/leaderboard.html) ![deploy](https://github.com/microprediction/microprediction/workflows/deploy/badge.svg) 
 Packages and a platform for effecting autonomous prediction using lightweight markets instead of models because:
  
  - Markets are better at prediction than models - just harder to create and wield, until now.
