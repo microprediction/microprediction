@@ -1,4 +1,4 @@
-## Slack channel [invite](https://join.slack.com/t/microprediction/shared_invite/zt-1x6kfc2iu-i2MWCR53n8mBlwzdyKWhyQ)
+## Slack channel [invite](https://join.slack.com/t/microprediction/shared_invite/zt-20fh8oukw-Tk6euL~CN_xw~bZuc~a3Ww)
 
 The microprediction slack channel is for:
 
@@ -10,7 +10,7 @@ The microprediction slack channel is for:
  - Everything that's wrong about my [book](https://github.com/microprediction/building_an_open_ai_network/issues).
  - General discussion of timeseries, optimization, autonomous machine learning and so forth.   
 
-The [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-1x6kfc2iu-i2MWCR53n8mBlwzdyKWhyQ) requires
+The [slack invite](https://join.slack.com/t/microprediction/shared_invite/zt-20fh8oukw-Tk6euL~CN_xw~bZuc~a3Ww) requires
 updating in the first week of the month. Message [me](https://www.linkedin.com/in/petercotton/) on LI if this is stale. 
 
 ### Google Meetups
