@@ -6,6 +6,12 @@ Packages and a platform for effecting autonomous prediction using lightweight ma
  - Small "microprediction" ([glossary](https://microprediction.github.io/microprediction/glossary)) markets are surprisingly accurate too, and even [chatGPT can create one](https://medium.com/geekculture/chatgpt-acquires-realtime-operational-intelligence-23675d2e0f3b).
 
 See [tldr](https://microprediction.github.io/microprediction/tldr) or just [instantly participate](https://microprediction.github.io/microprediction/setup) and you'll grok it, I promise.  
+
+### UPDATE: Nov 2023: STATUS of LIVE PLATFORM 
+
+The instance previously maintained by yours truly has entered a trisoloran dehydrated state but will hopefully be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful. If it is any consolation the book still works. 
+
+
 ### Provocations (more in the [book](https://mitpress.mit.edu/books/microprediction))
 
 - A market beat 97% of participants in the M6 contest([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). 
