@@ -10,7 +10,15 @@ I like to provoke people into using market-inspired collective mechanisms for pr
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
-And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game you can play. Yes, if you'd like to participate in my latest experiment you merely open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
+And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game.
+
+If you'd like to participate in my latest experiment you:
+
+1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
+2. Change the email, at minimum,
+3. Run it.
+
+The notebook also describes the high dimensional game you'll be playing. 
 
 ### Stuff that works: benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
 
