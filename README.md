@@ -5,7 +5,7 @@ Hello you've found the microprediction repos and amazingly, some work. If you ar
 
   - [papers, articles etc](https://github.com/microprediction/home)
 
-I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33)). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the asymptotics of that style of observation. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
+I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33)). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific but ubiquitous domaino. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
