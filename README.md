@@ -5,11 +5,12 @@ Hello you've found the microprediction repos and amazingly, some work. If you ar
 
   - [papers, articles etc](https://github.com/microprediction/home)
 
-I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). There are more provocations in my [book](https://mitpress.mit.edu/books/microprediction) too. 
-
-And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game you can play. Yes, if you'd like to participate in my latest experiment you merely open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
+I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the asymptotics of that style of observation. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
+
+
+And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game you can play. Yes, if you'd like to participate in my latest experiment you merely open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
 
 ### Stuff that works: benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
 
