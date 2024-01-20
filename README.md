@@ -25,7 +25,7 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 ## Winning
 
-The [winning](https://github.com/microprediction/winning) package includes a recently published fast algorithm for inferring relative ability from win probabilities. 
+The [winning](https://github.com/microprediction/winning) package includes my recently published fast algorithm for inferring relative ability from win probabilities, at any scale.  
 
 ![](https://i.imgur.com/83iFzel.png) 
 
