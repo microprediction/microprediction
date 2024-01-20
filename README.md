@@ -17,7 +17,6 @@ If you'd like to participate in my latest experiment open this [colab notebook](
 
 ### My benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
 
-I also maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
 
 | Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
 |------------------------|-------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------| 
