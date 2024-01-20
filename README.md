@@ -4,7 +4,8 @@
 Hi. I like to provoke people into using market-inspired collective mechanisms for prediction. After all, a market beat 97% of participants in the M6 contest([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). Naturally there are plenty of provocations in my the [book](https://mitpress.mit.edu/books/microprediction) too. 
 
 
-# New: MontePrediction. A weekly sector prediction game
+# Introducing [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), 
+A weekly sector prediction game
 
 If you'd like to participate in my latest experiment, which I'm calling MontePrediction, just open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
 
