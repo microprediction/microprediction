@@ -8,14 +8,14 @@ Hi. I like to provoke people into using market-inspired collective mechanisms fo
 
 
 
-# Introducing [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), 
+### Introducing [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) 
 A weekly sector prediction game
 
 If you'd like to participate in my latest experiment open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
 
 
 
-# The [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday) packages 
+### My benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
 
 I also maintain three benchmarking packages to help me, and maybe you, surf the open-source wave. 
 
