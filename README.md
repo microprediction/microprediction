@@ -27,7 +27,7 @@ If you'd like to participate in my latest experiment open this [colab notebook](
 These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does.  
 
 
-# Some of my other packages: 
+### Some of my other packages: 
 
 - [winning](https://github.com/microprediction/winning) - A recently published fast algorithm for inferring relative ability from win probability. 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
@@ -41,7 +41,7 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 ### The currently defunct real-time time-series platform
 
-Advances in time-series prediction funnel down into microprediction algorithms in various ways. (Well, they used to. The real-time system previously maintained by yours truly has entered a trisoloran dehydrated state but will hopefully be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful.)
+The real-time system previously maintained by yours truly has entered a trisoloran dehydrated state but will hopefully be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful. Here's how some of the open-source stuff used to propagate down into the "algo fight club". 
 
 1. The "[/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)" provide canonical, single-line of code access to functionality drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
    Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. 
