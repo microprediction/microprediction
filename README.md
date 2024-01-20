@@ -3,6 +3,10 @@
 
 Hi. I like to provoke people into using market-inspired collective mechanisms for prediction. After all, a market beat 97% of participants in the M6 contest([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). Naturally there are plenty of provocations in my the [book](https://mitpress.mit.edu/books/microprediction) too. 
 
+  - [blog](https://microprediction.medium.com)
+  - [papers, articles etc](https://github.com/microprediction/home)
+
+
 
 # Introducing [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), 
 A weekly sector prediction game
@@ -62,11 +66,4 @@ Not currently in use
 - There are other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
 
 
-# About me ([home](https://github.com/microprediction/home))
-  - [blog](https://microprediction.medium.com)
-  - [slack channel](https://microprediction.github.io/microprediction/slack.html) 
-  - [office hours](https://microprediction.github.io/microprediction/meet.html)
-  - [papers, articles etc](https://github.com/microprediction/home)
 
-# Acknowledgements
-The live microprediction platform is supported by [Intech Investments](https://www.intechinvestments.com/) and not, as rumoured, the [Center for Artificial Artificial Intelligence](https://microprediction.github.io/microprediction/aai). 
