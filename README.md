@@ -1,9 +1,11 @@
 
 # microprediction  [blog](https://microprediction.medium.com/) and new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
 
+Hello you've found the microprediction repos and amazingly, some work. If you are looking for my "home page" see: 
+
   - [papers, articles etc](https://github.com/microprediction/home)
 
-Hi. I like to provoke people into using market-inspired collective mechanisms for prediction. After all, a market beat 97% of participants in the M6 contest didn't it, eh? ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). Naturally there are plenty of provocations in my the [book](https://mitpress.mit.edu/books/microprediction) too. 
+I like to provoke people into using market-inspired collective mechanisms for prediction. After all, a market beat 97% of participants in the M6 contest didn't it, eh? ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). Naturally there are plenty of provocations in my the [book](https://mitpress.mit.edu/books/microprediction) too. 
 
 And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game you can play. Yes, if you'd like to participate in my latest experiment you merely open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
 
