@@ -27,16 +27,16 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 The [winning](https://github.com/microprediction/winning) package includes my recently published fast algorithm for inferring relative ability from win probabilities, at any scale.  
 
-![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
+![](https://i.imgur.com/83iFzel.png) 
 
 ## Some other repos
 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
 - [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).
-- 
-![](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf)
 
+
+  ![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
   
 ## The currently defunct real-time time-series platform
 
