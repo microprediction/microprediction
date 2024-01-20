@@ -10,9 +10,7 @@ I like to provoke people into using market-inspired collective mechanisms for pr
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
-And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game.
-
-If you'd like to participate in my latest experiment you:
+And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game. If you'd like to participate:
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
 2. Change the email, at minimum,
