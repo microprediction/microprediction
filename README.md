@@ -1,24 +1,23 @@
 
-# microprediction  [blog](https://microprediction.medium.com/) and new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
+# microprediction [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
 
-Hello you've found the microprediction repos and amazingly, some work. If you are looking for my "home page" see: 
-
-  - [papers, articles etc](https://github.com/microprediction/home)
-
-I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33)). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific but ubiquitous domaino. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
-
-![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
-
-
-And since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game. If you'd like to participate:
+Here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game. If you'd like to participate:
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
 2. Change the email, at minimum,
 3. Run it.
 
-The notebook also describes the high dimensional game you'll be playing. 
+The notebook also describes the high dimensional game you'll be playing. If on the other hand you seek my:
 
-### Stuff that works: benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
+  - [papers, articles etc](https://github.com/microprediction/home)
+  - Medium [blog](https://microprediction.medium.com/)
+
+that's nice too. I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to beat 97% of participants in the M6 contest. ([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) and [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33)). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific but ubiquitous domaino. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
+
+![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
+
+
+### My benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
 
 
 | Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
