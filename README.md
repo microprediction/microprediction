@@ -7,7 +7,7 @@ Here's a new game where you hurl a million 11-dimensional Monte Carlo samples at
 2. Change the email, at minimum,
 3. Run it.
 
-The notebook also describes the high dimensional game you'll be playing. If on the other hand you seek my:
+The notebook also describes the scoring mechanism. If on the other hand you seek my:
 
   - [papers, articles etc](https://github.com/microprediction/home)
   - Medium [blog](https://microprediction.medium.com/)
