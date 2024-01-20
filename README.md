@@ -1,5 +1,5 @@
 
-# microprediction [tldr](https://microprediction.github.io/microprediction/tldr), [blog](https://microprediction.medium.com/) 
+# microprediction  [blog](https://microprediction.medium.com/) and new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
 
 Hi. I like to provoke people into using market-inspired collective mechanisms for prediction. After all, a market beat 97% of participants in the M6 contest([post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop)) and [announcement](https://www.linkedin.com/posts/spyros-makridakis-b2ba5a52_congratulations-to-the-global-winners-of-activity-7028775981133791232-Mlzs?utm_source=share&utm_medium=member_desktop). Naturally there are plenty of provocations in my the [book](https://mitpress.mit.edu/books/microprediction) too. 
 
