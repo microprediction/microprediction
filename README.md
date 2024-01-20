@@ -1,7 +1,7 @@
 
 # microprediction [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
 
-Here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game. If you'd like to participate:
+Here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. If you'd like to participate:
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
 2. Change the email, at minimum,
