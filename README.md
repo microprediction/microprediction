@@ -6,12 +6,7 @@ Hi. I like to provoke people into using market-inspired collective mechanisms fo
   - [blog](https://microprediction.medium.com)
   - [papers, articles etc](https://github.com/microprediction/home)
 
-
-
-### Introducing [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) 
-A weekly sector prediction game
-
-If you'd like to participate in my latest experiment open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
+Hey and since you are here here's a new [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game you can play. Yes, if you'd like to participate in my latest experiment you merely open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb), change the email, and run it. The notebook also describes the high dimensional game you'll be playing. 
 
 
 
@@ -39,7 +34,8 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 
 
-### The currently defunct real-time time-series platform
+
+## The currently defunct real-time time-series platform
 
 The real-time system previously maintained by yours truly has entered a trisoloran dehydrated state but will hopefully be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful. Here's how some of the open-source stuff used to propagate down into the "algo fight club". 
 
@@ -54,10 +50,7 @@ The real-time system previously maintained by yours truly has entered a trisolor
 
 5. It's not too hard to use my [precise](https://github.com/microprediction/precise) package for online ensembling. 
 
-There are other ways. Look for CODE badges on [leaderboards](https://www.microprediction.org/leaderboard.html).  
-
-### Some microprediction platform repos
-Not currently in use
+Those repose are: 
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
