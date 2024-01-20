@@ -27,6 +27,8 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 The [winning](https://github.com/microprediction/winning) package includes a recently published fast algorithm for inferring relative ability from win probabilities. 
 
+![](https://i.imgur.com/83iFzel.png) 
+
 ## Some other repos
 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
