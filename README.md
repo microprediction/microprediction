@@ -18,6 +18,13 @@ If we don't know each other yet from [LI](https://www.linkedin.com/in/petercotto
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
+
+### Derivative-free optimizer comparisons
+
+The [humpDay](https://github.com/microprediction/humpday) package is intended to help you choose a derivative-free optimizer for your use case. 
+
+![](https://i.imgur.com/FCiSrMQ.png)
+
 ### Schur Complementary Portfolios
 
 My work on unifying Hierarchical Risk Parity with minimum variance portfolio optimization sits in the [precise](https://github.com/microprediction/precise) package although I've been meaning to put it somewhere else. 
@@ -25,11 +32,19 @@ My work on unifying Hierarchical Risk Parity with minimum variance portfolio opt
 <a href="https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f">
 <img src="https://github.com/microprediction/precise/blob/main/docs/assets/images/schur_reaction.png" width="600"></a>
 
+### Incremental time-series and benchmarking
 
-### My benchmarking packages: 
+The [timemachines](https://github.com/microprediction/timemachines) package enumerates online methods and makes some effort to evaluate univariate methods against the corpus of time-series drawn from the microprediction platform. It is an attempt to reduce everything to relatively pure functions:
+$$
+    f : (y_t, state; k) \mapsto ( [\hat{y}(t+1),\hat{y}(t+2),\dots,\hat{y}(t+k) ], [\sigma(t+1),\dots,\sigma(t+k)], posterior\ state))
+$$
+where $\sigma(t+l)$ estimates the standard error of the prediction $\hat{y}(t+l)$. 
 
-[timemachines](https://github.com/microprediction/timemachines), and [humpDay](https://github.com/microprediction/humpday)  
 
+![](https://i.imgur.com/elu5muO.png)
+
+
+### Benchmarking overview
 
 | Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
 |------------------------|-------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------| 
