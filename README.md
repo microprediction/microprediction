@@ -1,24 +1,26 @@
 
-# microprediction [MontePrediction](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) game
+# microprediction 
 
-Here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. If you'd like to participate:
+Greetings. First up, here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. I encourage you to participate:
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
 2. Change the email, at minimum,
 3. Run it.
 
-The notebook also describes the scoring mechanism. If on the other hand you seek my:
+The notebook also describes the scoring mechanism.
 
+### Writings
+See
   - [papers, articles etc](https://github.com/microprediction/home)
   - Medium [blog](https://microprediction.medium.com/)
 
-that's nice too. 
+### Book
 
 If we don't know each other yet from [LI](https://www.linkedin.com/in/petercotton/) or elsewhere, I'm an applied mathematician / practitioner but I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific but surprisingly ubiquitous domain: frequently repeated prediction. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
-Some things I've worked on ...
+Some repos here ...
 
 ### Derivative-free optimizer comparisons
 
