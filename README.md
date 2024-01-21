@@ -18,6 +18,7 @@ If we don't know each other yet from [LI](https://www.linkedin.com/in/petercotto
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
+Some things I've worked on ...
 
 ### Derivative-free optimizer comparisons
 
