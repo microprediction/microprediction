@@ -61,7 +61,7 @@ These packages aspire to advance online autonomous prediction in a small way, bu
 
 ## Winning
 
-The [winning](https://github.com/microprediction/winning) package includes my recently published fast algorithm for inferring relative ability from win probabilities, at any scale.  
+The [winning](https://github.com/microprediction/winning) package includes my recently published fast algorithm for inferring relative ability from win probabilities, at any scale. As explained in the [paper](https://github.com/microprediction/winning/blob/main/docs/Horse_Race_Problem__SIAM_updated.pdf) the uses extend well beyond the pricing of quinellas! 
 
 ![](https://i.imgur.com/83iFzel.png) 
 
