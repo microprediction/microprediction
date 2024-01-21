@@ -36,9 +36,11 @@ My work on unifying Hierarchical Risk Parity with minimum variance portfolio opt
 ### Incremental time-series and benchmarking
 
 The [timemachines](https://github.com/microprediction/timemachines) package enumerates online methods and makes some effort to evaluate univariate methods against the corpus of time-series drawn from the microprediction platform. It is an attempt to reduce everything to relatively pure functions:
+
 $$
     f : (y_t, state; k) \mapsto ( [\hat{y}(t+1),\hat{y}(t+2),\dots,\hat{y}(t+k) ], [\sigma(t+1),\dots,\sigma(t+k)], posterior\ state))
 $$
+
 where $\sigma(t+l)$ estimates the standard error of the prediction $\hat{y}(t+l)$. 
 
 
