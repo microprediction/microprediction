@@ -18,8 +18,17 @@ If we don't know each other yet from [LI](https://www.linkedin.com/in/petercotto
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
+### Schur Complementary Portfolios
 
-### My benchmarking packages: [TimeMachines](https://github.com/microprediction/timemachines), [Precise](https://github.com/microprediction/precise), and [HumpDay](https://github.com/microprediction/humpday)  
+My work on unifying Hierarchical Risk Parity with minimum variance portfolio optimization sits in the [precise](https://github.com/microprediction/precise) package although I've been meaning to put it somewhere else. 
+
+<a href="https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f">
+<img src="https://github.com/microprediction/precise/blob/main/docs/assets/images/schur_reaction.png" width="600"></a>
+
+
+### My benchmarking packages: 
+
+[timemachines](https://github.com/microprediction/timemachines), and [humpDay](https://github.com/microprediction/humpday)  
 
 
 | Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
