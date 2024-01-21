@@ -67,7 +67,7 @@ The [winning](https://github.com/microprediction/winning) package includes my re
 
 ## First Down
 
-- [firstdown](https://github.com/microprediction/firstdown) - The repo that aspires to ruin the great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf).
+My [firstdown](https://github.com/microprediction/firstdown) repo contains miscelleneous analysis aspiring to ruin great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf) and for heaven's sake, don't stretch out for the first down! 
 
   ![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
 
