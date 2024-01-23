@@ -7,7 +7,7 @@ Greetings. First up, here's a new game where you hurl a million 11-dimensional M
 2. Change the email, at minimum,
 3. Run it.
 
-The notebook also describes the scoring mechanism.
+The notebook also describes the scoring mechanism. Ask questions in the [slack](https://join.slack.com/t/microprediction/shared_invite/zt-2b16q4p46-nJLkiV6NOzZx_OUrsoODQA). 
 
 ### Writings
 See
