@@ -3,7 +3,7 @@
 
 Greetings. First up, here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. I encourage you to participate:
 
-1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb),
+1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py),
 2. Change the email, at minimum,
 3. Run it.
 
