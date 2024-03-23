@@ -6,7 +6,7 @@ Greetings. First up, here's a new game where you hurl a million 11-dimensional M
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py),
 2. Change the email, at minimum,
 3. Run it. Every weekend.
-4. Check your scores at [www.monteprediction.com](www.monteprediction.com)
+4. Check your scores at [www.monteprediction.com](https://www.monteprediction.com)
 
 The notebook also describes the scoring mechanism. Ask questions in the [slack](https://join.slack.com/t/microprediction/shared_invite/zt-2b16q4p46-nJLkiV6NOzZx_OUrsoODQA). 
 
