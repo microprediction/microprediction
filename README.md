@@ -9,7 +9,7 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 3. Run it. Every weekend.
 4. Check your scores at [www.monteprediction.com](https://www.monteprediction.com)
 
-The notebook also describes the scoring mechanism. Ask questions in the [slack](https://join.slack.com/t/microprediction/shared_invite/zt-2b16q4p46-nJLkiV6NOzZx_OUrsoODQA). 
+The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
 ### Writings
 See
