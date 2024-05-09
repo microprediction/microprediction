@@ -1,8 +1,9 @@
 
 # microprediction 
 
-Greetings. First up, here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. It might be the early stages of
-a novel statistical meritocracy. *Maybe* it will provoke a slumbering $15 Trillion passive investment industry. *Maybe* you'll share in the rewards.   
+Greetings. First up, here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. It's a more serious game than strikes the eye.
+It *might* be the early stages of a novel statistical meritocracy, one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
+correct on a set of measure zero, let's face it). *Maybe* you'll share in the rewards, but only for consistent longitudinal performance.    
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
 2. Change the email, at minimum,
