@@ -1,4 +1,4 @@
-## Slack channel [invite](https://join.slack.com/t/microprediction/shared_invite/zt-20fh8oukw-Tk6euL~CN_xw~bZuc~a3Ww)
+## Slack channel [invite](https://join.slack.com/t/microprediction/shared_invite/zt-2l1fu916a-pKth5tr90zREDeva6CSYBA)
 
 The microprediction slack channel is for:
 

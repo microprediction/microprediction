@@ -54,7 +54,7 @@ The former contains the [blog](https://www.microprediction.com/blog), a [knowled
 
 ### Slack & Google Meets Tue 8pm/ Fri noon EST
 
-Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-10ad1yiec-Jgsjkit~~dwNnpvRzyBTaQ). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. There you will find Google Meet invite details for our regular informal chats.  
+Most people looking to contribute to this open initiative (and win beer money) join the [microprediction slack](https://join.slack.com/t/microprediction/shared_invite/zt-2l1fu916a-pKth5tr90zREDeva6CSYBA). If that invite fails there might be one in the [knowledge center](https://www.microprediction.com/knowledge-center) that hasn't expired. There you will find Google Meet invite details for our regular informal chats.  
 
 ### Microprediction bookmarks
 
