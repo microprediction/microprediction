@@ -11,6 +11,10 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
+### Can I help you?
+
+See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
+
 ### Writings
 See
   - [papers, articles etc](https://github.com/microprediction/home)
