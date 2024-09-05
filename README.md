@@ -1,7 +1,15 @@
 
 # microprediction 
 
-Greetings. First up, here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. It takes a few minutes to learn but, as they say, a lifetime to master. And while merely a game it *might* be the early stages of a novel statistical meritocracy - one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
+Greetings. 
+
+### Can I help you?
+
+See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
+
+### MontePrediction
+
+Here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. It takes a few minutes to learn but, as they say, a lifetime to master. And while merely a game it *might* be the early stages of a novel statistical meritocracy - one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
 correct on a set of measure zero, let's face it). *Maybe* you'll share in the rewards, but only for consistent longitudinal performance.    
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
@@ -11,14 +19,16 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
-### Can I help you?
-
-See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
-
 ### Writings
 See
   - [papers, articles etc](https://github.com/microprediction/home)
   - Medium [blog](https://microprediction.medium.com/)
+
+### Personal update
+
+I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop)  .
+
+### About me
 
 If we don't know each other yet from [LI](https://www.linkedin.com/in/petercotton/) or elsewhere, I'm an applied mathematician / practitioner and quant at heart with great respect for what I term the "Indispensable Markets Hypothesis" - a weaker form EMH. That's to say I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific yet ubiquitous domain: frequently repeated prediction. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
 
