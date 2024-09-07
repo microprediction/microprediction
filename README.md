@@ -19,7 +19,6 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
-Another great Causality motitvated [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop)
 
 ### Writings
 See
@@ -28,7 +27,7 @@ See
 
 ### Personal update
 
-I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop)  .
+I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop). Check out the causal contest I motivated [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
 
 ### About me
 
