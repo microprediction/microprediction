@@ -23,7 +23,7 @@ The notebook also describes the scoring mechanism. Ask questions in the slack (s
 
 ### Adia Lab Causal Discovery Contest
 
-Steps:
+As I wrote [here](https://www.linkedin.com/posts/petercotton_ai-causality-causalai-activity-7245424385413509120-PPUK?utm_source=share&utm_medium=member_desktop)...
 
 1. Join the Discord [invite](https://discord.gg/6WZTsC43) 
 2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
