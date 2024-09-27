@@ -9,9 +9,20 @@ I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchl
 
 See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
 
+
+### Adia Lab Causal Discovery Contest ($100,000 in prizes)
+
+As I wrote [here](https://www.linkedin.com/posts/petercotton_ai-causality-causalai-activity-7245424385413509120-PPUK?utm_source=share&utm_medium=member_desktop)...
+
+1. Join the Discord [invite](https://discord.gg/6WZTsC43) 
+2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
+3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
+
+Have fun and try to overtake me (I was 20th or so when I wrote this). I motivated the contest [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
+
 ### MontePrediction
 
-Here's a new game where you hurl a million 11-dimensional Monte Carlo samples at my server. It takes a few minutes to learn but, as they say, a lifetime to master. And while merely a game it *might* be the early stages of a novel statistical meritocracy - one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
+Here's another new game I wrote where you hurl a million 11-dimensional Monte Carlo samples at my server. It takes a few minutes to learn but, as they say, a lifetime to master. And while merely a game it *might* be the early stages of a novel statistical meritocracy - one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
 correct on a set of measure zero, let's face it). *Maybe* you'll share in the rewards, but only for consistent longitudinal performance.    
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
@@ -21,15 +32,6 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
-### Adia Lab Causal Discovery Contest
-
-As I wrote [here](https://www.linkedin.com/posts/petercotton_ai-causality-causalai-activity-7245424385413509120-PPUK?utm_source=share&utm_medium=member_desktop)...
-
-1. Join the Discord [invite](https://discord.gg/6WZTsC43) 
-2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
-3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
-
-Have fun and try to overtake me (I was 20th or so when I wrote this). I motivated the contest [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
 
 ### Writings
 See
