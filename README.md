@@ -3,6 +3,8 @@
 
 Greetings. 
 
+I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop). 
+
 ### Can I help you?
 
 See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
@@ -27,17 +29,12 @@ Steps:
 2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
 3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
 
-Have fun and try to overtake me (I was 20th or so when I wrote this). 
-
+Have fun and try to overtake me (I was 20th or so when I wrote this). I motivated the contest [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
 
 ### Writings
 See
   - [papers, articles etc](https://github.com/microprediction/home)
   - Medium [blog](https://microprediction.medium.com/)
-
-### Personal update
-
-I've joined Crunch per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop). Check out the causal contest I motivated [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
 
 ### About me
 
