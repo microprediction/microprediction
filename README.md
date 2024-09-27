@@ -19,6 +19,16 @@ correct on a set of measure zero, let's face it). *Maybe* you'll share in the re
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
+### Adia Lab Causal Discovery Contest
+
+Steps:
+
+1. Join the Discord [invite](https://discord.gg/6WZTsC43) 
+2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
+3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
+
+Have fun and try to overtake me (I was 20th or so when I wrote this). 
+
 
 ### Writings
 See
