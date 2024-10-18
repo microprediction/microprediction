@@ -12,7 +12,7 @@ See my [thanks for reaching out](https://github.com/microprediction/montepredict
 
 As I wrote [here](https://www.linkedin.com/posts/petercotton_ai-causality-causalai-activity-7245424385413509120-PPUK?utm_source=share&utm_medium=member_desktop)...
 
-1. Join the Discord [invite](https://discord.gg/NuqJTcYQ2J) 
+1. Join the Discord ([invite](https://discord.gg/NuqJTcYQ2J)) 
 2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
 3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
 
