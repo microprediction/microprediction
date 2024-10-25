@@ -7,7 +7,7 @@ Greetings. Here's my [home page](https://github.com/microprediction/home). I wor
 
 See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
 
-### Mid-One
+### Mid-One ($120,000 + in prizes)
 
 Live now at [mid-one](https://mid-one.crunchdao.com/). You must check this out! 
 
