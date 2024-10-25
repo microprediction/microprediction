@@ -7,16 +7,9 @@ Greetings. Here's my [home page](https://github.com/microprediction/home). I wor
 
 See my [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page. 
 
+### Mid-One
 
-### Adia Lab Causal Discovery Contest ($100,000 in prizes)
-
-As I wrote [here](https://www.linkedin.com/posts/petercotton_ai-causality-causalai-activity-7245424385413509120-PPUK?utm_source=share&utm_medium=member_desktop)...
-
-1. Join the Discord ([invite](https://discord.gg/NuqJTcYQ2J)) 
-2. Go to the adialab-announcements, adialab-competition-description, adiao-lab-general, help-causal-discovery channels
-3. You'll *probably* prefer the [supervised learning notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/causality-discovery/supervised_baseline/supervised_baseline.ipynb)
-
-Have fun and try to overtake me (I was 20th or so when I wrote this). I motivated the contest [here](https://www.linkedin.com/posts/petercotton_adia-lab-causal-discovery-challenge-trailer-activity-7238230582466412547-YYFr?utm_source=share&utm_medium=member_desktop). 
+Live now at [mid-one](https://mid-one.crunchdao.com/). You must check this out! 
 
 ### MontePrediction
 
