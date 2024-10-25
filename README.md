@@ -13,8 +13,7 @@ Live now at [mid-one](https://mid-one.crunchdao.com/). You must check this out!
 
 ### MontePrediction
 
-Here's another new game I wrote where you hurl a million 11-dimensional Monte Carlo samples at my server. It takes a few minutes to learn but, as they say, a lifetime to master. And while merely a game it *might* be the early stages of a novel statistical meritocracy - one poking at a slumbering $15 Trillion passive investment industry (whose choice of portfolio is 
-correct on a set of measure zero, let's face it). *Maybe* you'll share in the rewards, but only for consistent longitudinal performance.    
+Here's another new game I wrote where you hurl a million 11-dimensional Monte Carlo samples at my server. 
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
 2. Change the email, at minimum,
