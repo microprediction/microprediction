@@ -1,7 +1,7 @@
 
 # microprediction 
 
-Greetings. Here's my [home page](https://github.com/microprediction/home). I work at CrunchDAO per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop).
+Greetings. Here's my [home page](https://github.com/microprediction/home). I work at CrunchDAO per the [announcement](https://www.linkedin.com/posts/crunchlabhq_crunch-lab-announces-appointment-of-dr-peter-activity-7237219067655254016-ucn1?utm_source=share&utm_medium=member_desktop) and I'm helping build a prediction network. 
 
 ### Can I help you?
 
