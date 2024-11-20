@@ -7,33 +7,15 @@ See also:
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content. 
 
-## A couple of contests 
-I've put together these challenges:
-
-### Mid-One ($120,000 in prizes)
-Live now at [mid-one](https://mid-one.crunchdao.com/). Your task is to identify small departurs from martingality of time-series. Put simply, are they going up or down? 
-
-### MontePrediction
-Here's another game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
-
-1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
-2. Change the email, at minimum,
-3. Run it. Every weekend.
-4. Check your scores at [www.monteprediction.com](https://www.monteprediction.com)
-
-The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
 ### About me
 Career quant, applied mathematician / practitioner. My views in brief, if anyone cares: 
 
-## Technological interests
-
+Technological interests
 - I'm long the use of large language models for instrumentation (e.g. [pi](https://pi.crunchdao.com/)), code generation in target-rich domains, and other uses of LLMs for alpha and prediction. 
+- I'm long decentralized AI and the Strong [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf), which means I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of mini-markets in a very specific yet ubiquitous domain: frequently repeated prediction and extends/predates some views of Vitalik Buterin in that sense. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html). I run contests like [mid-one](https://mid-one.crunchdao.com/) which you might want to check out too as there is a lot of prize-money. 
 
-- I'm long decentralized AI and the Strong [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf), which means I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of mini-markets in a very specific yet ubiquitous domain: frequently repeated prediction and extends/predates some views of Vitalik Buterin in that sense. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
-
-### Mathematical interests
-
+Mathematical interests
  - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) where I unified the two sides of portfolio theory).  
  - OTC market microstructure and algo trading (my day job). See older work too: [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf))
  - Thurston models 
@@ -43,9 +25,17 @@ Career quant, applied mathematician / practitioner. My views in brief, if anyone
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
+### MontePrediction. 
+Allow me to mention a long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
 
+1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
+2. Change the email, at minimum,
+3. Run it. Every weekend.
+4. Check your scores at [www.monteprediction.com](https://www.monteprediction.com)
 
-Some repos here ...
+The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
+
+Now, here's some attempt to introduce you to my open source work:: 
 
 ### Derivative-free optimizer comparisons
 
