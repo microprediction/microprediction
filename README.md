@@ -35,7 +35,7 @@ Allow me to mention a long-running game where you hurl a million 11-dimensional 
 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
-Now, here's some attempt to introduce you to my open source work:: 
+Now, here's some attempt to introduce you to my open source work ...
 
 ### Derivative-free optimizer comparisons
 
