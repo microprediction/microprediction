@@ -10,11 +10,11 @@ See also:
 ## A couple of contests 
 I've put together these challenges:
 
-### Mid-One ($120,000 + in prizes)
-Live now at [mid-one](https://mid-one.crunchdao.com/). Your task is to identify small departurs from martingality of time-series. Put simply, are they going up or down. 
+### Mid-One ($120,000 in prizes)
+Live now at [mid-one](https://mid-one.crunchdao.com/). Your task is to identify small departurs from martingality of time-series. Put simply, are they going up or down? 
 
 ### MontePrediction
-Here's another new game I wrote where you hurl a million 11-dimensional Monte Carlo samples at my server. 
+Here's another game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
 2. Change the email, at minimum,
@@ -24,9 +24,9 @@ Here's another new game I wrote where you hurl a million 11-dimensional Monte Ca
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
 ### About me
-Career quant applied mathematician / practitioner. 
+Career quant applied mathematician / practitioner and LLM bull. 
 
-If we don't know each other yet from  or elsewhere, I'm an applied mathematician / practitioner and quant at heart with great respect for what I term the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) - a weaker form EMH. I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific yet ubiquitous domain: frequently repeated prediction. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
+Also an advocate for what I term the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) - a weaker form EMH. I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific yet ubiquitous domain: frequently repeated prediction. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
 
 ### Current interests
 
