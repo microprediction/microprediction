@@ -91,7 +91,12 @@ My [firstdown](https://github.com/microprediction/firstdown) repo contains analy
 - [randomcov](https://github.com/microprediction/randomcov) - A set of quirky correlation and covariance matrix generators (I'd love your ideas). 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
 - [pandemic](https://github.com/microprediction/pandemic) - Ornstein-Uhlenbeck epidemic simulation (related [paper](https://arxiv.org/abs/2005.10311))
-
+- [momentum](https://github.com/microprediction/momentum) - My most personally re-used mini package ... for incremental mean, var, skew, kurtosis.
+- [muid](https://github.com/microprediction/muid) - Memorable Unique Identifiers ... try to figure out how that can't be an oxymoron.
+- [timeseries-notebooks](https://github.com/microprediction/timeseries-notebooks) - Lots of examples of using open source timeseries packages.
+- [correlationbounds](https://github.com/microprediction/correlationbounds) - Mini package for conf bounds
+- [building_an_open_ai_network](https://github.com/microprediction/building_an_open_ai_network) - Book related.
+- [recalibrate](https://github.com/microprediction/recalibrate) - Utils related to Platt scaling etc. 
   
 ## The currently defunct real-time time-series platform
 
