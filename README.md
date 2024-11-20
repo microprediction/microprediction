@@ -24,16 +24,22 @@ Here's another game where you hurl a million 11-dimensional Monte Carlo samples 
 The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
 
 ### About me
-Career quant, applied mathematician / practitioner and LLM bull. Also an advocate for what I term the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) - a weaker form EMH. I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of markets in a very specific yet ubiquitous domain: frequently repeated prediction. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
+Career quant, applied mathematician / practitioner. My views in brief, if anyone cares: 
 
-### Current interests
+## Technological interests
 
- - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf))
- - OTC market microstructure and algo trading (my day job but see older work: [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf))
- - Creative uses of LLMs (e.g. [pi](https://pi.crunchdao.com/))
+- I'm long the use of large language models for instrumentation (e.g. [pi](https://pi.crunchdao.com/)), code generation in target-rich domains, and other uses of LLMs for alpha and prediction. 
+
+- I'm long decentralized AI and the Strong [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf), which means I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of mini-markets in a very specific yet ubiquitous domain: frequently repeated prediction and extends/predates some views of Vitalik Buterin in that sense. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html).   
+
+### Mathematical interests
+
+ - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) where I unified the two sides of portfolio theory).  
+ - OTC market microstructure and algo trading (my day job). See older work too: [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf))
  - Thurston models 
  - Derivative-free optimization
  - Time-series
+ - Sports analytics
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
