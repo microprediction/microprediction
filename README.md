@@ -9,7 +9,7 @@ See also:
 
 
 ### About me
-Career quant, applied mathematician / practitioner. My views in brief, if anyone cares: 
+Career quant, applied mathematician / practitioner. 
 
 Technological interests
 - I'm long the use of large language models for instrumentation (e.g. [pi](https://pi.crunchdao.com/)), code generation in target-rich domains, and other uses of LLMs for alpha and prediction. 
