@@ -17,8 +17,8 @@ Technological interests
 
 Mathematical interests
  - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) and [blog](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f) where I unified the two sides of portfolio theory).  
- - OTC microstructure (my day job). I'm not currently focussed on credit but have been (see [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf))
- - Thurston models 
+ - OTC microstructure (my day job). I don't publish this. However here's older work from a different asset class (see [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf))
+ - Thurston models. A niche interest that brings me mathematical joy, see below. 
  - Derivative-free optimization
  - Time-series
  - Sports analytics
