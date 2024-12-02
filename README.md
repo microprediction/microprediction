@@ -8,10 +8,9 @@ See also:
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content. 
 
 
-### About me
-Career quant, applied mathematician, open-source developer. 
+### Interests
+I'm a career quant, applied mathematician, open-source developer, entrepreneur.  
 
-Interests:
  - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) and [blog](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f) where I unified the two sides of portfolio theory).  
  - OTC microstructure (my day job so not public .. but for older work see [this](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) or [that](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) or [the other])(https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf).
  - Thurston models 
@@ -21,9 +20,7 @@ Interests:
  - LLM uses for alpha, code gen, prediction and instrumentation (e.g. [pi](https://pi.crunchdao.com/)).
  - LLM samplers
 
-
-### Why I bothered to right a book
-I'm long decentralized AI and the Strong [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf), which is to say I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of mini-markets and algorithmic micro-managers in a very specific yet ubiquitous domain: frequently repeated prediction. It predates and extends "Info Finance" coined by Vitalik Buterin. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html). I run contests like [mid-one](https://mid-one.crunchdao.com/) which you might want to check out too as there is a lot of prize-money. 
+I wrote a book because I'm long decentralized AI and the Strong [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf), which is to say I like to provoke people into using market-inspired collective mechanisms for prediction. I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33). My [book](https://mitpress.mit.edu/books/microprediction) is a meditation on the power of mini-markets and algorithmic micro-managers in a very specific yet ubiquitous domain: frequently repeated prediction. It predates and extends "Info Finance" coined by Vitalik Buterin. Read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html). I run contests like [mid-one](https://mid-one.crunchdao.com/) which you might want to check out too as there is a lot of prize-money. 
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
