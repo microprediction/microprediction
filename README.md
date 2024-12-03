@@ -24,7 +24,7 @@ I wrote a book on what we might call the Strong [Indispensable Markets Hypothesi
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
-### MontePrediction. 
+### MontePrediction 
 Allow me to mention a long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
