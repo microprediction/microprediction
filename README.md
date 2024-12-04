@@ -114,7 +114,7 @@ The real-time system previously maintained by yours truly has entered a trisolor
 
 5. It's not too hard to use my [precise](https://github.com/microprediction/precise) package for online ensembling. 
 
-Those repose are: 
+A few repos that drove this:
 
 - The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
 - [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
