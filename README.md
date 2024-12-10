@@ -7,7 +7,7 @@ See also:
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content. 
 
-I'm a career quant, applied mathematician, open-source developer, entrepreneur.  
+I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
 
 ### Interests
 
