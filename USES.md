@@ -220,9 +220,6 @@ You get the idea but ...
 | Recognition | Image                | Peak Load Prediction                           |
 | Recognition | Image                | Energy Demand Response Planning               |
 | Recognition | Image                | Solar Power Output Prediction                 |
-| Recognition | Image                | Wind Energy Generation Forecast               |
-| Recognition | Image                | Supplier Risk Assessment                      |
-| Recognition | Image                | Financial Stability Analysis of Suppliers     |
 | Recognition | Image                | Geopolitical Risk Evaluation for Suppliers    |
 | Recognition | Image                | Route Planning for Transportation             |
 | Recognition | Image                | Fleet Management                              |
