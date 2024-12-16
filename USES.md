@@ -299,53 +299,34 @@ You get the idea but ...
 
 | **Category**      | **Application**                 | **Description**                                                                                       |
 |-------------------|---------------------------------|-------------------------------------------------------------------------------------------------------|
-| **Market Making** | Liquidity Provision             | Providing continuous bid and ask quotes to facilitate trading and ensure market liquidity.            |
 | **Market Making** | Spread Optimization             | Managing and adjusting bid-ask spreads to maximize profitability while remaining competitive.         |
 | **Market Making** | Inventory Management            | Balancing inventory levels to mitigate risk and capitalize on market opportunities.                   |
-| **Market Making** | Pricing Algorithms               | Utilizing advanced algorithms to set optimal prices for buying and selling assets.                    |
-| **Market Making** | Risk Management                  | Implementing strategies to manage and hedge against market and credit risks inherent in OTC trades.  |
+| **Market Making** | Surrogate Pricing Algorithms    | Utilizing machine learning algorithms to compute fair prices for buying and selling assets very quickly        |
+| **Market Making** | Risk Management                  | Generative models for capturing future financial scenarios more accurately in OTC trades.  |
 | **Market Making** | Dynamic Hedging                   | Continuously adjusting hedge positions to protect against adverse price movements.                   |
 | **Market Making** | Quote Automation                  | Automating the generation and updating of bid and ask quotes using algorithmic strategies.            |
 | **Market Making** | Market Surveillance               | Monitoring market activities to detect and prevent fraudulent or manipulative behaviors.               |
-| **Market Making** | High-Frequency Quote Updates      | Rapidly updating quotes to respond to market changes and maintain competitiveness.                     |
+| **Market Making** | High-Frequency OB Updates      | Rapidly updating CLOB quotes to respond to market changes and maintain competitiveness.                     |
 | **Market Making** | Cross-Market Arbitrage            | Exploiting price discrepancies between different markets or trading venues.                            |
-| **Trading**       | Statistical Arbitrage             | Using statistical models to identify and exploit price inefficiencies between related financial instruments. |
-| **Trading**       | High-Frequency Trading (HFT)      | Leveraging ultra-fast algorithms and low-latency systems to execute a large number of trades in milliseconds. |
-| **Trading**       | Momentum Trading                  | Capitalizing on the continuation of existing market trends by identifying and following momentum signals. |
-| **Trading**       | Mean Reversion                    | Trading based on the assumption that asset prices will revert to their historical mean or average.     |
+| **Trading**       | Momentum Trading etc                | Capitalizing on the technical signals generalized to machine learning techniques                   |
 | **Trading**       | Sentiment Analysis-Based Trading  | Utilizing natural language processing to analyze market sentiment from news, social media, and other sources to inform trading decisions. |
 | **Trading**       | Machine Learning-Based Strategies | Applying machine learning algorithms to develop predictive models for asset price movements and trading signals. |
 | **Trading**       | Event-Driven Trading              | Executing trades based on specific events such as earnings reports, mergers, acquisitions, or geopolitical developments. |
-| **Trading**       | Quantitative Trading               | Employing mathematical models and quantitative techniques to identify trading opportunities and manage portfolios. |
-| **Trading**       | Algorithmic Trading                | Using automated, rule-based systems to execute trades based on predefined criteria and strategies.     |
 | **Trading**       | Pair Trading                        | Simultaneously buying and selling two correlated assets to exploit relative price movements.            |
 | **Execution**     | Smart Order Routing                 | Directing orders to the most appropriate trading venues to achieve the best execution prices.           |
-| **Execution**     | Volume Weighted Average Price (VWAP) | Executing orders in line with the average price of the asset over a specified time period to minimize market impact. |
-| **Execution**     | Time Weighted Average Price (TWAP)   | Distributing order execution evenly over a specified time period to reduce market impact and execution risk. |
 | **Execution**     | Implementation Shortfall             | Minimizing the difference between the decision price and the final execution price through optimal execution strategies. |
-| **Execution**     | Iceberg Order Execution              | Breaking large orders into smaller, hidden portions to reduce market impact and prevent information leakage. |
 | **Execution**     | Dark Pool Execution                  | Utilizing private trading venues to execute large orders without revealing intentions to the public market. |
 | **Execution**     | Transaction Cost Analysis            | Analyzing and minimizing the costs associated with executing trades, including commissions, spreads, and market impact. |
 | **Execution**     | Real-Time Execution Monitoring       | Continuously tracking the status and performance of orders to ensure optimal execution and make real-time adjustments. |
-| **Execution**     | Order Book Analysis                  | Examining the order book to understand supply and demand dynamics and inform execution strategies.         |
-| **Execution**     | Execution Quality Optimization       | Enhancing the quality of trade executions by analyzing execution data and refining trading algorithms.      |
-| **Execution**     | Latency Reduction Strategies         | Implementing technological solutions to minimize delays in order execution and improve trading performance. |
 | **Execution**     | Adaptive Execution Algorithms        | Developing algorithms that adapt to changing market conditions to optimize trade execution in real-time.     |
-| **Execution**     | Multi-Asset Execution Strategies     | Coordinating the execution of trades across multiple asset classes to maximize efficiency and returns.        |
-| **Execution**     | Cross-Asset Order Management          | Managing and optimizing orders that involve multiple asset types to achieve the best overall execution.      |
 | **Execution**     | Pre-Trade Analytics                   | Utilizing data analytics before executing trades to assess potential outcomes and optimize strategies.        |
-| **Execution**     | Post-Trade Analytics                  | Analyzing executed trades to evaluate performance, identify inefficiencies, and improve future strategies.    |
-| **Execution**     | Dark Liquidity Utilization            | Leveraging non-public liquidity sources to execute large trades with minimal market disruption.               |
-| **Execution**     | Smart Order Splitting                  | Dividing large orders into smaller chunks to execute over time and reduce market impact.                      |
 | **Execution**     | Behavioral Finance Integration         | Incorporating behavioral finance insights into execution strategies to better anticipate and react to market movements. |
 | **Execution**     | Risk-Adjusted Execution               | Balancing execution strategies with risk management to optimize trade outcomes while minimizing potential losses. |
-| **Execution**     | Regulatory Compliance Execution       | Ensuring that all trade executions comply with relevant regulations and reporting requirements.                |
 | **Execution**     | Automated Trade Reconciliation        | Streamlining the process of matching and verifying executed trades with counterparties and clearinghouses.      |
 | **Execution**     | Execution via API Integration         | Utilizing APIs to connect execution algorithms directly with trading platforms for seamless and efficient trade execution. |
-| **Execution**     | Distributed Ledger Technology (DLT) Execution | Exploring the use of blockchain and DLT for secure, transparent, and efficient trade execution and settlement.   |
 | **Execution**     | Artificial Intelligence in Execution | Applying AI techniques to predict optimal execution paths and automate decision-making processes during trade execution. |
 
-*Table: Most Lucrative Applications in Over-the-Counter (OTC) Market Making, Trading, and Execution.*
+*Table:  Applications in  Market Making, Trading, and Execution.*
 
 **Description:**
 This table outlines the most lucrative applications within the realms of OTC market making, trading, and execution. Each application is categorized and briefly described to provide a comprehensive overview of the strategies and technologies that drive profitability and efficiency in the OTC financial markets.
