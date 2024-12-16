@@ -60,11 +60,12 @@ To illustrate the fan-out
 | Recognition | Image                | Vegetation Mapping                      |
 | Recognition | Image                | Intrusion Detection                     |
 
-*Table: Expanded taxonomy for Image Recognition applications in data science contests.*
+
+
 
 ---
-## Industrial Control
-*(Examples Requiring Relatively Frequent Predictions)*
+### Manufacturing Industrial Control Sub-category
+
 
 | Category      | Example Sub-Category | Example Sub-Sub-Category                  |
 |---------------|----------------------|-------------------------------------------|
@@ -112,6 +113,5 @@ To illustrate the fan-out
 | Manufacturing | Industrial Control  | Failure Mode Analysis                     |
 | Manufacturing | Industrial Control  | Root Cause Identification                 |
 
-*Table: Expanded taxonomy for Industrial Control applications requiring frequent predictions in data science contests.*
 
 ---
