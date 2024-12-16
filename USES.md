@@ -1,8 +1,5 @@
-# Uses of prediction fan-out illustration
 
-We start with things that have already been the subject of data science contest, then illustrate the fan-out. 
-
-## Categories of Use in Data Science Contests
+# Categories of Use in Data Science Contests
 
 Below is a table illustrating the variety of application categories where data science contests have been employed. Each major category is further divided into sub-categories and sub-sub-categories to demonstrate the breadth of use cases.
 
