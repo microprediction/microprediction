@@ -292,10 +292,9 @@ You get the idea but ...
 
 ---
 
-### Over-the-counter markets 
+### Over-the-counter and CLOB markets 
 
----
-## Most Lucrative Applications in Over-the-Counter (OTC) Market Making, Trading, and Execution
+Some examples 
 
 | **Category**      | **Application**                 | **Description**                                                                                       |
 |-------------------|---------------------------------|-------------------------------------------------------------------------------------------------------|
