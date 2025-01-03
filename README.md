@@ -2,7 +2,7 @@
 # microprediction (Peter's Repos)
 See also:
 
- - [Papers, working papers, articles](https://github.com/microprediction/home).
+ - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home).
  - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page.
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content. 
