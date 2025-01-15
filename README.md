@@ -1,6 +1,6 @@
 
 # microprediction (Peter's Repos)
-If you were redirected from: *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?* see [article](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
+If you were redirected from: *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, here's the [article](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
 
 Otherwise hi
 
