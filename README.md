@@ -1,6 +1,8 @@
 
 # microprediction (Peter's Repos)
-See also:
+If you were redirected looking for the infamous article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?* there's a copy [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
+
+Otherwise hi
 
  - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home).
  - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page contains contact suggestions. 
