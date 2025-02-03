@@ -48,7 +48,7 @@ The [humpDay](https://github.com/microprediction/humpday) package is intended to
 
 ### Schur Complementary Portfolios
 
-My work on unifying Hierarchical Risk Parity with minimum variance portfolio optimization sits in the [precise](https://github.com/microprediction/precise) package although I've been meaning to put it somewhere else. 
+My work on unifying Hierarchical Risk Parity with minimum variance portfolio optimization sits in the [precise](https://github.com/microprediction/precise) package. See [slides](https://github.com/microprediction/home/blob/main/presentations/Schur_Complementary_Portfolios_2025__slides_.pdf) from a recent talk. 
 
 <a href="https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f">
 <img src="https://github.com/microprediction/precise/blob/main/docs/assets/images/schur_reaction.png" width="600"></a>
