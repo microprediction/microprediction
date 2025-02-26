@@ -19,7 +19,7 @@ I'm a career quant, applied mathematician, open-source developer, entrepreneur a
  - Derivative-free optimization
  - Time-series
  - Sports analytics
- - Collective Intelligence (Decentralized AI)
+ - Collective Intelligence, Decentralized AI
  - LLM uses for alpha, code gen, prediction and instrumentation (e.g. [pi](https://pi.crunchdao.com/)).
 
 ### Microprediction
