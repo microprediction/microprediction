@@ -7,7 +7,8 @@ Otherwise hi
  - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home).
  - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page contains contact suggestions. 
  - Medium [blog](https://microprediction.medium.com/)
- - [Linked-In](https://www.linkedin.com/in/petercotton/) content. 
+ - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
+ - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
 
 I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
 
