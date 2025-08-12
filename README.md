@@ -9,6 +9,7 @@ Otherwise hi
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
  - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
+ - I'm hiring. See [open roles](https://chatgpt.com/g/g-689b879ea5dc8191b2946ca15ca352b5-gsmc). 
 
 I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
 
