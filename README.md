@@ -5,7 +5,7 @@ If you were redirected from: *Is Facebook's Prophet the Time-Series Messiah or J
 Otherwise hi 
 
  - [Virtual Peter Cotton](https://chatgpt.com/g/g-68a5df4e12508191a0eaaf8535519552-virtual-peter-cotton) can help redirect. 
- - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home) and a [custom microprediction gpt](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book). 
+ - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home) and a [custom microprediction gpt](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book) for my book.  
  - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page contains contact suggestions. 
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
