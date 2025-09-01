@@ -36,7 +36,7 @@ I enjoy reminding the kids that an old guy can still beat them sometimes.
 
 -  I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33).
   
--  I'm currently winning  a popular web3 prediction contest where you generate paths for bitcoin, ethereum etc (the Synth bittensor subnet). 
+-  I'm winning a popular web3 prediction contest (the Synth bittensor subnet) for 3 out of 4 currencies. 
 
 ![](https://github.com/microprediction/home/blob/main/docs/assets/images/grumpy_old_quant_winning.png)
 
