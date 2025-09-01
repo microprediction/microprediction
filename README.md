@@ -7,11 +7,10 @@ Otherwise hi
  - [Virtual Peter Cotton](https://chatgpt.com/g/g-68a5df4e12508191a0eaaf8535519552-virtual-peter-cotton) can help redirect. 
  - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home)
  - There's a custom GPT for the microprediction book [here](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book).  
- - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page contains contact suggestions. 
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
  - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
- - I'm hiring. See [open roles](https://chatgpt.com/g/g-689b879ea5dc8191b2946ca15ca352b5-gsmc). 
+ - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page predicts if my niche expertise can help you. 
 
 I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
 
