@@ -42,7 +42,7 @@ I enjoy reminding the kids that an old guy can still beat them sometimes.
 
 ![](https://github.com/microprediction/home/blob/main/docs/assets/images/grumpy_old_quant_winning.png)
 
-- But I'm only 4th in my own game at [www.monteprediction.com](www.monteprediction.com) so invite you to beat me there ...
+- But I'm only 4th in my own game at [www.monteprediction.com](www.monteprediction.com) and invite you to beat me there. 
 
 ### Monteprediction.com is ...
 A long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
