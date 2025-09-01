@@ -25,7 +25,7 @@ I'm a career quant, applied mathematician, open-source developer, entrepreneur a
  - Collective Intelligence, Decentralized AI
  - LLM uses for alpha, code gen, prediction and instrumentation (e.g. [pi](https://pi.crunchdao.com/)).
 
-### Microprediction ([GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book))
+### Microprediction (custom [GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book) for book)
 
 I wrote a [book](https://mitpress.mit.edu/books/microprediction) containing some views on data science. I'm a believer in engineering pipelines that anyone else can improve without asking permission, and in the eventual inversion of control between humans and machine in the "microprediction domain" (frequently repeated quantitative tasks). This relates to the efficiency of markets, noting the important caveat made clear in the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) paper that markets can be indispensible yet not perfectly efficient. 
 
