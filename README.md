@@ -40,9 +40,10 @@ I enjoy reminding the kids that an old guy can still beat them sometimes.
 
 ![](https://github.com/microprediction/home/blob/main/docs/assets/images/grumpy_old_quant_winning.png)
 
+- But I'm only 4th in my own game at [www.monteprediction.com](www.monteprediction.com) so invite you to beat me there ...
 
-### Monteprediction 
-Allow me to mention a long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
+### Monteprediction.com is ...
+A long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
 
 1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
 2. Change the email, at minimum,
