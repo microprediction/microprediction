@@ -23,7 +23,7 @@ I'm a career quant, applied mathematician, open-source developer, entrepreneur a
  - Time-series
  - Sports analytics
  - Collective Intelligence, Decentralized AI
- - LLM uses for alpha, code gen, prediction and instrumentation (e.g. [pi](https://pi.crunchdao.com/)).
+ - LLM uses for alpha generation. 
 
 ### Microprediction (custom [GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book) for book)
 
