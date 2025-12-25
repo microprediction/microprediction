@@ -4,9 +4,7 @@ If you were redirected from a site that used to host my blog or: *Is Facebook's 
 
 Otherwise hi 
 
- - [Virtual Peter Cotton](https://chatgpt.com/g/g-68a5df4e12508191a0eaaf8535519552-virtual-peter-cotton) can help redirect. 
  - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home)
- - There's a custom GPT for the microprediction book [here](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book).  
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
  - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
