@@ -8,7 +8,7 @@ Otherwise hi
  - Medium [blog](https://microprediction.medium.com/)
  - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
  - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
- - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page predicts if my niche expertise can help you. 
+ - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page has open positions and also predicts if my niche expertise can help you in some other manner.
 
 I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
 
