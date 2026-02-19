@@ -10,7 +10,7 @@ Otherwise hi
  - Robust portfolio theory [reading list](https://github.com/microprediction/precise/blob/main/LITERATURE.md).
  - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page has open positions and also predicts if my niche expertise can help you in some other manner.
 
-I'm a career quant, applied mathematician, open-source developer, entrepreneur and dad.  
+I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
 ### Interests
 
