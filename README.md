@@ -14,12 +14,11 @@ I'm a career quant, applied mathematician, open-source developer, entrepreneur a
 ### Interests
 
  - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) and [blog](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f) where I unified the two sides of portfolio theory - more [reading](https://www.linkedin.com/posts/petercotton_return-adjusted-hierarchical-risk-parity-activity-7371521730437079040-wzek?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADG4ccBwZe8-bPaT745XJ5TgO3D-0a4TYo) if you wish, and here's a broader [papers list](https://github.com/microprediction/precise/blob/main/LITERATURE.md) on the topic. 
- 
  - OTC microstructure (past work [here](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) and [there](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) and [there](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf) but mostly private).
  - Thurstone models (contests, LLM samplers etc)
  - Derivative-free optimization
  - Time-series
- - Sports analytics
+ - Sports analytics 
  - Collective Intelligence, Decentralized AI
  - Artificial judgemental prediction. I run a company that helps firms re-create their decision making pipelines. We materially drove 37% returns for a large hedge fund last year.   
 
