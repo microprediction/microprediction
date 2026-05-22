@@ -13,7 +13,7 @@ See also my [home page](https://github.com/microprediction/home). I'm a career q
 
 | Site | Topic |
 |---|---|
-| [humpday.microprediction.org](http://humpday.microprediction.org) | Derivative-free (black box) optimization methods in pure Python and Javascript. Comparison and selection tooling, and interactive demos. |
+| [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison and selection tooling, and interactive demos. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
 
 ### Writing
