@@ -60,28 +60,23 @@ The [book](https://book.microprediction.com) was a meditation on the power of mi
 - [correlationbounds](https://github.com/microprediction/correlationbounds) - Mini package for conf bounds
 - [building_an_open_ai_network](https://github.com/microprediction/building_an_open_ai_network) - Book related.
 - [recalibrate](https://github.com/microprediction/recalibrate) - Utils related to Platt scaling etc. 
+
+
   
-## The currently defunct real-time time-series platform
+## This used to be...
+The client for microprediction: a platform sponsored by Intech Investments that collected a billion predictions. It has entered a trisoloran dehydrated state but maybe will be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful. Some relics remain:
 
-The real-time system previously maintained by yours truly has entered a trisoloran dehydrated state but will hopefully be revived at a future date, after one of my three hundred ChatGPT generated scientific grant proposals is successful. Here's how some of the open-source stuff used to propagate down into the "algo fight club". 
+- The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413).  
+- There are other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum) that still work, I think.  
 
-1. The "[/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)" provide canonical, single-line of code access to functionality drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
-   Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. 
-   
-2. The [StreamSkater](https://microprediction.github.io/microprediction/predict-using-python-streamskater.html) makes it easy to use any "skater". 
+Not so fresh:
 
-3. Choices are sometimes advised by [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/special-k_003.html), but anyone can do what they want. 
-
-4. It's not too hard to use my [HumpDay](https://github.com/microprediction/humpday) package for offline meta-param tweaking, et cetera. 
-
-5. It's not too hard to use my [precise](https://github.com/microprediction/precise) package for online ensembling. 
-
-A few repos that drove this:
-
-- The [muid](https://github.com/microprediction/muid) identifier package is explained in this [video](https://vimeo.com/397352413). 
-- [microconventions](https://github.com/microprediction/microconventions) captures things common to client and server, and may answer many of your more specific questions about prediction horizons, et cetera.  
-- [rediz](https://github.com/microprediction/rediz) contains server side code. For the brave. 
-- There are other rats and mice like [getjson](https://github.com/microprediction/getjson), [runthis](https://github.com/microprediction/runthis) and [momentum](https://github.com/microprediction/momentum).  
+1. The "[/skaters](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters)" provided canonical, single-line of code access to functionality drawn from packages like [river](https://github.com/online-ml/river), [pydlm](https://github.com/wwrechard/pydlm), [tbats](https://github.com/intive-DataScience/tbats), [pmdarima](http://alkaline-ml.com/pmdarima/), [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html), [neuralprophet](https://neuralprophet.com/), Facebook [Prophet](https://facebook.github.io/prophet/), 
+   Uber's [orbit](https://eng.uber.com/orbit/), Facebook's [greykite](https://engineering.linkedin.com/blog/2021/greykite--a-flexible--intuitive--and-fast-forecasting-library) and more. Though now that superceded by [skaters](https://github.com/microprediction/skaters), actually. 
+2. Choices were sometimes advised by [Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/special-k_003.html), but anyone can do what they want. 
+3. It's not too hard to use my [HumpDay](https://github.com/microprediction/humpday) package for offline meta-param tweaking, et cetera. Now fully revamped. 
+4. The [precise](https://github.com/microprediction/precise) package for online ensembling still works, but could use a coat of paint. 
+ 
 
 
 
