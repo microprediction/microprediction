@@ -16,7 +16,7 @@
 |---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Author blog &mdash; long-form posts on portfolio construction, contests, microprediction, time series, and quantitative finance. |
-| [microprediction.medium.com](https://github.com/microprediction/home/) | Papers - Academic papers and short musings |
+| [microprediction/home](https://github.com/microprediction/home/) | Papers - Academic papers and short musings |
 
 ---
 
