@@ -2,7 +2,7 @@
 # microprediction
 See also my [home page](https://github.com/microprediction/home). I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
-### My better ideas
+### My better original contributions
 
 | Site | Topic |
 |---|---|
