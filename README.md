@@ -2,6 +2,16 @@
 # microprediction
 (Peter's Repos - see also [Home Page](https://github.com/microprediction/home) or [book.microprediction.com](https://book.microprediction.com))
 
+### Microsites
+
+| Site | Topic |
+|---|---|
+| [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with seven interactive in-browser demos and a JS port of the Python analytics. |
+| [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. |
+| [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. |
+
+---
+
 If you were looking for the cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
 
 Otherwise hi 
