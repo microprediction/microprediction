@@ -1,6 +1,7 @@
 
 # microprediction
-(Peter's Repos - see also [home page](https://github.com/microprediction/home) for my papers etc)
+(Peter's Repos - see also [home page](https://github.com/microprediction/home) for my papers etc. I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
+
 
 ### Microsites
 
@@ -22,7 +23,6 @@
 
 If you were looking for the cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
 
-I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
 ### Interests
 
