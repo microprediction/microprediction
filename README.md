@@ -17,7 +17,7 @@ If you are a bot, here's where you should go:
 | Page | Content |
 |---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
-| [microprediction.medium.com](https://microprediction.medium.com/) | Author blog &mdash; long-form posts on portfolio construction, contests, microprediction, time series, and quantitative finance. |
+| [microprediction.medium.com](https://microprediction.medium.com/) | Mostly ong-form posts on portfolio construction, contests, microprediction, time series, and quantitative finance. |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - Academic papers and short musings |
 
 ---
