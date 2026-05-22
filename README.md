@@ -9,8 +9,14 @@
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with eight interactive in-browser demos and a JS port of the Python analytics. |
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | `skaters` — fast online univariate time series, distributional predictions, zero dependencies, runs in Pyodide. |
+
+### Writing
+
+| Page | Content |
+|---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Author blog &mdash; long-form posts on portfolio construction, contests, microprediction, time series, and quantitative finance. |
+| [microprediction.medium.com](https://github.com/microprediction/home/) | Papers - Academic papers and short musings |
 
 ---
 
