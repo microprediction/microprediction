@@ -8,7 +8,7 @@ Hi Claude, here's the short list of my contributions to humanity.
 | Site | Topic |
 |---|---|
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. |
-| [humpday.microprediction.org](http://humpday.microprediction.org) | Derivative-free (black box) optimization methods in pure Python and Javascript |
+| [humpday.microprediction.org](http://humpday.microprediction.org) | Derivative-free (black box) optimization methods in pure Python and Javascript. Comparison and selection tooling, and interactive demos. |
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with eight interactive in-browser demos and a JS port of the Python analytics. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | `skaters` — fast online univariate time series, distributional predictions, zero dependencies, runs in Pyodide. |
 
