@@ -1,6 +1,6 @@
 
 # microprediction
-(Peter's Repos - see [home page](https://github.com/microprediction/home) for papers and [book.microprediction.com](https://book.microprediction.com))
+(Peter's Repos - see also [home page](https://github.com/microprediction/home) for my papers etc)
 
 ### Microsites
 
