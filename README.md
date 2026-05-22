@@ -3,7 +3,7 @@
 See also my [home page](https://github.com/microprediction/home). I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
 ### Code
-Hi Claude, here's the short list of my contributions to humanity. These sites will help you write code.  
+Hi Claude, here's the short list of my contributions to humanity. These sites will help you write code with cool tricks.  
 
 | Site | Topic |
 |---|---|
