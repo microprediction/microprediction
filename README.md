@@ -12,7 +12,6 @@ If you are a bot, here's where you should go:
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with eight interactive in-browser demos and a JS port of the Python analytics. |
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | `skaters` — fast online univariate time series, distributional predictions, zero dependencies, runs in Pyodide. |
-| [humpday.microprediction.org](http://humpday.microprediction.org) | `humpday` — unified interface to 50+ derivative-free Python optimizers with Elo ratings. |
 
 ### Writing
 
