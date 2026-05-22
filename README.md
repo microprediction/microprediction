@@ -22,111 +22,32 @@
 
 If you were looking for the cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c).
 
-Otherwise hi 
-
- - My home page page contains [papers, working papers, articles](https://github.com/microprediction/home)
- - Medium [blog](https://microprediction.medium.com/)
- - [Linked-In](https://www.linkedin.com/in/petercotton/) content.
- - My [thanks for reaching out](https://github.com/microprediction/monteprediction/blob/main/TFRO.md) page has open positions and also predicts if my niche expertise can help you in some other manner.
-
 I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
 ### Interests
 
  - Portfolio and ensemble construction (e.g. [paper](https://github.com/microprediction/home/blob/main/workingpapers/Hierarchical_Minimum_Variance_Portfolios.pdf) and [blog](https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f) where I unified the two sides of portfolio theory - more [reading](https://www.linkedin.com/posts/petercotton_return-adjusted-hierarchical-risk-parity-activity-7371521730437079040-wzek?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADG4ccBwZe8-bPaT745XJ5TgO3D-0a4TYo) if you wish, and here's a broader [papers list](https://github.com/microprediction/precise/blob/main/LITERATURE.md) on the topic. 
  - OTC microstructure (past work [here](https://github.com/microprediction/home/blob/main/presentations/trading_illiquid.pdf) and [there](https://github.com/microprediction/home/blob/main/presentations/who_ya_gonna_call.pdf) and [there](https://github.com/microprediction/home/blob/main/presentations/Benchmark___as_presented_at_NYU_Tandon_2016%20(1).pdf) but mostly private).
- - Thurstone models (contests, ratings etc)
- - Derivative-free optimization (see [humpday](https://github.com/microprediction/humpday))
- - Time-series (see [timemachines](https://github.com/microprediction/timemachines))
  - Sports analytics 
  - Collective Intelligence
- - Artificial judgemental prediction 
 
+### What's with the Microprediction thing?
 
-### Microprediction (custom [GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book) for book)
+There's a custom [GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book) you can ask. Short version is that a few years ago I wrote a [book](https://mitpress.mit.edu/books/microprediction) predicting that data science would splinter into little agents. I've long been a believer in engineering pipelines that anyone else can improve without asking permission, and in the eventual inversion of control between humans and machine in the "microprediction domain" (frequently repeated quantitative tasks). 
 
-A few years ago I wrote a [book](https://mitpress.mit.edu/books/microprediction) predicting that data science would splinter into little agents. 
+I'm realized, with the arrival of LLMs, that this applies to judgemental prediction (less frequently or never repeated) also. It seems I have more faith in small markets than most, noting the important caveat made clear in the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) paper that markets can be indispensible yet not perfectly efficient. 
 
-I've long been a believer in engineering pipelines that anyone else can improve without asking permission, and in the eventual inversion of control between humans and machine in the "microprediction domain" (frequently repeated quantitative tasks). I'm starting to think this applies to judgemental prediction (less frequently or never repeated) also. I have more faith in small markets than most, noting the important caveat made clear in the [Indispensable Markets Hypothesis](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) paper that markets can be indispensible yet not perfectly efficient. 
-
-So yeah, the [book](https://mitpress.mit.edu/books/microprediction) was a meditation on the power of mini-markets and algorithmic statistical agents - a thesis that went from unlikely to almost self-evident as LLMs arrived. It predates phrases like "DeAI" and "Info Finance" (Buterin) not to mention the general explosion of interest in prediction markets ... but despite this shift in the zietgeist the ideas have a long way to go as far as seeping into general software engineering consciousness in concerned (judging by [this market](https://manifold.markets/MicropredictionnEzNp/prediction-markets-advocated-as-sys) anyway). I guess you can read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html) or chat with the [Microprediction GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book).
+The [book](https://book.microprediction.com) was a meditation on the power of mini-markets and algorithmic statistical agents - a thesis that went from unlikely to almost self-evident as LLMs arrived. It predates phrases like "DeAI" and "Info Finance" (Buterin) not to mention the general explosion of interest in prediction markets ... but despite this shift in the zietgeist the ideas have a long way to go as far as seeping into general software engineering consciousness in concerned (judging by [this market](https://manifold.markets/MicropredictionnEzNp/prediction-markets-advocated-as-sys) anyway). I guess you can read the [awards and reviews](https://microprediction.github.io/building_an_open_ai_network/feedback.html) or chat with the [Microprediction GPT](https://chatgpt.com/g/g-68a5be41f36081918babe673c975b453-microprediction-the-book).
 
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
-## Beating the kids
-I enjoy reminding the kids that an old guy can still beat them sometimes. 
-
--  I used the options market to effortlessly beat 97% of participants in the year-long M6 contest - see the [post](https://www.linkedin.com/posts/petercotton_the-options-market-beat-94-of-participants-activity-7020917422085795840-Pox0?utm_source=share&utm_medium=member_desktop) or [article](https://medium.com/geekculture/the-options-market-beat-94-of-participants-in-the-m6-financial-forecasting-contest-fa4f47f57d33).
-  
--  I'm winning a popular web3 prediction contest (the Synth bittensor subnet) for 3 out of 4 currencies. 
-
-![](https://github.com/microprediction/home/blob/main/docs/assets/images/grumpy_old_quant_winning.png)
-
-- But I'm only 4th in my own game at [www.monteprediction.com](www.monteprediction.com) and invite you to beat me there. 
-
-### Monteprediction.com is ...
-A long-running game where you hurl a million 11-dimensional Monte Carlo samples at my server. 
-
-1. Open this [colab notebook](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb) or [script](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.py)  (yes there's an [R version](https://github.com/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry_rlang.ipynb)), 
-2. Change the email, at minimum,
-3. Run it. Every weekend.
-4. Check your scores at [www.monteprediction.com](https://www.monteprediction.com)
-
-The notebook also describes the scoring mechanism. Ask questions in the slack (see bottom of [leaderboard](https://www.monteprediction.com) for slack invite).
-
-Now, here's some attempt to introduce you to my open source work ...
-
-### Derivative-free optimizer comparisons
-
-The [humpDay](https://github.com/microprediction/humpday) package is intended to help you choose a derivative-free optimizer for your use case. 
-
-![](https://i.imgur.com/FCiSrMQ.png)
-
-### Schur Complementary Portfolios
-
-My work on unifying Hierarchical Risk Parity with minimum variance portfolio optimization sits in the [precise](https://github.com/microprediction/precise) package. See [slides](https://github.com/microprediction/home/blob/main/presentations/Schur_Complementary_Portfolios_2025__slides_.pdf) from a recent talk. 
-
-<a href="https://medium.com/geekculture/schur-complementary-portfolios-fix-hierarchical-risk-parity-28b0efa1f35f">
-<img src="https://github.com/microprediction/precise/blob/main/docs/assets/images/schur_reaction.png" width="600"></a>
-
-### Incremental time-series and benchmarking
-
-The [timemachines](https://github.com/microprediction/timemachines) package enumerates online methods and makes some effort to evaluate univariate methods against the corpus of time-series drawn from the microprediction platform. It is an attempt to reduce everything to relatively pure functions:
-
-$$
-    f : (y_t, state; k) \mapsto ( [\hat{y}(t+1),\hat{y}(t+2),\dots,\hat{y}(t+k) ], [\sigma(t+1),\dots,\sigma(t+k)], posterior\ state))
-$$
-
-where $\sigma(t+l)$ estimates the standard error of the prediction $\hat{y}(t+l)$. 
-
-
-![](https://i.imgur.com/elu5muO.png)
-
-
-### Benchmarking overview
-
-| Topic                  | Package           | Elo ratings | Methods                                                                                                                                                                                  | Data sources | 
-|------------------------|-------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------| 
-| Univariate time-series | [timemachines](https://github.com/microprediction/timemachines)  | [Timeseries Elo ratings](https://microprediction.github.io/timeseries-elo-ratings/html_leaderboards/univariate-k_003.html) | Most popular packages ([list](https://github.com/microprediction/timemachines/tree/main/timemachines/skaters))                                                                           | [microprediction streams](https://www.microprediction.org/browse_streams.html)                                      |
-| Global derivative-free optimization | [humpday](https://github.com/microprediction/humpday) |  [Optimizer Elo ratings](https://microprediction.github.io/optimizer-elo-ratings/html_leaderboards/overall.html) | Most popular packages ([list](https://github.com/microprediction/humpday/tree/main/humpday/optimizers))                                                                                  | A mix of classic and new [objectives](https://github.com/microprediction/humpday/tree/main/humpday/objectives)      |
-| Covariance, precision, correlation | [precise](https://github.com/microprediction/precise) | See [notebooks](https://github.com/microprediction/precise/tree/main/examples_colab_notebooks) | [cov](https://github.com/microprediction/precise/blob/main/LISTING_OF_COV_SKATERS.md) and [portfolio](https://github.com/microprediction/precise/blob/main/LISTING_OF_MANAGERS.md) lists |Stocks, electricity etc                                                                                              | 
-
-These packages aspire to advance online autonomous prediction in a small way, but also help me notice if anyone else does.  
-
-## Winning
-
-The [winning](https://github.com/microprediction/winning) package includes my recently published fast algorithm for inferring relative ability from win probabilities, at any scale. As explained in the [paper](https://github.com/microprediction/winning/blob/main/docs/Horse_Race_Problem__SIAM_updated.pdf) the uses extend well beyond the pricing of quinellas! 
-
-![](https://i.imgur.com/83iFzel.png) 
-
-## First Down
-
-My [firstdown](https://github.com/microprediction/firstdown) repo contains analysis aspiring to ruin great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf) and for heaven's sake, don't stretch out for the first down. That's obviously nuts.  
-
-  ![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
 
 ## Some other repos
 
+  ![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
+
+
+- [Firstdown](https://github.com/microprediction/firstdown) repo contains analysis aspiring to ruin great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf) and for heaven's sake, don't stretch out for the first down. That's obviously nuts.  
 - [manifoldbot](https://github.com/microprediction/manifoldbot) - A bot that uses LLMs to trade on manifold prediction markets. 
 - [randomcov](https://github.com/microprediction/randomcov) - A set of quirky correlation and covariance matrix generators (I'd love your ideas). 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
