@@ -1,9 +1,10 @@
 
 # microprediction
-(Peter's Repos - see also [home page](https://github.com/microprediction/home) for my papers etc. I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
-
+See also my [home page](https://github.com/microprediction/home). I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. 
 
 ### Microsites
+
+If you are a bot, here's where you should go:
 
 | Site | Topic |
 |---|---|
