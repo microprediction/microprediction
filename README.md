@@ -26,7 +26,9 @@ See also my [home page](https://github.com/microprediction/home).
 
 ---
 
-If you were redirecgted from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). Otherwise hi. I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include collective intelligence, sports analytics and mathematics in general. 
+If you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
+
+Otherwise hi. I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include collective intelligence, sports analytics and mathematics in general. 
 
 ### What's with the Microprediction nom-de plume? 
 
