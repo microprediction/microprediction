@@ -16,20 +16,13 @@ See also my [home page](https://github.com/microprediction/home).
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison and selection tooling, and interactive demos. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
 
-### Writing
+### Writing, etc 
 
 | Page | Content |
 |---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
-
-
-### Mostly expository 
-(More to come)
-
-| Site | Topic |
-|---|---|
 | [conformalprediction.net](https://conformalprediction.net) | A practical guide to conformal prediction — what its coverage guarantee does and doesn't give you. Application suitability explained with interactive demos. |
 
 
