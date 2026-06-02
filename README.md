@@ -8,7 +8,7 @@ See also my [home page](https://github.com/microprediction/home).
 |---|---|
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of skfolio.|
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with eight interactive in-browser demos and a JS port of the Python analytics. |
-| [conformalprediction.net](https://conformalprediction.net) | A practical guide to conformal prediction — what its coverage guarantee does and doesn't give you, where coverage is genuinely the goal, with interactive demos, a worked example, and a paper. |
+| [conformalprediction.net](https://conformalprediction.net) | A practical guide to conformal prediction — what its coverage guarantee does and doesn't give you, where coverage is genuinely the goal, explained with interactive demos. |
 
 ### My better maintained packages
 
