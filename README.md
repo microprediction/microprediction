@@ -6,8 +6,8 @@ See also my [home page](https://github.com/microprediction/home).
 
 | Site | Topic |
 |---|---|
-| [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — a unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of skfolio.|
-| [thurstone.microprediction.org](http://thurstone.microprediction.org) | Thurstone Class V models and the fast ability transform — multi-entrant contest probabilities and inverse calibration, with eight interactive in-browser demos and a JS port of the Python analytics. |
+| [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — I found the unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of skfolio.|
+| [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration.  There are demos and a JS port of the Python analytics. |
 
 ### My better tested packages
 
