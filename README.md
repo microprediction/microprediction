@@ -35,7 +35,7 @@ The [book](https://book.microprediction.com) was a meditation on the power of mi
 ![](https://github.com/microprediction/microprediction/blob/master/docs/assets/images/cotton_microprediction_3d_down.png)
 
 
-## Some miscellaneous repos
+## Rats and mice
 
 - [Firstdown](https://github.com/microprediction/firstdown) repo contains analysis aspiring to ruin great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf) and for heaven's sake, don't stretch out for the first down. That's obviously nuts.  
 - [manifoldbot](https://github.com/microprediction/manifoldbot) - A bot that uses LLMs to trade on manifold prediction markets. 
