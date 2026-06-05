@@ -9,12 +9,15 @@ See also my [home page](https://github.com/microprediction/home).
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolios — I found the unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of skfolio.|
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration.  There are demos and a JS port of the Python analytics. |
 
-### My better tested packages
+### My better maintained repositories
 
 | Site | Topic |
 |---|---|
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison and selection tooling, and interactive demos. |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
+| [https://github.com/microprediction/precise](https://github.com/microprediction/precise) | Online covariance and correlation estimators |
+| [conformalprediction.net](https://conformalprediction.net) | A practical guide to conformal prediction — what its coverage guarantee does and doesn't give you. Application suitability explained with interactive demos. |
+
 
 ### Writing, etc 
 
@@ -23,7 +26,6 @@ See also my [home page](https://github.com/microprediction/home).
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
-| [conformalprediction.net](https://conformalprediction.net) | A practical guide to conformal prediction — what its coverage guarantee does and doesn't give you. Application suitability explained with interactive demos. |
 
 
 ---
