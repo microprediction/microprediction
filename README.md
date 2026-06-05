@@ -24,7 +24,7 @@ As an aside, if you were redirected from the minor-cult article *Is Facebook's P
 
 ### What's with the Microprediction nom-de plume? 
 
-I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include collective intelligence, sports analytics and mathematics in general. GitHub decided this should be my home page. 
+I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include quantitative finance, collective intelligence, sports analytics and mathematics in general. GitHub decided this should be my home page. 
 
 This repo used to be the client for a high velocity prediction market I wrote for Intech Investments. It collected a billion predictions. As noted above I also wrote a [book](https://mitpress.mit.edu/books/microprediction) predicting that data science would splinter into little agents. I've long been a believer in engineering pipelines that anyone else can improve without asking permission, and in the eventual inversion of control between humans and machine in the "microprediction domain" (frequently repeated quantitative tasks). With the arrival of LLMs I'm convinced this applies to judgemental prediction also. It seems I have more faith in small markets than most, noting the important caveat made clear in the Indispensable Markets Hypothesis  [paper](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) that markets can be indispensible yet not perfectly efficient. 
 
