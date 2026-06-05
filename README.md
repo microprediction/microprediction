@@ -1,8 +1,6 @@
 
 # microprediction
-See also my [home page](https://github.com/microprediction/home). 
-
-### My more useful contributions
+See also my [home page](https://github.com/microprediction/home). Here are my more useful contributions:
 
 | Site | Topic |
 |---|---|
@@ -13,8 +11,7 @@ See also my [home page](https://github.com/microprediction/home).
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
 | [https://github.com/microprediction/precise](https://github.com/microprediction/precise) | Online covariance and correlation estimators |
 
-
-### Writing, etc 
+My writing can mostly be found here:
 
 | Page | Content |
 |---|---|
@@ -22,14 +19,12 @@ See also my [home page](https://github.com/microprediction/home).
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
 
+As an aside, if you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
 
----
-
-If you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
-
-Otherwise hi. I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include collective intelligence, sports analytics and mathematics in general. 
 
 ### What's with the Microprediction nom-de plume? 
+
+I'm a career quant, applied mathematician, open-source developer, entrepreneur and father of three girls. My interests include collective intelligence, sports analytics and mathematics in general. GitHub decided this should be my home page. 
 
 This repo used to be the client for a high velocity prediction market I wrote for Intech Investments. It collected a billion predictions. As noted above I also wrote a [book](https://mitpress.mit.edu/books/microprediction) predicting that data science would splinter into little agents. I've long been a believer in engineering pipelines that anyone else can improve without asking permission, and in the eventual inversion of control between humans and machine in the "microprediction domain" (frequently repeated quantitative tasks). With the arrival of LLMs I'm convinced this applies to judgemental prediction also. It seems I have more faith in small markets than most, noting the important caveat made clear in the Indispensable Markets Hypothesis  [paper](https://github.com/microprediction/home/blob/main/workingpapers/The_Indispensible_Markets_Hypothesis.pdf) that markets can be indispensible yet not perfectly efficient. 
 
