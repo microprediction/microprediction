@@ -9,8 +9,8 @@ See also my [home page](https://github.com/microprediction/home). Here are my mo
 | [conformalprediction.net](https://conformalprediction.net) | I provide a KL-divergence theorem explaining clearly the limitations of conformal prediction. The site is a a practical guide explaining when to use conformal prediction but also how not to be dissappointed (see this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example). |
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
-| [precise.microprediction.org](precise.microprediction.org) | Online covariance and correlation estimators. Compatible with both sklearn and river-ml conventions. |
-| [allocation.microprediction.org](allocation.microprediction.org) | Novel online portfolio methods.  |
+| [precise.microprediction.org](https://precise.microprediction.org) | Online covariance and correlation estimators. Compatible with both sklearn and river-ml conventions. |
+| [allocation.microprediction.org](https://allocation.microprediction.org) | Novel online portfolio methods.  |
 
 
 My writing can mostly be found here:
