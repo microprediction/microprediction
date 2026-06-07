@@ -20,7 +20,7 @@ Writing, papers, blogs, expository:
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
-| [conformalprediction.net](https://conformalprediction.net) | I provided a KL-divergence theorem explaining clearly the limitations of conformal prediction. The site is a a practical guide explaining when to use conformal prediction but also how not to be dissappointed (see this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example). |
+| [conformalprediction.net](https://conformalprediction.net) | I provided a KL-divergence theorem explaining clearly the limitations of conformal prediction. Expository site. See this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example. |
 
 As an aside, if you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
 
