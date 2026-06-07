@@ -1,6 +1,6 @@
 
-# microprediction
-See also my [home page](https://github.com/microprediction/home). Here are my more useful contributions:
+# microprediction (c.f. [home page](https://github.com/microprediction/home))
+My more useful Python packages:
 
 | Site | Topic |
 |---|---|
