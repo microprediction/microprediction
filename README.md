@@ -15,7 +15,7 @@ See also my [home page](https://github.com/microprediction/home). Here are my mo
 
 Writing, papers, blogs, expository:
 
-| Page | Content |
+| Site | Content |
 |---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
