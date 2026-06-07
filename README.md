@@ -4,7 +4,7 @@ See also my [home page](https://github.com/microprediction/home). Here are my mo
 
 | Site | Topic |
 |---|---|
-| [precise.microprediction.org](https://precise.microprediction.org) | Online (incremental) covariance and correlation estimators. Compatible with sklearn and river-ml conventions. |
+| [precise.microprediction.org](https://precise.microprediction.org) | Online (incremental) covariance and correlation estimators. Sklearn and river-ml conventions. |
 | [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics but also two novel approaches I invented: Schur and Thurstone.  |
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolio pointers (deprecating per above). Schur provided the unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of [skfolio](https://skfolio.org/auto_examples/clustering/plot_6_schur.html) and [allocation.microprediction.org](https://allocation.microprediction.org)|
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration. This [picture](https://thurstone.microprediction.org/) beats my words. There are other demos and a JS port of the Python analytics. |
