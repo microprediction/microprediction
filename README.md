@@ -8,19 +8,19 @@ See also my [home page](https://github.com/microprediction/home). Here are my mo
 | [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics and two novel approaches: Schur and Thurstone.  |
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur complementary portfolio pointers (deprecating per above). Schur provided the unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. Now part of [skfolio](https://skfolio.org/auto_examples/clustering/plot_6_schur.html) and [allocation.microprediction.org](https://allocation.microprediction.org)|
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration. This [picture](https://thurstone.microprediction.org/) beats my words. There are other demos and a JS port of the Python analytics. |
-| [conformalprediction.net](https://conformalprediction.net) | I provided a KL-divergence theorem explaining clearly the limitations of conformal prediction. The site is a a practical guide explaining when to use conformal prediction but also how not to be dissappointed (see this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example). |
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
 
 
 
-My writing can mostly be found here:
+Writing, papers, blogs, expository:
 
 | Page | Content |
 |---|---|
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 | [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
+| [conformalprediction.net](https://conformalprediction.net) | I provided a KL-divergence theorem explaining clearly the limitations of conformal prediction. The site is a a practical guide explaining when to use conformal prediction but also how not to be dissappointed (see this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example). |
 
 As an aside, if you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
 
