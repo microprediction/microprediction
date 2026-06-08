@@ -54,9 +54,6 @@ The [book](https://book.microprediction.com) was a meditation on the power of mi
 - [recalibrate](https://github.com/microprediction/recalibrate) - Utils related to Platt scaling etc. 
 
 
-  ![](https://github.com/microprediction/firstdown/blob/main/images/firstdownpaper.png)
-
-
 
 
 
