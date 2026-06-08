@@ -44,7 +44,6 @@ The [book](https://book.microprediction.com) was a meditation on the power of mi
 
 ## Rats and mice
 
-- [Firstdown](https://github.com/microprediction/firstdown) repo contains analysis aspiring to ruin great game of football. See Wilmott [paper](https://github.com/microprediction/firstdown/blob/main/wilmott_paper/44-49_Cotton_PDF5_Jan22%20(2).pdf) and for heaven's sake, don't stretch out for the first down. That's obviously nuts.  
 - [manifoldbot](https://github.com/microprediction/manifoldbot) - A bot that uses LLMs to trade on manifold prediction markets. 
 - [randomcov](https://github.com/microprediction/randomcov) - A set of quirky correlation and covariance matrix generators (I'd love your ideas). 
 - [embarrassingly](https://github.com/microprediction/embarrassingly) - A speculative approach to robust optimization that sends impure objective functions to optimizers.
