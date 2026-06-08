@@ -11,17 +11,15 @@ My more useful Python packages:
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
 | [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. |
 
-
-
-Writing, papers, blogs, expository:
+Book, papers, blog
 
 | Site | Content |
 |---|---|
+| [microprediction/home](https://github.com/microprediction/home/) | Papers, posts etc |
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (Audio book too) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
-| [microprediction/home](https://github.com/microprediction/home/) | Papers - and some short musings |
 
-Mostly expository:
+Educational sites
 
 | Site | Content |
 |---|---|
