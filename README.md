@@ -3,7 +3,7 @@
 
 Greetings. Here are my more useful packages:
 
-| Site | Topic |
+| Package | Topic |
 |---|---|
 | [precise.microprediction.org](https://precise.microprediction.org) | Online (incremental) covariance and correlation estimators. Supports both sklearn and river-ml conventions. Treats arrival and departure of variables. High dimensions. |
 | [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics and two novel approaches: Schur and Thurstone. Asset smoothness and trading costs. Entry and exit of assets.  |
