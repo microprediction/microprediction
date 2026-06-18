@@ -1,7 +1,7 @@
 
 # microprediction (c.f. [home page](https://github.com/microprediction/home))
 
-Greetings. Here are my more useful packages:
+Greetings. Here are my more useful deployed packages
 
 | Package | Topic |
 |---|---|
