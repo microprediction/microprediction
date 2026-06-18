@@ -25,7 +25,7 @@ Educational sites
 |---|---|
 | [schur.microprediction.org](http://schur.microprediction.org) | Schur portfolio literature. Yours truly provided the unification of hierarchical and optimisation-based portfolio construction via block-matrix inversion. This is now part of [skfolio](https://skfolio.org/auto_examples/clustering/plot_6_schur.html) and [allocation.microprediction.org](https://allocation.microprediction.org) per the above.|
 | [conformalprediction.net](https://conformalprediction.net) | There's a small theoretical contribution: a KL-divergence theorem explaining clearly the limitations of conformal prediction. See this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example. |
-| [mechanisms.microprediction.org](https://firstdown.microprediction.org) | Survey of markets, scoring rules and everything in between |
+| [mechanisms.microprediction.org](https://mechanisms.microprediction.org) | Survey of markets, scoring rules and everything in between |
 | [firstdown.microprediction.org](https://firstdown.microprediction.org) | I've been trying to change NFL team's first down strategy for years, with little success. |
 
 As an aside, if you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
