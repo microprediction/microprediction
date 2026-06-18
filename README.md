@@ -9,7 +9,7 @@ Greetings. Here are my more useful deployed packages
 | [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics and two novel approaches: Schur and Thurstone. Asset smoothness and trading costs. Entry and exit of assets.  |
 | [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration. This [picture](https://thurstone.microprediction.org/) beats my words. |
 | [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
-| [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series algorithms providing distributional predictions. Zero dependencies, runs in Pyodide. Full JavaScript port too.|
+| [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series distributional prediction (watch it [here](https://skaters.microprediction.org/demos/playground.html). SOTA. Zero dependencies, runs in Pyodide. Full JavaScript port too.|
 
 Book, papers, blog
 
