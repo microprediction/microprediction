@@ -1,5 +1,5 @@
 
-# microprediction (c.f. [home page](https://github.com/microprediction/home))
+# microprediction (c.f. [home.microprediction.org](https://home.microprediction.org))
 
 Greetings. Here are my more useful deployed packages
 
