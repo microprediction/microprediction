@@ -27,6 +27,8 @@ Research and expository
 | [conformalprediction.net](https://conformalprediction.net) | There's a small theoretical contribution: a KL-divergence theorem explaining clearly the limitations of conformal prediction. See this [demo](https://conformalprediction.net/demos/13-coverage-score-plane.html) for example. |
 | [mechanisms.microprediction.org](https://mechanisms.microprediction.org) | Survey of markets, scoring rules and everything in between |
 | [firstdown.microprediction.org](https://firstdown.microprediction.org) | I've been trying to change NFL team's first down strategy for years, with little success. |
+| [pitchperfect.microprediction.org](https://pitchperfect.microprediction.org) | My sporadic attempts to push SOTA football analysis |
+
 
 As an aside, if you were redirected from the minor-cult article *Is Facebook's Prophet the Time-Series Messiah or Just a Very Naughty Boy?*, it moved [here](https://medium.com/geekculture/is-facebooks-prophet-the-time-series-messiah-or-just-a-very-naughty-boy-8b71b136bc8c). 
 
