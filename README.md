@@ -1,16 +1,6 @@
 
 # microprediction (c.f. [home.microprediction.org](https://home.microprediction.org))
 
-Greetings. Here are my more useful deployed packages
-
-| Package | Topic |
-|---|---|
-| [precise.microprediction.org](https://precise.microprediction.org) | Online (incremental) covariance and correlation estimators. Supports both sklearn and river-ml conventions. Treats arrival and departure of variables. High dimensions. |
-| [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics and two novel approaches: Schur and Thurstone. Asset smoothness and trading costs. Entry and exit of assets.  |
-| [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration. This [picture](https://thurstone.microprediction.org/) beats my words. |
-| [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
-| [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series distributional prediction (watch it [here](https://skaters.microprediction.org/demos/playground.html)). SOTA. Zero dependencies, runs in Pyodide. Full JavaScript port too.|
-
 Book, papers, blog
 
 | Site | Content |
@@ -19,7 +9,17 @@ Book, papers, blog
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (free audio book) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 
-Educational sites
+Clean well-tested packages I use myself
+
+| Package | Topic |
+|---|---|
+| [skaters.microprediction.org](http://skaters.microprediction.org) | Fast and surprisingly reliable online univariate time series distributional prediction (watch it [here](https://skaters.microprediction.org/demos/playground.html)). SOTA. Zero dependencies, runs in Pyodide. Full JavaScript port too.|
+| [precise.microprediction.org](https://precise.microprediction.org) | Online (incremental) covariance and correlation estimators. Supports both sklearn and river-ml conventions. Treats arrival and departure of variables. High dimensions. |
+| [thurstone.microprediction.org](http://thurstone.microprediction.org) | I invented the fast ability transform that makes Thurstone Class V models practical. Use this package for multi-entrant contest probabilities and inverse calibration. This [picture](https://thurstone.microprediction.org/) beats my words. |
+| [humpday.microprediction.org](http://humpday.microprediction.org) | All the greatest derivative-free (black box) optimization methods in one place in pure Python and Javascript with no package dependencies. Comparison tooling, claude [skill](https://github.com/microprediction/humpday/blob/main/SKILL.md) and [interactive demos](https://humpday.microprediction.org/applications/index.html). |
+| [allocation.microprediction.org](https://allocation.microprediction.org) | Online (incremental) portfolio methods. Classics and two novel approaches: Schur and Thurstone. Asset smoothness and trading costs. Entry and exit of assets.  |
+
+Research and expository 
 
 | Site | Content |
 |---|---|
