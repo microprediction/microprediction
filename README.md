@@ -5,7 +5,8 @@ Book, papers, blog
 
 | Site | Content |
 |---|---|
-| [home.microprediction.org](https://home.microprediction.org) or [microprediction/home](https://github.com/microprediction/home/) | Papers, posts etc |
+| [home.microprediction.org](https://home.microprediction.org) | Home page | 
+| [microprediction/home](https://github.com/microprediction/home/) | Posts, commentary etc |
 | [book.microprediction.org](http://book.microprediction.org) | *Microprediction* — the book on splintering data science into small algorithmic agents. (free audio book) |
 | [microprediction.medium.com](https://microprediction.medium.com/) | Blog. Portfolio construction, optimization, time series, quantitative finance etc |
 
