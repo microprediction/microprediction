@@ -1,5 +1,5 @@
 
-# microprediction repos (c.f. [home.microprediction.org](https://home.microprediction.org))
+# microprediction [repos](https://repos.microprediction.org) (c.f. [home.microprediction.org](https://home.microprediction.org))
 
 Book, papers, blog
 
