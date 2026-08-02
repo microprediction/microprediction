@@ -1,3 +1,7 @@
+> **Note (2026):** the live microprediction platform described below no longer exists.
+> For the maintained open-source repositories, see [repos.microprediction.org](https://repos.microprediction.org).
+> The pages here remain as historical documentation.
+
 A free, stable platform illustrating turnkey collective "microprediction" 
 
  - The [setup](https://microprediction.github.io/microprediction/setup) for instant participation.  
